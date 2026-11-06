@@ -33,7 +33,7 @@ body{
   margin:0; background:var(--bg); color:var(--ink);
   font-family:var(--jp-font); line-height:1.7; font-size:16px;
   padding-left:var(--sa-l); padding-right:var(--sa-r);
-  padding-bottom:calc(72px + var(--sa-b));
+  padding-bottom:calc(16px + var(--sa-b));
   overflow-wrap:break-word;
 }
 img,svg,textarea,input,select{max-width:100%}
@@ -179,8 +179,8 @@ textarea{width:100%;resize:vertical;line-height:1.6}
 .kv-v{color:var(--ink);overflow-wrap:anywhere}
 .kana-line{margin-top:6px;font-size:14px;color:var(--accent);line-height:1.9;
   word-break:normal;overflow-wrap:anywhere}
-.front-kana{display:none;font-size:13px;color:var(--muted);font-weight:400;margin-top:6px}
-.no-ja-tts .front-kana{display:block}
+/* v3：假名一律常显，绝不因「检测到 ja-JP 语音」而隐藏（修掉旧网 bug）。 */
+.front-kana{display:block;font-size:13px;color:var(--muted);font-weight:400;margin-top:6px}
 .trap{margin:6px 0;padding:6px 8px;background:var(--warn-weak);color:var(--ink);
   border-radius:6px;font-size:13px;line-height:1.6}
 .speak-btn{margin-top:8px}
@@ -304,4 +304,164 @@ textarea{width:100%;resize:vertical;line-height:1.6}
   .quiz-toolbar{display:flex}
   .q-list.grid-mode{grid-template-columns:repeat(2,minmax(0,1fr))}
   .act-btn,.q-submit{font-size:14px}
+}
+
+/* ===== v3：从「系统报表」改回「一课教材」的常显区块（首屏即可学） ===== */
+.block{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);
+  margin:10px 0;padding:10px 12px}
+.block-title{font-size:18px;margin:2px 0;line-height:1.35;font-weight:700}
+.block-hint{font-size:12.5px;color:var(--muted);margin:2px 0 8px;line-height:1.5}
+.sub-title{font-weight:700;font-size:13px;color:var(--ink-2);margin:6px 0 4px}
+.tts-fallback-hint{display:none;background:var(--warn-weak);color:var(--warn);
+  border-left:4px solid var(--warn);padding:6px 8px;border-radius:6px;
+  font-size:12px;line-height:1.5;margin:4px 0 8px}
+body.no-ja-tts .tts-fallback-hint{display:block}
+.listen-wrap{display:inline-flex;flex-direction:column;align-items:flex-start;gap:2px;vertical-align:middle}
+button.listen-btn{min-height:34px;padding:3px 10px;font-size:12.5px;line-height:1.2;white-space:nowrap}
+.inline-notice{font-size:11.5px;color:var(--warn);line-height:1.4;max-width:230px}
+
+/* ① 今天要会的 3 句话 */
+.core-sentence{display:flex;gap:8px;align-items:flex-start;border:1px solid var(--line);
+  border-radius:8px;background:var(--surface-2);padding:7px 9px;margin:6px 0}
+.core-main{flex:1 1 auto;min-width:0}
+.core-ja{font-size:22px;font-weight:700;line-height:1.4;word-break:normal;overflow-wrap:anywhere}
+.core-kana{font-size:13px;color:var(--accent);line-height:1.5}
+.core-zh{font-size:14.5px;color:var(--ink);line-height:1.5}
+.core-note{font-size:12px;color:var(--muted);line-height:1.45;margin-top:2px}
+.core-side{flex:0 0 auto;display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+.core-no{font-size:11px;color:var(--muted)}
+
+/* ② 单词：常显、不折叠、不翻面，假名常显 */
+.vlist{display:grid;grid-template-columns:1fr;gap:8px;margin:8px 0}
+.vcard{border:1px solid var(--line);border-radius:8px;background:var(--surface-2);
+  padding:8px 10px;font-size:13px;min-width:0}
+.vcard-top{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.v-surface{font-size:25px;font-weight:700;line-height:1.3}
+.v-kana{font-size:15px;color:var(--accent);font-weight:600}
+.v-meta{display:flex;flex-wrap:wrap;gap:4px 8px;margin:3px 0}
+.v-tag{font-size:11.5px;color:var(--muted);background:var(--surface-3);
+  padding:1px 7px;border-radius:4px}
+.v-meaning{font-size:14px;margin:3px 0;line-height:1.5}
+.v-ex{border-left:3px solid var(--accent-weak);padding:2px 0 2px 8px;margin:4px 0}
+.v-ex-ja{font-size:14px;line-height:1.5;word-break:normal;overflow-wrap:anywhere}
+.v-ex-zh{font-size:12.5px;color:var(--ink-2);line-height:1.4}
+.note-zh{background:var(--warn-weak);border-left:3px solid var(--warn);padding:5px 8px;
+  border-radius:6px;font-size:12.5px;margin:5px 0;line-height:1.5}
+.ko-box{background:var(--surface-3);border:1px dashed var(--line);border-radius:6px;
+  padding:6px 8px;margin:5px 0;font-size:12.5px;line-height:1.5}
+.ko-title{font-weight:700;color:var(--accent);font-size:12.5px;margin-bottom:2px}
+.ko-line{color:var(--ink);line-height:1.5}
+.ko-hint{color:var(--ink-2);line-height:1.5;margin-top:2px}
+.ko-caution{color:var(--bad);line-height:1.5;margin-top:3px;font-weight:600}
+
+/* ③ 语法 */
+.gcard{border:1px solid var(--line);border-radius:8px;background:var(--surface-2);
+  padding:9px 10px;margin:8px 0;font-size:13.5px}
+.g-pattern{font-size:19px;font-weight:700;line-height:1.4;color:var(--ink)}
+.g-expl{background:var(--accent-weak);border-radius:6px;padding:6px 8px;
+  margin:5px 0;font-size:13px;line-height:1.6}
+.g-exs,.err-box,.cmp-box{margin:6px 0}
+.g-ex{display:flex;gap:8px;align-items:center;flex-wrap:wrap;border-bottom:1px dashed var(--line);
+  padding:4px 0;font-size:14px}
+.g-ex-ja{font-weight:600}
+.g-ex-zh{color:var(--ink-2);font-size:13px}
+.err-item,.cmp-item{font-size:13px;line-height:1.6;padding-left:6px;margin:3px 0}
+
+/* ④ 汉字 */
+.klist{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:8px 0}
+.kcard{border:1px solid var(--line);border-radius:8px;background:var(--surface-2);
+  padding:8px 10px;font-size:13px}
+.k-char{font-size:34px;font-weight:700;line-height:1.2}
+.k-mean{font-size:13px;color:var(--ink-2)}
+.k-ex{font-size:13px;line-height:1.6;margin:2px 0;word-break:normal;overflow-wrap:anywhere}
+.k-ex-kana{color:var(--accent);font-size:12px}
+.k-note{font-size:12px;color:var(--good);margin:5px 0}
+
+/* ⑤ 例句 / 会话 */
+.material .ja-text{font-size:18px;line-height:1.9}
+.m-zh{font-size:14px;color:var(--ink-2);line-height:1.6;margin:4px 0}
+.material .note-zh{margin-top:8px}
+
+/* ⑥ 练习 */
+.demo-box{background:var(--good-weak);border-radius:6px;padding:8px 10px;margin:8px 0}
+.demo-title{font-weight:700;font-size:13px;margin-bottom:4px;color:var(--good)}
+.demo-ja{font-size:16px;line-height:1.7;word-break:normal;overflow-wrap:anywhere}
+.feedback-zh{background:var(--accent-weak);border-radius:6px;padding:6px 9px;
+  margin:8px 0;font-size:13px;line-height:1.6}
+.self-assess-note{font-size:12px;color:var(--muted)}
+
+/* ⑦ 今日复习 */
+.review-disclaimer{background:var(--accent-weak);border-radius:6px;padding:7px 9px;
+  font-size:12.5px;line-height:1.6;margin:4px 0 8px}
+.review-count,.review-empty,.review-new,.review-why{font-size:13.5px;line-height:1.6;margin:4px 0}
+.review-item{border:1px solid var(--line);border-radius:8px;background:var(--surface-2);
+  padding:8px 10px;margin:7px 0}
+.review-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.review-no{color:var(--muted);font-size:12px}
+.review-surface{font-size:20px;font-weight:700}
+.review-kana{font-size:14px;color:var(--accent)}
+.review-ans{margin:5px 0;font-size:14px}
+.review-zh{color:var(--ink);font-weight:600}
+.review-reason,.review-next{font-size:12.5px;color:var(--ink-2);line-height:1.5;margin:2px 0}
+.review-next{color:var(--accent)}
+.rating-btns{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:6px}
+.rating-label{font-size:12.5px;color:var(--muted)}
+button.rate-btn{min-height:34px;font-size:12.5px;padding:3px 10px}
+button.rate-btn.sel{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+
+/* ⑧ 页尾折叠：给老师 / 系统 */
+.teacher{margin:16px 0;border:1px solid var(--line);border-radius:var(--radius);
+  background:var(--surface-2)}
+.teacher > .section-sum{background:var(--surface-3)}
+.teacher .section{margin:8px 0}
+.teacher-lead{font-size:12.5px;color:var(--muted);margin:2px 0 8px}
+
+@media (min-width:900px){
+  .vlist{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .block{padding:12px 16px}
+  .core-ja{font-size:24px}
+}
+
+/* 手机：隐藏底部「考试感」操作栏（上方练习区已有提交/查看全部），
+   并整体压缩首屏，让 3 句话 + 至少 2 张完整词卡落在首屏内。 */
+@media (max-width:899px){
+  .actionbar{display:none}
+  .day-head .page-title{font-size:19px;margin:2px 0}
+  .day-head .lead{font-size:12.5px;line-height:1.45;margin:2px 0}
+  .block{padding:8px 10px;margin:8px 0}
+  .block-title{font-size:16px}
+  .block-hint{font-size:11.5px;line-height:1.4;margin:2px 0 6px}
+  .tts-fallback-hint{font-size:11px;padding:4px 6px;margin:3px 0 6px;line-height:1.35}
+  .core-sentence{padding:4px 6px;margin:3px 0}
+  .core-main{display:flex;flex-wrap:wrap;align-items:baseline;gap:1px 8px}
+  .core-ja{font-size:17px}
+  .core-zh{font-size:12.5px;line-height:1.4}
+  .core-kana{font-size:11.5px}
+  .core-no{font-size:10px}
+  button.listen-btn{min-height:30px;font-size:11px;padding:2px 7px}
+  /* 手机单列：词卡含例句 / 中文易错 / 韩语对照，双列会把中文压成窄条，可读性优先。 */
+  .vlist{grid-template-columns:1fr}
+  .vcard{padding:9px 11px}
+  .vcard-top{gap:6px}
+  .v-surface{font-size:21px}
+  .v-kana{font-size:14px}
+  .v-tag{font-size:10px;padding:1px 5px}
+  .v-meta{gap:2px 7px;margin:3px 0}
+  .v-meaning{font-size:14px;margin:3px 0;line-height:1.5}
+  .v-ex{margin:3px 0;padding:2px 0 2px 7px}
+  .v-ex-ja{font-size:14px;line-height:1.5}
+  .v-ex-zh{font-size:13px;line-height:1.45}
+  .note-zh{font-size:12.5px;padding:5px 7px;margin:3px 0;line-height:1.5}
+  .ko-box{font-size:12.5px;padding:5px 7px;margin:3px 0;line-height:1.5}
+  .ko-title{font-size:12px}
+  .sub-title{font-size:13px;margin:5px 0 4px}
+  .gcard,.kcard,.review-item,.material{padding:7px 8px}
+  .g-pattern{font-size:17px}
+  .g-expl{font-size:12px;padding:5px 6px}
+  .g-ex-ja{font-size:13px}
+  .g-ex-zh{font-size:11.5px}
+  .err-item,.cmp-item{font-size:11.5px;line-height:1.45}
+  .ja-text{font-size:16px}
+  .review-disclaimer{font-size:11px;padding:5px 7px}
+  button.rate-btn{min-height:30px;font-size:11px;padding:2px 8px}
 }

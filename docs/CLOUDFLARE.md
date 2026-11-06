@@ -343,3 +343,25 @@ HTML `<head>` 含 `viewport-fit=cover`、light/dark 双 `theme-color`、`color-s
 - 剪贴板 / 系统分享 / 下载在 iOS 等环境的可用性差异 —— 三级复制回退 + 多路径并列（9.5 / 9.9 节）。
 - SW 仅在安全上下文生效、iOS 主屏 PWA 行为差异、SVG 图标支持 —— `file://` 跳过、注册失败静默降级（9.8 / 9.9 节）。
 - **离线只做「展示 + 练习 + 本地判分 + 生成回传码」，不写任何状态**；成绩必须由用户把回传码带回 WorkBuddy 会话、经 `import-web-result` 写入 `data/state.db` 才成立 —— 这是 CONTRACTS 真源规则的硬约束，不是浏览器限制，而是刻意设计（8 / 9.7 节）。
+
+## v3 页面改造后的重新部署（2026-11-06）
+
+用户反馈原页面「太抽象看不懂」后，按 `docs/REDESIGN_PLAN.md` 把每日页从系统报表改回
+「一课教材」：首屏 3 句可听的日文 + 字段齐全的常显词卡，随后语法 / 汉字 / 例句会话 /
+练习 / 今日复习，系统术语与图表退到页尾折叠区。单词补罗马字、词性、例句、中文易错与
+韩语对照；复习改成「今天具体复习这几个词 + 为什么 + 下次何时 + 三档自评」，
+三档经回传码由 `learning.apply_review_rating` 写入 FSRS（只排期、不判掌握）。
+
+| 环境 | Worker | 版本 ID | 地址 |
+|---|---|---|---|
+| Production | `nihongo80` | `a0bf1d09-90f7-4cc4-b1c9-627b4f93ac27` | https://nihongo80.cmjfire.workers.dev |
+| Preview | `nihongo80-preview` | `d5dfc6ef-c2c2-4a0a-a7cd-6a009a963874` | https://nihongo80-preview.cmjfire.workers.dev |
+
+线上复验：`/`、`/day-001.html`、`/day-050.html`、`/day-080.html`、`/data/day-001.json`、
+`/assets/app.js`、`/assets/app.css`、`/sw.js`、`/manifest.webmanifest`、`/api/health` 全部 200；
+真实浏览器 `--dump-dom` 命中「今天要会的 3 句话」「きょうはいいてんきです。」「韩语对照」
+「必须验证」「今日复习」「记住了」「看答案」「中文易错」「今日难点」「给老师」。
+CDP 真实 390 CSS 视口：`innerWidth=390 / scrollWidth=390`，零横向溢出，词卡单列。
+
+原有工程约束不变：零 CDN / 零 fetch、`file://` 可开、PWA 离线、双端、TTS 手势解锁与降级、
+`NH80R1` 回传码；静态页仍不是状态真源，复习清单标为「计划」，真实到期以本地 `state.db` 为准。

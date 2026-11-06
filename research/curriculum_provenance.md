@@ -199,3 +199,65 @@ P4 标称「N3 高频知识、听力及阅读进阶」，但 20 天里只引入 
    本地正确率是原创模拟题过程指标，不是 JLPT 标准分、不可换算。
 
 > 线上站点仍为 https://nihongo80.cmjfire.workers.dev （v2 内容重新部署中，本文档不记录部署结果）。
+
+---
+
+## v3 页面可用性修复（2026-11-07 追加）
+
+> **本节只追加**：以上 §1–§5 是 v1 审计的历史证据，「v2 修复记录」是 v2 的修复记录，
+> 其中的数字与结论（522 条、6 条 `needs_review`、212 道题、P4 仅 1 新词 / 0 汉字、
+> 4983 关系边等）**全部原样保留、不改写**。
+> 本节记录的是与「教什么 / 按什么顺序」**不同层面**的问题：v1/v2 的**每日网页把内容做成了系统报表**，
+> 学员首屏看不到可学日语。v3 内容待随本次发布上线，不写「已上线 v3」、不记录部署结果。
+
+### 问题是怎么被发现的（不是审美，是实测）
+
+- `research/ux_audit.md`：学员视角审计，PC 1440 / 手机 390 真实截图 + DOM 探针。
+  实测**首屏前 3 屏可学日语内容 = 0%**；词汇 / 语法 / 汉字 / 素材 section 默认折叠、卡片还要翻面；
+  首屏被「能力目标（教研措辞）/ 60 分钟时间块 / 3 张图表 / `diagnostic` / `FSRS` /
+  `focus: listening` / `Can-do`」占满；复习只有「review 10 分 FSRS 到期项」一句话，
+  不知道今天复习哪几个词；韩语对照 **0 处**；练习默认折叠且第 1 题是无参考答案的开放题。
+- 根因不在引擎：§1 已确认「系统机制是认真做的」（官方 FSRS、关系图、强校验），
+  `knowledge/seeds/` 里**本来就有** `romaji` / `pos` / `examples` / `notes_for_zh` / `usage` /
+  `common_errors` / `compare` / `text_zh` / `rubric` / `rationale` / `expected_production` 等字段，
+  但 `build_site.py` 的 `assemble_day()` 只挑了 5 个字段，页面只剩骨架；
+  `app.js` 还把 `audio_text`（等于 `text_ja`）当「读音」显示，真机有 `ja-JP` 语音时 CSS 又隐藏假名。
+
+### 修复路径（顺序依据真实教材，不照抄课序）
+
+- `research/textbook_lesson_pattern.md`：真实下载 Irodori 官方 `X_howto_en.pdf` /
+  `X_contents_en.pdf` 提取一课结构，另核实 Genki / Marugoto / JLPT 官方页；
+  共同点是**先给能用的话和词，再讲规则，再练，最后自评，系统信息一律不在正文里**。
+  教材只贡献「一课的呈现顺序与规格」，**课程编排仍按 `research/nh80_framework.md` 自研方法**，
+  不采用任何教材线性课序（本审计 §1「课序是工程约定、无教材课序依据」的历史结论不变）。
+- `docs/REDESIGN_PLAN.md` 定下 8 区块顺序、数据契约与诚实边界，并新增「执行结果（v3）」记录落实。
+
+### 实际完成（真实指标，见 `docs/VALIDATION.md` §8）
+
+- 课程层：每天新增 `lesson_core`（3 句真实日中对照，假名只在资料层核实后填）、
+  `review_plan`（具体词 + 中文原因 + 下次 Day）、`teaching_notes`（中文难点）；
+  `start-day` briefing 同步带上；80/80 天齐全，旧字段未删。
+- 资料层：新增 `knowledge/ko_analogy.json`，覆盖 **85/85 语法 + 57 词**，每条含
+  `hint_zh` / `caution`（「结构可借、词不能猜」）；`materials.jsonl` 补 `focus_zh` **50/50**、
+  `text_kana` **12 条真实假名**（其余 38 条诚实留空），16 处 `text_ja`/`text_zh` 句数错配修到 **0**。
+- 页面层：`build_site.py` 重写为 8 区块；修掉「读音=原文」「真机隐藏假名」「内容全折叠」
+  「开放题无参考答案」等 bug；术语中文化；顶层 `ko_analogy` 按天裁剪，
+  `day-001.json` **92,854 字节 → 23,932 字节**（统一按字节计，减少约 74%）。
+- 复习闭环：新增 `learning.apply_review_rating`（`good/hard/again → 3/2/1`），
+  `import-web-result` 消费 `review_ratings`；**只排期、不写 `attempts`、不改 `stage`、不判 `mastered`**，
+  同会话幂等——与 §1「一次答对 ≠ 掌握」的历史结论一致，未放松门控。
+- 验证：`python3 scripts/nh80.py validate` → `error_count=0`、`warnings=[]`、
+  `level_delivery.P4.N3=130`、`teaching_design.distinct_objectives=80`；
+  `python3 tests/test_all.py` **20/20 PASS**（含 `test_06b_review_ratings_drive_fsrs`）；
+  关系边仍 **4983**（未变）；Chrome CDP 390 视口 `innerWidth=390 / scrollWidth=390`、6 张词卡、
+  1 条假名行、7 个韩语对照块、25 个听按钮；PC 1440 首屏 3 句话 + 2 张完整词卡、无图表 / 术语。
+
+### 本节不改动的既有结论
+
+- §1–§5 与「v2 修复记录」的**全部历史结论与数字**保留：知识点内容仍是项目原创整理、
+  未逐条对照 JMdict / KANJIDIC（14 条 `needs_review`）、JLPT 官方样题未入库、
+  `N5/N4/N3` 是项目自定标签、80 学时压缩冲刺路径不等于官方标准、不承诺第 80 天必达 N3。
+- v3 改的是**页面呈现与复习自评闭环**，**没有**把课程变成「教材支撑的课纲」，
+  也**没有**完成 §4 列出的 JMdict / KANJIDIC 校核或 Irodori 重建大纲；
+  这些仍是「明确仍未落地」项。
+- v3 的 Cloudflare 重新部署与 GitHub push 由主 agent 稍后执行，本节不记录部署结果。

@@ -193,6 +193,46 @@ def _fsrs_review(conn, kid: str, rating: int, at, st: dict) -> dict:
     return d
 
 
+REVIEW_RATING_MAP = {"good": 3, "hard": 2, "again": 1}
+
+
+def apply_review_rating(conn, *, kid: str, label: str, day: int,
+                        session_id: str, at=None) -> dict:
+    """网页「今日复习」三档自评 → FSRS 排期（REDESIGN_PLAN §5）。
+
+    严格边界：只推进 FSRS 的 due/stability，**不**写 attempts、**不**改 stage、
+    **不**判 mastered。学员点「记住了」不等于系统认定掌握，掌握仍由
+    `record_attempt` 的五阶段门控判定。
+    幂等：同一 session 对同一知识点只生效一次，用 review_tasks.reason 去重。
+    """
+    rating = REVIEW_RATING_MAP.get(str(label))
+    if rating is None:
+        raise ValueError("未知复习自评 %s" % label)
+    known = any(conn.execute("SELECT 1 FROM %s WHERE id=?" % t, (kid,)).fetchone()
+                for t in ("vocabulary", "grammar", "kanji"))
+    if not known:
+        raise ValueError("未知知识点 %s，拒绝复习自评" % kid)
+    reason = "web_self_rating:%s" % session_id
+    if conn.execute("SELECT 1 FROM review_tasks WHERE knowledge_id=? AND reason=?",
+                    (kid, reason)).fetchone():
+        return {"ok": True, "duplicate": True, "kid": kid, "reason": "同一会话重复自评"}
+    at = at or now_utc()
+    kind = ("vocabulary" if kid.startswith("V") else "grammar" if kid.startswith("G")
+            else "kanji" if kid.startswith("K") else "knowledge")
+    st = _knowledge_state(conn, kid, kind)
+    d = _fsrs_review(conn, kid, rating, at, st)
+    conn.execute("""UPDATE knowledge_state
+        SET last_review_day=?, last_review_at=?, updated_at=? WHERE knowledge_id=?""",
+                 (day, iso(at), iso(at), kid))
+    conn.execute("""INSERT INTO review_tasks
+        (knowledge_id,day,due,reason,remedy,status,created_at) VALUES(?,?,?,?,?,?,?)""",
+                 (kid, day, d["due"], reason,
+                  "网页复习自评：仅重排复习时间，不判定掌握", "pending", iso(at)))
+    audit(conn, "web_review_rating",
+          {"day": day, "kid": kid, "label": label, "rating": rating, "due": d["due"]})
+    return {"ok": True, "kid": kid, "rating": rating, "due": d["due"]}
+
+
 def record_attempt(conn, *, day: int, session_id: str, qid: str, answer: str,
                    correct: bool | None = None, hinted: bool = False, seconds: int = 0,
                    error_type: str | None = None, feedback: str = "",

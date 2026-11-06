@@ -10,6 +10,7 @@
 from __future__ import annotations
 
 import json
+import re
 from collections import defaultdict
 from pathlib import Path
 
@@ -101,18 +102,20 @@ CANDO_BANK = {
     ],
 }
 
-# 能力目标池：每天按确定性轮换抽取，避免 80 天 objectives 完全相同
+# 能力目标池：每天按确定性轮换抽取，避免 80 天 objectives 完全相同。
+# 写成零基础学员一眼能懂的中文短句，不出现「接续条件/适用场合/近义表达/类推/近自然语速/
+# 主旨/支撑细节/迁移/事实陈述/推测表达/归因/听辨」这类教研或系统黑话（v3 改造）。
 OBJECTIVE_POOL = [
-    "能听懂 {topic} 场景的关键词并复述要点",
-    "能在无提示条件下独立产出至少 1 句完整日语（口头或书面）",
-    "能说明「{g}」的接续条件与适用场合，并给出一个反例",
-    "能辨析 {v} 与已学近义表达的差别，不按中文词义套用",
-    "能读准当天汉字的音读/训读，不按中文读音类推",
-    "能在近自然语速的短对话中抓住人物关系与后续动作",
-    "能从通知或短文中提取主旨并指出一条支撑细节",
-    "能把当天表达迁移到一个新场景，而不是复述例句",
-    "能区分事实陈述与推测表达，避免把猜测说成定论",
-    "能对自己的错误归因到具体类型（遗忘/混淆/助词/变形/听辨/理解）",
+    "能听懂 {topic} 里常出现的词，并说出大概意思",
+    "能不看提示，自己说出至少 1 句完整的日语",
+    "能说清「{g}」用在什么场合、前面该怎么接",
+    "能分清 {v} 和意思相近的词，别按中文硬套",
+    "能读准今天汉字的日语读音，不照中文读音猜",
+    "能听懂一段正常语速的短对话，说清谁和谁、接下来要做什么",
+    "能从一小段通知或短文里找出主要意思，并说出一句依据",
+    "能把今天学的说法用到一个新场景，而不是只背原句",
+    "能分清「这是事实」和「这是我猜的」，不把猜测说成肯定",
+    "能说出自己错在哪一类（忘了 / 记混 / 助词 / 变形 / 听错 / 没读懂）",
 ]
 
 RUBRIC_POOL = [
@@ -137,6 +140,238 @@ TOPIC_ZH = {
     "request": "请求委托", "discussion": "意见讨论", "explanation": "说明解释",
     "announcement": "公告",
 }
+
+
+# ---- v3：把「今天学哪几句话 / 复习哪几个词 / 中文难点是什么」写进课程骨架 ----
+# 复习是基于课程的确定性间隔计划（1/2/3/7/14/30 天），与本地 FSRS 到期队列是两回事。
+REVIEW_INTERVALS = [1, 2, 3, 7, 14, 30]
+_SENT_END = re.compile(r"(?<=[。！？!?])")          # 句末标点后断句（保留标点）
+_INTERNAL_ID = re.compile(r"[GVKQ]\d{4}")          # 内部主键，不进学员可见文案
+_PAREN_ID = re.compile(r"[（(][^（）()]*[GVKQ]\d{4}[^（）()]*[）)]")
+_TEACH_CUES = ["记住：", "注意：", "容易错：", "小提醒："]
+_GENERIC_NOTE = "点「听」跟读一遍，再对照中文记住这句话。"
+
+
+def _split_sentences(text):
+    """把一段文本按句末标点切成句子（保留标点），供素材 text_ja / text_zh 对齐。"""
+    return [p.strip() for p in _SENT_END.split(text or "") if p and p.strip()]
+
+
+def _short_zh(text, limit=80):
+    """把种子的中文讲解截成一句短提示：去掉内部编号 G0001 等，不追加任何编造内容。"""
+    if not isinstance(text, str) or not text.strip():
+        return ""
+    s = _PAREN_ID.sub("", text)
+    s = _INTERNAL_ID.sub("", s)
+    s = s.replace("（）", "").replace("()", "").strip("，、； ")
+    if not s:
+        return ""
+    if len(s) <= limit:
+        return s
+    cut = max(s.rfind(m, 0, limit) for m in "。！？；，、")
+    return s[:cut + 1] if cut > 0 else s[:limit]
+
+
+def _zh_candidates(item, kind):
+    """从一个知识点抽出「可给零基础学员看的中文难点」候选 (rank, 文本)。
+    rank 越小越优先：0=中文母语者易错点，1=中日差异/同形，2=助词/变形/敬简。"""
+    out = []
+    if kind == "vocab":
+        if item.get("notes_for_zh"):
+            out.append((0, item["notes_for_zh"]))
+    elif kind == "grammar":
+        for e in item.get("common_errors") or []:
+            if isinstance(e, dict) and e.get("why"):
+                rank = 0 if e.get("learner") in (None, "zh") else 1
+                out.append((rank, e["why"]))
+        if item.get("usage"):
+            out.append((2, item["usage"]))
+        for c in item.get("compare") or []:
+            diff = c.get("diff") if isinstance(c, dict) else (c if isinstance(c, str) else None)
+            if diff:
+                out.append((2, diff))
+    elif kind == "kanji":
+        if item.get("zh_trap"):
+            out.append((1, item["zh_trap"]))
+    cleaned = []
+    for rank, text in out:
+        s = _short_zh(text)
+        if s:
+            cleaned.append((rank, s))
+    return cleaned
+
+
+def _seed_note(item, kind):
+    """取一条最适合挂在句子旁的中文提示（真实种子内容），兜底为通用的中文学习提示。"""
+    for _rank, text in _zh_candidates(item, kind):
+        return text
+    for key in ("meaning_zh", "usage", "notes_for_zh", "zh_trap"):
+        s = _short_zh(item.get(key, ""))
+        if s:
+            return s
+    return _GENERIC_NOTE
+
+
+def _material_pairs(mids, mmap, gmap, vmap):
+    """把素材按句拆成 (日文, 假名, 中文, 中文提示)。只有日中句数一致才成对，
+    避免把错位的中文硬配到日文上（等于编造翻译）。
+
+    v3 修复两处：
+    1) 资料层已为部分 N5 素材补了真实 `text_kana`，逐句对齐后填入假名；
+       没有 / 句数不符 / 与原文相同（旧的「读音=原文」bug）一律留空，不伪造。
+    2) 中文提示优先用素材自己的 `focus_zh`，不再把某条语法的易错点循环塞给
+       不相关的句子（旧版「早上好」配「だ 是简体」的错配）。"""
+    pairs = []
+    for mid in mids:
+        m = mmap.get(mid)
+        if not m:
+            continue
+        ja, zh = m.get("text_ja"), m.get("text_zh")
+        if not ja or not zh:
+            continue
+        ja_s, zh_s = _split_sentences(ja), _split_sentences(zh)
+        if not ja_s or len(ja_s) != len(zh_s):
+            continue
+        ka_s = _split_sentences(m.get("text_kana") or "")
+        if len(ka_s) != len(ja_s):
+            ka_s = []   # 句数对不上就不猜，绝不把 text_ja 当读音
+        focus = _short_zh(m.get("focus_zh") or "")
+        notes = [focus] if focus else []
+        if not notes:
+            for gid in m.get("grammar_ids") or []:
+                if gid in gmap:
+                    n = _seed_note(gmap[gid], "grammar")
+                    if n:
+                        notes.append(n)
+            for vid in m.get("vocab_ids") or []:
+                if vid in vmap:
+                    n = _seed_note(vmap[vid], "vocab")
+                    if n:
+                        notes.append(n)
+        if not notes:
+            notes = [_GENERIC_NOTE]
+        for i, (j, z) in enumerate(zip(ja_s, zh_s)):
+            # 邮件标题 / 通知抬头不是「一句话」，不塞进「今天要会的 3 句话」
+            if "／" in j or j.startswith(("件名：", "【", "※")):
+                continue
+            # 该句本来就是全假名时无需再显示读音行，其余句子照常给假名
+            kana = ka_s[i] if ka_s and ka_s[i] != j else ""
+            pairs.append((j, kana, z, notes[i % len(notes)]))
+    return pairs
+
+
+def _example_pairs(kids, imap, kind):
+    """把知识点的 examples 拆成 (日文, 假名, 中文, 中文提示)。
+    种子例句没有整句假名，一律留空，由页面用 TTS + 中文兜底，不伪造读音。"""
+    pairs = []
+    for kid in kids:
+        it = imap.get(kid)
+        if not it:
+            continue
+        note = _seed_note(it, kind)
+        for e in it.get("examples") or []:
+            ja, zh = e.get("ja"), e.get("zh")
+            if ja and zh:
+                pairs.append((ja, "", zh, note))
+    return pairs
+
+
+def _build_lesson_core(mids, nv, ng, rev, learned, mmap, gmap, vmap):
+    """凑满且仅 3 句「今天要会的话」，全部来自真实种子，绝不编造日语。
+    顺序：真实场景句（对齐的素材）→ 当日目标句型例句 → 当日生词例句 → 其余场景句 →
+    复习知识点例句兜底 → 全库已学例句兜底。
+    kana 只取资料层已核实的素材 text_kana 逐句对齐结果；没有就留空，绝不伪造。"""
+    mat_pairs = _material_pairs(mids, mmap, gmap, vmap)
+    g_pairs = _example_pairs(ng, gmap, "grammar")
+    v_pairs = _example_pairs(nv, vmap, "vocab")
+    r_pairs = (_example_pairs([k for k in rev if k in gmap], gmap, "grammar") +
+               _example_pairs([k for k in rev if k in vmap], vmap, "vocab"))
+    ordered = (mat_pairs[:2] + g_pairs[:2] + v_pairs[:2] +
+               mat_pairs[2:] + g_pairs[2:] + v_pairs[2:] + r_pairs)
+    core, seen = [], set()
+
+    def add(rows):
+        for ja, kana, zh, note in rows:
+            if ja in seen:
+                continue
+            seen.add(ja)
+            core.append({"ja": ja, "kana": kana, "zh": zh,
+                         "note_zh": note or _GENERIC_NOTE, "audio_text": ja})
+            if len(core) == 3:
+                return True
+        return False
+
+    if add(ordered):
+        return core
+    # 极端兜底：用「已学知识」的真实例句补齐到 3 句（排序保证确定性）
+    fallback = (_example_pairs(sorted(k for k in learned if k in gmap), gmap, "grammar") +
+                _example_pairs(sorted(k for k in learned if k in vmap), vmap, "vocab"))
+    add(fallback)
+    return core
+
+
+def _review_reason(gap):
+    return "%d 天前学的，按 1/2/3/7/14/30 天间隔今天该回顾" % gap
+
+
+def _next_hint(gap, learned_day):
+    idx = REVIEW_INTERVALS.index(gap) if gap in REVIEW_INTERVALS else 0
+    nxt = REVIEW_INTERVALS[idx + 1] if idx + 1 < len(REVIEW_INTERVALS) else gap * 2
+    return "大约 Day %d 再回顾" % (learned_day + nxt)
+
+
+def _build_review_plan(rev, day, introduced_day, vmap, gmap, kmap):
+    """把 review_knowledge_ids 展开成具体可复习的词条，最多 8 条，首日为空数组。"""
+    out = []
+    for kid in rev[:8]:
+        learned_day = introduced_day.get(kid, day - 1)
+        gap = day - learned_day
+        if kid in vmap:
+            x = vmap[kid]
+            surface, kana, zh = x.get("surface", ""), x.get("kana", ""), x.get("meaning_zh", "")
+        elif kid in gmap:
+            x = gmap[kid]
+            surface, kana, zh = x.get("pattern", ""), "", x.get("meaning_zh", "")
+        elif kid in kmap:
+            x = kmap[kid]
+            surface, kana, zh = x.get("char", ""), "", x.get("meaning_zh", "")
+        else:
+            continue
+        out.append({"kid": kid, "surface": surface, "kana": kana, "zh": zh,
+                    "reason_zh": _review_reason(gap),
+                    "learned_day": learned_day,
+                    "next_hint_zh": _next_hint(gap, learned_day)})
+    return out
+
+
+def _build_teaching_notes(nv, ng, nk, rev, vmap, gmap, kmap, maxn=4):
+    """2–4 条中文难点讲解，取自当天新知识点；新知识点不足 2 条时，
+    才用「今天要复习的真实知识点」补（仍 100% 来自种子）。无可取字段就少于 2 条甚至空数组。"""
+    cand = []
+
+    def add(kids, imap, kind, rank_offset=0):
+        for kid in kids:
+            if kid in imap:
+                for rank, t in _zh_candidates(imap[kid], kind):
+                    cand.append((rank + rank_offset, kid, t))
+
+    add(nv, vmap, "vocab")
+    add(ng, gmap, "grammar")
+    add(nk, kmap, "kanji")
+    if len(cand) < 2:
+        add(rev, vmap, "vocab", 3)
+        add(rev, gmap, "grammar", 3)
+        add(rev, kmap, "kanji", 3)
+    cand.sort(key=lambda x: (x[0], x[1]))
+    notes, seen = [], set()
+    for _rank, _kid, t in cand:
+        if t in seen:
+            continue
+        seen.add(t)
+        notes.append(_TEACH_CUES[len(notes) % len(_TEACH_CUES)] + t)
+        if len(notes) >= maxn:
+            break
+    return notes
 
 
 def phase_of(day: int) -> str:
@@ -328,15 +563,18 @@ def build(root=None) -> dict:
     used_q, used_m = set(), set()
     learned = set()
     new_by_day = {}
+    introduced_day = {}          # kid -> 真实引入那天，供 review_plan 回溯
     days = []
     for day in range(1, 81):
         ph = phase_of(day)
         nv, ng, nk = vwin.get(day, []), gwin.get(day, []), kwin.get(day, [])
         learned |= set(nv + ng + nk)
         new_by_day[day] = nv + ng + nk
+        for kid in nv + ng + nk:
+            introduced_day[kid] = day
         # 复习候选池：1/2/3/7/14/30 天前引入的知识（实际到期由 FSRS 决定）
         rev = []
-        for back in (1, 2, 3, 7, 14, 30):
+        for back in REVIEW_INTERVALS:
             rev += new_by_day.get(day - back, [])
         rev = list(dict.fromkeys([x for x in rev if x in learned]))[:12]
         level_hint = 1 if day <= 10 else 2 if day <= 25 else 3 if day <= 45 else 4 if day <= 65 else 5
@@ -425,12 +663,20 @@ def build(root=None) -> dict:
         for mid in mids:
             m = next((x for x in materials if x["id"] == mid), None)
             if m: sources += [s for s in (m.get("source_ids") or []) if s not in sources]
+        # ---- v3：把「今天具体学的 3 句 / 复习哪几个词 / 中文难点」写进骨架 ----
+        lesson_core = _build_lesson_core(mids, nv, ng, rev, learned,
+                                        mmap_all, gmap_all, vmap)
+        review_plan = _build_review_plan(rev, day, introduced_day, vmap, gmap_all, kmap)
+        teaching_notes = _build_teaching_notes(nv, ng, nk, rev, vmap, gmap_all, kmap)
         days.append({
             "day": day, "phase": ph, "theme": theme, "scene": scene,
             "scene_tag": scene_tag, "can_do": can_do, "focus": focus,
             "objectives": objectives, "new_vocab_ids": nv, "new_grammar_ids": ng,
             "new_kanji_ids": nk, "review_knowledge_ids": rev,
             "material_ids": mids,
+            "lesson_core": lesson_core,
+            "review_plan": review_plan,
+            "teaching_notes": teaching_notes,
             "blocks": blocks, "question_ids": qids,
             "rubric": rubric,
             "minutes": 60, "completion": completion, "assessment": ass,
@@ -505,6 +751,25 @@ def validate(data: dict, seeds: dict) -> dict:
             errs.append("Day %d 测验题不足 5 道（实际 %d）" % (d["day"], len(d["question_ids"])))
         if not d["objectives"] or not d["scene"] or not d["completion"]:
             errs.append("Day %d 存在空要素" % d["day"])
+
+    # ---- v3 新增检查（既有强校验保持不变）----
+    for d in days:
+        day = d["day"]
+        lc = d.get("lesson_core")
+        if not isinstance(lc, list) or len(lc) != 3:
+            errs.append("Day %d lesson_core 不是恰好 3 句" % day)
+        rp = d.get("review_plan")
+        if not isinstance(rp, list):
+            errs.append("Day %d review_plan 非数组" % day)
+        else:
+            rev_ids = set(d.get("review_knowledge_ids") or [])
+            for it in rp:
+                if not isinstance(it, dict) or it.get("kid") not in rev_ids:
+                    errs.append("Day %d review_plan 项不属于当天 review_knowledge_ids" % day)
+                    break
+        if not isinstance(d.get("teaching_notes"), list):
+            errs.append("Day %d teaching_notes 非数组" % day)
+
     seen_ass = {}
     for d in days:
         if d["assessment"] != "none":

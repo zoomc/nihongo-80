@@ -18,6 +18,63 @@
       .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
+  function t(v) { return (v === undefined || v === null) ? '' : String(v); }
+
+  /* 词性 / 题型 / 评估标签中文化（首屏不出现英文黑话）。 */
+  var POS_ZH = {
+    '名詞': '名词', '代名詞': '代名词', '動詞': '动词', '形容詞': '形容词',
+    '助動詞': '助动词', '助詞': '助词', '副詞': '副词', '数詞': '数词',
+    '感動詞': '感叹词', '連体詞': '连体词', '接続詞': '接续词',
+    '接尾辞': '接尾辞', '接頭辞': '接头辞'
+  };
+  function zhPos(s) {
+    var out = t(s);
+    Object.keys(POS_ZH).forEach(function (k) { out = out.split(k).join(POS_ZH[k]); });
+    return out;
+  }
+  var QTYPE_ZH = {
+    mcq: '选择题', fill: '填空题', listen: '听写题', read: '阅读题',
+    reorder: '排序题', error_correct: '改错题', translate: '翻译题',
+    free_production: '自由表达', dialogue: '对话题'
+  };
+  function qTypeZh(s) { return QTYPE_ZH[t(s)] || (t(s) ? t(s) : '练习题'); }
+  var ASSESS_ZH = {
+    diagnostic: '摸底（不计分，只用来定起点）', weekly: '每周小测',
+    stage: '阶段测', midterm: '中期测', n3_readiness: 'N3 水平摸底',
+    final: '结课测', none: '无'
+  };
+  function assessmentZh(s) { return ASSESS_ZH[t(s)] || t(s); }
+
+  /* 有值才渲染该行；缺失字段一律跳过，页面绝不出现 undefined。 */
+  function lineIf(parent, label, value, cls) {
+    if (value === undefined || value === null || value === '') return null;
+    var p = el('div', 'kv');
+    if (label) p.appendChild(el('span', 'kv-k', label));
+    p.appendChild(el('span', 'kv-v' + (cls ? ' ' + cls : ''), value));
+    parent.appendChild(p);
+    return p;
+  }
+
+  /* 每个词 / 每句 / 每段旁的「听」入口：用户手势内解锁 + 朗读，自带降级提示节点。 */
+  function listenBtn(text, label) {
+    var wrap = el('span', 'listen-wrap');
+    var b = el('button', 'btn btn-mini listen-btn', label || '听');
+    b.type = 'button';
+    var notice = el('span', 'inline-notice');
+    notice.hidden = true;
+    b.addEventListener('click', function () { primeTTS(); speak(text || '', notice); });
+    wrap.appendChild(b);
+    wrap.appendChild(notice);
+    return wrap;
+  }
+
+  /* 常显区块（非折叠）：标题 + 一句中文引导。 */
+  function sectionPlain(title, hint) {
+    var box = el('section', 'block');
+    box.appendChild(el('h2', 'block-title', title));
+    if (hint) box.appendChild(el('p', 'block-hint', hint));
+    return box;
+  }
   function readJSON(id) {
     var n = byId(id);
     if (!n) return null;
@@ -76,15 +133,25 @@
   function makePayload(state) {
     var results = Object.keys(state.results).map(function (qid) {
       var r = state.results[qid];
-      return {
+      var o = {
         qid: r.qid, answer: r.answer, correct: !!r.correct, hinted: !!r.hinted,
         seconds: Math.max(0, Math.round(r.seconds || 0)), error_type: r.error_type || null
       };
+      /* 开放题自评写独立字段，绝不冒充 correct / 掌握判定（REDESIGN §5、P0-9）。 */
+      if (r.self_assessed) o.self_assessed = r.self_assessed;
+      return o;
     });
     var total = results.reduce(function (a, r) { return a + r.seconds; }, 0);
+    /* 复习三档自评单独成数组，绝不写进 results[].correct（REDESIGN §4.3 / §5）。
+       import-web-result 只读取它认识的字段，新增顶层字段完全向后兼容。 */
+    var rr = state.reviewRatings || {};
+    var review_ratings = Object.keys(rr).map(function (kid) {
+      return { kid: kid, rating: rr[kid] };
+    });
     return {
       v: 1, day: state.day, session: state.session, ts: localISO(),
-      results: results, minutes: Math.max(1, Math.round(total / 60)), source: 'web'
+      results: results, minutes: Math.max(1, Math.round(total / 60)), source: 'web',
+      review_ratings: review_ratings
     };
   }
 
@@ -113,6 +180,7 @@
   var LAYOUT = { wide: false, mode: 'step' };   // step=手机一屏一题 / grid=PC 一屏多题
   var TTS = { supported: false, jaVoice: false, muted: false, rate: 0.9, unlocked: false, lastText: '' };
   var QUIZ = null;                              // 练习控制器，供外壳按钮调用
+  var TEACHER_BOX = null;                       // 页尾折叠「给老师/系统」容器，完成回传码时打开
 
   /* ---------------- 语音：手势解锁 + 播放/停止/语速 + 降级 ---------------- */
   function refreshVoices() {
@@ -223,9 +291,9 @@
       b.hidden = false;
     }
     if (side) {
-      side.textContent = '语音：' + (TTS.supported
-        ? (TTS.jaVoice ? 'ja-JP 可用（需手势解锁）' : '无日语语音，降级为假名读音')
-        : '不支持，降级为文本 + 假名');
+      side.textContent = TTS.jaVoice
+        ? '发音：点句子旁的「听」跟读一遍。'
+        : '发音：这台设备没有日语语音，看假名跟读即可，不影响今天的学习。';
     }
   }
 
@@ -252,8 +320,8 @@
     var online = (typeof navigator !== 'undefined' && 'onLine' in navigator) ? navigator.onLine : true;
     if (box) {
       box.textContent = online
-        ? '在线 · 课程与素材已缓存，可离线打开；离线仅展示，成绩靠回传码。'
-        : '当前离线 · 仅展示已缓存课程；成绩靠回传码回 WorkBuddy 会话导入。';
+        ? '离线也能看今天的内容；做完的练习记得带回 WorkBuddy 会话。'
+        : '当前离线：内容已缓存，练习结果稍后带回 WorkBuddy 会话。';
     }
     document.body.classList.toggle('is-offline', !online);
   }
@@ -1087,6 +1155,720 @@
     return sec;
   }
 
+  /* ================= v3：一课教材的 8 个区块（首屏即可学） ================= */
+
+  /* ① 今天要会的 3 句话：日文大字 + 假名（有才显示，不伪造）+ 中文 + 中文提示 + 听。 */
+  function renderLessonCore(day) {
+    var core = day.lesson_core || [];
+    var box = sectionPlain('今天要会的 3 句话',
+      '点「听」听发音，没声音就照着假名跟读。');
+    if (!core.length) {
+      box.appendChild(el('p', 'muted', '（今天暂时没有可展示的句子，先看下面的单词。）'));
+      return box;
+    }
+    core.forEach(function (s, i) {
+      var card = el('div', 'core-sentence');
+      var main = el('div', 'core-main');
+      main.appendChild(el('div', 'core-ja', t(s.ja)));
+      if (t(s.kana)) main.appendChild(el('div', 'core-kana', s.kana));  // 有才显示，不伪造
+      main.appendChild(el('div', 'core-zh', t(s.zh)));
+      /* lesson_core[].note_zh 由课程层生成、未必与本句对应，故不逐句渲染；
+         中文难点统一放到语法区「今日难点」常显，避免错配与首屏拥挤。 */
+      var side = el('div', 'core-side');
+      side.appendChild(listenBtn(t(s.audio_text) || t(s.ja), '听这句'));
+      card.appendChild(main); card.appendChild(side);
+      box.appendChild(card);
+    });
+    return box;
+  }
+
+  /* ② 单词：常显、不折叠、不翻面；假名常显；全字段 + 韩语对照 + 易错提示。 */
+  function renderVocabBlock(day) {
+    var vs = day.vocab || [];
+    var box = sectionPlain('单词',
+      '每个词都常显：先读假名、听发音，再看中文意思、例句、中文易错点和韩语对照。');
+    var list = el('div', 'vlist');
+    vs.forEach(function (v) {
+      var c = el('div', 'vcard');
+      var top = el('div', 'vcard-top');
+      top.appendChild(el('span', 'v-surface', t(v.surface)));
+      if (t(v.kana)) top.appendChild(el('span', 'v-kana', v.kana));
+      top.appendChild(listenBtn(t(v.surface) || t(v.kana), '听这个词'));
+      c.appendChild(top);
+      var meta = el('div', 'v-meta');
+      if (t(v.romaji)) meta.appendChild(el('span', 'v-tag', '罗马字 ' + v.romaji));
+      if (t(v.pos)) meta.appendChild(el('span', 'v-tag', '词性 ' + zhPos(v.pos)));
+      if (t(v.jlpt)) meta.appendChild(el('span', 'v-tag', 'JLPT ' + v.jlpt));
+      if (meta.children.length) c.appendChild(meta);
+      if (t(v.meaning_zh)) c.appendChild(el('div', 'v-meaning', '中文：' + v.meaning_zh));
+      var exLimit = LAYOUT.wide ? 2 : 1;   // 手机更紧凑：每卡 1 例句，PC 最多 2 例句
+      (v.examples || []).slice(0, exLimit).forEach(function (e) {
+        var ex = el('div', 'v-ex');
+        ex.appendChild(el('div', 'v-ex-ja', t(e.ja)));
+        if (t(e.zh)) ex.appendChild(el('div', 'v-ex-zh', e.zh));
+        ex.appendChild(listenBtn(t(e.audio_text) || t(e.ja), '听'));
+        c.appendChild(ex);
+      });
+      if (t(v.notes_for_zh)) c.appendChild(el('div', 'note-zh', '中文易错：' + v.notes_for_zh));
+      if (t(v.ko) || t(v.ko_hint) || t(v.caution)) {
+        var kb = el('div', 'ko-box');
+        kb.appendChild(el('div', 'ko-title', '韩语对照（结构可以借，词不能猜）'));
+        if (t(v.ko)) kb.appendChild(el('div', 'ko-line', '可以对照：' + v.ko));
+        if (t(v.ko_hint)) kb.appendChild(el('div', 'ko-hint', v.ko_hint));
+        if (t(v.caution)) kb.appendChild(el('div', 'ko-caution', '必须验证 / 不等价：' + v.caution));
+        c.appendChild(kb);
+      }
+      list.appendChild(c);
+    });
+    if (!vs.length) box.appendChild(el('p', 'muted', '（今天没有新词）'));
+    box.appendChild(list);
+    return box;
+  }
+
+  /* ③ 语法：中文意思 / 中文接续说明 / 例句 / 使用场景 / 易错点 / 相近语法 / 韩语对照。 */
+  function renderGrammarBlock(day) {
+    var gs = day.grammar || [];
+    var box = sectionPlain('语法',
+      '用中文讲清楚：什么意思、怎么接续、怎么用、容易错在哪，再对照韩语。');
+    gs.forEach(function (g) {
+      var c = el('div', 'gcard');
+      c.appendChild(el('div', 'g-pattern', t(g.pattern)));
+      if (t(g.meaning_zh)) lineIf(c, '意思', g.meaning_zh);
+      if (t(g.explanation_zh)) c.appendChild(el('div', 'g-expl', '中文接续说明：' + g.explanation_zh));
+      else if (t(g.connection)) lineIf(c, '接续', g.connection);
+      if (t(g.usage)) lineIf(c, '使用场景', g.usage);
+      var exs = g.examples || [];
+      if (exs.length) {
+        var ebox = el('div', 'g-exs');
+        ebox.appendChild(el('div', 'sub-title', '例句（点「听」跟读）'));
+        exs.slice(0, 3).forEach(function (e) {
+          var ex = el('div', 'g-ex');
+          ex.appendChild(el('span', 'g-ex-ja', t(e.ja)));
+          if (t(e.zh)) ex.appendChild(el('span', 'g-ex-zh', e.zh));
+          ex.appendChild(listenBtn(t(e.audio_text) || t(e.ja), '听'));
+          ebox.appendChild(ex);
+        });
+        c.appendChild(ebox);
+      }
+      var errs = g.common_errors || [];
+      if (errs.length) {
+        var eb = el('div', 'err-box');
+        eb.appendChild(el('div', 'sub-title', '易错点（中文）'));
+        errs.forEach(function (e, k) {
+          var s2 = (k + 1) + '. ' + t(e.why || '');
+          if (t(e.wrong) || t(e.fix)) {
+            s2 += '（';
+            if (t(e.wrong)) s2 += '常见错例：' + e.wrong;
+            if (t(e.fix)) s2 += (t(e.wrong) ? '；正确：' : '正确：') + e.fix;
+            s2 += '）';
+          }
+          eb.appendChild(el('div', 'err-item', s2));
+        });
+        c.appendChild(eb);
+      }
+      var cmp = g.compare || [];
+      if (cmp.length) {
+        var cb = el('div', 'cmp-box');
+        cb.appendChild(el('div', 'sub-title', '与相近语法的区别'));
+        cmp.forEach(function (x) {
+          /* 只给中文区别，不展示内部 G 编号。 */
+          cb.appendChild(el('div', 'cmp-item', t(x.diff)));
+        });
+        c.appendChild(cb);
+      }
+      if (t(g.ko) || t(g.ko_hint) || t(g.caution)) {
+        var kb = el('div', 'ko-box');
+        kb.appendChild(el('div', 'ko-title', '韩语对照（结构可以借，词不能猜）'));
+        if (t(g.ko)) kb.appendChild(el('div', 'ko-line', '可以对照：' + g.ko));
+        if (t(g.ko_hint)) kb.appendChild(el('div', 'ko-hint', g.ko_hint));
+        if (t(g.caution)) kb.appendChild(el('div', 'ko-caution', '必须验证 / 不等价：' + g.caution));
+        c.appendChild(kb);
+      }
+      box.appendChild(c);
+    });
+    if (!gs.length) box.appendChild(el('p', 'muted', '（今天没有新语法）'));
+    /* 课程层 teaching_notes（中文难点讲解）在学习区常显，不藏到提交后。 */
+    var notes = day.teaching_notes || [];
+    if (notes.length) {
+      var nb = el('div', 'note-zh');
+      nb.appendChild(el('div', 'sub-title', '今日难点（中文讲解）'));
+      notes.forEach(function (n) { nb.appendChild(el('div', '', t(n))); });
+      box.appendChild(nb);
+    }
+    return box;
+  }
+
+  /* ④ 汉字：音读 / 训读 / 例词 / 中文陷阱，明写不要求抄写。 */
+  function renderKanjiBlock(day) {
+    var ks = day.kanji || [];
+    var box = sectionPlain('汉字', '会认、会读、能在词里读出来即可，不要求机械抄写。');
+    var list = el('div', 'klist');
+    ks.forEach(function (k) {
+      var c = el('div', 'kcard');
+      c.appendChild(el('div', 'k-char', t(k.char)));
+      if (t(k.meaning_zh)) c.appendChild(el('div', 'k-mean', '意思：' + k.meaning_zh));
+      lineIf(c, '音读', (k.onyomi || []).join(' / '));
+      lineIf(c, '训读', (k.kunyomi || []).join(' / '));
+      var exs = k.examples || [];
+      if (exs.length) {
+        var eb = el('div', 'k-ex-list');
+        eb.appendChild(el('div', 'sub-title', '例词'));
+        exs.forEach(function (e) {
+          eb.appendChild(el('div', 'k-ex',
+            t(e.ja) + (t(e.kana) ? '（' + e.kana + '）' : '') + (t(e.zh) ? ' ' + e.zh : '')));
+        });
+        c.appendChild(eb);
+      }
+      if (t(k.zh_trap)) c.appendChild(el('div', 'trap', '中文母语者陷阱：' + k.zh_trap));
+      if (t(k.ko_hint)) c.appendChild(el('div', 'ko-hint', k.ko_hint));
+      c.appendChild(el('div', 'k-note', '不要求机械抄写：会认、会读、能在词里读出来即可。'));
+      c.appendChild(listenBtn(t(k.char), '听'));
+      list.appendChild(c);
+    });
+    if (!ks.length) box.appendChild(el('p', 'muted', '（今天没有新汉字）'));
+    box.appendChild(list);
+    return box;
+  }
+
+  /* ⑤ 例句 / 会话：原文与假名读音两个不同节点；audio_text 只用于 TTS。 */
+  function renderExamplesBlock(day) {
+    var ms = day.materials || [];
+    var box = sectionPlain('例句 / 会话',
+      '日文原文与假名读音分开给：原文是「写在纸上的样子」，假名是「怎么念」。点「听」听整段。');
+    ms.forEach(function (m) {
+      var c = el('div', 'material');
+      c.appendChild(el('h3', 'material-title',
+        (m.kind === 'listening' ? '听力 · ' : '阅读 · ') + t(m.title)));
+      if (t(m.text_ja)) c.appendChild(el('div', 'ja-text', m.text_ja));
+      /* 只有确有真实假名、且与原文不同时才显示读音行；绝不把 audio_text 当读音。 */
+      if (t(m.text_kana) && m.text_kana !== m.text_ja) {
+        c.appendChild(el('div', 'kana-line', '假名读音：' + m.text_kana));
+      }
+      if (t(m.text_zh)) c.appendChild(el('div', 'm-zh', '中文：' + m.text_zh));
+      var row = el('div', 'material-actions');
+      row.appendChild(listenBtn(t(m.audio_text) || t(m.text_ja), '听这段'));
+      c.appendChild(row);
+      if (t(m.focus_zh)) c.appendChild(el('div', 'note-zh', '难点：' + m.focus_zh));
+      box.appendChild(c);
+    });
+    if (!ms.length) box.appendChild(el('p', 'muted', '（今天没有会话素材）'));
+    return box;
+  }
+
+  /* ⑦ 今日复习：具体词 + 为什么今天 + 下次大约 + 三档自评写入 review_ratings。 */
+  function renderReviewBlock(day, state) {
+    var plan = day.review_plan || [];
+    var box = sectionPlain('今日复习（记忆曲线）',
+      '先遮住中文自己想，再点开对答案，最后选「记住了 / 模糊 / 忘了」。');
+    box.appendChild(el('p', 'review-disclaimer',
+      '这是按 1/2/3/7/14/30 天的复习计划，实际到期以本地 SQLite / WorkBuddy 会话为准。页面只记录你的自评，不替你判定掌握、不安排下次时间。'));
+    if (!plan.length) {
+      box.appendChild(el('div', 'review-empty',
+        '今天复习 0 个词（第一天全是新内容，不用复习）。'));
+      var news = (day.vocab || []).map(function (v) { return t(v.surface); }).filter(Boolean);
+      if (news.length) box.appendChild(el('div', 'review-new',
+        '今天新学：' + news.join(' / ') + '。明天会开始带你回忆这几个词。'));
+      box.appendChild(el('div', 'review-why',
+        '为什么第一天没有复习：还没学过，自然没有「该回忆」的。下次大约哪天再来，由程序算好告诉你，本页不编。'));
+      return box;
+    }
+    box.appendChild(el('div', 'review-count', '今天该回顾这 ' + plan.length + ' 个词：'));
+    plan.forEach(function (p, i) {
+      var it = el('div', 'review-item');
+      var head = el('div', 'review-head');
+      head.appendChild(el('span', 'review-no', String(i + 1)));
+      head.appendChild(el('span', 'review-surface', t(p.surface)));
+      if (t(p.kana)) head.appendChild(el('span', 'review-kana', p.kana));
+      head.appendChild(listenBtn(t(p.surface) || t(p.kana), '听'));
+      it.appendChild(head);
+      var ansRow = el('div', 'review-ans');
+      var showBtn = el('button', 'btn btn-mini', '看答案');
+      showBtn.type = 'button';
+      var zhSpan = el('span', 'review-zh', '');
+      zhSpan.hidden = true;
+      showBtn.addEventListener('click', function () {
+        zhSpan.textContent = t(p.zh); zhSpan.hidden = false; showBtn.hidden = true;
+      });
+      ansRow.appendChild(showBtn); ansRow.appendChild(zhSpan);
+      it.appendChild(ansRow);
+      it.appendChild(el('div', 'review-reason', '为什么是今天：' + t(p.reason_zh)));
+      it.appendChild(el('div', 'review-next', t(p.next_hint_zh)));
+      var rates = el('div', 'rating-btns');
+      rates.appendChild(el('span', 'rating-label', '回想一下：'));
+      [['good', '记住了'], ['hard', '模糊'], ['again', '忘了']].forEach(function (o) {
+        var b = el('button', 'btn btn-mini rate-btn', o[1]);
+        b.type = 'button';
+        b.addEventListener('click', function () {
+          if (state) { state.reviewRatings[p.kid] = o[0]; if (QUIZ && QUIZ.save) QUIZ.save(); }
+          Array.prototype.forEach.call(rates.querySelectorAll('.rate-btn'), function (x) {
+            x.classList.remove('sel');
+          });
+          b.classList.add('sel');
+        });
+        rates.appendChild(b);
+      });
+      it.appendChild(rates);
+      box.appendChild(it);
+    });
+    return box;
+  }
+
+  /* ⑧ 页尾折叠：给老师 / 系统。能力目标、时间块、图表、术语、TTS、回传码全在这里。 */
+  function renderTeacherBlock(day, site) {
+    var d = el('details', 'teacher');
+    d.appendChild(el('summary', 'section-sum', '给老师 / 系统（课程编排与系统信息，点开查看）'));
+    var body = el('div', 'section-body');
+    d.appendChild(body);
+    body.appendChild(el('p', 'teacher-lead',
+      '下面是排课、统计与工程信息，不影响今天学日语。学员看上面的 7 个区块就够了。'));
+
+    if (t(day.can_do)) {
+      var s1 = section('今天要会做的事', false);
+      s1._body.appendChild(el('p', '', day.can_do));
+      body.appendChild(s1);
+    }
+    if ((day.focus || []).length) {
+      var fz = { listening: '听', reading: '读', speaking: '说', writing: '写',
+                 production: '表达', grammar: '语法' };
+      var fparts = day.focus.map(function (f) { return fz[f] || t(f); });
+      body.appendChild(el('p', 'muted', '今天重点：' + fparts.join(' / ')));
+    }
+    if (t(day.assessment) && day.assessment !== 'none') {
+      body.appendChild(el('p', 'muted', '评估标签：' + assessmentZh(day.assessment)));
+    }
+    if (t(day.scene)) body.appendChild(el('p', 'muted', '真实场景：' + day.scene));
+
+    if ((day.objectives || []).length) {
+      var so = section('能力目标（教研用语）', false);
+      var ul = el('ul', 'objectives');
+      day.objectives.forEach(function (o) { ul.appendChild(el('li', '', o)); });
+      so._body.appendChild(ul); body.appendChild(so);
+    }
+    var st = section('60 分钟时间块（排课视角）', false);
+    st._body.appendChild(timeBar(day.blocks, day.minutes));
+    body.appendChild(st);
+    var sv = section('当日可视化（课程结构，不代表掌握进度）', false);
+    var vg = el('div', 'viz-grid');
+    vg.appendChild(vizCard('当日结构', dayStructureSVG(day)));
+    vg.appendChild(vizCard('80 天进度热力图', heatmapSVG(site, day.day), 'viz-heat'));
+    vg.appendChild(vizCard('题型分布', typeDistSVG(day.questions)));
+    sv._body.appendChild(vg);
+    sv._body.appendChild(phaseLegend());
+    body.appendChild(sv);
+
+    if ((day.teaching_notes || []).length) {
+      var sn = section('中文难点讲解（备课用）', false);
+      day.teaching_notes.forEach(function (n) { sn._body.appendChild(el('p', '', n)); });
+      body.appendChild(sn);
+    }
+    body.appendChild(el('p', 'muted',
+      '来源编号、内部 ID、评估标签与课程结构数据仅用于教研溯源，不在学习区展示。'));
+
+    /* TTS 设备自检 / 语速控件降级到页尾折叠（保留手势解锁与降级提示）。 */
+    var banner = byId('tts-banner');
+    if (banner) body.appendChild(banner);
+    /* 回传码面板（由 buildPracticeV3 生成）挂到页尾折叠区，移出前 3 屏。 */
+    if (QUIZ && QUIZ.returnBox) body.appendChild(QUIZ.returnBox);
+    body.appendChild(el('p', 'muted',
+      '术语：摸底（不计分，只用来定起点）；今天该回顾这几个词（记忆曲线计划）；把成绩带回 WorkBuddy（回传码）。网页不向任何服务器发送学习数据，学习状态以本地 SQLite / WorkBuddy 会话为准。'));
+    return d;
+  }
+
+  /* ⑥ 练习：默认展开、由易到难；先想 → 看答案 → 解析+示范句+rubric；逐题中文化反馈。
+     保留逐题判分 / 复制·分享·下载回传码 / 手势解锁等既有机制；
+     复习自评与开放题自评都写独立字段，绝不写进 results[].correct。 */
+  function buildPracticeV3(day) {
+    var TYPE_ORDER = { listen: 0, mcq: 1, read: 1, fill: 2, reorder: 3,
+                       translate: 4, error_correct: 5, dialogue: 6, free_production: 7 };
+    var qs = (day.questions || []).slice().sort(function (a, b) {
+      var da = a.difficulty || 0, db = b.difficulty || 0;
+      if (da !== db) return da - db;
+      var ta = TYPE_ORDER[a.type] === undefined ? 9 : TYPE_ORDER[a.type];
+      var tb = TYPE_ORDER[b.type] === undefined ? 9 : TYPE_ORDER[b.type];
+      return ta - tb;
+    });
+    var state = { day: day.day, index: 0, session: null, results: {},
+                  started: {}, reviewRatings: {} };
+    var mode = LAYOUT.mode;
+
+    var sec = sectionPlain('练一练（学完马上做）',
+      '先自己想，再点「看答案」对照解析与示范句；也可以直接「提交答案」看判分。开放题没有唯一答案，照着示范句把自己的话写进去也对。');
+
+    if (mode === 'step') {
+      var viewRow = el('div', 'btn-row');
+      var viewAll = el('button', 'btn btn-mini', '查看全部题目 / 回看解析');
+      viewAll.type = 'button';
+      viewAll.addEventListener('click', function () {
+        var list = sec.querySelector('.q-list');
+        if (!list) return;
+        var all = list.classList.contains('grid-mode');
+        list.classList.toggle('grid-mode', !all);
+        list.classList.toggle('step-mode', all);
+        viewAll.textContent = all ? '查看全部题目 / 回看解析' : '回到一屏一题';
+      });
+      viewRow.appendChild(viewAll);
+      sec.appendChild(viewRow);
+    }
+
+    var root = el('div', 'quiz quiz-' + mode);
+    sec.appendChild(root);
+
+    /* 当日恢复：localStorage 只是刷新/断网缓存，不是状态真源（保留既有机制）。 */
+    var saved = null;
+    try { saved = JSON.parse(localStorage.getItem('nh80:day:' + day.day) || 'null'); } catch (e) { saved = null; }
+    if (saved && saved.results) {
+      state.results = saved.results;
+      state.session = saved.session || null;
+      var rb = el('div', 'banner banner-info',
+        '已恢复本机当日缓存（仅用于刷新 / 断网恢复，不是学习状态真源，也不代表已完成）。');
+      var clr = el('button', 'btn btn-mini', '清除缓存');
+      clr.type = 'button';
+      clr.addEventListener('click', function () {
+        try { localStorage.removeItem('nh80:day:' + day.day); } catch (e) {}
+        if (typeof location !== 'undefined' && location.reload) location.reload();
+      });
+      rb.appendChild(document.createTextNode(' '));
+      rb.appendChild(clr);
+      root.appendChild(rb);
+    }
+    if (saved && saved.reviewRatings) state.reviewRatings = saved.reviewRatings;
+    if (!state.session) state.session = makeSessionId();
+
+    /* PC 工具条（保留），文案白话化，不用「已答 X / Y」定义学员。 */
+    var toolbar = el('div', 'quiz-toolbar');
+    var tbProgress = el('span', 'tb-progress', '共 ' + qs.length + ' 题 · 按自己节奏做');
+    var tbFinish = el('button', 'btn btn-primary', '把成绩带回 WorkBuddy');
+    tbFinish.type = 'button';
+    var tbCopy = el('button', 'btn', '复制回传码');
+    tbCopy.type = 'button';
+    toolbar.appendChild(tbProgress); toolbar.appendChild(tbFinish); toolbar.appendChild(tbCopy);
+    root.appendChild(toolbar);
+
+    /* 回传码面板：白话改名，不出现协议号 / 算法缩写；DOM 由 renderDay 挂到页尾折叠区。 */
+    var returnBox = el('details', 'return-box');
+    returnBox.appendChild(el('summary', 'section-sum', '把成绩带回 WorkBuddy（复制 / 分享 / 下载）'));
+    var rbBody = el('div', 'section-body');
+    rbBody.appendChild(el('div', 'return-hint',
+      '复制后粘贴到 WorkBuddy 对话即可导入；本页不保存成绩、不向任何服务器发送学习数据，仅保存作答记录，不代表已掌握。'));
+    var summary = el('div', 'return-summary', '尚未生成');
+    rbBody.appendChild(summary);
+    var codeArea = el('textarea', 'code-area');
+    codeArea.readOnly = true; codeArea.rows = 4;
+    codeArea.setAttribute('aria-label', '回传码文本框（可全选复制）');
+    rbBody.appendChild(codeArea);
+    var btnRow = el('div', 'btn-row');
+    var copyBtn = el('button', 'btn btn-primary', '复制回传码'); copyBtn.type = 'button';
+    var selectBtn = el('button', 'btn', '全选文本'); selectBtn.type = 'button';
+    var shareBtn = el('button', 'btn', '系统分享'); shareBtn.type = 'button';
+    var dlBtn = el('button', 'btn', '下载 .txt'); dlBtn.type = 'button';
+    var regenBtn = el('button', 'btn', '重新生成'); regenBtn.type = 'button';
+    [copyBtn, selectBtn, shareBtn, dlBtn, regenBtn].forEach(function (b) { btnRow.appendChild(b); });
+    rbBody.appendChild(btnRow);
+    var copyStatus = el('div', 'copy-status', '');
+    rbBody.appendChild(copyStatus);
+    returnBox.appendChild(rbBody);
+    /* 故意不 append 到 root：由 renderTeacherBlock 挂到页尾折叠区，移出前 3 屏。 */
+
+    var lastCode = '';
+
+    function save() {
+      try {
+        localStorage.setItem('nh80:day:' + day.day,
+          JSON.stringify({ session: state.session, results: state.results,
+                           reviewRatings: state.reviewRatings }));
+      } catch (e) {}
+    }
+    function elapsed(qid) {
+      if (!state.started[qid]) state.started[qid] = Date.now();
+      return Math.round((Date.now() - state.started[qid]) / 1000);
+    }
+    function generate(open) {
+      var payload = makePayload(state);
+      lastCode = encodeReturnCode(payload);
+      QUIZ.lastCode = lastCode;
+      codeArea.value = lastCode;
+      summary.textContent = '共 ' + qs.length + ' 题 · 已记录 ' + payload.results.length
+        + ' 条作答 · 复习自评 ' + payload.review_ratings.length + ' 条 · 会话 ' + payload.session;
+      if (open) {
+        if (TEACHER_BOX) TEACHER_BOX.open = true;
+        returnBox.open = true;
+      }
+      return lastCode;
+    }
+    function selectCode() {
+      codeArea.focus();
+      if (codeArea.select) codeArea.select();
+      if (codeArea.setSelectionRange) {
+        try { codeArea.setSelectionRange(0, codeArea.value.length); } catch (e) {}
+      }
+      copyStatus.textContent = '已全选文本框，可长按 / 复制';
+    }
+    function copyCode() {
+      var code = codeArea.value || generate(true);
+      var done = function (m) { copyStatus.textContent = m; };
+      var fallback = function () {
+        try {
+          codeArea.focus();
+          if (codeArea.select) codeArea.select();
+          var ok = document.execCommand && document.execCommand('copy');
+          done(ok ? '已复制（兼容模式）' : '复制不可用：已全选文本框，请手动长按 / 复制');
+        } catch (e) { done('复制不可用：已全选文本框，请手动复制'); }
+      };
+      if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
+        try {
+          var p = navigator.clipboard.writeText(code);
+          if (p && p.then) p.then(function () { done('已复制到剪贴板'); }, fallback);
+          else fallback();
+        } catch (e) { fallback(); }
+      } else fallback();
+    }
+    function shareCode() {
+      var code = codeArea.value || generate(true);
+      if (typeof navigator !== 'undefined' && navigator.share) {
+        try {
+          var p = navigator.share({ title: 'Nihongo 80 学习记录 · 第 ' + day.day + ' 天', text: code });
+          if (p && p.catch) p.catch(function () {});
+        } catch (e) { copyStatus.textContent = '系统分享未成功，请用「复制回传码」'; }
+      } else {
+        copyStatus.textContent = '此浏览器不支持系统分享，请用「复制回传码」或「下载 .txt」';
+      }
+    }
+    function downloadCode() {
+      var code = codeArea.value || generate(true);
+      try {
+        var blob = new Blob([code], { type: 'text/plain;charset=utf-8' });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = 'nh80-day-' + pad3(day.day) + '-' + state.session + '.txt';
+        document.body.appendChild(a);
+        if (a.click) a.click();
+        document.body.removeChild(a);
+        if (URL.revokeObjectURL && typeof setTimeout !== 'undefined') {
+          setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+        }
+        copyStatus.textContent = '已下载 .txt 备份，稍后可从中复制导入';
+      } catch (e) {
+        copyStatus.textContent = '下载不可用，请「复制回传码」或「全选文本」';
+      }
+    }
+    function finish() {
+      generate(true);
+      if (returnBox.scrollIntoView) {
+        try { returnBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); } catch (e) {}
+      }
+    }
+    copyBtn.addEventListener('click', copyCode);
+    selectBtn.addEventListener('click', selectCode);
+    shareBtn.addEventListener('click', shareCode);
+    dlBtn.addEventListener('click', downloadCode);
+    regenBtn.addEventListener('click', function () { generate(true); copyStatus.textContent = '已重新生成'; });
+    tbFinish.addEventListener('click', finish);
+    tbCopy.addEventListener('click', copyCode);
+
+    /* 解析区预渲染（DOM 里已有文本，初始隐藏）。中文化反馈，不出现英文错误归因枚举。 */
+    function renderRevealContent(q, box, r) {
+      box.innerHTML = '';
+      if (r) {
+        var badge = r.correct
+          ? el('span', 'badge badge-good', '答对')
+          : el('span', 'badge badge-bad', '再核对一下');
+        box.appendChild(badge);
+        box.appendChild(el('div', 'reveal-row', '你的答案：' + (r.answer || '（空）')));
+      }
+      if (t(q.answer)) box.appendChild(el('div', 'reveal-row', '参考答案：' + q.answer));
+      if (t(q.rationale)) box.appendChild(el('div', 'reveal-row', '解析：' + q.rationale));
+      if (t(q.expected_production)) {
+        var ep = el('div', 'demo-box');
+        ep.appendChild(el('div', 'demo-title', '示范句（不是唯一答案）'));
+        ep.appendChild(el('div', 'demo-ja', q.expected_production));
+        ep.appendChild(listenBtn(q.expected_production, '听示范句'));
+        box.appendChild(ep);
+      }
+      if (t(q.rubric)) {
+        var rub = el('div', 'rubric');
+        rub.appendChild(el('div', 'rubric-title', '评分准则（分点对照）'));
+        String(q.rubric).split(/[；;①②③④⑤⑥\n]+/).forEach(function (s2) {
+          if (s2.trim()) rub.appendChild(el('div', 'rubric-item', s2.trim()));
+        });
+        box.appendChild(rub);
+      }
+      box.appendChild(el('div', 'feedback-zh',
+        '下次遇到这类题：先看清句子里的助词和句末，再对照上面的讲解；写错也没关系，重点是知道为什么。'));
+      if (q.type === 'free_production' || q.type === 'dialogue' || !t(q.answer)) {
+        var sa = el('div', 'self-assess');
+        sa.appendChild(el('span', '', '自查（不计入成绩）：'));
+        var yes = el('button', 'btn btn-mini', '会了');
+        var no = el('button', 'btn btn-mini', '还不熟');
+        yes.type = no.type = 'button';
+        function setSA(v, label) {
+          var cur = state.results[q.id];
+          if (cur) { cur.self_assessed = v; save(); }
+          var note = sa.querySelector('.self-assess-note');
+          if (note) note.textContent = label;
+          else sa.appendChild(el('span', 'self-assess-note', label));
+          yes.disabled = no.disabled = true;
+        }
+        yes.addEventListener('click', function () { setSA('yes', '已记录：会了（仅自评，不计成绩）'); });
+        no.addEventListener('click', function () { setSA('no', '已记录：还不熟（仅自评，不计成绩）'); });
+        sa.appendChild(yes); sa.appendChild(no);
+        box.appendChild(sa);
+      }
+    }
+    function showReveal(q, r, box, onChange) {
+      renderRevealContent(q, box, r);
+      box.hidden = false;
+      if (onChange) onChange();
+    }
+
+    var cards = [];
+    function makeCard(q, i) {
+      state.started[q.id] = Date.now();
+      var node = el('details', 'q-card');
+      node.setAttribute('data-qid', q.id);
+      node.open = true;                       /* 默认展开，不点折叠即可作答 */
+      var sum = el('summary', 'q-sum');
+      if (mode === 'step') {
+        sum.addEventListener('click', function (e) { if (e.preventDefault) e.preventDefault(); });
+      }
+      var head = el('div', 'q-head');
+      head.appendChild(el('span', 'q-no', '第 ' + (i + 1) + ' / ' + qs.length + ' 题'));
+      head.appendChild(el('span', 'q-type', qTypeZh(q.type)));   /* 中文化题型 */
+      var status = el('span', 'q-status', '');
+      head.appendChild(status);
+      sum.appendChild(head);
+      if (t(q.prompt_zh)) sum.appendChild(el('p', 'q-prompt-zh', q.prompt_zh));
+      if (t(q.prompt_ja)) sum.appendChild(el('p', 'q-prompt-ja', q.prompt_ja));
+      node.appendChild(sum);
+
+      var body = el('div', 'q-body');
+      if (t(q.audio_text)) {
+        var arow = el('div', 'q-audio');
+        var play = el('button', 'btn btn-mini', '听题目'); play.type = 'button';
+        var stop = el('button', 'btn btn-mini', '停止'); stop.type = 'button';
+        var anotice = el('span', 'inline-notice'); anotice.hidden = true;
+        play.addEventListener('click', function () { primeTTS(); speak(q.audio_text, anotice); });
+        stop.addEventListener('click', function () { stopSpeak(); });
+        arow.appendChild(play); arow.appendChild(stop); arow.appendChild(anotice);
+        body.appendChild(arow);
+        /* audio_text 只用于 TTS，不再当作可见「文本读音」（修掉读音=原文 bug）。 */
+      }
+      var inputWrap = el('div', 'q-input');
+      buildInput(q, inputWrap, '');
+      var getValue = inputWrap._getValue;
+      var setValue = inputWrap._setValue;
+      body.appendChild(inputWrap);
+
+      var actionRow = el('div', 'q-actions');
+      var showAns = el('button', 'btn', '看答案 / 解析'); showAns.type = 'button';
+      var submit = el('button', 'btn btn-primary q-submit', '提交答案'); submit.type = 'button';
+      actionRow.appendChild(showAns); actionRow.appendChild(submit);
+      body.appendChild(actionRow);
+
+      var reveal = el('div', 'reveal');
+      reveal.hidden = true;
+      renderRevealContent(q, reveal, null);   /* 预渲染：解析/示范句/rubric 已在 DOM 里 */
+      body.appendChild(reveal);
+      node.appendChild(body);
+
+      function paintStatus(r) {
+        status.textContent = r && r.correct ? '答对' : (r ? '再看看' : '');
+        status.className = 'q-status ' + (r && r.correct ? 'ok' : (r ? 'bad' : ''));
+      }
+      function doSubmit() {
+        var r = state.results[q.id];
+        if (r && r._graded) return;
+        var ans = getValue();
+        if (!r) {
+          r = { qid: q.id, answer: ans, correct: false, hinted: false,
+                seconds: elapsed(q.id), error_type: null };
+        }
+        r.answer = ans;
+        var g = gradeAnswer(q, ans);
+        if (g !== null) r.correct = g;
+        else if (r.correct === null || r.correct === undefined) r.correct = false;
+        r._graded = true;
+        state.results[q.id] = r;
+        save();
+        submit.disabled = true;
+        reveal.hidden = false;
+        showReveal(q, r, reveal, updateChrome);
+        paintStatus(r);
+        updateChrome();
+      }
+      showAns.addEventListener('click', function () { reveal.hidden = false; });
+      submit.addEventListener('click', doSubmit);
+
+      var existing = state.results[q.id];
+      if (existing) {
+        if (setValue) setValue(existing.answer);
+        submit.disabled = true;
+        reveal.hidden = false;
+        showReveal(q, existing, reveal, updateChrome);
+        paintStatus(existing);
+      }
+      return { node: node, q: q, submit: doSubmit };
+    }
+    function updateChrome() {
+      var done = Object.keys(state.results).length;
+      var total = qs.length;
+      var sub = mode === 'step'
+        ? ('第 ' + (state.index + 1) + ' / ' + total + ' 题')
+        : ('第 ' + day.day + ' 天 · 共 ' + total + ' 题');
+      setProgress(done, total, '今天 ' + total + ' 道题 · 先学后练', sub);
+      tbProgress.textContent = '共 ' + total + ' 题 · 按自己节奏做';
+      setActDisabled('prev', mode !== 'step' || state.index <= 0);
+      setActDisabled('next', mode !== 'step' || state.index >= total - 1);
+      var cur = mode === 'step' ? cards[state.index] : null;
+      var graded = cur && state.results[cur.q.id] && state.results[cur.q.id]._graded;
+      setActDisabled('submit', mode !== 'step' || !!graded);
+      setActDisabled('finish', total === 0);
+    }
+    function setActDisabled(act, disabled) {
+      var ab = byId('actionbar');
+      if (!ab || !ab.children) return;
+      Array.prototype.forEach.call(ab.children, function (b) {
+        if (b.getAttribute && b.getAttribute('data-act') === act) b.disabled = !!disabled;
+      });
+    }
+    function setActive(i) {
+      if (mode !== 'step' || i < 0 || i >= qs.length) return;
+      state.index = i;
+      cards.forEach(function (c, idx) {
+        if (idx === i) c.node.classList.add('active');
+        else c.node.classList.remove('active');
+      });
+      updateChrome();
+      var n = cards[i].node;
+      if (n.scrollIntoView) { try { n.scrollIntoView({ block: 'start' }); } catch (e) {} }
+    }
+
+    QUIZ = {
+      state: state,
+      total: qs.length,
+      lastCode: '',
+      returnBox: returnBox,
+      save: save,
+      prev: function () { setActive(state.index - 1); },
+      next: function () { setActive(state.index + 1); },
+      submit: function () { if (mode === 'step' && cards[state.index]) cards[state.index].submit(); },
+      finish: finish,
+      copy: copyCode
+    };
+
+    if (qs.length) {
+      var list = el('div', 'q-list ' + (mode === 'grid' ? 'grid-mode' : 'step-mode'));
+      qs.forEach(function (q, i) { cards.push(makeCard(q, i)); });
+      cards.forEach(function (c) { list.appendChild(c.node); });
+      root.appendChild(list);
+      if (mode === 'step') setActive(0);
+    } else {
+      root.appendChild(el('p', 'muted', '本日暂无题目。'));
+    }
+    updateChrome();
+    return sec;
+  }
+
   /* ---------------- 页面入口 ---------------- */
   function renderIndex(site) {
     var app = byId('app');
@@ -1094,7 +1876,7 @@
     app.appendChild(el('p', 'lead',
       '80 天日语学习计划，同时适配 PC 与手机。每天一页：主题 / 真实场景 / 能力目标 / 60 分钟时间块、词汇·语法·汉字卡、阅读听力素材、分步练习与即时判分，最后生成回传码。'));
     app.appendChild(el('div', 'notice',
-      '重要：本网站不是学习状态的真源。状态只存在于本地 SQLite（data/state.db）。网页仅做展示、练习、即时判分并生成 NH80R1 回传码；不会向任何服务器发送学习数据，也不会把「读完页面」记为完成。'));
+      '重要：本网站不是学习状态的真源。状态只存在于本地 SQLite（data/state.db）。网页仅做展示、练习、即时判分并生成「把成绩带回 WorkBuddy」的回传码；不会向任何服务器发送学习数据，也不会把「读完页面」记为完成。'));
     app.appendChild(el('div', 'notice',
       '手机学习闭环：打开当天页面 → 首次点「试听 / 解锁语音」→ 分步练习（一屏一题）→ 完成生成回传码 → 复制 / 系统分享 / 下载 .txt → 回到 WorkBuddy 会话粘贴导入，或先存备忘录稍后导入。离线仅展示，成绩靠回传码。'));
 
@@ -1129,66 +1911,33 @@
   }
   function renderDay(day, site) {
     var app = byId('app');
-    var W = LAYOUT.wide;
+    /* 标题区：去掉阶段 / ID / 评估 / 英文标签，只留白话目标与主题。 */
     var head = el('div', 'day-head');
-    head.appendChild(el('div', 'day-kicker', '第 ' + day.day + ' 天 · ' + (day.phase || '')));
-    head.appendChild(el('h1', 'page-title', day.theme || '当日学习'));
-    if (day.scene) head.appendChild(el('p', 'scene', '真实场景：' + day.scene));
-    if (day.can_do) {
-      head.appendChild(el('div', 'banner banner-info cando-card', '本日 Can-do：' + day.can_do));
-      if (day.focus && day.focus.length) {
-        head.appendChild(el('p', 'muted', '能力侧重：' + day.focus.join(' / ')));
-      }
-    }
-    if (day.assessment && day.assessment !== 'none') {
-      head.appendChild(el('span', 'badge', '测评：' + day.assessment));
-    }
+    head.appendChild(el('div', 'day-kicker', '第 ' + day.day + ' 天'));
+    head.appendChild(el('h1', 'page-title', t(day.theme) || '当日学习'));
+    if (t(day.can_do)) head.appendChild(el('p', 'lead', '今天要会做的事：' + day.can_do));
     app.appendChild(head);
 
-    /* 手机：除练习外默认折叠，避免几十屏滚动；PC 展开更多分区 */
-    if (day.objectives && day.objectives.length) {
-      var os = section('能力目标', W);
-      var ul = el('ul', 'objectives');
-      day.objectives.forEach(function (o) { ul.appendChild(el('li', '', o)); });
-      os._body.appendChild(ul); app.appendChild(os);
-    }
-
-    var ts = section('60 分钟时间块', W);
-    ts._body.appendChild(timeBar(day.blocks, day.minutes));
-    app.appendChild(ts);
-
-    var vs = section('当日可视化', W);
-    var vg = el('div', 'viz-grid');
-    vg.appendChild(vizCard('当日结构', dayStructureSVG(day)));
-    vg.appendChild(vizCard('80 天进度热力图', heatmapSVG(site, day.day), 'viz-heat'));
-    vg.appendChild(vizCard('题型分布', typeDistSVG(day.questions)));
-    vs._body.appendChild(vg);
-    vs._body.appendChild(phaseLegend());
-    app.appendChild(vs);
-
-    if (day.vocab && day.vocab.length) {
-      var vsec = section('词汇卡（先自测，再点开看读音与释义）', false);
-      vsec._body.appendChild(el('p', 'muted',
-        LAYOUT.wide ? '点击卡片翻面查看读音与释义。' : '点击卡片翻面；手机上一次只展开一张，先自测再揭示。'));
-      vsec._body.appendChild(cardGrid(day.vocab, vocabCard, !LAYOUT.wide));
-      app.appendChild(vsec);
-    }
-    if (day.grammar && day.grammar.length) {
-      var gsec = section('语法卡', false);
-      gsec._body.appendChild(cardGrid(day.grammar, grammarCard, false));
-      app.appendChild(gsec);
-    }
-    if (day.kanji && day.kanji.length) {
-      var ksec = section('汉字卡（中日差异提示）', false);
-      ksec._body.appendChild(cardGrid(day.kanji, kanjiCard, false));
-      app.appendChild(ksec);
-    }
-    if (day.materials && day.materials.length) {
-      var msec = section('阅读 / 听力素材', false);
-      day.materials.forEach(function (m) { msec._body.appendChild(materialCard(m)); });
-      app.appendChild(msec);
-    }
-    app.appendChild(buildPractice(day));
+    /* 8 区块顺序（REDESIGN_PLAN §3）：首屏即 3 句话 + 常显词卡，不点任何折叠即可学。 */
+    app.appendChild(renderLessonCore(day));                              /* ① */
+    app.appendChild(renderVocabBlock(day));                             /* ② */
+    app.appendChild(renderGrammarBlock(day));                           /* ③ */
+    app.appendChild(renderKanjiBlock(day));                             /* ④ */
+    app.appendChild(renderExamplesBlock(day));                          /* ⑤ */
+    app.appendChild(buildPracticeV3(day));                              /* ⑥（建 QUIZ / returnBox） */
+    app.appendChild(renderReviewBlock(day, QUIZ ? QUIZ.state : null));  /* ⑦ */
+    /* 收尾可见入口：手机也能一键生成 / 复制回传码（点开页尾折叠区）。 */
+    var reWrap = el('div', 'block return-entry');
+    reWrap.appendChild(el('h2', 'block-title', '把成绩带回 WorkBuddy'));
+    reWrap.appendChild(el('p', 'block-hint',
+      '本页不保存成绩、不向任何服务器发送学习数据；点下面生成回传码，复制后粘贴到 WorkBuddy 对话即可。仅保存作答记录，不代表已掌握。'));
+    var reBtn = el('button', 'btn btn-primary', '生成 / 查看回传码');
+    reBtn.type = 'button';
+    reBtn.addEventListener('click', function () { if (QUIZ) QUIZ.finish(); });
+    reWrap.appendChild(reBtn);
+    app.appendChild(reWrap);
+    TEACHER_BOX = renderTeacherBlock(day, site);                        /* ⑧ */
+    app.appendChild(TEACHER_BOX);
   }
   function init() {
     detectLayout();

@@ -1,13 +1,13 @@
 # 验收报告：已通过什么、还差什么
 
 生成时间：2026-11-06。所有结论来自**实际运行**，不是文档推断。
-复现：**`python3 tests/test_all.py`**（19 项，约 5.9 秒，在独立临时目录执行，不污染真实档案）。
+复现：**`python3 tests/test_all.py`**（20 项，本机本次 6.346s，在独立临时目录执行，不污染真实档案）。
 原始演练日志见 `reports/e2e-day1-3.md`。
 
 ## 1. 已通过的自动化测试
 
 ```
-Ran 19 tests in 5.9s — OK
+Ran 20 tests in 6.346s — OK
 ```
 
 | 组 | 测试 | 验证内容 |
@@ -23,7 +23,7 @@ Ran 19 tests in 5.9s — OK
 | | `test_03_error_remedy_mapping` | 9 类错误各有不同补救 |
 | C 流程 | `test_01_start_day1` ~ `test_10_new_session_prompt` | 见下表 Day 1–3 端到端 |
 
-### 1.1 v2 新增验收项（全部 PASS，19/19）
+### 1.1 v2 新增验收项（v2 引入，现随全套 20/20 PASS）
 
 以下为 v2 相对 v1 新增的验收项，数据来自 `python3 scripts/nh80.py validate`、
 `python3 tests/test_all.py` 与 `curriculum/curriculum.json` 实测；方法依据 `research/nh80_framework.md`
@@ -36,8 +36,8 @@ Ran 19 tests in 5.9s — OK
 | **Can-do / focus 字段**：每天有可观察任务与能力侧重 | 80/80 天 `can_do` / `focus` / `scene_tag` 齐全 | `test_01b_framework_delivery` 的 `all(d.get("can_do") and d.get("focus"))`；`curriculum.json` |
 | **Day 1 不超纲任务**：从零基础起步、不轮到超纲 Can-do | Day 1 `scene_tag=初次见面`、`can_do=用「N は N です」向对方介绍自己并确认对方姓名`、`assessment=diagnostic`、8 道零基础诊断题 | `test_04_prerequisites_and_no_spoilers`；`curriculum.json` `days[0]` |
 
-`validate` 本次：`error_count=0`、`warnings=[]`；`tests/test_all.py`：`Ran 19 tests in 5.9s — OK`
-（新增 `test_01b_framework_delivery`，共 19 项）。
+`validate` 本次：`ok:true`、`error_count=0`、`warnings=[]`；`tests/test_all.py`：`Ran 20 tests in 6.346s — OK`
+（含 v2 新增 `test_01b_framework_delivery` 与 v3 新增 `test_06b_review_ratings_drive_fsrs`，共 20 项）。
 
 ## 2. 十条验收标准逐条对照
 
@@ -192,3 +192,50 @@ TTS 提示在无日语语音环境下显示「已显示假名读音，可手动�
 
 **仍受限**：未绑定自定义域名；`workers.dev` 地址依赖 Cloudflare 免费额度；
 线上 TTS 依旧取决于终端浏览器是否有 `ja-JP` 语音（实测无，降级提示正确显示）。
+
+---
+
+## 8. v3 页面改造验收（把网页从系统报表改回一课教材）
+
+> 本节记录 v3 改造的**实际验收结果**，依据 `docs/REDESIGN_PLAN.md`（8 区块顺序 / 数据契约 / 诚实边界）
+> 与 `research/ux_audit.md`、`research/textbook_lesson_pattern.md`。
+> **v3 内容尚未重新部署**：下面的浏览器数据为主 agent 集成时本机 Chrome CDP 实测；
+> §6 / §7 的线上验证表仍是 2026-11-06 的 v2 部署结果，本节不写「已上线 v3」、不记录任何版本 ID，
+> 也不声称已对齐教材课序、已完成 JMdict 校核或平台自动调度。
+
+### 8.1 自动化测试与构建校验（本机实跑）
+
+| 项 | 结果 | 命令 / 证据 |
+|---|---|---|
+| 全量回归 | **20/20 PASS**（`Ran 20 tests in 6.346s — OK`） | `python3 tests/test_all.py` |
+| 新增复习闭环测试 | `test_06b_review_ratings_drive_fsrs` PASS：`good/hard/again` → rating `3/2/1` 写回 FSRS，**只排期**、不写 `attempts`、不改 `stage`、不判 `mastered`，同会话幂等 | 同上；`REVIEW_RATING_MAP = {"good":3,"hard":2,"again":1}` |
+| 课程完整性 | `ok:true`、`error_count=0`、`warnings=[]`；5 类覆盖率 100% | `python3 scripts/nh80.py validate` |
+| 分级兑现 / 去模板化 | `level_delivery.P4.N3=130`（≥40）、`teaching_design.distinct_objectives=80`（**80/80 不同**） | `validate` |
+| 80 天新字段 | **80/80 天**均有 `lesson_core`(3 句) / `review_plan` / `teaching_notes`；旧字段未删 | 只读核对 `curriculum/curriculum.json` |
+| 关系边 | `SELECT COUNT(*) FROM relations` = **4983**（沿用此前实测，v3 未改变知识规模） | `data/state.db` |
+
+### 8.2 资料层与页面数据（本机实测）
+
+| 项 | 结果 |
+|---|---|
+| 韩语对照 | `knowledge/ko_analogy.json` 覆盖 **85/85 语法 + 57 词**；每条含 `hint_zh` / `caution`，明确「结构可借、词不能猜」，无「完全一样」表述 |
+| 素材字段 | 60 条素材中 50 条有正文：`focus_zh` 补 **50/50**；`text_kana` **12 条真实假名**，其余 **38 条诚实留空**（另 10 条 `index_only` 外部索引本无正文）；`text_ja` / `text_zh` 句数错配由 **16 处修到 0** |
+| 假名真实性 | Day 1 第 2 句「今日はいい天気です。」假名补为「きょうはいいてんきです。」；`lesson_core` 其余无把握的 `kana` 仍为空，**不伪造假名**；中文提示改用素材 `focus_zh` 避免错配 |
+| 顶层 `ko_analogy` 裁剪 | `web/data/day-001.json` 由全量（85 语法 + 57 词）改为**当天相关**，体积 **约 92KB → 约 14.6K 字符**（同一构建口径：裁剪前 92854 字节；裁剪后 14673 字符 / 23932 字节。中日文多字节，故字符计约 14.6K、字节计约 23.4KB，两种计量不可混用） |
+| 8 区块 | 页面按 ①今天要会的 3 句话 ②单词常显全字段 ③语法含中文接续/易错/韩语对照 ④汉字 ⑤例句会话独立区 ⑥练习先想后看答案含示范句 ⑦今日复习具体词表+三档自评 ⑧页尾折叠「给老师/系统」 组装 |
+
+### 8.3 真实浏览器（Chrome CDP）双端实测
+
+| 视口 | 实测数据 |
+|---|---|
+| 手机 390 CSS px（DPR2） | `innerWidth=390 / scrollWidth=390` → **零横向溢出**；词卡改**单列**（`.vlist` 计算值 `340px` 即单列）；**6 张词卡、1 条假名行、7 个韩语对照块、25 个听按钮** |
+| PC 1440 | 首屏即见 **3 句话 + 2 张完整词卡**；**无图表、无术语** |
+
+本次修掉的真实缺陷：读音=原文、真机有 `ja-JP` 语音时 CSS 隐藏假名、内容全折叠、
+开放题无参考答案、中文提示与素材错配、侧栏技术说明术语化、顶层 `ko_analogy` 未裁剪导致单页数据过大。
+术语按 `docs/REDESIGN_PLAN.md` §3 中文化（`diagnostic`→摸底、`FSRS 到期`→今天该回顾这几个词、
+`Can-do`→今天要会做的事、`focus`→今天重点、`NH80R1`→把成绩带回 WorkBuddy）。
+
+> 上述 CDP 数据由主 agent 在集成修复时实测，本文档同步记录；**本次文档同步未重跑浏览器**。
+> §1.1 的 v2 验收项、§6 / §7 的既有线上验证表与 **§5 全部 12 条限制披露**原样保留。
+> v3 的 Cloudflare 重新部署、线上全路径复验与 GitHub push **尚未执行**，由主 agent 稍后完成。

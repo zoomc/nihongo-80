@@ -31,6 +31,11 @@
             纯静态、零外部请求、PC/手机双端、PWA
 ```
 
+> **知识库规模与关系边数（v3 更新口径）**：种子仍为 **877 条**、关系边仍为 **4983 条**
+> （沿用此前 `SELECT COUNT(*) FROM relations` 实测值，v3 未改动知识规模，不编造新的边数）。
+> v3 新增的 `knowledge/ko_analogy.json`（85/85 语法 + 57 词的韩语对照）是**静态教学参考文件**，
+> 不入 `state.db`、不产生关系边，仅由 `build_site.py` 按天裁剪后写进页面数据，详见 §12.2。
+
 **硬分工**（依据 `research/learning_science.md` 与 WorkBuddy 技能规范）：
 
 | 交给确定性程序 | 交给 AI |
@@ -141,7 +146,7 @@ Tadoku / JMdict 只贡献目标格式、能力标准、题型边界与素材分�
 - `validate` 新增 `level_delivery`（P3 的 N4 ≥ 20、P4 的 N3 ≥ 40）与 `teaching_design`（distinct 数量下限）
   两组强校验。本次实测：`level_delivery = {P1 N5:99, P2 N5:145, P3 N4:111, P4 N3:130}`、
   `teaching_design = {distinct_scene:78, distinct_can_do:77, distinct_objectives:80, distinct_rubric:66, distinct_theme:80}`，
-  `python3 scripts/nh80.py validate` → `error_count=0`、`warnings=[]`；`python3 tests/test_all.py` → 19/19 PASS。
+  `python3 scripts/nh80.py validate` → `error_count=0`、`warnings=[]`；`python3 tests/test_all.py` → 20/20 PASS。
 
 - N5 词汇/语法/汉字铺在前期，N4 中期，N3 后期；66 天后原则上不再塞新知，转入混合复习。
 - 语法按 `prerequisites` 做**拓扑迭代修正**，保证先修一定出现在更早的天；依赖动词变形的语法必须先有变形语法。
@@ -217,3 +222,79 @@ AI 负责解释、互动、出题措辞、开放题评价与分析；程序负�
 - 知识种子全部标注 `S000`（项目原创整理），**不虚构**「引用了 IRODORI 教材」的关系。
 - 题库与短文为原创；14 条种子标 `needs_review`（v1 为 6 条；读音/语感待核），不冒充权威词典认证。
 - 完整来源、许可证、失败记录见 `research/source_registry.md` 与 `config/sources.json`。
+
+## 12. v3 数据流（页面从「系统报表」改回「一课教材」）
+
+> 依据 `docs/REDESIGN_PLAN.md`（决策记录 + 执行结果）、`research/textbook_lesson_pattern.md`
+> 与 `research/ux_audit.md`。本节只描述**数据流**，不记录部署结果：**v3 内容待随本次发布上线**，
+> Cloudflare 重新部署与 GitHub push 由主 agent 稍后执行，不写「已上线 v3」、不编造版本 ID。
+
+### 12.1 从课程真源到 8 区块
+
+```
+knowledge/seeds/*.jsonl (877 条) ─┐
+knowledge/ko_analogy.json (85/85 语法 + 57 词) ─┤
+                                               ▼
+scripts/curriculum.py  →  curriculum/curriculum.json 每天新增
+   · lesson_core      3 句真实日中对照（kana 仅在资料层核实后填，否则留空）
+   · review_plan      具体词 + 中文原因 + 下次 Day
+   · teaching_notes   中文难点讲解
+   · 旧字段（can_do/focus/blocks/assessment/source_ids/review_status）全部保留
+                                               │
+        nh80.py start-day N 的 briefing 同步带上这三段
+                                               ▼
+scripts/build_site.py  assemble_day()  →  web/data/day-NNN.json + web/day-NNN.html
+   按 8 区块顺序组装：①今天要会的 3 句话 ②单词常显全字段
+   ③语法（中文接续/易错/韩语对照）④汉字 ⑤例句会话独立区
+   ⑥练习先想后看答案含示范句 ⑦今日复习具体词表 + 三档自评
+   ⑧页尾折叠「给老师/系统」（能力目标/时间块/图表/编号/回传码/术语）
+```
+
+`assemble_day()` 现在读取种子里原先被丢掉的 `romaji` / `pos` / `examples` / `notes_for_zh` /
+`usage` / `common_errors` / `compare` / `text_zh` / `rubric` / `rationale` / `expected_production`
+等字段，页面不再只剩骨架；
+所有字段缺失时优雅降级（不显示 `undefined`、不编造日语）。**读音与原文分离**：
+`audio_text` 不再被当作读音显示，`text_kana` 有才显示；Day 1 第 2 句「今日はいい天気です。」
+的真实假名「きょうはいいてんきです。」来自资料层核实，其余无把握的 `kana` 仍留空。
+
+### 12.2 `ko_analogy.json` 按天裁剪
+
+`knowledge/ko_analogy.json` 是**静态教学参考文件**，覆盖 85/85 语法 + 57 词，
+每条含 `hint_zh` / `caution`（明确「结构可借、词不能猜」，并对中日同形异义显式警告）。
+它**不入 `state.db` 关系图**，因此种子仍 **877 条**、关系边仍 **4983 条**（沿用此前实测，
+不编造新的边数）。若把全量塞进每天的页面数据，`day-001.json` 会膨胀到 92,854 字节；
+`build_site.py` 只把**当天相关**的语法 / 词条目写入顶层 `ko_analogy`（Day 1 实测 1 条语法 + 6 词），
+裁剪后为 23,932 字节
+（中日文多字节，字符计与字节计不可混用）。
+
+### 12.3 复习三档自评 → FSRS（只排期，不判掌握）
+
+```
+页面「今日复习」：遮中文回忆 → 点开对答案 → 记住了 / 模糊 / 忘了
+        │  写入回传码 NH80R1.<...> 的新字段 review_ratings
+        ▼
+nh80.py import-web-result  消费 review_ratings
+        │  返回 review_ratings_applied / review_ratings_duplicate / review_ratings_rejected
+        ▼
+learning.apply_review_rating(kid, label, day, session_id)
+        good→3  hard→2  again→1   （REVIEW_RATING_MAP）
+        │  调用官方 py-fsrs，只算新的 due（排期）
+        ▼
+data/state.db  fsrs_cards.due 更新（+ review_tasks 补救记录 + audit_log）
+```
+
+**硬边界（强调）**：`apply_review_rating` **只排期**——不写 `attempts`、不改五阶段 `stage`、
+**不判 `mastered`**；同会话按 `session + kid` 幂等（重复返回 `duplicate`）。三档自评只是
+「下次什么时候再见到这个词」的输入，**不是**「已掌握」的证据。掌握仍由 §4 的五阶段门控 +
+`rolling_accuracy` 判定，由脚本按 `CONTRACTS.md` §11 执行；**AI 不得据自评宣称「已掌握」**。
+本地 `start-day N` 的真实到期队列仍以 `state.db` 为准，静态页只展示 `review_plan` 计划
+并如实标注「实际到期以本地 SQLite / WorkBuddy 会话为准」。
+
+### 12.4 与既有结论的关系（全部不变）
+
+- §2「语义检索明确不启用」、§3「FSRS 只是记忆调度器、不是知识追踪模型」、
+  §4「一次答对不算掌握」、§8「平台不自动传递状态」、§9「页面不是状态真源」——**结论不变**。
+  `review_ratings` 只是回传码新增字段，不改变页面零 fetch / 零外部请求、不改变状态唯一真源。
+- 术语中文化只作用于页面文案，不改 `CONTRACTS.md` 数据契约里的字段名。
+- 课程编排仍依据 `research/nh80_framework.md` 自研方法，**不照抄任何教材课序、不声称已对齐教材课序**；
+  教材只贡献一课的呈现顺序与规格（`research/textbook_lesson_pattern.md`）。

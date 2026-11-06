@@ -28,6 +28,14 @@
 `curriculum/curriculum.json` 里当天的 `can_do` / `focus` / `scene_tag`，并以 `can_do` 为当天
 **独立输出任务**来组织 60 分钟教学；不得用 80 天共用的模板句替代当天任务。
 
+**v3 每日教学锚定（可执行，依据 `docs/REDESIGN_PLAN.md` §3 / §7 与 `research/textbook_lesson_pattern.md`）**：
+每日教学按**页面 8 区块顺序**组织——**先给 3 句当天能用的话**（`lesson_core`），再依次
+词 → 语法（中文接续 / 易错 / 韩语对照）→ 例句 / 会话 → 练习（先想后看答案，含示范句）→
+今日复习（`review_plan` 具体词表 + 三档自评）；系统信息（能力目标 / 时间块 / 图表 / 编号 /
+诊断标签 / 术语）只放页尾，不进正文。页面「今日复习」的**三档自评由程序排期**：
+`learning.apply_review_rating` 只改 FSRS 的 `due`，不写 `attempts`、不改 `stage`、不判 `mastered`；
+**AI 不得据自评宣称「已掌握」**，掌握仍按 `CONTRACTS.md` §11 门控由脚本判定。
+
 ## 2. 状态真源与唯一写入通道
 
 | 内容 | 真源 | 谁能写 |

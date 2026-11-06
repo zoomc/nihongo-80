@@ -160,7 +160,7 @@ P5 改为 20 混合复习 / 10 补救 / 15 综合表达 / 10 交错练习 / 5 �
 | 先修/超纲是否守住 | `curriculum/coverage_report.md` | 出现"超纲引用"= 在学变形前先教了依赖它的句型 |
 | 是否真按掌握判进度 | `state.db` 的 `knowledge_state` / `fsrs_cards` | 一次答对即 mastered = 门控失效 |
 | 每周是否真有数据 | `python3 scripts/nh80.py report week N` | 无作答却出成绩 = 报告造假 |
-| Day 1–3 端到端 | `python3 tests/test_all.py` | 19 项任一失败 = 课程不可运行 |
+| Day 1–3 端到端 | `python3 tests/test_all.py` | 20 项任一失败 = 课程不可运行 |
 | **真实学习效果** | 学生实际作答正确率、延迟回忆曲线、五维趋势 | **这才是最终判据；框架本身不能自证有效** |
 
 ---

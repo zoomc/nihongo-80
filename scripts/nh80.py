@@ -44,6 +44,47 @@ def _curriculum_payload(conn, day):
     return json.loads(r["payload"])
 
 
+def _learn_sections(d):
+    """从课程 payload 生成三段「可学内容」briefing：
+    今天要会的 3 句话 / 今日复习清单（具体词 + 原因） / 中文难点提示。
+    与网页首屏读到的 lesson_core / review_plan / teaching_notes 同源，不在此编造日语。
+    用 .get 兜底，旧 payload 缺字段时也能优雅降级。"""
+    lines = ["## 今天要会的 3 句话", ""]
+    core = d.get("lesson_core") or []
+    if core:
+        for i, s in enumerate(core[:3], 1):
+            kana = s.get("kana", "")
+            lines.append("- 第 %d 句：%s%s" % (
+                i, s.get("ja", ""), ("（读音：%s）" % kana) if kana else ""))
+            lines.append("    - 中文：%s" % s.get("zh", ""))
+            if s.get("note_zh"):
+                lines.append("    - 提示：%s" % s["note_zh"])
+            if s.get("audio_text"):
+                lines.append("    - 朗读（TTS）：%s" % s["audio_text"])
+    else:
+        lines.append("- （课程未提供，请打开网页查看）")
+    lines += ["", "## 今日复习清单（具体词 + 原因）", ""]
+    rp = d.get("review_plan") or []
+    if rp:
+        for it in rp:
+            kana = it.get("kana", "")
+            word = it.get("surface", "") + (("（%s）" % kana) if kana else "")
+            lines.append("- %s ｜ 中文：%s ｜ %s ｜ Day %d 学的 ｜ %s" % (
+                word, it.get("zh", ""), it.get("reason_zh", ""),
+                it.get("learned_day", 0), it.get("next_hint_zh", "")))
+    else:
+        lines.append("- 今天没有要复习的旧词，全都是新内容。")
+    lines += ["", "## 中文难点提示", ""]
+    tn = d.get("teaching_notes") or []
+    if tn:
+        for t in tn:
+            lines.append("- " + t)
+    else:
+        lines.append("- 今天没有额外的中文难点提示。")
+    lines.append("")
+    return lines
+
+
 def _ensure_session(conn, day, session_id=None):
     r = conn.execute("SELECT * FROM sessions WHERE day=?", (day,)).fetchone()
     if r:
@@ -132,7 +173,8 @@ def cmd_start_day(args):
             "- 主题：%s" % d["theme"], "- 场景：%s" % d["scene"], "",
             "- **Can-do（本日真实任务）**：%s" % d.get("can_do", ""),
             "- 能力侧重：%s｜方法论：`research/nh80_framework.md`" % "、".join(d.get("focus", [])),
-            "", "## 固定骨架（curriculum.json）", "",
+            "", * _learn_sections(d),
+            "## 固定骨架（curriculum.json）", "",
             *["- " + x for x in d["objectives"]],
             "- 新知识 ID：%s" % ("、".join(d["new_vocab_ids"] + d["new_grammar_ids"] + d["new_kanji_ids"]) or "无"),
             "- 复习候选池：%s" % ("、".join(d["review_knowledge_ids"]) or "无"),
@@ -258,14 +300,32 @@ def cmd_import_web(args):
                 hinted=bool(x.get("hinted")), seconds=int(x.get("seconds") or 0),
                 error_type=x.get("error_type") or None, source="web")
             (dup if res.get("duplicate") else pending if res.get("open_pending") else applied).append(qid)
+        # v3：网页「今日复习」三档自评 → FSRS 排期（只排期，不判掌握）
+        review_applied, review_dup, review_bad = [], [], []
+        for x in data.get("review_ratings") or []:
+            kid = str(x.get("kid") or "")
+            label = str(x.get("rating") or "")
+            if not kid or not label:
+                continue
+            try:
+                res = learning.apply_review_rating(
+                    conn, kid=kid, label=label, day=data["day"], session_id=sid)
+                (review_dup if res.get("duplicate") else review_applied).append(kid)
+            except ValueError as e:
+                review_bad.append("%s(%s)" % (kid, e))
         conn.execute("UPDATE sessions SET minutes=? WHERE day=?", (data["minutes"], data["day"]))
         audit(conn, "import_web_result", {"day": data["day"], "session": data["session"],
-                                          "n": len(data["results"]), "applied": len(applied)})
+                                          "n": len(data["results"]), "applied": len(applied),
+                                          "review_ratings": len(review_applied)})
         conn.commit()
         out({"ok": True, "day": data["day"], "session_id": sid,
              "applied": applied, "duplicate_skipped": dup,
              "open_pending_need_ai_grade": pending,
-             "note": "开放题在网页上的自评不作为掌握依据，已挂起，需 grade-open 由 AI 判定。"})
+             "review_ratings_applied": review_applied,
+             "review_ratings_duplicate": review_dup,
+             "review_ratings_rejected": review_bad,
+             "note": "开放题在网页上的自评不作为掌握依据，已挂起，需 grade-open 由 AI 判定；"
+                     "复习三档自评只重排 FSRS 复习时间，不写 correct、不判掌握。"})
     finally:
         conn.close()
 

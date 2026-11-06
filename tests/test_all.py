@@ -267,6 +267,41 @@ class TestCFlow(unittest.TestCase):
         self.assertNotEqual(bad.returncode, 0)
         self.assertIn("未知题目", bad.stderr)
 
+    def test_06b_review_ratings_drive_fsrs(self):
+        """v3：网页「今日复习」三档自评必须真正写回 FSRS，且不得判定掌握。"""
+        payload = {"v": 1, "day": 2, "session": "session-20261106-review",
+                   "ts": "2026-11-06T17:00:00+08:00", "minutes": 6, "source": "web",
+                   "results": [],
+                   "review_ratings": [{"kid": "V0260", "rating": "good"},
+                                      {"kid": "V0259", "rating": "again"}]}
+        code = b64code(payload)
+        r1 = jrun("import-web-result", code)
+        self.assertTrue(r1["ok"])
+        self.assertEqual(sorted(r1["review_ratings_applied"]), ["V0259", "V0260"])
+        r2 = jrun("import-web-result", code)
+        self.assertEqual(sorted(r2["review_ratings_duplicate"]), ["V0259", "V0260"],
+                         "同一会话重复导入必须幂等，不能把复习时间推进两次")
+        bad = jrun("import-web-result", b64code({**payload, "session": "session-review-bad",
+                   "review_ratings": [{"kid": "V0260", "rating": "unknown"}]}))
+        self.assertEqual(len(bad["review_ratings_rejected"]), 1, "非法档位必须拒绝")
+        conn = core.connect(TMP, readonly=True)
+        try:
+            for kid in ("V0259", "V0260"):
+                card = conn.execute("SELECT reps,due FROM fsrs_cards WHERE knowledge_id=?",
+                                    (kid,)).fetchone()
+                self.assertIsNotNone(card, "复习自评必须写入 FSRS 卡片")
+                self.assertEqual(card["reps"], 1, "重复导入不得重复推进")
+                self.assertTrue(card["due"], "必须算出下次复习时间")
+                st = conn.execute("SELECT mastered,stage FROM knowledge_state WHERE knowledge_id=?",
+                                  (kid,)).fetchone()
+                self.assertEqual(st["mastered"], 0, "自评不得判定掌握")
+                self.assertEqual(st["stage"], "unseen", "自评不得推进掌握阶段")
+            self.assertEqual(
+                conn.execute("SELECT COUNT(*) FROM attempts WHERE day=2 AND qid IN ('V0259','V0260')")
+                            .fetchone()[0], 0, "复习自评不是题目作答，不得写 attempts")
+        finally:
+            conn.close()
+
     def test_07_day3_and_adjust(self):
         jrun("grade-open", "--q", "Q0188", "--correct", "1")
         jrun("answer", "--day", "2", "--q", "Q0190", "--answer", "ございます")

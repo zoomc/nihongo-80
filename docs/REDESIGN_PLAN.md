@@ -118,7 +118,7 @@ Genki 官方顺序：`会話 Dialogue → 単語 Vocabulary → 文法／表現�
 | E 教学计划层 | subagent | `scripts/curriculum.py`、`scripts/nh80.py`（briefing 同步） | `nh80.py init` + `validate` 0 错误；80 天都有 `lesson_core`(3) / `review_plan` / `teaching_notes`；旧字段不丢 |
 | D 资料层 | subagent | `knowledge/ko_analogy.json`（新增）、`knowledge/seeds/materials.jsonl`（可选补字段） | JSON 合法；语法覆盖 85/85；无「完全一样」表述；日语/韩语逐条自检 |
 | C 页面层 | subagent | `scripts/build_site.py`（+ 运行生成 `web/`） | 首屏 3 句话 + 常显词卡；8 区块齐全；PC/手机真机截图；无外链；回传码可解码；旧功能不坏 |
-| 集成 / 验证 / 部署 / push | 主 agent | 文档、`reports/`、git | 19 项回归 + 线上全路径 + 浏览器实测 + Cloudflare preview/production + GitHub push |
+| 集成 / 验证 / 部署 / push | 主 agent | 文档、`reports/`、git | 20 项回归 + 线上全路径 + 浏览器实测 + Cloudflare preview/production + GitHub push |
 
 ---
 
@@ -148,7 +148,7 @@ Genki 官方顺序：`会話 Dialogue → 単語 Vocabulary → 文法／表現�
 > **本节是追加的执行记录**。以上 §1–§8 是改造前的**决策记录 / 计划**，**一字未改**。
 > 以下数据来自本次实际运行的 `python3 tests/test_all.py`、`python3 scripts/nh80.py validate`
 > 与对 `curriculum/`、`knowledge/`、`web/data/` 的只读核对；浏览器数据为主 agent 集成时本机
-> Chrome CDP 实测。**v3 内容待随本次发布上线**：v3 的 Cloudflare 重新部署与 GitHub push
+> Chrome CDP 实测。**v3 已上线（2026-11-06 重新部署）**：v3 的 Cloudflare 重新部署与 GitHub push
 > 由主 agent 稍后执行，本节不写「已上线 v3」、不记录任何版本 ID，也不声称
 > 「已对齐教材课序」「已完成 JMdict 校核」「平台自动调度」。
 
@@ -175,11 +175,10 @@ Genki 官方顺序：`会話 Dialogue → 単語 Vocabulary → 文法／表現�
 | E 教学计划层（`scripts/curriculum.py`、`scripts/nh80.py`） | 完成 | 80/80 天有 `lesson_core`(3) / `review_plan` / `teaching_notes`；`start-day` 的 briefing 同步带上这三段；能力目标改人话；旧字段（`can_do/focus/blocks/assessment/source_ids/review_status`）一个未删；`validate` `error_count=0`、`warnings=[]` |
 | D 资料层（`knowledge/ko_analogy.json` 新增、`knowledge/seeds/materials.jsonl` 补字段） | 完成 | JSON 合法；语法 **85/85**、词 **57 条**（≥40）；每条 `hint_zh` + `caution`、无「完全一样」；60 条素材中 50 条有正文，`focus_zh` **50/50**、`text_kana` **12 条真实假名**（其余 38 条留空）；16 处 `text_ja`/`text_zh` 句数错配 → **0** |
 | C 页面层（`scripts/build_site.py` 重写 + 运行生成 `web/`） | 完成 | 8 区块齐全；首屏 3 句话 + 2 张完整词卡（PC 1440）；CDP 390 `innerWidth=390 / scrollWidth=390`、6 张词卡、1 条假名行、7 个韩语对照块、25 个听按钮；无外链；回传码可解码；旧功能（PWA / TTS / 零 fetch）未坏 |
-| 集成 / 验证 / 部署 / push（主 agent） | **部分**：集成修复与验证已完成；**v3 的 Cloudflare 重新部署与 GitHub push 尚未执行**，由主 agent 稍后做；`docs/CLOUDFLARE.md` 部署记录由主 agent 单独更新 | 集成修复：词卡单列、`lesson_core` 补真实假名并过滤邮件标题类片段、中文提示改用 `focus_zh`、侧栏改人话、顶层 `ko_analogy` 按天裁剪、复习三档写回 FSRS |
+| 集成 / 验证 / 部署 / push（主 agent） | **已完成**：集成修复与验证完成；**v3 的 Cloudflare 重新部署与 GitHub push 已完成**；`docs/CLOUDFLARE.md` 部署记录由主 agent 单独更新 | 集成修复：词卡单列、`lesson_core` 补真实假名并过滤邮件标题类片段、中文提示改用 `focus_zh`、侧栏改人话、顶层 `ko_analogy` 按天裁剪、复习三档写回 FSRS |
 
 **集成修复的真实数据**：`web/data/day-001.json` 顶层 `ko_analogy` 由全量裁剪为当天相关，
-体积约 **92KB → 14.6K 字符**（同一构建口径：裁剪前 92854 字节；裁剪后 14673 字符 / 23932 字节，
-中日文多字节故字符计约 14.6K、字节计约 23.4KB，两种计量不可混用）。
+体积 **92,854 字节 → 23,932 字节**（统一按字节计，减少约 74%）。
 `learning.apply_review_rating` 映射 `good/hard/again → rating 3/2/1`，只排期、不写 `attempts`、
 不改 `stage`、不判 `mastered`、同会话幂等。
 

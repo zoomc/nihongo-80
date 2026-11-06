@@ -226,7 +226,7 @@ AI 负责解释、互动、出题措辞、开放题评价与分析；程序负�
 ## 12. v3 数据流（页面从「系统报表」改回「一课教材」）
 
 > 依据 `docs/REDESIGN_PLAN.md`（决策记录 + 执行结果）、`research/textbook_lesson_pattern.md`
-> 与 `research/ux_audit.md`。本节只描述**数据流**，不记录部署结果：**v3 内容待随本次发布上线**，
+> 与 `research/ux_audit.md`。本节只描述**数据流**，不记录部署结果：**v3 已上线（2026-11-06 重新部署）**，
 > Cloudflare 重新部署与 GitHub push 由主 agent 稍后执行，不写「已上线 v3」、不编造版本 ID。
 
 ### 12.1 从课程真源到 8 区块

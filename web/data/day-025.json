@@ -1,0 +1,227 @@
+{
+  "day": 25,
+  "phase": "P2",
+  "theme": "购物退换｜～たり ～たり する・猫・降る",
+  "scene": "【购物退换】寒暄：用「～たり ～たり する」说明商品问题并提出一个具体请求（素材：朝のあいさつ）",
+  "scene_tag": "购物退换",
+  "can_do": "用「～たり ～たり する」说明商品问题并提出一个具体请求",
+  "focus": [
+    "production",
+    "grammar"
+  ],
+  "objectives": [
+    "能在近自然语速的短对话中抓住人物关系与后续动作",
+    "能从通知或短文中提取主旨并指出一条支撑细节",
+    "能把当天表达迁移到一个新场景，而不是复述例句",
+    "当天新词：猫、降る、時々（读音与用法都要验证，不靠汉字猜义）",
+    "当天句型：～たり ～たり する，须说出接续条件",
+    "当天汉字：安、新，音读/训读各给一例",
+    "Can-do：用「～たり ～たり する」说明商品问题并提出一个具体请求"
+  ],
+  "minutes": 60,
+  "blocks": [
+    {
+      "min": 10,
+      "type": "review",
+      "desc": "FSRS 到期复习 + 上一日错题重做"
+    },
+    {
+      "min": 20,
+      "type": "new",
+      "desc": "新知识：先给场景让学生推测，再揭示规则"
+    },
+    {
+      "min": 15,
+      "type": "interaction",
+      "desc": "【购物退换】寒暄：听读素材 + 至少 1 次无提示独立输出"
+    },
+    {
+      "min": 10,
+      "type": "quiz",
+      "desc": "当天测验，先作答后讲解"
+    },
+    {
+      "min": 5,
+      "type": "feedback",
+      "desc": "错误归因、写档、明日任务"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "V0098",
+      "surface": "猫",
+      "kana": "ねこ",
+      "meaning_zh": "猫",
+      "jlpt": "N5"
+    },
+    {
+      "id": "V0118",
+      "surface": "降る",
+      "kana": "ふる",
+      "meaning_zh": "下（雨、雪等）",
+      "jlpt": "N5"
+    },
+    {
+      "id": "V0142",
+      "surface": "時々",
+      "kana": "ときどき",
+      "meaning_zh": "有时；时常",
+      "jlpt": "N5"
+    },
+    {
+      "id": "V0149",
+      "surface": "すぐ",
+      "kana": "すぐ",
+      "meaning_zh": "马上；立刻；就近",
+      "jlpt": "N5"
+    },
+    {
+      "id": "V0150",
+      "surface": "ゆっくり",
+      "kana": "ゆっくり",
+      "meaning_zh": "慢慢地；好好地",
+      "jlpt": "N5"
+    }
+  ],
+  "grammar": [
+    {
+      "id": "G0041",
+      "pattern": "～たり ～たり する",
+      "meaning_zh": "又…又…／时而…时而…",
+      "connection": "動詞た形 + り + 動詞た形 + り + する",
+      "example": "休みの日は、本を読んだり音楽を聞いたりします。"
+    }
+  ],
+  "kanji": [
+    {
+      "id": "K0069",
+      "char": "安",
+      "onyomi": [
+        "アン"
+      ],
+      "kunyomi": [
+        "やす"
+      ],
+      "zh_trap": "中文读 ān（安全）；日语「安」训读 やす（安い やすい=便宜）、音读 アン（安全 あんぜん、安心 あんしん）；中文「安」是「安全」，日语「安い」是「便宜」，词义偏移大。"
+    },
+    {
+      "id": "K0070",
+      "char": "新",
+      "onyomi": [
+        "シン"
+      ],
+      "kunyomi": [
+        "あたら",
+        "あら"
+      ],
+      "zh_trap": "中文读 xīn；日语「新」训读 あたら（新しい あたらしい）、あら（新た あらた）、音读 シン（新聞 しんぶん、新幹線 しんかんせん）；训读 あたら 与中文音无对应。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q0038",
+      "type": "fill",
+      "prompt_ja": "猫___います。",
+      "prompt_zh": "填入存在主体的助词",
+      "options": [],
+      "answer": "が",
+      "rationale": "存在/自动词主体用 が，不是宾语 を",
+      "audio_text": "",
+      "rubric": "填 が 得 1 分，其余 0 分",
+      "difficulty": 2
+    },
+    {
+      "id": "Q0039",
+      "type": "listen",
+      "prompt_ja": "听录音，写出听到的整句。",
+      "prompt_zh": "听写整句",
+      "options": [],
+      "answer": "猫がいます",
+      "rationale": "有生命存在句用 が + いる，猫 读 ねこ",
+      "audio_text": "猫がいます。",
+      "rubric": "完整写出「猫がいます」得 1 分，动词/助词错 0 分",
+      "difficulty": 2
+    },
+    {
+      "id": "Q0042",
+      "type": "error_correct",
+      "prompt_ja": "猫をいます。",
+      "prompt_zh": "改错：存在主体误用 を",
+      "options": [],
+      "answer": "猫がいます。",
+      "rationale": "存在/自动词主体用 が，不是宾语 を；中文「有猫」不分格关系",
+      "audio_text": "",
+      "rubric": "改为 が 得 1 分，其余 0 分",
+      "difficulty": 2
+    },
+    {
+      "id": "Q0017",
+      "type": "free_production",
+      "prompt_ja": "请用 これ/それ 造一个询问价格的句子。",
+      "prompt_zh": "自由写作",
+      "options": [],
+      "answer": "",
+      "rationale": "考查指示词与价格疑问词的组合使用",
+      "audio_text": "",
+      "rubric": "①正确使用 これ/それ 得 1 分；②疑问词用 いくら 得 1 分；③句末 ですか 礼貌体得 1 分",
+      "difficulty": 1
+    },
+    {
+      "id": "Q0035",
+      "type": "free_production",
+      "prompt_ja": "请用 も 写一句「某人也是～」。",
+      "prompt_zh": "自由写作",
+      "options": [],
+      "answer": "",
+      "rationale": "考查 も 替换格助词表同类追加",
+      "audio_text": "",
+      "rubric": "①主语后用 も 而非 は 得 1 分；②名词谓语用 です 得 1 分；③语义确为「也」得 1 分",
+      "difficulty": 1
+    },
+    {
+      "id": "Q0073",
+      "type": "mcq",
+      "prompt_ja": "部屋に猫___います。",
+      "prompt_zh": "选出存在主体的助词",
+      "options": [
+        "が",
+        "を",
+        "に",
+        "は"
+      ],
+      "answer": "が",
+      "rationale": "存在主体用 が；场所已在「部屋に」，宾语 を 错",
+      "audio_text": "部屋に猫がいます。",
+      "rubric": "选 が 得 1 分，其余 0 分",
+      "difficulty": 3
+    }
+  ],
+  "materials": [
+    {
+      "id": "M0001",
+      "kind": "reading",
+      "title": "朝のあいさつ",
+      "text_ja": "おはようございます。今日はいい天気です。お元気ですか。",
+      "audio_text": "おはようございます。今日はいい天気です。お元気ですか。",
+      "url": "",
+      "license": "original"
+    },
+    {
+      "id": "M0002",
+      "kind": "listening",
+      "title": "自己紹介",
+      "text_ja": "はじめまして。私はリンです。学生です。日本語を勉強します。よろしくお願いします。",
+      "audio_text": "はじめまして。私はリンです。学生です。日本語を勉強します。よろしくお願いします。",
+      "url": "",
+      "license": "original"
+    }
+  ],
+  "viz": {
+    "day": 25,
+    "phase": "P2",
+    "new_count": 8,
+    "review_count": 12,
+    "question_count": 6
+  },
+  "assessment": "none"
+}

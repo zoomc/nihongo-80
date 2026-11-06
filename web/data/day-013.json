@@ -1,0 +1,234 @@
+{
+  "day": 13,
+  "phase": "P2",
+  "theme": "预约登记｜な形容词 否定／过去／で・旅行・頭",
+  "scene": "【预约登记】寒暄：用礼貌体报出姓名、时间与人数，并核对对方复述是否正确（素材：朝のあいさつ）",
+  "scene_tag": "预约登记",
+  "can_do": "用礼貌体报出姓名、时间与人数，并核对对方复述是否正确",
+  "focus": [
+    "vocabulary",
+    "kanji"
+  ],
+  "objectives": [
+    "能区分事实陈述与推测表达，避免把猜测说成定论",
+    "能对自己的错误归因到具体类型（遗忘/混淆/助词/变形/听辨/理解）",
+    "能听懂 寒暄 场景的关键词并复述要点",
+    "当天新词：旅行、頭、雨（读音与用法都要验证，不靠汉字猜义）",
+    "当天句型：な形容词 否定／过去／で，须说出接续条件",
+    "当天汉字：私、友，音读/训读各给一例",
+    "Can-do：用礼貌体报出姓名、时间与人数，并核对对方复述是否正确"
+  ],
+  "minutes": 60,
+  "blocks": [
+    {
+      "min": 10,
+      "type": "review",
+      "desc": "FSRS 到期复习 + 上一日错题重做"
+    },
+    {
+      "min": 20,
+      "type": "new",
+      "desc": "新知识：先给场景让学生推测，再揭示规则"
+    },
+    {
+      "min": 15,
+      "type": "interaction",
+      "desc": "【预约登记】寒暄：听读素材 + 至少 1 次无提示独立输出"
+    },
+    {
+      "min": 10,
+      "type": "quiz",
+      "desc": "当天测验，先作答后讲解"
+    },
+    {
+      "min": 5,
+      "type": "feedback",
+      "desc": "错误归因、写档、明日任务"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "V0091",
+      "surface": "旅行",
+      "kana": "りょこう",
+      "meaning_zh": "旅行",
+      "jlpt": "N5"
+    },
+    {
+      "id": "V0094",
+      "surface": "頭",
+      "kana": "あたま",
+      "meaning_zh": "头；脑袋",
+      "jlpt": "N5"
+    },
+    {
+      "id": "V0096",
+      "surface": "雨",
+      "kana": "あめ",
+      "meaning_zh": "雨",
+      "jlpt": "N5"
+    },
+    {
+      "id": "V0097",
+      "surface": "天気",
+      "kana": "てんき",
+      "meaning_zh": "天气",
+      "jlpt": "N5"
+    },
+    {
+      "id": "V0099",
+      "surface": "映画",
+      "kana": "えいが",
+      "meaning_zh": "电影",
+      "jlpt": "N5"
+    },
+    {
+      "id": "V0100",
+      "surface": "音楽",
+      "kana": "おんがく",
+      "meaning_zh": "音乐",
+      "jlpt": "N5"
+    }
+  ],
+  "grammar": [
+    {
+      "id": "G0018",
+      "pattern": "な形容词 否定／过去／で",
+      "meaning_zh": "不…／曾…／而…（な形变形）",
+      "connection": "静か→静かではない／静かだった／静かで",
+      "example": "ここは静かではありません。"
+    }
+  ],
+  "kanji": [
+    {
+      "id": "K0036",
+      "char": "私",
+      "onyomi": [
+        "シ"
+      ],
+      "kunyomi": [
+        "わたし",
+        "わたくし"
+      ],
+      "zh_trap": "中文「私」读 sī 义为「私人/私自」；日语「私」训读 わたし 是「我」，音读 シ（私立 しりつ）；中日词义完全不同，千万别望文生义成「自私」。"
+    },
+    {
+      "id": "K0037",
+      "char": "友",
+      "onyomi": [
+        "ユウ"
+      ],
+      "kunyomi": [
+        "とも"
+      ],
+      "zh_trap": "中文读 yǒu；日语「友」训读 とも、「友達」ともだち，「友人」ゆうじん 音读 ユウ；「達」在 友達 读 だち，是复数义，不读 たつ。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q0072",
+      "type": "dialogue",
+      "prompt_ja": "A 问「日曜日、誰と映画を見ますか」，请回答。",
+      "prompt_zh": "周末计划对话",
+      "options": [],
+      "answer": "",
+      "rationale": "考查 と 在问答中的运用",
+      "audio_text": "",
+      "rubric": "①用 と 标同行者得 1 分；②人物名词正确得 1 分；③礼貌体作答得 1 分",
+      "difficulty": 2
+    },
+    {
+      "id": "Q0030",
+      "type": "listen",
+      "prompt_ja": "听录音，写出句中表「也」的助词。",
+      "prompt_zh": "听写助词",
+      "options": [],
+      "answer": "も",
+      "rationale": "も 替代 は 表同类追加，读 mo",
+      "audio_text": "私も学生です。",
+      "rubric": "写出 も 得 1 分，写成 は/を 得 0 分",
+      "difficulty": 1
+    },
+    {
+      "id": "Q0031",
+      "type": "read",
+      "prompt_ja": "私は学生です。リンさんも学生です。【問い】リンさんも学生ですか。",
+      "prompt_zh": "读短文判断",
+      "options": [],
+      "answer": "はい、学生です",
+      "rationale": "文中「リンさんも学生です」直接给出，も 表与前句同类",
+      "audio_text": "私は学生です。リンさんも学生です。",
+      "rubric": "答「はい、学生です」得 1 分，其余 0 分",
+      "difficulty": 1
+    },
+    {
+      "id": "Q0032",
+      "type": "reorder",
+      "prompt_ja": "把词块排成「是我的书」",
+      "prompt_zh": "句序：所属 の + 名词 + です",
+      "options": [
+        "本です",
+        "私",
+        "の",
+        "。"
+      ],
+      "answer": "2,3,1,4",
+      "rationale": "私 + の + 本 + です，の 连接所属",
+      "audio_text": "",
+      "rubric": "顺序完全正确得 1 分，否则 0 分",
+      "difficulty": 1
+    },
+    {
+      "id": "Q0033",
+      "type": "error_correct",
+      "prompt_ja": "私はも学生です。",
+      "prompt_zh": "改错：は+も 叠加",
+      "options": [],
+      "answer": "私も学生です。",
+      "rationale": "も 已含「也」，要替换 は，不能 は+も 并存",
+      "audio_text": "",
+      "rubric": "删去 は 只留 も 得 1 分，其余 0 分",
+      "difficulty": 1
+    },
+    {
+      "id": "Q0034",
+      "type": "translate",
+      "prompt_ja": "中译日：这也是我的书。",
+      "prompt_zh": "日译，兼用 も 与 の",
+      "options": [],
+      "answer": "",
+      "rationale": "これ 近称 + も 追加 + 私の本 所属 + です",
+      "audio_text": "",
+      "rubric": "①用 も 表「也」得 1 分；②用 の 表所属得 1 分；③判断句 です 收尾得 1 分",
+      "difficulty": 1
+    }
+  ],
+  "materials": [
+    {
+      "id": "M0001",
+      "kind": "reading",
+      "title": "朝のあいさつ",
+      "text_ja": "おはようございます。今日はいい天気です。お元気ですか。",
+      "audio_text": "おはようございます。今日はいい天気です。お元気ですか。",
+      "url": "",
+      "license": "original"
+    },
+    {
+      "id": "M0002",
+      "kind": "listening",
+      "title": "自己紹介",
+      "text_ja": "はじめまして。私はリンです。学生です。日本語を勉強します。よろしくお願いします。",
+      "audio_text": "はじめまして。私はリンです。学生です。日本語を勉強します。よろしくお願いします。",
+      "url": "",
+      "license": "original"
+    }
+  ],
+  "viz": {
+    "day": 13,
+    "phase": "P2",
+    "new_count": 9,
+    "review_count": 12,
+    "question_count": 6
+  },
+  "assessment": "none"
+}

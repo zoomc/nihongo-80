@@ -1,0 +1,240 @@
+{
+  "day": 5,
+  "phase": "P1",
+  "theme": "一日复盘｜が（主语／新信息／存在主体）・水曜日・木曜日",
+  "scene": "【一日复盘】日常作息：不看笔记说出今天 3 个新词与 1 个句型的用法（素材：毎朝の支度）",
+  "scene_tag": "一日复盘",
+  "can_do": "不看笔记说出今天 3 个新词与 1 个句型的用法",
+  "focus": [
+    "production",
+    "grammar"
+  ],
+  "objectives": [
+    "能在无提示条件下独立产出至少 1 句完整日语（口头或书面）",
+    "能说明「が（主语／新信息／存在主体）」的接续条件与适用场合，并给出一个反例",
+    "能辨析 水曜日、木曜日、金曜日 与已学近义表达的差别，不按中文词义套用",
+    "当天新词：水曜日、木曜日、金曜日（读音与用法都要验证，不靠汉字猜义）",
+    "当天句型：が（主语／新信息／存在主体），须说出接续条件",
+    "当天汉字：六、七，音读/训读各给一例",
+    "Can-do：不看笔记说出今天 3 个新词与 1 个句型的用法"
+  ],
+  "minutes": 60,
+  "blocks": [
+    {
+      "min": 10,
+      "type": "review",
+      "desc": "FSRS 到期复习 + 上一日错题重做"
+    },
+    {
+      "min": 20,
+      "type": "new",
+      "desc": "新知识：先给场景让学生推测，再揭示规则"
+    },
+    {
+      "min": 15,
+      "type": "interaction",
+      "desc": "【一日复盘】日常作息：听读素材 + 至少 1 次无提示独立输出"
+    },
+    {
+      "min": 10,
+      "type": "quiz",
+      "desc": "当天测验，先作答后讲解"
+    },
+    {
+      "min": 5,
+      "type": "feedback",
+      "desc": "错误归因、写档、明日任务"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "V0033",
+      "surface": "水曜日",
+      "kana": "すいようび",
+      "meaning_zh": "星期三",
+      "jlpt": "N5"
+    },
+    {
+      "id": "V0034",
+      "surface": "木曜日",
+      "kana": "もくようび",
+      "meaning_zh": "星期四",
+      "jlpt": "N5"
+    },
+    {
+      "id": "V0035",
+      "surface": "金曜日",
+      "kana": "きんようび",
+      "meaning_zh": "星期五",
+      "jlpt": "N5"
+    },
+    {
+      "id": "V0036",
+      "surface": "土曜日",
+      "kana": "どようび",
+      "meaning_zh": "星期六",
+      "jlpt": "N5"
+    },
+    {
+      "id": "V0037",
+      "surface": "日曜日",
+      "kana": "にちようび",
+      "meaning_zh": "星期日",
+      "jlpt": "N5"
+    },
+    {
+      "id": "V0038",
+      "surface": "家",
+      "kana": "いえ",
+      "meaning_zh": "家；房子",
+      "jlpt": "N5"
+    }
+  ],
+  "grammar": [
+    {
+      "id": "G0007",
+      "pattern": "が（主语／新信息／存在主体）",
+      "meaning_zh": "…（主语/新信息/存在主体/能力对象）",
+      "connection": "名詞 + が + 動詞／形容詞",
+      "example": "猫がいます。"
+    }
+  ],
+  "kanji": [
+    {
+      "id": "K0013",
+      "char": "六",
+      "onyomi": [
+        "ロク"
+      ],
+      "kunyomi": [
+        "む",
+        "むっつ"
+      ],
+      "zh_trap": "中文读 liù；日语「六日」むいか、「六つ」むっつ 训读；「六時」ろくじ 音读；促音/训读不规则。"
+    },
+    {
+      "id": "K0014",
+      "char": "七",
+      "onyomi": [
+        "シチ"
+      ],
+      "kunyomi": [
+        "なな",
+        "なの"
+      ],
+      "zh_trap": "中文读 qī；日语「七」有 しち/なな 两读，「七日」なのか 训读；「七時」しちじ；不可按中文音类推成 ななじ 以外的读法混淆。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q0021",
+      "type": "listen",
+      "prompt_ja": "听录音，写出表示过去的判断词。",
+      "prompt_zh": "听写过去式结尾",
+      "options": [],
+      "answer": "でした",
+      "rationale": "でした 是 です 的过去形，与 昨日 呼应",
+      "audio_text": "昨日は日曜日でした。",
+      "rubric": "写出 でした 得 1 分，写成 です/だった 得 0 分",
+      "difficulty": 1
+    },
+    {
+      "id": "Q0023",
+      "type": "reorder",
+      "prompt_ja": "把词块排成「昨天是周日」",
+      "prompt_zh": "句序：时间主题 + 名词 + でした",
+      "options": [
+        "でした",
+        "昨日は",
+        "日曜日",
+        "。"
+      ],
+      "answer": "2,3,1,4",
+      "rationale": "时间词 + は 作主题，日曜日 + でした 收尾",
+      "audio_text": "",
+      "rubric": "顺序完全正确得 1 分，否则 0 分",
+      "difficulty": 1
+    },
+    {
+      "id": "Q0026",
+      "type": "free_production",
+      "prompt_ja": "请用过去式写一句「昨天是星期几」。",
+      "prompt_zh": "自由写作",
+      "options": [],
+      "answer": "",
+      "rationale": "考查 でした 与时间词的搭配",
+      "audio_text": "",
+      "rubric": "①含过去时间词得 1 分；②名词谓语用 でした 得 1 分；③星期名称正确得 1 分",
+      "difficulty": 1
+    },
+    {
+      "id": "Q0207",
+      "type": "mcq",
+      "prompt_ja": "___は日曜日です。",
+      "prompt_zh": "选出表示「明天」的词",
+      "options": [
+        "明日",
+        "昨日",
+        "今日",
+        "毎日"
+      ],
+      "answer": "明日",
+      "rationale": "明日 あした、昨日 きのう、今日 きょう 三个时间词字形与中文相近但读音完全不同。",
+      "audio_text": "明日は日曜日です。",
+      "rubric": "选 明日 得 1 分",
+      "difficulty": 2
+    },
+    {
+      "id": "Q0208",
+      "type": "fill",
+      "prompt_ja": "「昨日」は___と読みます。",
+      "prompt_zh": "写出「昨日」的读音",
+      "options": [],
+      "answer": "きのう",
+      "rationale": "「昨日」是训读 きのう，不能按中文「zuó rì」或音读推测；与「今日 きょう」「明日 あした」成组记忆。",
+      "audio_text": "きのう。",
+      "rubric": "填 きのう 得 1 分",
+      "difficulty": 2
+    },
+    {
+      "id": "Q0209",
+      "type": "listen",
+      "prompt_ja": "",
+      "prompt_zh": "听写听到的时间词（写汉字）",
+      "options": [],
+      "answer": "明日",
+      "rationale": "あした 对应汉字「明日」；注意与 あさ（朝）区分。",
+      "audio_text": "あした。",
+      "rubric": "写「明日」得 1 分；写 あした 得 0.5 分",
+      "difficulty": 2
+    }
+  ],
+  "materials": [
+    {
+      "id": "M0009",
+      "kind": "reading",
+      "title": "毎朝の支度",
+      "text_ja": "毎朝、七時に起きます。朝ご飯を食べて、八時に学校へ行きます。",
+      "audio_text": "毎朝、七時に起きます。朝ご飯を食べて、八時に学校へ行きます。",
+      "url": "",
+      "license": "original"
+    },
+    {
+      "id": "M0010",
+      "kind": "listening",
+      "title": "駅はどこですか",
+      "text_ja": "すみません、駅はどこですか。駅の前に店があります。",
+      "audio_text": "すみません、駅はどこですか。駅の前に店があります。",
+      "url": "",
+      "license": "original"
+    }
+  ],
+  "viz": {
+    "day": 5,
+    "phase": "P1",
+    "new_count": 9,
+    "review_count": 12,
+    "question_count": 6
+  },
+  "assessment": "none"
+}

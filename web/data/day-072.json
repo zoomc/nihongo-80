@@ -1,0 +1,161 @@
+{
+  "day": 72,
+  "phase": "P5",
+  "theme": "信息整合｜discussion",
+  "scene": "【信息整合】意见讨论：把两条互相矛盾的 意见讨论 信息合并成一段准确说明（素材：人によって違います）",
+  "scene_tag": "信息整合",
+  "can_do": "把两条互相矛盾的 意见讨论 信息合并成一段准确说明",
+  "focus": [
+    "grammar",
+    "production"
+  ],
+  "objectives": [
+    "能区分事实陈述与推测表达，避免把猜测说成定论",
+    "能对自己的错误归因到具体类型（遗忘/混淆/助词/变形/听辨/理解）",
+    "能听懂 意见讨论 场景的关键词并复述要点",
+    "Can-do：把两条互相矛盾的 意见讨论 信息合并成一段准确说明"
+  ],
+  "minutes": 60,
+  "blocks": [
+    {
+      "min": 20,
+      "type": "review",
+      "desc": "跨阶段混合复习与延迟回忆"
+    },
+    {
+      "min": 10,
+      "type": "remedy",
+      "desc": "按错误类型做针对性补救"
+    },
+    {
+      "min": 15,
+      "type": "interaction",
+      "desc": "综合场景表达与角色扮演"
+    },
+    {
+      "min": 10,
+      "type": "quiz",
+      "desc": "交错练习：易混语法/助词/变形"
+    },
+    {
+      "min": 5,
+      "type": "feedback",
+      "desc": "记录与明日调整"
+    }
+  ],
+  "vocab": [],
+  "grammar": [],
+  "kanji": [],
+  "questions": [
+    {
+      "id": "Q0145",
+      "type": "mcq",
+      "prompt_ja": "空が暗いです。雨が___そうです。",
+      "prompt_zh": "选出样态 そう 的正确接续",
+      "options": [
+        "降り",
+        "降る",
+        "降った",
+        "降って"
+      ],
+      "answer": "降り",
+      "rationale": "样态 そう 接ます形词干（降り）；传闻才接普通形",
+      "audio_text": "雨が降りそうです。",
+      "rubric": "选 降り 得 1 分，其余 0 分",
+      "difficulty": 5
+    },
+    {
+      "id": "Q0146",
+      "type": "fill",
+      "prompt_ja": "明日は雨___しれません。",
+      "prompt_zh": "填入表「也许」的推测表达",
+      "options": [],
+      "answer": "かも",
+      "rationale": "かもしれません 是固定推测形，礼貌形不用 〜です 叠加",
+      "audio_text": "",
+      "rubric": "填 かも 得 1 分，其余 0 分",
+      "difficulty": 5
+    },
+    {
+      "id": "Q0147",
+      "type": "listen",
+      "prompt_ja": "听录音，写出听到的整句。",
+      "prompt_zh": "听写整句",
+      "options": [],
+      "answer": "明日は雨かもしれません",
+      "rationale": "名词 雨 + かもしれません，礼貌形是 かもしれません 而非 かもしれないです",
+      "audio_text": "明日は雨かもしれません。",
+      "rubric": "完整写出「明日は雨かもしれません」得 1 分，其余 0 分",
+      "difficulty": 5
+    },
+    {
+      "id": "Q0148",
+      "type": "read",
+      "prompt_ja": "彼は忙しいようです。明日は雨かもしれません。【問い】明日の天気はどうですか。",
+      "prompt_zh": "读短文回答天气推测",
+      "options": [],
+      "answer": "雨かもしれません",
+      "rationale": "文中「明日は雨かもしれません」给出不确定推测",
+      "audio_text": "彼は忙しいようです。明日は雨かもしれません。",
+      "rubric": "答出「也许下雨」得 1 分，答 忙しい 得 0 分",
+      "difficulty": 5
+    },
+    {
+      "id": "Q0149",
+      "type": "reorder",
+      "prompt_ja": "把词块排成「看起来要下雨」",
+      "prompt_zh": "句序：主体 + が + ます形词干 + そうです",
+      "options": [
+        "そうです",
+        "雨が",
+        "降り",
+        "。"
+      ],
+      "answer": "2,3,1,4",
+      "rationale": "雨が + 降り + そうです，样态接ます形词干",
+      "audio_text": "",
+      "rubric": "顺序完全正确得 1 分，否则 0 分",
+      "difficulty": 5
+    },
+    {
+      "id": "Q0150",
+      "type": "error_correct",
+      "prompt_ja": "おいしいそうです。（想表看起来好吃）",
+      "prompt_zh": "改错：い形容词样态误接",
+      "options": [],
+      "answer": "おいしそうです。",
+      "rationale": "い形容词样态去 い + そう（おいしそう）；おいしいそう 是传闻「听说好吃」",
+      "audio_text": "",
+      "rubric": "改为 おいしそう 得 1 分，其余 0 分",
+      "difficulty": 5
+    }
+  ],
+  "materials": [
+    {
+      "id": "M0023",
+      "kind": "reading",
+      "title": "人によって違います",
+      "text_ja": "人によって好きなものが違います。私にとって、日本語は難しいです。日本語について話しましょう。",
+      "audio_text": "人によって好きなものが違います。私にとって、日本語は難しいです。日本語について話しましょう。",
+      "url": "",
+      "license": "original"
+    },
+    {
+      "id": "M0024",
+      "kind": "listening",
+      "title": "パソコンで書ける",
+      "text_ja": "パソコンで日本語のメールが書けるようになりました。とても便利です。",
+      "audio_text": "パソコンで日本語のメールが書けるようになりました。とても便利です。",
+      "url": "",
+      "license": "original"
+    }
+  ],
+  "viz": {
+    "day": 72,
+    "phase": "P5",
+    "new_count": 0,
+    "review_count": 12,
+    "question_count": 6
+  },
+  "assessment": "none"
+}

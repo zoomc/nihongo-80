@@ -1,0 +1,43 @@
+{
+  // Nihongo 80：Worker + 静态资源一起由 `wrangler deploy` 发布（复用 zoomlab-web 模式）。
+  // 大幅简化：无 D1 / KV / Workers AI / 自定义域名 / cron / secrets / 账号 ID。
+  // 本文件不含任何真实账号 ID、数据库 ID、域名或密钥。
+  // 已于 2026-11-06 实际部署：production=https://nihongo80.cmjfire.workers.dev，
+  // preview=https://nihongo80-preview.cmjfire.workers.dev（使用本机已有 wrangler OAuth 登录态）。
+  // html_handling:"none" 让 .html 路径不被 307 规范化，SW 预缓存与本地一致；/ 由 Worker 转发 index.html。
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "nihongo80",
+  "main": "worker/src/index.ts",
+  "compatibility_date": "2026-11-06",
+  "workers_dev": true,
+  "assets": {
+    // 相对本配置文件（deploy/）解析：deploy/../web 即项目根的 web/。
+    "directory": "../web",
+    "binding": "ASSETS",
+    // 由 build_site.py 生成 web/404.html；未命中静态资源时用它返回 404。
+    "not_found_handling": "404-page",
+    // 关闭 .html 自动 307 规范化：线上 /day-NNN.html 与本地路径完全一致，
+    // 否则 Service Worker 预缓存 80 个页面时会遇到重定向，影响离线可用。
+    "html_handling": "none",
+    // 仅放行 /api/* 与 /health 进 Worker，其余直接走静态资源。
+    "run_worker_first": ["/", "/api/*", "/health"]
+  },
+  "observability": { "enabled": true },
+  "env": {
+    "preview": {
+      // 独立 Worker、无 cron、无自定义域名、无数据库/密钥。
+      "name": "nihongo80-preview",
+      "workers_dev": true,
+      "assets": {
+        "directory": "../web",
+        "binding": "ASSETS",
+        "not_found_handling": "404-page",
+    // 关闭 .html 自动 307 规范化：线上 /day-NNN.html 与本地路径完全一致，
+    // 否则 Service Worker 预缓存 80 个页面时会遇到重定向，影响离线可用。
+    "html_handling": "none",
+        "run_worker_first": ["/", "/api/*", "/health"]
+      },
+      "observability": { "enabled": true }
+    }
+  }
+}

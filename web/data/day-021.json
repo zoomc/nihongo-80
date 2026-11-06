@@ -1,0 +1,250 @@
+{
+  "day": 21,
+  "phase": "P2",
+  "theme": "咖啡店点单｜～たい / ～たがる・そして・だから",
+  "scene": "【咖啡店点单】寒暄：在 weekly（咖啡店点单）中分项展示五维能力，并用「～たい / ～たがる」完成 1 次独立输出（素材：朝のあいさつ）",
+  "scene_tag": "咖啡店点单",
+  "can_do": "在 weekly（咖啡店点单）中分项展示五维能力，并用「～たい / ～たがる」完成 1 次独立输出",
+  "focus": [
+    "listening",
+    "reading"
+  ],
+  "objectives": [
+    "能从通知或短文中提取主旨并指出一条支撑细节",
+    "能把当天表达迁移到一个新场景，而不是复述例句",
+    "能区分事实陈述与推测表达，避免把猜测说成定论",
+    "当天新词：そして、だから、でも（读音与用法都要验证，不靠汉字猜义）",
+    "当天句型：～たい / ～たがる，须说出接续条件",
+    "当天汉字：書、食，音读/训读各给一例",
+    "Can-do：在 weekly（咖啡店点单）中分项展示五维能力，并用「～たい / ～たがる」完成 1 次独立输出",
+    "本日评估 weekly：分项记录词汇/语法/阅读/听力/表达得分"
+  ],
+  "minutes": 60,
+  "blocks": [
+    {
+      "min": 10,
+      "type": "review",
+      "desc": "FSRS 到期项主动回忆，无提示优先"
+    },
+    {
+      "min": 10,
+      "type": "new",
+      "desc": "当天新知识快速回顾（不新增超纲内容）"
+    },
+    {
+      "min": 5,
+      "type": "interaction",
+      "desc": "短场景口头输出，保持表达能力训练"
+    },
+    {
+      "min": 30,
+      "type": "assessment",
+      "desc": "合并执行当天唯一的 weekly，不叠加多套试卷"
+    },
+    {
+      "min": 5,
+      "type": "feedback",
+      "desc": "归因、写档、生成下一日任务"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "V0145",
+      "surface": "そして",
+      "kana": "そして",
+      "meaning_zh": "然后；而且",
+      "jlpt": "N5"
+    },
+    {
+      "id": "V0147",
+      "surface": "だから",
+      "kana": "だから",
+      "meaning_zh": "所以；因此",
+      "jlpt": "N5"
+    },
+    {
+      "id": "V0148",
+      "surface": "でも",
+      "kana": "でも",
+      "meaning_zh": "但是；不过；连…也",
+      "jlpt": "N5"
+    },
+    {
+      "id": "V0002",
+      "surface": "あなた",
+      "kana": "あなた",
+      "meaning_zh": "你；您",
+      "jlpt": "N5"
+    },
+    {
+      "id": "V0005",
+      "surface": "こんばんは",
+      "kana": "こんばんは",
+      "meaning_zh": "晚上好",
+      "jlpt": "N5"
+    },
+    {
+      "id": "V0014",
+      "surface": "六",
+      "kana": "ろく",
+      "meaning_zh": "六",
+      "jlpt": "N5"
+    }
+  ],
+  "grammar": [
+    {
+      "id": "G0031",
+      "pattern": "～たい / ～たがる",
+      "meaning_zh": "想（做）…／（第三人称）想…",
+      "connection": "動詞ます形（去ます） + たい；第三人称 + たがる",
+      "example": "水が飲みたいです。"
+    }
+  ],
+  "kanji": [
+    {
+      "id": "K0058",
+      "char": "書",
+      "onyomi": [
+        "ショ"
+      ],
+      "kunyomi": [
+        "か"
+      ],
+      "zh_trap": "中文「书/書」读 shū（书籍）；日语「書」音读 ショ（図書館 としょかん）、训读 か（書く かく=写）；中文「書」是名词「书」，日语「書」核心义是「写」，动词化。"
+    },
+    {
+      "id": "K0059",
+      "char": "食",
+      "onyomi": [
+        "ショク",
+        "ジキ"
+      ],
+      "kunyomi": [
+        "た",
+        "く"
+      ],
+      "zh_trap": "中文读 shí；日语「食」音读 ショク（食堂 しょくどう）、训读 た（食べる たべる）、く（食う くう）；中文「食」可单用「食物/吃」，日语多构词。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q0046",
+      "type": "mcq",
+      "prompt_ja": "ご飯___食べます。",
+      "prompt_zh": "选出他动词宾语助词",
+      "options": [
+        "を",
+        "が",
+        "に",
+        "で"
+      ],
+      "answer": "を",
+      "rationale": "他动词宾语用 を；中文「饭」易感觉成主语而误用 が",
+      "audio_text": "ご飯を食べます。",
+      "rubric": "选 を 得 1 分，其余 0 分",
+      "difficulty": 2
+    },
+    {
+      "id": "Q0055",
+      "type": "mcq",
+      "prompt_ja": "図書館___勉強します。",
+      "prompt_zh": "选出动作场所的助词",
+      "options": [
+        "で",
+        "に",
+        "へ",
+        "を"
+      ],
+      "answer": "で",
+      "rationale": "动作发生的场所用 で；に 只表静态存在/归着，中文「在」一律误译成 に",
+      "audio_text": "図書館で勉強します。",
+      "rubric": "选 で 得 1 分，其余 0 分",
+      "difficulty": 2
+    },
+    {
+      "id": "Q0087",
+      "type": "error_correct",
+      "prompt_ja": "部屋は静かだ。",
+      "prompt_zh": "改错：な形容词简体 だ 混入礼貌句",
+      "options": [],
+      "answer": "部屋は静かです。",
+      "rationale": "简体 だ 与礼貌句混用；な形容词词干后接 です",
+      "audio_text": "",
+      "rubric": "改为 です 得 1 分，其余 0 分",
+      "difficulty": 3
+    },
+    {
+      "id": "Q0088",
+      "type": "translate",
+      "prompt_ja": "中译日：这个房间很安静。",
+      "prompt_zh": "日译な形容词谓语",
+      "options": [],
+      "answer": "",
+      "rationale": "この部屋 は + 静か + です，注意 静か 不是 い形容词",
+      "audio_text": "",
+      "rubric": "①主题用 は 得 1 分；②用 静か 词干得 1 分；③句末 です 得 1 分",
+      "difficulty": 3
+    },
+    {
+      "id": "Q0090",
+      "type": "dialogue",
+      "prompt_ja": "A 问「この部屋はどうですか」，请回答。",
+      "prompt_zh": "看房场景对话",
+      "options": [],
+      "answer": "",
+      "rationale": "考查形容词谓语在评价问答中的运用",
+      "audio_text": "",
+      "rubric": "①用 な形容词 + です 得 1 分；②用 い形容词谓语得 1 分；③用 でも 转折自然得 1 分",
+      "difficulty": 3
+    },
+    {
+      "id": "Q0092",
+      "type": "fill",
+      "prompt_ja": "昨日は___です。（冷·过去）",
+      "prompt_zh": "填入い形容词过去形",
+      "options": [],
+      "answer": "寒かった",
+      "rationale": "い形容词过去去 い + かった；でした 是名词/な形容词过去",
+      "audio_text": "",
+      "rubric": "填 寒かった 得 1 分，其余 0 分",
+      "difficulty": 3
+    }
+  ],
+  "materials": [
+    {
+      "id": "M0001",
+      "kind": "reading",
+      "title": "朝のあいさつ",
+      "text_ja": "おはようございます。今日はいい天気です。お元気ですか。",
+      "audio_text": "おはようございます。今日はいい天気です。お元気ですか。",
+      "url": "",
+      "license": "original"
+    },
+    {
+      "id": "M0002",
+      "kind": "listening",
+      "title": "自己紹介",
+      "text_ja": "はじめまして。私はリンです。学生です。日本語を勉強します。よろしくお願いします。",
+      "audio_text": "はじめまして。私はリンです。学生です。日本語を勉強します。よろしくお願いします。",
+      "url": "",
+      "license": "original"
+    },
+    {
+      "id": "M0032",
+      "kind": "reading",
+      "title": "Tadoku: Free Tadoku Books 利用ガイド（NPO多言語多読・公式）",
+      "text_ja": "",
+      "audio_text": "",
+      "url": "https://tadoku.org/japanese/en/free-books-en/note-en",
+      "license": "CC BY-NC-ND 4.0（NPO多言語多読 / Tadoku Supporters：免费多読用 graded readers，需署名、禁止商用转售、禁止改编）"
+    }
+  ],
+  "viz": {
+    "day": 21,
+    "phase": "P2",
+    "new_count": 9,
+    "review_count": 12,
+    "question_count": 6
+  },
+  "assessment": "weekly"
+}

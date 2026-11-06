@@ -1,0 +1,18 @@
+# 部署依赖按需安装（scripts/deploy_cloudflare.sh 会自动 npm install）
+deploy/node_modules/
+deploy/package-lock.json
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 本地备份与系统文件
+data/backups/
+.DS_Store
+
+# 运行时学习状态（个人数据；clone 后由 `python3 scripts/nh80.py init` 重建）
+data/state.db
+data/state.db-wal
+data/state.db-shm
+sessions/day-*-brief.md
+reports/week-*.md

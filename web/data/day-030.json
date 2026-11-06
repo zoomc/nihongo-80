@@ -1,0 +1,201 @@
+{
+  "day": 30,
+  "phase": "P3",
+  "theme": "医院问诊｜～ことが できる・手伝う・忘れる",
+  "scene": "【医院问诊】交通出行：用「～ことが できる」说明症状持续时间与变化，听懂医嘱要点（素材：切符を買ってから）",
+  "scene_tag": "医院问诊",
+  "can_do": "用「～ことが できる」说明症状持续时间与变化，听懂医嘱要点",
+  "focus": [
+    "production",
+    "grammar"
+  ],
+  "objectives": [
+    "能从通知或短文中提取主旨并指出一条支撑细节",
+    "能把当天表达迁移到一个新场景，而不是复述例句",
+    "能区分事实陈述与推测表达，避免把猜测说成定论",
+    "当天新词：手伝う、忘れる、覚える（读音与用法都要验证，不靠汉字猜义）",
+    "当天句型：～ことが できる，须说出接续条件",
+    "当天汉字：者，音读/训读各给一例",
+    "Can-do：用「～ことが できる」说明症状持续时间与变化，听懂医嘱要点"
+  ],
+  "minutes": 60,
+  "blocks": [
+    {
+      "min": 10,
+      "type": "review",
+      "desc": "FSRS 到期复习 + 上一日错题重做"
+    },
+    {
+      "min": 20,
+      "type": "new",
+      "desc": "新知识：先给场景让学生推测，再揭示规则"
+    },
+    {
+      "min": 15,
+      "type": "interaction",
+      "desc": "【医院问诊】交通出行：听读素材 + 至少 1 次无提示独立输出"
+    },
+    {
+      "min": 10,
+      "type": "quiz",
+      "desc": "当天测验，先作答后讲解"
+    },
+    {
+      "min": 5,
+      "type": "feedback",
+      "desc": "错误归因、写档、明日任务"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "V0151",
+      "surface": "手伝う",
+      "kana": "てつだう",
+      "meaning_zh": "帮忙；搭把手",
+      "jlpt": "N4"
+    },
+    {
+      "id": "V0152",
+      "surface": "忘れる",
+      "kana": "わすれる",
+      "meaning_zh": "忘记；忘带",
+      "jlpt": "N4"
+    },
+    {
+      "id": "V0153",
+      "surface": "覚える",
+      "kana": "おぼえる",
+      "meaning_zh": "记住；学会",
+      "jlpt": "N4"
+    }
+  ],
+  "grammar": [
+    {
+      "id": "G0039",
+      "pattern": "～ことが できる",
+      "meaning_zh": "会／能…（可能迂说）",
+      "connection": "動詞辞書形 + ことが + できる",
+      "example": "日本語を話すことができます。"
+    }
+  ],
+  "kanji": [
+    {
+      "id": "K0078",
+      "char": "者",
+      "onyomi": [
+        "シャ"
+      ],
+      "kunyomi": [
+        "もの"
+      ],
+      "zh_trap": "中文「者」zhě 是文言后缀；日语 者 音读 シャ（医者 いしゃ）、训读 もの（可单用指「人」）；中文「者」不能单独作名词，日语「者」もの 可以，义域不同。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q0110",
+      "type": "fill",
+      "prompt_ja": "日本語を話す___ができます。",
+      "prompt_zh": "填入可能迂说的形式名词",
+      "options": [],
+      "answer": "こと",
+      "rationale": "「辞书形 + ことが + できる」是可能迂说，こと 前必须辞书形",
+      "audio_text": "",
+      "rubric": "填 こと 得 1 分，其余 0 分",
+      "difficulty": 4
+    },
+    {
+      "id": "Q0115",
+      "type": "translate",
+      "prompt_ja": "中译日：我会说日语。",
+      "prompt_zh": "日译，可用 〜ことができる",
+      "options": [],
+      "answer": "",
+      "rationale": "辞书形 話す + ことが + できます，保留原宾语 を",
+      "audio_text": "",
+      "rubric": "①辞书形 + ことが 得 1 分；②用 できます 得 1 分；③宾语用 を 得 1 分",
+      "difficulty": 4
+    },
+    {
+      "id": "Q0116",
+      "type": "free_production",
+      "prompt_ja": "请写一句表达自己会/能做的事。",
+      "prompt_zh": "自由写作",
+      "options": [],
+      "answer": "",
+      "rationale": "考查可能形或 〜ことができる 的迁移",
+      "audio_text": "",
+      "rubric": "①可能形变形正确得 1 分；②对象助词得当得 1 分；③礼貌体收尾得 1 分",
+      "difficulty": 4
+    },
+    {
+      "id": "Q0122",
+      "type": "reorder",
+      "prompt_ja": "把词块排成「我觉得明天会下雨」",
+      "prompt_zh": "句序：普通形从句 + と + 思います",
+      "options": [
+        "思います",
+        "雨だ",
+        "と",
+        "明日は"
+      ],
+      "answer": "4,2,3,1",
+      "rationale": "明日は + 雨だ + と + 思います，从句用普通形",
+      "audio_text": "",
+      "rubric": "顺序完全正确得 1 分，否则 0 分",
+      "difficulty": 4
+    },
+    {
+      "id": "Q0123",
+      "type": "error_correct",
+      "prompt_ja": "明日は雨ですと思います。",
+      "prompt_zh": "改错：引用从句误带 です",
+      "options": [],
+      "answer": "明日は雨だと思います。",
+      "rationale": "引用从句用普通形（雨だ），不能带 です；中文「是」诱发误加",
+      "audio_text": "",
+      "rubric": "改为 雨だ 得 1 分，其余 0 分",
+      "difficulty": 4
+    },
+    {
+      "id": "Q0124",
+      "type": "translate",
+      "prompt_ja": "中译日：因为忙，所以不去。",
+      "prompt_zh": "日译客观原因 ので",
+      "options": [],
+      "answer": "",
+      "rationale": "い形容词 忙しい + ので，后项客观结果，不用 から 的强主观",
+      "audio_text": "",
+      "rubric": "①用 ので 表原因得 1 分；②前接普通形正确得 1 分；③后项结果自然得 1 分",
+      "difficulty": 4
+    }
+  ],
+  "materials": [
+    {
+      "id": "M0021",
+      "kind": "reading",
+      "title": "切符を買ってから",
+      "text_ja": "駅で切符を買いました。電車に乗ってから、友達に電話しました。",
+      "audio_text": "駅で切符を買いました。電車に乗ってから、友達に電話しました。",
+      "url": "",
+      "license": "original"
+    },
+    {
+      "id": "M0022",
+      "kind": "listening",
+      "title": "図書館へ行きたい",
+      "text_ja": "すみません、図書館へ行きたいです。地図を見てください。駅の前です。",
+      "audio_text": "すみません、図書館へ行きたいです。地図を見てください。駅の前です。",
+      "url": "",
+      "license": "original"
+    }
+  ],
+  "viz": {
+    "day": 30,
+    "phase": "P3",
+    "new_count": 5,
+    "review_count": 12,
+    "question_count": 6
+  },
+  "assessment": "none"
+}

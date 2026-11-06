@@ -1,0 +1,225 @@
+{
+  "day": 28,
+  "phase": "P3",
+  "theme": "旅行复盘｜～と 思う / ～と 言う・メール・地図",
+  "scene": "【旅行复盘】邮件往来：在 weekly（旅行复盘）中分项展示五维能力，并用「～と 思う / ～と 言う」完成 1 次独立输出（素材：先生へのメール）",
+  "scene_tag": "旅行复盘",
+  "can_do": "在 weekly（旅行复盘）中分项展示五维能力，并用「～と 思う / ～と 言う」完成 1 次独立输出",
+  "focus": [
+    "vocabulary",
+    "kanji"
+  ],
+  "objectives": [
+    "能在无提示条件下独立产出至少 1 句完整日语（口头或书面）",
+    "能说明「～と 思う / ～と 言う」的接续条件与适用场合，并给出一个反例",
+    "能辨析 メール、地図、難しい 与已学近义表达的差别，不按中文词义套用",
+    "当天新词：メール、地図、難しい（读音与用法都要验证，不靠汉字猜义）",
+    "当天句型：～と 思う / ～と 言う，须说出接续条件",
+    "当天汉字：題、仕，音读/训读各给一例",
+    "Can-do：在 weekly（旅行复盘）中分项展示五维能力，并用「～と 思う / ～と 言う」完成 1 次独立输出",
+    "本日评估 weekly：分项记录词汇/语法/阅读/听力/表达得分"
+  ],
+  "minutes": 60,
+  "blocks": [
+    {
+      "min": 10,
+      "type": "review",
+      "desc": "FSRS 到期项主动回忆，无提示优先"
+    },
+    {
+      "min": 10,
+      "type": "new",
+      "desc": "当天新知识快速回顾（不新增超纲内容）"
+    },
+    {
+      "min": 5,
+      "type": "interaction",
+      "desc": "短场景口头输出，保持表达能力训练"
+    },
+    {
+      "min": 30,
+      "type": "assessment",
+      "desc": "合并执行当天唯一的 weekly，不叠加多套试卷"
+    },
+    {
+      "min": 5,
+      "type": "feedback",
+      "desc": "归因、写档、生成下一日任务"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "V0090",
+      "surface": "メール",
+      "kana": "メール",
+      "meaning_zh": "邮件；短信",
+      "jlpt": "N4"
+    },
+    {
+      "id": "V0093",
+      "surface": "地図",
+      "kana": "ちず",
+      "meaning_zh": "地图",
+      "jlpt": "N4"
+    },
+    {
+      "id": "V0132",
+      "surface": "難しい",
+      "kana": "むずかしい",
+      "meaning_zh": "难",
+      "jlpt": "N4"
+    }
+  ],
+  "grammar": [
+    {
+      "id": "G0036",
+      "pattern": "～と 思う / ～と 言う",
+      "meaning_zh": "觉得…／说「…」",
+      "connection": "普通形从句 + と + 思う／言う",
+      "example": "明日は雨だと思います。"
+    }
+  ],
+  "kanji": [
+    {
+      "id": "K0074",
+      "char": "題",
+      "onyomi": [
+        "ダイ"
+      ],
+      "kunyomi": [],
+      "zh_trap": "中文「题」tí；日语 題 音读 ダイ（不读 テイ），「宿題」しゅくだい「問題」もんだい 都读 ダイ；中文「题」义近但音读须按 ダイ 验证，此字无常用训读。"
+    },
+    {
+      "id": "K0075",
+      "char": "仕",
+      "onyomi": [
+        "シ"
+      ],
+      "kunyomi": [
+        "つかえる"
+      ],
+      "zh_trap": "中文「仕」shì（仕途）；日语「仕事」しごと 是「工作」，中文易按「士」类推或读成 shì；「仕」训读 つかえる（侍奉）与中文义不同，不能靠汉字猜。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q0099",
+      "type": "dialogue",
+      "prompt_ja": "A 问「日本語は難しいですか」，请用否定回答。",
+      "prompt_zh": "学习感受对话",
+      "options": [],
+      "answer": "",
+      "rationale": "考查い形容词否定在问答中的运用",
+      "audio_text": "",
+      "rubric": "①用 いいえ 回应得 1 分；②用 〜くない 否定得 1 分；③礼貌体 です 得 1 分",
+      "difficulty": 3
+    },
+    {
+      "id": "Q0109",
+      "type": "mcq",
+      "prompt_ja": "日本語___話せます。",
+      "prompt_zh": "选出可能形对象的助词",
+      "options": [
+        "が",
+        "を",
+        "に",
+        "で"
+      ],
+      "answer": "が",
+      "rationale": "可能形对象助词常由 を 变 が；日本語が話せる",
+      "audio_text": "日本語が話せます。",
+      "rubric": "选 が 得 1 分，其余 0 分",
+      "difficulty": 4
+    },
+    {
+      "id": "Q0111",
+      "type": "listen",
+      "prompt_ja": "听录音，写出听到的整句。",
+      "prompt_zh": "听写整句",
+      "options": [],
+      "answer": "日本語が話せます",
+      "rationale": "話す 五段可能形 話せる → ます形 話せます，对象用 が",
+      "audio_text": "日本語が話せます。",
+      "rubric": "完整写出「日本語が話せます」得 1 分，用 を 得 0 分",
+      "difficulty": 4
+    },
+    {
+      "id": "Q0112",
+      "type": "read",
+      "prompt_ja": "私は日本語が分かります。でも、まだ話せません。【問い】日本語が話せますか。",
+      "prompt_zh": "读短文判断能力",
+      "options": [],
+      "answer": "いいえ、話せません",
+      "rationale": "文中「まだ話せません」明确否定可能，与 分かります 不同",
+      "audio_text": "私は日本語が分かります。でも、まだ話せません。",
+      "rubric": "答「いいえ、話せません」得 1 分，其余 0 分",
+      "difficulty": 4
+    },
+    {
+      "id": "Q0113",
+      "type": "reorder",
+      "prompt_ja": "把词块排成「会说日语」",
+      "prompt_zh": "句序：对象 + が + 可能形 + ます",
+      "options": [
+        "話せます",
+        "日本語",
+        "が",
+        "。"
+      ],
+      "answer": "2,3,1,4",
+      "rationale": "日本語 + が + 話せます，五段可能形 話せる",
+      "audio_text": "",
+      "rubric": "顺序完全正确得 1 分，否则 0 分",
+      "difficulty": 4
+    },
+    {
+      "id": "Q0114",
+      "type": "error_correct",
+      "prompt_ja": "日本語を話されます。（想表可能）",
+      "prompt_zh": "改错：把受身误当可能",
+      "options": [],
+      "answer": "日本語が話せます。",
+      "rationale": "「〜られる」在这里被误当可能，其实是受身；五段可能是 話せる，对象改 が",
+      "audio_text": "",
+      "rubric": "改为 話せます 且 が 得 1 分，其余 0 分",
+      "difficulty": 4
+    }
+  ],
+  "materials": [
+    {
+      "id": "M0017",
+      "kind": "reading",
+      "title": "先生へのメール",
+      "text_ja": "先生にメールを書きました。「明日は雨だと思います」と書きました。",
+      "audio_text": "先生にメールを書きました。「明日は雨だと思います」と書きました。",
+      "url": "",
+      "license": "original"
+    },
+    {
+      "id": "M0018",
+      "kind": "listening",
+      "title": "料理を食べてみたい",
+      "text_ja": "この料理を食べてみたいです。少し高いです。でも、美味しそうです。",
+      "audio_text": "この料理を食べてみたいです。少し高いです。でも、美味しそうです。",
+      "url": "",
+      "license": "original"
+    },
+    {
+      "id": "M0033",
+      "kind": "reading",
+      "title": "JLPT Let's Try Sample Questions!（日本語能力試験・公式）",
+      "text_ja": "",
+      "audio_text": "",
+      "url": "https://www.jlpt.jp/e/samples/forlearners.html",
+      "license": "© 公益財団法人日本国際教育支援協会・独立行政法人国際交流基金（JLPT 官方公开样题，著作权保留，不转载题目正文）"
+    }
+  ],
+  "viz": {
+    "day": 28,
+    "phase": "P3",
+    "new_count": 6,
+    "review_count": 12,
+    "question_count": 6
+  },
+  "assessment": "weekly"
+}

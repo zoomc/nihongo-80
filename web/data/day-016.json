@@ -1,0 +1,244 @@
+{
+  "day": 16,
+  "phase": "P2",
+  "theme": "天气闲聊｜ない形（普通否定）・読む・話す",
+  "scene": "【天气闲聊】寒暄：听懂 寒暄 相关的简短闲谈，接着说出自己的一天（素材：朝のあいさつ）",
+  "scene_tag": "天气闲聊",
+  "can_do": "听懂 寒暄 相关的简短闲谈，接着说出自己的一天",
+  "focus": [
+    "listening",
+    "reading"
+  ],
+  "objectives": [
+    "能在近自然语速的短对话中抓住人物关系与后续动作",
+    "能从通知或短文中提取主旨并指出一条支撑细节",
+    "能把当天表达迁移到一个新场景，而不是复述例句",
+    "当天新词：読む、話す、聞く（读音与用法都要验证，不靠汉字猜义）",
+    "当天句型：ない形（普通否定），须说出接续条件",
+    "当天汉字：家、学、校，音读/训读各给一例",
+    "Can-do：听懂 寒暄 相关的简短闲谈，接着说出自己的一天"
+  ],
+  "minutes": 60,
+  "blocks": [
+    {
+      "min": 10,
+      "type": "review",
+      "desc": "FSRS 到期复习 + 上一日错题重做"
+    },
+    {
+      "min": 20,
+      "type": "new",
+      "desc": "新知识：先给场景让学生推测，再揭示规则"
+    },
+    {
+      "min": 15,
+      "type": "interaction",
+      "desc": "【天气闲聊】寒暄：听读素材 + 至少 1 次无提示独立输出"
+    },
+    {
+      "min": 10,
+      "type": "quiz",
+      "desc": "当天测验，先作答后讲解"
+    },
+    {
+      "min": 5,
+      "type": "feedback",
+      "desc": "错误归因、写档、明日任务"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "V0113",
+      "surface": "読む",
+      "kana": "よむ",
+      "meaning_zh": "读；念",
+      "jlpt": "N5"
+    },
+    {
+      "id": "V0114",
+      "surface": "話す",
+      "kana": "はなす",
+      "meaning_zh": "说；讲",
+      "jlpt": "N5"
+    },
+    {
+      "id": "V0115",
+      "surface": "聞く",
+      "kana": "きく",
+      "meaning_zh": "听；问",
+      "jlpt": "N5"
+    },
+    {
+      "id": "V0116",
+      "surface": "待つ",
+      "kana": "まつ",
+      "meaning_zh": "等；等待",
+      "jlpt": "N5"
+    },
+    {
+      "id": "V0117",
+      "surface": "乗る",
+      "kana": "のる",
+      "meaning_zh": "乘；坐（车船）",
+      "jlpt": "N5"
+    },
+    {
+      "id": "V0119",
+      "surface": "起きる",
+      "kana": "おきる",
+      "meaning_zh": "起床；起来",
+      "jlpt": "N5"
+    }
+  ],
+  "grammar": [
+    {
+      "id": "G0022",
+      "pattern": "ない形（普通否定）",
+      "meaning_zh": "动词ない形（简体否定）",
+      "connection": "五段 う段→あ段+ない；一段 去る+ない；カ変 こない；サ変 しない",
+      "example": "今日は学校へ行かない。"
+    }
+  ],
+  "kanji": [
+    {
+      "id": "K0044",
+      "char": "家",
+      "onyomi": [
+        "カ",
+        "ケ"
+      ],
+      "kunyomi": [
+        "いえ",
+        "うち"
+      ],
+      "zh_trap": "中文读 jiā；日语「家(いえ)」指房子、「家(うち)」指自己家，音读 カ（家族 かぞく）、ケ（家来 けらい）；中文「家」一词兼两义，日语分读。"
+    },
+    {
+      "id": "K0045",
+      "char": "学",
+      "onyomi": [
+        "ガク"
+      ],
+      "kunyomi": [
+        "まな"
+      ],
+      "zh_trap": "中文读 xué；日语「学」音读 ガク（学校 がっこう、学生 がくせい），训读 まな（学ぶ まなぶ）；がっこう 是 ガク+コウ 促音便。"
+    },
+    {
+      "id": "K0046",
+      "char": "校",
+      "onyomi": [
+        "コウ"
+      ],
+      "kunyomi": [],
+      "zh_trap": "中文读 xiào；日语「校」音读 コウ，无训读；「学校」がっこう（促音便），「校長」こうちょう；中文「校」还有「校对 jiào」义，日语无。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q0062",
+      "type": "free_production",
+      "prompt_ja": "请用 で 写一句「在某处做某事」。",
+      "prompt_zh": "自由写作",
+      "options": [],
+      "answer": "",
+      "rationale": "考查 で 表动作场所的迁移",
+      "audio_text": "",
+      "rubric": "①场所后用 で 得 1 分；②宾语用 を 得 1 分；③ます形礼貌体得 1 分",
+      "difficulty": 2
+    },
+    {
+      "id": "Q0081",
+      "type": "dialogue",
+      "prompt_ja": "A 问「駅の前に何がありますか」，请回答。",
+      "prompt_zh": "问路场景对话",
+      "options": [],
+      "answer": "",
+      "rationale": "考查存在句问答与 ある 的使用",
+      "audio_text": "",
+      "rubric": "①用 が 提示主体得 1 分；②无生命用 あります 得 1 分；③礼貌体作答得 1 分",
+      "difficulty": 3
+    },
+    {
+      "id": "Q0103",
+      "type": "read",
+      "prompt_ja": "毎朝、七時に起きます。ご飯を食べて、学校へ行きます。【問い】朝、何を食べますか。",
+      "prompt_zh": "读短文回答",
+      "options": [],
+      "answer": "ご飯です",
+      "rationale": "文中「ご飯を食べて」给出动作对象，て形表中顿",
+      "audio_text": "毎朝、七時に起きます。ご飯を食べて、学校へ行きます。",
+      "rubric": "答「ご飯です」得 1 分，其余 0 分",
+      "difficulty": 3
+    },
+    {
+      "id": "Q0104",
+      "type": "reorder",
+      "prompt_ja": "把词块排成「吃完饭后去学校」",
+      "prompt_zh": "句序：て形中顿连接先后动作",
+      "options": [
+        "食べて",
+        "ご飯",
+        "を",
+        "学校へ行きます"
+      ],
+      "answer": "2,3,1,4",
+      "rationale": "ご飯を + 食べて + 学校へ行きます，て形表中顿",
+      "audio_text": "",
+      "rubric": "顺序完全正确得 1 分，否则 0 分",
+      "difficulty": 3
+    },
+    {
+      "id": "Q0105",
+      "type": "error_correct",
+      "prompt_ja": "食べります。",
+      "prompt_zh": "改错：一段动词误加 り",
+      "options": [],
+      "answer": "食べます。",
+      "rationale": "一段动词去 る 直接加 ます；加 り 是把一段误当五段",
+      "audio_text": "",
+      "rubric": "改为 食べます 得 1 分，其余 0 分",
+      "difficulty": 3
+    },
+    {
+      "id": "Q0107",
+      "type": "free_production",
+      "prompt_ja": "请用 て形 连接两个先后动作。",
+      "prompt_zh": "自由写作",
+      "options": [],
+      "answer": "",
+      "rationale": "考查て形中顿表动作先后",
+      "audio_text": "",
+      "rubric": "①前一个动词用正确て形得 1 分；②后接另一动作得 1 分；③ます形礼貌体得 1 分",
+      "difficulty": 3
+    }
+  ],
+  "materials": [
+    {
+      "id": "M0001",
+      "kind": "reading",
+      "title": "朝のあいさつ",
+      "text_ja": "おはようございます。今日はいい天気です。お元気ですか。",
+      "audio_text": "おはようございます。今日はいい天気です。お元気ですか。",
+      "url": "",
+      "license": "original"
+    },
+    {
+      "id": "M0002",
+      "kind": "listening",
+      "title": "自己紹介",
+      "text_ja": "はじめまして。私はリンです。学生です。日本語を勉強します。よろしくお願いします。",
+      "audio_text": "はじめまして。私はリンです。学生です。日本語を勉強します。よろしくお願いします。",
+      "url": "",
+      "license": "original"
+    }
+  ],
+  "viz": {
+    "day": 16,
+    "phase": "P2",
+    "new_count": 10,
+    "review_count": 12,
+    "question_count": 6
+  },
+  "assessment": "none"
+}

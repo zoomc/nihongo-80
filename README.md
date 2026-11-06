@@ -1,6 +1,7 @@
 # Nihongo 80 — AI 私人日语学校（本地可运行项目）
 
 > **已上线（2026-11-06）**：https://nihongo80.cmjfire.workers.dev
+> **GitHub 仓库**：https://github.com/zoomc/nihongo-80
 > Preview：https://nihongo80-preview.cmjfire.workers.dev
 > 手机 / PC 直接打开当天页，例如 https://nihongo80.cmjfire.workers.dev/day-001.html
 > 部署方式复用 zoomlab-web（Worker + 静态资源，一条 `wrangler deploy`），详见 `docs/CLOUDFLARE.md`。

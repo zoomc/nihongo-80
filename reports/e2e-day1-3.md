@@ -1,17 +1,19 @@
 # Day 1–3 端到端真实演练记录
 
-生成时间：2026-11-06 17:49:20 +0800
+生成时间：2026-11-06 21:56:19 +0800
 
 复现命令：`python3 tests/test_all.py`
 
 说明：演练在独立临时目录 `/tmp/nh80-test-*` 执行，会真实建库、生成 80 天课程与网页、
-启动 Day1-3 会话、作答批改、写错题库、排 FSRS、导入网页回传码、生成周报，
+启动 Day 1–3 会话、作答批改、写错题库、排 FSRS、导入网页回传码、生成周报，
 **不污染真实项目的学习档案**。测试结束自动清理临时目录。
 
 ## 原始输出
 
 ```
 test_01_db_and_fts (__main__.TestAStatic.test_01_db_and_fts) ... ok
+test_01b_framework_delivery (__main__.TestAStatic.test_01b_framework_delivery)
+v2 框架：分级兑现与去模板化必须被强校验，而不是只查覆盖率。 ... ok
 test_02_keyword_relation_semantic (__main__.TestAStatic.test_02_keyword_relation_semantic) ... ok
 test_03_80_days_complete (__main__.TestAStatic.test_03_80_days_complete) ... ok
 test_04_prerequisites_and_no_spoilers (__main__.TestAStatic.test_04_prerequisites_and_no_spoilers) ... ok
@@ -31,8 +33,8 @@ test_09_backup_restore_audit (__main__.TestCFlow.test_09_backup_restore_audit) .
 test_10_new_session_prompt_reads_real_state (__main__.TestCFlow.test_10_new_session_prompt_reads_real_state) ... ok
 
 ----------------------------------------------------------------------
-Ran 18 tests in 5.466s
+Ran 19 tests in 6.074s
 
 OK
-测试根目录: /var/folders/y5/s3nn1c7x6wg6vnnll6cxvq2w0000gn/T/nh80-test-576n71no
+测试根目录: /var/folders/y5/s3nn1c7x6wg6vnnll6cxvq2w0000gn/T/nh80-test-gynzmmun
 ```

@@ -1,10 +1,21 @@
 {
   // Nihongo 80：Worker + 静态资源一起由 `wrangler deploy` 发布（复用 zoomlab-web 模式）。
-  // 大幅简化：无 D1 / KV / Workers AI / 自定义域名 / cron / secrets / 账号 ID。
+  // 无 KV / Workers AI / 自定义域名 / cron / 账号 ID；D1 为**可选**绑定（不绑也能上线，接口降级为 503）。
   // 本文件不含任何真实账号 ID、数据库 ID、域名或密钥。
+  // D1 已于 2026-11-07 创建（nihongo80, APAC），只存网页原始作答事件；
   // 已于 2026-11-06 实际部署：production=https://nihongo80.cmjfire.workers.dev，
   // preview=https://nihongo80-preview.cmjfire.workers.dev（使用本机已有 wrangler OAuth 登录态）。
   // html_handling:"none" 让 .html 路径不被 307 规范化，SW 预缓存与本地一致；/ 由 Worker 转发 index.html。
+  //
+  // 事件同步（可选，docs/CLOUDFLARE.md「事件同步」一节）需要的两步：
+  //   1) npx wrangler d1 create nihongo80
+  //      把返回的 database_id 填到下面 production / preview 两处 REPLACE_WITH_D1_ID；
+  //   2) npx wrangler d1 execute nihongo80 --remote --file=./migrations/0001_events.sql
+  //      建 events 表（本地调试去掉 --remote）。
+  // 拉取密钥用 secret 管理，**不要**写进本文件：
+  //   npx wrangler secret put NH80_SYNC_KEY
+  //   npx wrangler secret put NH80_SYNC_KEY --env preview
+  // 不创建 D1 / 不配置密钥时，静态站行为与 v3 完全一致（优雅降级）。
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "nihongo80",
   "main": "worker/src/index.ts",
@@ -22,21 +33,42 @@
     // 仅放行 /api/* 与 /health 进 Worker，其余直接走静态资源。
     "run_worker_first": ["/", "/api/*", "/health"]
   },
+  // 可选：D1 事件表。没有替换 REPLACE_WITH_D1_ID 时不要带 --remote 部署到生产，
+  // 或者先删掉本段（Worker 会以 no_db 503 优雅降级）。
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "nihongo80",
+      "database_id": "9845dbf3-a470-4718-b474-b96e7b0e6223",
+      // 迁移文件目录：`npx wrangler d1 migrations apply nihongo80 --remote`
+      "migrations_dir": "migrations"
+    }
+  ],
   "observability": { "enabled": true },
   "env": {
     "preview": {
-      // 独立 Worker、无 cron、无自定义域名、无数据库/密钥。
+      // 独立 Worker、无 cron、无自定义域名；D1 同样为可选绑定。
       "name": "nihongo80-preview",
       "workers_dev": true,
       "assets": {
         "directory": "../web",
         "binding": "ASSETS",
         "not_found_handling": "404-page",
-    // 关闭 .html 自动 307 规范化：线上 /day-NNN.html 与本地路径完全一致，
-    // 否则 Service Worker 预缓存 80 个页面时会遇到重定向，影响离线可用。
-    "html_handling": "none",
+        // 关闭 .html 自动 307 规范化：线上 /day-NNN.html 与本地路径完全一致，
+        // 否则 Service Worker 预缓存 80 个页面时会遇到重定向，影响离线可用。
+        "html_handling": "none",
         "run_worker_first": ["/", "/api/*", "/health"]
       },
+      // 预览环境同样绑定 events 库；若想与生产隔离，另建 `nihongo80-preview`
+      // 并把这里的 database_name / database_id 一起换掉（两边都要先跑 migration）。
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "nihongo80",
+          "database_id": "9845dbf3-a470-4718-b474-b96e7b0e6223",
+          "migrations_dir": "migrations"
+        }
+      ],
       "observability": { "enabled": true }
     }
   }

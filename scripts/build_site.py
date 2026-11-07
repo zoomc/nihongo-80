@@ -24,7 +24,9 @@ import argparse
 import hashlib
 import html
 import json
+import sqlite3
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 DEFAULT_ROOT = Path(__file__).resolve().parent.parent
@@ -345,6 +347,12 @@ def assemble_day(d, tables, all_ids, ko):
         "theme": d.get("theme", ""),
         "scene": d.get("scene", ""),
         "scene_tag": d.get("scene_tag", ""),
+        # v4：场景主题与对齐标记，供页面显示「今天场景 / 素材是否同主题」
+        "scene_topic_key": d.get("scene_topic_key", ""),
+        "scene_topic": d.get("scene_topic", ""),
+        "topic_match": d.get("topic_match", ""),
+        "material_topic_keys": d.get("material_topic_keys") or [],
+        "material_pair": d.get("material_pair", ""),
         "can_do": d.get("can_do", ""),
         "focus": d.get("focus") or [],
         "objectives": d.get("objectives") or [],
@@ -362,6 +370,138 @@ def assemble_day(d, tables, all_ids, ko):
         "review_plan": d.get("review_plan") if isinstance(d.get("review_plan"), list) else [],
         "teaching_notes": d.get("teaching_notes") if isinstance(d.get("teaching_notes"), list) else [],
         "ko_analogy": {"grammar": ko_g, "vocab": ko_v},
+    }
+
+
+def _parse_iso(s):
+    """容错解析 state.db / FSRS 的 ISO 时间；无法解析返回 None。"""
+    if not s:
+        return None
+    try:
+        v = str(s).strip().replace("Z", "+00:00")
+        dt = datetime.fromisoformat(v)
+        return dt if dt.tzinfo else dt.replace(tzinfo=timezone.utc)
+    except (ValueError, TypeError):
+        return None
+
+
+def _now_iso():
+    return datetime.now(timezone.utc).isoformat(timespec="seconds")
+
+
+def load_review_context(root):
+    """只读打开 data/state.db，读出 FSRS 到期卡与聚合掌握状态。
+
+    数据库不存在、无法打开或表结构还是旧版时一律返回 None：建站继续，
+    页面退回「预习建议」，绝不让网页构建依赖学习状态。
+    """
+    db = root / "data" / "state.db"
+    if not db.is_file():
+        return None
+    try:
+        uri = "file:%s?mode=ro" % str(db).replace("\\", "/")
+        conn = sqlite3.connect(uri, uri=True)
+        conn.row_factory = sqlite3.Row
+        try:
+            cards = [dict(r) for r in conn.execute(
+                "SELECT knowledge_id,due,stability,stage FROM fsrs_cards ORDER BY due").fetchall()]
+            ks = {r["knowledge_id"]: dict(r) for r in conn.execute(
+                "SELECT knowledge_id,stage FROM knowledge_state").fetchall()}
+        finally:
+            conn.close()
+    except (sqlite3.Error, OSError):
+        return None
+    return {"cards": cards, "ks": ks, "now": _now_iso()}
+
+
+def _knowledge_index(tables):
+    """kid → 页面展示所需的最小字段（surface / kana / zh / 默认能力）。"""
+    idx = {}
+    for v in tables.get("vocab", {}).values():
+        idx[str(v.get("id"))] = {
+            "surface": _sval(v.get("surface")), "kana": _sval(v.get("kana")),
+            "zh": _sval(v.get("meaning_zh")), "capability": "meaning",
+        }
+    for g in tables.get("grammar", {}).values():
+        idx[str(g.get("id"))] = {
+            "surface": _sval(g.get("pattern")), "kana": "",
+            "zh": _sval(g.get("meaning_zh")), "capability": "usage",
+        }
+    for k in tables.get("kanji", {}).values():
+        idx[str(k.get("id"))] = {
+            "surface": _sval(k.get("char")), "kana": "",
+            "zh": _sval(k.get("meaning_zh")), "capability": "reading",
+        }
+    return idx
+
+
+def _card_due_map(ctx, kid):
+    """同一 kid 可能有多张能力卡；取最早到期的一张，用于 next_hint 反算。"""
+    best = None
+    for c in (ctx or {}).get("cards", []):
+        key = str(c.get("knowledge_id") or "")
+        base = key.split("|", 1)[0]
+        if base != kid:
+            continue
+        dt = _parse_iso(c.get("due"))
+        if dt and (best is None or dt < best):
+            best = dt
+    return best
+
+
+def build_review(daynum, day_data, ctx, idx):
+    """REVISION_CONTRACT §4：review.source / due / planned 三件套。
+
+    due 是真实 FSRS 到期卡（含 due / overdue_days / capability / stage）；
+    planned 是旧 review_plan，逐条标 planned_only，不再冒充「今天该复习」。
+    """
+    planned = []
+    for p in (day_data.get("review_plan") or []):
+        if not isinstance(p, dict):
+            continue
+        q = dict(p)
+        q["planned_only"] = True
+        kid = _sval(q.get("kid"))
+        due_dt = _card_due_map(ctx, kid) if kid else None
+        if due_dt:
+            now = _parse_iso(ctx.get("now")) or datetime.now(timezone.utc)
+            days = (due_dt - now).days
+            if days <= 0:
+                q["next_hint_zh"] = "已到 FSRS 到期时间（具体日期 %s），以到期队列为准" % due_dt.date().isoformat()
+            else:
+                q["next_hint_zh"] = "大约 Day %d 再回顾（具体到期 %s）" % (
+                    daynum + days, due_dt.date().isoformat())
+        planned.append(q)
+
+    due = []
+    if ctx:
+        now = _parse_iso(ctx.get("now")) or datetime.now(timezone.utc)
+        for c in ctx["cards"]:
+            dt = _parse_iso(c.get("due"))
+            if not dt or dt > now:
+                continue
+            key = str(c.get("knowledge_id") or "")
+            kid, _, cap = key.partition("|")
+            info = idx.get(kid, {})
+            if not info:
+                continue   # 种子里查不到的知识点不编造展示
+            ks = (ctx.get("ks") or {}).get(kid) or {}
+            due.append({
+                "kid": kid,
+                "capability": cap or info.get("capability") or "meaning",
+                "surface": info.get("surface", ""),
+                "kana": info.get("kana", ""),
+                "zh": info.get("zh", ""),
+                "due": str(c.get("due") or ""),
+                "overdue_days": max(0, (now - dt).days),
+                "stage": c.get("stage") or ks.get("stage") or "unseen",
+                "card_key": key,
+            })
+    return {
+        "source": "fsrs" if due else "planned",
+        "generated_at": (ctx or {}).get("now") or _now_iso(),
+        "due": due,
+        "planned": planned,
     }
 
 
@@ -594,9 +734,18 @@ self.addEventListener('fetch', function (e) {
       if (req.mode === 'navigate' && (url.pathname === '/' || /\/$/.test(url.pathname))) {
         return caches.match(new Request('index.html'));
       }
-      return new Response('离线：该资源未缓存', {
-        status: 503, statusText: 'Offline',
-        headers: { 'content-type': 'text/plain; charset=utf-8' }
+      /* 缓存未命中时先走网络，成功后补进缓存；真的断网才回 503。 */
+      return fetch(req).then(function (res) {
+        if (res && res.ok && res.type === 'basic') {
+          var copy = res.clone();
+          caches.open(CACHE).then(function (c) { c.put(req, copy); }).catch(function () {});
+        }
+        return res;
+      }).catch(function () {
+        return new Response('离线：该资源未缓存', {
+          status: 503, statusText: 'Offline',
+          headers: { 'content-type': 'text/plain; charset=utf-8' }
+        });
       });
     })
   );
@@ -1177,9 +1326,14 @@ APP_JS = r"""
   }
   function pad2(n) { return String(n).padStart(2, '0'); }
   function pad3(n) { return String(n).padStart(3, '0'); }
+  /* 与 scripts/learning.py 的 norm_answer() 保持同构（REVISION_CONTRACT §3.2）：
+     NFKC 归一 → 去所有空白（含全角空格）→ ，转 , → 去句末 。．.！!？?。
+     判分只做「等价形式」归一，不做语义猜测。 */
   function norm(s) {
-    return String(s === undefined || s === null ? '' : s)
-      .replace(/[\s\u3000]+/g, '').toLowerCase();
+    var v = String(s === undefined || s === null ? '' : s);
+    if (v.normalize) { try { v = v.normalize('NFKC'); } catch (e) {} }
+    v = v.replace(/[\s\u3000]+/g, '').replace(/，/g, ',');
+    return v.replace(/[。．.！!？?]+$/, '');
   }
   function isWide() {
     try {
@@ -1228,10 +1382,17 @@ APP_JS = r"""
   function makePayload(state) {
     var results = Object.keys(state.results).map(function (qid) {
       var r = state.results[qid];
+      /* 已揭示答案 = 放弃独立回忆；hinted 只能上调，不能被前端回退（契约 §3.1）。 */
+      var revealed = !!r.revealed_before_submit;
       var o = {
-        qid: r.qid, answer: r.answer, correct: !!r.correct, hinted: !!r.hinted,
+        qid: r.qid, answer: r.answer, correct: !!r.correct,
+        hinted: !!(r.hinted || revealed),
+        revealed_before_submit: revealed,
+        pre_reveal_answer: (r.pre_reveal_answer === undefined || r.pre_reveal_answer === null)
+          ? '' : String(r.pre_reveal_answer),
         seconds: Math.max(0, Math.round(r.seconds || 0)), error_type: r.error_type || null
       };
+      if (revealed && r.revealed_at) o.revealed_at = r.revealed_at;
       /* 开放题自评写独立字段，绝不冒充 correct / 掌握判定（REDESIGN §5、P0-9）。 */
       if (r.self_assessed) o.self_assessed = r.self_assessed;
       return o;
@@ -1248,6 +1409,30 @@ APP_JS = r"""
       results: results, minutes: Math.max(1, Math.round(total / 60)), source: 'web',
       review_ratings: review_ratings
     };
+  }
+
+
+  /* 可选云端同步：只发原始作答事件，不发 correct；失败静默，回传码仍是唯一兜底。
+     服务端（Worker）会用 answer-key.json 重新判分，网页永远不是判分权威。 */
+  function autoSync(payload) {
+    try {
+      if (typeof fetch !== 'function' || typeof location === 'undefined') return;
+      if (location.protocol !== 'http:' && location.protocol !== 'https:') return;
+      if (typeof navigator !== 'undefined' && navigator.onLine === false) return;
+      if (!payload || (!(payload.results || []).length && !(payload.review_ratings || []).length)) return;
+      var body = JSON.stringify({
+        v: 1, day: payload.day, session: payload.session, minutes: payload.minutes,
+        client_ts: payload.ts,
+        results: (payload.results || []).map(function (r) {
+          return { qid: r.qid, answer: r.answer, hinted: !!r.hinted,
+                   revealed_before_submit: !!r.revealed_before_submit, seconds: r.seconds || 0 };
+        })
+      });
+      fetch('/api/events', { method: 'POST', headers: { 'content-type': 'application/json' },
+                             body: body, keepalive: true })
+        .then(function (res) { globalThis.NH80.lastSync = res && res.ok ? 'ok' : 'skipped'; })
+        .catch(function () { globalThis.NH80.lastSync = 'offline'; });
+    } catch (e) { /* 同步不是学习的前置条件，任何异常都不影响回传码 */ }
   }
 
   /* 暴露纯函数 + 调试快照，便于在 Node 中做回传码与布局自测（不影响浏览器运行）。 */
@@ -1851,6 +2036,23 @@ APP_JS = r"""
     return '提示：先回忆当天词汇 / 语法，再作答。';
   }
 
+  /* 揭示答案 / 提示都属于「放弃独立回忆」，只允许向上写，不允许回退（契约 §3.1）。 */
+  var REVEAL_NOTICE = '本次为提示学习，不计为独立回忆';
+  var REVEAL_SUBMIT_LABEL = '提交（已看答案，记为提示学习）';
+
+  function markRevealed(r, preAnswer, full) {
+    r.hinted = true;
+    if (full) r.revealed_before_submit = true;
+    if (!r.revealed_at) r.revealed_at = Date.now();
+    if (r.pre_reveal_answer === undefined || r.pre_reveal_answer === null) {
+      r.pre_reveal_answer = String(preAnswer === undefined || preAnswer === null ? '' : preAnswer);
+    }
+    return r;
+  }
+  function revealNoticeNode() {
+    return el('div', 'reveal-notice', REVEAL_NOTICE);
+  }
+
   /* ---------------- 练习 + 回传码 ---------------- */
   function buildPractice(day) {
     var qs = day.questions || [];
@@ -1940,6 +2142,7 @@ APP_JS = r"""
     }
     function generate(open) {
       var payload = makePayload(state);
+      autoSync(payload);
       lastCode = encodeReturnCode(payload);
       QUIZ.lastCode = lastCode;
       codeArea.value = lastCode;
@@ -2026,11 +2229,15 @@ APP_JS = r"""
 
     function showReveal(q, r, box, onChange) {
       box.innerHTML = '';
-      var badge = r.correct
-        ? el('span', 'badge badge-good', '答对')
-        : el('span', 'badge badge-bad', '未答对 / 待复核');
-      box.appendChild(badge);
-      box.appendChild(el('div', 'reveal-row', '你的答案：' + (r.answer || '（空）')));
+      if (r && r.revealed_before_submit) box.appendChild(revealNoticeNode());
+      var badge = el('span', 'badge badge-good', '答对');
+      if (r && r._graded) {
+        badge = r.correct
+          ? el('span', 'badge badge-good', '答对')
+          : el('span', 'badge badge-bad', '未答对 / 待复核');
+        box.appendChild(badge);
+      }
+      box.appendChild(el('div', 'reveal-row', '你的答案：' + (r && r.answer ? r.answer : '（空）')));
       if (q.answer) box.appendChild(el('div', 'reveal-row', '参考答案：' + q.answer));
       if (q.rationale) box.appendChild(el('div', 'reveal-row', '解析：' + q.rationale));
       if (q.rubric) {
@@ -2137,9 +2344,11 @@ APP_JS = r"""
       body.appendChild(hintRow);
 
       var actionRow = el('div', 'q-actions');
+      var showAns = el('button', 'btn', '看答案 / 解析');
+      showAns.type = 'button';
       var submit = el('button', 'btn btn-primary q-submit', '提交答案');
       submit.type = 'button';
-      actionRow.appendChild(submit);
+      actionRow.appendChild(showAns); actionRow.appendChild(submit);
       body.appendChild(actionRow);
 
       var reveal = el('div', 'reveal');
@@ -2153,7 +2362,7 @@ APP_JS = r"""
                 seconds: elapsed(q2.id), error_type: null };
           state.results[q2.id] = r;
         }
-        r.hinted = true;
+        markRevealed(r, getValue ? getValue() : r.answer, false);
         save();
       }
       function paintStatus(r) {
@@ -2169,6 +2378,8 @@ APP_JS = r"""
                 seconds: elapsed(q.id), error_type: null };
         }
         r.answer = ans;
+        /* 已揭示 / 已提示后提交，hinted 只能保持 true，不能回退（契约 §3.1）。 */
+        r.hinted = !!(r.hinted || r.revealed_before_submit);
         var g = gradeAnswer(q, ans);
         if (g !== null) r.correct = g;
         else if (r.correct === null || r.correct === undefined) r.correct = false;
@@ -2180,6 +2391,19 @@ APP_JS = r"""
         paintStatus(r);
         updateChrome();
       }
+      showAns.addEventListener('click', function () {
+        var r = state.results[q.id];
+        if (!r) {
+          r = { qid: q.id, answer: getValue(), correct: false, hinted: true,
+                seconds: elapsed(q.id), error_type: null };
+          state.results[q.id] = r;
+        }
+        markRevealed(r, getValue(), true);
+        save();
+        reveal.hidden = false;
+        showReveal(q, r, reveal, updateChrome);
+        if (!r._graded) submit.textContent = REVEAL_SUBMIT_LABEL;
+      });
       submit.addEventListener('click', doSubmit);
 
       var existing = state.results[q.id];
@@ -2189,6 +2413,7 @@ APP_JS = r"""
         showReveal(q, existing, reveal, updateChrome);
         paintStatus(existing);
         if (existing.hinted) { hintBox.hidden = false; hintBox.textContent = hintText(q); }
+        if (existing.revealed_before_submit) submit.textContent = REVEAL_SUBMIT_LABEL;
       }
       return { node: node, q: q, submit: doSubmit };
     }
@@ -2450,26 +2675,44 @@ APP_JS = r"""
     return box;
   }
 
-  /* ⑦ 今日复习：具体词 + 为什么今天 + 下次大约 + 三档自评写入 review_ratings。 */
+  /* ⑦ 今日复习：优先真实 FSRS 到期项；没有记忆记录时才展示「预习建议」。
+     三条分支见 REVISION_CONTRACT §4；自评必须先显示答案才可点（§3.1）。 */
+  var CAP_ZH = {
+    meaning: '认意思', reading: '读音', listening: '听解', usage: '用法', production: '产出'
+  };
   function renderReviewBlock(day, state) {
-    var plan = day.review_plan || [];
+    var review = (day.review && typeof day.review === 'object') ? day.review : null;
+    var due = (review && review.due) ? review.due : [];
+    /* 旧数据没有 review 对象时退回 review_plan（视为预习建议，不宣称到期）。 */
+    var planned = (review && review.planned) ? review.planned
+      : (review ? [] : (day.review_plan || []));
     var box = sectionPlain('今日复习（记忆曲线）',
       '先遮住中文自己想，再点开对答案，最后选「记住了 / 模糊 / 忘了」。');
-    box.appendChild(el('p', 'review-disclaimer',
-      '这是按 1/2/3/7/14/30 天的复习计划，实际到期以本地 SQLite / WorkBuddy 会话为准。页面只记录你的自评，不替你判定掌握、不安排下次时间。'));
-    if (!plan.length) {
-      box.appendChild(el('div', 'review-empty',
-        '今天复习 0 个词（第一天全是新内容，不用复习）。'));
+    if (!due.length && !planned.length) {
+      box.appendChild(el('div', 'review-empty', '今天没有到期项。'));
       var news = (day.vocab || []).map(function (v) { return t(v.surface); }).filter(Boolean);
       if (news.length) box.appendChild(el('div', 'review-new',
         '今天新学：' + news.join(' / ') + '。明天会开始带你回忆这几个词。'));
       box.appendChild(el('div', 'review-why',
-        '为什么第一天没有复习：还没学过，自然没有「该回忆」的。下次大约哪天再来，由程序算好告诉你，本页不编。'));
+        '没有到期项就是没有到期项：本页不编造复习任务，也不把「读完页面」记为复习。'));
       return box;
     }
-    box.appendChild(el('div', 'review-count', '今天该回顾这 ' + plan.length + ' 个词：'));
-    plan.forEach(function (p, i) {
+    var isFsrs = due.length > 0;
+    var items = isFsrs ? due : planned;
+    if (isFsrs) {
+      box.appendChild(el('p', 'review-disclaimer',
+        '下面是本地 SQLite 里真实到期的 FSRS 记忆卡；到期时间由 FSRS 计算，页面只记录你的自评，不替你判定掌握。'));
+      box.appendChild(el('div', 'review-count', '今天真正到期（FSRS） · 共 ' + due.length + ' 项'));
+    } else {
+      box.appendChild(el('p', 'review-disclaimer',
+        '下面是预习建议（按粗略间隔生成），这些不是 FSRS 到期项；实际到期以本地 SQLite / WorkBuddy 会话为准。'));
+      box.appendChild(el('div', 'review-count', '预习建议（尚未建立记忆记录） · 共 ' + planned.length + ' 项'));
+    }
+    items.forEach(function (p, i) {
+      var kid = t(p.kid || p.knowledge_id);
+      var rateKid = t(p.card_key) || kid;   /* 能力卡按 kid|capability 精确排期 */
       var it = el('div', 'review-item');
+      if (p.planned_only) it.setAttribute('data-planned-only', '1');
       var head = el('div', 'review-head');
       head.appendChild(el('span', 'review-no', String(i + 1)));
       head.appendChild(el('span', 'review-surface', t(p.surface)));
@@ -2477,30 +2720,42 @@ APP_JS = r"""
       head.appendChild(listenBtn(t(p.surface) || t(p.kana), '听'));
       it.appendChild(head);
       var ansRow = el('div', 'review-ans');
-      var showBtn = el('button', 'btn btn-mini', '看答案');
+      var showBtn = el('button', 'btn btn-mini', '显示答案');
       showBtn.type = 'button';
       var zhSpan = el('span', 'review-zh', '');
       zhSpan.hidden = true;
-      showBtn.addEventListener('click', function () {
-        zhSpan.textContent = t(p.zh); zhSpan.hidden = false; showBtn.hidden = true;
-      });
       ansRow.appendChild(showBtn); ansRow.appendChild(zhSpan);
       it.appendChild(ansRow);
-      it.appendChild(el('div', 'review-reason', '为什么是今天：' + t(p.reason_zh)));
-      it.appendChild(el('div', 'review-next', t(p.next_hint_zh)));
+      if (isFsrs) {
+        var over = Number(p.overdue_days || 0);
+        var meta = '到期：' + t(p.due);
+        if (over > 0) meta += ' · 已逾期 ' + over + ' 天';
+        if (t(p.capability)) meta += ' · 能力：' + (CAP_ZH[t(p.capability)] || t(p.capability));
+        if (t(p.stage)) meta += ' · 阶段：' + t(p.stage);
+        it.appendChild(el('div', 'review-next', meta));
+      } else {
+        it.appendChild(el('div', 'review-reason', '为什么是今天：' + t(p.reason_zh)));
+        if (t(p.next_hint_zh)) it.appendChild(el('div', 'review-next', t(p.next_hint_zh)));
+      }
       var rates = el('div', 'rating-btns');
       rates.appendChild(el('span', 'rating-label', '回想一下：'));
+      var btns = [];
       [['good', '记住了'], ['hard', '模糊'], ['again', '忘了']].forEach(function (o) {
         var b = el('button', 'btn btn-mini rate-btn', o[1]);
         b.type = 'button';
+        b.disabled = true;   /* 未显示答案不得自评 */
         b.addEventListener('click', function () {
-          if (state) { state.reviewRatings[p.kid] = o[0]; if (QUIZ && QUIZ.save) QUIZ.save(); }
-          Array.prototype.forEach.call(rates.querySelectorAll('.rate-btn'), function (x) {
-            x.classList.remove('sel');
-          });
+          if (b.disabled) return;
+          if (state && rateKid) { state.reviewRatings[rateKid] = o[0]; if (QUIZ && QUIZ.save) QUIZ.save(); }
+          btns.forEach(function (x) { x.classList.remove('sel'); });
           b.classList.add('sel');
         });
+        btns.push(b);
         rates.appendChild(b);
+      });
+      showBtn.addEventListener('click', function () {
+        zhSpan.textContent = t(p.zh); zhSpan.hidden = false; showBtn.hidden = true;
+        btns.forEach(function (x) { x.disabled = false; });
       });
       it.appendChild(rates);
       box.appendChild(it);
@@ -2565,7 +2820,7 @@ APP_JS = r"""
     /* 回传码面板（由 buildPracticeV3 生成）挂到页尾折叠区，移出前 3 屏。 */
     if (QUIZ && QUIZ.returnBox) body.appendChild(QUIZ.returnBox);
     body.appendChild(el('p', 'muted',
-      '术语：摸底（不计分，只用来定起点）；今天该回顾这几个词（记忆曲线计划）；把成绩带回 WorkBuddy（回传码）。网页不向任何服务器发送学习数据，学习状态以本地 SQLite / WorkBuddy 会话为准。'));
+      '术语：摸底（不计分，只用来定起点）；复习任务分为「FSRS 到期项」与「预习建议（尚未建立记忆记录）」两种，页面会分别标注；把成绩带回 WorkBuddy（回传码）。网页不向任何服务器发送学习数据，学习状态以本地 SQLite / WorkBuddy 会话为准。'));
     return d;
   }
 
@@ -2679,6 +2934,7 @@ APP_JS = r"""
     }
     function generate(open) {
       var payload = makePayload(state);
+      autoSync(payload);
       lastCode = encodeReturnCode(payload);
       QUIZ.lastCode = lastCode;
       codeArea.value = lastCode;
@@ -2764,11 +3020,14 @@ APP_JS = r"""
     /* 解析区预渲染（DOM 里已有文本，初始隐藏）。中文化反馈，不出现英文错误归因枚举。 */
     function renderRevealContent(q, box, r) {
       box.innerHTML = '';
+      if (r && r.revealed_before_submit) box.appendChild(revealNoticeNode());
       if (r) {
-        var badge = r.correct
-          ? el('span', 'badge badge-good', '答对')
-          : el('span', 'badge badge-bad', '再核对一下');
-        box.appendChild(badge);
+        if (r._graded) {
+          var badge = r.correct
+            ? el('span', 'badge badge-good', '答对')
+            : el('span', 'badge badge-bad', '再核对一下');
+          box.appendChild(badge);
+        }
         box.appendChild(el('div', 'reveal-row', '你的答案：' + (r.answer || '（空）')));
       }
       if (t(q.answer)) box.appendChild(el('div', 'reveal-row', '参考答案：' + q.answer));
@@ -2854,6 +3113,25 @@ APP_JS = r"""
       var setValue = inputWrap._setValue;
       body.appendChild(inputWrap);
 
+      var hintRow = el('div', 'q-hint-row');
+      var hintBtn = el('button', 'btn btn-mini', '显示提示');
+      hintBtn.type = 'button';
+      var hintBox = el('div', 'hint-box');
+      hintBox.hidden = true;
+      hintBtn.addEventListener('click', function () {
+        hintBox.hidden = false; hintBox.textContent = hintText(q);
+        var r = state.results[q.id];
+        if (!r) {
+          r = { qid: q.id, answer: getValue(), correct: false, hinted: true,
+                seconds: elapsed(q.id), error_type: null };
+          state.results[q.id] = r;
+        }
+        markRevealed(r, getValue(), false);
+        save();
+      });
+      hintRow.appendChild(hintBtn); hintRow.appendChild(hintBox);
+      body.appendChild(hintRow);
+
       var actionRow = el('div', 'q-actions');
       var showAns = el('button', 'btn', '看答案 / 解析'); showAns.type = 'button';
       var submit = el('button', 'btn btn-primary q-submit', '提交答案'); submit.type = 'button';
@@ -2879,6 +3157,8 @@ APP_JS = r"""
                 seconds: elapsed(q.id), error_type: null };
         }
         r.answer = ans;
+        /* 已揭示 / 已提示后提交，hinted 只能保持 true，不能回退（契约 §3.1）。 */
+        r.hinted = !!(r.hinted || r.revealed_before_submit);
         var g = gradeAnswer(q, ans);
         if (g !== null) r.correct = g;
         else if (r.correct === null || r.correct === undefined) r.correct = false;
@@ -2891,7 +3171,19 @@ APP_JS = r"""
         paintStatus(r);
         updateChrome();
       }
-      showAns.addEventListener('click', function () { reveal.hidden = false; });
+      showAns.addEventListener('click', function () {
+        var r = state.results[q.id];
+        if (!r) {
+          r = { qid: q.id, answer: getValue(), correct: false, hinted: true,
+                seconds: elapsed(q.id), error_type: null };
+          state.results[q.id] = r;
+        }
+        markRevealed(r, getValue(), true);
+        save();
+        reveal.hidden = false;
+        showReveal(q, r, reveal, updateChrome);
+        if (!r._graded) submit.textContent = REVEAL_SUBMIT_LABEL;
+      });
       submit.addEventListener('click', doSubmit);
 
       var existing = state.results[q.id];
@@ -2901,6 +3193,8 @@ APP_JS = r"""
         reveal.hidden = false;
         showReveal(q, existing, reveal, updateChrome);
         paintStatus(existing);
+        if (existing.hinted) { hintBox.hidden = false; hintBox.textContent = hintText(q); }
+        if (existing.revealed_before_submit) submit.textContent = REVEAL_SUBMIT_LABEL;
       }
       return { node: node, q: q, submit: doSubmit };
     }
@@ -3052,6 +3346,306 @@ APP_JS = r"""
 """
 
 
+MOCK_HTML = r"""<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>@@TITLE@@</title>
+<link rel="stylesheet" href="assets/app.css">
+<style>
+.mock-wrap{max-width:860px;margin:0 auto;padding:16px}
+.mock-sec{border:1px solid var(--line);border-radius:10px;padding:12px;margin:14px 0;background:var(--surface-2)}
+.mock-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.mock-name{font-size:17px;font-weight:700}
+.mock-timer{margin-left:auto;font-variant-numeric:tabular-nums;color:var(--accent);font-weight:700}
+.mock-q{padding:9px 0;border-bottom:1px dashed var(--line)}
+.mock-q:last-child{border-bottom:0}
+.mock-prompt{font-size:14.5px;line-height:1.6;margin-bottom:6px}
+.mock-opts{display:flex;flex-direction:column;gap:5px}
+.mock-opt{display:flex;gap:7px;align-items:flex-start;font-size:14px;line-height:1.5;cursor:pointer}
+.mock-opt input{margin-top:3px}
+.mock-result{border:1px solid var(--line);border-radius:10px;padding:12px;margin:14px 0;background:var(--surface-2)}
+.mock-note{font-size:12.5px;color:var(--muted);line-height:1.6}
+</style>
+</head>
+<body>
+<main class="mock-wrap">
+<h1 class="page-title">@@TITLE@@</h1>
+<p class="mock-note">分项计时模拟：@@NOTE@@ 交卷后按分项给分。这是<strong>模拟估分</strong>，不是 JLPT 官方判定，也不预测真实考试分数。</p>
+<div id="mock-sections"></div>
+<div class="btn-row"><button class="btn btn-primary" type="button" id="mock-submit">交卷并计分</button></div>
+<div id="mock-result"></div>
+<p class="mock-note">本页不向任何服务器发送作答数据；成绩不会写回 data/state.db。</p>
+</main>
+<script type="application/json" id="mock-data">@@JSON@@</script>
+<script>
+(function () {
+  'use strict';
+  var data = {};
+  try { data = JSON.parse(document.getElementById('mock-data').textContent); } catch (e) { data = {}; }
+  var sections = data.sections || [];
+  var wrap = document.getElementById('mock-sections');
+  var resultBox = document.getElementById('mock-result');
+  var timers = {};
+  var finished = {};
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text !== undefined && text !== null) n.textContent = String(text);
+    return n;
+  }
+  function norm(v) {
+    var s = String(v == null ? '' : v);
+    if (s.normalize) s = s.normalize('NFKC');
+    s = s.replace(/\s+/g, '').replace(/，/g, ',');
+    return s.replace(/[。．.！!？?]+$/g, '');
+  }
+  function fmt(sec) {
+    var m = Math.floor(sec / 60), s = sec % 60;
+    return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+  }
+  function startTimer(secId) {
+    var sec = null;
+    for (var i = 0; i < sections.length; i++) if (String(sections[i].id) === String(secId)) sec = sections[i];
+    if (!sec || timers[secId]) return;
+    var left = Math.max(0, Number(sec.minutes || 0) * 60);
+    var node = document.querySelector('[data-timer="' + secId + '"]');
+    function tick() {
+      if (node) node.textContent = fmt(left);
+      if (left <= 0) {
+        clearInterval(timers[secId]); timers[secId] = null;
+        finished[secId] = true;
+        if (node) node.textContent = '时间到（已锁定）';
+        var sb = document.querySelector('[data-sec="' + secId + '"]');
+        if (sb) {
+          var ins = sb.querySelectorAll('input');
+          for (var k = 0; k < ins.length; k++) ins[k].disabled = true;
+          var lock = el('div', 'mock-note', '本项时间到，答案已锁定；可继续其他分项。');
+          sb.appendChild(lock);
+        }
+        return;
+      }
+      left -= 1;
+    }
+    tick();
+    timers[secId] = setInterval(tick, 1000);
+  }
+  sections.forEach(function (sec) {
+    var box = el('section', 'mock-sec');
+    box.setAttribute('data-sec', String(sec.id));
+    var head = el('div', 'mock-head');
+    head.appendChild(el('span', 'mock-name', sec.name || '分项'));
+    head.appendChild(el('span', 'mock-note',
+      '满分 ' + (sec.max_score || 0) + ' · 限时 ' + (sec.minutes || 0) + ' 分钟'));
+    var timer = el('span', 'mock-timer', fmt(Number(sec.minutes || 0) * 60));
+    timer.setAttribute('data-timer', String(sec.id));
+    head.appendChild(timer);
+    var start = el('button', 'btn btn-mini', '开始本项');
+    start.type = 'button';
+    start.addEventListener('click', function () { start.added = true; start.disabled = true; startTimer(sec.id); });
+    head.appendChild(start);
+    box.appendChild(head);
+    (sec.questions || []).forEach(function (q, qi) {
+      var qb = el('div', 'mock-q');
+      qb.appendChild(el('div', 'mock-prompt', (qi + 1) + '. ' + (q.prompt || '')));
+      if (q.audio_text) {
+        var play = el('button', 'btn btn-mini', '听题目（TTS）');
+        play.type = 'button';
+        play.addEventListener('click', function () {
+          if (!window.speechSynthesis) { play.textContent = '此浏览器不支持朗读'; return; }
+          var u = new SpeechSynthesisUtterance(q.audio_text);
+          u.lang = 'ja-JP'; u.rate = 0.95;
+          window.speechSynthesis.cancel(); window.speechSynthesis.speak(u);
+        });
+        qb.appendChild(play);
+      }
+      var opts = el('div', 'mock-opts');
+      (q.options || []).forEach(function (o, oi) {
+        var lab = el('label', 'mock-opt');
+        var input = document.createElement('input');
+        input.type = 'radio'; input.name = 'q-' + sec.id + '-' + q.id + '-' + qi;
+        input.value = String(oi);
+        lab.appendChild(input);
+        lab.appendChild(el('span', '', o));
+        opts.appendChild(lab);
+      });
+      if (!(q.options || []).length) {
+        var ti = document.createElement('input');
+        ti.type = 'text';
+        ti.className = 'mock-text';
+        ti.name = 'q-' + sec.id + '-' + q.id + '-' + qi;
+        ti.placeholder = '在此输入答案';
+        ti.style.cssText = 'width:100%;padding:7px 9px;border:1px solid var(--line);border-radius:7px;background:var(--surface);color:var(--ink)';
+        opts.appendChild(ti);
+      }
+      qb.appendChild(opts);
+      box.appendChild(qb);
+    });
+    wrap.appendChild(box);
+  });
+  document.getElementById('mock-submit').addEventListener('click', function () {
+    var total = 0, rows = [];
+    sections.forEach(function (sec) {
+      var qs = sec.questions || [];
+      var right = 0;
+      qs.forEach(function (q, qi) {
+        var name = 'q-' + sec.id + '-' + q.id + '-' + qi;
+        var field = document.querySelector('[name="' + name + '"]');
+        if (field && field.type === 'text') {
+          if (norm(field.value) === norm(q.answer_text)) right += 1;
+        } else {
+          var picked = document.querySelector('input[name="' + name + '"]:checked');
+          if (picked && Number(picked.value) === Number(q.answer)) right += 1;
+        }
+      });
+      var score = qs.length ? Math.round(Number(sec.max_score || 0) * right / qs.length) : 0;
+      total += score;
+      rows.push({ name: sec.name || '分项', score: score, max: Number(sec.max_score || 0),
+                  pass_min: Number(sec.pass_min || 19), right: right, total: qs.length });
+    });
+    var ok = total >= Number(data.pass_total || 95) && rows.every(function (r) {
+      return r.score >= Number(r.pass_min || data.pass_section || 19);
+    });
+    resultBox.innerHTML = '';
+    var box = el('div', 'mock-result');
+    box.appendChild(el('div', 'mock-name', '模拟估分：' + total + ' / ' +
+      rows.reduce(function (a, r) { return a + r.max; }, 0) + ' · ' + (ok ? '达到模拟合格线' : '未达到模拟合格线')));
+    rows.forEach(function (r) {
+      box.appendChild(el('div', 'mock-note',
+        r.name + '：' + r.score + ' / ' + r.max + '（答对 ' + r.right + ' / ' + r.total + '）'));
+    });
+    box.appendChild(el('div', 'mock-note',
+      '判定口径：总分 ≥ ' + (data.pass_total || 95) + ' 且每项 ≥ ' + (data.pass_section || 19) +
+      '。这是模拟估分，不是 JLPT 官方判定。'));
+    resultBox.appendChild(box);
+  });
+})();
+</script>
+</body>
+</html>
+"""
+
+
+def _mock_answer_index(ans, options):
+    if isinstance(ans, bool):
+        return -1
+    if isinstance(ans, int):
+        return ans if 0 <= ans < len(options) else -1
+    s = str(ans if ans is not None else "").strip()
+    if not options:
+        return -1
+    if s.isdigit():
+        i = int(s)
+        if 0 <= i < len(options):
+            return i
+        if 0 <= i - 1 < len(options):
+            return i - 1
+    if s in options:
+        return options.index(s)
+    if len(s) == 1 and s.upper() in "ABCDEFGH":
+        i = "ABCDEFGH".index(s.upper())
+        return i if i < len(options) else -1
+    return -1
+
+
+def _first(d, names, default=None):
+    for n in names:
+        if isinstance(d, dict) and d.get(n) not in (None, ""):
+            return d[n]
+    return default
+
+
+def normalize_mock(data, tables=None):
+    """把 knowledge/mock_n3.json 归一到渲染所需结构；字段名不一致也不报错。
+
+    v4：支持 `question_ids`（按题库 id 引用），并把非选择题的参考答案带进页面，
+    让「文字・語彙 / 文法・読解 / 聴解」三组都能真正作答，而不是只剩选择题。
+    """
+    if not isinstance(data, dict):
+        data = {}
+    defaults = [("文字・語彙", 30), ("文法・読解", 70), ("聴解", 40)]
+    raw = data.get("sections") or data.get("parts") or data.get("groups")
+    if not isinstance(raw, list) or not raw:
+        raw = []
+        for key in ("vocab", "grammar_reading", "listening"):
+            v = data.get(key)
+            if isinstance(v, list):
+                raw.append({"id": key, "name": key, "questions": v})
+            elif isinstance(v, dict):
+                item = dict(v)
+                item.setdefault("id", key)
+                raw.append(item)
+        if not raw and isinstance(data.get("questions"), list):
+            raw = [{"id": "all", "name": data.get("title") or "模拟题", "questions": data["questions"]}]
+
+    sections = []
+    for i, s in enumerate(raw if isinstance(raw, list) else []):
+        if not isinstance(s, dict):
+            continue
+        name = _first(s, ("name", "label", "title", "kind"),
+                      defaults[i][0] if i < len(defaults) else "分项")
+        qsrc = s.get("questions") or s.get("items") or []
+        ids = s.get("question_ids") or []
+        if ids and isinstance(tables, dict):
+            qsrc = [tables[i] for i in ids if i in tables]
+        questions = []
+        for j, q in enumerate(qsrc if isinstance(qsrc, list) else []):
+            if not isinstance(q, dict):
+                continue
+            opts = _first(q, ("options", "choices"), [])
+            opts = [_sval(x) for x in opts] if isinstance(opts, list) else []
+            prompt = _sval(_first(q, ("prompt", "prompt_ja", "question", "text"), ""))
+            ans = _first(q, ("answer", "correct", "answer_index"), None)
+            questions.append({
+                "id": _sval(q.get("id")) or ("q%d" % (j + 1)),
+                "type": _sval(q.get("type")),
+                "prompt": prompt,
+                "prompt_zh": _sval(q.get("prompt_zh")),
+                "audio_text": _sval(q.get("audio_text")),
+                "options": opts,
+                "answer": _mock_answer_index(ans, opts),
+                "answer_text": _sval(ans),
+            })
+        sections.append({
+            "id": _sval(_first(s, ("id", "key"), "sec%d" % (i + 1))),
+            "name": _sval(name),
+            "minutes": int(_first(s, ("minutes", "time_limit_min", "limit_min"), 60) or 60),
+            "max_score": int(_first(s, ("max_score", "points", "score"),
+                                    defaults[i][1] if i < len(defaults) else 25) or 0),
+            "pass_min": int(_first(s, ("pass_min", "pass_score"), 19) or 19),
+            "questions": questions,
+        })
+    return {
+        "title": _sval(data.get("title")) or "N3 分项模拟（模拟估分）",
+        "pass_total": int(data.get("pass_total") or 95),
+        "pass_section": int(data.get("pass_section") or 19),
+        "sections": sections,
+    }
+
+
+def load_mock(root):
+    p = root / "knowledge" / "mock_n3.json"
+    if not p.is_file():
+        return None
+    try:
+        with open(p, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (OSError, json.JSONDecodeError):
+        return None
+
+
+def render_mock_page(mock):
+    mins = sum(int(s.get("minutes") or 0) for s in mock["sections"])
+    note = "共 %d 个分项、%d 道题、合计 %d 分钟；模拟估分，不是 JLPT 官方判定。" % (
+        len(mock["sections"]), sum(len(s["questions"]) for s in mock["sections"]), mins)
+    return (MOCK_HTML
+            .replace("@@TITLE@@", html.escape(mock["title"]))
+            .replace("@@NOTE@@", note)
+            .replace("@@JSON@@", json_for_script(mock)))
+
+
 def main(argv):
     ap = argparse.ArgumentParser(
         description="从 curriculum + seeds 生成 Nihongo 80 每日静态页（纯标准库，PC/手机双端）")
@@ -3067,6 +3661,9 @@ def main(argv):
     curriculum = load_curriculum(curriculum_path)
     tables = load_seeds(seeds_dir)
     ko = load_ko_analogy(root)   # 资料层可缺失；缺失时页面各卡不显示韩语对照，不崩溃
+    # 复习队列统一（REVISION_CONTRACT §4）：只读 state.db；不存在则 page 只显示预习建议。
+    review_ctx = load_review_context(root)
+    knowledge_idx = _knowledge_index(tables)
     all_ids = set()
     for t in tables.values():
         all_ids |= set(t.keys())
@@ -3110,6 +3707,9 @@ def main(argv):
         sw_assets.append("day-%03d.html" % n)
     for n in all_day_numbers:
         sw_assets.append("data/day-%03d.json" % n)
+    mock_raw = load_mock(root)
+    if mock_raw is not None:
+        sw_assets.append("n3-mock.html")
     (web_dir / "manifest.webmanifest").write_text(
         MANIFEST_TEMPLATE.lstrip("\n"), encoding="utf-8")
     (web_dir / "icon.svg").write_text(ICON_SVG.lstrip("\n"), encoding="utf-8")
@@ -3121,6 +3721,8 @@ def main(argv):
     generated = []
     for d in target_days:
         day_data = assemble_day(d, tables, all_ids, ko)
+        day_data["review"] = build_review(day_data["day"], day_data,
+                                          review_ctx, knowledge_idx)
         daynum = day_data["day"]
         stem = "day-%03d" % daynum
         (data_dir / (stem + ".json")).write_text(
@@ -3129,6 +3731,33 @@ def main(argv):
         (web_dir / (stem + ".html")).write_text(
             render_page(title, day_data, site), encoding="utf-8")
         generated.append(stem)
+
+    # 服务端重判用的标准答案键：只含题目 id / 类型 / 答案，不含掌握状态。
+    # Worker 的 POST /api/events 必须用它与本地 learning.grade_objective 同口径重判，
+    # 不接受客户端上报的 correct（REVISION_CONTRACT §3.2、§10）。
+    open_types = {"free_production", "dialogue", "translate"}
+    answer_key = {
+        "schema": 1,
+        "generated_at": _now_iso(),
+        "answers": {
+            qid: {
+                "id": qid,
+                "type": q.get("type", ""),
+                "answer": q.get("answer") or "",
+                "open": (q.get("type") in open_types) or not (q.get("answer") or ""),
+            }
+            for qid, q in sorted(tables["questions"].items())
+        },
+    }
+    (data_dir / "answer-key.json").write_text(
+        json.dumps(answer_key, ensure_ascii=False, separators=(",", ":")) + "\n",
+        encoding="utf-8")
+
+    # N3 分项模拟页：knowledge/mock_n3.json 不存在时静默跳过（可能由别的任务生成）。
+    if mock_raw is not None:
+        mock = normalize_mock(mock_raw, tables["questions"])
+        (web_dir / "n3-mock.html").write_text(render_mock_page(mock), encoding="utf-8")
+        print("build_site.py: 已生成 n3-mock.html（%d 个分项）" % len(mock["sections"]))
 
     print("build_site.py: root=%s" % root)
     print("build_site.py: 已生成 %d 个每日页面与数据：%s%s" %

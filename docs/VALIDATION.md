@@ -239,3 +239,55 @@ TTS 提示在无日语语音环境下显示「已显示假名读音，可手动�
 > 上述 CDP 数据由主 agent 在集成修复时实测，本文档同步记录；**本次文档同步未重跑浏览器**。
 > §1.1 的 v2 验收项、§6 / §7 的既有线上验证表与 **§5 全部 12 条限制披露**原样保留。
 > v3 的 Cloudflare 重新部署、线上全路径复验与 GitHub push **均已完成**，见 `docs/CLOUDFLARE.md` 与 git log。
+
+---
+
+## v4 整改验证（2026-11-07）
+
+背景：外部深度审查指出 v3 的 P0/P1/P2 问题（评分事件污染、课程拼装、N3 素材不足、完成口径漏洞）。
+实现契约见 `docs/REVISION_CONTRACT.md`，本节只记录**实际跑过什么**。
+
+### 1. 自动化
+
+| 命令 | 结果 |
+|---|---|
+| `python3 -m unittest discover -s tests` | **49 项全绿**（原 20 项 + 评分契约 8 + 内容准确性 4 + 课程对齐 7 + 网页契约 6 + 其余 4） |
+| `python3 scripts/nh80.py validate` | `ok=true, error_count=0`；五类覆盖率 340/96/140/395/95 全 used，`unused=0` |
+| `python3 scripts/audit_content.py` | 高危 **0**、中危 **0**、低危 26（逐条列出，不隐藏） |
+| `python3 scripts/audit_questions.py` | 395 题全部有 `targets`；`Q0001 → G0001|usage` |
+| `python3 scripts/verify_n3_content.py` | `problems: []`；N3 素材 58 篇（36 考试级 + 22 短句练习） |
+
+### 2. 真实浏览器（Chrome headless，`http://127.0.0.1:8099`）
+
+| 检查 | 实测 |
+|---|---|
+| 看答案后再提交 | 提交按钮变「提交（已看答案，记为提示学习）」；回传码 `hinted=true`、`revealed_before_submit=true`，含 `pre_reveal_answer` |
+| 复习自评门控 | 「记住了/模糊/忘了」在点「显示答案」前 `disabled=true`，之后才可点 |
+| 今日复习 | 无 FSRS 卡时显示「今天没有到期项」，不编造任务；有 `review_plan` 时标「预习建议」 |
+| 控制台 | 无 JS 报错；SW 缓存未命中改为网络优先，不再出现无谓 503 |
+| N3 模考 | 90 题、3 个分项、合计 140 分钟；作答后按分项计分，判定口径「总分 ≥95 且每项 ≥19」 |
+
+### 3. 云端事件链路（本地 stub 服务器）
+
+`cloud_sync.py pull` 拉取 2 条事件（一条错答、一条揭示后才答对）：
+- 错答 → `attempts.correct=0`（本地按题库重判，不信客户端）
+- 揭示 → `attempts.hinted=1`（`revealed` 强制上调）
+- 重复拉取幂等；`regrade_not_ready` 闸门在 v4 导入路径下自动放行
+
+### 4. 课程对齐抽查
+
+| Day | 主题 | 素材 | lesson_core 来源 | 结论 |
+|---|---|---|---|---|
+| 30 | 医院问诊 | M0055（health/listening） | 3 句全部 material | `exact` |
+| 46 | 市政通知 | M0046（notice/reading） | 3 句全部 material | `exact` |
+
+全量 `alignment = {primary_match: 65, paired_same_topic: 9, review: 15, grammar_backed_by_material: 76/96}`。
+「主素材同主题」不等于读写两篇都同主题；真正两篇同主题只有 9 天，其余按同级别最近 topic 补位。
+20 条语法只有自身例句、没有当天素材硬证据，已在 `validate` warnings 与 `coverage_report.md` 逐天列出。
+
+### 5. 仍未验证 / 明确不承诺
+
+- 没有真人录音；所有听力为 TTS（`audio_kind=tts`）。
+- 没有外部日语教师逐条复核，`review_status=self_reviewed` 仅表示项目内自查。
+- 未做真人学习效果实验，不能据此宣称「80 天通过 N3」。
+- D1 事件同步的**线上**路径需实际部署并用 `wrangler d1` 建库后才能验证；本地 stub 已验。

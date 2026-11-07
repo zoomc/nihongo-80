@@ -11,6 +11,18 @@ from core import iso, jdump, root_of
 from learning import metrics
 
 
+def _completed(conn):
+    """完成天数口径：status='finished' AND passed=1；passed=0 的不算完成。"""
+    cols = {r[1] for r in conn.execute("PRAGMA table_info(sessions)").fetchall()}
+    if "passed" in cols:
+        done = conn.execute(
+            "SELECT COUNT(*) FROM sessions WHERE status='finished' AND passed=1").fetchone()[0]
+    else:
+        done = conn.execute("SELECT COUNT(*) FROM sessions WHERE status='finished'").fetchone()[0]
+    inc = conn.execute("SELECT COUNT(*) FROM sessions WHERE status='incomplete'").fetchone()[0]
+    return int(done or 0), int(inc or 0)
+
+
 def _acc_by_day(conn, upto=None):
     q = "SELECT day,correct FROM attempts WHERE correct IS NOT NULL"
     args = ()
@@ -54,6 +66,7 @@ def weekly(conn, week: int, root=None) -> dict:
     r = root_of(root)
     lo, hi = (week - 1) * 7 + 1, week * 7
     m = metrics(conn, upto_day=hi)
+    completed, incomplete = _completed(conn)
     acc = _acc_by_day(conn, upto=hi)
     week_acc = [v for k, v in acc.items() if lo <= k <= hi]
     splits = _split_scores(conn, lo, hi)
@@ -87,7 +100,8 @@ def weekly(conn, week: int, root=None) -> dict:
         "| 延迟回忆正确过的知识点 | %d | delayed_count > 0 |" % m["delayed_recall_correct"],
         "| 复习任务完成率 | %s | %d/%d（任务状态由脚本维护） |" %
         (("%.1f%%" % (100 * done / len(tasks))) if tasks else "无任务", done, len(tasks)),
-        "| 完成天数 / 累计分钟 | %d / %d | 来自 sessions |" % (m["completed_days"], m["minutes_total"]),
+        "| 完成天数 / 累计分钟 | %d / %d | 来自 sessions（只计 finished 且 passed=1；未完成 %d 天） |" %
+        (completed, m["minutes_total"], incomplete),
         "", "## 3. 能力提升趋势（按天正确率，估算）", "", "```", _sparkline(week_acc), "```", "",
         "## 4. 五维分项（按题型归类，仅为估算，不等同 JLPT 标准分）", "",
         "| 维度 | 正确率 | 样本数 |", "|---|---|---|",
@@ -120,6 +134,7 @@ def weekly(conn, week: int, root=None) -> dict:
 def stage(conn, day: int, root=None, label=None) -> dict:
     r = root_of(root)
     m = metrics(conn, upto_day=day)
+    completed, incomplete = _completed(conn)
     splits = _split_scores(conn, max(1, day - 19), day)
     lines = ["# %s（截至 Day %d）" % (label or "阶段评估", day), "",
              "生成时间：%s｜数据来源：`data/state.db`" % iso(), ""]
@@ -131,7 +146,7 @@ def stage(conn, day: int, root=None, label=None) -> dict:
                   "| 累计正确率 | %.1f%% |" % (m["accuracy"] * 100),
                   "| 知识覆盖率 | %.1f%% |" % (m["knowledge_coverage"] * 100),
                   "| 已判定掌握 | %d |" % m["mastered"],
-                  "| 完成天数 | %d |" % m["completed_days"], "",
+                  "| 完成天数 | %d（未完成 %d 天） |" % (completed, incomplete), "",
                   "## 近 20 天五维分项（估算，非 JLPT 标准分）", "",
                   "| 维度 | 正确率 | 样本 |", "|---|---|---|"]
         for k, (v, n) in splits.items():
@@ -145,6 +160,7 @@ def stage(conn, day: int, root=None, label=None) -> dict:
 def final(conn, root=None) -> dict:
     r = root_of(root)
     m = metrics(conn, upto_day=80)
+    completed, incomplete = _completed(conn)
     acc = _acc_by_day(conn, upto=80)
     vals = list(acc.values())
     first = sum(vals[:10]) / len(vals[:10]) if vals[:10] else None
@@ -156,7 +172,7 @@ def final(conn, root=None) -> dict:
              "| 累计正确率 | %s |" % (("%.1f%%" % (m["accuracy"] * 100)) if m["accuracy"] is not None else "无"),
              "| 知识覆盖率 | %.1f%% |" % (m["knowledge_coverage"] * 100),
              "| 已判定掌握 | %d / %d |" % (m["mastered"], m["knowledge_total"]),
-             "| 完成天数 | %d / 80 |" % m["completed_days"],
+             "| 完成天数 | %d / 80（未完成 %d 天，不计完成） |" % (completed, incomplete),
              "| 累计学习分钟 | %d |" % m["minutes_total"],
              "| 前 10 个有数据日正确率 | %s |" % (("%.2f" % first) if first is not None else "无"),
              "| 后 10 个有数据日正确率 | %s |" % (("%.2f" % last) if last is not None else "无"),

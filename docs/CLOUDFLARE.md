@@ -365,3 +365,150 @@ CDP 真实 390 CSS 视口：`innerWidth=390 / scrollWidth=390`，零横向溢出
 
 原有工程约束不变：零 CDN / 零 fetch、`file://` 可开、PWA 离线、双端、TTS 手势解锁与降级、
 `NH80R1` 回传码；静态页仍不是状态真源，复习清单标为「计划」，真实到期以本地 `state.db` 为准。
+
+## 10. 事件同步（可选）：网页 → D1 → 本地 SQLite
+
+> 这是第 8 节「回传码闭环」的**可选加速通道**，不是替代品。没有 D1 / 没有密钥时，
+> 下一节「无 D1 时的降级行为」保证静态站与 v3 完全一致；回传码永远是兜底。
+
+### 10.1 架构
+
+```
+手机/PC 浏览器（web/assets/app.js）
+  │  POST /api/events  {v,day,session,results:[{qid,answer,hinted,revealed_before_submit,seconds}],minutes,client_ts}
+  │  · 只提交原始作答，**不提交 correct**
+  ▼
+Worker（deploy/worker/src/index.ts）
+  │  1. 校验 day∈1..80、session 长度/字符、results ≤ 40
+  │  2. env.ASSETS.fetch('/data/answer-key.json') 取标准答案（由 build_site.py 生成）
+  │  3. 服务端重判客观题 → regraded_correct = 1/0；开放题 = NULL
+  │  4. INSERT OR IGNORE INTO events(...)  ── UNIQUE(session,qid) 幂等
+  ▼
+D1（events 原始事件表：只有作答与时间，没有身份）
+  │  GET /api/events?since=<id>&limit=200   需 X-NH80-Key
+  ▼
+本地 scripts/cloud_sync.py pull
+  │  按 (day, session) 聚合 → NH80R1 等价 payload（results 只带 answer/hinted/seconds）
+  ▼
+scripts/nh80.py import-web-result 同一条导入路径
+  │  本地再次按题库标准答案判分（learning.grade_objective）→ 掌握状态 / FSRS
+  ▼
+data/state.db（唯一真源）
+```
+
+两条通道的关系：`POST /api/events` 只是把「带走回传码」变成「自动同步」；
+判分、掌握、FSRS **仍然只在本地发生**。云端保存的 `regraded_correct` 只用于对账/展示，
+本地 `pull` 会重新判分，绝不直接采信云端或客户端的结论。
+
+### 10.2 一次性配置（可选；不做则完全降级）
+
+```bash
+cd deploy
+
+# 1) 创建 D1（免费额度足够；把返回的 database_id 填到 wrangler.jsonc 两处 REPLACE_WITH_D1_ID）
+npx wrangler d1 create nihongo80
+
+# 2) 建表 + 索引（本地调试去掉 --remote）
+npx wrangler d1 execute nihongo80 --remote --file=./migrations/0001_events.sql
+# 或者用 wrangler 的迁移通道：
+npx wrangler d1 migrations apply nihongo80 --remote
+
+# 3) 设置拉取密钥（只在 Cloudflare secret 里，**不要写进仓库**）
+npx wrangler secret put NH80_SYNC_KEY
+npx wrangler secret put NH80_SYNC_KEY --env preview
+
+# 4) 部署（先 preview 后 production，仍走 scripts/deploy_cloudflare.sh）
+cd .. && CI=1 bash scripts/deploy_cloudflare.sh preview
+CI=1 bash scripts/deploy_cloudflare.sh production
+```
+
+`deploy/wrangler.jsonc` 里 `d1_databases[].database_id` 的占位值就是 `REPLACE_WITH_D1_ID`；
+未替换时**不要**直接发布到 production（wrangler 会在部署时报错）。绑定了 D1 但忘了建表，
+接口返回 `503 {"ok":false,"reason":"db_error"}`，静态页不受影响。
+
+### 10.3 接口契约
+
+| 方法 | 路径 | 鉴权 | 说明 |
+|---|---|---|---|
+| `GET` | `/api/health` | 无 | `{"status":"ok","features":{"db":true/false,"sync":true/false}}` |
+| `POST` | `/api/events` | 同源 | 见下；未绑 D1 → `503 {"ok":false,"reason":"no_db"}` |
+| `GET` | `/api/events?since=<id>&limit=200` | `X-NH80-Key` | 返回事件数组（按 `id` 升序；游标取最后一条 `id`） |
+
+`POST /api/events` 成功：`{"ok":true,"stored":N,"duplicates":M,"regraded":K}`
+- `stored` = 实际新写入行数（`INSERT OR IGNORE` 命中唯一键时不计）；
+- `duplicates` = 因 `UNIQUE(session,qid)` 被忽略的行数（重复提交/重试安全）；
+- `regraded` = 成功重判的客观题条数；取不到 `answer-key.json` 时为字符串 `"unavailable"`，
+  此时事件照常入库，但 `regraded_correct` 全部为 `NULL`（不假装判过）。
+
+`GET /api/events` 鉴权顺序：`env.NH80_SYNC_KEY` 未配置 → `503 no_key`；
+header 不一致 → `401 unauthorized`；未绑 D1 → `503 no_db`。
+
+CORS：**只允许同源**。跨源请求直接 `403 cross_origin`，不返回 `Access-Control-Allow-Origin: *`；
+`OPTIONS` 预检返回 204，允许 `GET, POST, OPTIONS` 与 `content-type, x-nh80-key`。
+
+`answer-key.json` 由 `scripts/build_site.py` 生成（本仓库不手写）。Worker 做**容错解析**，支持
+`{answers:{qid:{type,answer,accepted,capability}}}`、`{questions:[...]}`、顶层 `qid -> 答案` 映射；
+字段优先 `accepted[]`（多解），回落 `answer`。文件不存在或为空时按「无法重判」处理。
+
+### 10.4 本地拉取
+
+```bash
+python3 scripts/cloud_sync.py pull \
+  --base https://nihongo80.cmjfire.workers.dev \
+  --key "$NH80_SYNC_KEY" \
+  --root /Users/mj/Documents/learn/jp/nihongo-80
+# 可选：--since <事件id> 增量；--limit 200；--max-pages 50
+```
+
+- 默认 `since=0` 全量拉取；本地 `session+qid` 幂等去重，重复 pull 不会重复记分。
+- 按 `(day, session)` 聚合成 `NH80R1` 等价 payload，交给 `nh80.cmd_import_web`；
+  `results` 只含 `answer/hinted/seconds`，**不含 `correct`**；`hinted = hinted or revealed`。
+- `events` 表不保存 `minutes`，因此同步导入把 `sessions.minutes` 置 `NULL`（不伪造成 0）。
+- 退出码：`0` 成功；`2` 401；`3` 503（无 D1/无密钥）；`4` 断网/超时；`5` 导入路径尚未支持本地重判；
+  `6` 导入被拒/失败。所有失败都输出 `{"ok":false,"reason":...}` JSON，绝不静默成功。
+- **前置条件**：`scripts/nh80.py` 的导入路径必须已按 `REVISION_CONTRACT §3.2` 改为本地重判。
+  若仍是 v3 的「直接信任客户端 `correct`」，`cloud_sync.py` 会以 `regrade_not_ready`（退出码 5）拒绝导入，
+  避免把「没有 correct 字段」的云端事件整批误判为错。等 `nh80.py` 更新后重跑即可。
+
+### 10.5 无 D1 时的降级行为
+
+| 场景 | 行为 |
+|---|---|
+| 没创建 D1（`wrangler.jsonc` 未绑定 DB / 占位 id） | `POST /api/events` → `503 no_db`；`GET /api/events` → `503 no_db`；静态页与 PWA 完全正常 |
+| 绑定了 D1 但没建表 | 同上，返回 `503 db_error`（带简短 detail），不 500 |
+| 没设置 `NH80_SYNC_KEY` | `GET /api/events` → `503 no_key`，不裸奔；`POST` 不受影响 |
+| 没有 `web/data/answer-key.json` | 事件照常入库，`regraded_correct=NULL`，返回 `regraded:"unavailable"` |
+| 页面在网络异常时 POST 失败 | 静默失败，回传码仍然生成（v3 兜底路径不变），本地用 `import-web-result` 导入 |
+
+前端调用与否由页面自身配置决定；无论接口是否可用，**离线展示、练习、判分、回传码**都不依赖网络。
+
+### 10.6 隐私
+
+- `events` 只存：作答文本、题号、天号、会话随机串、客户端/服务端时间、耗时、是否提示/看答案、
+  以及服务端重判结果。**不存姓名、账号、邮箱、设备指纹、IP、UA、Cookie**。
+- `session` 是页面生成的随机/时间串（形如 `session-YYYYMMDD-NNN`），不关联任何身份；
+  Worker 不写日志到 D1，也不引入分析脚本。
+- 数据仅用于把作答回传到你自己的本地 `state.db`；`GET /api/events` 需要密钥，公开访问只能 POST。
+- 不需要同步时：不创建 D1、不配置密钥即可，云端不保存任何学习数据（与 v3 一致）。
+
+
+## 11. v4 重新部署记录（2026-11-07）
+
+| 项 | 值 |
+|---|---|
+| Production | https://nihongo80.cmjfire.workers.dev （Version `6f206aa4`） |
+| Preview | https://nihongo80-preview.cmjfire.workers.dev （Version `8ed372d3`） |
+| 静态资源 | 165 个（80 天页面 + 数据 + `n3-mock.html` + `data/answer-key.json`） |
+| D1 | `nihongo80`（APAC），`events` 表 + 2 个索引；migration 已 `--remote` 应用 |
+| Secret | `NH80_SYNC_KEY` 已设置（值仅存本机 `deploy/.sync-key`，已加入 `.gitignore`） |
+| 健康检查 | `/api/health` → `{"status":"ok","features":{"db":true,"sync":true}}` |
+
+说明：`wrangler.jsonc` 现在含真实 `database_id`。它不是访问凭据（没有账号授权无法访问 D1），
+但确实与旧版「不含任何 database_id」的表述不同，故在此显式记录，避免文档与配置不一致。
+
+线上实测：
+- `POST /api/events` 上报 2 条（一条错答、一条揭示后才答对）→ `stored:2, regraded:2`；
+  错答入库 `regraded_correct=0`，揭示事件 `hinted=1`。
+- `GET /api/events` 带 `X-NH80-Key` 返回事件；不带 key 返回 401，未设 secret 返回 503。
+- `nh80.py pull-cloud --base ...` 在临时库成功导入：`correct` 由本地题库重判，不采信客户端。
+- 冒烟事件已从 D1 删除，线上库当前为空。

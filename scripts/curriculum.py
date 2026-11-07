@@ -10,8 +10,10 @@
 from __future__ import annotations
 
 import json
+import math
 import re
 from collections import defaultdict
+from datetime import datetime, timezone
 from pathlib import Path
 
 from core import iso, jdump, read_jsonl, root_of
@@ -28,80 +30,7 @@ ASSESSMENT_PRIORITY = ["final", "midterm", "n3_readiness", "stage", "weekly", "d
 LEVEL_WINDOWS = {"N5": (1, 25), "N4": (26, 45), "N3": (46, 65)}
 GRAMMAR_WINDOWS = {"N5": (1, 25), "N4": (26, 45), "N3": (46, 65)}
 
-# Can-do 任务池：按阶段给出真实可执行任务，不是「学习某某语法」式空标题。
-# 占位符 {g}=当天句型 {v}=当天新词 {topic}=当天素材主题。
-CANDO_BANK = {
-    "P1": [
-        ("初次见面", "用「{g}」向对方介绍自己并确认对方姓名，全程不靠中文汉字猜读音"),
-        ("语音辨识", "分辨 {v} 的长音、促音与浊音，听写后自行对照订正"),
-        ("教室点名", "听准并读出 {v}，把每个词的假名与实际发音对上，再各造一句"),
-        ("时令寒暄", "按早/午/晚选对问候语，完成一次得体的开场"),
-        ("一日复盘", "不看笔记说出今天 3 个新词与 1 个句型的用法"),
-        ("家庭介绍", "用「{g}」说出自己与同伴的身份关系，不给对方名字误加 さん"),
-        ("便利店", "听懂价格与数字，用当天句型问清「这是什么／多少钱」并道谢"),
-        ("问路起点", "听懂场所词与方位表达，用自己的话复述目的地"),
-        ("购物结算", "在收银台完成一轮问价—确认—付款的简短对话"),
-        ("时间安排", "用已学时间词说出今天的两项安排，让对方复述确认"),
-    ],
-    "P2": [
-        ("咖啡店点单", "用「{g}」点单、确认数量与价格，并处理一次听不懂时的追问"),
-        ("电车问路", "听懂站台广播里的 {v}，用已学句型复述换乘方案"),
-        ("预约登记", "用礼貌体报出姓名、时间与人数，并核对对方复述是否正确"),
-        ("工作打卡", "说明自己今天做了什么、几点结束，动词变形不靠中文语序直译"),
-        ("购物退换", "用「{g}」说明商品问题并提出一个具体请求"),
-        ("天气闲聊", "听懂 {topic} 相关的简短闲谈，接着说出自己的一天"),
-        ("餐厅评价", "用形容词过去式与「{g}」说清两道菜的差别"),
-        ("朋友邀约", "发出一次邀请并回应对方的婉拒，注意时态与否定"),
-        ("日程协调", "用「{g}」把两件事排进同一天并说明先后顺序"),
-        ("电话留言", "听懂一段短留言，复述谁、何时、要做什么"),
-    ],
-    "P3": [
-        ("搬家准备", "用「{g}」说明哪些事已经做完、哪些留到之后，区分 てある/ておく"),
-        ("故障报修", "用「{g}」描述设备状态与发生经过，自动词/他动词不混用"),
-        ("旅行复盘", "用「{g}」讲一段过去经历，并说明当时的条件与结果"),
-        ("同事协作", "用授受表达说清谁帮谁做了什么，中文「给」不直译"),
-        ("医院问诊", "用「{g}」说明症状持续时间与变化，听懂医嘱要点"),
-        ("邮件回复", "用「{g}」写出 3 句得体的回信，简体和敬体不混用"),
-        ("规则说明", "用「{g}」解释一条手续或规则，并回答一个追问"),
-        ("意愿协商", "用条件表达提出方案，比较两种做法后给出结论"),
-        ("传闻转述", "用「{g}」转述听到的信息，明确标注信息来源与不确定度"),
-        ("经验对比", "用「{g}」区分「做过」与「经常做」，并各给一个真实例子"),
-    ],
-    "P4": [
-        ("市政通知", "读一段 {topic} 通知，30 秒说出主旨与一条支撑细节，不逐字翻译"),
-        ("新闻标题", "从 {topic} 标题与导语抓住概要，说明哪句话支撑你的判断"),
-        ("部门联络", "听一段近自然语速的 {topic} 对话，复述人物关系与下一步动作"),
-        ("会议转达", "用「{g}」把听到的安排转述给第三方，敬体层级保持一致"),
-        ("意见陈述", "用「{g}」说明原因与推测的区别，避免把猜测说成事实"),
-        ("服务投诉", "用「{g}」得体地说明问题、提出要求并确认对方承诺"),
-        ("略难短文", "读一篇含替换表达的 {topic} 短文，借上下文推出主旨后自检依据"),
-        ("计划变更", "用「{g}」说明原定安排、变更原因与替代方案"),
-        ("数据说明", "用 {v} 描述趋势与例外，并回答「为什么」的追问"),
-        ("立场表达", "用「{g}」表示部分同意与保留，不用非黑即白的中文式直译"),
-        ("路边采访", "听 {topic} 相关的两段短发言，指出说话人关系的差异"),
-        ("书面申请", "用「{g}」写一段 4 句以上的申请说明，检查接续与前后逻辑"),
-    ],
-    "P5": [
-        ("弱项重做", "把最近错得最多的 {g} 重新用于两个不同场景，并说出为什么上次错"),
-        ("混合听读", "连续处理 {topic} 的听解与读解各一段，比较两者的信息缺口"),
-        ("限时表达", "不查资料，用至少 3 个 {v} 说满 60 秒并自评语病"),
-        ("角色互换", "与教师交换角色完成 {topic} 对话，负责追问与澄清"),
-        ("错题讲评", "挑一道自己错过的题，把解题依据讲给「新手」听"),
-        ("语体切换", "把同一段 {topic} 内容分别用简体与敬体各说一遍"),
-        ("信息整合", "把两条互相矛盾的 {topic} 信息合并成一段准确说明"),
-        ("复述压缩", "听一段 {topic} 长对话，用 3 句概括人物关系与结论"),
-        ("即兴应对", "对 {topic} 的突发状况给出两个方案并说明取舍"),
-        ("迁移输出", "把「{g}」用在一个从未练过的新场景里，检验是否真迁移"),
-    ],
-    "P6": [
-        ("分项盘点", "在模拟卷中分别报出词汇/语法/阅读/听力/表达的自我判断依据"),
-        ("错因归档", "把本轮高频错误归入遗忘/混淆/助词/变形/听辨/理解六类"),
-        ("限时读解", "在限定时间内完成 {topic} 读解并说明取舍策略"),
-        ("综合复述", "听读结合复述 {topic} 信息，标出哪部分来自听、哪部分来自读"),
-        ("下一轮规划", "基于真实数据说出下一周期最该补的两项能力，不写空泛决心"),
-    ],
-}
-
+# Can-do 不再按阶段/按天轮换：由当天素材 topic 驱动的 SCENE_TASKS 生成（见下）。
 # 能力目标池：每天按确定性轮换抽取，避免 80 天 objectives 完全相同。
 # 写成零基础学员一眼能懂的中文短句，不出现「接续条件/适用场合/近义表达/类推/近自然语速/
 # 主旨/支撑细节/迁移/事实陈述/推测表达/归因/听辨」这类教研或系统黑话（v3 改造）。
@@ -129,10 +58,11 @@ RUBRIC_POOL = [
 FOCUS_CYCLE = [("listening", "reading"), ("grammar", "production"), ("vocabulary", "kanji"),
                ("reading", "listening"), ("production", "grammar")]
 
-# 素材 topic 原为英文标签，转成中文场景词后再进课程文案，避免「读一段 discussion 通知」这类生硬句子
+# 素材 topic 原为英文标签，转成中文场景词后再进课程文案，避免「读一段 discussion 通知」这类生硬句子。
+# health / notice 的标签与 docs/REVISION_CONTRACT.md 第 7 节的示例日（Day 30 / Day 46）保持一致。
 TOPIC_ZH = {
     "restaurant": "餐厅点餐", "weather": "天气", "work": "工作沟通", "travel": "旅行",
-    "email": "邮件往来", "notice": "通知告示", "health": "健康问诊", "transport": "交通出行",
+    "email": "邮件往来", "notice": "市政通知", "health": "医院问诊", "transport": "交通出行",
     "school": "校园", "family": "家庭", "asking_directions": "问路", "tech": "科技产品",
     "appointment": "预约", "news_summary": "新闻概要", "procedure": "手续办理",
     "reservation": "预订", "technology": "科技", "greeting": "寒暄", "self_intro": "自我介绍",
@@ -140,6 +70,82 @@ TOPIC_ZH = {
     "request": "请求委托", "discussion": "意见讨论", "explanation": "说明解释",
     "announcement": "公告",
 }
+
+# 主题词表（日文关键词）：既用于「新知识对当天场景的亲和度」排序，也用于素材补位时
+# 选择语义最近的同级别文本。新增 topic 时同步补这里；缺项按 0 亲和度处理，不报错。
+TOPIC_LEXICON = {
+    "restaurant": ["料理", "食べ", "飲み", "メニュー", "店", "注文", "味", "おいし", "昼ご飯", "食券", "食堂"],
+    "weather": ["天気", "雨", "晴れ", "曇り", "雪", "気温", "予報", "空", "暑", "寒", "涼", "台風"],
+    "work": ["仕事", "会社", "会議", "資料", "打ち合わせ", "就職", "職場", "同僚", "部長", "残業", "面接"],
+    "travel": ["旅行", "観光", "ハイキング", "延期", "温泉", "出発", "荷物", "宿", "旅", "景色"],
+    "email": ["メール", "返事", "件名", "宛先", "添付", "連絡", "先生", "変更", "返信", "文面"],
+    "notice": ["お知らせ", "掲示", "案内", "遅れ", "遅延", "ごみ", "資源", "改装", "営業", "注意",
+               "変更", "受付", "手続き", "窓口", "放送", "ご不便", "申し訳"],
+    "health": ["病院", "医者", "症状", "具合", "薬", "熱", "痛", "眠", "健康", "体", "患者",
+               "入院", "診察", "治療", "検査", "風邪", "看護", "安心", "無理", "休む", "顔色"],
+    "transport": ["電車", "駅", "切符", "乗", "路線", "バス", "交通", "運転", "遅延", "乗り換え", "改札"],
+    "school": ["学校", "図書館", "授業", "勉強", "学生", "先生", "教室", "宿題", "試験", "借りる", "カード"],
+    "family": ["家族", "母", "父", "弟", "妹", "兄", "姉", "親", "子ども", "家", "泊まる"],
+    "asking_directions": ["どこ", "道", "地図", "駅の前", "曲が", "信号", "交差点", "近く", "場所", "方向"],
+    "tech": ["パソコン", "アプリ", "設定", "故障", "サポート", "画面", "ネット", "機械", "便利", "壊れ"],
+    "technology": ["パソコン", "アプリ", "設定", "故障", "サポート", "画面", "ネット", "機械", "便利", "機能"],
+    "appointment": ["予約", "約束", "誘い", "映画", "時間", "変更", "忘れ", "希望", "都合"],
+    "news_summary": ["ニュース", "台風", "調査", "就職意識", "発表", "影響", "交通", "増加", "結果", "報告"],
+    "procedure": ["手続き", "申請", "窓口", "カード", "更新", "受付", "書類", "住所", "提出", "発行"],
+    "reservation": ["予約", "ホテル", "人数", "変更", "返信", "泊", "部屋", "空室", "宿泊"],
+    "greeting": ["おはよう", "こんにちは", "こんばんは", "元気", "あいさつ", "私", "学生", "名前", "です", "はじめまして"],
+    "self_intro": ["自己紹介", "名前", "私", "学生", "出身", "趣味", "です", "よろしく", "専攻"],
+    "shopping": ["店", "買", "値段", "円", "商品", "売り", "レジ", "店員", "安い", "高い", "サイズ"],
+    "daily_routine": ["毎朝", "起き", "寝", "支度", "朝", "夜", "習慣", "時間", "会社", "帰る"],
+    "entertainment": ["映画", "音楽", "趣味", "日曜日", "見", "遊び", "楽しい", "コンサート", "チケット"],
+    "request": ["ください", "待って", "お願い", "頼", "手伝", "ちょっと", "貸して", "教えて"],
+    "discussion": ["意見", "考え", "話", "人によって", "違", "議論", "自分", "賛成", "反対"],
+    "explanation": ["説明", "違い", "気持ち", "気分", "意味", "たとえ", "使い分け", "例"],
+    "announcement": ["お知らせ", "放送", "駅", "遅延", "事故", "ご協力", "ご利用", "運転", "再開"],
+}
+
+# 场景任务模板：topic -> (场景标签, can_do 模板)。
+# 模板必须含 {topic}（当天中文场景标签）和 {g}（当天语法），{v} 可选用。
+# 不再按阶段/按天从大池子里轮换——同一天的主题、素材、语法、Can-do 必须自洽。
+SCENE_TASKS = {
+    "restaurant": ("餐厅点餐", "在{topic}场景用「{g}」点单、确认数量和口味，并处理一次没听清"),
+    "weather": ("天气闲聊", "听一段{topic}预报，用「{g}」说出明天天气和出门建议"),
+    "work": ("工作沟通", "在{topic}里用「{g}」确认会议时间、资料和负责人，并复述一遍"),
+    "travel": ("旅行安排", "用「{g}」说明{topic}的行程变化、原因和替代方案"),
+    "email": ("邮件往来", "读一封{topic}邮件，用「{g}」回信说明收到、问题和下一步"),
+    "notice": ("市政通知", "读一份{topic}，用「{g}」在 30 秒内说出要办的事、截止时间和一条原文依据"),
+    "health": ("医院问诊", "在{topic}中用「{g}」说明症状从何时开始、如何变化，并复述医嘱"),
+    "transport": ("交通出行", "在{topic}场景用「{g}」问清路线、换乘和所需时间"),
+    "school": ("校园学习", "在{topic}场景用「{g}」说明课程安排、借阅规则或学习计划"),
+    "family": ("家庭交谈", "用「{g}」向家人说明{topic}里的安排和每个人的分工"),
+    "asking_directions": ("问路", "用「{g}」在{topic}场景问清目的地、方向和步行时间"),
+    "tech": ("科技产品", "在{topic}场景用「{g}」说明故障现象、已试过的办法和请求"),
+    "technology": ("科技说明", "读一段{topic}说明，用「{g}」讲清设置步骤和注意事项"),
+    "appointment": ("预约改期", "用「{g}」完成一次{topic}：报时间、人数并处理改期"),
+    "news_summary": ("新闻概要", "读一则{topic}，用「{g}」概括主旨、影响和一条数据依据"),
+    "procedure": ("手续办理", "在{topic}窗口用「{g}」问清所需材料、办理顺序和领取时间"),
+    "reservation": ("预订确认", "用「{g}」确认{topic}的人数、时间和变更条件"),
+    "greeting": ("初次见面", "用「{g}」完成一次{topic}：自我介绍、确认姓名并寒暄"),
+    "self_intro": ("自我介绍", "用「{g}」介绍自己的{topic}：姓名、身份和一个兴趣"),
+    "shopping": ("购物结算", "在{topic}场景用「{g}」问价、确认数量和付款方式"),
+    "daily_routine": ("日常作息", "用「{g}」说出{topic}里的起床、出门和回家时间"),
+    "entertainment": ("休闲娱乐", "用「{g}」聊一次{topic}安排：看什么、和谁去、几点碰面"),
+    "request": ("请求委托", "在{topic}场景用「{g}」提出请求、说明理由并确认对方能否帮忙"),
+    "discussion": ("意见讨论", "读一段{topic}，用「{g}」说明两种看法的差异和自己的立场"),
+    "explanation": ("说明解释", "用「{g}」解释{topic}里两个近义词的区别，并各造一句"),
+    "announcement": ("公共广播", "听一段{topic}，用「{g}」复述发生了什么、影响和下一步"),
+}
+
+# 锚定日：Day 1 是诊断日，预先保证 G0001/V0001/V0078/K0036/K0045/K0047 同天出现，
+# 让诊断题 Q0181 等有合法题目可选；Day 30 / Day 46 是契约点名的场景（医院问诊 / 市政通知）。
+# 锚点只决定该窗口的轮转起点，不改变「同 topic 分组 + 确定性轮转」的选材方式。
+TOPIC_ANCHORS = {1: "greeting", 30: "health", 46: "notice"}
+
+# 诊断日必须同天出现的基础知识（否则 Day 1 的 8 道诊断题会因超纲筛不到题）。
+FOUNDATION_DAY1 = {"vocabulary": ["V0001", "V0078"],
+                   "kanji": ["K0036", "K0045", "K0047"],
+                   "grammar": ["G0001"]}
+
 
 
 # ---- v3：把「今天学哪几句话 / 复习哪几个词 / 中文难点是什么」写进课程骨架 ----
@@ -170,6 +176,377 @@ def _short_zh(text, limit=80):
         return s
     cut = max(s.rfind(m, 0, limit) for m in "。！？；，、")
     return s[:cut + 1] if cut > 0 else s[:limit]
+
+
+# ---- v4：主题驱动选材 / 亲和度分配 ----
+
+def _norm_ja(text):
+    """去掉空白与全角空格，供「语法模式是否出现在素材正文」的确定性比对。"""
+    return re.sub(r"[\s\u3000]+", "", text or "")
+
+
+def _topic_affinity(topic, item, kind="vocab"):
+    """亲和度 = TOPIC_LEXICON[topic] 在知识点可见文本中的命中次数。
+
+    词：surface / meaning_zh / notes_for_zh / examples；
+    语法：pattern / meaning_zh / examples；汉字：char / meaning_zh / zh_trap；
+    素材：title / text_ja / text_zh / focus_zh。
+    只做计数，不引入随机权重，保证同输入同输出。
+    """
+    kws = TOPIC_LEXICON.get(topic) or []
+    if not kws or not isinstance(item, dict):
+        return 0
+    parts = [item.get("surface"), item.get("meaning_zh"), item.get("notes_for_zh"),
+             item.get("pattern"), item.get("char"), item.get("zh_trap"),
+             item.get("title"), item.get("text_ja"), item.get("text_zh"),
+             item.get("focus_zh")]
+    for e in item.get("examples") or []:
+        if isinstance(e, dict):
+            parts.extend([e.get("ja"), e.get("zh")])
+    blob = "".join(str(p) for p in parts if p)
+    return sum(blob.count(k) for k in kws)
+
+
+_JARGON = {"名詞", "動詞", "形容詞", "副詞", "連体", "普通形", "辞書形", "ない形", "ます形",
+           "意志形", "た形", "て形", "ば形", "い形", "な形", "可能形", "条件形", "受身形",
+           "使役形", "授受", "比較", "同一", "同一動詞", "前", "後", "词干", "詞干",
+           "丁寧体", "简体", "敬体", "普通体", "名", "動", "辞书形"}
+
+
+def _clean_token(token):
+    """把语法模式里的一段拆成可用于正文比对的日文片段；纯占位/术语返回空串。"""
+    t = _norm_ja(token)
+    t = re.sub(r"^[NVA]\d*", "", t)
+    t = t.strip("。、；：・，,（）()「」[]")
+    if not t or t in _JARGON:
+        return ""
+    if re.fullmatch(r"[A-Za-z0-9]+", t):
+        return ""
+    if not re.search(r"[ぁ-んァ-ヶ一-龥]", t):
+        return ""
+    return t
+
+
+def _grammar_signatures(pattern):
+    """从 pattern 抽 1..n 组「必须同时出现」的日文片段。
+
+    `A / B + C` 表示任一组成立即可；组内片段需全部出现在正文。
+    例：`～て ください` -> [["て", "ください"]]；`～たい / ～たがる` -> [["たい"], ["たがる"]]。
+    """
+    p = re.sub(r"[（(][^）)]*[）)]", "", pattern or "")
+    out = []
+    for alt in re.split(r"[/／]", p):
+        toks = [_clean_token(x) for x in re.split(r"[\s+・、]+", alt.replace("～", ""))]
+        toks = [x for x in toks if x]
+        if toks:
+            out.append(toks)
+    return out
+
+
+def _signature_hit(signatures, text):
+    blob = _norm_ja(text)
+    if not blob or not signatures:
+        return False
+    return any(all(t in blob for t in group) for group in signatures)
+
+
+def _grammar_evidence(gid, mats, vocab_ids, gmap, vmap, strict=False):
+    """返回语法当天的证据来源：material / vocab / grammar_example / ""。
+
+    - material：当天素材的 grammar_ids 命中，或正文出现 pattern 的日文片段；
+    - vocab：当天新词例句的 grammar_ids 命中，或例句正文出现片段；
+    - grammar_example：该语法自己的种子例句（仍属「当天新知识例句」）。
+    """
+    g = gmap.get(gid) or {}
+    sigs = _grammar_signatures(g.get("pattern"))
+    for m in mats or []:
+        if gid in (m.get("grammar_ids") or []):
+            return "material"
+        if _signature_hit(sigs, m.get("text_ja") or ""):
+            return "material"
+    for vid in vocab_ids or []:
+        for e in (vmap.get(vid) or {}).get("examples") or []:
+            if not isinstance(e, dict):
+                continue
+            if gid in (e.get("grammar_ids") or []):
+                return "vocab"
+            if _signature_hit(sigs, e.get("ja") or ""):
+                return "vocab"
+    for e in g.get("examples") or []:
+        if not isinstance(e, dict):
+            continue
+        if not sigs:
+            return "grammar_example"
+        if _signature_hit(sigs, e.get("ja") or ""):
+            return "grammar_example"
+    # 语法自己的例句本身就是「当天新知识例句」：pattern 是辞书形/术语时，
+    # 例句常以ます形/过去形出现，签名匹配会漏；有例句即视为有语境证据。
+    # strict=True 时不接受这个兜底，只认「当天素材/当天新词」的硬证据，
+    # 用于分配排序与对齐统计，避免用自家例句把「没对齐」粉饰成「对齐」。
+    if g.get("examples") and not strict:
+        return "grammar_example"
+    return ""
+
+
+def _grammar_supported(gid, mats, vocab_ids, gmap, vmap):
+    return bool(_grammar_evidence(gid, mats, vocab_ids, gmap, vmap))
+
+
+def _material_groups(materials):
+    """原创素材按 level -> topic -> kind 分组；index_only / 无正文一律不参与选材。"""
+    by = {}
+    for m in materials:
+        if m.get("review_status") == "index_only" or not m.get("text_ja"):
+            continue
+        topic = m.get("topic")
+        if not topic:
+            continue
+        lvl = m.get("level") or "N5"
+        kind = m.get("kind")
+        if kind not in ("reading", "listening"):
+            continue
+        by.setdefault(lvl, {}).setdefault(topic, {"reading": [], "listening": []})[kind].append(m)
+    for lvl in by:
+        for topic in by[lvl]:
+            for kind in ("reading", "listening"):
+                by[lvl][topic][kind].sort(key=lambda x: x["id"])
+    return by
+
+
+def _rotation_order(topics, start, end):
+    """确定性轮转顺序：按 topic 名排序，再按锚定日旋转到锚点位置。"""
+    order = sorted(topics)
+    if not order:
+        return []
+    n = len(order)
+    for day, topic in sorted(TOPIC_ANCHORS.items()):
+        if start <= day <= end and topic in order:
+            shift = (order.index(topic) - (day - start)) % n
+            return order[shift:] + order[:shift]
+    return order
+
+
+def _assign_topics(materials):
+    """给 Day 1..80 定 topic：级别窗口内轮转；P5/P6 沿用 N3 轮转（综合复习）。"""
+    groups = _material_groups(materials)
+    topics_by_day, orders = {}, {}
+    for lvl, (a, b) in LEVEL_WINDOWS.items():
+        order = _rotation_order((groups.get(lvl) or {}).keys(), a, b)
+        orders[lvl] = order
+        for day in range(a, b + 1):
+            topics_by_day[day] = order[(day - a) % len(order)] if order else ""
+    order_n3 = orders.get("N3") or []
+    for day in range(66, 81):
+        topics_by_day[day] = order_n3[(day - 46) % len(order_n3)] if order_n3 else ""
+    return topics_by_day, groups, orders
+
+
+def _pick_materials(day, topic, groups, order, use_count, force_review=False):
+    """按 topic 取「阅读 + 听力」各一篇；同 topic 缺一种时用同级别最近的 topic 补位。
+
+    返回 (material_ids, topic_used, topic_match, material_topics)。
+    topic_match:
+      exact   —— 至少一篇素材与 scene_topic_key 同 topic，且该篇排在第一；
+      partial —— 该 topic 在本级别完全没有素材，只能用最近 topic 补位（scene key 改为实际 topic）；
+      review  —— P5/P6 综合复习，不承诺素材与场景主题一致。
+    """
+    grp = groups or {}
+    if not grp:
+        return [], topic, "review", []
+    order = list(order) or sorted(grp)
+    n = len(order)
+
+    def take(kind, wanted):
+        same = (grp.get(wanted) or {}).get(kind) or []
+        if same:
+            m = min(same, key=lambda x: (use_count.get(x["id"], 0), x["id"]))
+            return m, True
+        cands = [(t, m) for t, g in grp.items() for m in (g.get(kind) or [])]
+        if not cands:
+            return None, False
+        wi = order.index(wanted) if wanted in order else 0
+
+        def rank(tm):
+            t, m = tm
+            d = n
+            if t in order:
+                ti = order.index(t)
+                d = min((ti - wi) % n, (wi - ti) % n)
+            return (-_topic_affinity(wanted, m), d, use_count.get(m["id"], 0), m["id"])
+
+        t, m = min(cands, key=rank)
+        return m, False
+
+    same_grp = grp.get(topic) or {}
+    if same_grp.get("reading"):
+        primary, secondary = "reading", "listening"
+    elif same_grp.get("listening"):
+        primary, secondary = "listening", "reading"
+    else:
+        primary, secondary = "reading", "listening"
+
+    chosen = []
+    first, first_match = take(primary, topic)
+    if first:
+        chosen.append(first)
+    second, _ = take(secondary, topic)
+    if second and second["id"] not in {m["id"] for m in chosen}:
+        chosen.append(second)
+    if not chosen:
+        return [], topic, "review", []
+
+    matched = [m for m in chosen if m.get("topic") == topic]
+    if matched:
+        # 保证 lesson_core 第一句优先来自与场景同 topic 的素材
+        chosen.sort(key=lambda m: (m.get("topic") != topic, 0 if m.get("kind") == "reading" else 1, m["id"]))
+        used = topic
+    else:
+        used = chosen[0].get("topic") or topic
+    for m in chosen:
+        use_count[m["id"]] = use_count.get(m["id"], 0) + 1
+    match = "review" if force_review else ("exact" if matched else "partial")
+    return [m["id"] for m in chosen], used, match, [m.get("topic") for m in chosen]
+
+
+def _allocate_topic_pool(items, start, end, topics_by_day, level, kind):
+    """级别窗口内按「亲和度降序, frequency 降序, id」分配；每天取 ceil(剩余池/剩余天)。"""
+    if level == "N5":
+        pool = [x for x in items if x.get("jlpt") == "N5" or x.get("jlpt") not in LEVEL_WINDOWS]
+    else:
+        pool = [x for x in items if x.get("jlpt") == level]
+    pool = sorted(pool, key=lambda x: x["id"])
+    out = defaultdict(list)
+    for day in range(start, end + 1):
+        rem_days = end - day + 1
+        n = max(1, math.ceil(len(pool) / rem_days)) if pool else 0
+        topic = topics_by_day.get(day, "")
+        ranked = sorted(pool, key=lambda x: (-_topic_affinity(topic, x, kind),
+                                             -(int(x.get("frequency") or 3)), x["id"]))
+        take = ranked[:n]
+        out[day] = [x["id"] for x in take]
+        taken = {x["id"] for x in take}
+        pool = [x for x in pool if x["id"] not in taken]
+    return out
+
+
+def _pin_foundation(alloc, kind):
+    """把诊断日必须同天出现的基础知识钉到 Day 1 最前面（从其它天移走，不复制）。"""
+    fixed = list(FOUNDATION_DAY1.get(kind) or [])
+    if not fixed:
+        return
+    cur = [x for x in (alloc.get(1) or []) if x not in fixed]
+    for d, ids in list(alloc.items()):
+        if d != 1:
+            alloc[d] = [x for x in ids if x not in fixed]
+    alloc[1] = fixed + cur
+
+
+def _improve_grammar_alignment(out, materials_by_day, vocab_by_day, gmap, vmap, mmap):
+    """把「只有自家例句」的语法与别的天做等价交换，换到素材真能支撑的那一天。
+
+    只做同级别窗口内、且交换后先修顺序仍成立的交换；确定性遍历，最多 40 轮。
+    换不动就保留，并如实计入 alignment.grammar_backed_by_material，不粉饰。
+    """
+    gday = {gid: d for d, ids in out.items() for gid in ids}
+    def evidence_on(gid, day):
+        mats = [mmap[m] for m in materials_by_day.get(day, []) if m in mmap]
+        return _grammar_evidence(gid, mats, vocab_by_day.get(day, []), gmap, vmap, strict=True)
+
+    def day_ok(day):
+        ids = out.get(day) or []
+        return (not ids) or any(evidence_on(g, day) for g in ids)
+
+    def topology_ok(gday_map):
+        for gid, d in gday_map.items():
+            for p in (gmap.get(gid, {}).get("prerequisites") or []):
+                if p in gday_map and gday_map[p] >= d:
+                    return False
+        return True
+
+    for _ in range(40):
+        changed = False
+        for day in sorted(out):
+            if day_ok(day):
+                continue
+            weak = [g for g in out.get(day, []) if not evidence_on(g, day)]
+            if not weak:
+                continue
+            for other in sorted(out):
+                if other == day:
+                    continue
+                if phase_of(other) != phase_of(day):
+                    continue
+                for cand in out.get(other, []):
+                    if not evidence_on(cand, day):
+                        continue
+                    if evidence_on(cand, other):
+                        continue          # 别把别人已经对齐的语法抢走
+                    for bad in weak:
+                        trial = dict(gday)
+                        trial[cand], trial[bad] = day, other
+                        if not topology_ok(trial):
+                            continue
+                        out[day] = [cand if x == bad else x for x in out[day]]
+                        out[other] = [bad if x == cand else x for x in out[other]]
+                        gday = trial
+                        changed = True
+                        break
+                    if changed:
+                        break
+                if changed:
+                    break
+            if changed:
+                break
+        if not changed:
+            break
+    return out
+
+
+def _allocate_grammar(grammar, topics_by_day, materials_by_day, vocab_by_day, gmap, vmap, mmap):
+    """语法仍受先修拓扑约束，但同一天内优先选当天素材/新词例句能支撑的语法。"""
+    out = defaultdict(list)
+    evidence = {}
+    introduced = set()
+    remaining = sorted(grammar, key=lambda x: x["id"])
+    for lvl, (a, b) in sorted(LEVEL_WINDOWS.items(), key=lambda kv: kv[1][0]):
+        pool = [g for g in remaining
+                if g.get("jlpt") == lvl or (lvl == "N5" and g.get("jlpt") not in LEVEL_WINDOWS)]
+        pool_ids = {g["id"] for g in pool}
+        remaining = [g for g in remaining if g["id"] not in pool_ids]
+        for day in range(a, b + 1):
+            if not pool:
+                break
+            rem_days = b - day + 1
+            n = max(1, math.ceil(len(pool) / rem_days))
+            eligible = [g for g in pool
+                        if all(p in introduced for p in (g.get("prerequisites") or []))]
+            topic = topics_by_day.get(day, "")
+            mats = [mmap[mid] for mid in materials_by_day.get(day, []) if mid in mmap]
+            nv = vocab_by_day.get(day, [])
+
+            def rank(g):
+                ev = _grammar_evidence(g["id"], mats, nv, gmap, vmap, strict=True)
+                strong = 0 if ev else 1
+                return (strong, -_topic_affinity(topic, g, "grammar"),
+                        -(int(g.get("frequency") or 3)), g["id"])
+
+            take = sorted(eligible, key=rank)[:n]
+            out[day] = [g["id"] for g in take]
+            for g in take:
+                evidence[g["id"]] = _grammar_evidence(g["id"], mats, nv, gmap, vmap)
+                introduced.add(g["id"])
+            taken = {g["id"] for g in take}
+            pool = [g for g in pool if g["id"] not in taken]
+            if day == b and pool:
+                # 窗口最后一天仍有剩余：全部排入（先修在同一批内不满足时，validate 会如实报错，
+                # 这里不悄悄放宽拓扑约束）。
+                out[day].extend(g["id"] for g in pool)
+                for g in pool:
+                    evidence[g["id"]] = _grammar_evidence(g["id"], mats, nv, gmap, vmap)
+                    introduced.add(g["id"])
+                pool = []
+    return out, evidence
+
 
 
 def _zh_candidates(item, kind):
@@ -256,7 +633,7 @@ def _material_pairs(mids, mmap, gmap, vmap):
                 continue
             # 该句本来就是全假名时无需再显示读音行，其余句子照常给假名
             kana = ka_s[i] if ka_s and ka_s[i] != j else ""
-            pairs.append((j, kana, z, notes[i % len(notes)]))
+            pairs.append((j, kana, z, notes[i % len(notes)], mid))
     return pairs
 
 
@@ -278,50 +655,60 @@ def _example_pairs(kids, imap, kind):
 
 def _build_lesson_core(mids, nv, ng, rev, learned, mmap, gmap, vmap):
     """凑满且仅 3 句「今天要会的话」，全部来自真实种子，绝不编造日语。
-    顺序：真实场景句（对齐的素材）→ 当日目标句型例句 → 当日生词例句 → 其余场景句 →
-    复习知识点例句兜底 → 全库已学例句兜底。
+
+    v4 对齐规则（契约第 7 节）：
+    1) 第一句必须来自当天素材（`_material_pairs` 命中），素材句优先填满 3 句；
+    2) 不足 3 句才用当天新语法 / 新词例句补齐，最后才用复习/已学例句兜底；
+    3) 每句写 `origin`：material | grammar | vocab | fallback，供 validate 与对齐报告审计。
     kana 只取资料层已核实的素材 text_kana 逐句对齐结果；没有就留空，绝不伪造。"""
     mat_pairs = _material_pairs(mids, mmap, gmap, vmap)
     g_pairs = _example_pairs(ng, gmap, "grammar")
     v_pairs = _example_pairs(nv, vmap, "vocab")
-    r_pairs = (_example_pairs([k for k in rev if k in gmap], gmap, "grammar") +
-               _example_pairs([k for k in rev if k in vmap], vmap, "vocab"))
-    ordered = (mat_pairs[:2] + g_pairs[:2] + v_pairs[:2] +
-               mat_pairs[2:] + g_pairs[2:] + v_pairs[2:] + r_pairs)
     core, seen = [], set()
 
-    def add(rows):
-        for ja, kana, zh, note in rows:
+    def add(rows, origin):
+        for row in rows:
+            if len(row) == 5:
+                ja, kana, zh, note, src = row
+            else:
+                ja, kana, zh, note = row
+                src = ""
             if ja in seen:
                 continue
             seen.add(ja)
-            core.append({"ja": ja, "kana": kana, "zh": zh,
-                         "note_zh": note or _GENERIC_NOTE, "audio_text": ja})
+            item = {"ja": ja, "kana": kana, "zh": zh,
+                    "note_zh": note or _GENERIC_NOTE, "audio_text": ja,
+                    "origin": origin}
+            if src:
+                item["source_id"] = src
+            core.append(item)
             if len(core) == 3:
                 return True
         return False
 
-    if add(ordered):
-        return core
+    for rows, origin in ((mat_pairs, "material"), (g_pairs, "grammar"), (v_pairs, "vocab")):
+        if add(rows, origin):
+            return core
     # 极端兜底：用「已学知识」的真实例句补齐到 3 句（排序保证确定性）
     fallback = (_example_pairs(sorted(k for k in learned if k in gmap), gmap, "grammar") +
                 _example_pairs(sorted(k for k in learned if k in vmap), vmap, "vocab"))
-    add(fallback)
+    add(fallback, "fallback")
     return core
 
 
 def _review_reason(gap):
-    return "%d 天前学的，按 1/2/3/7/14/30 天间隔今天该回顾" % gap
+    return "这是预习建议（非 FSRS 到期项）：%d 天前学过，可按 1/2/3/7/14/30 天间隔预看" % gap
 
 
 def _next_hint(gap, learned_day):
     idx = REVIEW_INTERVALS.index(gap) if gap in REVIEW_INTERVALS else 0
     nxt = REVIEW_INTERVALS[idx + 1] if idx + 1 < len(REVIEW_INTERVALS) else gap * 2
-    return "大约 Day %d 再回顾" % (learned_day + nxt)
+    return "按课程间隔，大约 Day %d 再预习" % (learned_day + nxt)
 
 
 def _build_review_plan(rev, day, introduced_day, vmap, gmap, kmap):
-    """把 review_knowledge_ids 展开成具体可复习的词条，最多 8 条，首日为空数组。"""
+    """把 review_knowledge_ids 展开成具体词条，最多 8 条，首日为空数组。
+    契约第 4 节：字段名保留，但语义是「预习建议」，每项标 planned_only=True。"""
     out = []
     for kid in rev[:8]:
         learned_day = introduced_day.get(kid, day - 1)
@@ -340,7 +727,8 @@ def _build_review_plan(rev, day, introduced_day, vmap, gmap, kmap):
         out.append({"kid": kid, "surface": surface, "kana": kana, "zh": zh,
                     "reason_zh": _review_reason(gap),
                     "learned_day": learned_day,
-                    "next_hint_zh": _next_hint(gap, learned_day)})
+                    "next_hint_zh": _next_hint(gap, learned_day),
+                    "planned_only": True})
     return out
 
 
@@ -511,31 +899,11 @@ def _pick_questions(day, learned, questions, n, level_hint, used):
     return [q["id"] for q in picked]
 
 
-def _pick_materials(day, learned, materials, used_m):
-    """主素材必须是有正文的原创/开放许可文本；外部版权教材只作每周延伸索引。"""
-    # 素材按 level 分级选材，不要求所有引用词都已学：可理解输入本来允许 5-10% 生词
-    # （CONTRACTS 第 7 节 known_ratio）。题目才做严格超纲检查。
-    allowed = {"N5": 1, "N4": 26, "N3": 46}
-    def ok(m):
-        return day >= allowed.get(m.get("level", "N5"), 1)
-    want = "N5" if day <= 25 else "N4" if day <= 45 else "N3"
-    def order(m):
-        return (m["id"] in used_m, 0 if m.get("level") == want else 1, m["id"])
-    originals = [m for m in materials if m.get("review_status") != "index_only" and ok(m)]
-    reading = sorted([m for m in originals if m.get("kind") == "reading"], key=order)
-    listening = sorted([m for m in originals if m.get("kind") == "listening"], key=order)
-    def choose(pool):
-        if not pool:
-            return None
-        m = pool[0]
-        used_m.add(m["id"])
-        return m["id"]
-    out = [x for x in (choose(reading), choose(listening)) if x]
-    if day % 7 == 0:      # 外部资源只作延伸阅读，不占听力/阅读正文位
-        ext = [m for m in materials if m.get("review_status") == "index_only"]
-        if ext:
-            out.append(ext[(day // 7 - 1) % len(ext)]["id"])
-    return out
+def _build_stamp(r):
+    """用种子文件的最后修改时间作为构建时间：内容不变则构建产物稳定（可复现）。"""
+    paths = sorted((r / "knowledge" / "seeds").glob("*.jsonl"))
+    ts = max((p.stat().st_mtime for p in paths), default=0)
+    return iso(datetime.fromtimestamp(ts, timezone.utc))
 
 
 def build(root=None) -> dict:
@@ -553,21 +921,48 @@ def build(root=None) -> dict:
     mmap_all = {x["id"]: x for x in materials}
     qmap_all = {x["id"]: x for x in questions}
 
-    # 知识引入窗口（框架 §3.1/§3.2）：级别集中在对应阶段，窗口内高频优先；P5/P6 不新增。
-    # 旧算法把 N3 均匀铺到 Day 51–72，因缺 N3 种子导致 P4 阶段空转，已废弃。
-    vwin = _windows_by_level(vocab, LEVEL_WINDOWS)
-    kwin = _windows_by_level(kanji, LEVEL_WINDOWS)
-    gwin, gday = _topo_days_by_level(grammar, GRAMMAR_WINDOWS)
+    # 主题驱动选材 + 亲和度分配（契约第 7 节）。
+    # 1) 每个级别窗口把原创素材按 topic 分组，确定性轮转，保证每天读到同一主题的文本；
+    # 2) 新词/汉字/语法在级别窗口内按当天 topic 亲和度排序，仍保先修拓扑与分级下限。
+    topics_by_day, mat_groups, mat_orders = _assign_topics(materials)
+    material_by_day, material_meta = {}, {}
+    use_count = {}
+    for day in range(1, 81):
+        level = "N5" if day <= 25 else "N4" if day <= 45 else "N3"
+        topic = topics_by_day.get(day, "")
+        ids, used_topic, match, mtops = _pick_materials(
+            day, topic, mat_groups.get(level) or {}, mat_orders.get(level) or [],
+            use_count, force_review=(day >= 66))
+        material_by_day[day] = ids
+        material_meta[day] = {"topic": used_topic, "match": match, "topics": mtops}
+        if day % 7 == 0:      # 外部资源只作延伸阅读，不占听力/阅读正文位
+            ext = [m for m in materials if m.get("review_status") == "index_only"]
+            if ext:
+                material_by_day[day].append(ext[(day // 7 - 1) % len(ext)]["id"])
+
+    vby_day, kby_day = {}, {}
+    for lvl, (a, b) in LEVEL_WINDOWS.items():
+        vby_day.update(_allocate_topic_pool(vocab, a, b, topics_by_day, lvl, "vocab"))
+        kby_day.update(_allocate_topic_pool(kanji, a, b, topics_by_day, lvl, "kanji"))
+    _pin_foundation(vby_day, "vocabulary")
+    _pin_foundation(kby_day, "kanji")
+    gby_day, grammar_evidence = _allocate_grammar(
+        grammar, topics_by_day, material_by_day, vby_day, gmap_all, vmap, mmap_all)
+    _pin_foundation(gby_day, "grammar")
+    gby_day = _improve_grammar_alignment(gby_day, material_by_day, vby_day,
+                                         gmap_all, vmap, mmap_all)
+    gday = {gid: d for d, ids in gby_day.items() for gid in ids}
 
     qidx = _question_index(questions)
-    used_q, used_m = set(), set()
+    used_q = set()
     learned = set()
     new_by_day = {}
     introduced_day = {}          # kid -> 真实引入那天，供 review_plan 回溯
     days = []
     for day in range(1, 81):
         ph = phase_of(day)
-        nv, ng, nk = vwin.get(day, []), gwin.get(day, []), kwin.get(day, [])
+        ass = assessment_of(day)
+        nv, ng, nk = vby_day.get(day, []), gby_day.get(day, []), kby_day.get(day, [])
         learned |= set(nv + ng + nk)
         new_by_day[day] = nv + ng + nk
         for kid in nv + ng + nk:
@@ -578,10 +973,9 @@ def build(root=None) -> dict:
             rev += new_by_day.get(day - back, [])
         rev = list(dict.fromkeys([x for x in rev if x in learned]))[:12]
         level_hint = 1 if day <= 10 else 2 if day <= 25 else 3 if day <= 45 else 4 if day <= 65 else 5
-        nq = 8 if assessment_of(day) in ("diagnostic", "final", "midterm", "n3_readiness") else 6
+        nq = 8 if ass in ("diagnostic", "final", "midterm", "n3_readiness") else 6
         qids = _pick_questions(day, learned, questions, nq, level_hint, used_q)
-        mids = _pick_materials(day, learned, materials, used_m)
-        ass = assessment_of(day)
+        mids = material_by_day.get(day, [])
         if ass != "none":
             blocks = [{"min": 10, "type": "review", "desc": "FSRS 到期项主动回忆，无提示优先"},
                       {"min": 10, "type": "new", "desc": "当天新知识快速回顾（不新增超纲内容）"},
@@ -600,33 +994,34 @@ def build(root=None) -> dict:
                       {"min": 15, "type": "interaction", "desc": "听力/阅读素材 + 情景对话与独立输出"},
                       {"min": 10, "type": "quiz", "desc": "当天测验，先作答后讲解"},
                       {"min": 5, "type": "feedback", "desc": "错误归因、写档、明日任务"}]
-        # ---- 差异化教学设计：Can-do 任务驱动，不是 80 天共用一套模板（框架 §3.2）----
-        topic = ""
-        for mid in mids:
-            m = mmap_all.get(mid)
-            if m and m.get("topic"):
-                topic = m["topic"]; break
+        # ---- 主题驱动：当天素材 topic 决定场景标签、Can-do 与主题句 ----
+        meta = material_meta.get(day, {})
+        topic = meta.get("topic") or topics_by_day.get(day, "")
+        topic_match = meta.get("match") or ("review" if day >= 66 else "partial")
+        scene_topic = TOPIC_ZH.get(topic, topic) or "日常场景"
         vs = [vmap[i]["surface"] for i in nv[:3] if i in vmap]
         gs = [gmap_all[i]["pattern"] for i in ng[:2] if i in gmap_all]
         ks = [kmap[i]["char"] for i in nk[:4] if i in kmap]
         scene_title = next((mmap_all[mid]["title"] for mid in mids
                             if mmap_all.get(mid, {}).get("title")), "日常对话")
-        gtxt = "、".join(gs) or "已学句型"
+        scene_tag, task_tpl = SCENE_TASKS.get(
+            topic, ("综合场景", "在{topic}场景用「{g}」完成一次听读与口头输出"))
+        # Can-do 至少含一个当天语法：优先新语法，P5/P6 无新语法时用当天预习语法
+        g_cando = next((gmap_all[i]["pattern"] for i in ng if i in gmap_all), "")
+        if not g_cando:
+            g_cando = next((gmap_all[i]["pattern"] for i in rev if i in gmap_all), "已学句型")
+        gtxt = "、".join(gs) or g_cando
         vtxt = "、".join(vs) or "当天新词"
-        ttext = TOPIC_ZH.get(topic, topic) or "日常生活"
-        pool = CANDO_BANK[ph]
-        phase_start = next(a for code, a, _b, _ in PHASES if code == ph)
-        # 按阶段内顺序取任务，保证 P1 从「自我介绍」起步，不把后期任务轮到零基础的第一天
-        scene_tag, task_tpl = pool[(day - phase_start) % len(pool)]
-        can_do = task_tpl.format(g=gtxt, v=vtxt, topic=ttext)
+        can_do = task_tpl.format(g=g_cando, v=vtxt, topic=scene_topic)
         if ass not in ("none", "diagnostic"):
-            can_do = "在 %s（%s）中分项展示五维能力，并用「%s」完成 1 次独立输出" % (
-                ass, scene_tag, gtxt)
-        theme = "%s｜%s" % (scene_tag, "・".join((gs + vs)[:3]) or (topic or "综合应用"))
-        scene = "【%s】%s：%s（素材：%s）" % (scene_tag, ttext, can_do, scene_title)
+            can_do = "在 %s（%s｜%s）中分项展示五维能力，并用「%s」完成 1 次独立输出" % (
+                ass, scene_tag, scene_topic, g_cando)
+        theme = "%s｜%s" % (scene_tag, "・".join((gs + vs)[:3]) or scene_topic)
+        scene = "【%s】%s：%s（素材：%s｜主题键：%s｜对齐：%s）" % (
+            scene_tag, scene_topic, can_do, scene_title, topic, topic_match)
         obj_idx = (day * 2 + day // 5) % len(OBJECTIVE_POOL)
         objectives = [OBJECTIVE_POOL[(obj_idx + j) % len(OBJECTIVE_POOL)].format(
-            g=gtxt, v=vtxt, topic=ttext) for j in range(3)]
+            g=gtxt, v=vtxt, topic=scene_topic) for j in range(3)]
         if vs: objectives.append("当天新词：%s（读音与用法都要验证，不靠汉字猜义）" % "、".join(vs))
         if gs: objectives.append("当天句型：%s，须说出接续条件" % "、".join(gs))
         if ks: objectives.append("当天汉字：%s，音读/训读各给一例" % "、".join(ks))
@@ -641,7 +1036,7 @@ def build(root=None) -> dict:
         if ass == "none" and ph not in ("P5",):
             for b in blocks:
                 if b["type"] == "interaction":
-                    b["desc"] = "【%s】%s：听读素材 + 至少 1 次无提示独立输出" % (scene_tag, ttext)
+                    b["desc"] = "【%s】%s：听读素材 + 至少 1 次无提示独立输出" % (scene_tag, scene_topic)
         if ass == "diagnostic":
             completion = ("完成 Day 1 摸底诊断 %d 题（诊断不设及格线，结果用于调整起点），"
                           "并留下 1 次独立输出样本。" % len(qids))
@@ -671,6 +1066,12 @@ def build(root=None) -> dict:
         days.append({
             "day": day, "phase": ph, "theme": theme, "scene": scene,
             "scene_tag": scene_tag, "can_do": can_do, "focus": focus,
+            "scene_topic_key": topic, "scene_topic": scene_topic,
+            "topic_match": topic_match,
+            "material_topic_keys": list(meta.get("topics") or []),
+            "material_pair": ("same_topic" if meta.get("topics")
+                              and all(t == topic for t in meta["topics"] if t) else "mixed_topic"),
+            "grammar_evidence": {gid: grammar_evidence.get(gid, "") for gid in ng},
             "objectives": objectives, "new_vocab_ids": nv, "new_grammar_ids": ng,
             "new_kanji_ids": nk, "review_knowledge_ids": rev,
             "material_ids": mids,
@@ -684,9 +1085,24 @@ def build(root=None) -> dict:
             "review_status": "generated",
             "dynamic_note": "复习项与练习以 state.db 的 FSRS 到期队列和 plan_adjustments 为准；本文件只给固定骨架。",
         })
-    data = {"meta": {"version": "2", "days": 80, "minutes_per_day": 60,
+    # ---- 素材全覆盖：选材按 topic 走，难免有素材永远排不上。
+    # 未使用的素材按级别窗口补进「同 topic 且当天素材最少」的那一天，
+    # 保证 coverage 报告里的 unused 不是被静默隐藏，而是真正进入课程。
+    used_mids = {mid for d in days for mid in d.get("material_ids") or []}
+    for m in sorted(materials, key=lambda x: x["id"]):
+        if m["id"] in used_mids:
+            continue
+        lvl = m.get("level", "N5")
+        a, b = LEVEL_WINDOWS.get(lvl, (66, 75))
+        pool = [d for d in days if a <= d["day"] <= b] or days
+        pool.sort(key=lambda d: (d.get("scene_topic_key") != m.get("topic"),
+                                 len(d.get("material_ids") or []), d["day"]))
+        tgt = pool[0]
+        tgt.setdefault("material_ids", []).append(m["id"])
+        used_mids.add(m["id"])
+    data = {"meta": {"version": "4", "days": 80, "minutes_per_day": 60,
                      "total_hours": 80, "framework": "research/nh80_framework.md",
-                     "generated_at": iso(), "generator": "scripts/curriculum.py",
+                     "generated_at": _build_stamp(r), "generator": "scripts/curriculum.py",
                      "level_windows": {k: list(v) for k, v in LEVEL_WINDOWS.items()},
                      "honesty": "由真实知识种子按 NH80 高频压缩习得法程序化组装，非 80 篇人工精修教材；"
                                 "80 学时是压缩冲刺路径，不等于 JLPT 官方学时标准，也不承诺合格分数；"
@@ -703,11 +1119,13 @@ def validate(data: dict, seeds: dict) -> dict:
     if len(days) != 80 or [d["day"] for d in days] != list(range(1, 81)):
         errs.append("天数不是 1..80 连续")
     gmap = {g["id"]: g for g in seeds["grammar"]}
+    vmap = {v["id"]: v for v in seeds["vocabulary"]}
     valid = {x["id"] for k in ("vocabulary", "grammar", "kanji") for x in seeds[k]}
     qmap = {q["id"]: q for q in seeds["questions"]}
     mmap = {m["id"]: m for m in seeds["materials"]}
     gday, learned = {}, set()
     required = ("day phase theme scene scene_tag can_do focus objectives "
+                "scene_topic_key scene_topic topic_match "
                 "new_vocab_ids new_grammar_ids new_kanji_ids "
                 "review_knowledge_ids material_ids blocks question_ids rubric minutes completion "
                 "assessment source_ids review_status").split()
@@ -767,8 +1185,45 @@ def validate(data: dict, seeds: dict) -> dict:
                 if not isinstance(it, dict) or it.get("kid") not in rev_ids:
                     errs.append("Day %d review_plan 项不属于当天 review_knowledge_ids" % day)
                     break
+                if it.get("planned_only") is not True:
+                    errs.append("Day %d review_plan 项未标 planned_only=true" % day)
+                    break
         if not isinstance(d.get("teaching_notes"), list):
             errs.append("Day %d teaching_notes 非数组" % day)
+
+    # ---- v4 课程对齐硬校验（契约第 7 节）----
+    for d in days:
+        day = d["day"]
+        tmatch = d.get("topic_match")
+        if tmatch not in ("exact", "partial", "review"):
+            errs.append("Day %d topic_match 非法：%r" % (day, tmatch))
+        scene_topic = d.get("scene_topic") or ""
+        if not scene_topic:
+            errs.append("Day %d 缺 scene_topic" % day)
+        elif scene_topic not in (d.get("can_do") or ""):
+            errs.append("Day %d can_do 未包含场景中文标签「%s」" % (day, scene_topic))
+        mats = [mmap[mid] for mid in (d.get("material_ids") or []) if mid in mmap]
+        if tmatch != "review":
+            if not any(m.get("topic") == d.get("scene_topic_key") for m in mats):
+                errs.append("Day %d 没有与 scene_topic_key=%s 同 topic 的素材" %
+                            (day, d.get("scene_topic_key")))
+        lc = d.get("lesson_core")
+        if isinstance(lc, list) and lc:
+            if lc[0].get("origin") != "material":
+                errs.append("Day %d lesson_core 第一句不是素材句（origin=%r）" %
+                            (day, lc[0].get("origin")))
+            if not any(s.get("origin") == "material" for s in lc):
+                errs.append("Day %d lesson_core 没有任何 origin=material 的句子" % day)
+        new_g = list(d.get("new_grammar_ids") or [])
+        for gid in new_g:
+            if not _grammar_supported(gid, mats, d.get("new_vocab_ids") or [], gmap, vmap):
+                errs.append("Day %d 新语法 %s 未出现在当天素材正文/grammar_ids/新词例句" % (day, gid))
+        if new_g and not any(_grammar_evidence(gid, mats, d.get("new_vocab_ids") or [],
+                                                gmap, vmap, strict=True) for gid in new_g):
+            # 不把它升级成 err：现有素材库不足以让 96 条语法都落在同一天的素材里。
+            # 但必须显式披露，不能像旧版那样用「语法自家例句」把未对齐粉饰成已对齐。
+            warns.append("Day %d 的新语法（%s）只有自家例句，当天素材没有硬证据"
+                         % (day, "、".join(new_g)))
 
     seen_ass = {}
     for d in days:
@@ -830,9 +1285,33 @@ def validate(data: dict, seeds: dict) -> dict:
     }
     for k, v in coverage.items():
         if v.get("unused"): warns.append("%s 未覆盖 %d 项（见报告）" % (k, len(v["unused"])))
+    grammar_total = sum(len(d.get("new_grammar_ids") or []) for d in days)
+    grammar_backed = 0
+    for d in days:
+        mats = [mmap[mid] for mid in (d.get("material_ids") or []) if mid in mmap]
+        for gid in d.get("new_grammar_ids") or []:
+            if _grammar_evidence(gid, mats, d.get("new_vocab_ids") or [],
+                                 gmap, vmap, strict=True):
+                grammar_backed += 1
+    alignment = {
+        # exact 的口径是「主素材与场景同 topic」，不等于读写两篇都同主题；
+        # 真正两篇同主题另记 paired_same_topic，避免用一个数字夸大对齐度。
+        "primary_match": sum(1 for d in days if d.get("topic_match") == "exact"),
+        "paired_same_topic": sum(1 for d in days
+                                 if d.get("topic_match") == "exact"
+                                 and d.get("material_pair") == "same_topic"),
+        "partial": sum(1 for d in days if d.get("topic_match") == "partial"),
+        "review": sum(1 for d in days if d.get("topic_match") == "review"),
+        "material_lines": sum(1 for d in days for s in (d.get("lesson_core") or [])
+                              if isinstance(s, dict) and s.get("origin") == "material"),
+        "grammar_backed_by_material": grammar_backed,
+        "grammar_new_total": grammar_total,
+    }
+    alignment["exact"] = alignment["primary_match"]   # 兼容旧调用方
     return {"ok": not errs, "errors": errs[:40], "error_count": len(errs),
             "warnings": warns, "coverage": coverage,
             "level_delivery": delivery, "teaching_design": design,
+            "alignment": alignment,
             "assessments": {str(k): v[0] for k, v in sorted(seen_ass.items())},
             "generated_days": sum(1 for d in days if d["review_status"] == "generated")}
 
@@ -858,15 +1337,23 @@ def render_day_md(d: dict, seeds: dict, out: Path):
         "# Day %03d · %s" % (d["day"], d["theme"]),
         "",
         "- 阶段：%s｜场景：%s" % (d["phase"], d["scene"]),
+        "- 场景主题：%s（`%s` / 对齐：`%s`）" % (
+            d.get("scene_topic", ""), d.get("scene_topic_key", ""), d.get("topic_match", "")),
         "- **Can-do（本日真实任务）**：%s" % d.get("can_do", ""),
         "- 能力侧重：%s｜方法依据：`research/nh80_framework.md`" % "、".join(d.get("focus", [])),
         "- 预计时长：%d 分钟｜测试：%s｜审核状态：`%s`（程序化组装，非人工精修教材）" %
         (d["minutes"], d["assessment"], d["review_status"]),
         "", "## 1. 能力目标", *["- " + x for x in d["objectives"]],
+        "", "## 1.1 今天要会的 3 句（来源：%s）" %
+        "、".join(sorted({s.get("origin", "") for s in d.get("lesson_core") or []})),
+    ]
+    for s in d.get("lesson_core") or []:
+        lines.append("- [%s] %s（%s）" % (s.get("origin", ""), s.get("ja", ""), s.get("zh", "")))
+    lines += [
         "", "## 2. 新词汇（ID）", V(d["new_vocab_ids"]),
         "", "## 3. 新语法（含先修）", G(d["new_grammar_ids"]),
         "", "## 4. 新汉字（中日差异）", K(d["new_kanji_ids"]),
-        "", "## 5. 需复习的旧知识（候选池，实际以 FSRS 到期队列为准）",
+        "", "## 5. 预习建议（planned_only，非 FSRS 到期项）",
         "- " + ("、".join("`%s`" % x for x in d["review_knowledge_ids"]) or "无（首日或纯新课）"),
         "", "## 6. 听力与阅读素材",
     ]
@@ -955,7 +1442,27 @@ def write_all(root=None, data=None, validation=None, seeds=None) -> dict:
         cr.append("| %s | %d | %d | %d |" % (p, c.get("N5", 0), c.get("N4", 0), c.get("N3", 0)))
     cr += ["", "- 强校验下限：P3 的 N4 ≥ 20 项、P4 的 N3 ≥ 40 项；P4 不得出现几乎无新知的天。",
            "- 旧版曾出现 P4 20 天仅 1 个新词、0 个汉字，本表即为防止该问题复发。",
-           "", "## 教学设计差异化（防止 80 天共用一套模板）", ""]
+           "", "## 场景-素材-语法对齐（契约第 7 节）", ""]
+    al = validation.get("alignment") or {}
+    cr.append("统计：主素材同主题 %d 天｜读写两篇都同主题 %d 天｜纯复习 %d 天｜"
+              "lesson_core 中 origin=material 的句子 %d 行。"
+              % (al.get("primary_match", 0), al.get("paired_same_topic", 0),
+                 al.get("review", 0), al.get("material_lines", 0)))
+    cr.append("语法硬证据：%d / %d 条新语法能在当天素材正文、素材 grammar_ids 或当天新词例句中找到证据；"
+              "其余只靠语法自身例句，已逐天列入下方告警，不计入「已对齐」。"
+              % (al.get("grammar_backed_by_material", 0), al.get("grammar_new_total", 0)))
+    cr += ["", "> 「主素材同主题」只说明当天**第一主角素材**与场景一致；若该 topic 在本级别只有",
+           "> 一种体裁，另一篇会按「同级别最近 topic」补位（`material_pair=mixed_topic`）。",
+           "> 真正读写同主题的天数单独统计，不用一个「exact」夸大对齐度。", ""]
+    cr += ["", "| Day | topic | 素材 id | lesson_core 来源 | 是否 exact |", "|---|---|---|---|---|"]
+    for d in data["days"]:
+        origins = "/".join(sorted({s.get("origin", "") for s in (d.get("lesson_core") or [])
+                                   if isinstance(s, dict)}))
+        cr.append("| %d | %s（%s） | %s | %s | %s |" % (
+            d["day"], d.get("scene_topic", ""), d.get("scene_topic_key", ""),
+            "、".join(d.get("material_ids") or []), origins,
+            "是" if d.get("topic_match") == "exact" else ("部分" if d.get("topic_match") == "partial" else "复习")))
+    cr += ["", "## 教学设计差异化（防止 80 天共用一套模板）", ""]
     for k, v in sorted(validation.get("teaching_design", {}).items()):
         cr.append("- %s：**%d / 80** 种" % (k, v))
     cr += ["", "## 先修与超纲检查", "",

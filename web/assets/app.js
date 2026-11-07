@@ -82,9 +82,14 @@
   }
   function pad2(n) { return String(n).padStart(2, '0'); }
   function pad3(n) { return String(n).padStart(3, '0'); }
+  /* 与 scripts/learning.py 的 norm_answer() 保持同构（REVISION_CONTRACT §3.2）：
+     NFKC 归一 → 去所有空白（含全角空格）→ ，转 , → 去句末 。．.！!？?。
+     判分只做「等价形式」归一，不做语义猜测。 */
   function norm(s) {
-    return String(s === undefined || s === null ? '' : s)
-      .replace(/[\s\u3000]+/g, '').toLowerCase();
+    var v = String(s === undefined || s === null ? '' : s);
+    if (v.normalize) { try { v = v.normalize('NFKC'); } catch (e) {} }
+    v = v.replace(/[\s\u3000]+/g, '').replace(/，/g, ',');
+    return v.replace(/[。．.！!？?]+$/, '');
   }
   function isWide() {
     try {
@@ -133,10 +138,17 @@
   function makePayload(state) {
     var results = Object.keys(state.results).map(function (qid) {
       var r = state.results[qid];
+      /* 已揭示答案 = 放弃独立回忆；hinted 只能上调，不能被前端回退（契约 §3.1）。 */
+      var revealed = !!r.revealed_before_submit;
       var o = {
-        qid: r.qid, answer: r.answer, correct: !!r.correct, hinted: !!r.hinted,
+        qid: r.qid, answer: r.answer, correct: !!r.correct,
+        hinted: !!(r.hinted || revealed),
+        revealed_before_submit: revealed,
+        pre_reveal_answer: (r.pre_reveal_answer === undefined || r.pre_reveal_answer === null)
+          ? '' : String(r.pre_reveal_answer),
         seconds: Math.max(0, Math.round(r.seconds || 0)), error_type: r.error_type || null
       };
+      if (revealed && r.revealed_at) o.revealed_at = r.revealed_at;
       /* 开放题自评写独立字段，绝不冒充 correct / 掌握判定（REDESIGN §5、P0-9）。 */
       if (r.self_assessed) o.self_assessed = r.self_assessed;
       return o;
@@ -153,6 +165,30 @@
       results: results, minutes: Math.max(1, Math.round(total / 60)), source: 'web',
       review_ratings: review_ratings
     };
+  }
+
+
+  /* 可选云端同步：只发原始作答事件，不发 correct；失败静默，回传码仍是唯一兜底。
+     服务端（Worker）会用 answer-key.json 重新判分，网页永远不是判分权威。 */
+  function autoSync(payload) {
+    try {
+      if (typeof fetch !== 'function' || typeof location === 'undefined') return;
+      if (location.protocol !== 'http:' && location.protocol !== 'https:') return;
+      if (typeof navigator !== 'undefined' && navigator.onLine === false) return;
+      if (!payload || (!(payload.results || []).length && !(payload.review_ratings || []).length)) return;
+      var body = JSON.stringify({
+        v: 1, day: payload.day, session: payload.session, minutes: payload.minutes,
+        client_ts: payload.ts,
+        results: (payload.results || []).map(function (r) {
+          return { qid: r.qid, answer: r.answer, hinted: !!r.hinted,
+                   revealed_before_submit: !!r.revealed_before_submit, seconds: r.seconds || 0 };
+        })
+      });
+      fetch('/api/events', { method: 'POST', headers: { 'content-type': 'application/json' },
+                             body: body, keepalive: true })
+        .then(function (res) { globalThis.NH80.lastSync = res && res.ok ? 'ok' : 'skipped'; })
+        .catch(function () { globalThis.NH80.lastSync = 'offline'; });
+    } catch (e) { /* 同步不是学习的前置条件，任何异常都不影响回传码 */ }
   }
 
   /* 暴露纯函数 + 调试快照，便于在 Node 中做回传码与布局自测（不影响浏览器运行）。 */
@@ -756,6 +792,23 @@
     return '提示：先回忆当天词汇 / 语法，再作答。';
   }
 
+  /* 揭示答案 / 提示都属于「放弃独立回忆」，只允许向上写，不允许回退（契约 §3.1）。 */
+  var REVEAL_NOTICE = '本次为提示学习，不计为独立回忆';
+  var REVEAL_SUBMIT_LABEL = '提交（已看答案，记为提示学习）';
+
+  function markRevealed(r, preAnswer, full) {
+    r.hinted = true;
+    if (full) r.revealed_before_submit = true;
+    if (!r.revealed_at) r.revealed_at = Date.now();
+    if (r.pre_reveal_answer === undefined || r.pre_reveal_answer === null) {
+      r.pre_reveal_answer = String(preAnswer === undefined || preAnswer === null ? '' : preAnswer);
+    }
+    return r;
+  }
+  function revealNoticeNode() {
+    return el('div', 'reveal-notice', REVEAL_NOTICE);
+  }
+
   /* ---------------- 练习 + 回传码 ---------------- */
   function buildPractice(day) {
     var qs = day.questions || [];
@@ -845,6 +898,7 @@
     }
     function generate(open) {
       var payload = makePayload(state);
+      autoSync(payload);
       lastCode = encodeReturnCode(payload);
       QUIZ.lastCode = lastCode;
       codeArea.value = lastCode;
@@ -931,11 +985,15 @@
 
     function showReveal(q, r, box, onChange) {
       box.innerHTML = '';
-      var badge = r.correct
-        ? el('span', 'badge badge-good', '答对')
-        : el('span', 'badge badge-bad', '未答对 / 待复核');
-      box.appendChild(badge);
-      box.appendChild(el('div', 'reveal-row', '你的答案：' + (r.answer || '（空）')));
+      if (r && r.revealed_before_submit) box.appendChild(revealNoticeNode());
+      var badge = el('span', 'badge badge-good', '答对');
+      if (r && r._graded) {
+        badge = r.correct
+          ? el('span', 'badge badge-good', '答对')
+          : el('span', 'badge badge-bad', '未答对 / 待复核');
+        box.appendChild(badge);
+      }
+      box.appendChild(el('div', 'reveal-row', '你的答案：' + (r && r.answer ? r.answer : '（空）')));
       if (q.answer) box.appendChild(el('div', 'reveal-row', '参考答案：' + q.answer));
       if (q.rationale) box.appendChild(el('div', 'reveal-row', '解析：' + q.rationale));
       if (q.rubric) {
@@ -1042,9 +1100,11 @@
       body.appendChild(hintRow);
 
       var actionRow = el('div', 'q-actions');
+      var showAns = el('button', 'btn', '看答案 / 解析');
+      showAns.type = 'button';
       var submit = el('button', 'btn btn-primary q-submit', '提交答案');
       submit.type = 'button';
-      actionRow.appendChild(submit);
+      actionRow.appendChild(showAns); actionRow.appendChild(submit);
       body.appendChild(actionRow);
 
       var reveal = el('div', 'reveal');
@@ -1058,7 +1118,7 @@
                 seconds: elapsed(q2.id), error_type: null };
           state.results[q2.id] = r;
         }
-        r.hinted = true;
+        markRevealed(r, getValue ? getValue() : r.answer, false);
         save();
       }
       function paintStatus(r) {
@@ -1074,6 +1134,8 @@
                 seconds: elapsed(q.id), error_type: null };
         }
         r.answer = ans;
+        /* 已揭示 / 已提示后提交，hinted 只能保持 true，不能回退（契约 §3.1）。 */
+        r.hinted = !!(r.hinted || r.revealed_before_submit);
         var g = gradeAnswer(q, ans);
         if (g !== null) r.correct = g;
         else if (r.correct === null || r.correct === undefined) r.correct = false;
@@ -1085,6 +1147,19 @@
         paintStatus(r);
         updateChrome();
       }
+      showAns.addEventListener('click', function () {
+        var r = state.results[q.id];
+        if (!r) {
+          r = { qid: q.id, answer: getValue(), correct: false, hinted: true,
+                seconds: elapsed(q.id), error_type: null };
+          state.results[q.id] = r;
+        }
+        markRevealed(r, getValue(), true);
+        save();
+        reveal.hidden = false;
+        showReveal(q, r, reveal, updateChrome);
+        if (!r._graded) submit.textContent = REVEAL_SUBMIT_LABEL;
+      });
       submit.addEventListener('click', doSubmit);
 
       var existing = state.results[q.id];
@@ -1094,6 +1169,7 @@
         showReveal(q, existing, reveal, updateChrome);
         paintStatus(existing);
         if (existing.hinted) { hintBox.hidden = false; hintBox.textContent = hintText(q); }
+        if (existing.revealed_before_submit) submit.textContent = REVEAL_SUBMIT_LABEL;
       }
       return { node: node, q: q, submit: doSubmit };
     }
@@ -1355,26 +1431,44 @@
     return box;
   }
 
-  /* ⑦ 今日复习：具体词 + 为什么今天 + 下次大约 + 三档自评写入 review_ratings。 */
+  /* ⑦ 今日复习：优先真实 FSRS 到期项；没有记忆记录时才展示「预习建议」。
+     三条分支见 REVISION_CONTRACT §4；自评必须先显示答案才可点（§3.1）。 */
+  var CAP_ZH = {
+    meaning: '认意思', reading: '读音', listening: '听解', usage: '用法', production: '产出'
+  };
   function renderReviewBlock(day, state) {
-    var plan = day.review_plan || [];
+    var review = (day.review && typeof day.review === 'object') ? day.review : null;
+    var due = (review && review.due) ? review.due : [];
+    /* 旧数据没有 review 对象时退回 review_plan（视为预习建议，不宣称到期）。 */
+    var planned = (review && review.planned) ? review.planned
+      : (review ? [] : (day.review_plan || []));
     var box = sectionPlain('今日复习（记忆曲线）',
       '先遮住中文自己想，再点开对答案，最后选「记住了 / 模糊 / 忘了」。');
-    box.appendChild(el('p', 'review-disclaimer',
-      '这是按 1/2/3/7/14/30 天的复习计划，实际到期以本地 SQLite / WorkBuddy 会话为准。页面只记录你的自评，不替你判定掌握、不安排下次时间。'));
-    if (!plan.length) {
-      box.appendChild(el('div', 'review-empty',
-        '今天复习 0 个词（第一天全是新内容，不用复习）。'));
+    if (!due.length && !planned.length) {
+      box.appendChild(el('div', 'review-empty', '今天没有到期项。'));
       var news = (day.vocab || []).map(function (v) { return t(v.surface); }).filter(Boolean);
       if (news.length) box.appendChild(el('div', 'review-new',
         '今天新学：' + news.join(' / ') + '。明天会开始带你回忆这几个词。'));
       box.appendChild(el('div', 'review-why',
-        '为什么第一天没有复习：还没学过，自然没有「该回忆」的。下次大约哪天再来，由程序算好告诉你，本页不编。'));
+        '没有到期项就是没有到期项：本页不编造复习任务，也不把「读完页面」记为复习。'));
       return box;
     }
-    box.appendChild(el('div', 'review-count', '今天该回顾这 ' + plan.length + ' 个词：'));
-    plan.forEach(function (p, i) {
+    var isFsrs = due.length > 0;
+    var items = isFsrs ? due : planned;
+    if (isFsrs) {
+      box.appendChild(el('p', 'review-disclaimer',
+        '下面是本地 SQLite 里真实到期的 FSRS 记忆卡；到期时间由 FSRS 计算，页面只记录你的自评，不替你判定掌握。'));
+      box.appendChild(el('div', 'review-count', '今天真正到期（FSRS） · 共 ' + due.length + ' 项'));
+    } else {
+      box.appendChild(el('p', 'review-disclaimer',
+        '下面是预习建议（按粗略间隔生成），这些不是 FSRS 到期项；实际到期以本地 SQLite / WorkBuddy 会话为准。'));
+      box.appendChild(el('div', 'review-count', '预习建议（尚未建立记忆记录） · 共 ' + planned.length + ' 项'));
+    }
+    items.forEach(function (p, i) {
+      var kid = t(p.kid || p.knowledge_id);
+      var rateKid = t(p.card_key) || kid;   /* 能力卡按 kid|capability 精确排期 */
       var it = el('div', 'review-item');
+      if (p.planned_only) it.setAttribute('data-planned-only', '1');
       var head = el('div', 'review-head');
       head.appendChild(el('span', 'review-no', String(i + 1)));
       head.appendChild(el('span', 'review-surface', t(p.surface)));
@@ -1382,30 +1476,42 @@
       head.appendChild(listenBtn(t(p.surface) || t(p.kana), '听'));
       it.appendChild(head);
       var ansRow = el('div', 'review-ans');
-      var showBtn = el('button', 'btn btn-mini', '看答案');
+      var showBtn = el('button', 'btn btn-mini', '显示答案');
       showBtn.type = 'button';
       var zhSpan = el('span', 'review-zh', '');
       zhSpan.hidden = true;
-      showBtn.addEventListener('click', function () {
-        zhSpan.textContent = t(p.zh); zhSpan.hidden = false; showBtn.hidden = true;
-      });
       ansRow.appendChild(showBtn); ansRow.appendChild(zhSpan);
       it.appendChild(ansRow);
-      it.appendChild(el('div', 'review-reason', '为什么是今天：' + t(p.reason_zh)));
-      it.appendChild(el('div', 'review-next', t(p.next_hint_zh)));
+      if (isFsrs) {
+        var over = Number(p.overdue_days || 0);
+        var meta = '到期：' + t(p.due);
+        if (over > 0) meta += ' · 已逾期 ' + over + ' 天';
+        if (t(p.capability)) meta += ' · 能力：' + (CAP_ZH[t(p.capability)] || t(p.capability));
+        if (t(p.stage)) meta += ' · 阶段：' + t(p.stage);
+        it.appendChild(el('div', 'review-next', meta));
+      } else {
+        it.appendChild(el('div', 'review-reason', '为什么是今天：' + t(p.reason_zh)));
+        if (t(p.next_hint_zh)) it.appendChild(el('div', 'review-next', t(p.next_hint_zh)));
+      }
       var rates = el('div', 'rating-btns');
       rates.appendChild(el('span', 'rating-label', '回想一下：'));
+      var btns = [];
       [['good', '记住了'], ['hard', '模糊'], ['again', '忘了']].forEach(function (o) {
         var b = el('button', 'btn btn-mini rate-btn', o[1]);
         b.type = 'button';
+        b.disabled = true;   /* 未显示答案不得自评 */
         b.addEventListener('click', function () {
-          if (state) { state.reviewRatings[p.kid] = o[0]; if (QUIZ && QUIZ.save) QUIZ.save(); }
-          Array.prototype.forEach.call(rates.querySelectorAll('.rate-btn'), function (x) {
-            x.classList.remove('sel');
-          });
+          if (b.disabled) return;
+          if (state && rateKid) { state.reviewRatings[rateKid] = o[0]; if (QUIZ && QUIZ.save) QUIZ.save(); }
+          btns.forEach(function (x) { x.classList.remove('sel'); });
           b.classList.add('sel');
         });
+        btns.push(b);
         rates.appendChild(b);
+      });
+      showBtn.addEventListener('click', function () {
+        zhSpan.textContent = t(p.zh); zhSpan.hidden = false; showBtn.hidden = true;
+        btns.forEach(function (x) { x.disabled = false; });
       });
       it.appendChild(rates);
       box.appendChild(it);
@@ -1470,7 +1576,7 @@
     /* 回传码面板（由 buildPracticeV3 生成）挂到页尾折叠区，移出前 3 屏。 */
     if (QUIZ && QUIZ.returnBox) body.appendChild(QUIZ.returnBox);
     body.appendChild(el('p', 'muted',
-      '术语：摸底（不计分，只用来定起点）；今天该回顾这几个词（记忆曲线计划）；把成绩带回 WorkBuddy（回传码）。网页不向任何服务器发送学习数据，学习状态以本地 SQLite / WorkBuddy 会话为准。'));
+      '术语：摸底（不计分，只用来定起点）；复习任务分为「FSRS 到期项」与「预习建议（尚未建立记忆记录）」两种，页面会分别标注；把成绩带回 WorkBuddy（回传码）。网页不向任何服务器发送学习数据，学习状态以本地 SQLite / WorkBuddy 会话为准。'));
     return d;
   }
 
@@ -1584,6 +1690,7 @@
     }
     function generate(open) {
       var payload = makePayload(state);
+      autoSync(payload);
       lastCode = encodeReturnCode(payload);
       QUIZ.lastCode = lastCode;
       codeArea.value = lastCode;
@@ -1669,11 +1776,14 @@
     /* 解析区预渲染（DOM 里已有文本，初始隐藏）。中文化反馈，不出现英文错误归因枚举。 */
     function renderRevealContent(q, box, r) {
       box.innerHTML = '';
+      if (r && r.revealed_before_submit) box.appendChild(revealNoticeNode());
       if (r) {
-        var badge = r.correct
-          ? el('span', 'badge badge-good', '答对')
-          : el('span', 'badge badge-bad', '再核对一下');
-        box.appendChild(badge);
+        if (r._graded) {
+          var badge = r.correct
+            ? el('span', 'badge badge-good', '答对')
+            : el('span', 'badge badge-bad', '再核对一下');
+          box.appendChild(badge);
+        }
         box.appendChild(el('div', 'reveal-row', '你的答案：' + (r.answer || '（空）')));
       }
       if (t(q.answer)) box.appendChild(el('div', 'reveal-row', '参考答案：' + q.answer));
@@ -1759,6 +1869,25 @@
       var setValue = inputWrap._setValue;
       body.appendChild(inputWrap);
 
+      var hintRow = el('div', 'q-hint-row');
+      var hintBtn = el('button', 'btn btn-mini', '显示提示');
+      hintBtn.type = 'button';
+      var hintBox = el('div', 'hint-box');
+      hintBox.hidden = true;
+      hintBtn.addEventListener('click', function () {
+        hintBox.hidden = false; hintBox.textContent = hintText(q);
+        var r = state.results[q.id];
+        if (!r) {
+          r = { qid: q.id, answer: getValue(), correct: false, hinted: true,
+                seconds: elapsed(q.id), error_type: null };
+          state.results[q.id] = r;
+        }
+        markRevealed(r, getValue(), false);
+        save();
+      });
+      hintRow.appendChild(hintBtn); hintRow.appendChild(hintBox);
+      body.appendChild(hintRow);
+
       var actionRow = el('div', 'q-actions');
       var showAns = el('button', 'btn', '看答案 / 解析'); showAns.type = 'button';
       var submit = el('button', 'btn btn-primary q-submit', '提交答案'); submit.type = 'button';
@@ -1784,6 +1913,8 @@
                 seconds: elapsed(q.id), error_type: null };
         }
         r.answer = ans;
+        /* 已揭示 / 已提示后提交，hinted 只能保持 true，不能回退（契约 §3.1）。 */
+        r.hinted = !!(r.hinted || r.revealed_before_submit);
         var g = gradeAnswer(q, ans);
         if (g !== null) r.correct = g;
         else if (r.correct === null || r.correct === undefined) r.correct = false;
@@ -1796,7 +1927,19 @@
         paintStatus(r);
         updateChrome();
       }
-      showAns.addEventListener('click', function () { reveal.hidden = false; });
+      showAns.addEventListener('click', function () {
+        var r = state.results[q.id];
+        if (!r) {
+          r = { qid: q.id, answer: getValue(), correct: false, hinted: true,
+                seconds: elapsed(q.id), error_type: null };
+          state.results[q.id] = r;
+        }
+        markRevealed(r, getValue(), true);
+        save();
+        reveal.hidden = false;
+        showReveal(q, r, reveal, updateChrome);
+        if (!r._graded) submit.textContent = REVEAL_SUBMIT_LABEL;
+      });
       submit.addEventListener('click', doSubmit);
 
       var existing = state.results[q.id];
@@ -1806,6 +1949,8 @@
         reveal.hidden = false;
         showReveal(q, existing, reveal, updateChrome);
         paintStatus(existing);
+        if (existing.hinted) { hintBox.hidden = false; hintBox.textContent = hintText(q); }
+        if (existing.revealed_before_submit) submit.textContent = REVEAL_SUBMIT_LABEL;
       }
       return { node: node, q: q, submit: doSubmit };
     }

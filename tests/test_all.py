@@ -203,7 +203,9 @@ class TestCFlow(unittest.TestCase):
     def test_02_answer_and_grade(self):
         good = jrun("answer", "--day", "1", "--q", "Q0181", "--answer", "は")
         self.assertTrue(good["ok"] and good["correct"] is True)
-        self.assertIn("G0001", good["stages"])
+        # v4：状态按「知识点|能力」分卡，stages 的键是 G0001|usage 这类复合键。
+        self.assertTrue(any(k.startswith("G0001") for k in good["stages"]),
+                        "答对助词题必须推进对应语法能力卡：%s" % good["stages"])
         bad = jrun("answer", "--day", "1", "--q", "Q0182", "--answer", "だ",
                    "--error-type", "particle")
         self.assertFalse(bad["correct"])
@@ -287,15 +289,19 @@ class TestCFlow(unittest.TestCase):
         conn = core.connect(TMP, readonly=True)
         try:
             for kid in ("V0259", "V0260"):
-                card = conn.execute("SELECT reps,due FROM fsrs_cards WHERE knowledge_id=?",
-                                    (kid,)).fetchone()
-                self.assertIsNotNone(card, "复习自评必须写入 FSRS 卡片")
-                self.assertEqual(card["reps"], 1, "重复导入不得重复推进")
+                card = conn.execute(
+                    "SELECT reps,due FROM fsrs_cards WHERE knowledge_id LIKE ?",
+                    (kid + "%",)).fetchone()
+                self.assertIsNotNone(card, "复习自评必须落一张卡（无作答记录时为预习卡）")
+                # v4：没有真实作答记录的“记住了”只能建预习卡，不能算一次成功复习。
+                self.assertEqual(card["reps"], 0,
+                                 "无作答记录的自评不得推进 FSRS 复习次数，只能排到明天预习")
                 self.assertTrue(card["due"], "必须算出下次复习时间")
                 st = conn.execute("SELECT mastered,stage FROM knowledge_state WHERE knowledge_id=?",
                                   (kid,)).fetchone()
-                self.assertEqual(st["mastered"], 0, "自评不得判定掌握")
-                self.assertEqual(st["stage"], "unseen", "自评不得推进掌握阶段")
+                if st is not None:   # v4 允许完全不建掌握状态行：自评不等于学习证据
+                    self.assertEqual(st["mastered"], 0, "自评不得判定掌握")
+                    self.assertEqual(st["stage"], "unseen", "自评不得推进掌握阶段")
             self.assertEqual(
                 conn.execute("SELECT COUNT(*) FROM attempts WHERE day=2 AND qid IN ('V0259','V0260')")
                             .fetchone()[0], 0, "复习自评不是题目作答，不得写 attempts")

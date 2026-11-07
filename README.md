@@ -5,9 +5,34 @@
 > Preview：https://nihongo80-preview.cmjfire.workers.dev
 > 手机 / PC 直接打开当天页，例如 https://nihongo80.cmjfire.workers.dev/day-001.html
 > 部署方式复用 zoomlab-web（Worker + 静态资源，一条 `wrangler deploy`），详见 `docs/CLOUDFLARE.md`。
-> **当前线上为 v3**（2026-11-06 重新部署）：打开当天页首屏就是「今天要会的 3 句话」和字段齐全的单词卡，
-> 语法、例句、发音、中文难点、韩语对照、记忆曲线复习与练习都在页面上；系统术语退到页尾。
-> 详见下文「每天页面怎么用（v3）」与 `docs/REDESIGN_PLAN.md`。
+> **当前线上为 v4**（2026-11-07 重新部署）：评分契约、课程对齐、N3 素材与掌握门控已按审查整改；
+> 新增 `https://nihongo80.cmjfire.workers.dev/n3-mock.html`（N3 分项限时模拟）。
+> 整改口径见 `docs/REVISION_CONTRACT.md`，实测记录见 `docs/VALIDATION.md` 的 v4 节，
+> 独立复审（含未修完项）见 `reports/v4_review.md`。
+> 当天页仍是「今天要会的 3 句话」+ 词卡 + 语法 + 例句 + 发音 + 复习 + 练习；系统术语在页尾。
+
+## v4 整改（2026-11-07，针对深度审查的 P0/P1/P2）
+
+审查指出的问题是真的：v3 的复习事件会被污染、课程是按模块拼接的、N3 素材不足以代表 N3。
+v4 不改 FSRS 公式，改的是**事件采集与评分契约**，并把内容补齐到能支撑一次接近真实形式的训练。
+实现口径见 `docs/REVISION_CONTRACT.md`，逐条验收见 `reports/`。
+
+| 等级 | 问题 | v4 做法 |
+|---|---|---|
+| P0 | 答对一道题同时“学会”6 个知识点 | 题目拆成 `targets`（可改变掌握）与 `context`（只出现在题面）；`Q0001` 现在只推进 `G0001|usage`，不再碰 `私/学生` 等 |
+| P0 | 一张卡代替一个词的所有能力 | 按 `meaning / reading / listening / usage / production` 分能力建卡、分能力排 FSRS；`knowledge_state` 只作聚合视图 |
+| P0 | 看完答案仍算独立答对 | 点「看答案」立即锁定 `hinted=true`，提交按钮改文案，解析区标注“本次为提示学习”；后端 `hinted` 只能上调，封顶 `hinted_recall` |
+| P0 | 后端直接相信前端判分 | `import-web-result` 用题库标准答案重新判分；前端 `correct` 只进 `disagreements` 审计 |
+| P0 | 网页复习时间不是 FSRS 到期 | 页面优先显示 `review.due`（真实 FSRS 到期 + 逾期天数）；固定 1/2/3/7/14/30 只作“预习建议”，并明确标注 |
+| P1 | 教材把正确日语判成错 | 修 `Q0006`、`G0002`、`G0005`；85+11 条语法全量补 `register_note`；`audit_content.py` 高危 0、中危 0 |
+| P1 | 场景/语法/素材错配 | 按 topic 选材（主素材与场景同主题 65/80 天，其中读写两篇都同主题 9 天，另 15 天为综合复习）；96 条新语法中 76 条能在当天素材/新词里找到硬证据，其余 20 条逐天列入告警，不粉饰为“已对齐” |
+| P1 | N3 听读不足 | N3 词汇 70→150、语法 25→36；新增 20 篇 N3 阅读（≥180 字符）、15 篇两人对话听力、63 道 N3 题；`n3-mock.html` 按 30/70/40 分钟分项限时计分 |
+| P1 | 没有真正的掌握门控 | `learning.gate()` 检查先修：未到 `independent_recall` 的语法当天推迟，写 `gate_defer` 与补救任务，`start-day` 的 briefing 与 `nh80.py gate --day N` 都能看到 |
+| P2 | 网页与数据库不通 | 页面在有网络时自动 `POST /api/events`（只发原始事件，不发 `correct`），Worker 用 `answer-key.json` 服务端重判后存 D1；`nh80.py pull-cloud` 拉回本地入库。无 D1 时自动上报失败即静默，回传码仍是兜底 |
+
+**仍未解决的诚实边界**：没有真人录音（全部 TTS，`audio_kind=tts`）；没有外部日语教师逐条复核
+（`review_status=self_reviewed`）；`n3-mock.html` 是模拟估分，不是 JLPT 官方判定；
+80 天仍只是压缩冲刺路径，不承诺合格。
 
 一个**长期运行、状态落盘、可审计**的日语学习系统：SQLite 知识库 + FSRS 复习引擎 +
 80 天完整课程 + 每日独立 WorkBuddy 教学会话 + Cloudflare/本地双端每日页面。
@@ -56,7 +81,7 @@ cd /Users/mj/Documents/learn/jp/nihongo-80
 python3 scripts/nh80.py init
 ```
 
-`init` 会：建库 → 导入 877 条种子 → 校验并生成 Day 1–80 课程 → 生成 80 个网页 → 导出状态镜像。
+`init` 会：建库 → 导入 **1066 条**种子 → 校验并生成 Day 1–80 课程 → 生成 80 个网页 → 导出状态镜像。
 预期输出 `curriculum.validation: true, errors: 0`。
 
 若只改了知识种子或课程规则，重建用：
@@ -64,7 +89,7 @@ python3 scripts/nh80.py init
 ```bash
 python3 scripts/merge_sources.py     # 来源清单重映射（幂等）
 python3 scripts/nh80.py build        # 重建课程 + 网页
-python3 tests/test_all.py            # 20 项验收测试
+python3 -m unittest discover -s tests   # 49 项验收测试
 ```
 
 ---
@@ -185,7 +210,7 @@ python3 scripts/nh80.py finish-day 1 --minutes 58
 | `python3 scripts/nh80.py relation V0001` | 查看「词汇→例句→语法→课程→题目→错题→复习」链路 |
 | `python3 scripts/nh80.py validate` | 80 天完整性、先修、超纲、覆盖率 |
 | `python3 scripts/nh80.py backup` / `restore <path>` / `audit` | 备份、恢复、审计日志 |
-| `python3 tests/test_all.py` | 20 项自动验收（含框架兑现、v3 复习自评闭环测试） + Day 1–3 端到端演练 |
+| `python3 -m unittest discover -s tests` | 49 项自动验收（评分契约、内容准确性、课程对齐、网页契约 + Day 1–3 端到端演练） |
 
 ---
 
@@ -195,7 +220,7 @@ python3 scripts/nh80.py finish-day 1 --minutes 58
 |---|---|---|
 | 研究资料 | `research/` | **9 份 .md**（含 v3 新增 `ux_audit.md` / `textbook_lesson_pattern.md`、合并总表 `source_registry.md`）+ 3 份原始 JSON |
 | 机器可读来源清单 | `config/sources.json` | 80 条（67 OK / 4 PARTIAL / 1 FAIL / 7 UNVERIFIED / 1 内部） |
-| 知识种子 | `knowledge/seeds/*.jsonl` | **877 条**：260 词（N5 141 / N4 49 / N3 70）、85 语法（N5 34 / N4 26 / N3 25）、140 汉字（N5 69 / N4 36 / N3 35）、332 题、60 素材 |
+| 知识种子 | `knowledge/seeds/*.jsonl` | **1066 条**：340 词（N5 141 / N4 49 / N3 150）、96 语法（N5 34 / N4 26 / N3 36）、140 汉字（N5 69 / N4 36 / N3 35）、395 题、95 素材（N3 素材 58 篇 = 36 篇考试级长文 + 22 篇短句练习） |
 | 数据库 | `data/state.db` | SQLite，FTS5 字符 bigram 全文索引 + 关系图 + 状态表 + 审计日志 |
 | 80 天课程 | `curriculum/` | `curriculum.json`（真源）、`roadmap.md`、`coverage_report.md`、`day-001.md`…`day-080.md` |
 | 每日页面 | `web/` | 80 页 + index/404 + CSS/JS + PWA(manifest/sw/icon)，零 CDN、零外部请求 |
@@ -203,7 +228,7 @@ python3 scripts/nh80.py finish-day 1 --minutes 58
 | Agent 配置 | `AGENTS.md`、`agents/{director,teacher,examiner,reviewer}.md` | 教学总监/教师/考官/复习官 |
 | 学习档案 | `student/*.json` | **只读镜像**，真源是 `data/state.db` |
 | 报告 | `reports/` | 周报、阶段评估、最终报告（只从真实数据生成） |
-| 测试 | `tests/test_all.py` | 20 项，全部通过（20/20 PASS） |
+| 测试 | `tests/` | 49 项，全部通过（49/49 PASS） |
 
 ---
 

@@ -118,6 +118,15 @@ CREATE TABLE IF NOT EXISTS knowledge_state (
   rolling_accuracy REAL DEFAULT 0.0, mastered INTEGER DEFAULT 0,
   updated_at TEXT
 );
+CREATE TABLE IF NOT EXISTS capability_state (
+  kid TEXT NOT NULL, capability TEXT NOT NULL, stage TEXT DEFAULT 'unseen',
+  attempts INTEGER DEFAULT 0, correct_attempts INTEGER DEFAULT 0,
+  hinted_count INTEGER DEFAULT 0, independent_count INTEGER DEFAULT 0,
+  delayed_count INTEGER DEFAULT 0, distinct_contexts TEXT DEFAULT '[]',
+  last_review_day INTEGER, last_review_at TEXT, rolling TEXT DEFAULT '[]',
+  rolling_accuracy REAL DEFAULT 0.0, updated_at TEXT,
+  PRIMARY KEY (kid, capability)
+);
 CREATE TABLE IF NOT EXISTS fsrs_cards (
   knowledge_id TEXT PRIMARY KEY, stage TEXT, due TEXT, stability REAL,
   difficulty REAL, state INTEGER, step INTEGER, reps INTEGER DEFAULT 0,
@@ -159,6 +168,7 @@ CREATE INDEX IF NOT EXISTS ix_rel_src ON relations(src_type, src_id);
 CREATE INDEX IF NOT EXISTS ix_rel_dst ON relations(dst_type, dst_id);
 CREATE INDEX IF NOT EXISTS ix_attempt_day ON attempts(day);
 CREATE INDEX IF NOT EXISTS ix_fsrs_due ON fsrs_cards(due);
+CREATE INDEX IF NOT EXISTS ix_cap_stage ON capability_state(stage);
 CREATE VIRTUAL TABLE IF NOT EXISTS search_fts USING fts5(
   kid UNINDEXED, kind UNINDEXED, body, tokenize='unicode61'
 );
@@ -171,12 +181,15 @@ def init_db(root=None) -> dict:
     with conn:
         conn.executescript(SCHEMA)
         conn.execute(
-            "INSERT OR REPLACE INTO meta(key,value) VALUES('schema_version','1'),('created_at',?)",
+            "INSERT OR REPLACE INTO meta(key,value) VALUES('schema_version','4'),('created_at',?)",
             (iso(),),
         )
+        # v4：能力分卡迁移（幂等）。core 不 import learning 顶层，避免循环依赖。
+        from learning import migrate_v4
+        migrate_v4(conn)
         audit(conn, "init_db", {"root": str(r)})
     conn.close()
-    return {"ok": True, "db": str(db_path(r)), "tables": 22}
+    return {"ok": True, "db": str(db_path(r)), "tables": 23}
 
 
 def audit(conn, action: str, payload=None, actor="script") -> None:

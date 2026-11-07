@@ -6,7 +6,7 @@
 
 ```
 ┌─ 人可编辑、可审计 ────────────────────────────────┐
-│ knowledge/seeds/*.jsonl   877 条（唯一知识真源）      │
+│ knowledge/seeds/*.jsonl   1066 条（唯一知识真源）     │
 │ curriculum/curriculum.json 80 天（唯一课程真源）      │
 │ config/sources.json        80 条来源登记              │
 └──────────────────────┬─────────────────────────────┘
@@ -31,7 +31,8 @@
             纯静态、零外部请求、PC/手机双端、PWA
 ```
 
-> **知识库规模与关系边数（v3 更新口径）**：种子仍为 **877 条**、关系边仍为 **4983 条**
+> **知识库规模与关系边数（v4 更新口径）**：种子为 **1066 条**（340 词 / 96 语法 / 140 汉字 / 395 题 / 95 素材），
+> 关系边随题目与素材增加而增长；具体数字以 `python3 scripts/nh80.py init` 的实测输出为准
 > （沿用此前 `SELECT COUNT(*) FROM relations` 实测值，v3 未改动知识规模，不编造新的边数）。
 > v3 新增的 `knowledge/ko_analogy.json`（85/85 语法 + 57 词的韩语对照）是**静态教学参考文件**，
 > 不入 `state.db`、不产生关系边，仅由 `build_site.py` 按天裁剪后写进页面数据，详见 §12.2。
@@ -57,7 +58,7 @@ Tadoku / JMdict 只贡献目标格式、能力标准、题型边界与素材分�
 
 ## 2. 检索方式实测对比（先比较，再决定不上向量库）
 
-索引：877 条文档入 FTS5，4983 条关系边。中文/日文无空格，`unicode61` 会把整句当一个 token，
+索引：1066 条文档入 FTS5，关系边由导入时实测生成。中文/日文无空格，`unicode61` 会把整句当一个 token，
 因此把 `surface/kana/meaning_zh/例句/释义` 等拼成**字符 bigram** 再入索引，任意两字子串可查。
 
 真实运行 `python3 scripts/nh80.py search "<q>" --mode ...` 的召回数（2026-11-06）：
@@ -232,7 +233,7 @@ AI 负责解释、互动、出题措辞、开放题评价与分析；程序负�
 ### 12.1 从课程真源到 8 区块
 
 ```
-knowledge/seeds/*.jsonl (877 条) ─┐
+knowledge/seeds/*.jsonl (1066 条) ─┐
 knowledge/ko_analogy.json (85/85 语法 + 57 词) ─┤
                                                ▼
 scripts/curriculum.py  →  curriculum/curriculum.json 每天新增

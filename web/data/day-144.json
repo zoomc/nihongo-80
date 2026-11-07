@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "22 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；6 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "流す",
    "kana": "ながす",
    "meaning": "冲；流（泪）",
-   "ko": "未标注对应（待核对）",
+   "ko": "쏟다（流，淌）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "あんな恐ろしい男のために流す涙はない。",
@@ -130,7 +132,9 @@
    "surface": "半ば",
    "kana": "なかば",
    "meaning": "一半；中途",
-   "ko": "未标注对应（待核对）",
+   "ko": "반（一半，半） / 중턱（一半）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼女は４０代半ばで再婚した。",
@@ -143,7 +147,9 @@
    "surface": "仲間",
    "kana": "なかま",
    "meaning": "伙伴；同伴",
-   "ko": "未标注对应（待核对）",
+   "ko": "동료",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "田中さんは父のつり仲間の一人だ。",
@@ -156,7 +162,9 @@
    "surface": "眺め",
    "kana": "ながめ",
    "meaning": "景色；眺望",
-   "ko": "未标注对应（待核对）",
+   "ko": "경치（风景，景色）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "眺めのよい部屋をお願いします。",
@@ -169,7 +177,9 @@
    "surface": "眺める",
    "kana": "ながめる",
    "meaning": "眺望；凝视",
-   "ko": "未标注对应（待核对）",
+   "ko": "내다보다（眺望，远望） / 바라다보다（注视，凝视）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "何時間も海を眺めた。",
@@ -182,7 +192,9 @@
    "surface": "流れ",
    "kana": "ながれ",
    "meaning": "水流；潮流",
-   "ko": "未标注对应（待核对）",
+   "ko": "흐름（潮流，长河，进程，流程）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "流れは池に注いでいる。",
@@ -195,7 +207,9 @@
    "surface": "流れる",
    "kana": "ながれる",
    "meaning": "流动；漂流",
-   "ko": "未标注对应（待核对）",
+   "ko": "흐르다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "当時はきれいな水がこの川にも流れていた。",
@@ -208,7 +222,9 @@
    "surface": "無し",
    "kana": "なし",
    "meaning": "没有",
-   "ko": "未标注对应（待核对）",
+   "ko": "없음",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ようやくその男と貸し借り無しになった。",
@@ -221,7 +237,9 @@
    "surface": "なぜなら",
    "kana": "なぜなら",
    "meaning": "因为",
-   "ko": "未标注对应（待核对）",
+   "ko": "왜냐하면",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "接续词",
    "ex": {
     "ja": "なぜなら新聞記者だったからです。",
@@ -234,7 +252,9 @@
    "surface": "謎",
    "kana": "なぞ",
    "meaning": "谜；谜团",
-   "ko": "未标注对应（待核对）",
+   "ko": "수수께끼（谜）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼がなぜ仕事をやめたのかは謎だ。",
@@ -247,7 +267,9 @@
    "surface": "納得",
    "kana": "なっとく",
    "meaning": "理解；认可",
-   "ko": "납득",
+   "ko": "납득（接受，理解）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词/自动词",
    "ex": {
     "ja": "「そっか」ウィリーはようやく納得した。",
@@ -260,7 +282,9 @@
    "surface": "何",
    "kana": "なに",
    "meaning": "什么",
-   "ko": "未标注对应（待核对）",
+   "ko": "머（什么） / 뭐（什么） / 뭣（什么）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "代名词",
    "ex": {
     "ja": "今のアナウンスは何だったのですか。",
@@ -273,7 +297,9 @@
    "surface": "何か",
    "kana": "なにか",
    "meaning": "某物；什么",
-   "ko": "未标注对应（待核对）",
+   "ko": "무슨（什么）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "代名词",
    "ex": {
     "ja": "ここまでのところで何か落としていることはありませんか。",
@@ -286,7 +312,9 @@
    "surface": "なにも",
    "kana": "なにも",
    "meaning": "什么也（不）",
-   "ko": "未标注对应（待核对）",
+   "ko": "아무것도（부정과 함께）",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "惯用表达",
    "ex": {
     "ja": "過ちのない者は何も作り出せない。",
@@ -299,7 +327,9 @@
    "surface": "鍋",
    "kana": "なべ",
    "meaning": "锅",
-   "ko": "未标注对应（待核对）",
+   "ko": "냄비",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ここに手のないナベがある。",
@@ -312,7 +342,9 @@
    "surface": "生",
    "kana": "なま",
    "meaning": "生的；鲜的",
-   "ko": "未标注对应（待核对）",
+   "ko": "날것 / 신선함",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ゴムをすると確かに性感が落ちるので、出来れば生でしたいです。",
@@ -325,7 +357,9 @@
    "surface": "怠ける",
    "kana": "なまける",
    "meaning": "懒惰；懈怠",
-   "ko": "未标注对应（待核对）",
+   "ko": "게으름 피우다",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "彼は勉強を怠けている。",
@@ -338,7 +372,9 @@
    "surface": "波",
    "kana": "なみ",
    "meaning": "波浪",
-   "ko": "未标注对应（待核对）",
+   "ko": "물결（水波，波浪） / 파도（波涛，浪涛，波浪）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "船は波のなすがままになっている。",
@@ -351,7 +387,9 @@
    "surface": "涙",
    "kana": "なみだ",
    "meaning": "眼泪",
-   "ko": "未标注对应（待核对）",
+   "ko": "눈물（眼泪，泪水）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "２粒の涙が彼女のほおを流れ落ちた。",
@@ -364,7 +402,9 @@
    "surface": "悩む",
    "kana": "なやむ",
    "meaning": "烦恼；苦恼",
-   "ko": "未标注对应（待核对）",
+   "ko": "고민되다（苦恼，发愁） / 고민하다（苦恼，发愁）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "悩んでも何の利益にもならない。",
@@ -377,7 +417,9 @@
    "surface": "縄",
    "kana": "なわ",
    "meaning": "绳子",
-   "ko": "未标注对应（待核对）",
+   "ko": "끈（绳子，绳索，线） / 줄（绳，绳子） / 밧줄（绳子，麻绳）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "彼は縄で木に縛り付けられた。",
@@ -390,7 +432,9 @@
    "surface": "何で",
    "kana": "なんで",
    "meaning": "为什么",
-   "ko": "未标注对应（待核对）",
+   "ko": "왜（为什么）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "副词",
    "ex": {
     "ja": "何で彼女はそんなことをしたのか。",
@@ -398,6 +442,32 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V2571",
+  "V2572",
+  "V2573",
+  "V2574",
+  "V2575",
+  "V2576",
+  "V2577",
+  "V2578",
+  "V2579",
+  "V2580",
+  "V2581",
+  "V2582",
+  "V2583",
+  "V2584",
+  "V2585",
+  "V2586"
+ ],
+ "extension_vocab_ids": [
+  "V2587",
+  "V2588",
+  "V2589",
+  "V2590",
+  "V2591",
+  "V2592"
  ],
  "grammar": [
   {

@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "常識",
    "kana": "じょうしき",
    "meaning": "常识",
-   "ko": "상식",
+   "ko": "상식（常识）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼女には常識が欠けている。",
@@ -131,6 +133,8 @@
    "kana": "しょうじょ",
    "meaning": "少女",
    "ko": "소녀",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "あのかわいい少女は私の妹です。",
@@ -143,7 +147,9 @@
    "surface": "少々",
    "kana": "しょうしょう",
    "meaning": "稍微；少许",
-   "ko": "未标注对应（待核对）",
+   "ko": "조금",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "副词/名词",
    "ex": {
     "ja": "ぼくは少々君に腹が立っているんだ。",
@@ -156,7 +162,9 @@
    "surface": "生じる",
    "kana": "しょうじる",
    "meaning": "产生；发生",
-   "ko": "未标注对应（待核对）",
+   "ko": "가다（产生，造成）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "事故は不注意から生じる。",
@@ -169,7 +177,9 @@
    "surface": "上達",
    "kana": "じょうたつ",
    "meaning": "进步；提高",
-   "ko": "未标注对应（待核对）",
+   "ko": "향상 / 실력 향상",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "君の英語は上達している。",
@@ -182,7 +192,9 @@
    "surface": "冗談",
    "kana": "じょうだん",
    "meaning": "玩笑",
-   "ko": "未标注对应（待核对）",
+   "ko": "농（玩笑） / 우스개（笑话，玩笑） / 농지거리（开玩笑，闹着玩儿，戏谑）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "冗談はもうたくさんだ。",
@@ -195,7 +207,9 @@
    "surface": "上等",
    "kana": "じょうとう",
    "meaning": "上等；高档",
-   "ko": "상등",
+   "ko": "고급 / 상등",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "连体词/な形容词/名词",
    "ex": {
     "ja": "どうしてこんな上等のぶどう酒を今まで取って置いたのか。",
@@ -208,7 +222,9 @@
    "surface": "衝突",
    "kana": "しょうとつ",
    "meaning": "冲突；碰撞",
-   "ko": "충돌",
+   "ko": "충돌（冲突，碰撞，冲撞）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "日米の利害がこの点で衝突した。",
@@ -221,7 +237,9 @@
    "surface": "商人",
    "kana": "しょうにん",
    "meaning": "商人",
-   "ko": "상인",
+   "ko": "장사꾼（商人，贩子，商贩）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "商人は商品を売り買いする人だ。",
@@ -234,7 +252,9 @@
    "surface": "少年",
    "kana": "しょうねん",
    "meaning": "少年",
-   "ko": "소년",
+   "ko": "소년（少年，男孩）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "少年は木に自分の名前を刻んだ。",
@@ -247,7 +267,9 @@
    "surface": "商売",
    "kana": "しょうばい",
    "meaning": "生意；买卖",
-   "ko": "未标注对应（待核对）",
+   "ko": "장사（生意，经商）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "彼は商売がうまくいったのを喜んだ。",
@@ -260,7 +282,9 @@
    "surface": "消費",
    "kana": "しょうひ",
    "meaning": "消费",
-   "ko": "소비",
+   "ko": "소비（消费，消耗）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "その車は多量の燃料を消費する。",
@@ -273,7 +297,9 @@
    "surface": "商品",
    "kana": "しょうひん",
    "meaning": "商品",
-   "ko": "상품",
+   "ko": "상품（商品） / 물건（商品，物品）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "商人は商品を売り買いする人だ。",
@@ -286,7 +312,9 @@
    "surface": "消防",
    "kana": "しょうぼう",
    "meaning": "消防",
-   "ko": "소방",
+   "ko": "소방（消防）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼が言うには、消防の仕事というのは大忙しか全く暇かのいずれかだそうだ。",
@@ -299,7 +327,9 @@
    "surface": "証明",
    "kana": "しょうめい",
    "meaning": "证明",
-   "ko": "증명",
+   "ko": "증명（证明）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "私が間違っていない事を証明しよう。",
@@ -312,7 +342,9 @@
    "surface": "女王",
    "kana": "じょおう",
    "meaning": "女王",
-   "ko": "여왕",
+   "ko": "여왕（女王）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "女王は国民に向けて演説をした。",
@@ -325,7 +357,9 @@
    "surface": "職",
    "kana": "しょく",
    "meaning": "工作；职务",
-   "ko": "직",
+   "ko": "직（工作） / 노릇（工作，事，玩意）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "職探しはどうなったの？",
@@ -338,7 +372,9 @@
    "surface": "職業",
    "kana": "しょくぎょう",
    "meaning": "职业",
-   "ko": "직업",
+   "ko": "직업（职业） / 직장（职业，职场，工作）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "婦人に開放されている職業は多い。",
@@ -351,7 +387,9 @@
    "surface": "食卓",
    "kana": "しょくたく",
    "meaning": "餐桌",
-   "ko": "식탁",
+   "ko": "식탁（餐桌）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/连体词",
    "ex": {
     "ja": "彼女は食卓に料理を並べた。",
@@ -364,7 +402,9 @@
    "surface": "食品",
    "kana": "しょくひん",
    "meaning": "食品",
-   "ko": "식품",
+   "ko": "식품（食品）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "この食品は有毒である。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V2157",
+  "V2158",
+  "V2159",
+  "V2160",
+  "V2161",
+  "V2162",
+  "V2163",
+  "V2164",
+  "V2165",
+  "V2166",
+  "V2167",
+  "V2168",
+  "V2169",
+  "V2170",
+  "V2171",
+  "V2172"
+ ],
+ "extension_vocab_ids": [
+  "V2173",
+  "V2174",
+  "V2175",
+  "V2176"
  ],
  "grammar": [
   {

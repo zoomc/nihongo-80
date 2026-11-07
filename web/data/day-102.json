@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "議論",
    "kana": "ぎろん",
    "meaning": "讨论；争论",
-   "ko": "의론",
+   "ko": "의논（商议，讨论，商量）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "彼らは議論をやめることに決めた。",
@@ -130,7 +132,9 @@
    "surface": "銀",
    "kana": "ぎん",
    "meaning": "银",
-   "ko": "은",
+   "ko": "은（银）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "金より銀の指輪の方が好きです。",
@@ -143,7 +147,9 @@
    "surface": "禁煙",
    "kana": "きんえん",
    "meaning": "禁烟",
-   "ko": "금연",
+   "ko": "금연（禁烟）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)",
    "ex": {
     "ja": "いつ禁煙のサインを消すのでしょうね。",
@@ -156,7 +162,9 @@
    "surface": "金額",
    "kana": "きんがく",
    "meaning": "金额",
-   "ko": "금액",
+   "ko": "금액（金额） / 액수（数额，金额）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼は彼女にかなりの金額を与えた。",
@@ -169,7 +177,9 @@
    "surface": "金庫",
    "kana": "きんこ",
    "meaning": "保险箱",
-   "ko": "금고",
+   "ko": "금고（保险柜，保险箱，金库）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "貴重品は金庫にしまっておきなさい。",
@@ -182,7 +192,9 @@
    "surface": "禁止",
    "kana": "きんし",
    "meaning": "禁止",
-   "ko": "금지",
+   "ko": "금지（禁止）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "ここでは煙草は禁止されています。",
@@ -195,7 +207,9 @@
    "surface": "金銭",
    "kana": "きんせん",
    "meaning": "金钱",
-   "ko": "금전",
+   "ko": "금전（金钱，钱） / 돈（钱，金钱，钱币）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/连体词",
    "ex": {
     "ja": "金銭のことで彼と争いになった。",
@@ -208,7 +222,9 @@
    "surface": "金属",
    "kana": "きんぞく",
    "meaning": "金属",
-   "ko": "금속",
+   "ko": "금속（金属） / 쇠（金属）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "鉄は最も有用な金属です。",
@@ -221,7 +237,9 @@
    "surface": "近代",
    "kana": "きんだい",
    "meaning": "近代",
-   "ko": "근대",
+   "ko": "근대（近代）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "近代医学の進歩は長い道程を歩んだ。",
@@ -234,7 +252,9 @@
    "surface": "緊張",
    "kana": "きんちょう",
    "meaning": "紧张",
-   "ko": "긴장",
+   "ko": "긴장（紧张）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "冷戦の緊張が高まった。",
@@ -247,7 +267,9 @@
    "surface": "筋肉",
    "kana": "きんにく",
    "meaning": "肌肉",
-   "ko": "근육",
+   "ko": "근육（肌肉）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "水泳は筋肉を発達させる。",
@@ -260,7 +282,9 @@
    "surface": "金融",
    "kana": "きんゆう",
    "meaning": "金融",
-   "ko": "금융",
+   "ko": "금융（金融）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "工業よりも金融に関心のある学生のほうが多い。",
@@ -273,7 +297,9 @@
    "surface": "金曜",
    "kana": "きんよう",
    "meaning": "星期五",
-   "ko": "금요",
+   "ko": "금요일",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼は月曜から金曜まで働く。",
@@ -286,7 +312,9 @@
    "surface": "句",
    "kana": "く",
    "meaning": "句；俳句",
-   "ko": "구",
+   "ko": "구（句）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼はその句の文字どおりの意味を説明した。",
@@ -299,7 +327,9 @@
    "surface": "食う",
    "kana": "くう",
    "meaning": "吃",
-   "ko": "未标注对应（待核对）",
+   "ko": "먹다（吃）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "この事業は金を食う。",
@@ -312,7 +342,9 @@
    "surface": "偶然",
    "kana": "ぐうぜん",
    "meaning": "偶然",
-   "ko": "우연",
+   "ko": "우연（偶然） / 우연히（偶然地）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "副词",
    "ex": {
     "ja": "私は道で古い友人と偶然出会った。",
@@ -325,7 +357,9 @@
    "surface": "臭い",
    "kana": "くさい",
    "meaning": "臭",
-   "ko": "未标注对应（待核对）",
+   "ko": "구리다（臭，难闻） / 쿠리다（臭，难闻） / 고리타분하다（臭，腐臭）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "い形容词",
    "ex": {
     "ja": "あいつが臭い。",
@@ -338,7 +372,9 @@
    "surface": "鎖",
    "kana": "くさり",
    "meaning": "锁链",
-   "ko": "쇄",
+   "ko": "사슬 / 쇠사슬",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "ジョージはその犬に鎖をつけた。",
@@ -351,7 +387,9 @@
    "surface": "腐る",
    "kana": "くさる",
    "meaning": "腐烂",
-   "ko": "未标注对应（待核对）",
+   "ko": "곯다（坏，腐烂） / 썩다（腐败，腐烂） / 상하다（损坏，腐烂，变质）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "これらのオレンジは腐っている。",
@@ -364,7 +402,9 @@
    "surface": "癖",
    "kana": "くせ",
    "meaning": "习惯；癖好",
-   "ko": "未标注对应（待核对）",
+   "ko": "버릇（习惯，习性）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "その子は悪い癖が直った。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V1825",
+  "V1826",
+  "V1827",
+  "V1828",
+  "V1829",
+  "V1830",
+  "V1831",
+  "V1832",
+  "V1833",
+  "V1834",
+  "V1835",
+  "V1836",
+  "V1837",
+  "V1838",
+  "V1839",
+  "V1840"
+ ],
+ "extension_vocab_ids": [
+  "V1841",
+  "V1842",
+  "V1843",
+  "V1844"
  ],
  "grammar": [
   {

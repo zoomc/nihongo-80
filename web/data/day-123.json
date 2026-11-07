@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "印",
    "kana": "しるし",
    "meaning": "记号；标志",
-   "ko": "인",
+   "ko": "표（标记，记号，符号，标志） / 마크（商标，标志，徽章）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "発音できない語に印をつけなさい。",
@@ -130,7 +132,9 @@
    "surface": "城",
    "kana": "しろ",
    "meaning": "城堡",
-   "ko": "성",
+   "ko": "성 / 성곽",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "その城は１６１０年に建てられた。",
@@ -143,7 +147,9 @@
    "surface": "進学",
    "kana": "しんがく",
    "meaning": "升学",
-   "ko": "진학",
+   "ko": "진학（升学）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "彼は大学院に進学しないだろう。",
@@ -156,7 +162,9 @@
    "surface": "神経",
    "kana": "しんけい",
    "meaning": "神经",
-   "ko": "신경",
+   "ko": "신경（神经）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼はそのことで神経をとがらせている。",
@@ -169,7 +177,9 @@
    "surface": "真剣",
    "kana": "しんけん",
    "meaning": "认真；严肃",
-   "ko": "未标注对应（待核对）",
+   "ko": "진지하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容词",
    "ex": {
     "ja": "ジョージは勉強に真剣でない。",
@@ -182,7 +192,9 @@
    "surface": "信仰",
    "kana": "しんこう",
    "meaning": "信仰",
-   "ko": "신앙",
+   "ko": "신앙（信仰，崇拜） / 믿음（信仰）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "キリスト教を信仰していますか。",
@@ -195,7 +207,9 @@
    "surface": "信号",
    "kana": "しんごう",
    "meaning": "信号；红绿灯",
-   "ko": "신호",
+   "ko": "신호（信号） / 시그널（信号）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "信号が青に変わったわよ。",
@@ -208,7 +222,9 @@
    "surface": "人工",
    "kana": "じんこう",
    "meaning": "人工",
-   "ko": "인공",
+   "ko": "인공（人工）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/连体词",
    "ex": {
     "ja": "この庭の美しさは自然より人工のおかげだ。",
@@ -221,7 +237,9 @@
    "surface": "深刻",
    "kana": "しんこく",
    "meaning": "严重；深刻",
-   "ko": "심각",
+   "ko": "심각하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容词/名词",
    "ex": {
     "ja": "事態は非常に深刻である。",
@@ -234,7 +252,9 @@
    "surface": "人種",
    "kana": "じんしゅ",
    "meaning": "人种；种族",
-   "ko": "인종",
+   "ko": "인종（人种）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/连体词",
    "ex": {
     "ja": "世界にはいろいろな人種がいる。",
@@ -247,7 +267,9 @@
    "surface": "信じる",
    "kana": "しんじる",
    "meaning": "相信",
-   "ko": "未标注对应（待核对）",
+   "ko": "믿다（信，相信）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "きっと彼はあなたを信じると思いますよ。",
@@ -260,7 +282,9 @@
    "surface": "人生",
    "kana": "じんせい",
    "meaning": "人生",
-   "ko": "인생",
+   "ko": "인생（人生）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "できるあいだに人生を楽しみなさい。",
@@ -273,7 +297,9 @@
    "surface": "親戚",
    "kana": "しんせき",
    "meaning": "亲戚",
-   "ko": "친척",
+   "ko": "친척（亲戚）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "フィリップとトムは親戚である。",
@@ -286,7 +312,9 @@
    "surface": "新鮮",
    "kana": "しんせん",
    "meaning": "新鲜",
-   "ko": "신선",
+   "ko": "신선하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容词",
    "ex": {
     "ja": "どうやって新鮮な魚をえらぶのですか。",
@@ -299,7 +327,9 @@
    "surface": "心臓",
    "kana": "しんぞう",
    "meaning": "心脏",
-   "ko": "심장",
+   "ko": "심장（心脏） / 염통（心脏）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "煙は彼の心臓によくないかもしれない。",
@@ -312,7 +342,9 @@
    "surface": "身体",
    "kana": "しんたい",
    "meaning": "身体",
-   "ko": "신체",
+   "ko": "신체（身体） / 몸（身体，身子）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "身体を大事にしなければならない。",
@@ -325,7 +357,9 @@
    "surface": "慎重",
    "kana": "しんちょう",
    "meaning": "慎重；谨慎",
-   "ko": "신중",
+   "ko": "신중（慎重）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "な形容词/名词",
    "ex": {
     "ja": "彼女は何をするにも慎重であった。",
@@ -338,7 +372,9 @@
    "surface": "身長",
    "kana": "しんちょう",
    "meaning": "身高",
-   "ko": "신장",
+   "ko": "신장（身高，身长） / 키（身高，身长，个子，个儿，个头儿）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "息子はもう私と同じ身長だ。",
@@ -351,7 +387,9 @@
    "surface": "審判",
    "kana": "しんぱん",
    "meaning": "裁判；审判",
-   "ko": "심판",
+   "ko": "심판（审判）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "彼一人だけ余る、だから審判させよう。",
@@ -364,7 +402,9 @@
    "surface": "人物",
    "kana": "じんぶつ",
    "meaning": "人物",
-   "ko": "인물",
+   "ko": "인물（人物）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "あの人はどんな人物か教えて下さい？",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V2191",
+  "V2192",
+  "V2193",
+  "V2194",
+  "V2195",
+  "V2196",
+  "V2197",
+  "V2198",
+  "V2199",
+  "V2200",
+  "V2201",
+  "V2202",
+  "V2203",
+  "V2204",
+  "V2205",
+  "V2206"
+ ],
+ "extension_vocab_ids": [
+  "V2207",
+  "V2208",
+  "V2209",
+  "V2210"
  ],
  "grammar": [
   {

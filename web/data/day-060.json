@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "寺",
    "kana": "てら",
    "meaning": "寺院",
-   "ko": "未标注对应（待核对）",
+   "ko": "절",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "以前はちょうどここにお寺があった。",
@@ -130,7 +132,9 @@
    "surface": "点",
    "kana": "てん",
    "meaning": "点；分数",
-   "ko": "점",
+   "ko": "점（点） / 끗（点，分）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "どんな小さな点でも見ることができる。",
@@ -143,7 +147,9 @@
    "surface": "店員",
    "kana": "てんいん",
    "meaning": "店员",
-   "ko": "점원",
+   "ko": "점원（店员）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "店員はその荷物にラベルをつけた。",
@@ -156,7 +162,9 @@
    "surface": "天気予報",
    "kana": "てんきよほう",
    "meaning": "天气预报",
-   "ko": "未标注对应（待核对）",
+   "ko": "일기 예보（天气预报，气象预报）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "天気予報が当たったよ。",
@@ -169,7 +177,9 @@
    "surface": "電灯",
    "kana": "でんとう",
    "meaning": "电灯",
-   "ko": "전등",
+   "ko": "전등（电灯）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ルーシーは電灯のスイッチをつけた。",
@@ -182,7 +192,9 @@
    "surface": "電報",
    "kana": "でんぽう",
    "meaning": "电报",
-   "ko": "전보",
+   "ko": "전보（电报）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私は、彼女から電報を受け取った。",
@@ -195,7 +207,9 @@
    "surface": "展覧会",
    "kana": "てんらんかい",
    "meaning": "展览会",
-   "ko": "전람회",
+   "ko": "전람회（展览会）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私たちは毎年展覧会を開く。",
@@ -208,7 +222,9 @@
    "surface": "都",
    "kana": "と",
    "meaning": "都；都政府",
-   "ko": "未标注对应（待核对）",
+   "ko": "도 / 도청",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "「都庁舎でもらえますよ」と係員が付け加えた。",
@@ -221,7 +237,9 @@
    "surface": "道具",
    "kana": "どうぐ",
    "meaning": "工具",
-   "ko": "도구",
+   "ko": "도구（工具，方式） / 연장（工具，器具）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "この道具はなんの役にもたたない。",
@@ -234,7 +252,9 @@
    "surface": "とうとう",
    "kana": "とうとう",
    "meaning": "终于；到底",
-   "ko": "未标注对应（待核对）",
+   "ko": "그예（终于，最后，结果） / 기어이（最终，终于） / 기어코（最终，终于）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "副词",
    "ex": {
     "ja": "トムはとうとうタバコをやめた。",
@@ -247,7 +267,9 @@
    "surface": "動物園",
    "kana": "どうぶつえん",
    "meaning": "动物园",
-   "ko": "동물원",
+   "ko": "동물원（动物园）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "コンドルは動物園では決して育たない。",
@@ -260,7 +282,9 @@
    "surface": "遠く",
    "kana": "とおく",
    "meaning": "远处",
-   "ko": "未标注对应（待核对）",
+   "ko": "멀리（远处，远方）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/副词/连体词",
    "ex": {
     "ja": "遠くにぼんやりした明かりが見えた。",
@@ -273,7 +297,9 @@
    "surface": "通る",
    "kana": "とおる",
    "meaning": "通过；经过",
-   "ko": "未标注对应（待核对）",
+   "ko": "통하다（通，通过，流经） / 지나가다（通过，路过） / 통과되다（通过，许可，合格）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "私は毎日その教会の前を通る。",
@@ -286,7 +312,9 @@
    "surface": "特に",
    "kana": "とくに",
    "meaning": "特别；尤其",
-   "ko": "未标注对应（待核对）",
+   "ko": "특히（特别，尤其，尤为）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "副词",
    "ex": {
     "ja": "私は音楽、特にロックが大好きだ。",
@@ -299,7 +327,9 @@
    "surface": "特別",
    "kana": "とくべつ",
    "meaning": "特别",
-   "ko": "특별",
+   "ko": "특별（特别）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "な形容词/连体词/副词/名词",
    "ex": {
     "ja": "特別料理がございますが。",
@@ -312,7 +342,9 @@
    "surface": "とこや",
    "kana": "とこや",
    "meaning": "理发店",
-   "ko": "未标注对应（待核对）",
+   "ko": "이발소",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "おや、床屋へ行ってきたのだね。",
@@ -325,7 +357,9 @@
    "surface": "特急",
    "kana": "とっきゅう",
    "meaning": "特快列车",
-   "ko": "특급",
+   "ko": "특급（特快）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "時計がおくれていたので、私は特急にのりそこねた。",
@@ -338,7 +372,9 @@
    "surface": "届ける",
    "kana": "とどける",
    "meaning": "送达；申报",
-   "ko": "未标注对应（待核对）",
+   "ko": "전달하다 / 신고하다",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "家に届けていただけますか。",
@@ -351,7 +387,9 @@
    "surface": "泊まる",
    "kana": "とまる",
    "meaning": "住宿；投宿",
-   "ko": "未标注对应（待核对）",
+   "ko": "투숙하다（投宿，住店）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "私は先週おじの家に泊まりました。",
@@ -364,7 +402,9 @@
    "surface": "止める",
    "kana": "とめる",
    "meaning": "停下；阻止",
-   "ko": "未标注对应（待核对）",
+   "ko": "세우다（使停下）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "急にジムは銀行の前で車を止めた。",
@@ -373,12 +413,36 @@
    "audio": "tts"
   }
  ],
+ "core_vocab_ids": [
+  "V1243",
+  "V1244",
+  "V1245",
+  "V1246",
+  "V1247",
+  "V1248",
+  "V1249",
+  "V1250",
+  "V1251",
+  "V1252",
+  "V1253",
+  "V1254",
+  "V1255",
+  "V1256",
+  "V1257",
+  "V1258"
+ ],
+ "extension_vocab_ids": [
+  "V1259",
+  "V1260",
+  "V1261",
+  "V1262"
+ ],
  "grammar": [
   {
    "id": "G0215",
    "pattern": "〜せられる / 〜させられる",
    "meaning_zh": "被迫做…",
-   "connection": "五段动词未然形+せられる（口语 される）；一段动词未然形+させられる",
+   "connection": "五段动词未然形 + せられる（部分动词常缩约为 される）；一段动词未然形 + させられる",
    "usage": "表示不情愿地被迫做某事，含有受害或无奈的语气。",
    "register_note": "口语与书面通用。",
    "examples": [
@@ -407,9 +471,9 @@
    ],
    "common_errors": [
     {
-     "wrong": "駅で三十分も待たせられました。",
-     "why": "待つ 的使役受身是「待たされる」，不是「待たせられる」",
-     "fix": "駅で三十分も待たされました。",
+     "wrong": "母に野菜を食べさせられますた。",
+     "why": "礼貌过去形为「食べさせられました」。",
+     "fix": "母に野菜を食べさせられました。",
      "learner": "zh"
     }
    ],
@@ -424,7 +488,7 @@
    "source_ids": [
     "S900"
    ],
-   "review_status": "ai_draft",
+   "review_status": "needs_review",
    "provenance": "OpenJLPT CC-BY-SA-4.0",
    "license": "CC-BY-SA-4.0"
   },

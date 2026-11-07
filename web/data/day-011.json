@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "19 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；3 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "熱い",
    "kana": "あつい",
    "meaning": "烫；热",
-   "ko": "未标注对应（待核对）",
+   "ko": "덥다（温，热，热乎乎） / 뜨겁다（烫，热）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "熱いコーヒーを入れてあげましょう。",
@@ -130,7 +132,9 @@
    "surface": "あっち",
    "kana": "あっち",
    "meaning": "那边",
-   "ko": "未标注对应（待核对）",
+   "ko": "고쪽（那里，那边） / 그쪽（那里，那边）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "代名词",
    "ex": {
     "ja": "こっちの本はあっちの本よりやさしい。",
@@ -143,7 +147,9 @@
    "surface": "あの",
    "kana": "あの",
    "meaning": "那个",
-   "ko": "未标注对应（待核对）",
+   "ko": "그（那个） / 어（那个） / 조（那个）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "词",
    "ex": {
     "ja": "あのおいしいワインをなぜ飲まないんだい。",
@@ -156,7 +162,9 @@
    "surface": "アパート",
    "kana": "アパート",
    "meaning": "公寓",
-   "ko": "未标注对应（待核对）",
+   "ko": "아파트（公寓）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "兄はアパートをさがしています。",
@@ -169,7 +177,9 @@
    "surface": "あびる",
    "kana": "あびる",
    "meaning": "淋浴；沐浴",
-   "ko": "未标注对应（待核对）",
+   "ko": "씻다 / 뒤집어쓰다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "その時はシャワーを浴びていた。",
@@ -182,7 +192,9 @@
    "surface": "甘い",
    "kana": "あまい",
    "meaning": "甜；天真",
-   "ko": "未标注对应（待核对）",
+   "ko": "달다（甜，甘甜）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "メアリーにはつい甘くなってしまう。",
@@ -195,7 +207,9 @@
    "surface": "あまり",
    "kana": "あまり",
    "meaning": "不太",
-   "ko": "未标注对应（待核对）",
+   "ko": "별로（부정과 함께）",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "副词",
    "ex": {
     "ja": "この手の本はあまり読まない。",
@@ -208,7 +222,9 @@
    "surface": "飴",
    "kana": "あめ",
    "meaning": "糖果",
-   "ko": "未标注对应（待核对）",
+   "ko": "캔디（糖果，糖）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "いい子にしていたら、あめをあげよう。",
@@ -221,7 +237,9 @@
    "surface": "洗う",
    "kana": "あらう",
    "meaning": "洗",
-   "ko": "未标注对应（待核对）",
+   "ko": "감다（洗） / 빨다（洗） / 씻다（洗，刷）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "いつこの車は洗われましたか。",
@@ -234,7 +252,9 @@
    "surface": "ありがとう",
    "kana": "ありがとう",
    "meaning": "谢谢",
-   "ko": "未标注对应（待核对）",
+   "ko": "고마워",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "感叹词",
    "ex": {
     "ja": "はるばる来てくれてありがとう。",
@@ -247,7 +267,9 @@
    "surface": "歩く",
    "kana": "あるく",
    "meaning": "走；步行",
-   "ko": "未标注对应（待核对）",
+   "ko": "걷다（走，行走，步行）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "歩いて行きますか？それともバスで行きますか？",
@@ -260,7 +282,9 @@
    "surface": "あれ",
    "kana": "あれ",
    "meaning": "那个",
-   "ko": "未标注对应（待核对）",
+   "ko": "거（那个） / 그（那样，那个） / 거기（那个）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "代名词",
    "ex": {
     "ja": "あれは学校です。",
@@ -273,7 +297,9 @@
    "surface": "いい",
    "kana": "いい",
    "meaning": "好；可以",
-   "ko": "未标注对应（待核对）",
+   "ko": "좋다 / 괜찮다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "词",
    "ex": {
     "ja": "もう２、３ページ読みさえすればいい。",
@@ -286,7 +312,9 @@
    "surface": "いいえ",
    "kana": "いいえ",
    "meaning": "不；不是",
-   "ko": "未标注对应（待核对）",
+   "ko": "아뇨（不用，不是） / 아니요（不是，不用）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "感叹词",
    "ex": {
     "ja": "いいえ、学生ではありません。",
@@ -299,7 +327,9 @@
    "surface": "言う",
    "kana": "いう",
    "meaning": "说",
-   "ko": "未标注对应（待核对）",
+   "ko": "보다（说） / 말하다（说，讲） / 얘기하다（说，评价）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "「みんなひと休みしようぜ」とジョンは言った。",
@@ -312,7 +342,9 @@
    "surface": "いかが",
    "kana": "いかが",
    "meaning": "怎么样",
-   "ko": "未标注对应（待核对）",
+   "ko": "어떠세요",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "副词",
    "ex": {
     "ja": "コンタクトを入れるというのはいかがでしょう？",
@@ -325,7 +357,9 @@
    "surface": "いくつ",
    "kana": "いくつ",
    "meaning": "几个；几岁",
-   "ko": "未标注对应（待核对）",
+   "ko": "몇 개 / 몇 살",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "副词",
    "ex": {
     "ja": "あなたのお父さんはおいくつですか。",
@@ -338,7 +372,9 @@
    "surface": "池",
    "kana": "いけ",
    "meaning": "池塘",
-   "ko": "未标注对应（待核对）",
+   "ko": "못（池塘，水洼） / 연못（莲池，荷塘，池塘）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "その池にはほとんど水がない。",
@@ -351,7 +387,9 @@
    "surface": "いす",
    "kana": "いす",
    "meaning": "椅子",
-   "ko": "未标注对应（待核对）",
+   "ko": "의자",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "ちょっと椅子をずらしてくれない？",
@@ -359,6 +397,29 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0360",
+  "V0361",
+  "V0362",
+  "V0363",
+  "V0364",
+  "V0365",
+  "V0366",
+  "V0367",
+  "V0368",
+  "V0369",
+  "V0370",
+  "V0371",
+  "V0372",
+  "V0373",
+  "V0374",
+  "V0375"
+ ],
+ "extension_vocab_ids": [
+  "V0376",
+  "V0377",
+  "V0378"
  ],
  "grammar": [
   {

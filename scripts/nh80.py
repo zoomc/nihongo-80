@@ -53,6 +53,7 @@ def ensure_session_schema(conn):
 
     完成状态契约（REVISION_CONTRACT §6）：passed=1 → finished；passed=0 → incomplete。
     """
+    conn.execute("CREATE TABLE IF NOT EXISTS output_reviews(day INTEGER PRIMARY KEY, reviewed_at TEXT NOT NULL, payload TEXT NOT NULL)")
     cols = {r[1] for r in conn.execute("PRAGMA table_info(sessions)").fetchall()}
     if "passed" not in cols:
         conn.execute("ALTER TABLE sessions ADD COLUMN passed INTEGER")
@@ -431,8 +432,12 @@ def _decode_payload(code: str) -> dict:
     for k in ("day", "session", "ts", "results", "minutes", "source"):
         if k not in data:
             raise ValueError("回传码缺字段 %s" % k)
-    if not isinstance(data["results"], list) or not isinstance(data["day"], int):
+    if not isinstance(data["results"], list) or isinstance(data["day"], bool) or not isinstance(data["day"], int) or not 1 <= data["day"] <= 150:
         raise ValueError("回传码字段类型不合法")
+    if not isinstance(data["session"], str) or not re.fullmatch(r"[A-Za-z0-9_.:-]{3,96}", data["session"]):
+        raise ValueError("会话ID不合法")
+    if len(data["results"]) > 40 or any(not isinstance(x, dict) or not isinstance(x.get("qid"), str) for x in data["results"]):
+        raise ValueError("作答结构不合法")
     return data
 
 
@@ -565,13 +570,62 @@ def cmd_import_web(args):
         conn.close()
 
 
+def cmd_import_file(args):
+    import cloud_sync
+    data = json.loads(Path(args.file).read_text(encoding="utf-8"))
+    data.setdefault("ts", iso()); data.setdefault("minutes", None); data.setdefault("source", "web-export")
+    return cmd_import_web(argparse.Namespace(root=args.root, code=cloud_sync.encode_payload(data)))
+
+
+def cmd_confirm_output(args):
+    """教师录入真实独立产出与反馈；不接受只有完成勾选。"""
+    r = root_of(args.root)
+    payload = json.loads(Path(args.file).read_text(encoding="utf-8"))
+    conn = connect(r)
+    try:
+        ensure_session_schema(conn)
+        d = _curriculum_payload(conn, args.day)
+        valid = {x["id"] for x in core.read_jsonl(r / "knowledge/seeds/sentences.jsonl") if x["day"] == args.day}
+        for field, count in (("sentences", 3), ("grammar_sentences", 2), ("vocab_check", 3)):
+            rows = payload.get(field, [])
+            if not isinstance(rows, list) or len(rows) < count:
+                raise ValueError("%s 至少%d条真实产出" % (field, count))
+            for item in rows:
+                if not isinstance(item, dict) or not str(item.get("text", "")).strip() or not str(item.get("feedback", "")).strip():
+                    raise ValueError("产出原文与教师反馈不能为空")
+        ids = [x.get("id") for x in payload["sentences"]]
+        if len(set(ids)) < 3 or not set(ids) <= valid:
+            raise ValueError("需要当天三道不同句子及批改")
+        sid = "output-%03d-%s" % (args.day, __import__("hashlib").sha256(jdump(payload).encode()).hexdigest()[:12])
+        with conn:
+            _ensure_session(conn, args.day)
+            for i, item in enumerate(payload["grammar_sentences"][:2]):
+                gid = d["new_grammar_ids"][min(i, len(d["new_grammar_ids"])-1)]
+                qid = "O-%03d-%d" % (args.day, i)
+                raw = {"id": qid, "type": "free_production", "knowledge_ids": [gid],
+                       "targets": [{"id": gid, "capability": "production"}], "day": args.day,
+                       "rubric": "教师核对语法接续、意义及独立产出"}
+                core._insert_kind(conn, "questions", raw)
+                if not isinstance(item.get("correct"), bool):
+                    raise ValueError("每条语法造句须有教师correct布尔评分")
+                learning.record_attempt(conn, day=args.day, session_id=sid, qid=qid,
+                                        answer=item["text"], correct=item["correct"],
+                                        feedback=item["feedback"], source="teacher")
+            payload["accepted"] = all(x["correct"] for x in payload["grammar_sentences"][:2])
+            conn.execute("INSERT OR REPLACE INTO output_reviews VALUES(?,?,?)", (args.day, iso(), jdump(payload)))
+            audit(conn, "confirm_output", {"day": args.day, "sentences": len(ids), "grammar": 2, "vocab_check": 3})
+        out({"ok": True, "day": args.day, "output_confirmed": payload["accepted"]})
+    finally:
+        conn.close()
+
+
 def cmd_finish_day(args):
     r = root_of(args.root); day = args.day
     conn = connect(r)
     try:
         ensure_session_schema(conn)
         sid = _session_for(conn, day, None)
-        rows = [dict(x) for x in conn.execute("SELECT * FROM attempts WHERE day=?", (day,)).fetchall()]
+        rows = [dict(x) for x in conn.execute("SELECT * FROM attempts WHERE day=? ORDER BY id", (day,)).fetchall()]
         graded = [x for x in rows if x["correct"] is not None]
         pending = [x["qid"] for x in rows if x["correct"] is None]
         acc = round(sum(x["correct"] for x in graded) / len(graded), 4) if graded else None
@@ -582,7 +636,17 @@ def cmd_finish_day(args):
         d = _curriculum_payload(conn, day)
         expected = set(d["question_ids"])
         answered = {x["qid"] for x in graded}
-        passed = (acc is not None and acc >= 0.70 and bool(expected) and expected <= answered)
+        # 只按当前课程每题最新一次作答判定，历史重做不稀释本次结果。
+        latest = {}
+        for row in rows:
+            if row["qid"] in expected:
+                latest[row["qid"]] = row
+        scored = [x for x in latest.values() if x["correct"] is not None]
+        acc = round(sum(x["correct"] for x in scored) / len(scored), 4) if scored else None
+        output_review = conn.execute("SELECT payload FROM output_reviews WHERE day=?", (day,)).fetchone()
+        output_confirmed = bool(output_review and json.loads(output_review["payload"]).get("accepted"))
+        passed = (acc is not None and acc >= 0.70 and bool(expected) and expected <= {x["qid"] for x in scored}
+                  and output_confirmed)
         status = "finished" if passed else "incomplete"
         summary = ("Day %d 完成：作答 %d（已判分 %d），正确率 %s，错误 %s。"
                    "完成条件 %s。%s") % (
@@ -608,9 +672,9 @@ def cmd_finish_day(args):
         out({"ok": True, "day": day, "session_id": sid, "attempts": len(rows),
              "accuracy": acc, "passed": passed, "status": status,
              "completed_days": completed, "incomplete_days": incomplete,
-             "pending_open": pending,
+             "pending_open": pending, "output_confirmed": output_confirmed,
              "summary": summary, "backup": bk["backup"] if bk else None,
-             "next": "python3 scripts/nh80.py start-day %d" % (day + 1)})
+             "next": ("python3 scripts/nh80.py start-day %d" % (day + 1)) if day < 150 else "打开 resources.html 进行 N3 官方自测与薄弱项复习"})
     finally:
         conn.close()
 
@@ -636,6 +700,10 @@ def cmd_pull_cloud(args):
     r = root_of(args.root)
     import cloud_sync  # 延迟导入：没配 D1 的项目照常运行
     argv = ["pull", "--base", args.base, "--root", str(r)]
+    import os
+    keyfile = r / "deploy/.sync-key"
+    if not args.key and not os.environ.get("NH80_SYNC_KEY") and keyfile.is_file():
+        os.environ["NH80_SYNC_KEY"] = keyfile.read_text().strip()
     if args.key:
         argv += ["--key", args.key]
     if args.since:
@@ -803,6 +871,11 @@ def main():
         choices=["keyword", "relation", "hybrid", "semantic"]); se.add_argument("--limit", type=int, default=20)
     se.set_defaults(fn=cmd_search)
     re_ = sub.add_parser("relation"); re_.add_argument("kid"); re_.set_defaults(fn=cmd_relation)
+    im = sub.add_parser("import-file", help="导入网页导出的原始JSON作答")
+    im.add_argument("--file", required=True); im.set_defaults(fn=cmd_import_file)
+    co = sub.add_parser("confirm-output", help="教师录入三句批改、两句自主造句及三词回忆")
+    co.add_argument("--day", type=int, required=True); co.add_argument("--file", required=True)
+    co.set_defaults(fn=cmd_confirm_output)
     sub.add_parser("validate").set_defaults(fn=cmd_validate)
     sub.add_parser("backup").set_defaults(fn=cmd_backup)
     rs = sub.add_parser("restore"); rs.add_argument("path"); rs.set_defaults(fn=cmd_restore)

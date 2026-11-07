@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "冷たい",
    "kana": "つめたい",
    "meaning": "冷；冷淡",
-   "ko": "未标注对应（待核对）",
+   "ko": "차다（冷，寒冷，凉，冰凉） / 차갑다（冷淡，冰冷，冷漠）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "もう手が冷たくって。",
@@ -130,7 +132,9 @@
    "surface": "強い",
    "kana": "つよい",
    "meaning": "强",
-   "ko": "未标注对应（待核对）",
+   "ko": "세다（强，猛） / 강하다（强，猛，强大）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "トラとライオンとどちらが強いか。",
@@ -143,7 +147,9 @@
    "surface": "手",
    "kana": "て",
    "meaning": "手",
-   "ko": "未标注对应（待核对）",
+   "ko": "손（手） / 수（手，招数）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ここに手のないナベがある。",
@@ -156,7 +162,9 @@
    "surface": "テープ",
    "kana": "テープ",
    "meaning": "磁带；胶带",
-   "ko": "未标注对应（待核对）",
+   "ko": "테이프（绝缘胶带）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "君はそのコンサートをテープにとったか。",
@@ -169,7 +177,9 @@
    "surface": "テーブル",
    "kana": "テーブル",
    "meaning": "桌子",
-   "ko": "未标注对应（待核对）",
+   "ko": "탁자（桌子，台子） / 테이블（桌子，台子，平台）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "このテーブルを頼んだのではない。",
@@ -182,7 +192,9 @@
    "surface": "テープレコーダー",
    "kana": "テープレコーダー",
    "meaning": "录音机",
-   "ko": "未标注对应（待核对）",
+   "ko": "녹음기（录音机） / 카세트（盒式磁带录音机，卡式录音机）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "このテープレコーダーは新しくない。",
@@ -195,7 +207,9 @@
    "surface": "出かける",
    "kana": "でかける",
    "meaning": "外出",
-   "ko": "未标注对应（待核对）",
+   "ko": "외출하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "出かけるよりもじっとしていたい。",
@@ -208,7 +222,9 @@
    "surface": "手紙",
    "kana": "てがみ",
    "meaning": "信",
-   "ko": "未标注对应（待核对）",
+   "ko": "서신（信，书信） / 편지（信，书信，信件）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "書かねばならない手紙があります。",
@@ -221,7 +237,9 @@
    "surface": "出口",
    "kana": "でぐち",
    "meaning": "出口",
-   "ko": "출구",
+   "ko": "출구（出口）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "B2出口から地上に出てください。",
@@ -234,7 +252,9 @@
    "surface": "テスト",
    "kana": "テスト",
    "meaning": "考试",
-   "ko": "未标注对应（待核对）",
+   "ko": "고사（考试，考核） / 시험（考试） / 테스트（测验，考试，试验，检查，测试）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "そのテストはむずかしかった。",
@@ -247,7 +267,9 @@
    "surface": "では",
    "kana": "では",
    "meaning": "那么",
-   "ko": "未标注对应（待核对）",
+   "ko": "그럼（那么，既然那样）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "惯用表达",
    "ex": {
     "ja": "では今晩またね、さようなら。",
@@ -260,7 +282,9 @@
    "surface": "デパート",
    "kana": "デパート",
    "meaning": "百货商店",
-   "ko": "未标注对应（待核对）",
+   "ko": "백화점（百货商店）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "あのデパートで新しいコートを買いたい。",
@@ -273,7 +297,9 @@
    "surface": "出る",
    "kana": "でる",
    "meaning": "出去；出现",
-   "ko": "未标注对应（待核对）",
+   "ko": "나다（出现，达成） / 나가다（出，出去） / 나서다（出去，上前）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "電話には出なかったからメールしておきました。",
@@ -286,7 +312,9 @@
    "surface": "テレビ",
    "kana": "テレビ",
    "meaning": "电视",
-   "ko": "未标注对应（待核对）",
+   "ko": "티브이（电视，电视机） / 텔레비전（电视，电视机）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "あなたはどこでテレビを見ますか。",
@@ -299,7 +327,9 @@
    "surface": "電気",
    "kana": "でんき",
    "meaning": "电；电灯",
-   "ko": "전기",
+   "ko": "전기（电，电气） / 전등（电灯） / 전깃불（电灯，灯光）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "電気シェーバーから火が出ました。",
@@ -312,7 +342,9 @@
    "surface": "戸",
    "kana": "と",
    "meaning": "日式拉门",
-   "ko": "未标注对应（待核对）",
+   "ko": "미닫이문",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "誰かが戸をやかましくノックしている。",
@@ -325,7 +357,9 @@
    "surface": "ドア",
    "kana": "ドア",
    "meaning": "门",
-   "ko": "未标注对应（待核对）",
+   "ko": "문（门）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "入る前にドアをノックして下さい。",
@@ -338,7 +372,9 @@
    "surface": "トイレ",
    "kana": "トイレ",
    "meaning": "厕所",
-   "ko": "未标注对应（待核对）",
+   "ko": "변소（厕所）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "トイレの水が止まりません。",
@@ -351,7 +387,9 @@
    "surface": "どう",
    "kana": "どう",
    "meaning": "怎样",
-   "ko": "未标注对应（待核对）",
+   "ko": "어떻게 / 어떻다",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "副词",
    "ex": {
     "ja": "日本の生活はどうですか。",
@@ -364,7 +402,9 @@
    "surface": "どうして",
    "kana": "どうして",
    "meaning": "为什么",
-   "ko": "未标注对应（待核对）",
+   "ko": "왜（为什么） / 웬（什么，哪儿来的） / 무슨（什么）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "副词",
    "ex": {
     "ja": "どうしてあなたは一人になったの？",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0648",
+  "V0649",
+  "V0650",
+  "V0651",
+  "V0652",
+  "V0653",
+  "V0654",
+  "V0655",
+  "V0656",
+  "V0657",
+  "V0658",
+  "V0659",
+  "V0660",
+  "V0661",
+  "V0662",
+  "V0663"
+ ],
+ "extension_vocab_ids": [
+  "V0664",
+  "V0665",
+  "V0666",
+  "V0667"
  ],
  "grammar": [
   {

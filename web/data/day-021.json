@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "19 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；3 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "散歩",
    "kana": "さんぽ",
    "meaning": "散步",
-   "ko": "未标注对应（待核对）",
+   "ko": "산보（散步） / 산책（散步）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "散歩に出かけてもよろしいですか。",
@@ -130,7 +132,9 @@
    "surface": "四",
    "kana": "し",
    "meaning": "四",
-   "ko": "사",
+   "ko": "사 / 넷",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "数词",
    "ex": {
     "ja": "列車でならここからたった四分だ。",
@@ -143,7 +147,9 @@
    "surface": "塩",
    "kana": "しお",
    "meaning": "盐",
-   "ko": "未标注对应（待核对）",
+   "ko": "소금（盐，咸盐）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "このスープは塩が少し足りない。",
@@ -156,7 +162,9 @@
    "surface": "辞書",
    "kana": "じしょ",
    "meaning": "词典",
-   "ko": "未标注对应（待核对）",
+   "ko": "사전（辞典，词典）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "それはどの辞書にもでています。",
@@ -169,7 +177,9 @@
    "surface": "下",
    "kana": "した",
    "meaning": "下面",
-   "ko": "未标注对应（待核对）",
+   "ko": "밑（下面，小） / 아래（下，下面）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "クッキーはテーブルの下にいる。",
@@ -182,7 +192,9 @@
    "surface": "七",
    "kana": "しち",
    "meaning": "七",
-   "ko": "칠",
+   "ko": "칠 / 일곱",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "数词",
    "ex": {
     "ja": "どういっても七時までにいかないと。",
@@ -195,7 +207,9 @@
    "surface": "質問",
    "kana": "しつもん",
    "meaning": "提问；问题",
-   "ko": "질문",
+   "ko": "질문（提问）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词/自动词/连体词",
    "ex": {
     "ja": "あの先生に質問してもいいですよ。",
@@ -208,7 +222,9 @@
    "surface": "自動車",
    "kana": "じどうしゃ",
    "meaning": "汽车",
-   "ko": "자동차",
+   "ko": "자동차（汽车）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "自動車にひかれたのではないですか。",
@@ -221,7 +237,9 @@
    "surface": "死ぬ",
    "kana": "しぬ",
    "meaning": "死",
-   "ko": "未标注对应（待核对）",
+   "ko": "죽다（死）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "その少年は死んだものとしてあきらめられた。",
@@ -234,7 +252,9 @@
    "surface": "字引",
    "kana": "じびき",
    "meaning": "词典",
-   "ko": "未标注对应（待核对）",
+   "ko": "사전（辞典，词典）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ジョンソンさんはまるで生き字引です。",
@@ -247,7 +267,9 @@
    "surface": "自分",
    "kana": "じぶん",
    "meaning": "自己",
-   "ko": "未标注对应（待核对）",
+   "ko": "저（自己） / 자기（自己） / 자신（自身，自己）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "代名词",
    "ex": {
     "ja": "自分でそれをしなければならない。",
@@ -260,7 +282,9 @@
    "surface": "閉まる",
    "kana": "しまる",
    "meaning": "关闭",
-   "ko": "未标注对应（待核对）",
+   "ko": "닫히다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "あいにく店は閉まっていた。",
@@ -273,7 +297,9 @@
    "surface": "締める",
    "kana": "しめる",
    "meaning": "系紧；勒紧",
-   "ko": "未标注对应（待核对）",
+   "ko": "죄다（勒紧，拧紧，弄紧，扣紧） / 조르다（捆紧，勒紧） / 조이다（勒紧，拧紧，弄紧，扣紧）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "いつもシートベルトを締めなさい。",
@@ -286,7 +312,9 @@
    "surface": "閉める",
    "kana": "しめる",
    "meaning": "关上",
-   "ko": "未标注对应（待核对）",
+   "ko": "닫다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "どうかドアを閉めてくれませんか。",
@@ -299,7 +327,9 @@
    "surface": "じゃ",
    "kana": "じゃ",
    "meaning": "那么",
-   "ko": "未标注对应（待核对）",
+   "ko": "그럼",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "接续词",
    "ex": {
     "ja": "じゃあ、キーをもらえますか。",
@@ -312,7 +342,9 @@
    "surface": "写真",
    "kana": "しゃしん",
    "meaning": "照片",
-   "ko": "사진",
+   "ko": "사진（照片，相片）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "なんてキレイな写真なんでしょう。",
@@ -325,7 +357,9 @@
    "surface": "シャツ",
    "kana": "シャツ",
    "meaning": "衬衫",
-   "ko": "未标注对应（待核对）",
+   "ko": "남방（花衬衫） / 셔츠（衬衫）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "シャツにアイロンをかけてください。",
@@ -338,7 +372,9 @@
    "surface": "シャワー",
    "kana": "シャワー",
    "meaning": "淋浴",
-   "ko": "未标注对应（待核对）",
+   "ko": "샤워（淋浴） / 샤워기（淋浴器）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "シャワーの水が出ません。",
@@ -352,6 +388,8 @@
    "kana": "じゅぎょう",
    "meaning": "课；上课",
    "ko": "수업",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "それは授業の終わりだった。",
@@ -359,6 +397,29 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0550",
+  "V0551",
+  "V0552",
+  "V0553",
+  "V0554",
+  "V0555",
+  "V0556",
+  "V0557",
+  "V0558",
+  "V0559",
+  "V0560",
+  "V0561",
+  "V0562",
+  "V0563",
+  "V0564",
+  "V0565"
+ ],
+ "extension_vocab_ids": [
+  "V0566",
+  "V0567",
+  "V0568"
  ],
  "grammar": [
   {
@@ -655,21 +716,22 @@
    ]
   },
   {
-   "qid": "Q-021-V5-2fe0c6d65f71",
-   "prompt": "「辞書」是什么意思？",
+   "qid": "A021-1-7a71119725b2",
+   "prompt": "図書館でできることは何ですか。",
    "options": [
-    "词典",
-    "窄",
-    "回；回家",
-    "拉；查（词典）"
+    "本を読む",
+    "料理を作る",
+    "ご飯を食べる",
+    "泳ぐ"
    ],
-   "h": "fb94cda0",
+   "h": "bf57d726",
    "oh": [
-    "fb94cda0",
-    "81800b53",
-    "e41c2df2",
-    "e8927e4c"
-   ]
+    "bf57d726",
+    "20ee9861",
+    "b5409983",
+    "f5f39916"
+   ],
+   "passage": "図書館では本を読めます。でも、食べ物は食べられません。"
   }
  ],
  "listening_material": null

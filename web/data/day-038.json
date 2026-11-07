@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "片付ける",
    "kana": "かたづける",
    "meaning": "整理；收拾；解决",
-   "ko": "未标注对应（待核对）",
+   "ko": "치우다（清理，收拾）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "動詞/一段",
    "ex": {
     "ja": "部屋を片付けてください。",
@@ -130,7 +132,9 @@
    "surface": "直す",
    "kana": "なおす",
    "meaning": "修理；改正",
-   "ko": "未标注对应（待核对）",
+   "ko": "고치다（改正，纠正） / 바로잡다（纠正，改正） / 수리하다（修理）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "動詞/五段",
    "ex": {
     "ja": "間違いを直します。",
@@ -143,7 +147,9 @@
    "surface": "続ける",
    "kana": "つづける",
    "meaning": "继续（他动）",
-   "ko": "未标注对应（待核对）",
+   "ko": "계속하다（继续，持续）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "動詞/一段",
    "ex": {
     "ja": "日本語の勉強を続けています。",
@@ -156,7 +162,9 @@
    "surface": "始める",
    "kana": "はじめる",
    "meaning": "开始（他动）",
-   "ko": "未标注对应（待核对）",
+   "ko": "비롯하다（开始） / 시작하다（开始）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "動詞/一段",
    "ex": {
     "ja": "新しい仕事を始めます。",
@@ -169,7 +177,9 @@
    "surface": "決める",
    "kana": "きめる",
    "meaning": "决定（他动）",
-   "ko": "未标注对应（待核对）",
+   "ko": "가르다（区分，决定）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "動詞/一段",
    "ex": {
     "ja": "旅行の日を決めました。",
@@ -182,7 +192,9 @@
    "surface": "調べる",
    "kana": "しらべる",
    "meaning": "调查；查阅",
-   "ko": "未标注对应（待核对）",
+   "ko": "조사하다 / 찾아보다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "動詞/一段",
    "ex": {
     "ja": "図書館で言葉を調べます。",
@@ -195,7 +207,9 @@
    "surface": "比べる",
    "kana": "くらべる",
    "meaning": "比较",
-   "ko": "未标注对应（待核对）",
+   "ko": "견주다（比较，较量） / 비기다（比较，相提并论） / 비하다（比较）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "動詞/一段",
    "ex": {
     "ja": "二つの店の値段を比べます。",
@@ -208,7 +222,9 @@
    "surface": "慣れる",
    "kana": "なれる",
    "meaning": "习惯（自动）",
-   "ko": "未标注对应（待核对）",
+   "ko": "젖다（习惯） / 길들다（磨合，顺手，习惯） / 익숙하다（熟悉，习惯）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "動詞/一段",
    "ex": {
     "ja": "日本の生活に慣れました。",
@@ -221,7 +237,9 @@
    "surface": "遅れる",
    "kana": "おくれる",
    "meaning": "迟到；落后",
-   "ko": "未标注对应（待核对）",
+   "ko": "늦다（晚，迟到） / 뒤지다（落后，亚于） / 처지다（落下，落后，落伍）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "動詞/一段",
    "ex": {
     "ja": "会議に遅れてしまいました。",
@@ -234,7 +252,9 @@
    "surface": "間に合う",
    "kana": "まにあう",
    "meaning": "赶得上；来得及",
-   "ko": "未标注对应（待核对）",
+   "ko": "시간에 맞다 / 늦지 않다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "動詞/五段",
    "ex": {
     "ja": "急げば、始発に間に合います。",
@@ -247,7 +267,9 @@
    "surface": "足りる",
    "kana": "たりる",
    "meaning": "够；足够",
-   "ko": "未标注对应（待核对）",
+   "ko": "족하다（足够，充足） / 충분하다（充分，充足，足够）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "動詞/一段",
    "ex": {
     "ja": "時間が足りません。",
@@ -260,7 +282,9 @@
    "surface": "挨拶",
    "kana": "あいさつ",
    "meaning": "寒暄；问候；致辞",
-   "ko": "未标注对应（待核对）",
+   "ko": "인사（问候，打招呼）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "先生に挨拶をします。",
@@ -273,7 +297,9 @@
    "surface": "お願い",
    "kana": "おねがい",
    "meaning": "请求；拜托",
-   "ko": "未标注对应（待核对）",
+   "ko": "부탁（拜托，请求，托付）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "ちょっとお願いがあります。",
@@ -286,7 +312,9 @@
    "surface": "説明",
    "kana": "せつめい",
    "meaning": "说明；解释",
-   "ko": "未标注对应（待核对）",
+   "ko": "설명（说明）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "使い方を説明してください。",
@@ -299,7 +327,9 @@
    "surface": "準備",
    "kana": "じゅんび",
    "meaning": "准备（筹备）",
-   "ko": "未标注对应（待核对）",
+   "ko": "준비（准备） / 채비（准备，筹备）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "旅行の準備をしています。",
@@ -312,7 +342,9 @@
    "surface": "練習",
    "kana": "れんしゅう",
    "meaning": "练习",
-   "ko": "未标注对应（待核对）",
+   "ko": "연습（练习）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "毎日ピアノを練習します。",
@@ -325,7 +357,9 @@
    "surface": "掃除",
    "kana": "そうじ",
    "meaning": "打扫；扫除",
-   "ko": "未标注对应（待核对）",
+   "ko": "소제（打扫，清扫） / 청소（打扫，清扫，扫除）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "部屋を掃除します。",
@@ -338,7 +372,9 @@
    "surface": "洗濯",
    "kana": "せんたく",
    "meaning": "洗衣服；洗涤",
-   "ko": "未标注对应（待核对）",
+   "ko": "빨래（洗衣，洗衣服） / 세탁（洗衣）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "週末に洗濯をします。",
@@ -351,7 +387,9 @@
    "surface": "約束",
    "kana": "やくそく",
    "meaning": "约定；约会",
-   "ko": "未标注对应（待核对）",
+   "ko": "약속（约定，约好，承诺）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "友達と映画の約束をしました。",
@@ -364,7 +402,9 @@
    "surface": "心配",
    "kana": "しんぱい",
    "meaning": "担心",
-   "ko": "未标注对应（待核对）",
+   "ko": "걱정（担心，忧虑，担忧） / 근심（担心，担忧） / 염려（顾虑，惦记，担心，挂念）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名詞/サ変/な形容詞",
    "ex": {
     "ja": "母は私のことを心配しています。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0157",
+  "V0158",
+  "V0159",
+  "V0160",
+  "V0161",
+  "V0162",
+  "V0163",
+  "V0164",
+  "V0165",
+  "V0166",
+  "V0167",
+  "V0168",
+  "V0169",
+  "V0170",
+  "V0171",
+  "V0172"
+ ],
+ "extension_vocab_ids": [
+  "V0173",
+  "V0174",
+  "V0175",
+  "V0176"
  ],
  "grammar": [
   {
@@ -405,12 +469,6 @@
    "compare": [],
    "common_errors": [
     {
-     "wrong": "雨かもしれないです。",
-     "why": "かもしれない 礼貌形是 かもしれません，不是 〜です 直接叠加",
-     "fix": "雨かもしれません。",
-     "learner": "zh"
-    },
-    {
      "wrong": "雨でしょう かもしれません",
      "why": "でしょう 与 かもしれない 是两种推测，不叠加",
      "fix": "雨でしょう。／雨かもしれません。",
@@ -424,7 +482,7 @@
    "source_ids": [
     "S000"
    ],
-   "review_status": "self_reviewed",
+   "review_status": "needs_review",
    "provenance": "self_reviewed",
    "ko_equiv": "-(으)ㄹ지도 모르다 / -겠다",
    "ko_diff": "韩语不确定用ㄹ지도 모르다，较强推量用겠다或ㄹ 것이다；でしょう无对应敬语分层。"
@@ -457,12 +515,6 @@
      "why": "「ない形+ば」是 しなければ，不是 しないば",
      "fix": "しなければなりません。",
      "learner": "zh"
-    },
-    {
-     "wrong": "しなければならないです",
-     "why": "ならない 已含 ない，礼貌用 なりません，不接 です",
-     "fix": "しなければなりません。",
-     "learner": "zh"
     }
    ],
    "jlpt": "N4",
@@ -472,7 +524,7 @@
    "source_ids": [
     "S000"
    ],
-   "review_status": "self_reviewed",
+   "review_status": "needs_review",
    "provenance": "self_reviewed",
    "ko_equiv": "-아/어야 하다 / -지 않으면 안 되다",
    "ko_diff": "韩语义务用아/어야 하다，更强用아/어야만 하다；敬语하셔야 합니다，日语无此分层。"

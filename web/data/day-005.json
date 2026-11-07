@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "19 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；3 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -93,7 +93,9 @@
    "surface": "中",
    "kana": "なか",
    "meaning": "里面；中间",
-   "ko": "未标注对应（待核对）",
+   "ko": "속（里面，里头） / 안（里，里面） / 가운데（中间，正中，中央）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "部屋の中にいます。",
@@ -106,7 +108,9 @@
    "surface": "前",
    "kana": "まえ",
    "meaning": "前面；之前",
-   "ko": "未标注对应（待核对）",
+   "ko": "앞（前，前面）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "駅の前に店があります。",
@@ -119,7 +123,9 @@
    "surface": "後",
    "kana": "あと",
    "meaning": "后面；之后",
-   "ko": "未标注对应（待核对）",
+   "ko": "담（之后） / 뒤（后，之后，后来） / 후（后，以后，之后）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "食事の後に、薬を飲みます。",
@@ -132,7 +138,9 @@
    "surface": "ご飯",
    "kana": "ごはん",
    "meaning": "米饭；饭（餐）",
-   "ko": "未标注对应（待核对）",
+   "ko": "밥 / 식사",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "ご飯を食べます。",
@@ -145,7 +153,9 @@
    "surface": "朝ご飯",
    "kana": "あさごはん",
    "meaning": "早饭",
-   "ko": "未标注对应（待核对）",
+   "ko": "아침（早饭，早餐）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "朝ご飯を食べます。",
@@ -158,7 +168,9 @@
    "surface": "水",
    "kana": "みず",
    "meaning": "水（冷水／生水）",
-   "ko": "未标注对应（待核对）",
+   "ko": "물（水）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "水を飲みます。",
@@ -171,7 +183,9 @@
    "surface": "お茶",
    "kana": "おちゃ",
    "meaning": "茶",
-   "ko": "未标注对应（待核对）",
+   "ko": "차（茶，茶水）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "お茶を飲みます。",
@@ -184,7 +198,9 @@
    "surface": "肉",
    "kana": "にく",
    "meaning": "肉",
-   "ko": "未标注对应（待核对）",
+   "ko": "살（肉） / 고기（肉）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "肉を買います。",
@@ -197,7 +213,9 @@
    "surface": "魚",
    "kana": "さかな",
    "meaning": "鱼",
-   "ko": "未标注对应（待核对）",
+   "ko": "물고기 / 생선（문맥에 따라）",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "魚が好きです。",
@@ -210,7 +228,9 @@
    "surface": "野菜",
    "kana": "やさい",
    "meaning": "蔬菜",
-   "ko": "未标注对应（待核对）",
+   "ko": "야채（蔬菜） / 채소（菜，蔬菜）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "野菜を買います。",
@@ -223,7 +243,9 @@
    "surface": "パン",
    "kana": "パン",
    "meaning": "面包",
-   "ko": "未标注对应（待核对）",
+   "ko": "빵（面包）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "パンを食べます。",
@@ -236,7 +258,9 @@
    "surface": "料理",
    "kana": "りょうり",
    "meaning": "菜肴；烹饪",
-   "ko": "未标注对应（待核对）",
+   "ko": "요리（烹饪，烹调）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "料理を作ります。",
@@ -249,7 +273,9 @@
    "surface": "電車",
    "kana": "でんしゃ",
    "meaning": "电车（轨道交通）",
-   "ko": "未标注对应（待核对）",
+   "ko": "전차（电车） / 전동차（电动车，电车）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "電車で行きます。",
@@ -262,7 +288,9 @@
    "surface": "バス",
    "kana": "バス",
    "meaning": "公交车",
-   "ko": "未标注对应（待核对）",
+   "ko": "버스（公共汽车，公交车）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "バスに乗ります。",
@@ -275,7 +303,9 @@
    "surface": "車",
    "kana": "くるま",
    "meaning": "汽车；车",
-   "ko": "未标注对应（待核对）",
+   "ko": "차（车，车辆） / 자동차（汽车）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "車で会社へ行きます。",
@@ -288,7 +318,9 @@
    "surface": "自転車",
    "kana": "じてんしゃ",
    "meaning": "自行车",
-   "ko": "未标注对应（待核对）",
+   "ko": "자전거（自行车）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "自転車で学校へ行きます。",
@@ -301,7 +333,9 @@
    "surface": "飛行機",
    "kana": "ひこうき",
    "meaning": "飞机",
-   "ko": "未标注对应（待核对）",
+   "ko": "비행기（飞机）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名詞",
    "ex": {
     "ja": "飛行機で旅行します。",
@@ -314,7 +348,9 @@
    "surface": "父",
    "kana": "ちち",
    "meaning": "(我)父亲",
-   "ko": "未标注对应（待核对）",
+   "ko": "아버지（父亲，爸爸）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名詞",
    "ex": {
     "ja": "父は会社員です。",
@@ -327,7 +363,9 @@
    "surface": "母",
    "kana": "はは",
    "meaning": "(我)母亲",
-   "ko": "未标注对应（待核对）",
+   "ko": "어머니（母亲，妈妈）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名詞",
    "ex": {
     "ja": "母は医者です。",
@@ -335,6 +373,29 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0048",
+  "V0049",
+  "V0050",
+  "V0051",
+  "V0052",
+  "V0053",
+  "V0054",
+  "V0055",
+  "V0056",
+  "V0057",
+  "V0058",
+  "V0059",
+  "V0060",
+  "V0061",
+  "V0062",
+  "V0063"
+ ],
+ "extension_vocab_ids": [
+  "V0064",
+  "V0066",
+  "V0067"
  ],
  "grammar": [
   {

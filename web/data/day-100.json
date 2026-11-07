@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "疑問",
    "kana": "ぎもん",
    "meaning": "疑问",
-   "ko": "의문",
+   "ko": "의문（疑问）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/な形容词",
    "ex": {
     "ja": "子供には疑問がたくさんあります。",
@@ -130,7 +132,9 @@
    "surface": "逆",
    "kana": "ぎゃく",
    "meaning": "相反；反过来",
-   "ko": "역",
+   "ko": "반대 / 거꾸로",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "连体词/な形容词/名词",
    "ex": {
     "ja": "靴を左右逆に履いていました。",
@@ -143,7 +147,9 @@
    "surface": "キャプテン",
    "kana": "キャプテン",
    "meaning": "队长；船长",
-   "ko": "未标注对应（待核对）",
+   "ko": "주장（队长）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "キャプテンは静かにするように命じた。",
@@ -156,7 +162,9 @@
    "surface": "キャンプ",
    "kana": "キャンプ",
    "meaning": "露营",
-   "ko": "未标注对应（待核对）",
+   "ko": "야영（野营，露营） / 캠프（野营，露营地） / 캠핑（露营，野营）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "私は家族と一緒にキャンプに行った。",
@@ -169,7 +177,9 @@
    "surface": "球",
    "kana": "きゅう",
    "meaning": "球；球体",
-   "ko": "구",
+   "ko": "공（球）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "地球は球のような形をしている。",
@@ -182,7 +192,9 @@
    "surface": "級",
    "kana": "きゅう",
    "meaning": "级；等级",
-   "ko": "급",
+   "ko": "급（级）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/量词",
    "ex": {
     "ja": "彼は１０年級に在学中だ。",
@@ -195,7 +207,9 @@
    "surface": "旧",
    "kana": "きゅう",
    "meaning": "旧；前",
-   "ko": "구",
+   "ko": "구（旧，老）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "前缀",
    "ex": {
     "ja": "新トンネルは旧トンネルの２倍の長さだ。",
@@ -208,7 +222,9 @@
    "surface": "休暇",
    "kana": "きゅうか",
    "meaning": "休假",
-   "ko": "휴가",
+   "ko": "휴가（休假，度假，放假，假期）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私は休暇で出かけていました。",
@@ -221,7 +237,9 @@
    "surface": "休憩",
    "kana": "きゅうけい",
    "meaning": "休息",
-   "ko": "휴게",
+   "ko": "휴게（休憩，休息）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "休憩してコーヒーを飲もう。",
@@ -234,7 +252,9 @@
    "surface": "急激",
    "kana": "きゅうげき",
    "meaning": "急剧",
-   "ko": "급격",
+   "ko": "급격하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容词",
    "ex": {
     "ja": "その党は急激にのびた。",
@@ -247,7 +267,9 @@
    "surface": "吸収",
    "kana": "きゅうしゅう",
    "meaning": "吸收",
-   "ko": "흡수",
+   "ko": "흡수（吸收）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "この布は水をよく吸収する。",
@@ -260,7 +282,9 @@
    "surface": "救助",
    "kana": "きゅうじょ",
    "meaning": "救助",
-   "ko": "구조",
+   "ko": "구조（救助，营救，拯救）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "彼はおぼれている少年を救助した。",
@@ -273,7 +297,9 @@
    "surface": "急速",
    "kana": "きゅうそく",
    "meaning": "迅速",
-   "ko": "급속",
+   "ko": "급속도（迅速，急速）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "な形容词/名词",
    "ex": {
     "ja": "コンピューターは急速な進化を遂げた。",
@@ -286,7 +312,9 @@
    "surface": "急に",
    "kana": "きゅうに",
    "meaning": "突然",
-   "ko": "未标注对应（待核对）",
+   "ko": "갑자기（突然，忽然，猛地，一下子） / 급작스레（突然地，猝不及防地）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "副词",
    "ex": {
     "ja": "気苦労で彼は急にふけた。",
@@ -299,7 +327,9 @@
    "surface": "器用",
    "kana": "きよう",
    "meaning": "手巧",
-   "ko": "未标注对应（待核对）",
+   "ko": "손재주가 좋다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容词/名词",
    "ex": {
     "ja": "マックスは手先が器用だ。",
@@ -312,7 +342,9 @@
    "surface": "教科書",
    "kana": "きょうかしょ",
    "meaning": "教科书",
-   "ko": "교과서",
+   "ko": "교과서（教科书，教材）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "教科書はどうしたらいいんでしょうか。",
@@ -325,7 +357,9 @@
    "surface": "競技",
    "kana": "きょうぎ",
    "meaning": "比赛",
-   "ko": "경기",
+   "ko": "경기（竞技，比赛，竞赛） / 게임（比赛）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "あなたは競技に参加しましたか。",
@@ -338,7 +372,9 @@
    "surface": "行儀",
    "kana": "ぎょうぎ",
    "meaning": "举止；礼貌",
-   "ko": "未标注对应（待核对）",
+   "ko": "버릇（礼貌）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "彼女は行儀が極めて上品である。",
@@ -351,7 +387,9 @@
    "surface": "供給",
    "kana": "きょうきゅう",
    "meaning": "供给",
-   "ko": "공급",
+   "ko": "공급（供应，供给） / 공여（供给）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "水は外側から供給された。",
@@ -364,7 +402,9 @@
    "surface": "教師",
    "kana": "きょうし",
    "meaning": "教师",
-   "ko": "교사",
+   "ko": "교사（教师） / 선생（老师，教师）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "私の兄は教師です。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V1791",
+  "V1792",
+  "V1793",
+  "V1794",
+  "V1795",
+  "V1796",
+  "V1797",
+  "V1798",
+  "V1799",
+  "V1800",
+  "V1801",
+  "V1802",
+  "V1803",
+  "V1804",
+  "V1805",
+  "V1806"
+ ],
+ "extension_vocab_ids": [
+  "V1807",
+  "V1808",
+  "V1809",
+  "V1810"
  ],
  "grammar": [
   {

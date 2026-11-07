@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "ボタン",
    "kana": "ボタン",
    "meaning": "扣子；按钮",
-   "ko": "未标注对应（待核对）",
+   "ko": "단추（扣子，纽扣） / 버튼（按钮）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "レーンコートのボタンがとれた。",
@@ -130,7 +132,9 @@
    "surface": "本棚",
    "kana": "ほんだな",
    "meaning": "书架",
-   "ko": "未标注对应（待核对）",
+   "ko": "서가（书架） / 책꽂이（书架）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私は本棚の本をすべて読んだわけではない。",
@@ -143,7 +147,9 @@
    "surface": "ほんとう",
    "kana": "ほんとう",
    "meaning": "真的；真实",
-   "ko": "未标注对应（待核对）",
+   "ko": "정말 / 진실",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词/连体词/な形容词",
    "ex": {
     "ja": "本当のマンションではありません。",
@@ -156,7 +162,9 @@
    "surface": "毎朝",
    "kana": "まいあさ",
    "meaning": "每天早上",
-   "ko": "未标注对应（待核对）",
+   "ko": "매일 아침",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "毎朝ジョギングすることにした。",
@@ -169,7 +177,9 @@
    "surface": "毎月",
    "kana": "まいげつ",
    "meaning": "每月",
-   "ko": "매월",
+   "ko": "매달",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "副词/名词",
    "ex": {
     "ja": "毎月のガス代はいくらですか。",
@@ -182,7 +192,9 @@
    "surface": "毎週",
    "kana": "まいしゅう",
    "meaning": "每周",
-   "ko": "매주",
+   "ko": "매주（每周，每星期）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "父は毎週日曜日にゴルフをします。",
@@ -196,6 +208,8 @@
    "kana": "まいねん",
    "meaning": "每年",
    "ko": "매년",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "副词/名词",
    "ex": {
     "ja": "毎年ここに来なきゃ。",
@@ -208,7 +222,9 @@
    "surface": "毎晩",
    "kana": "まいばん",
    "meaning": "每天晚上",
-   "ko": "未标注对应（待核对）",
+   "ko": "매일 밤",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "私は毎晩家にいます。",
@@ -221,7 +237,9 @@
    "surface": "曲る",
    "kana": "まがる",
    "meaning": "拐弯；弯曲",
-   "ko": "未标注对应（待核对）",
+   "ko": "돌다 / 구부러지다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "２ブロック先まで歩き、左へ曲がりなさい。",
@@ -234,7 +252,9 @@
    "surface": "まずい",
    "kana": "まずい",
    "meaning": "难吃；糟糕",
-   "ko": "未标注对应（待核对）",
+   "ko": "맛없다 / 곤란하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "あ！まずい！ガソリンが切れてきた。",
@@ -247,7 +267,9 @@
    "surface": "また",
    "kana": "また",
    "meaning": "又；再",
-   "ko": "未标注对应（待核对）",
+   "ko": "또（又）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "副词",
    "ex": {
     "ja": "ジムもまたパーティーに来ます。",
@@ -260,7 +282,9 @@
    "surface": "町",
    "kana": "まち",
    "meaning": "城镇；街道",
-   "ko": "未标注对应（待核对）",
+   "ko": "마을 / 거리",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "その町はロンドンのすぐ北にある。",
@@ -273,7 +297,9 @@
    "surface": "まっすぐ",
    "kana": "まっすぐ",
    "meaning": "笔直；直接",
-   "ko": "未标注对应（待核对）",
+   "ko": "곧장 / 똑바로",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容词/副词/名词",
    "ex": {
     "ja": "まっすぐ前を見てください。",
@@ -286,7 +312,9 @@
    "surface": "マッチ",
    "kana": "マッチ",
    "meaning": "火柴",
-   "ko": "未标注对应（待核对）",
+   "ko": "성냥（火柴）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "マッチありますか。",
@@ -299,7 +327,9 @@
    "surface": "窓",
    "kana": "まど",
    "meaning": "窗户",
-   "ko": "未标注对应（待核对）",
+   "ko": "창문（窗，窗户）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "窓を開けっぱなしにしておいたの？",
@@ -312,7 +342,9 @@
    "surface": "丸い",
    "kana": "まるい",
    "meaning": "圆的",
-   "ko": "未标注对应（待核对）",
+   "ko": "동글다（圆圆的） / 둥글다（圆，圆圆的） / 둥그렇다（圆圆的）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "ボールは丸い。",
@@ -325,7 +357,9 @@
    "surface": "万",
    "kana": "まん",
    "meaning": "万",
-   "ko": "未标注对应（待核对）",
+   "ko": "만（万）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "数词",
    "ex": {
     "ja": "このテープレコーダーは４万円しました。",
@@ -338,7 +372,9 @@
    "surface": "万年筆",
    "kana": "まんねんひつ",
    "meaning": "钢笔",
-   "ko": "만년필",
+   "ko": "만년필（钢笔）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "新しい万年筆をなくしてしまった。",
@@ -351,7 +387,9 @@
    "surface": "磨く",
    "kana": "みがく",
    "meaning": "擦；刷；磨练",
-   "ko": "未标注对应（待核对）",
+   "ko": "닦다（刷，擦） / 연마하다（磨练，锻炼，钻研）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "そのなべを磨いていただけませんか。",
@@ -364,7 +402,9 @@
    "surface": "右",
    "kana": "みぎ",
    "meaning": "右；右边",
-   "ko": "未标注对应（待核对）",
+   "ko": "우（右） / 오른쪽（右侧，右边） / 오른편（右边，右侧）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/连体词",
    "ex": {
     "ja": "アラビア語は右から左へ書きます。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0788",
+  "V0789",
+  "V0790",
+  "V0791",
+  "V0792",
+  "V0793",
+  "V0794",
+  "V0795",
+  "V0796",
+  "V0797",
+  "V0798",
+  "V0799",
+  "V0800",
+  "V0801",
+  "V0802",
+  "V0803"
+ ],
+ "extension_vocab_ids": [
+  "V0804",
+  "V0805",
+  "V0806",
+  "V0807"
  ],
  "grammar": [
   {
@@ -402,12 +466,6 @@
    ],
    "common_errors": [
     {
-     "wrong": "日本語を話されます。",
-     "why": "「〜られる」在这里被误当可能，其实是受身；五段可能是 話せる",
-     "fix": "日本語が話せます。",
-     "learner": "zh"
-    },
-    {
      "wrong": "話せできます。",
      "why": "可能形后不能再叠加 できる（双重可能）",
      "fix": "話せます。",
@@ -423,7 +481,7 @@
    "source_ids": [
     "S000"
    ],
-   "review_status": "self_reviewed",
+   "review_status": "needs_review",
    "provenance": "self_reviewed",
    "ko_equiv": "-(으)ㄹ 수 있다",
    "ko_diff": "韩语可能用ㄹ 수 있다短语，不改动词形态；日语靠一段/五段变形，宾语可を→が。"
@@ -461,15 +519,9 @@
    "compare": [],
    "common_errors": [
     {
-     "wrong": "雨が降ると、行きません。",
-     "why": "「と」条件后项不能接意志/请求/否定意志表达，此处该用 たら/ば",
-     "fix": "雨が降ったら行きません。",
-     "learner": "zh"
-    },
-    {
-     "wrong": "安ければ、買いました。",
-     "why": "「ば」假定前项未发生，后项用现在/意志；过去既定该用 たら",
-     "fix": "安かったら、買いました。",
+     "wrong": "雨が降るたら、家にいます。",
+     "why": "たら接动词た形，不接辞书形加たら。",
+     "fix": "雨が降ったら、家にいます。",
      "learner": "zh"
     }
    ],
@@ -482,7 +534,7 @@
    "source_ids": [
     "S000"
    ],
-   "review_status": "self_reviewed",
+   "review_status": "needs_review",
    "provenance": "self_reviewed",
    "ko_equiv": "-(으)면",
    "ko_diff": "韩语条件基本用면一形，语用限制少；日语ば/たら/なら/と四分，と后不接意志。"

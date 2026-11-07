@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "それでは",
    "kana": "それでは",
    "meaning": "那么",
-   "ko": "未标注对应（待核对）",
+   "ko": "그러면",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "惯用表达",
    "ex": {
     "ja": "それでは、あなたは来ないということですか。",
@@ -130,7 +132,9 @@
    "surface": "大学",
    "kana": "だいがく",
    "meaning": "大学",
-   "ko": "대학",
+   "ko": "대학（大学） / 대학교（大学）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "大学で何をするつもりですか。",
@@ -143,7 +147,9 @@
    "surface": "大使館",
    "kana": "たいしかん",
    "meaning": "大使馆",
-   "ko": "대사관",
+   "ko": "대사관（大使馆）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "日本大使館はどこにありますか。",
@@ -156,7 +162,9 @@
    "surface": "大好き",
    "kana": "だいすき",
    "meaning": "很喜欢",
-   "ko": "未标注对应（待核对）",
+   "ko": "매우 좋아하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容词",
    "ex": {
     "ja": "ロジャーはパーティーが大好きだ。",
@@ -169,7 +177,9 @@
    "surface": "大切",
    "kana": "たいせつ",
    "meaning": "重要",
-   "ko": "未标注对应（待核对）",
+   "ko": "소중하다 / 중요하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容词",
    "ex": {
     "ja": "本を読むことは大切です。",
@@ -182,7 +192,9 @@
    "surface": "台所",
    "kana": "だいどころ",
    "meaning": "厨房",
-   "ko": "未标注对应（待核对）",
+   "ko": "부엌（厨房） / 주방（厨房）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ルーシーは今台所にいるでしょう。",
@@ -195,7 +207,9 @@
    "surface": "たいへん",
    "kana": "たいへん",
    "meaning": "非常；辛苦",
-   "ko": "未标注对应（待核对）",
+   "ko": "매우 / 힘들다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "副词",
    "ex": {
     "ja": "それはたいへんなショックでした。",
@@ -208,7 +222,9 @@
    "surface": "たくさん",
    "kana": "たくさん",
    "meaning": "很多",
-   "ko": "未标注对应（待核对）",
+   "ko": "많이",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "连体词/な形容词/名词/副词",
    "ex": {
     "ja": "なすべきことがまだたくさんある。",
@@ -221,7 +237,9 @@
    "surface": "タクシー",
    "kana": "タクシー",
    "meaning": "出租车",
-   "ko": "未标注对应（待核对）",
+   "ko": "택시（出租车）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "そのタクシーはいきなり左に曲がった。",
@@ -234,7 +252,9 @@
    "surface": "出す",
    "kana": "だす",
    "meaning": "拿出；寄出",
-   "ko": "未标注对应（待核对）",
+   "ko": "내다（拿出） / 꺼내다（拿出，掏出，取出） / 내놓다（拿出来）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "ここではおいしい食べ物が出されます。",
@@ -247,7 +267,9 @@
    "surface": "立つ",
    "kana": "たつ",
    "meaning": "站",
-   "ko": "未标注对应（待核对）",
+   "ko": "서다（站，站立）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "立っているのは、みんな男だった。",
@@ -260,7 +282,9 @@
    "surface": "たて",
    "kana": "たて",
    "meaning": "竖；长度",
-   "ko": "未标注对应（待核对）",
+   "ko": "세로 / 길이",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "テーブルを縦一列に並べなさい。",
@@ -273,7 +297,9 @@
    "surface": "建物",
    "kana": "たてもの",
    "meaning": "建筑物",
-   "ko": "건물",
+   "ko": "건물（建筑，建筑物） / 건조물（建造物，建筑物）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "建物がとっても小さく見えるよ。",
@@ -286,7 +312,9 @@
    "surface": "楽しい",
    "kana": "たのしい",
    "meaning": "快乐",
-   "ko": "未标注对应（待核对）",
+   "ko": "즐겁다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "あなたと一緒にいて楽しかった。",
@@ -299,7 +327,9 @@
    "surface": "頼む",
    "kana": "たのむ",
    "meaning": "请求；点（菜）",
-   "ko": "未标注对应（待核对）",
+   "ko": "청하다（请求，委托，嘱托）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "あなたに頼んでもよろしいですか。",
@@ -312,7 +342,9 @@
    "surface": "たばこ",
    "kana": "たばこ",
    "meaning": "香烟",
-   "ko": "未标注对应（待核对）",
+   "ko": "담배",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "男はライターでたばこに火をつけた。",
@@ -325,7 +357,9 @@
    "surface": "たぶん",
    "kana": "たぶん",
    "meaning": "大概",
-   "ko": "未标注对应（待核对）",
+   "ko": "아마",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "副词",
    "ex": {
     "ja": "君にはたぶんみんなわかっていることでしょう。",
@@ -338,7 +372,9 @@
    "surface": "食べ物",
    "kana": "たべもの",
    "meaning": "食物",
-   "ko": "未标注对应（待核对）",
+   "ko": "음식（食物，食品） / 먹을거리（食物，食品）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "食べ物はすべてなくなってしまった。",
@@ -351,7 +387,9 @@
    "surface": "卵",
    "kana": "たまご",
    "meaning": "蛋",
-   "ko": "未标注对应（待核对）",
+   "ko": "알（蛋，卵）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "卵を一ダースづつつめなさい。",
@@ -364,7 +402,9 @@
    "surface": "誰",
    "kana": "だれ",
    "meaning": "谁",
-   "ko": "未标注对应（待核对）",
+   "ko": "누구（谁）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "代名词",
    "ex": {
     "ja": "誰がこれをしたのかはわからない。",
@@ -373,13 +413,37 @@
    "audio": "tts"
   }
  ],
+ "core_vocab_ids": [
+  "V0608",
+  "V0609",
+  "V0610",
+  "V0611",
+  "V0612",
+  "V0613",
+  "V0614",
+  "V0615",
+  "V0616",
+  "V0617",
+  "V0618",
+  "V0619",
+  "V0620",
+  "V0621",
+  "V0622",
+  "V0623"
+ ],
+ "extension_vocab_ids": [
+  "V0624",
+  "V0625",
+  "V0626",
+  "V0627"
+ ],
  "grammar": [
   {
    "id": "G0258",
    "pattern": "〜と（and）",
    "meaning_zh": "…和…（全部列举）",
    "connection": "名词 + と + 名词（全部列举）",
-   "usage": "连接两个以上名词，表示完整列举，最后一个名词后不再加 と。",
+   "usage": "连接名词列举，可说「AとB」，也可在并列成分后重复と，如「AとBとが」。",
    "register_note": "口语与书面通用。",
    "examples": [
     {
@@ -406,9 +470,9 @@
    ],
    "common_errors": [
     {
-     "wrong": "かばんの中にペンとノートとがあります。",
-     "why": "全部列举时最后一个名词后不加 と",
-     "fix": "かばんの中にペンとノートがあります。",
+     "wrong": "かばんにペンととノートがあります。",
+     "why": "此处と是名词之间的并列助词，不重复写成「とと」。",
+     "fix": "かばんにペンとノートがあります。",
      "learner": "zh"
     }
    ],
@@ -423,7 +487,7 @@
    "source_ids": [
     "S900"
    ],
-   "review_status": "ai_draft",
+   "review_status": "needs_review",
    "provenance": "OpenJLPT CC-BY-SA-4.0",
    "license": "CC-BY-SA-4.0"
   },

@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "生徒",
    "kana": "せいと",
    "meaning": "学生",
-   "ko": "未标注对应（待核对）",
+   "ko": "학생（学生）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "この学校はたくさんの生徒がいます。",
@@ -130,7 +132,9 @@
    "surface": "セーター",
    "kana": "セーター",
    "meaning": "毛衣",
-   "ko": "未标注对应（待核对）",
+   "ko": "스웨터（毛衣）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "このセーターは気に入らない。",
@@ -143,7 +147,9 @@
    "surface": "せっけん",
    "kana": "せっけん",
    "meaning": "肥皂",
-   "ko": "未标注对应（待核对）",
+   "ko": "비누",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词/自动词",
    "ex": {
     "ja": "せっけんだらけの手で私にさわらないで。",
@@ -156,7 +162,9 @@
    "surface": "背広",
    "kana": "せびろ",
    "meaning": "西装",
-   "ko": "未标注对应（待核对）",
+   "ko": "양복（西装）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私は新しい背広を買った。",
@@ -169,7 +177,9 @@
    "surface": "狭い",
    "kana": "せまい",
    "meaning": "窄",
-   "ko": "未标注对应（待核对）",
+   "ko": "좁다（窄，狭窄）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "オランダは狭い国です。",
@@ -182,7 +192,9 @@
    "surface": "ゼロ",
    "kana": "ゼロ",
    "meaning": "零",
-   "ko": "未标注对应（待核对）",
+   "ko": "공（零） / 제로（零）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私たちは商売をゼロから始めなければならなかった。",
@@ -195,7 +207,9 @@
    "surface": "千",
    "kana": "せん",
    "meaning": "千",
-   "ko": "천",
+   "ko": "천（千，一千）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "数词",
    "ex": {
     "ja": "このホールには人が二千人入れる。",
@@ -208,7 +222,9 @@
    "surface": "先月",
    "kana": "せんげつ",
    "meaning": "上个月",
-   "ko": "未标注对应（待核对）",
+   "ko": "지난달（上月，上个月）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "先月は、ほとんど雨が降らなかった。",
@@ -221,7 +237,9 @@
    "surface": "先週",
    "kana": "せんしゅう",
    "meaning": "上周",
-   "ko": "未标注对应（待核对）",
+   "ko": "지난주（上周）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "あの人は先週ここにいた人です。",
@@ -234,7 +252,9 @@
    "surface": "全部",
    "kana": "ぜんぶ",
    "meaning": "全部",
-   "ko": "전부",
+   "ko": "전부（全部） / 다（全部，最好） / 몽땅（都，全部）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/连体词/副词",
    "ex": {
     "ja": "トッピングは全部のせて下さい。",
@@ -247,7 +267,9 @@
    "surface": "そうして",
    "kana": "そうして",
    "meaning": "然后",
-   "ko": "未标注对应（待核对）",
+   "ko": "그리고",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "接续词",
    "ex": {
     "ja": "そうしてくださればとてもうれしい。",
@@ -260,7 +282,9 @@
    "surface": "そこ",
    "kana": "そこ",
    "meaning": "那里",
-   "ko": "未标注对应（待核对）",
+   "ko": "게（那儿，那里） / 거기（那儿，那边，那里） / 고기（那儿，那里）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "代名词",
    "ex": {
     "ja": "バスでそこまで２時間かかります。",
@@ -273,7 +297,9 @@
    "surface": "そちら",
    "kana": "そちら",
    "meaning": "那边",
-   "ko": "未标注对应（待核对）",
+   "ko": "거기（那儿，那边，那里） / 고쪽（那边） / 그쪽（那边）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "代名词",
    "ex": {
     "ja": "これとそちらとの違いは何だい。",
@@ -286,7 +312,9 @@
    "surface": "そっち",
    "kana": "そっち",
    "meaning": "那边",
-   "ko": "未标注对应（待核对）",
+   "ko": "고리（那边，那里） / 고쪽（那边） / 그쪽（那边）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "代名词",
    "ex": {
     "ja": "そっちの天気は？",
@@ -299,7 +327,9 @@
    "surface": "外",
    "kana": "そと",
    "meaning": "外面",
-   "ko": "未标注对应（待核对）",
+   "ko": "겉（外面，表面，表） / 밖（外面，外边） / 바깥（外，外面）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "外に出してやってくれませんか。",
@@ -312,7 +342,9 @@
    "surface": "その",
    "kana": "その",
    "meaning": "那个",
-   "ko": "未标注对应（待核对）",
+   "ko": "고（那，那个） / 그（那个）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "词",
    "ex": {
     "ja": "その本を見せてください。",
@@ -325,7 +357,9 @@
    "surface": "そば",
    "kana": "そば",
    "meaning": "旁边；附近",
-   "ko": "未标注对应（待核对）",
+   "ko": "곁 / 근처",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "ガレージは家のそばにあります。",
@@ -338,7 +372,9 @@
    "surface": "空",
    "kana": "そら",
    "meaning": "天空",
-   "ko": "未标注对应（待核对）",
+   "ko": "하늘（天空）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "空はすっかりもやがかかっていた。",
@@ -351,7 +387,9 @@
    "surface": "それ",
    "kana": "それ",
    "meaning": "那个",
-   "ko": "未标注对应（待核对）",
+   "ko": "거（那个） / 그（那样，那个） / 거기（那个）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "代名词",
    "ex": {
     "ja": "わたしはそれを見てぎょっとした。",
@@ -364,7 +402,9 @@
    "surface": "それから",
    "kana": "それから",
    "meaning": "然后",
-   "ko": "未标注对应（待核对）",
+   "ko": "그리고 나서",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "惯用表达",
    "ex": {
     "ja": "それからすっきりきれいにしてくれ。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0588",
+  "V0589",
+  "V0590",
+  "V0591",
+  "V0592",
+  "V0593",
+  "V0594",
+  "V0595",
+  "V0596",
+  "V0597",
+  "V0598",
+  "V0599",
+  "V0600",
+  "V0601",
+  "V0602",
+  "V0603"
+ ],
+ "extension_vocab_ids": [
+  "V0604",
+  "V0605",
+  "V0606",
+  "V0607"
  ],
  "grammar": [
   {

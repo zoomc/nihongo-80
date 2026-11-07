@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "安心",
    "kana": "あんしん",
    "meaning": "放心；安心",
-   "ko": "未标注对应（待核对）",
+   "ko": "안도（安心） / 안심（安心，放心）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変/な形容詞",
    "ex": {
     "ja": "無事だと聞いて安心しました。",
@@ -130,7 +132,9 @@
    "surface": "興味",
    "kana": "きょうみ",
    "meaning": "兴趣；好奇",
-   "ko": "未标注对应（待核对）",
+   "ko": "관심（关注，关心，兴趣） / 재미（兴趣，趣味） / 취미（兴趣）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "日本の歴史に興味があります。",
@@ -143,7 +147,9 @@
    "surface": "上手",
    "kana": "じょうず",
    "meaning": "擅长；拿手",
-   "ko": "未标注对应（待核对）",
+   "ko": "잘하다 / 능숙하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容詞",
    "ex": {
     "ja": "彼女は料理が上手です。",
@@ -156,7 +162,9 @@
    "surface": "下手",
    "kana": "へた",
    "meaning": "不擅长；笨拙",
-   "ko": "未标注对应（待核对）",
+   "ko": "서투르다 / 못하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容詞",
    "ex": {
     "ja": "私は歌が下手です。",
@@ -169,7 +177,9 @@
    "surface": "丈夫",
    "kana": "じょうぶ",
    "meaning": "结实；健壮",
-   "ko": "未标注对应（待核对）",
+   "ko": "튼튼하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容詞",
    "ex": {
     "ja": "この鞄はとても丈夫です。",
@@ -182,7 +192,9 @@
    "surface": "大丈夫",
    "kana": "だいじょうぶ",
    "meaning": "没问题；不要紧；不用了",
-   "ko": "未标注对应（待核对）",
+   "ko": "괜찮다 / 문제없다 / 필요 없다（문맥에 따라）",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容詞",
    "ex": {
     "ja": "「大丈夫ですか」「はい、大丈夫です」",
@@ -195,7 +207,9 @@
    "surface": "簡単",
    "kana": "かんたん",
    "meaning": "简单；容易",
-   "ko": "未标注对应（待核对）",
+   "ko": "간단하다 / 쉽다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容詞",
    "ex": {
     "ja": "この問題は簡単です。",
@@ -208,7 +222,9 @@
    "surface": "危ない",
    "kana": "あぶない",
    "meaning": "危险",
-   "ko": "未标注对应（待核对）",
+   "ko": "위태롭다（危急，危险，惊险，悬） / 위험하다（危险）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容詞",
    "ex": {
     "ja": "ここで遊ぶのは危ないです。",
@@ -221,7 +237,9 @@
    "surface": "連絡",
    "kana": "れんらく",
    "meaning": "联络；联系",
-   "ko": "未标注对应（待核对）",
+   "ko": "연락（联络，联系）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "先生に連絡してください。",
@@ -234,7 +252,9 @@
    "surface": "予定",
    "kana": "よてい",
    "meaning": "预定；计划（日程）",
-   "ko": "未标注对应（待核对）",
+   "ko": "예정（预定）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "明日は出張の予定です。",
@@ -247,7 +267,9 @@
    "surface": "予約",
    "kana": "よやく",
    "meaning": "预约；预订",
-   "ko": "未标注对应（待核对）",
+   "ko": "예약（预约，预订）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "ホテルを予約しました。",
@@ -260,7 +282,9 @@
    "surface": "用意",
    "kana": "ようい",
    "meaning": "准备；备好（东西）",
-   "ko": "未标注对应（待核对）",
+   "ko": "마련（准备，备下，置备） / 준비（准备） / 채비（准备，筹备）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "資料を用意してください。",
@@ -273,7 +297,9 @@
    "surface": "世話",
    "kana": "せわ",
    "meaning": "照顾；照料",
-   "ko": "未标注对应（待核对）",
+   "ko": "건사（照看，照顾） / 치다꺼리（帮助，照顾，照料） / 뒤치다꺼리（收拾，照顾）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "子供の世話をします。",
@@ -286,7 +312,9 @@
    "surface": "そろそろ",
    "kana": "そろそろ",
    "meaning": "差不多该…；快要…",
-   "ko": "未标注对应（待核对）",
+   "ko": "슬슬 / 이제 곧",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "副詞",
    "ex": {
     "ja": "そろそろ帰りましょう。",
@@ -299,7 +327,9 @@
    "surface": "あ",
    "kana": "あ",
    "meaning": "啊",
-   "ko": "未标注对应（待核对）",
+   "ko": "아",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "感叹词",
    "ex": {
     "ja": "あ！まずい！ガソリンが切れてきた。",
@@ -312,7 +342,9 @@
    "surface": "ああ",
    "kana": "ああ",
    "meaning": "那样；那种",
-   "ko": "未标注对应（待核对）",
+   "ko": "저렇게 / 저런",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "副词",
    "ex": {
     "ja": "ある人はこうだと言い、またある人はああだと言う。",
@@ -325,7 +357,9 @@
    "surface": "あいさつする",
    "kana": "あいさつする",
    "meaning": "打招呼；问候",
-   "ko": "인사",
+   "ko": "인사하다",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "私にあいさつするような人はいない。",
@@ -338,7 +372,9 @@
    "surface": "間",
    "kana": "あいだ",
    "meaning": "之间；期间",
-   "ko": "未标注对应（待核对）",
+   "ko": "새（之间，以来） / 사이（间，之间，……的时候）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "二人の間がしっくり行かない。",
@@ -351,7 +387,9 @@
    "surface": "合う",
    "kana": "あう",
    "meaning": "合适；相符",
-   "ko": "未标注对应（待核对）",
+   "ko": "맞다（合适，合乎，对） / 합하다（符合，相符） / 맞아떨어지다（完全相符，正好，一点不差）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "このチョッキは前が合わない。",
@@ -364,7 +402,9 @@
    "surface": "あかちゃん",
    "kana": "あかちゃん",
    "meaning": "婴儿；宝宝",
-   "ko": "未标注对应（待核对）",
+   "ko": "아기",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "その赤ちゃんは歯が生えはじめている。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0177",
+  "V0178",
+  "V0179",
+  "V0180",
+  "V0181",
+  "V0182",
+  "V0183",
+  "V0184",
+  "V0185",
+  "V0186",
+  "V0187",
+  "V0188",
+  "V0189",
+  "V0190",
+  "V0873",
+  "V0874"
+ ],
+ "extension_vocab_ids": [
+  "V0875",
+  "V0876",
+  "V0877",
+  "V0878"
  ],
  "grammar": [
   {
@@ -397,12 +461,6 @@
    "compare": [],
    "common_errors": [
     {
-     "wrong": "来ないでも いい。",
-     "why": "ない形 来ない → 来なくて，不是 来ないで+も",
-     "fix": "来なくてもいいです。",
-     "learner": "zh"
-    },
-    {
      "wrong": "来なくては いい",
      "why": "「なくては」是「必须/不…不行」，与许可义相反",
      "fix": "来なくてもいいです。",
@@ -416,7 +474,7 @@
    "source_ids": [
     "S000"
    ],
-   "review_status": "self_reviewed",
+   "review_status": "needs_review",
    "provenance": "self_reviewed",
    "ko_equiv": "-지 않아도 되다",
    "ko_diff": "韩语지 않아도 되다表不必，口语常안 해도 돼更随意；日语なくてもいい较中性。"
@@ -425,7 +483,7 @@
    "id": "G0048",
    "pattern": "～ようになる / ～なくなる",
    "meaning_zh": "变得会…／变得不…了",
-   "connection": "辞书形/可能形 + ようになる；ない形 + なくなる",
+   "connection": "辞书形/可能形 + ようになる；ない形去ない + なくなる（例：行かなくなる）",
    "usage": "表状态/能力的变化；能力变化多用可能形 + ようになる",
    "register_note": "ようになる 口语书面通用，谈能力或习惯变化。",
    "examples": [
@@ -458,12 +516,6 @@
      "why": "能力变化用 可能形 + ようになる：話せる",
      "fix": "話せるようになりました。",
      "learner": "zh"
-    },
-    {
-     "wrong": "降らないようになりました",
-     "why": "「不再下」用 ない形 + なくなる，不是 ない+ようになる",
-     "fix": "降らなくなりました。",
-     "learner": "zh"
     }
    ],
    "jlpt": "N4",
@@ -473,7 +525,7 @@
    "source_ids": [
     "S000"
    ],
-   "review_status": "self_reviewed",
+   "review_status": "needs_review",
    "provenance": "self_reviewed",
    "ko_equiv": "-게 되다 / -지 않게 되다",
    "ko_diff": "韩语变化结果统用게 되다，能力变化也用게 되다；日语ようになる与なくなる分开。"

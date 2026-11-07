@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 8,
-   "desc": "14 个新词；实际用时超预算时记录未完成"
+   "desc": "11 个必学词；3 个选学拓展"
   },
   {
    "type": "语法",
@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -122,7 +122,9 @@
    "surface": "支店",
    "kana": "してん",
    "meaning": "分店",
-   "ko": "지점",
+   "ko": "지점（分店）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "新しい支店が来月シカゴに開店する。",
@@ -135,7 +137,9 @@
    "surface": "指導",
    "kana": "しどう",
    "meaning": "指导",
-   "ko": "지도",
+   "ko": "지도（指导）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "彼は指導されなくても学ぶことができた。",
@@ -148,7 +152,9 @@
    "surface": "自動",
    "kana": "じどう",
    "meaning": "自动",
-   "ko": "자동",
+   "ko": "자동（自动）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "连体词/名词",
    "ex": {
     "ja": "彼女は自動式の洗濯機をもっている。",
@@ -161,7 +167,9 @@
    "surface": "品",
    "kana": "しな",
    "meaning": "商品；物品",
-   "ko": "품",
+   "ko": "물건（商品，物品）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ここでお買い上げの品は無料で配達します。",
@@ -174,7 +182,9 @@
    "surface": "支配",
    "kana": "しはい",
    "meaning": "支配；统治",
-   "ko": "지배",
+   "ko": "지배（统治）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "静けさが森を支配していた。",
@@ -187,7 +197,9 @@
    "surface": "芝居",
    "kana": "しばい",
    "meaning": "戏剧",
-   "ko": "未标注对应（待核对）",
+   "ko": "연극（话剧，戏剧）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "どの芝居がいいですか。",
@@ -200,7 +212,9 @@
    "surface": "しばしば",
    "kana": "しばしば",
    "meaning": "屡次；常常",
-   "ko": "未标注对应（待核对）",
+   "ko": "누차（屡次）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "副词",
    "ex": {
     "ja": "貧困はしばしば犯罪の原因となる。",
@@ -213,7 +227,9 @@
    "surface": "芝生",
    "kana": "しばふ",
    "meaning": "草坪",
-   "ko": "未标注对应（待核对）",
+   "ko": "잔디",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼らは芝生の上に横になっていた。",
@@ -227,6 +243,8 @@
    "kana": "しはらい",
    "meaning": "支付",
    "ko": "지불",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "どのような支払方法がありますか。",
@@ -239,7 +257,9 @@
    "surface": "支払う",
    "kana": "しはらう",
    "meaning": "支付",
-   "ko": "未标注对应（待核对）",
+   "ko": "치르다（支付，付，付出） / 지불하다（支付，付给，付款）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "私はその本に３ドル支払った。",
@@ -252,7 +272,9 @@
    "surface": "死亡",
    "kana": "しぼう",
    "meaning": "死亡",
-   "ko": "사망",
+   "ko": "사망（死亡） / 운명（去世，死亡） / 죽음（死亡）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "彼は母親が死亡したという電報を受け取った。",
@@ -265,7 +287,9 @@
    "surface": "資本",
    "kana": "しほん",
    "meaning": "资本",
-   "ko": "자본",
+   "ko": "자본（资本，资金）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "彼らには次の工場を建設するだけの資本がある。",
@@ -278,7 +302,9 @@
    "surface": "しまい",
    "kana": "しまい",
    "meaning": "姐妹",
-   "ko": "未标注对应（待核对）",
+   "ko": "자매",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "彼の姉妹は二人とも美人です。",
@@ -291,7 +317,9 @@
    "surface": "しまう",
    "kana": "しまう",
    "meaning": "收拾；做完",
-   "ko": "未标注对应（待核对）",
+   "ko": "치우다 / ~해 버리다",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "动词(五段)",
    "ex": {
     "ja": "本とノートをしまいなさい。",
@@ -300,12 +328,30 @@
    "audio": "tts"
   }
  ],
+ "core_vocab_ids": [
+  "V2089",
+  "V2090",
+  "V2091",
+  "V2092",
+  "V2093",
+  "V2094",
+  "V2095",
+  "V2096",
+  "V2097",
+  "V2098",
+  "V2099"
+ ],
+ "extension_vocab_ids": [
+  "V2100",
+  "V2101",
+  "V2102"
+ ],
  "grammar": [
   {
    "id": "G0143",
    "pattern": "〜にしても",
    "meaning_zh": "即使…；就算是…",
-   "connection": "动词普通形/名词 + にしても",
+   "connection": "动词普通形／名词 + にしても；名词化的 の + にしても 也可用",
    "usage": "先承认前项成立，再指出后项仍不受影响，含不满或让步。",
    "register_note": "口语书面均可。",
    "examples": [
@@ -333,9 +379,9 @@
    ],
    "common_errors": [
     {
-     "wrong": "忙しかったのにしても、電話一本ぐらいできたでしょう。",
-     "why": "「にしても」直接接普通形，不能加「の」。",
-     "fix": "忙しかったにしても",
+     "wrong": "雨にしてもも、出かけます。",
+     "why": "にしても已有も，不叠加第二个も。",
+     "fix": "雨にしても、出かけます。",
      "learner": "zh"
     }
    ],
@@ -349,7 +395,7 @@
    "source_ids": [
     "S900"
    ],
-   "review_status": "ai_draft",
+   "review_status": "needs_review",
    "provenance": "OpenJLPT CC-BY-SA-4.0",
    "license": "CC-BY-SA-4.0"
   },
@@ -357,7 +403,7 @@
    "id": "G0144",
    "pattern": "〜に関して / 〜に関する",
    "meaning_zh": "关于…；就…",
-   "connection": "名词 + に関して；名词 + に関する + 名词",
+   "connection": "名词 + に関して；名词 + に関する／に関しての + 名词",
    "usage": "引出话题，语气比「について」正式、郑重。",
    "register_note": "书面语为主，公文和商务文书常用。",
    "examples": [
@@ -385,15 +431,15 @@
    ],
    "common_errors": [
     {
-     "wrong": "彼は日本の歴史に関しての本をたくさん持っている。",
-     "why": "修饰名词要用「に関する」，「に関しての」不合法。",
-     "fix": "歴史に関する本",
+     "wrong": "この問題に関するの資料です。",
+     "why": "修饰名词用「に関する資料」或「に関しての資料」。",
+     "fix": "この問題に関する資料です。",
      "learner": "zh"
     }
    ],
    "jlpt": "N3",
    "ko_equiv": "-에 관해서",
-   "ko_diff": "韩语「-에 관해서」与「に関して」对应；但日语修饰名词要改用「に関する」，韩语形式不变，容易漏改。",
+   "ko_diff": "韩语「-에 관해서」表示关于；修饰名词时日语可用「に関する」或「に関しての」，韩语可用「-에 관한」。",
    "notes": "",
    "tags": [
     "topic",
@@ -402,7 +448,7 @@
    "source_ids": [
     "S900"
    ],
-   "review_status": "ai_draft",
+   "review_status": "needs_review",
    "provenance": "OpenJLPT CC-BY-SA-4.0",
    "license": "CC-BY-SA-4.0"
   }
@@ -616,11 +662,10 @@
  "listening_material": {
   "id": "M0099",
   "title": "病院の予約・1",
-  "audio_url": "",
-  "audio_kind": "tts",
+  "audio_url": "/audio/M0099.m4a",
+  "audio_kind": "synthetic",
   "transcript": "病院に電話して、診察の予約をしました。三日前からのどが痛くて、昨日から少し熱もあります。受付の人に、今日の午前中は予約でいっぱいだと言われたので、午後二時に行くことにしました。初めてこの病院を利用するので、予約時間の十五分前には着くように言われました。入口で名前を伝えてから、問診票を書く必要があります。飲んでいる薬があるかどうかも聞かれましたが、今は何も飲んでいません。病院へはバスで行きます。車で行くつもりでしたが、熱があるので自分で運転するのはやめました。受付では保険の資格を確認できる物も見せます。家を出る前に、必要な物を小さなかばんにまとめておきます。予約を取り消す場合は、できるだけ早く電話してくださいとのことでした。今日は仕事を休んで、診察が終わったらそのまま家に帰って休むつもりです。",
-  "duration_sec": 0,
-  "duration_estimate_sec": 70,
+  "duration_sec": 64.625,
   "questions": [
    {
     "qid": "L-117-0-644a8e17534a",

@@ -3768,4 +3768,5 @@ def main(argv):
 
 
 if __name__ == "__main__":
+    raise SystemExit("v4 构建入口已停用；请运行 python3 scripts/nh80.py build")
     main(sys.argv[1:])

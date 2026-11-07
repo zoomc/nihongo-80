@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "進む",
    "kana": "すすむ",
    "meaning": "前进；有进展",
-   "ko": "未标注对应（待核对）",
+   "ko": "나가다（进行，进展） / 나아가다（前进） / 진행되다（前行，前进）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "英語の勉強は進んでいますか？",
@@ -130,7 +132,9 @@
    "surface": "すっと",
    "kana": "すっと",
    "meaning": "一下子；顺畅地",
-   "ko": "未标注对应（待核对）",
+   "ko": "쑥 / 순조롭게",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "副词/动词(サ变)",
    "ex": {
     "ja": "カタツムリがすっと角を出した。",
@@ -143,7 +147,9 @@
    "surface": "ステーキ",
    "kana": "ステーキ",
    "meaning": "牛排",
-   "ko": "未标注对应（待核对）",
+   "ko": "스테이크（牛排）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ステーキの焼き方はどうなさいますか。",
@@ -156,7 +162,9 @@
    "surface": "捨てる",
    "kana": "すてる",
    "meaning": "扔掉；抛弃",
-   "ko": "未标注对应（待核对）",
+   "ko": "버리다（抛弃，遗弃） / 내다버리다（扔出，扔掉）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "そんな計画は捨ててしまいなさい。",
@@ -169,7 +177,9 @@
    "surface": "ステレオ",
    "kana": "ステレオ",
    "meaning": "音响",
-   "ko": "未标注对应（待核对）",
+   "ko": "스테레오（立体声，立体音响，立体声装置）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私はあの店で新しいステレオを買った。",
@@ -182,7 +192,9 @@
    "surface": "砂",
    "kana": "すな",
    "meaning": "沙子",
-   "ko": "未标注对应（待核对）",
+   "ko": "모래",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "後ろ足で砂をかけるようなことをした。",
@@ -195,7 +207,9 @@
    "surface": "すばらしい",
    "kana": "すばらしい",
    "meaning": "极好；出色",
-   "ko": "未标注对应（待核对）",
+   "ko": "훌륭하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "その日は実にすばらしい日だった。",
@@ -208,7 +222,9 @@
    "surface": "滑る",
    "kana": "すべる",
    "meaning": "滑；打滑",
-   "ko": "未标注对应（待核对）",
+   "ko": "타다（溜，滑） / 미끄러지다（滑倒，滑）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "来年はうまく滑れるようになるでしょう。",
@@ -221,7 +237,9 @@
    "surface": "隅",
    "kana": "すみ",
    "meaning": "角落",
-   "ko": "未标注对应（待核对）",
+   "ko": "모（角落） / 구석（角，角落）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "隅のテーブルがいいのですが。",
@@ -234,7 +252,9 @@
    "surface": "済む",
    "kana": "すむ",
    "meaning": "结束；了事",
-   "ko": "未标注对应（待核对）",
+   "ko": "끝나다（结束，完成） / 끝장나다（结束，收场）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "１０時ちょっと前に仕事が済んだ。",
@@ -247,7 +267,9 @@
    "surface": "すり",
    "kana": "すり",
    "meaning": "扒手",
-   "ko": "未标注对应（待核对）",
+   "ko": "소매치기",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "すりは人ごみの中に消えた。",
@@ -260,7 +282,9 @@
    "surface": "すると",
    "kana": "すると",
    "meaning": "于是；那么",
-   "ko": "未标注对应（待核对）",
+   "ko": "그러자 / 그러면",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "接续词",
    "ex": {
     "ja": "するとあなたは幸せでしょう。",
@@ -273,7 +297,9 @@
    "surface": "生活",
    "kana": "せいかつ",
    "meaning": "生活",
-   "ko": "생활",
+   "ko": "생활（生活）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "どのようにして生活していきますか。",
@@ -286,7 +312,9 @@
    "surface": "生産",
    "kana": "せいさん",
    "meaning": "生产",
-   "ko": "생산",
+   "ko": "생산（生产）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "この工場はＣＤプレーヤーを生産している。",
@@ -299,7 +327,9 @@
    "surface": "政治",
    "kana": "せいじ",
    "meaning": "政治",
-   "ko": "정치",
+   "ko": "정치（政治）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "政治については語りたくない。",
@@ -312,7 +342,9 @@
    "surface": "西洋",
    "kana": "せいよう",
    "meaning": "西方；西洋",
-   "ko": "서양",
+   "ko": "서양（西方，欧美，西洋）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "それらは西洋の風呂よりずっといいです。",
@@ -325,7 +357,9 @@
    "surface": "世界",
    "kana": "せかい",
    "meaning": "世界",
-   "ko": "세계",
+   "ko": "세계（世界）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "愛の力は世界を動かす。",
@@ -338,7 +372,9 @@
    "surface": "席",
    "kana": "せき",
    "meaning": "座位",
-   "ko": "석",
+   "ko": "자리（座位，席位）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "この席を見ていてくれませんか。",
@@ -351,7 +387,9 @@
    "surface": "背中",
    "kana": "せなか",
    "meaning": "后背",
-   "ko": "未标注对应（待核对）",
+   "ko": "등",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "このブラウスはボタンが背中にある。",
@@ -364,7 +402,9 @@
    "surface": "ぜひ",
    "kana": "ぜひ",
    "meaning": "务必；一定",
-   "ko": "未标注对应（待核对）",
+   "ko": "꼭 / 부디",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "副词",
    "ex": {
     "ja": "ぜひパーティーにおいでください。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V1155",
+  "V1156",
+  "V1157",
+  "V1158",
+  "V1159",
+  "V1160",
+  "V1161",
+  "V1162",
+  "V1163",
+  "V1164",
+  "V1165",
+  "V1166",
+  "V1167",
+  "V1168",
+  "V1169",
+  "V1170"
+ ],
+ "extension_vocab_ids": [
+  "V1171",
+  "V1172",
+  "V1173",
+  "V1174"
  ],
  "grammar": [
   {

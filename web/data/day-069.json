@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "焼く",
    "kana": "やく",
    "meaning": "烤；晒",
-   "ko": "未标注对应（待核对）",
+   "ko": "굽다（烤，烧烤）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "この夏はこんがり焼こうと思います。",
@@ -130,7 +132,9 @@
    "surface": "役に立つ",
    "kana": "やくにたつ",
    "meaning": "有用",
-   "ko": "未标注对应（待核对）",
+   "ko": "도움이 되다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "惯用表达/动词(五段)",
    "ex": {
     "ja": "それ以上はお役に立てません。",
@@ -143,7 +147,9 @@
    "surface": "焼ける",
    "kana": "やける",
    "meaning": "烤好；烧",
-   "ko": "未标注对应（待核对）",
+   "ko": "구워지다 / 타다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "このトーストはよく焼けていません。",
@@ -156,7 +162,9 @@
    "surface": "優しい",
    "kana": "やさしい",
    "meaning": "温柔",
-   "ko": "未标注对应（待核对）",
+   "ko": "좋다（好，和善，温柔） / 살갑다（柔和，温柔） / 곰살맞다（温柔，和善）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "みんなには優しく話してください。",
@@ -169,7 +177,9 @@
    "surface": "痩せる",
    "kana": "やせる",
    "meaning": "变瘦",
-   "ko": "未标注对应（待核对）",
+   "ko": "빠지다（掉，减轻，变瘦）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "彼女はレールのように痩せていた。",
@@ -182,7 +192,9 @@
    "surface": "やっと",
    "kana": "やっと",
    "meaning": "终于；好不容易",
-   "ko": "未标注对应（待核对）",
+   "ko": "겨우（勉强，好不容易） / 가까스로（好不容易） / 겨우겨우（勉勉强强，好不容易）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "副词",
    "ex": {
     "ja": "こ、こら！ナニやっとるかぁぁ！！",
@@ -195,7 +207,9 @@
    "surface": "やはり",
    "kana": "やはり",
    "meaning": "果然；还是",
-   "ko": "未标注对应（待核对）",
+   "ko": "역시",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "副词",
    "ex": {
     "ja": "やっぱり何とかやってのけたね。",
@@ -208,7 +222,9 @@
    "surface": "止む",
    "kana": "やむ",
    "meaning": "停",
-   "ko": "未标注对应（待核对）",
+   "ko": "긋다（停，住） / 멎다（停，停止） / 멈추다（停，止）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "雨がちょうど止んだ、出発しよう。",
@@ -221,7 +237,9 @@
    "surface": "柔らかい",
    "kana": "やわらかい",
    "meaning": "柔软",
-   "ko": "未标注对应（待核对）",
+   "ko": "말랑하다（柔软） / 부드럽다（柔软） / 말랑말랑하다（柔软）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "風が柔らかく木立に触れた。",
@@ -234,7 +252,9 @@
    "surface": "湯",
    "kana": "ゆ",
    "meaning": "热水",
-   "ko": "未标注对应（待核对）",
+   "ko": "뜨거운 물",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "いい湯だなあ。",
@@ -247,7 +267,9 @@
    "surface": "輸出",
    "kana": "ゆしゅつ",
    "meaning": "出口",
-   "ko": "수출",
+   "ko": "수출（出口，输出）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "ドル安は輸出にはずみをつけています。",
@@ -260,7 +282,9 @@
    "surface": "輸入",
    "kana": "ゆにゅう",
    "meaning": "进口",
-   "ko": "수입",
+   "ko": "수입（输入，进口，引进，舶来）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "これはドイツから輸入した車です。",
@@ -273,7 +297,9 @@
    "surface": "指",
    "kana": "ゆび",
    "meaning": "手指",
-   "ko": "未标注对应（待核对）",
+   "ko": "손（手指） / 손가락（手指）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ドアに指をはさみました。",
@@ -286,7 +312,9 @@
    "surface": "指輪",
    "kana": "ゆびわ",
    "meaning": "戒指",
-   "ko": "未标注对应（待核对）",
+   "ko": "반지（戒指）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "この指輪をある場所で買った。",
@@ -299,7 +327,9 @@
    "surface": "夢",
    "kana": "ゆめ",
    "meaning": "梦；梦想",
-   "ko": "未标注对应（待核对）",
+   "ko": "꿈（梦）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "あなたの夢がみんな実現されますように。",
@@ -312,7 +342,9 @@
    "surface": "揺れる",
    "kana": "ゆれる",
    "meaning": "摇晃",
-   "ko": "未标注对应（待核对）",
+   "ko": "흔들대다（摇摇晃晃，摇摇摆摆） / 흔들리다（晃，晃动，摇晃，摇摆） / 흔들거리다（晃来晃去，摇摇晃晃，摇摆）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "大地が揺れるのが感じられた。",
@@ -325,7 +357,9 @@
    "surface": "用",
    "kana": "よう",
    "meaning": "事情",
-   "ko": "未标注对应（待核对）",
+   "ko": "용건（事情） / 용무（事务，事情）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "何の用でここに来たのですか。",
@@ -338,7 +372,9 @@
    "surface": "用事",
    "kana": "ようじ",
    "meaning": "要办的事",
-   "ko": "용무",
+   "ko": "볼일（要办的事）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "悪いけどほかに用事があるの。",
@@ -351,7 +387,9 @@
    "surface": "汚れる",
    "kana": "よごれる",
    "meaning": "变脏",
-   "ko": "未标注对应（待核对）",
+   "ko": "더러워지다（变脏，污染）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "この部屋の空気は汚れている。",
@@ -364,7 +402,9 @@
    "surface": "予習",
    "kana": "よしゅう",
    "meaning": "预习",
-   "ko": "예습",
+   "ko": "예습（预习）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "予習を始めた方がいいですよ。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V1399",
+  "V1400",
+  "V1401",
+  "V1402",
+  "V1403",
+  "V1404",
+  "V1405",
+  "V1406",
+  "V1407",
+  "V1408",
+  "V1409",
+  "V1410",
+  "V1411",
+  "V1412",
+  "V1413",
+  "V1414"
+ ],
+ "extension_vocab_ids": [
+  "V1415",
+  "V1416",
+  "V1417",
+  "V1418"
  ],
  "grammar": [
   {
@@ -432,7 +496,7 @@
    "pattern": "V辞書形 / Vない形 + ように する",
    "meaning_zh": "努力做到…／设法不…（有意识地做）",
    "connection": "動詞 辞書形／ない形 + ように + する；する 按 サ変 变形（ようにしています／ようにした）",
-   "usage": "表示意志性的努力或习惯；与 〜ようになる（G0048，自然变成）相对，关键在有无人的意志",
+   "usage": "ようにする 表有意识地努力或安排；ようになる 常侧重变化结果，但变化也可能来自努力。",
    "register_note": "ようにする 口语书面通用，表努力或习惯。",
    "examples": [
     {
@@ -493,10 +557,10 @@
    "source_ids": [
     "S000"
    ],
-   "review_status": "self_reviewed",
+   "review_status": "needs_review",
    "provenance": "self_reviewed",
    "ko_equiv": "-도록 하다",
-   "ko_diff": "韩语도록 하다表努力或指示，也可表使役；日语ようにする只表说话人的意志性努力。"
+   "ko_diff": "韩语 -도록 하다 可表努力或指示；日语ようにする可用于自己的安排，也可用于要求他人注意。"
   }
  ],
  "sentences": [

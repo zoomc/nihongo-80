@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "19 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；3 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "玄関",
    "kana": "げんかん",
    "meaning": "玄关；门厅",
-   "ko": "현관",
+   "ko": "현관（玄关）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "玄関のカギはどうなっていますか。",
@@ -130,7 +132,9 @@
    "surface": "交差点",
    "kana": "こうさてん",
    "meaning": "十字路口",
-   "ko": "교차점",
+   "ko": "네거리（十字路口）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "あの交差点で何が起こったのか。",
@@ -143,7 +147,9 @@
    "surface": "紅茶",
    "kana": "こうちゃ",
    "meaning": "红茶",
-   "ko": "홍차",
+   "ko": "홍차（红茶）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "紅茶かコーヒーはいかがですか。",
@@ -156,7 +162,9 @@
    "surface": "交番",
    "kana": "こうばん",
    "meaning": "派出所",
-   "ko": "未标注对应（待核对）",
+   "ko": "파출소（派出所）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "向こうの交番で聞いてください。",
@@ -169,7 +177,9 @@
    "surface": "声",
    "kana": "こえ",
    "meaning": "声音；嗓音",
-   "ko": "未标注对应（待核对）",
+   "ko": "목（嗓音） / 목청（嗓音） / 소리（嗓音，嗓子，嗓门）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "あなたの声が聞けてうれしいわ。",
@@ -182,7 +192,9 @@
    "surface": "コート",
    "kana": "コート",
    "meaning": "大衣；球场",
-   "ko": "未标注对应（待核对）",
+   "ko": "코트（大衣）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "このコートいいですね。試着してもいいですか。",
@@ -195,7 +207,9 @@
    "surface": "コーヒー",
    "kana": "コーヒー",
    "meaning": "咖啡",
-   "ko": "未标注对应（待核对）",
+   "ko": "커피（咖啡）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "そのコーヒーはいいにおいがする。",
@@ -208,7 +222,9 @@
    "surface": "ここ",
    "kana": "ここ",
    "meaning": "这里",
-   "ko": "未标注对应（待核对）",
+   "ko": "예（这里，这儿） / 여기（这里，这儿） / 요기（这里，这儿）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "代名词",
    "ex": {
     "ja": "ここで待ってください。",
@@ -221,7 +237,9 @@
    "surface": "午後",
    "kana": "ごご",
    "meaning": "下午",
-   "ko": "오후",
+   "ko": "오후（下午，午后） / 하오（下午）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "午後何時ごろうかがいましょうか。",
@@ -234,7 +252,9 @@
    "surface": "九日",
    "kana": "ここのか",
    "meaning": "九天；九号",
-   "ko": "未标注对应（待核对）",
+   "ko": "아흐레（九天）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "スピーチコンテストは１１月９日に行われた。",
@@ -247,7 +267,9 @@
    "surface": "九つ",
    "kana": "ここのつ",
    "meaning": "九个",
-   "ko": "未标注对应（待核对）",
+   "ko": "아홉 개",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "数词",
    "ex": {
     "ja": "私たちの学校にはクラスが９つある。",
@@ -260,7 +282,9 @@
    "surface": "午前",
    "kana": "ごぜん",
    "meaning": "上午",
-   "ko": "오전",
+   "ko": "오전（上午） / 아침나절（上午）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "その電車は午前９時にここを出発します。",
@@ -273,7 +297,9 @@
    "surface": "答える",
    "kana": "こたえる",
    "meaning": "回答",
-   "ko": "未标注对应（待核对）",
+   "ko": "답하다（回答，答话） / 대답하다（回答，解答） / 응답하다（应答，回答）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "「はい、ありません」とジョーダンさんは答えた。",
@@ -286,7 +312,9 @@
    "surface": "ごちそうさま",
    "kana": "ごちそうさま",
    "meaning": "多谢款待",
-   "ko": "未标注对应（待核对）",
+   "ko": "잘 먹었습니다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "感叹词",
    "ex": {
     "ja": "コーヒー、ごちそうさまでした。",
@@ -299,7 +327,9 @@
    "surface": "こちら",
    "kana": "こちら",
    "meaning": "这边；这位",
-   "ko": "未标注对应（待核对）",
+   "ko": "요쪽（这边）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "代名词",
    "ex": {
     "ja": "今のところこちらだけになります。",
@@ -312,7 +342,9 @@
    "surface": "こっち",
    "kana": "こっち",
    "meaning": "这边",
-   "ko": "未标注对应（待核对）",
+   "ko": "요쪽（这边） / 요리요리（往这边）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "代名词",
    "ex": {
     "ja": "こっちへ来い、ぐずぐずしないで。",
@@ -325,7 +357,9 @@
    "surface": "コップ",
    "kana": "コップ",
    "meaning": "杯子",
-   "ko": "未标注对应（待核对）",
+   "ko": "잔（杯，杯子） / 컵（杯子）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "コップに水を入れます。",
@@ -338,7 +372,9 @@
    "surface": "今年",
    "kana": "ことし",
    "meaning": "今年",
-   "ko": "금년",
+   "ko": "금년（今年） / 올（今年）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/副词",
    "ex": {
     "ja": "今年もよい年でありますように。",
@@ -351,7 +387,9 @@
    "surface": "言葉",
    "kana": "ことば",
    "meaning": "语言；话语",
-   "ko": "未标注对应（待核对）",
+   "ko": "말（话，语言）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "言葉が出てこなかった。",
@@ -359,6 +397,29 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0512",
+  "V0513",
+  "V0514",
+  "V0515",
+  "V0516",
+  "V0517",
+  "V0518",
+  "V0519",
+  "V0520",
+  "V0521",
+  "V0522",
+  "V0523",
+  "V0524",
+  "V0525",
+  "V0526",
+  "V0527"
+ ],
+ "extension_vocab_ids": [
+  "V0528",
+  "V0529",
+  "V0530"
  ],
  "grammar": [
   {

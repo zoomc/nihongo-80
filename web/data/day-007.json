@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "19 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；3 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -93,7 +93,9 @@
    "surface": "医者",
    "kana": "いしゃ",
    "meaning": "医生",
-   "ko": "未标注对应（待核对）",
+   "ko": "의사（医生）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "医者になりたいです。",
@@ -106,7 +108,9 @@
    "surface": "電話",
    "kana": "でんわ",
    "meaning": "电话",
-   "ko": "未标注对应（待核对）",
+   "ko": "전화（电话） / 전화기（电话机）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "友達に電話します。",
@@ -119,7 +123,9 @@
    "surface": "旅行",
    "kana": "りょこう",
    "meaning": "旅行",
-   "ko": "未标注对应（待核对）",
+   "ko": "여행（旅行，旅游，游行）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "家族と旅行します。",
@@ -132,7 +138,9 @@
    "surface": "ホテル",
    "kana": "ホテル",
    "meaning": "宾馆；酒店",
-   "ko": "未标注对应（待核对）",
+   "ko": "호텔（酒店，饭店，宾馆）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "ホテルに泊まります。",
@@ -145,7 +153,9 @@
    "surface": "頭",
    "kana": "あたま",
    "meaning": "头；脑袋",
-   "ko": "未标注对应（待核对）",
+   "ko": "골치（脑袋） / 골통（脑袋） / 머리（头）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "頭が痛いです。",
@@ -158,7 +168,9 @@
    "surface": "薬",
    "kana": "くすり",
    "meaning": "药",
-   "ko": "未标注对应（待核对）",
+   "ko": "약（药）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "薬を飲みます。",
@@ -171,7 +183,9 @@
    "surface": "雨",
    "kana": "あめ",
    "meaning": "雨",
-   "ko": "未标注对应（待核对）",
+   "ko": "비（雨）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "雨が降っています。",
@@ -184,7 +198,9 @@
    "surface": "天気",
    "kana": "てんき",
    "meaning": "天气",
-   "ko": "未标注对应（待核对）",
+   "ko": "날씨（天气） / 일기（天气） / 천기（天气；气象）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "今日はいい天気です。",
@@ -197,7 +213,9 @@
    "surface": "猫",
    "kana": "ねこ",
    "meaning": "猫",
-   "ko": "未标注对应（待核对）",
+   "ko": "고양이（猫）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "部屋に猫がいます。",
@@ -210,7 +228,9 @@
    "surface": "映画",
    "kana": "えいが",
    "meaning": "电影",
-   "ko": "未标注对应（待核对）",
+   "ko": "영화（电影）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "映画を見ます。",
@@ -223,7 +243,9 @@
    "surface": "音楽",
    "kana": "おんがく",
    "meaning": "音乐",
-   "ko": "未标注对应（待核对）",
+   "ko": "음악（音乐）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "音楽を聞きます。",
@@ -236,7 +258,9 @@
    "surface": "食べる",
    "kana": "たべる",
    "meaning": "吃",
-   "ko": "未标注对应（待核对）",
+   "ko": "먹다（吃）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "動詞/一段",
    "ex": {
     "ja": "ご飯を食べます。",
@@ -249,7 +273,9 @@
    "surface": "飲む",
    "kana": "のむ",
    "meaning": "喝；吞（药）",
-   "ko": "未标注对应（待核对）",
+   "ko": "먹다（喝） / 마시다（喝，饮） / 들이마시다（喝）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "動詞/五段",
    "ex": {
     "ja": "水を飲みます。",
@@ -262,7 +288,9 @@
    "surface": "行く",
    "kana": "いく",
    "meaning": "去",
-   "ko": "未标注对应（待核对）",
+   "ko": "가다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "動詞/五段",
    "ex": {
     "ja": "学校へ行きます。",
@@ -275,7 +303,9 @@
    "surface": "来る",
    "kana": "くる",
    "meaning": "来",
-   "ko": "未标注对应（待核对）",
+   "ko": "오다（来，来到） / 나오다（来，出来）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "動詞/カ変",
    "ex": {
     "ja": "友達が来ます。",
@@ -288,7 +318,9 @@
    "surface": "見る",
    "kana": "みる",
    "meaning": "看；观看",
-   "ko": "未标注对应（待核对）",
+   "ko": "보다（看）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "動詞/一段",
    "ex": {
     "ja": "映画を見ます。",
@@ -301,7 +333,9 @@
    "surface": "買う",
    "kana": "かう",
    "meaning": "买",
-   "ko": "未标注对应（待核对）",
+   "ko": "끊다（买） / 받다（买，沽） / 뽑다（买，购买）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "動詞/五段",
    "ex": {
     "ja": "本を買います。",
@@ -314,7 +348,9 @@
    "surface": "する",
    "kana": "する",
    "meaning": "做；干",
-   "ko": "未标注对应（待核对）",
+   "ko": "들다（做，服侍，伺侯）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "動詞/サ変",
    "ex": {
     "ja": "宿題をします。",
@@ -327,7 +363,9 @@
    "surface": "ある",
    "kana": "ある",
    "meaning": "有；存在（无生命）",
-   "ko": "未标注对应（待核对）",
+   "ko": "있다（사물）",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "動詞/五段",
    "ex": {
     "ja": "机の上に本があります。",
@@ -335,6 +373,29 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0087",
+  "V0089",
+  "V0091",
+  "V0092",
+  "V0094",
+  "V0095",
+  "V0096",
+  "V0097",
+  "V0098",
+  "V0099",
+  "V0100",
+  "V0101",
+  "V0102",
+  "V0103",
+  "V0104",
+  "V0105"
+ ],
+ "extension_vocab_ids": [
+  "V0106",
+  "V0107",
+  "V0108"
  ],
  "grammar": [
   {
@@ -365,12 +426,6 @@
      "why": "「も」是追加「也」，共同动作用 と；中文「和/也」易混",
      "fix": "友達と映画を見ます。",
      "learner": "zh"
-    },
-    {
-     "wrong": "友達と 一緒に 映画を見ます",
-     "why": "「と」已含共同，再加 一緒に 冗余",
-     "fix": "友達と映画を見ます。",
-     "learner": "zh"
     }
    ],
    "jlpt": "N5",
@@ -380,7 +435,7 @@
    "source_ids": [
     "S000"
    ],
-   "review_status": "self_reviewed",
+   "review_status": "needs_review",
    "provenance": "self_reviewed",
    "ko_equiv": "와/과 / 하고 / (이)라고",
    "ko_diff": "韩语并列用와/과、口语하고，引用用라고且随词性变；日语と一形通用。"
@@ -422,12 +477,6 @@
      "why": "终点用 まで，に 是时点/归着；中文「到五点」误对应 に",
      "fix": "九時から五時まで勉強します。",
      "learner": "zh"
-    },
-    {
-     "wrong": "九時から 勉強します",
-     "why": "只写 から 漏了 まで 时句意不完整",
-     "fix": "九時から五時まで勉強します。",
-     "learner": "zh"
     }
    ],
    "jlpt": "N5",
@@ -437,7 +486,7 @@
    "source_ids": [
     "S000"
    ],
-   "review_status": "self_reviewed",
+   "review_status": "needs_review",
    "provenance": "self_reviewed",
    "ko_equiv": "부터 ~ 까지",
    "ko_diff": "韩语起点用부터、终点까지，与日语基本对应；但韩语时间起点口语可用에，日语から不可省。"
@@ -632,21 +681,22 @@
    ]
   },
   {
-   "qid": "Q-007-V5-a0a53e6b16f4",
-   "prompt": "「ホテル」是什么意思？",
+   "qid": "A007-1-a50ab925ef86",
+   "prompt": "店へ行くのはいつですか。",
    "options": [
-    "日光；阳光",
-    "宾馆；酒店",
-    "忍耐",
-    "留下；剩下"
+    "日曜日の夜",
+    "月曜日の朝",
+    "火曜日の朝",
+    "日曜日の朝"
    ],
-   "h": "fbacb33d",
+   "h": "61c94891",
    "oh": [
-    "81f92df0",
-    "fbacb33d",
-    "4e1ccc18",
-    "c0a7044e"
-   ]
+    "e395511",
+    "61c94891",
+    "a0721364",
+    "d8e557e"
+   ],
+   "passage": "今日は日曜日です。店は休みです。明日の朝、店へ行きます。"
   }
  ],
  "listening_material": null

@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 8,
-   "desc": "14 个新词；实际用时超预算时记录未完成"
+   "desc": "11 个必学词；3 个选学拓展"
   },
   {
    "type": "语法",
@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -122,7 +122,9 @@
    "surface": "月曜",
    "kana": "げつよう",
    "meaning": "星期一",
-   "ko": "월요",
+   "ko": "월요일",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "国会は来週月曜に開かれる。",
@@ -135,7 +137,9 @@
    "surface": "結論",
    "kana": "けつろん",
    "meaning": "结论",
-   "ko": "결론",
+   "ko": "결론（结论，结尾） / 마무리（结论，收尾，结尾）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "二人は同じ結論に到達した。",
@@ -148,7 +152,9 @@
    "surface": "煙",
    "kana": "けむり",
    "meaning": "烟",
-   "ko": "연",
+   "ko": "연기（烟，烟气）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "エレベーターから煙の臭いがします。",
@@ -161,7 +167,9 @@
    "surface": "券",
    "kana": "けん",
    "meaning": "票；券",
-   "ko": "권",
+   "ko": "표（票，券）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "この券は２週間有効です。",
@@ -174,7 +182,9 @@
    "surface": "県",
    "kana": "けん",
    "meaning": "县",
-   "ko": "현",
+   "ko": "현（일본의 행정구역）",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "チューリップは、私たちの県の県花です。",
@@ -187,7 +197,9 @@
    "surface": "喧嘩",
    "kana": "けんか",
    "meaning": "吵架",
-   "ko": "未标注对应（待核对）",
+   "ko": "쌈（打仗，吵架） / 싸움질（吵架，打仗） / 쌈박질（吵架，打仗）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "ケンとけんかしたのか。",
@@ -200,7 +212,9 @@
    "surface": "見解",
    "kana": "けんかい",
    "meaning": "见解",
-   "ko": "견해",
+   "ko": "견해（见解，看法）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "あなたの見解は私とは正反対です。",
@@ -213,7 +227,9 @@
    "surface": "限界",
    "kana": "げんかい",
    "meaning": "极限；界限",
-   "ko": "한계",
+   "ko": "한계（界限，边界，局限，极限）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/连体词",
    "ex": {
     "ja": "あらゆるものに限界がある。",
@@ -226,7 +242,9 @@
    "surface": "現金",
    "kana": "げんきん",
    "meaning": "现金",
-   "ko": "현금",
+   "ko": "현금（现金） / 현찰（现金，现钞）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "現金で払う必要はありません。",
@@ -239,7 +257,9 @@
    "surface": "言語",
    "kana": "げんご",
    "meaning": "语言",
-   "ko": "언어",
+   "ko": "언어（语言）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ドイツ語はやさしい言語ではありません。",
@@ -252,7 +272,9 @@
    "surface": "健康",
    "kana": "けんこう",
    "meaning": "健康",
-   "ko": "건강",
+   "ko": "건강（健康）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "な形容词",
    "ex": {
     "ja": "煙草をすうことは健康に悪い。",
@@ -265,7 +287,9 @@
    "surface": "検査",
    "kana": "けんさ",
    "meaning": "检查",
-   "ko": "검사",
+   "ko": "검사（检查）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "検査は全くおざなりなものだった。",
@@ -278,7 +302,9 @@
    "surface": "現在",
    "kana": "げんざい",
    "meaning": "现在；目前",
-   "ko": "현재",
+   "ko": "현재（现在，目前，此时） / 지금（现在，当前，眼下）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/副词/连体词",
    "ex": {
     "ja": "私は現在の地位に満足している。",
@@ -291,7 +317,9 @@
    "surface": "現実",
    "kana": "げんじつ",
    "meaning": "现实",
-   "ko": "현실",
+   "ko": "현실（现实） / 생시（醒着，现实）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "あなたの夢が現実のものとなった。",
@@ -299,6 +327,24 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V1899",
+  "V1900",
+  "V1901",
+  "V1902",
+  "V1903",
+  "V1904",
+  "V1905",
+  "V1906",
+  "V1907",
+  "V1908",
+  "V1909"
+ ],
+ "extension_vocab_ids": [
+  "V1910",
+  "V1911",
+  "V1912"
  ],
  "grammar": [
   {
@@ -616,11 +662,10 @@
  "listening_material": {
   "id": "M0139",
   "title": "ごみの日・5",
-  "audio_url": "",
-  "audio_kind": "tts",
+  "audio_url": "/audio/M0139.m4a",
+  "audio_kind": "synthetic",
   "transcript": "引っ越してきたばかりなので、管理人さんにごみの出し方を教えてもらいました。燃えるごみを出せるのは火曜日と土曜日です。朝八時までに、北側のごみ置き場に置きます。前の日の夜に出すと、猫が袋を破ることがあるので、必ず当日の朝に出してくださいと言われました。缶や瓶は燃えるごみと一緒にできません。別の日に、種類ごとに分けて出します。段ボールは小さくたたんで、ひもでまとめます。大きな家具を捨てたい場合は、市の窓口に予約しなければなりません。普通のごみ置き場にそのまま置いてはいけません。詳しい説明は、入口の掲示板にも貼ってあります。日本語が難しくてわからないときは、管理人さんに聞いてもいいそうです。私は曜日を忘れないように、冷蔵庫にメモを貼りました。今週は荷物の箱がたくさんあるので、まず段ボールを片付けようと思います。",
-  "duration_sec": 0,
-  "duration_estimate_sec": 71,
+  "duration_sec": 65.325,
   "questions": [
    {
     "qid": "L-106-0-e0bbe6a14f2a",

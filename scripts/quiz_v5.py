@@ -16,7 +16,7 @@ def build_quiz(day, vocab, grammar, kanji, rnd):
     """按当天新词/汉字/语法出 6 题，保证与课程对齐；答案只存哈希。"""
     import random as _r
     qs = []
-    vids = list(day["new_vocab_ids"])
+    vids = list(day.get("core_vocab_ids", day["new_vocab_ids"]))
     kids = list(day["new_kanji_ids"])
     gids = list(day["new_grammar_ids"])
     pool = [v for k, v in vocab.items() if v.get("meaning_zh")]
@@ -104,12 +104,28 @@ def listening_quiz(day, material):
 
 
 def public_question(q):
-    return {k: q[k] for k in ("qid", "prompt", "options", "h", "oh")}
+    return {k: q[k] for k in ("qid", "prompt", "options", "h", "oh", "passage") if k in q}
 
 
 def day_questions(day, vocab, grammar, kanji, materials):
     import random
     qs = build_quiz(day, vocab, grammar, kanji, random.Random(20261107 + day["day"]))
+    from assessment_v6 import build_for_day
+    assessment = build_for_day(day)
+    if assessment:
+        qs = qs[:6-len(assessment)] + assessment
+    if day["day"] == 1:
+        diagnostics = [
+            ("假名诊断：「きゃ」的读法是？", ["kya", "kiya", "sha", "cha"], "kya"),
+            ("假名诊断：「ざ」的读法是？", ["za", "sa", "da", "ta"], "za"),
+            ("助词诊断：「私は学生です」中的「は」读作？", ["wa", "ha", "ga", "o"], "wa")]
+        import hashlib
+        for i, (prompt, options, answer) in enumerate(diagnostics):
+            digest = hashlib.sha256(json.dumps([prompt, options, answer], ensure_ascii=False).encode()).hexdigest()[:12]
+            qid = "D-001-%d-%s" % (i, digest)
+            qs[i] = {"id": qid, "qid": qid, "type": "mcq", "prompt": prompt,
+                     "options": options, "answer": answer, "knowledge_ids": [],
+                     "h": fnv(answer), "oh": [fnv(o) for o in options]}
     if day.get("listening"):
         qs += listening_quiz(day, materials[day["material_ids"][0]])
     return qs

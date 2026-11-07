@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "翻訳",
    "kana": "ほんやく",
    "meaning": "翻译；笔译",
-   "ko": "번역",
+   "ko": "번역（翻译）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "彼女はそれを一語一語翻訳した。",
@@ -130,7 +132,9 @@
    "surface": "参る",
    "kana": "まいる",
    "meaning": "去；来（自谦）",
-   "ko": "未标注对应（待核对）",
+   "ko": "가다 / 오다（겸양）",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "ジョーはその女の子にすっかり参っている。",
@@ -143,7 +147,9 @@
    "surface": "負ける",
    "kana": "まける",
    "meaning": "输",
-   "ko": "未标注对应（待核对）",
+   "ko": "지다（输）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "３対０で彼には負けています。",
@@ -156,7 +162,9 @@
    "surface": "まじめ",
    "kana": "まじめ",
    "meaning": "认真",
-   "ko": "未标注对应（待核对）",
+   "ko": "성실하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容词/名词",
    "ex": {
     "ja": "サムは仕事に関してまじめです。",
@@ -169,7 +177,9 @@
    "surface": "まず",
    "kana": "まず",
    "meaning": "首先",
-   "ko": "未标注对应（待核对）",
+   "ko": "우선",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "副词",
    "ex": {
     "ja": "バリウムをまず一口飲んでください。",
@@ -182,7 +192,9 @@
    "surface": "または",
    "kana": "または",
    "meaning": "或者",
-   "ko": "未标注对应（待核对）",
+   "ko": "내지（或，或者） / 또는（或，或者，要么） / 혹은（或者）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "接续词",
    "ex": {
     "ja": "紅茶またはコーヒーはいかが？",
@@ -195,7 +207,9 @@
    "surface": "間違える",
    "kana": "まちがえる",
    "meaning": "弄错",
-   "ko": "未标注对应（待核对）",
+   "ko": "잘못하다（弄错，搞错）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "急いで物事をすると間違えますよ。",
@@ -208,7 +222,9 @@
    "surface": "周り",
    "kana": "まわり",
    "meaning": "周围",
-   "ko": "未标注对应（待核对）",
+   "ko": "주위（周围） / 테두리（周围，四周，轮廓，沿，边）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "周りを見渡しなさい。",
@@ -221,7 +237,9 @@
    "surface": "回る",
    "kana": "まわる",
    "meaning": "绕；转",
-   "ko": "未标注对应（待核对）",
+   "ko": "돌다（转，转动） / 휘돌다（绕，盘旋） / 돌아가다（转，转动）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "私たちは車の後ろに回って押した。",
@@ -234,7 +252,9 @@
    "surface": "漫画",
    "kana": "まんが",
    "meaning": "漫画",
-   "ko": "未标注对应（待核对）",
+   "ko": "만화（漫画） / 만화책（漫画书，漫画册）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "仕事中に漫画の本を読むのはやめること。",
@@ -247,7 +267,9 @@
    "surface": "真ん中",
    "kana": "まんなか",
    "meaning": "正中间",
-   "ko": "未标注对应（待核对）",
+   "ko": "중간（正当中，中间） / 중심（中心，正中） / 한가운데（正中间）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "トラックが道の真ん中に止まっていた。",
@@ -260,7 +282,9 @@
    "surface": "見える",
    "kana": "みえる",
    "meaning": "看得见",
-   "ko": "未标注对应（待核对）",
+   "ko": "보이다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "すべてのものがすばらしく見えた。",
@@ -273,7 +297,9 @@
    "surface": "湖",
    "kana": "みずうみ",
    "meaning": "湖",
-   "ko": "未标注对应（待核对）",
+   "ko": "호（湖） / 호수（湖，湖泊）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "湖の深さはどのくらいですか。",
@@ -286,7 +312,9 @@
    "surface": "味噌",
    "kana": "みそ",
    "meaning": "味噌；妙处",
-   "ko": "未标注对应（待核对）",
+   "ko": "된장 / 요점",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "この電子辞書は携帯しやすいところが味噌です。",
@@ -299,7 +327,9 @@
    "surface": "皆",
    "kana": "みな",
    "meaning": "大家；都",
-   "ko": "未标注对应（待核对）",
+   "ko": "다（全，都） / 모두（都，全）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/代名词/副词",
    "ex": {
     "ja": "私の親族は皆この町に住んでいる。",
@@ -312,7 +342,9 @@
    "surface": "港",
    "kana": "みなと",
    "meaning": "港口",
-   "ko": "未标注对应（待核对）",
+   "ko": "항구（港口）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "その船はいま港にある。",
@@ -325,7 +357,9 @@
    "surface": "向かう",
    "kana": "むかう",
    "meaning": "前往；朝向",
-   "ko": "未标注对应（待核对）",
+   "ko": "향하다",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "あなたは何処へ向かっているのですか。",
@@ -338,7 +372,9 @@
    "surface": "迎える",
    "kana": "むかえる",
    "meaning": "迎接；接",
-   "ko": "未标注对应（待核对）",
+   "ko": "맞다（迎接，接待） / 받다（接待，迎接，接受，录用） / 맞이하다（迎接，迎）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "６時にホテルに車で迎えて下さい。",
@@ -351,7 +387,9 @@
    "surface": "昔",
    "kana": "むかし",
    "meaning": "从前",
-   "ko": "未标注对应（待核对）",
+   "ko": "과거（过去，从前）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/连体词/副词",
    "ex": {
     "ja": "この本を読むたびに昔を思い出す。",
@@ -364,7 +402,9 @@
    "surface": "虫",
    "kana": "むし",
    "meaning": "虫子",
-   "ko": "未标注对应（待核对）",
+   "ko": "벌레（虫子）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "鳥は虫を探していた。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V1365",
+  "V1366",
+  "V1367",
+  "V1368",
+  "V1369",
+  "V1370",
+  "V1371",
+  "V1372",
+  "V1373",
+  "V1374",
+  "V1375",
+  "V1376",
+  "V1377",
+  "V1378",
+  "V1379",
+  "V1380"
+ ],
+ "extension_vocab_ids": [
+  "V1381",
+  "V1382",
+  "V1383",
+  "V1384"
  ],
  "grammar": [
   {

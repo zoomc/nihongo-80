@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "苦い",
    "kana": "にがい",
    "meaning": "苦",
-   "ko": "未标注对应（待核对）",
+   "ko": "쓰다（苦）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "このコーヒーは苦い味がする。",
@@ -130,7 +132,9 @@
    "surface": "二階建て",
    "kana": "にかいだて",
    "meaning": "二层楼",
-   "ko": "未标注对应（待核对）",
+   "ko": "이층집",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私は２階建ての家に住んでいる。",
@@ -143,7 +147,9 @@
    "surface": "逃げる",
    "kana": "にげる",
    "meaning": "逃跑；逃避",
-   "ko": "未标注对应（待核对）",
+   "ko": "뛰다（逃跑，逃窜，逃亡） / 빼다（逃避，避开） / 달아나다（逃跑，逃走，逃亡）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "現実から逃げることはできない。",
@@ -156,7 +162,9 @@
    "surface": "日記",
    "kana": "にっき",
    "meaning": "日记",
-   "ko": "일기",
+   "ko": "일기（日记）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼女はそのことを日記に書いた。",
@@ -169,7 +177,9 @@
    "surface": "入学",
    "kana": "にゅうがく",
    "meaning": "入学",
-   "ko": "입학",
+   "ko": "입학（入学）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "私はこの学校に２年前に入学した。",
@@ -182,7 +192,9 @@
    "surface": "似る",
    "kana": "にる",
    "meaning": "像；相似",
-   "ko": "未标注对应（待核对）",
+   "ko": "닮다（像，随）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "私も似た話を聞いたことがある。",
@@ -195,7 +207,9 @@
    "surface": "人形",
    "kana": "にんぎょう",
    "meaning": "人偶；娃娃",
-   "ko": "인형",
+   "ko": "인형（娃娃）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "メアリーは私にアメリカの人形をくれた。",
@@ -208,7 +222,9 @@
    "surface": "盗む",
    "kana": "ぬすむ",
    "meaning": "偷；盗窃",
-   "ko": "未标注对应（待核对）",
+   "ko": "훔치다（偷，盗，盗取） / 도둑질하다（偷窃，盗窃）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "盗まれたお金があきらめられない。",
@@ -221,7 +237,9 @@
    "surface": "塗る",
    "kana": "ぬる",
    "meaning": "涂；抹",
-   "ko": "未标注对应（待核对）",
+   "ko": "바르다（涂，抹）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "ジョンがドアにペンキを塗っていた。",
@@ -234,7 +252,9 @@
    "surface": "ぬれる",
    "kana": "ぬれる",
    "meaning": "淋湿；湿",
-   "ko": "未标注对应（待核对）",
+   "ko": "젖다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "木のおかげで雨にぬれずにすんだ。",
@@ -247,7 +267,9 @@
    "surface": "ねだん",
    "kana": "ねだん",
    "meaning": "价格",
-   "ko": "未标注对应（待核对）",
+   "ko": "가격",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "このラジオの値段はいくらですか。",
@@ -260,7 +282,9 @@
    "surface": "熱",
    "kana": "ねつ",
    "meaning": "发烧；热度",
-   "ko": "열",
+   "ko": "신열（发烧，发热）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "１０２゜Ｆの熱があります。",
@@ -273,7 +297,9 @@
    "surface": "ねっしん",
    "kana": "ねっしん",
    "meaning": "热心；勤奋",
-   "ko": "열심",
+   "ko": "열심이다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容词/名词",
    "ex": {
     "ja": "彼女は熱心に小鳥にえさをやった。",
@@ -286,7 +312,9 @@
    "surface": "寝坊",
    "kana": "ねぼう",
    "meaning": "睡懒觉；睡过头",
-   "ko": "未标注对应（待核对）",
+   "ko": "늦잠（懒觉）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词/な形容词/连体词",
    "ex": {
     "ja": "彼はときどき寝坊する。",
@@ -299,7 +327,9 @@
    "surface": "眠い",
    "kana": "ねむい",
    "meaning": "困；发困",
-   "ko": "未标注对应（待核对）",
+   "ko": "졸리다（困）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "テレビを見ているとすぐ眠くなる。",
@@ -312,7 +342,9 @@
    "surface": "眠る",
    "kana": "ねむる",
    "meaning": "睡；睡眠",
-   "ko": "未标注对应（待核对）",
+   "ko": "자다（睡，睡觉） / 잠자다（睡觉，睡眠）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "もし眠るといけないので目覚し時計をセットしなさい。",
@@ -325,7 +357,9 @@
    "surface": "残る",
    "kana": "のこる",
    "meaning": "剩下；留下",
-   "ko": "未标注对应（待核对）",
+   "ko": "남다（剩，剩下）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "もう３ページ残っている。",
@@ -338,7 +372,9 @@
    "surface": "のど",
    "kana": "のど",
    "meaning": "喉咙",
-   "ko": "未标注对应（待核对）",
+   "ko": "목 / 목구멍",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "のどがヒリヒリします。",
@@ -351,7 +387,9 @@
    "surface": "乗り換える",
    "kana": "のりかえる",
    "meaning": "换乘",
-   "ko": "未标注对应（待核对）",
+   "ko": "갈아타다（换乘，倒） / 환승하다（换乘，换车）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "東京駅で列車を乗り換えなさい。",
@@ -364,7 +402,9 @@
    "surface": "乗り物",
    "kana": "のりもの",
    "meaning": "交通工具",
-   "ko": "未标注对应（待核对）",
+   "ko": "탈것（交通工具）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "乗り物は子供向けである。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V1277",
+  "V1278",
+  "V1279",
+  "V1280",
+  "V1281",
+  "V1282",
+  "V1283",
+  "V1284",
+  "V1285",
+  "V1286",
+  "V1287",
+  "V1288",
+  "V1289",
+  "V1290",
+  "V1291",
+  "V1292"
+ ],
+ "extension_vocab_ids": [
+  "V1293",
+  "V1294",
+  "V1295",
+  "V1296"
  ],
  "grammar": [
   {

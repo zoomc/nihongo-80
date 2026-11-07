@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "見つける",
    "kana": "みつける",
    "meaning": "找到（他动）",
-   "ko": "未标注对应（待核对）",
+   "ko": "찾다 / 발견하다（타동사）",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "動詞/一段",
    "ex": {
     "ja": "鍵を見つけました。",
@@ -130,7 +132,9 @@
    "surface": "見つかる",
    "kana": "みつかる",
    "meaning": "被找到；（东西）找到了（自动）",
-   "ko": "未标注对应（待核对）",
+   "ko": "찾아지다 / 발견되다（자동사）",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "動詞/五段",
    "ex": {
     "ja": "無くした時計が見つかりました。",
@@ -143,7 +147,9 @@
    "surface": "変える",
    "kana": "かえる",
    "meaning": "改变（他动）",
-   "ko": "未标注对应（待核对）",
+   "ko": "바꾸다（改变，转变，更改）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "動詞/一段",
    "ex": {
     "ja": "予定を変えました。",
@@ -156,7 +162,9 @@
    "surface": "職場",
    "kana": "しょくば",
    "meaning": "职场；工作岗位",
-   "ko": "未标注对应（待核对）",
+   "ko": "일터（工作岗位） / 자리（职，岗位） / 직장（工作单位，职场）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "職場の人と相談します。",
@@ -169,7 +177,9 @@
    "surface": "会議",
    "kana": "かいぎ",
    "meaning": "会议",
-   "ko": "未标注对应（待核对）",
+   "ko": "회의（会，会议）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "午後から会議があります。",
@@ -182,7 +192,9 @@
    "surface": "残業",
    "kana": "ざんぎょう",
    "meaning": "加班",
-   "ko": "未标注对应（待核对）",
+   "ko": "야근（加班） / 잔업（加班）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "今日は残業しなければなりません。",
@@ -195,7 +207,9 @@
    "surface": "給料",
    "kana": "きゅうりょう",
    "meaning": "工资；薪水",
-   "ko": "未标注对应（待核对）",
+   "ko": "급료（工资，薪金） / 급여（报酬，薪水，工资） / 봉급（薪资，薪酬，工资）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "給料が上がりました。",
@@ -208,7 +222,9 @@
    "surface": "報告",
    "kana": "ほうこく",
    "meaning": "报告；汇报",
-   "ko": "未标注对应（待核对）",
+   "ko": "보고（报告）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "上司に結果を報告します。",
@@ -221,7 +237,9 @@
    "surface": "相談",
    "kana": "そうだん",
    "meaning": "商量；咨询",
-   "ko": "未标注对应（待核对）",
+   "ko": "상담（咨询） / 상의（商量，商议，讨论） / 의논（商议，讨论，商量）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "先生に進路を相談します。",
@@ -234,7 +252,9 @@
    "surface": "就職",
    "kana": "しゅうしょく",
    "meaning": "就职；就业",
-   "ko": "未标注对应（待核对）",
+   "ko": "취업（就业） / 취직（就业，就职）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "大学を卒業して、就職しました。",
@@ -247,7 +267,9 @@
    "surface": "手続き",
    "kana": "てつづき",
    "meaning": "手续；程序",
-   "ko": "未标注对应（待核对）",
+   "ko": "수속（手续） / 절차（手续，步骤，程序）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "入学の手続きをします。",
@@ -260,7 +282,9 @@
    "surface": "申請",
    "kana": "しんせい",
    "meaning": "申请（书面）",
-   "ko": "未标注对应（待核对）",
+   "ko": "신청（申请）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "ビザを申請しました。",
@@ -273,7 +297,9 @@
    "surface": "技術",
    "kana": "ぎじゅつ",
    "meaning": "技术",
-   "ko": "未标注对应（待核对）",
+   "ko": "기술（技术）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "新しい技術を開発します。",
@@ -286,7 +312,9 @@
    "surface": "故障",
    "kana": "こしょう",
    "meaning": "故障；出毛病",
-   "ko": "未标注对应（待核对）",
+   "ko": "탈（故障） / 고장（故障）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "パソコンが故障しました。",
@@ -299,7 +327,9 @@
    "surface": "操作",
    "kana": "そうさ",
    "meaning": "操作（机器/界面）",
-   "ko": "未标注对应（待核对）",
+   "ko": "조작（操作）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "この機械は操作が簡単です。",
@@ -312,7 +342,9 @@
    "surface": "渋滞",
    "kana": "じゅうたい",
    "meaning": "堵车；拥堵",
-   "ko": "未标注对应（待核对）",
+   "ko": "정체（拥堵，堵车） / 교통 체증（交通堵塞，堵车）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "朝は道が渋滞しています。",
@@ -325,7 +357,9 @@
    "surface": "事故",
    "kana": "じこ",
    "meaning": "事故；意外事件",
-   "ko": "未标注对应（待核对）",
+   "ko": "탈（意外，变故） / 사고（事故）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名詞",
    "ex": {
     "ja": "高速道路で事故がありました。",
@@ -338,7 +372,9 @@
    "surface": "運転",
    "kana": "うんてん",
    "meaning": "驾驶；开车",
-   "ko": "未标注对应（待核对）",
+   "ko": "운전（驾驶，操纵，开）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "父は毎日車を運転します。",
@@ -351,7 +387,9 @@
    "surface": "入院",
    "kana": "にゅういん",
    "meaning": "住院",
-   "ko": "未标注对应（待核对）",
+   "ko": "입원（住院）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "祖母が入院しました。",
@@ -364,7 +402,9 @@
    "surface": "看病",
    "kana": "かんびょう",
    "meaning": "护理；照料病人",
-   "ko": "未标注对应（待核对）",
+   "ko": "병간호（看护病人，护理病人） / 병구완（护理病人，伺候病人）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "母が入院して、看病しています。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0240",
+  "V0241",
+  "V0242",
+  "V0243",
+  "V0244",
+  "V0245",
+  "V0246",
+  "V0247",
+  "V0248",
+  "V0249",
+  "V0250",
+  "V0251",
+  "V0252",
+  "V0253",
+  "V0254",
+  "V0255"
+ ],
+ "extension_vocab_ids": [
+  "V0256",
+  "V0257",
+  "V0258",
+  "V0259"
  ],
  "grammar": [
   {
@@ -430,7 +494,7 @@
    "id": "G0096",
    "pattern": "普通形 + はずがない",
    "meaning_zh": "不可能…；理应不会…",
-   "connection": "動詞・い形 普通形 + はずがない；な形・名詞 + な/である + はずがない",
+   "connection": "動詞・い形普通形 + はずがない；な形容詞 + な／名詞 + の + はずがない",
    "usage": "根据事实/常识强烈否定某可能性；比单纯「ない」更有推断依据。",
    "examples": [
     {
@@ -485,7 +549,7 @@
     "negative"
    ],
    "register_note": "中性；口语也可「はずない」，书面用「はずがない」。",
-   "review_status": "self_reviewed",
+   "review_status": "needs_review",
    "provenance": "self_reviewed",
    "source_ids": [
     "S000"

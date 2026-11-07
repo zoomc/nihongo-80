@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "19 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；3 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "奥さん",
    "kana": "おくさん",
    "meaning": "夫人；太太",
-   "ko": "未标注对应（待核对）",
+   "ko": "사모님（令夫人，尊夫人）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "奥さんがどこかに出かけているらしいから。",
@@ -130,7 +132,9 @@
    "surface": "お酒",
    "kana": "おさけ",
    "meaning": "酒",
-   "ko": "未标注对应（待核对）",
+   "ko": "술",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "マイクはお酒をやめたの？",
@@ -143,7 +147,9 @@
    "surface": "お皿",
    "kana": "おさら",
    "meaning": "盘子",
-   "ko": "未标注对应（待核对）",
+   "ko": "접시",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "スープを入れるくぼんだお皿がありますか。",
@@ -156,7 +162,9 @@
    "surface": "お祖父さん",
    "kana": "おじいさん",
    "meaning": "祖父；老爷爷",
-   "ko": "未标注对应（待核对）",
+   "ko": "할아버지",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "おじいさんはとてもゆっくりと話す。",
@@ -169,7 +177,9 @@
    "surface": "押す",
    "kana": "おす",
    "meaning": "推；按",
-   "ko": "未标注对应（待核对）",
+   "ko": "밀다（推） / 누르다（按，压，摁） / 떠밀다（推，推动）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "シャッターを押してくれますか。",
@@ -182,7 +192,9 @@
    "surface": "遅い",
    "kana": "おそい",
    "meaning": "慢；晚",
-   "ko": "未标注对应（待核对）",
+   "ko": "늦다（晚，迟） / 뜨다（慢，缓慢） / 느리다（慢，缓慢，迟缓）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "遅くなっても何もないよりはまし。",
@@ -195,7 +207,9 @@
    "surface": "お手洗い",
    "kana": "おてあらい",
    "meaning": "洗手间",
-   "ko": "未标注对应（待核对）",
+   "ko": "화장실（洗手间，卫生间）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "お手洗いはどこですか。",
@@ -208,7 +222,9 @@
    "surface": "お父さん",
    "kana": "おとうさん",
    "meaning": "父亲；爸爸",
-   "ko": "未标注对应（待核对）",
+   "ko": "아빠（爸爸）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "お父さんからことづけがあります。",
@@ -221,7 +237,9 @@
    "surface": "男",
    "kana": "おとこ",
    "meaning": "男人",
-   "ko": "未标注对应（待核对）",
+   "ko": "남자（男子，男人） / 사내（男人，老爷们）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "その男とつきあってはいけないよ。",
@@ -234,7 +252,9 @@
    "surface": "男の子",
    "kana": "おとこのこ",
    "meaning": "男孩",
-   "ko": "未标注对应（待核对）",
+   "ko": "사내애（男孩儿） / 사내아이（男孩儿）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "惯用表达/名词",
    "ex": {
     "ja": "あのハンサムな男の子を見て。",
@@ -247,7 +267,9 @@
    "surface": "一昨日",
    "kana": "おととい",
    "meaning": "前天",
-   "ko": "未标注对应（待核对）",
+   "ko": "그제（前天） / 그저께（前天）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "一昨日、彼は学校を休んだかもしれない。",
@@ -260,7 +282,9 @@
    "surface": "一昨年",
    "kana": "おととし",
    "meaning": "前年",
-   "ko": "未标注对应（待核对）",
+   "ko": "재작년（前年）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "彼女は、一昨年よりもはるかに暮らし向きがよい。",
@@ -273,7 +297,9 @@
    "surface": "大人",
    "kana": "おとな",
    "meaning": "成年人",
-   "ko": "未标注对应（待核对）",
+   "ko": "어른（成年人，大人）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/连体词/な形容词",
    "ex": {
     "ja": "大人だけこの映画が見える。",
@@ -286,7 +312,9 @@
    "surface": "おなか",
    "kana": "おなか",
    "meaning": "肚子",
-   "ko": "未标注对应（待核对）",
+   "ko": "배",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "何かおなかに入れてから出かけなさい。",
@@ -299,7 +327,9 @@
    "surface": "同じ",
    "kana": "おなじ",
    "meaning": "相同",
-   "ko": "未标注对应（待核对）",
+   "ko": "마찬가지（相同，一样）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "な形容词",
    "ex": {
     "ja": "この木はあの木とほぼ同じ高さだ。",
@@ -312,7 +342,9 @@
    "surface": "お兄さん",
    "kana": "おにいさん",
    "meaning": "哥哥",
-   "ko": "未标注对应（待核对）",
+   "ko": "오빠（哥哥） / 오라버니（兄长，哥哥）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私はあなたのお兄さんより年上です。",
@@ -325,7 +357,9 @@
    "surface": "お姉さん",
    "kana": "おねえさん",
    "meaning": "姐姐",
-   "ko": "未标注对应（待核对）",
+   "ko": "누님（姐姐，大姐） / 언니（姐姐）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "あなたのお姉さんは今何をしているの？",
@@ -338,7 +372,9 @@
    "surface": "お願いします",
    "kana": "おねがいします",
    "meaning": "请；拜托",
-   "ko": "未标注对应（待核对）",
+   "ko": "부탁합니다",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "惯用表达",
    "ex": {
     "ja": "ファーストクラスでお願いします。",
@@ -351,7 +387,9 @@
    "surface": "おばあさん",
    "kana": "おばあさん",
    "meaning": "祖母；老奶奶",
-   "ko": "未标注对应（待核对）",
+   "ko": "할머니",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "トムのおばあさんは元気そうですよ。",
@@ -359,6 +397,29 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0417",
+  "V0418",
+  "V0419",
+  "V0420",
+  "V0421",
+  "V0422",
+  "V0423",
+  "V0424",
+  "V0425",
+  "V0426",
+  "V0427",
+  "V0428",
+  "V0429",
+  "V0430",
+  "V0431",
+  "V0432"
+ ],
+ "extension_vocab_ids": [
+  "V0433",
+  "V0434",
+  "V0435"
  ],
  "grammar": [
   {
@@ -433,12 +494,6 @@
    "compare": [],
    "common_errors": [
     {
-     "wrong": "読んで いいですか。",
-     "why": "许可形固定「ても」，漏 も 变成中顿",
-     "fix": "読んでもいいですか。",
-     "learner": "zh"
-    },
-    {
      "wrong": "読んでも いけません",
      "why": "禁止用 ては；ても 是许可，助词搭配固定",
      "fix": "読んではいけません。",
@@ -453,7 +508,7 @@
    "source_ids": [
     "S000"
    ],
-   "review_status": "self_reviewed",
+   "review_status": "needs_review",
    "provenance": "self_reviewed",
    "ko_equiv": "-아/어도 되다 / -(으)면 안 되다",
    "ko_diff": "韩语许可用도 되다、禁止用면 안 되다；敬语疑问되어요更委婉，日语靠语调。"
@@ -648,21 +703,22 @@
    ]
   },
   {
-   "qid": "Q-014-V5-d77f5405e8eb",
-   "prompt": "「お祖父さん」是什么意思？",
+   "qid": "A014-1-465d80755429",
+   "prompt": "駅まで何分かかりますか。",
    "options": [
-    "美国；美洲",
-    "窗户",
-    "祖父；老爷爷",
-    "来"
+    "三十分",
+    "七分",
+    "十分",
+    "二十分"
    ],
-   "h": "bb558a07",
+   "h": "e2924efe",
    "oh": [
-    "6bb341b1",
-    "c0eb3ff3",
-    "bb558a07",
-    "e09e89e0"
-   ]
+    "d389d8fb",
+    "bf02d15c",
+    "e2924efe",
+    "3f589248"
+   ],
+   "passage": "田中さんは七時に家を出ます。駅まで歩いて十分です。"
   }
  ],
  "listening_material": null

@@ -207,3 +207,26 @@ payload：
 - 浏览器提交只有服务器成功确认后才显示已记录；失败保留本次作答及会话标识，允许重试。
 - `ai_draft` 是未人工审校的内容状态；不得升级为 verified。
 - v5.1 事件扩展：`events.session_payload` 存同一批提交的 review_ratings 与当天句子草稿（不含判分）。仅带密钥的 GET 可读；cloud_sync 将其交给 CLI，复习走现有 apply_review_rating，草稿存 days/day-NNN/web-drafts.json 供教师批改，不据此算掌握或完成。
+
+## v5.2 资源索引与本机音频（2026-11-07）
+
+- `knowledge/resources.json` 是外部免费资源的链接索引，不存受限正文或音频；每项注明官方来源、用途和许可边界。链接免费不代表可转载，Tadoku 链接注明 NPO 多言語多読。
+- `scripts/audio_assets.py` 只从原创、AI 草稿的 M0096–M0140 生成本机 macOS 合成语音；输出本机 `data/audio/Mxxxx.m4a` 与 `manifest.json`，均为不发布、不提交的生成物。清单记录原文 SHA-256、声音与实测时长；原文变更必须重新生成，本机使用方不可使用哈希不符的旧音频。
+- 音频是机器合成、非真人、未人工试听或验证发音；测得文件时长不证明难度、学习时长或理解质量。v6 线上页面改用 `web/audio/` 的 Kokoro 合成音频，浏览器 TTS 仍作为播放失败时的降级。
+
+## v6 完整个人学习版（2026-11-07）
+
+用户已授权采用最佳完整方案，不再等待词量选择：150天保持2700词资源覆盖；每天必学词设常规16/听力11上限，其余作为同日可选拓展，仍可查阅、发音、练习，不以选学完成阻塞当天。正文分别显示必学与拓展，实际数量由排课生成；复习与会话优先必学。
+
+- 词汇可新增 `ko_hint`（韩语释义或迁移提示）和 `ko_status`（`dictionary`/`ai_gloss`/`existing_hanja`/`native_or_loan`），保留原 ko_hanja；AI释义明确标识，不能将逐字韩音拼接当作已核实韩语词，也不得谎称人工审校。
+- `knowledge/resources.json` 记录官方外部资源、使用方式和许可依据；版权不明或第三方音频只保存官方链接，不复制分发。
+- `open_audio_assets.py` 用 Kokoro-82M 为自有原创文本生成 `web/audio/`（含 manifest 与 NOTICE），构建器按文本 SHA-256 核对失效；`audio_assets.py` 是 macOS `say` 的本机备选，产物只落 `data/audio/`、不发布不提交。两者都不调用付费云 TTS。
+- `knowledge/seeds/assessments.jsonl` 存原创周测/阶段题；`assessment_v6.build_for_day(day)` 返回兼容 qid/id/type/prompt/options/answer/knowledge_ids/h/oh 的确定性题目。理解题knowledge_ids为空，CLI只记证据，不推断知识卡掌握；不是JLPT官方分数。公开投影不下发标准答案。
+- 云端所有写入要求个人访问凭据，避免公开无鉴权写接口造成消耗；不启用 Workers Paid、R2、KV、AI等付费功能。生产部署前核验账户计划与用量，无免费资格时不部署到收费环境。
+- 历史未知题号保留原始事件到隔离记录；可以由旧提交对应Git构建重建答案，有证据才重判，不能猜测。课程更新后的旧本机载荷保留、提示恢复，不混入新版本提交。
+- 每日十句中前三句必做、其余七句拓展；同样保留全部1500句资源。教师通过 `confirm-output --day N --file <json>` 录入三句批改、两句自主语法造句、三词主动回忆（原文与反馈必须非空），CLI审计并写入output_reviews。finish-day须客观题达标且有输出验收，不能只凭选择题算整天完成。
+
+## v5.2 补充：可公开合成音频
+
+- Apple 系统语音产物仅放本机 `data/audio/`，不上传公开站点或 Git。另可使用 `scripts/open_audio_assets.py` 基于 Apache-2.0 的 Kokoro-82M v1.0（jf_alpha）和明确许可的 UniDic 生成原创草稿的公开音频到 `web/audio/`；资源说明必须注明模型、字典来源及其许可。
+- 公开音频同样只表示机器合成，未经人工验收的发音与难度不可标 verified；manifest 包含文本哈希、声音和实测时长。素材变更后接入方必须拒绝旧哈希，缺失时退回设备端 TTS。

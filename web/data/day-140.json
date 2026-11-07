@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "22 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；6 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "手間",
    "kana": "てま",
    "meaning": "工夫；劳力",
-   "ko": "未标注对应（待核对）",
+   "ko": "손（手，工夫） / 품（工，劲，工夫）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "食べるのにどうしてそんなに手間がかかるのか。",
@@ -130,7 +132,9 @@
    "surface": "デモ",
    "kana": "デモ",
    "meaning": "游行；示威",
-   "ko": "未标注对应（待核对）",
+   "ko": "데모（示威，示威游行） / 시위（示威）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "デモに参加しようと思う。",
@@ -143,7 +147,9 @@
    "surface": "典型",
    "kana": "てんけい",
    "meaning": "典型",
-   "ko": "전형",
+   "ko": "전형（典型）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼女はあらゆる婦徳の典型である。",
@@ -156,7 +162,9 @@
    "surface": "天候",
    "kana": "てんこう",
    "meaning": "天气",
-   "ko": "천후",
+   "ko": "날（天气） / 날씨（天气） / 천기（天气；气象）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "それはすべて天候に依存している。",
@@ -169,7 +177,9 @@
    "surface": "電子",
    "kana": "でんし",
    "meaning": "电子",
-   "ko": "전자",
+   "ko": "전자（电子）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "電子タイプライターはありますか。",
@@ -182,7 +192,9 @@
    "surface": "テント",
    "kana": "テント",
    "meaning": "帐篷",
-   "ko": "未标注对应（待核对）",
+   "ko": "천막（帐篷） / 텐트（帐篷）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私たちは暗くならないうちにテントを張った。",
@@ -195,7 +207,9 @@
    "surface": "天然",
    "kana": "てんねん",
    "meaning": "天然",
-   "ko": "천연",
+   "ko": "천연（天然，自然） / 자연산（野生，天然）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/连体词",
    "ex": {
     "ja": "この車は天然ガスで動く。",
@@ -208,7 +222,9 @@
    "surface": "問い",
    "kana": "とい",
    "meaning": "问题；提问",
-   "ko": "未标注对应（待核对）",
+   "ko": "물음（提问，问题）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私はその問がたいへんやさしいことを発見した。",
@@ -221,7 +237,9 @@
    "surface": "党",
    "kana": "とう",
    "meaning": "党；派",
-   "ko": "당",
+   "ko": "당（党）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼女は根っからのコーヒー党です。",
@@ -234,7 +252,9 @@
    "surface": "塔",
    "kana": "とう",
    "meaning": "塔；佛塔",
-   "ko": "탑",
+   "ko": "탑（塔）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "家からその塔が見える。",
@@ -247,7 +267,9 @@
    "surface": "答案",
    "kana": "とうあん",
    "meaning": "答卷；答题纸",
-   "ko": "답안",
+   "ko": "답안（答案，答卷） / 답안지（答题卷，答卷，试卷）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "時間です。答案を出して下さい。",
@@ -260,7 +282,9 @@
    "surface": "同一",
    "kana": "どういつ",
    "meaning": "同一；相同",
-   "ko": "동일",
+   "ko": "동일（相同，同一，一致）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "连体词/な形容词",
    "ex": {
     "ja": "同一現象が観察された。",
@@ -273,7 +297,9 @@
    "surface": "どうか",
    "kana": "どうか",
    "meaning": "请；务必",
-   "ko": "未标注对应（待核对）",
+   "ko": "부디（千万，务必，切切）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "どうか明朝６時に起こして下さい。",
@@ -286,7 +312,9 @@
    "surface": "当時",
    "kana": "とうじ",
    "meaning": "当时；那时",
-   "ko": "당시",
+   "ko": "당시（当时，那时）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "その当時を回想すれば夢のようだ。",
@@ -299,7 +327,9 @@
    "surface": "動詞",
    "kana": "どうし",
    "meaning": "动词",
-   "ko": "동사",
+   "ko": "동사（动词）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "この動詞の変化を言えますか。",
@@ -312,7 +342,9 @@
    "surface": "同時",
    "kana": "どうじ",
    "meaning": "同时",
-   "ko": "동시",
+   "ko": "동시（同时） / 일시（同时） / 한때（同时）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "词",
    "ex": {
     "ja": "二つのことを同時にするのは難しいです。",
@@ -325,7 +357,9 @@
    "surface": "どうしても",
    "kana": "どうしても",
    "meaning": "无论如何；一定",
-   "ko": "未标注对应（待核对）",
+   "ko": "어떻게 해도 / 반드시",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "惯用表达/副词",
    "ex": {
     "ja": "残念ですが、あなたの名前をどうしても覚えられない。",
@@ -338,7 +372,9 @@
    "surface": "道徳",
    "kana": "どうとく",
    "meaning": "道德",
-   "ko": "도덕",
+   "ko": "도덕（道德）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "彼は道徳力に欠けていた。",
@@ -351,7 +387,9 @@
    "surface": "投票",
    "kana": "とうひょう",
    "meaning": "投票",
-   "ko": "투표",
+   "ko": "투표（投票）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "２０歳になっていれば、投票できるのに。",
@@ -364,7 +402,9 @@
    "surface": "同様",
    "kana": "どうよう",
    "meaning": "同样；一样",
-   "ko": "未标注对应（待核对）",
+   "ko": "마찬가지（相同，一样）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "连体词/な形容词/名词",
    "ex": {
     "ja": "この車は新車同様だ。",
@@ -377,7 +417,9 @@
    "surface": "道路",
    "kana": "どうろ",
    "meaning": "道路；公路",
-   "ko": "도로",
+   "ko": "도로（道路，公路） / 길（路，道，道路） / 행로（大路，道路）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "その崖は道路の上に突き出ている。",
@@ -390,7 +432,9 @@
    "surface": "通す",
    "kana": "とおす",
    "meaning": "让…通过；领进",
-   "ko": "未标注对应（待核对）",
+   "ko": "통하다（通过，利用，使用）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "彼はその訪問者を居間に通した。",
@@ -398,6 +442,32 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V2499",
+  "V2500",
+  "V2501",
+  "V2502",
+  "V2503",
+  "V2504",
+  "V2505",
+  "V2506",
+  "V2507",
+  "V2508",
+  "V2509",
+  "V2510",
+  "V2511",
+  "V2512",
+  "V2513",
+  "V2514"
+ ],
+ "extension_vocab_ids": [
+  "V2515",
+  "V2516",
+  "V2517",
+  "V2518",
+  "V2519",
+  "V2520"
  ],
  "grammar": [
   {
@@ -643,21 +713,22 @@
    ]
   },
   {
-   "qid": "Q-140-V5-8669180f8984",
-   "prompt": "「天候」是什么意思？",
+   "qid": "A140-1-f02cd0729cce",
+   "prompt": "交換するとき必要なものは何ですか。",
    "options": [
-    "红色",
-    "刚才",
-    "实际",
-    "天气"
+    "レシート",
+    "図書館カード",
+    "予約番号だけ",
+    "写真だけ"
    ],
-   "h": "47d34bb0",
+   "h": "5dd38470",
    "oh": [
-    "fb3a03f5",
-    "9cd55ec0",
-    "7df67b4c",
-    "47d34bb0"
-   ]
+    "5dd38470",
+    "cea42824",
+    "ec6147d",
+    "707c67b6"
+   ],
+   "passage": "商品の交換を希望する場合は、購入後七日以内にレシートと一緒にお持ちください。"
   }
  ],
  "listening_material": null

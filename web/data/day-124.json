@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 8,
-   "desc": "14 个新词；实际用时超预算时记录未完成"
+   "desc": "11 个必学词；3 个选学拓展"
   },
   {
    "type": "语法",
@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -122,7 +122,9 @@
    "surface": "進歩",
    "kana": "しんぽ",
    "meaning": "进步",
-   "ko": "진보",
+   "ko": "진보（进步）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "科学の進歩は止まることがない。",
@@ -135,7 +137,9 @@
    "surface": "親友",
    "kana": "しんゆう",
    "meaning": "好朋友；挚友",
-   "ko": "未标注对应（待核对）",
+   "ko": "벗（朋友，友人）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "トムとフランクは親友だ。",
@@ -148,7 +152,9 @@
    "surface": "信用",
    "kana": "しんよう",
    "meaning": "信用；相信",
-   "ko": "신용",
+   "ko": "신용（信誉，信用）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "私はもう彼を信用しない。",
@@ -161,7 +167,9 @@
    "surface": "信頼",
    "kana": "しんらい",
    "meaning": "信赖",
-   "ko": "신뢰",
+   "ko": "신뢰（信赖，信任）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "確かに彼は信頼できます。",
@@ -174,7 +182,9 @@
    "surface": "心理",
    "kana": "しんり",
    "meaning": "心理",
-   "ko": "심리",
+   "ko": "심리（心理）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私には青少年の心理がわからない。",
@@ -187,7 +197,9 @@
    "surface": "人類",
    "kana": "じんるい",
    "meaning": "人类",
-   "ko": "인류",
+   "ko": "인류（人类） / 인간（人，人类）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "人類だけが火の使い方を知っている。",
@@ -200,7 +212,9 @@
    "surface": "巣",
    "kana": "す",
    "meaning": "巢；窝",
-   "ko": "未标注对应（待核对）",
+   "ko": "집（房子，窝，巢） / 보금자리（巢，鸟巢）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "鳥の巣が見られるかもしれない。",
@@ -213,7 +227,9 @@
    "surface": "図",
    "kana": "ず",
    "meaning": "图；图表",
-   "ko": "도",
+   "ko": "그림 / 도표",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "図で説明しましょう。",
@@ -226,7 +242,9 @@
    "surface": "水準",
    "kana": "すいじゅん",
    "meaning": "水准；水平",
-   "ko": "수준",
+   "ko": "수준（水准，水平）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "君の仕事は期待している水準に達していない。",
@@ -239,7 +257,9 @@
    "surface": "推薦",
    "kana": "すいせん",
    "meaning": "推荐",
-   "ko": "추천",
+   "ko": "추천（推荐，举荐）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词/连体词",
    "ex": {
     "ja": "私達は彼を議長に推薦した。",
@@ -252,7 +272,9 @@
    "surface": "スイッチ",
    "kana": "スイッチ",
    "meaning": "开关",
-   "ko": "未标注对应（待核对）",
+   "ko": "스위치（开关）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "この仕掛けはスイッチで動く。",
@@ -265,7 +287,9 @@
    "surface": "数字",
    "kana": "すうじ",
    "meaning": "数字",
-   "ko": "숫자",
+   "ko": "숫자（数字）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "メーターの数字を読んでください。",
@@ -278,7 +302,9 @@
    "surface": "スープ",
    "kana": "スープ",
    "meaning": "汤",
-   "ko": "未标注对应（待核对）",
+   "ko": "탕（汤） / 수프（汤，羹）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "このスープは、しょっぱ過ぎて飲めないよ。",
@@ -291,7 +317,9 @@
    "surface": "末",
    "kana": "すえ",
    "meaning": "末尾；结果",
-   "ko": "말",
+   "ko": "끝 / 결과",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "よく考えた末、私は家にいることに決めた。",
@@ -299,6 +327,24 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V2211",
+  "V2212",
+  "V2213",
+  "V2214",
+  "V2215",
+  "V2216",
+  "V2217",
+  "V2218",
+  "V2219",
+  "V2220",
+  "V2221"
+ ],
+ "extension_vocab_ids": [
+  "V2222",
+  "V2223",
+  "V2224"
  ],
  "grammar": [
   {
@@ -619,11 +665,10 @@
  "listening_material": {
   "id": "M0102",
   "title": "料理教室・1",
-  "audio_url": "",
-  "audio_kind": "tts",
+  "audio_url": "/audio/M0102.m4a",
+  "audio_kind": "synthetic",
   "transcript": "町の料理教室に申し込みました。初めて参加する人は、料理を作り始める前に、道具の使い方の説明を聞きます。集合は九時で、場所は二階の調理室です。建物の正面入口から入って、案内板の矢印に沿って進んでください。エプロンと手をふくタオルは自分で持っていきます。包丁や鍋は教室にあるので、持参する必要はありません。今回は野菜のスープと魚料理を作ります。材料は先生が用意してくれますが、食べられない物があれば、前の日までに連絡してください。調理は四人一組で行い、使った道具はグループごとに洗います。できた料理は教室で食べます。家に持ち帰ることはできません。参加費は当日、受付で現金で払ってください。申し込みを取り消す場合も、前の日までに電話してください。次回の日程は、授業が終わってから先生が説明するそうです。",
-  "duration_sec": 0,
-  "duration_estimate_sec": 70,
+  "duration_sec": 69.4,
   "questions": [
    {
     "qid": "L-124-0-647c0ffd1aa4",

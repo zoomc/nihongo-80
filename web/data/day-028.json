@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "どれ",
    "kana": "どれ",
    "meaning": "哪个",
-   "ko": "未标注对应（待核对）",
+   "ko": "어느 것",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "代名词",
    "ex": {
     "ja": "あなたのかばんはどれですか。",
@@ -130,7 +132,9 @@
    "surface": "ナイフ",
    "kana": "ナイフ",
    "meaning": "刀",
-   "ko": "未标注对应（待核对）",
+   "ko": "칼（刀）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "それはあなたのナイフではない。",
@@ -143,7 +147,9 @@
    "surface": "長い",
    "kana": "ながい",
    "meaning": "长",
-   "ko": "未标注对应（待核对）",
+   "ko": "길다（长）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "だんだん日が長くなっています。",
@@ -156,7 +162,9 @@
    "surface": "鳴く",
    "kana": "なく",
    "meaning": "（动物）叫",
-   "ko": "未标注对应（待核对）",
+   "ko": "（동물이）울다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "カエルが鳴いたら帰ろう。",
@@ -169,7 +177,9 @@
    "surface": "なぜ",
    "kana": "なぜ",
    "meaning": "为什么",
-   "ko": "未标注对应（待核对）",
+   "ko": "왜",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "副词",
    "ex": {
     "ja": "あなたはなぜ働いているの。",
@@ -182,7 +192,9 @@
    "surface": "夏",
    "kana": "なつ",
    "meaning": "夏天",
-   "ko": "未标注对应（待核对）",
+   "ko": "여름（夏，夏天，夏季）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "アリは夏じゅうせっせとはたらく。",
@@ -195,7 +207,9 @@
    "surface": "夏休み",
    "kana": "なつやすみ",
    "meaning": "暑假",
-   "ko": "未标注对应（待核对）",
+   "ko": "여름휴가（暑假，暑期休假）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "この夏休みはどこかへ行くのですか。",
@@ -208,7 +222,9 @@
    "surface": "など",
    "kana": "など",
    "meaning": "等等",
-   "ko": "未标注对应（待核对）",
+   "ko": "등 / 따위",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "助词",
    "ex": {
     "ja": "ぬくもりなどどこにも見つからない。",
@@ -221,7 +237,9 @@
    "surface": "七つ",
    "kana": "ななつ",
    "meaning": "七个",
-   "ko": "未标注对应（待核对）",
+   "ko": "일곱 개",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "数词",
    "ex": {
     "ja": "７つの海って何ですか。",
@@ -234,7 +252,9 @@
    "surface": "七日",
    "kana": "なのか",
    "meaning": "七天；七号",
-   "ko": "未标注对应（待核对）",
+   "ko": "이레（七天）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "一週間は七日です。",
@@ -247,7 +267,9 @@
    "surface": "習う",
    "kana": "ならう",
    "meaning": "学",
-   "ko": "未标注对应（待核对）",
+   "ko": "배우다（学，学习）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "車の運転を習っています。",
@@ -260,7 +282,9 @@
    "surface": "並ぶ",
    "kana": "ならぶ",
    "meaning": "排队",
-   "ko": "未标注对应（待核对）",
+   "ko": "줄짓다（排队，站队）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "あんた、なぜに並んでいるのだい。",
@@ -273,7 +297,9 @@
    "surface": "並べる",
    "kana": "ならべる",
    "meaning": "排列",
-   "ko": "未标注对应（待核对）",
+   "ko": "늘어놓다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "メイドはテーブルにナイフとフォークを並べた。",
@@ -286,7 +312,9 @@
    "surface": "賑やか",
    "kana": "にぎやか",
    "meaning": "热闹",
-   "ko": "未标注对应（待核对）",
+   "ko": "번화하다 / 떠들썩하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容词",
    "ex": {
     "ja": "この通りは賑やかだ。",
@@ -299,7 +327,9 @@
    "surface": "西",
    "kana": "にし",
    "meaning": "西",
-   "ko": "未标注对应（待核对）",
+   "ko": "서（西）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "列車は西へ走っていた。",
@@ -312,7 +342,9 @@
    "surface": "荷物",
    "kana": "にもつ",
    "meaning": "行李",
-   "ko": "未标注对应（待核对）",
+   "ko": "짐（行李，货物） / 짐짝（行李卷儿，货包，货箱）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "これ荷物を上にあげてもよろしい。",
@@ -325,7 +357,9 @@
    "surface": "ニュース",
    "kana": "ニュース",
    "meaning": "新闻",
-   "ko": "未标注对应（待核对）",
+   "ko": "뉴스（新闻）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "そのニュースはラジオで聞いたよ。",
@@ -338,7 +372,9 @@
    "surface": "庭",
    "kana": "にわ",
    "meaning": "院子",
-   "ko": "未标注对应（待核对）",
+   "ko": "뜰（院子） / 마당（院子，庭院）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "その庭にはバラがまったくなかった。",
@@ -351,7 +387,9 @@
    "surface": "脱ぐ",
    "kana": "ぬぐ",
    "meaning": "脱（衣鞋）",
-   "ko": "未标注对应（待核对）",
+   "ko": "벗다",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "ここで靴を脱がなければなりませんか。",
@@ -364,7 +402,9 @@
    "surface": "温い",
    "kana": "ぬるい",
    "meaning": "温的",
-   "ko": "未标注对应（待核对）",
+   "ko": "미지근하다",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "い形容词",
    "ex": {
     "ja": "このコーヒーはぬるいです。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0688",
+  "V0689",
+  "V0690",
+  "V0691",
+  "V0692",
+  "V0693",
+  "V0694",
+  "V0695",
+  "V0696",
+  "V0697",
+  "V0698",
+  "V0699",
+  "V0700",
+  "V0701",
+  "V0702",
+  "V0703"
+ ],
+ "extension_vocab_ids": [
+  "V0704",
+  "V0705",
+  "V0706",
+  "V0707"
  ],
  "grammar": [
   {
@@ -665,21 +729,22 @@
    ]
   },
   {
-   "qid": "Q-028-V5-1e6ed0faa067",
-   "prompt": "「鳴く」是什么意思？",
+   "qid": "A028-1-496cf0fc51cf",
+   "prompt": "何を持って行きますか。",
    "options": [
-    "和服",
-    "（动物）叫",
-    "正好",
-    "擅长；拿手"
+    "靴",
+    "帽子",
+    "傘",
+    "辞書"
    ],
-   "h": "9427f43c",
+   "h": "9d574967",
    "oh": [
-    "10163812",
-    "9427f43c",
-    "307783fd",
-    "e1438984"
-   ]
+    "f024d4a3",
+    "d1910428",
+    "9d574967",
+    "735f5c3b"
+   ],
+   "passage": "雨が降っていますから、傘を持って行きます。"
   }
  ],
  "listening_material": null

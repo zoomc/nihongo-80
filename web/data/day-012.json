@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "19 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；3 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "痛い",
    "kana": "いたい",
    "meaning": "疼；痛",
-   "ko": "未标注对应（待核对）",
+   "ko": "아프다（疼， 痛，不舒服）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "ほかに痛いところはありますか。",
@@ -130,7 +132,9 @@
    "surface": "いただきます",
    "kana": "いただきます",
    "meaning": "我开动了",
-   "ko": "未标注对应（待核对）",
+   "ko": "잘 먹겠습니다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "惯用表达",
    "ex": {
     "ja": "８ドル５０セントいただきます。",
@@ -143,7 +147,9 @@
    "surface": "一日",
    "kana": "いちにち",
    "meaning": "一天；一号",
-   "ko": "未标注对应（待核对）",
+   "ko": "하루（一天） / 진종일（整天，终日，一天到晚）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "一日で５００ドルつかってしまった。",
@@ -156,7 +162,9 @@
    "surface": "いちばん",
    "kana": "いちばん",
    "meaning": "最；第一",
-   "ko": "未标注对应（待核对）",
+   "ko": "가장 / 첫째",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词/连体词",
    "ex": {
     "ja": "このリンゴがいちばんおいしい。",
@@ -169,7 +177,9 @@
    "surface": "いつ",
    "kana": "いつ",
    "meaning": "什么时候",
-   "ko": "未标注对应（待核对）",
+   "ko": "언제",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "代名词",
    "ex": {
     "ja": "いつ旅行においでになりますか。",
@@ -182,7 +192,9 @@
    "surface": "五日",
    "kana": "いつか",
    "meaning": "五天；五号",
-   "ko": "未标注对应（待核对）",
+   "ko": "닷새（五天）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "１月５日から１月１５日までおねがいします。",
@@ -195,7 +207,9 @@
    "surface": "一緒",
    "kana": "いっしょ",
    "meaning": "一起",
-   "ko": "未标注对应（待核对）",
+   "ko": "함께",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "「ご一緒してもいいですか」「もちろんです」",
@@ -208,7 +222,9 @@
    "surface": "五つ",
    "kana": "いつつ",
    "meaning": "五个",
-   "ko": "未标注对应（待核对）",
+   "ko": "다섯 개",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "数词",
    "ex": {
     "ja": "この箱にはリンゴが五つ入っている。",
@@ -221,7 +237,9 @@
    "surface": "犬",
    "kana": "いぬ",
    "meaning": "狗",
-   "ko": "未标注对应（待核对）",
+   "ko": "개（狗，犬）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "その犬はかみついたりしませんよ。",
@@ -234,7 +252,9 @@
    "surface": "嫌",
    "kana": "いや",
    "meaning": "讨厌；不愿意",
-   "ko": "未标注对应（待核对）",
+   "ko": "질색（讨厌，厌恶，厌烦）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "な形容词",
    "ex": {
     "ja": "毎日うっとうしくていやですね。",
@@ -248,6 +268,8 @@
    "kana": "いりぐち",
    "meaning": "入口",
    "ko": "입구",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "１台の車が入り口に止まった。",
@@ -260,7 +282,9 @@
    "surface": "要る",
    "kana": "いる",
    "meaning": "需要",
-   "ko": "未标注对应（待核对）",
+   "ko": "필요하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "今のところお金はいらない。",
@@ -273,7 +297,9 @@
    "surface": "入れる",
    "kana": "いれる",
    "meaning": "放进；装入",
-   "ko": "未标注对应（待核对）",
+   "ko": "넣다（放进，装进） / 집어넣다（放进去）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "それは引き出しに入れておきました。",
@@ -286,7 +312,9 @@
    "surface": "色",
    "kana": "いろ",
    "meaning": "颜色",
-   "ko": "색",
+   "ko": "색깔（颜色，色彩）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "カメレオンはどんな色にでもなれる。",
@@ -299,7 +327,9 @@
    "surface": "いろいろ",
    "kana": "いろいろ",
    "meaning": "各种各样",
-   "ko": "未标注对应（待核对）",
+   "ko": "여러 가지",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容词/连体词",
    "ex": {
     "ja": "先生といってもいろいろある。",
@@ -312,7 +342,9 @@
    "surface": "後ろ",
    "kana": "うしろ",
    "meaning": "后面",
-   "ko": "未标注对应（待核对）",
+   "ko": "뒤（后，后面） / 뒤쪽（后面，后头，后部） / 뒷면（后面，背面，反面）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/连体词",
    "ex": {
     "ja": "校長が先生の後ろから入ってきた。",
@@ -325,7 +357,9 @@
    "surface": "薄い",
    "kana": "うすい",
    "meaning": "薄；淡",
-   "ko": "未标注对应（待核对）",
+   "ko": "묽다（稀，薄） / 얇다（薄） / 엷다（薄）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "い形容词",
    "ex": {
     "ja": "コーヒーは薄いのが好きです。",
@@ -338,7 +372,9 @@
    "surface": "歌",
    "kana": "うた",
    "meaning": "歌",
-   "ko": "未标注对应（待核对）",
+   "ko": "노래（歌，歌曲，唱歌）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "歌がうまければいいのになあ。",
@@ -351,7 +387,9 @@
    "surface": "歌う",
    "kana": "うたう",
    "meaning": "唱",
-   "ko": "未标注对应（待核对）",
+   "ko": "뽑다（唱） / 부르다（唱） / 뽑아내다（唱）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(五段)/他动词/自动词",
    "ex": {
     "ja": "ジョンはステージで何を歌いましたか。",
@@ -359,6 +397,29 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0379",
+  "V0380",
+  "V0381",
+  "V0382",
+  "V0383",
+  "V0384",
+  "V0385",
+  "V0386",
+  "V0387",
+  "V0388",
+  "V0389",
+  "V0390",
+  "V0391",
+  "V0392",
+  "V0393",
+  "V0394"
+ ],
+ "extension_vocab_ids": [
+  "V0395",
+  "V0396",
+  "V0397"
  ],
  "grammar": [
   {
@@ -472,10 +533,10 @@
    "source_ids": [
     "S000"
    ],
-   "review_status": "self_reviewed",
+   "review_status": "needs_review",
    "provenance": "self_reviewed",
    "ko_equiv": "기본형(-다)",
-   "ko_diff": "韩语词典形以다结尾，不能直接结句；日语辞书形可作简体结句，这是关键差异。"
+   "ko_diff": "韩语词典形以 다 结尾；动词陈述式常随语体变形，部分形容词的普通陈述形式与词典形相同。日语辞书形可用作普通体非过去结句。"
   }
  ],
  "sentences": [

@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "暮れる",
    "kana": "くれる",
    "meaning": "天黑；日暮",
-   "ko": "未标注对应（待核对）",
+   "ko": "저물다（日落，天黑）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "知らぬ間に日はとっぷりと暮れていた。",
@@ -130,7 +132,9 @@
    "surface": "毛",
    "kana": "け",
    "meaning": "毛",
-   "ko": "未标注对应（待核对）",
+   "ko": "털（毛，毛发）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "犬の毛はいわばセーターだ。",
@@ -143,7 +147,9 @@
    "surface": "計画",
    "kana": "けいかく",
    "meaning": "计划",
-   "ko": "계획",
+   "ko": "계획（计划，筹划） / 작정（打算，计划）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "その計画では彼に同調できました。",
@@ -156,7 +162,9 @@
    "surface": "警察",
    "kana": "けいさつ",
    "meaning": "警察",
-   "ko": "경찰",
+   "ko": "경찰（警方，警察当局）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "その場合には警察を呼びなさい。",
@@ -169,7 +177,9 @@
    "surface": "ケーキ",
    "kana": "ケーキ",
    "meaning": "蛋糕",
-   "ko": "未标注对应（待核对）",
+   "ko": "케이크（蛋糕）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ケイトはケーキの作り方を知っています。",
@@ -182,7 +192,9 @@
    "surface": "けがする",
    "kana": "けがする",
    "meaning": "受伤",
-   "ko": "未标注对应（待核对）",
+   "ko": "다치다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词/自动词",
    "ex": {
     "ja": "特定の食べ物を食べた後に、胸やけがするのですか？",
@@ -195,7 +207,9 @@
    "surface": "景色",
    "kana": "けしき",
    "meaning": "景色",
-   "ko": "未标注对应（待核对）",
+   "ko": "경관（景观，景色） / 경치（风景，景色） / 풍경（风景，风光，景色，景致）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "それは私が見たことのない景色だ。",
@@ -208,7 +222,9 @@
    "surface": "消しゴム",
    "kana": "けしゴム",
    "meaning": "橡皮",
-   "ko": "未标注对应（待核对）",
+   "ko": "지우개（橡皮擦）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ちょっと消しゴムをかしてくれませんか。",
@@ -221,7 +237,9 @@
    "surface": "下宿",
    "kana": "げしゅく",
    "meaning": "寄宿",
-   "ko": "하숙",
+   "ko": "하숙（寄宿，下宿，借宿） / 하숙집（寄宿处）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "彼女は学生を下宿させている。",
@@ -234,7 +252,9 @@
    "surface": "決して",
    "kana": "けっして",
    "meaning": "决不",
-   "ko": "未标注对应（待核对）",
+   "ko": "결코（부정과 함께）",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "副词",
    "ex": {
     "ja": "これは決して小さなことではない。",
@@ -247,7 +267,9 @@
    "surface": "けれど",
    "kana": "けれど",
    "meaning": "但是",
-   "ko": "未标注对应（待核对）",
+   "ko": "그러나",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "接续词/助词",
    "ex": {
     "ja": "ちょっと会いたいのだけれど。",
@@ -260,7 +282,9 @@
    "surface": "けんかする",
    "kana": "けんかする",
    "meaning": "吵架",
-   "ko": "未标注对应（待核对）",
+   "ko": "싸우다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "ケンとけんかしたのか。",
@@ -273,7 +297,9 @@
    "surface": "研究",
    "kana": "けんきゅう",
    "meaning": "研究",
-   "ko": "연구",
+   "ko": "연구（研究）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "あなたのご研究は、いかがですか。",
@@ -286,7 +312,9 @@
    "surface": "研究室",
    "kana": "けんきゅうしつ",
    "meaning": "研究室",
-   "ko": "연구실",
+   "ko": "연구실（研究室）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私たちはその研究室を利用した。",
@@ -299,7 +327,9 @@
    "surface": "見物",
    "kana": "けんぶつ",
    "meaning": "参观；游览",
-   "ko": "未标注对应（待核对）",
+   "ko": "구경（赏，观看，游览）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "どこを見物すればいいでしょうか。",
@@ -312,7 +342,9 @@
    "surface": "子",
    "kana": "こ",
    "meaning": "孩子",
-   "ko": "未标注对应（待核对）",
+   "ko": "애（孩子，小孩） / 아이（小孩，孩子）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼はきっすいのロンドン子です。",
@@ -325,7 +357,9 @@
    "surface": "こう",
    "kana": "こう",
    "meaning": "这样",
-   "ko": "未标注对应（待核对）",
+   "ko": "이렇게",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "副词",
    "ex": {
     "ja": "紙をこう折ってください。",
@@ -338,7 +372,9 @@
    "surface": "郊外",
    "kana": "こうがい",
    "meaning": "郊外",
-   "ko": "교외",
+   "ko": "교외（郊外） / 야외（野外，郊外）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "私は東京の郊外に住んでいる。",
@@ -351,7 +387,9 @@
    "surface": "講義",
    "kana": "こうぎ",
    "meaning": "讲课",
-   "ko": "강의",
+   "ko": "강의（讲课，授课，讲授）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "その講義へ来た人はほとんどいなかった。",
@@ -364,7 +402,9 @@
    "surface": "工業",
    "kana": "こうぎょう",
    "meaning": "工业",
-   "ko": "공업",
+   "ko": "공업（工业）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "７月の工業生産は急増した。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V1033",
+  "V1034",
+  "V1035",
+  "V1036",
+  "V1037",
+  "V1038",
+  "V1039",
+  "V1040",
+  "V1041",
+  "V1042",
+  "V1043",
+  "V1044",
+  "V1045",
+  "V1046",
+  "V1047",
+  "V1048"
+ ],
+ "extension_vocab_ids": [
+  "V1049",
+  "V1050",
+  "V1051",
+  "V1052"
  ],
  "grammar": [
   {

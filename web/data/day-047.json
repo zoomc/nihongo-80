@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 8,
-   "desc": "14 个新词；实际用时超预算时记录未完成"
+   "desc": "11 个必学词；3 个选学拓展"
   },
   {
    "type": "语法",
@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -122,7 +122,9 @@
    "surface": "客",
    "kana": "きゃく",
    "meaning": "客人",
-   "ko": "未标注对应（待核对）",
+   "ko": "손（客人） / 손님（客，客人）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "春先だから客もあまりいませんでした。",
@@ -135,7 +137,9 @@
    "surface": "急",
    "kana": "きゅう",
    "meaning": "急；陡",
-   "ko": "未标注对应（待核对）",
+   "ko": "급함 / 가파름",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容词",
    "ex": {
     "ja": "この川の流れは急だ。",
@@ -148,7 +152,9 @@
    "surface": "急行",
    "kana": "きゅうこう",
    "meaning": "快车",
-   "ko": "급행",
+   "ko": "급행（快巴，快车）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "急行の料金は幾らですか。",
@@ -161,7 +167,9 @@
    "surface": "教育",
    "kana": "きょういく",
    "meaning": "教育",
-   "ko": "교육",
+   "ko": "교육（教育，培训）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "この世界の教育にはがっかりしてしまう。",
@@ -174,7 +182,9 @@
    "surface": "教会",
    "kana": "きょうかい",
    "meaning": "教堂",
-   "ko": "교회",
+   "ko": "교회（教会，教堂） / 성당（教堂，天主堂）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "その教会は１１７３年までさかのぼる。",
@@ -187,7 +197,9 @@
    "surface": "競争",
    "kana": "きょうそう",
    "meaning": "竞争",
-   "ko": "경쟁",
+   "ko": "경쟁（竞争） / 경합（竞争，竞赛，角逐）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词/自动词",
    "ex": {
     "ja": "みんなでカブトムシを競争させた。",
@@ -200,7 +212,9 @@
    "surface": "近所",
    "kana": "きんじょ",
    "meaning": "附近",
-   "ko": "未标注对应（待核对）",
+   "ko": "옆（旁边，附近） / 근처（附近，近处） / 가까이（近处，附近）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/连体词",
    "ex": {
     "ja": "彼が近所に越してきた。",
@@ -213,7 +227,9 @@
    "surface": "具合",
    "kana": "ぐあい",
    "meaning": "状况；身体",
-   "ko": "未标注对应（待核对）",
+   "ko": "상태 / 몸 상태",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "時計の具合が悪い。",
@@ -226,7 +242,9 @@
    "surface": "空気",
    "kana": "くうき",
    "meaning": "空气",
-   "ko": "공기",
+   "ko": "공기（空气）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "山の中では空気がとてもきれいだ。",
@@ -239,7 +257,9 @@
    "surface": "空港",
    "kana": "くうこう",
    "meaning": "机场",
-   "ko": "공항",
+   "ko": "공항（机场）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "どの空港から出発しますか。",
@@ -252,7 +272,9 @@
    "surface": "草",
    "kana": "くさ",
    "meaning": "草",
-   "ko": "未标注对应（待核对）",
+   "ko": "풀（草）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "月には草が生えて無い。",
@@ -265,7 +287,9 @@
    "surface": "首",
    "kana": "くび",
    "meaning": "脖子",
-   "ko": "未标注对应（待核对）",
+   "ko": "목（脖子，颈）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "あなたの首は風前のともし火だ。",
@@ -278,7 +302,9 @@
    "surface": "雲",
    "kana": "くも",
    "meaning": "云",
-   "ko": "未标注对应（待核对）",
+   "ko": "구름（云，云彩）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "雲がだんだん黒くなっています。",
@@ -291,7 +317,9 @@
    "surface": "くれる",
    "kana": "くれる",
    "meaning": "给（我）",
-   "ko": "未标注对应（待核对）",
+   "ko": "주다（나에게）",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "他动词",
    "ex": {
     "ja": "友達がはがきをくれるように私に頼んだ。",
@@ -299,6 +327,24 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V1019",
+  "V1020",
+  "V1021",
+  "V1022",
+  "V1023",
+  "V1024",
+  "V1025",
+  "V1026",
+  "V1027",
+  "V1028",
+  "V1029"
+ ],
+ "extension_vocab_ids": [
+  "V1030",
+  "V1031",
+  "V1032"
  ],
  "grammar": [
   {
@@ -616,11 +662,10 @@
  "listening_material": {
   "id": "M0114",
   "title": "待ち合わせ・3",
-  "audio_url": "",
-  "audio_kind": "tts",
+  "audio_url": "/audio/M0114.m4a",
+  "audio_kind": "synthetic",
   "transcript": "明日の待ち合わせについて、もう一度確認します。私たちは駅の南口で会います。時間は十時です。最初は駅の東口で会う予定でしたが、東口の前では工事をしています。道が狭くなっていて、人も多いそうです。そのため、集合場所を変えることにしました。駅に着いたら、まず案内板を見てください。わからなければ、駅員さんに聞いても大丈夫です。私は青いかばんを持って行きます。雨が降っても予定は変わりません。傘を持ってきてください。遅れそうなときは、電車に乗る前にメッセージを送ってください。全員が集まってから、歩いて美術館へ向かいます。美術館までは十五分ぐらいかかります。入場券は私がまとめて買ってありますから、窓口に並ぶ必要はありません。昼ご飯は見学の後で一緒に食べましょう。",
-  "duration_sec": 0,
-  "duration_estimate_sec": 66,
+  "duration_sec": 65.2,
   "questions": [
    {
     "qid": "L-047-0-9c1e5f1bd830",

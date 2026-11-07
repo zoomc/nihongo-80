@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "幸福",
    "kana": "こうふく",
    "meaning": "幸福",
-   "ko": "행복",
+   "ko": "행복（幸福）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/な形容词",
    "ex": {
     "ja": "金持ちが必ずしも幸福とは限らない。",
@@ -130,7 +132,9 @@
    "surface": "公平",
    "kana": "こうへい",
    "meaning": "公平",
-   "ko": "공평",
+   "ko": "공평（公平，平等）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "法が常に公平であるとは限らない。",
@@ -143,7 +147,9 @@
    "surface": "候補",
    "kana": "こうほ",
    "meaning": "候选；候选人",
-   "ko": "후보",
+   "ko": "후보（候选人）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "スミス氏は市長候補である。",
@@ -156,7 +162,9 @@
    "surface": "考慮",
    "kana": "こうりょ",
    "meaning": "考虑",
-   "ko": "고려",
+   "ko": "고려（考虑，斟酌）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "彼らに同行しようかと考慮中です。",
@@ -169,7 +177,9 @@
    "surface": "越える",
    "kana": "こえる",
    "meaning": "超过；越过",
-   "ko": "未标注对应（待核对）",
+   "ko": "넘다（过，超过） / 넘기다（越过） / 넘어가다（超过，超）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "それは人知の限界を越えている。",
@@ -182,7 +192,9 @@
    "surface": "コーチ",
    "kana": "コーチ",
    "meaning": "教练",
-   "ko": "未标注对应（待核对）",
+   "ko": "코치（教练，训练）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "コーチが助言をしてくれた。",
@@ -195,7 +207,9 @@
    "surface": "コード",
    "kana": "コード",
    "meaning": "代码；软线",
-   "ko": "未标注对应（待核对）",
+   "ko": "코드（代码，编码）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "パソコンのコードを抜かないでください。",
@@ -208,7 +222,9 @@
    "surface": "氷",
    "kana": "こおり",
    "meaning": "冰",
-   "ko": "未标注对应（待核对）",
+   "ko": "얼음（冰）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "船は氷に閉じ込められてしまった。",
@@ -221,7 +237,9 @@
    "surface": "凍る",
    "kana": "こおる",
    "meaning": "结冰；冻",
-   "ko": "未标注对应（待核对）",
+   "ko": "얼다（冻结，冻）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "道が凍っているから気を付けなさい。",
@@ -234,7 +252,9 @@
    "surface": "ゴール",
    "kana": "ゴール",
    "meaning": "终点；球门",
-   "ko": "未标注对应（待核对）",
+   "ko": "골（球门，球篮） / 골문（球门） / 결승점（终点）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "ゴールまであと百メートルです。",
@@ -247,7 +267,9 @@
    "surface": "誤解",
    "kana": "ごかい",
    "meaning": "误解",
-   "ko": "오해",
+   "ko": "오해（误解，误会）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词/自动词",
    "ex": {
     "ja": "あなたを誤解してしまってごめんなさい。",
@@ -260,7 +282,9 @@
    "surface": "語学",
    "kana": "ごがく",
    "meaning": "外语学习",
-   "ko": "어학",
+   "ko": "어학（外语）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "これは私の語学の能力を有利に使える好機である。",
@@ -273,7 +297,9 @@
    "surface": "呼吸",
    "kana": "こきゅう",
    "meaning": "呼吸；诀窍",
-   "ko": "호흡",
+   "ko": "호흡（呼吸） / 숨（呼吸） / 숨쉬기（呼吸）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词/自动词",
    "ex": {
     "ja": "英語の発音の呼吸がなかなか飲み込めない。",
@@ -286,7 +312,9 @@
    "surface": "故郷",
    "kana": "こきょう",
    "meaning": "故乡",
-   "ko": "고향",
+   "ko": "향토（乡土，故乡，家乡，家园）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "故郷の老いた両親のことを考えて見るべきだ。",
@@ -299,7 +327,9 @@
    "surface": "極",
    "kana": "ごく",
    "meaning": "极其",
-   "ko": "未标注对应（待核对）",
+   "ko": "극히",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "副词",
    "ex": {
     "ja": "今、ごく小さなペットが流行っている。",
@@ -312,7 +342,9 @@
    "surface": "国語",
    "kana": "こくご",
    "meaning": "国语；语文",
-   "ko": "국어",
+   "ko": "국어（国语） / 나라말（国语） / 우리말（国语）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼は国語が好きだし得意だ。",
@@ -325,7 +357,9 @@
    "surface": "黒板",
    "kana": "こくばん",
    "meaning": "黑板",
-   "ko": "흑판",
+   "ko": "흑판（黑板） / 칠판（黑板）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "黒板に書きますね。",
@@ -338,7 +372,9 @@
    "surface": "克服",
    "kana": "こくふく",
    "meaning": "克服",
-   "ko": "극복",
+   "ko": "극복（克服）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "彼は多くの困難を克服した。",
@@ -351,7 +387,9 @@
    "surface": "国民",
    "kana": "こくみん",
    "meaning": "国民",
-   "ko": "국민",
+   "ko": "국민（国民）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "国民は歓呼して彼を国王に迎えた。",
@@ -364,7 +402,9 @@
    "surface": "穀物",
    "kana": "こくもつ",
    "meaning": "谷物",
-   "ko": "곡물",
+   "ko": "곡물（谷物，粮食） / 곡식（庄稼，谷物）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/连体词",
    "ex": {
     "ja": "彼は穀物を商っている。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V1947",
+  "V1948",
+  "V1949",
+  "V1950",
+  "V1951",
+  "V1952",
+  "V1953",
+  "V1954",
+  "V1955",
+  "V1956",
+  "V1957",
+  "V1958",
+  "V1959",
+  "V1960",
+  "V1961",
+  "V1962"
+ ],
+ "extension_vocab_ids": [
+  "V1963",
+  "V1964",
+  "V1965",
+  "V1966"
  ],
  "grammar": [
   {

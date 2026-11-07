@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "以下",
    "kana": "いか",
    "meaning": "以下",
-   "ko": "이하",
+   "ko": "이하（以下）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "词",
    "ex": {
     "ja": "それは千円以下では買えません。",
@@ -130,7 +132,9 @@
    "surface": "以外",
    "kana": "いがい",
    "meaning": "以外；除…之外",
-   "ko": "이외",
+   "ko": "이외（以外）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "词",
    "ex": {
     "ja": "その仕事以外ならなんでもやる。",
@@ -143,7 +147,9 @@
    "surface": "医学",
    "kana": "いがく",
    "meaning": "医学",
-   "ko": "의학",
+   "ko": "의학（医学）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "二人の医者が医学の話をしていた。",
@@ -156,7 +162,9 @@
    "surface": "生きる",
    "kana": "いきる",
    "meaning": "活；生存",
-   "ko": "未标注对应（待核对）",
+   "ko": "살다（活，活着，生存） / 살아가다（活命，生存，活下去）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "生きるものはすべていつかは死ぬ。",
@@ -169,7 +177,9 @@
    "surface": "意見",
    "kana": "いけん",
    "meaning": "意见；看法",
-   "ko": "의견",
+   "ko": "의견（意见）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ここではどんどん意見をおっしゃってかまいません。",
@@ -182,7 +192,9 @@
    "surface": "石",
    "kana": "いし",
    "meaning": "石头",
-   "ko": "未标注对应（待核对）",
+   "ko": "돌（石，石头） / 바위（石头）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私にはこの石は持ち上がらない。",
@@ -195,7 +207,9 @@
    "surface": "いじめる",
    "kana": "いじめる",
    "meaning": "欺负；捉弄",
-   "ko": "未标注对应（待核对）",
+   "ko": "괴롭히다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "彼はよく友人をいじめたものだ。",
@@ -208,7 +222,9 @@
    "surface": "以上",
    "kana": "いじょう",
    "meaning": "以上；就这些",
-   "ko": "이상",
+   "ko": "이상（以上）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "词",
    "ex": {
     "ja": "以上ですか？",
@@ -221,7 +237,9 @@
    "surface": "急ぐ",
    "kana": "いそぐ",
    "meaning": "赶紧；着急",
-   "ko": "未标注对应（待核对）",
+   "ko": "서둘다（着急，操之过急） / 서두르다（着急，操之过急）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词/他动词",
    "ex": {
     "ja": "ニックはバスに間に合うように急いだ。",
@@ -234,7 +252,9 @@
    "surface": "致す",
    "kana": "いたす",
    "meaning": "做（谦让语）",
-   "ko": "未标注对应（待核对）",
+   "ko": "하다（겸양）",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "お取り寄せいたしましょうか。",
@@ -247,7 +267,9 @@
    "surface": "一度",
    "kana": "いちど",
    "meaning": "一次；一遍",
-   "ko": "未标注对应（待核对）",
+   "ko": "한 번",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "人間はこの世に一度しか生きない。",
@@ -260,7 +282,9 @@
    "surface": "一生懸命",
    "kana": "いっしょうけんめい",
    "meaning": "拼命；努力",
-   "ko": "未标注对应（待核对）",
+   "ko": "열심히 / 필사적으로",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "副词/な形容词/名词",
    "ex": {
     "ja": "もっと一生懸命勉強すべきだったのに。",
@@ -273,7 +297,9 @@
    "surface": "いっぱい",
    "kana": "いっぱい",
    "meaning": "满；很多",
-   "ko": "未标注对应（待核对）",
+   "ko": "가득 / 많이",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容词/连体词",
    "ex": {
     "ja": "このボトルに水をいっぱい入れてください。",
@@ -286,7 +312,9 @@
    "surface": "糸",
    "kana": "いと",
    "meaning": "线；丝",
-   "ko": "未标注对应（待核对）",
+   "ko": "끈（绳子，绳索，线） / 실（线）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "長い糸はからまりやすい。",
@@ -299,7 +327,9 @@
    "surface": "以内",
    "kana": "いない",
    "meaning": "以内",
-   "ko": "이내",
+   "ko": "이내（以内）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "１週間以内に電話します。",
@@ -312,7 +342,9 @@
    "surface": "田舎",
    "kana": "いなか",
    "meaning": "乡下；老家",
-   "ko": "未标注对应（待核对）",
+   "ko": "촌（老家） / 시골（乡下，农村，乡村）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "去年の夏、父の田舎に行きました。",
@@ -325,7 +357,9 @@
    "surface": "祈る",
    "kana": "いのる",
    "meaning": "祈祷；祝愿",
-   "ko": "未标注对应（待核对）",
+   "ko": "빌다（祈祷，祈求） / 기도하다（祈祷，祷告） / 축원하다（祝愿，祈祷，祷告）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "早くよくなられるように祈っています。",
@@ -338,7 +372,9 @@
    "surface": "植える",
    "kana": "うえる",
    "meaning": "种植",
-   "ko": "未标注对应（待核对）",
+   "ko": "심다（种植，种，栽）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "私は庭にバラを植えた。",
@@ -351,7 +387,9 @@
    "surface": "うかがう",
    "kana": "うかがう",
    "meaning": "拜访；请教",
-   "ko": "未标注对应（待核对）",
+   "ko": "방문하다 / 여쭙다（겸양）",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "体重をおうかがいしてもよろしいですか。",
@@ -364,7 +402,9 @@
    "surface": "受ける",
    "kana": "うける",
    "meaning": "接受；参加（考试）",
-   "ko": "未标注对应（待核对）",
+   "ko": "받다（接受，遭受，经受，承蒙） / 보다（考，参加）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "病気なので試験が受けられません。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0899",
+  "V0900",
+  "V0901",
+  "V0902",
+  "V0903",
+  "V0904",
+  "V0905",
+  "V0906",
+  "V0907",
+  "V0908",
+  "V0909",
+  "V0910",
+  "V0911",
+  "V0912",
+  "V0913",
+  "V0914"
+ ],
+ "extension_vocab_ids": [
+  "V0915",
+  "V0916",
+  "V0917",
+  "V0918"
  ],
  "grammar": [
   {
@@ -405,12 +469,6 @@
    "compare": [],
    "common_errors": [
     {
-     "wrong": "料理を食べて見ます。",
-     "why": "补助动词 てみる 用假名，不写汉字「見る」",
-     "fix": "料理を食べてみます。",
-     "learner": "zh"
-    },
-    {
      "wrong": "食べてみる（写成 食べみる）",
      "why": "补助动词前必须 て形，漏 て 错",
      "fix": "食べてみます。",
@@ -424,7 +482,7 @@
    "source_ids": [
     "S000"
    ],
-   "review_status": "self_reviewed",
+   "review_status": "needs_review",
    "provenance": "self_reviewed",
    "ko_equiv": "-아/어 보다 / -아·어 버리다 / -아·어 두다",
    "ko_diff": "韩语分别用보다(尝试)、버리다(完了/遗憾)、두다(预先)，与日语三形基本对应。"
@@ -468,12 +526,6 @@
      "why": "「别人给我做」用 くれる/てもらう，あげる 方向反了",
      "fix": "友達が私に教えてくれました。",
      "learner": "zh"
-    },
-    {
-     "wrong": "教えてもらいました（漏 に）",
-     "why": "もらう 的授予者用 に/から 标出",
-     "fix": "友達に教えてもらいました。",
-     "learner": "zh"
     }
    ],
    "jlpt": "N4",
@@ -484,7 +536,7 @@
    "source_ids": [
     "S000"
    ],
-   "review_status": "self_reviewed",
+   "review_status": "needs_review",
    "provenance": "self_reviewed",
    "ko_equiv": "-아/어 주다 / -아·어 받다",
    "ko_diff": "韩语只用주다(给)与받다(受)，无あげる/くれる/もらう的方向三分；敬语用드리다/주시다。"

@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "22 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；6 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "出会う",
    "kana": "であう",
    "meaning": "遇见；邂逅",
-   "ko": "未标注对应（待核对）",
+   "ko": "만나다（遇到，遇见，碰见） / 마주치다（邂逅，偶遇）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "きのう旧友の一人に出会った。",
@@ -130,7 +132,9 @@
    "surface": "提案",
    "kana": "ていあん",
    "meaning": "提议；建议",
-   "ko": "제안",
+   "ko": "제안（提案，提议）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "私の提案を承認していただけますか。",
@@ -143,7 +147,9 @@
    "surface": "定期",
    "kana": "ていき",
    "meaning": "定期",
-   "ko": "정기",
+   "ko": "정기（定期） / 정기권（定期票，月票，季票） / 정기 예금（定期存款）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼らは定期旅客船に乗り込んだ。",
@@ -156,7 +162,9 @@
    "surface": "抵抗",
    "kana": "ていこう",
    "meaning": "抵抗；阻力",
-   "ko": "저항",
+   "ko": "저항（抵抗）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "困難に対してあくまでも抵抗した。",
@@ -169,7 +177,9 @@
    "surface": "程度",
    "kana": "ていど",
    "meaning": "程度",
-   "ko": "정도",
+   "ko": "정도（程度）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "この程度のお金じゃ長くは持たないだろう。",
@@ -182,7 +192,9 @@
    "surface": "停留所",
    "kana": "ていりゅうじょ",
    "meaning": "车站；站点",
-   "ko": "未标注对应（待核对）",
+   "ko": "정거장（车站） / 정류소（车站） / 정류장（车站）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "バスの停留所まで競争しよう。",
@@ -195,7 +207,9 @@
    "surface": "デート",
    "kana": "デート",
    "meaning": "约会",
-   "ko": "未标注对应（待核对）",
+   "ko": "데이트（约会）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "アンディはけっしてデートにおくれたことはない。",
@@ -208,7 +222,9 @@
    "surface": "敵",
    "kana": "てき",
    "meaning": "敌人；对手",
-   "ko": "적",
+   "ko": "적（敌，敌人）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼は敵に不意打ちを食わせた。",
@@ -221,7 +237,9 @@
    "surface": "出来事",
    "kana": "できごと",
    "meaning": "事件；事情",
-   "ko": "未标注对应（待核对）",
+   "ko": "사건 / 일",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "このようのしてその出来事は起こった。",
@@ -234,7 +252,9 @@
    "surface": "適する",
    "kana": "てきする",
    "meaning": "适合",
-   "ko": "未标注对应（待核对）",
+   "ko": "적합하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "自动词",
    "ex": {
     "ja": "その肉は全く食用に適さなかった。",
@@ -247,7 +267,9 @@
    "surface": "適切",
    "kana": "てきせつ",
    "meaning": "恰当；合适",
-   "ko": "적절",
+   "ko": "적절하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容词/名词",
    "ex": {
     "ja": "「行った」というのが適切な言葉だ。",
@@ -260,7 +282,9 @@
    "surface": "適度",
    "kana": "てきど",
    "meaning": "适度",
-   "ko": "적도",
+   "ko": "적당한 정도",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容词/连体词/名词",
    "ex": {
     "ja": "適度の運動は体に良い。",
@@ -274,6 +298,8 @@
    "kana": "てきよう",
    "meaning": "适用",
    "ko": "적용",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "この法律はすべての人に適用される。",
@@ -286,7 +312,9 @@
    "surface": "できれば",
    "kana": "できれば",
    "meaning": "如果可能的话",
-   "ko": "未标注对应（待核对）",
+   "ko": "가능하다면",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "惯用表达",
    "ex": {
     "ja": "出来れば明日までに帰ります。",
@@ -299,7 +327,9 @@
    "surface": "手品",
    "kana": "てじな",
    "meaning": "魔术；戏法",
-   "ko": "未标注对应（待核对）",
+   "ko": "마술（魔术） / 요술（妖术，魔术，妖法）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "少年はたくさんの手品が使える。",
@@ -312,7 +342,9 @@
    "surface": "ですから",
    "kana": "ですから",
    "meaning": "所以",
-   "ko": "未标注对应（待核对）",
+   "ko": "그러므로",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "接续词",
    "ex": {
     "ja": "いいえ、結構です。お腹が一杯ですから。",
@@ -325,7 +357,9 @@
    "surface": "鉄",
    "kana": "てつ",
    "meaning": "铁",
-   "ko": "철",
+   "ko": "철（铁） / 쇠（铁）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "鉄の原子番号は26です。",
@@ -338,7 +372,9 @@
    "surface": "哲学",
    "kana": "てつがく",
    "meaning": "哲学",
-   "ko": "철학",
+   "ko": "철학（哲学）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "哲学は難しいと見なされることが多い。",
@@ -351,7 +387,9 @@
    "surface": "手伝い",
    "kana": "てつだい",
    "meaning": "帮忙；帮手",
-   "ko": "未标注对应（待核对）",
+   "ko": "도움 / 도우미",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "台所でお母さんの手伝いをしていたの。",
@@ -364,7 +402,9 @@
    "surface": "徹底",
    "kana": "てってい",
    "meaning": "彻底",
-   "ko": "철저",
+   "ko": "철저（彻底，透彻，全面）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/动词(サ变)/他动词/自动词",
    "ex": {
     "ja": "生産性はオートメーションの徹底によって向上する。",
@@ -377,7 +417,9 @@
    "surface": "鉄道",
    "kana": "てつどう",
    "meaning": "铁路",
-   "ko": "철도",
+   "ko": "철도（铁路，铁道） / 철로（铁路，铁道）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "新しい鉄道はまだ完成していない。",
@@ -390,7 +432,9 @@
    "surface": "徹夜",
    "kana": "てつや",
    "meaning": "通宵",
-   "ko": "철야",
+   "ko": "철야（彻夜，通宵，通宵达旦） / 밤샘（熬夜，通宵）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/动词(サ变)/自动词/连体词",
    "ex": {
     "ja": "私はよく徹夜する。",
@@ -398,6 +442,32 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V2477",
+  "V2478",
+  "V2479",
+  "V2480",
+  "V2481",
+  "V2482",
+  "V2483",
+  "V2484",
+  "V2485",
+  "V2486",
+  "V2487",
+  "V2488",
+  "V2489",
+  "V2490",
+  "V2491",
+  "V2492"
+ ],
+ "extension_vocab_ids": [
+  "V2493",
+  "V2494",
+  "V2495",
+  "V2496",
+  "V2497",
+  "V2498"
  ],
  "grammar": [
   {

@@ -30,7 +30,7 @@ PHASES = [
     ("P1", 4, 45, "N5 核心"),
     ("P2", 46, 95, "N4 主体"),
     ("P3", 96, 130, "N3 前半"),
-    ("P4", 131, 150, "N3 后半 + 真题"),
+    ("P4", 131, 150, "N3 后半 + 自测"),
 ]
 
 
@@ -164,6 +164,9 @@ def build():
         ng = gby.get(d, [])
         nk = kby.get(d, [])
         listening = is_listening_day(d)
+        core_limit = 11 if listening else 16
+        essential = nv[:core_limit]
+        extension = nv[core_limit:]
         # 复习：T+1 / T+3 / T+7
         rev = []
         for back in (1, 3, 7):
@@ -183,9 +186,9 @@ def build():
                    ("会话", 18)]
         blocks = [{"type": kind, "min": minutes, "desc": {
             "复习": "到期项优先；未完成顺延，不追赶",
-            "新词": "%d 个新词；实际用时超预算时记录未完成" % len(nv),
+            "新词": "%d 个必学词；%d 个选学拓展" % (len(essential), len(extension)),
             "语法": patterns, "听力": "原创 TTS + 3 道理解题；时长为估计，非真人音频",
-            "句子输出": "先独立写，再交会话批改", "练习": "6 题即时自评",
+            "句子输出": "3句必做，7句拓展；先写，再批改", "练习": "6 题即时自评",
             "会话": "抽词、造句、批改"}[kind]} for kind, minutes in budgets if minutes]
         days.append({
             "day": d, "phase": ph, "phase_name": next(name for code, _, _, name in PHASES if code == ph),
@@ -195,16 +198,18 @@ def build():
             "focus": ["词汇", "语法", "输出"] if not listening else ["词汇", "听力", "输出"],
             "minutes": 60, "blocks": blocks,
             "new_vocab_ids": [v["id"] for v in nv],
+            "core_vocab_ids": [v["id"] for v in essential],
+            "extension_vocab_ids": [v["id"] for v in extension],
             "new_grammar_ids": [g["id"] for g in ng],
             "new_kanji_ids": [k["id"] for k in nk],
             "review_knowledge_ids": rev,
             "material_ids": mby.get(d, []),
             "question_ids": ["web-%03d" % d],
             "listening": listening,
-            "assessment": ("diagnostic" if d == 1 else "weekly" if d % 7 == 0 else
-                           "stage" if d in (45, 95, 130) else "mock" if d in (110, 132, 148) else "none"),
+            "assessment": ("diagnostic" if d == 1 else "stage" if d in (45, 95, 130) else
+                           "self_check" if d in (110, 132, 148) else "weekly" if d % 7 == 0 else "none"),
             "objectives": [
-                "认出并读出今天的 %d 个新词" % len(nv),
+                "认出并读出今天的 %d 个必学词；其余拓展自选" % len(essential),
                 "用 %s 造 2 句自己的话" % ("、".join(g["pattern"] for g in ng) or "今天语法"),
                 "听完当天素材并回答 3 题" if listening else "独立写当天句子，记录不会的表达",
             ],
@@ -222,17 +227,18 @@ def build():
 
     data = {
         "meta": {
-            "version": "5.0", "days": DAYS, "minutes_per_day": 60,
+            "version": "6.0", "days": DAYS, "minutes_per_day": 60,
             "total_hours": DAYS, "listening_from": 47,
-            "target": "N3 范围覆盖 85%，真题 55–65%",
-            "honesty": "2,700 词覆盖 N3 高频约 85%，不是全量 3,700；不承诺 N3 合格。",
+            "target": "N3词句学习、读解听解训练与官方样题自测",
+            "honesty": "2700词完整资源；必学与拓展分开，成绩以官方试题自测为准。",
             "generated_at": "2026-11-07",
             "generator": "scripts/curriculum_v5.py",
             "license_note": "词/语法/汉字骨架来自 OpenJLPT（CC-BY-SA-4.0），中文释义与例句翻译为 AI 草稿。",
         },
         "days": days,
     }
-    OUT.mkdir(exist_ok=True)
+    if not OUT.is_dir():
+        OUT.mkdir(parents=True)
     (OUT / "curriculum.json").write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
     # 覆盖报告
@@ -264,7 +270,7 @@ def build():
               "## 新词 %d" % len(d["new_vocab_ids"]), ""]
         for vid in d["new_vocab_ids"]:
             x = v[vid]
-            ko = "｜朝鲜语：%s" % x["ko_hanja"] if x.get("ko_hanja") else ""
+            ko = "｜韩语参考：%s" % (x.get("ko_hint") or x.get("ko_hanja")) if (x.get("ko_hint") or x.get("ko_hanja")) else ""
             ex = x["examples"][0] if x.get("examples") else {"ja": "", "zh": ""}
             md.append("- **%s**（%s）%s%s<br>" % (x["surface"], x["kana"], x["meaning_zh"], ko))
             if ex.get("ja"):

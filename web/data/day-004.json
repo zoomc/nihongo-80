@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "19 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；3 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -93,7 +93,9 @@
    "surface": "時計",
    "kana": "とけい",
    "meaning": "钟表；手表",
-   "ko": "未标注对应（待核对）",
+   "ko": "시계",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "時計を見ます。",
@@ -106,7 +108,9 @@
    "surface": "毎日",
    "kana": "まいにち",
    "meaning": "每天",
-   "ko": "未标注对应（待核对）",
+   "ko": "매일",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "毎日、学校へ行きます。",
@@ -119,7 +123,9 @@
    "surface": "今週",
    "kana": "こんしゅう",
    "meaning": "本周",
-   "ko": "未标注对应（待核对）",
+   "ko": "금주（本周，这周，这星期）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "今週は忙しいです。",
@@ -132,7 +138,9 @@
    "surface": "月曜日",
    "kana": "げつようび",
    "meaning": "星期一",
-   "ko": "未标注对应（待核对）",
+   "ko": "월요일（星期一，周一，礼拜一）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "月曜日に試験があります。",
@@ -145,7 +153,9 @@
    "surface": "火曜日",
    "kana": "かようび",
    "meaning": "星期二",
-   "ko": "未标注对应（待核对）",
+   "ko": "화요일（星期二，周二，礼拜二）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "火曜日に試験があります。",
@@ -158,7 +168,9 @@
    "surface": "水曜日",
    "kana": "すいようび",
    "meaning": "星期三",
-   "ko": "未标注对应（待核对）",
+   "ko": "수（周三，星期三） / 수요일（星期三，周三，礼拜三）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "水曜日は休みです。",
@@ -171,7 +183,9 @@
    "surface": "木曜日",
    "kana": "もくようび",
    "meaning": "星期四",
-   "ko": "未标注对应（待核对）",
+   "ko": "목요일（星期四，周四，礼拜四）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "木曜日に映画を見ます。",
@@ -184,7 +198,9 @@
    "surface": "金曜日",
    "kana": "きんようび",
    "meaning": "星期五",
-   "ko": "未标注对应（待核对）",
+   "ko": "금요일（星期五，周五，礼拜五）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "金曜日は忙しいです。",
@@ -197,7 +213,9 @@
    "surface": "土曜日",
    "kana": "どようび",
    "meaning": "星期六",
-   "ko": "未标注对应（待核对）",
+   "ko": "토（星期六，周六，礼拜六） / 토요일（星期六，周六，礼拜六）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "土曜日に買い物します。",
@@ -210,7 +228,9 @@
    "surface": "日曜日",
    "kana": "にちようび",
    "meaning": "星期日",
-   "ko": "未标注对应（待核对）",
+   "ko": "일요일（星期日， 星期天，周日，礼拜天）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "日曜日は休みです。",
@@ -223,7 +243,9 @@
    "surface": "家",
    "kana": "いえ",
    "meaning": "家；房子",
-   "ko": "未标注对应（待核对）",
+   "ko": "집（房子，窝，巢）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "家に帰ります。",
@@ -236,7 +258,9 @@
    "surface": "学校",
    "kana": "がっこう",
    "meaning": "学校",
-   "ko": "未标注对应（待核对）",
+   "ko": "학교（学校） / 학원（学院，学校）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "学校へ行きます。",
@@ -249,7 +273,9 @@
    "surface": "会社",
    "kana": "かいしゃ",
    "meaning": "公司",
-   "ko": "未标注对应（待核对）",
+   "ko": "기업（企业，公司） / 회사（公司，企业，会社）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "会社で働きます。",
@@ -262,7 +288,9 @@
    "surface": "駅",
    "kana": "えき",
    "meaning": "车站",
-   "ko": "未标注对应（待核对）",
+   "ko": "역（기차역 등）",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "駅で電車に乗ります。",
@@ -275,7 +303,9 @@
    "surface": "店",
    "kana": "みせ",
    "meaning": "商店；店铺",
-   "ko": "未标注对应（待核对）",
+   "ko": "가게（店，店铺，商店） / 상점（商店） / 업소（小公司，营业所，店铺）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "駅の前に店があります。",
@@ -288,7 +318,9 @@
    "surface": "病院",
    "kana": "びょういん",
    "meaning": "医院",
-   "ko": "未标注对应（待核对）",
+   "ko": "병원（医院）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "病院に行きます。",
@@ -301,7 +333,9 @@
    "surface": "図書館",
    "kana": "としょかん",
    "meaning": "图书馆",
-   "ko": "未标注对应（待核对）",
+   "ko": "도서관（图书馆）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名詞",
    "ex": {
     "ja": "図書館で本を読みます。",
@@ -314,7 +348,9 @@
    "surface": "部屋",
    "kana": "へや",
    "meaning": "房间",
-   "ko": "未标注对应（待核对）",
+   "ko": "방（房间） / 집칸（房间）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名詞",
    "ex": {
     "ja": "部屋に猫がいます。",
@@ -327,7 +363,9 @@
    "surface": "上",
    "kana": "うえ",
    "meaning": "上面；上方",
-   "ko": "未标注对应（待核对）",
+   "ko": "위",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "名詞",
    "ex": {
     "ja": "机の上に本があります。",
@@ -335,6 +373,29 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0028",
+  "V0029",
+  "V0030",
+  "V0031",
+  "V0032",
+  "V0033",
+  "V0034",
+  "V0035",
+  "V0036",
+  "V0037",
+  "V0038",
+  "V0039",
+  "V0040",
+  "V0041",
+  "V0042",
+  "V0043"
+ ],
+ "extension_vocab_ids": [
+  "V0044",
+  "V0045",
+  "V0047"
  ],
  "grammar": [
   {

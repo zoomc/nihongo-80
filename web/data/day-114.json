@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "覚める",
    "kana": "さめる",
    "meaning": "醒",
-   "ko": "未标注对应（待核对）",
+   "ko": "깨어나다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "その音で彼女は眠りから覚めた。",
@@ -130,7 +132,9 @@
    "surface": "左右",
    "kana": "さゆう",
    "meaning": "左右",
-   "ko": "좌우",
+   "ko": "좌우（左右）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "彼は怒って首を左右に振った。",
@@ -143,7 +147,9 @@
    "surface": "皿",
    "kana": "さら",
    "meaning": "盘子",
-   "ko": "未标注对应（待核对）",
+   "ko": "접시",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼女はテーブルの上に皿を置いた。",
@@ -156,7 +162,9 @@
    "surface": "更に",
    "kana": "さらに",
    "meaning": "更加；进一步",
-   "ko": "未标注对应（待核对）",
+   "ko": "더욱（更加，进一步，越来越，愈加） / 일층（更加，进一步） / 한층（更加，进一步）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "副词/接续词",
    "ex": {
     "ja": "その小説は彼の名声を更に高めた。",
@@ -169,7 +177,9 @@
    "surface": "猿",
    "kana": "さる",
    "meaning": "猴子",
-   "ko": "未标注对应（待核对）",
+   "ko": "원숭이（猴，猴子）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼は猿のように木によじ登った。",
@@ -182,7 +192,9 @@
    "surface": "去る",
    "kana": "さる",
    "meaning": "离开；逝去",
-   "ko": "未标注对应（待核对）",
+   "ko": "뜨다（离开） / 떠나다（离开，离去） / 떠나오다（离开）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "古き良き時代は去って、二度ともどってこない。",
@@ -195,7 +207,9 @@
    "surface": "騒ぎ",
    "kana": "さわぎ",
    "meaning": "骚动；吵闹",
-   "ko": "未标注对应（待核对）",
+   "ko": "소동（骚动，动乱） / 소란（嘈杂，吵闹）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "この騒ぎはどうしたの。",
@@ -208,7 +222,9 @@
    "surface": "参加",
    "kana": "さんか",
    "meaning": "参加",
-   "ko": "참가",
+   "ko": "참가（参加，参与） / 가담（参与，参加，加入）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "あなたは競技に参加しましたか。",
@@ -221,7 +237,9 @@
    "surface": "参考",
    "kana": "さんこう",
    "meaning": "参考",
-   "ko": "참고",
+   "ko": "참고（参考，参照，参酌）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "参考のためにカタログをお送りください。",
@@ -234,7 +252,9 @@
    "surface": "賛成",
    "kana": "さんせい",
    "meaning": "赞成",
-   "ko": "찬성",
+   "ko": "찬성（赞成，赞同）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词/连体词",
    "ex": {
     "ja": "私たちの計画に賛成してくれますか。",
@@ -247,7 +267,9 @@
    "surface": "酸素",
    "kana": "さんそ",
    "meaning": "氧气",
-   "ko": "산소",
+   "ko": "산소（氧，氧气）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "酸素が無ければ生きられない。",
@@ -260,7 +282,9 @@
    "surface": "氏",
    "kana": "し",
    "meaning": "氏；先生",
-   "ko": "씨",
+   "ko": "씨 / 성씨",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "后缀",
    "ex": {
     "ja": "亡くなったスミス氏は医者でした。",
@@ -273,7 +297,9 @@
    "surface": "詩",
    "kana": "し",
    "meaning": "诗",
-   "ko": "시",
+   "ko": "시（诗）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "この詩は誰が書いたのですか。",
@@ -286,7 +312,9 @@
    "surface": "幸せ",
    "kana": "しあわせ",
    "meaning": "幸福",
-   "ko": "未标注对应（待核对）",
+   "ko": "행복（幸福）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/な形容词",
    "ex": {
     "ja": "金持ちが幸せとは限らない。",
@@ -299,7 +327,9 @@
    "surface": "ジーンズ",
    "kana": "ジーンズ",
    "meaning": "牛仔裤",
-   "ko": "未标注对应（待核对）",
+   "ko": "청바지（牛仔裤）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私は日曜日はたいていジーンズをはいている。",
@@ -312,7 +342,9 @@
    "surface": "ジェット機",
    "kana": "ジェットき",
    "meaning": "喷气式飞机",
-   "ko": "未标注对应（待核对）",
+   "ko": "제트기（喷气式飞机）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ジェット機は東京に着陸した。",
@@ -325,7 +357,9 @@
    "surface": "直に",
    "kana": "じかに",
    "meaning": "直接",
-   "ko": "未标注对应（待核对）",
+   "ko": "직접",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "副词",
    "ex": {
     "ja": "あなたとじかに会ってじっくり話したいことがあるのです。",
@@ -338,7 +372,9 @@
    "surface": "しかも",
    "kana": "しかも",
    "meaning": "而且；并且",
-   "ko": "未标注对应（待核对）",
+   "ko": "게다가",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "接续词",
    "ex": {
     "ja": "彼は音もなくしかもすばやく動ける。",
@@ -351,7 +387,9 @@
    "surface": "叱る",
    "kana": "しかる",
    "meaning": "责备；训斥",
-   "ko": "未标注对应（待核对）",
+   "ko": "책하다（责备，训斥，斥责） / 혼내다（训斥，呵斥） / 꾸중하다（责骂，训斥）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "ママに叱られますよ。",
@@ -364,7 +402,9 @@
    "surface": "式",
    "kana": "しき",
    "meaning": "仪式；公式",
-   "ko": "식",
+   "ko": "식（仪式）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "彼は事故でその式に出席できなかった。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V2035",
+  "V2036",
+  "V2037",
+  "V2038",
+  "V2039",
+  "V2040",
+  "V2041",
+  "V2042",
+  "V2043",
+  "V2044",
+  "V2045",
+  "V2046",
+  "V2047",
+  "V2048",
+  "V2049",
+  "V2050"
+ ],
+ "extension_vocab_ids": [
+  "V2051",
+  "V2052",
+  "V2053",
+  "V2054"
  ],
  "grammar": [
   {

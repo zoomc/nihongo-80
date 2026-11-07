@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "契約",
    "kana": "けいやく",
    "meaning": "合同；签约",
-   "ko": "未标注对应（待核对）",
+   "ko": "계약（合同，契约，合约）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "来週、部屋の契約をします。",
@@ -130,7 +132,9 @@
    "surface": "退去",
    "kana": "たいきょ",
    "meaning": "搬出；退租",
-   "ko": "未标注对应（待核对）",
+   "ko": "퇴거",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "退去の一か月前に連絡してください。",
@@ -143,7 +147,9 @@
    "surface": "引っ越し",
    "kana": "ひっこし",
    "meaning": "搬家",
-   "ko": "未标注对应（待核对）",
+   "ko": "이사",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "引っ越しの荷物をまとめています。",
@@ -156,7 +162,9 @@
    "surface": "不動産",
    "kana": "ふどうさん",
    "meaning": "房地产",
-   "ko": "未标注对应（待核对）",
+   "ko": "부동산（不动产，房地产）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "不動産会社に部屋を紹介してもらいました。",
@@ -169,7 +177,9 @@
    "surface": "敷金",
    "kana": "しききん",
    "meaning": "押金（房租押金）",
-   "ko": "未标注对应（待核对）",
+   "ko": "보증금",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "敷金は家賃の一か月分です。",
@@ -182,7 +192,9 @@
    "surface": "共益費",
    "kana": "きょうえきひ",
    "meaning": "公共区域费；物业公摊费",
-   "ko": "未标注对应（待核对）",
+   "ko": "공용 관리비",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "共益費は五千円です。",
@@ -195,7 +207,9 @@
    "surface": "設備",
    "kana": "せつび",
    "meaning": "设备；设施",
-   "ko": "未标注对应（待核对）",
+   "ko": "설비（设备）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "この部屋には新しい設備があります。",
@@ -208,7 +222,9 @@
    "surface": "症状",
    "kana": "しょうじょう",
    "meaning": "症状",
-   "ko": "未标注对应（待核对）",
+   "ko": "증상（病情，症状） / 증후（症状）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "症状が良くなりました。",
@@ -221,7 +237,9 @@
    "surface": "診察",
    "kana": "しんさつ",
    "meaning": "诊察；看诊",
-   "ko": "未标注对应（待核对）",
+   "ko": "진찰（诊察）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "午後から診察を受けます。",
@@ -234,7 +252,9 @@
    "surface": "処方",
    "kana": "しょほう",
    "meaning": "开处方",
-   "ko": "未标注对应（待核对）",
+   "ko": "처방（处方）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "医者が薬を処方しました。",
@@ -247,7 +267,9 @@
    "surface": "治療",
    "kana": "ちりょう",
    "meaning": "治疗",
-   "ko": "未标注对应（待核对）",
+   "ko": "치료",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "治療は一週間かかります。",
@@ -260,7 +282,9 @@
    "surface": "予防",
    "kana": "よぼう",
    "meaning": "预防",
-   "ko": "未标注对应（待核对）",
+   "ko": "예방（预防）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "風邪の予防に手を洗います。",
@@ -273,7 +297,9 @@
    "surface": "栄養",
    "kana": "えいよう",
    "meaning": "营养",
-   "ko": "未标注对应（待核对）",
+   "ko": "영양（营养）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "野菜には栄養がたくさんあります。",
@@ -286,7 +312,9 @@
    "surface": "睡眠",
    "kana": "すいみん",
    "meaning": "睡眠",
-   "ko": "未标注对应（待核对）",
+   "ko": "잠（觉，睡眠） / 수면（睡眠）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "睡眠を十分に取ることが大切です。",
@@ -299,7 +327,9 @@
    "surface": "回復",
    "kana": "かいふく",
    "meaning": "恢复；康复",
-   "ko": "未标注对应（待核对）",
+   "ko": "회복（恢复，康复，复原）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "病状が回復しました。",
@@ -312,7 +342,9 @@
    "surface": "遅延",
    "kana": "ちえん",
    "meaning": "延误；晚点",
-   "ko": "未标注对应（待核对）",
+   "ko": "지연",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "電車に二十分の遅延が出ています。",
@@ -325,7 +357,9 @@
    "surface": "運休",
    "kana": "うんきゅう",
    "meaning": "停运",
-   "ko": "未标注对应（待核对）",
+   "ko": "운휴（停运）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "台風で電車が運休になりました。",
@@ -338,7 +372,9 @@
    "surface": "乗り換え",
    "kana": "のりかえ",
    "meaning": "换乘",
-   "ko": "未标注对应（待核对）",
+   "ko": "환승（换乘）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名詞",
    "ex": {
     "ja": "次の駅で乗り換えが必要です。",
@@ -351,7 +387,9 @@
    "surface": "到着",
    "kana": "とうちゃく",
    "meaning": "到达",
-   "ko": "未标注对应（待核对）",
+   "ko": "도착（到达）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "電車は十時に到着します。",
@@ -364,7 +402,9 @@
    "surface": "出発",
    "kana": "しゅっぱつ",
    "meaning": "出发",
-   "ko": "未标注对应（待核对）",
+   "ko": "출발（出发）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "バスは八時に出発します。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0294",
+  "V0295",
+  "V0296",
+  "V0297",
+  "V0298",
+  "V0299",
+  "V0300",
+  "V0301",
+  "V0302",
+  "V0303",
+  "V0304",
+  "V0305",
+  "V0306",
+  "V0307",
+  "V0308",
+  "V0309"
+ ],
+ "extension_vocab_ids": [
+  "V0310",
+  "V0311",
+  "V0312",
+  "V0313"
  ],
  "grammar": [
   {
@@ -432,7 +496,7 @@
    "pattern": "～おかげで / ～せいで",
    "meaning_zh": "多亏…／都怪…",
    "connection": "名/な形 + の/な + おかげで／せいで；普通形 + おかげで／せいで",
-   "usage": "おかげで 表积极原因（多亏），せいで 表消极原因（都怪）；感情色彩固定",
+   "usage": "おかげで 通常表达对好结果的感谢，也可反讽；せいで 常用于不理想结果，不应脱离语境机械判定。",
    "register_note": "おかげで/せいで 口语通用；せいで 带负面情绪，正式场合慎用。",
    "examples": [
     {
@@ -459,12 +523,6 @@
    "compare": [],
    "common_errors": [
     {
-     "wrong": "雨のおかげで、行けませんでした",
-     "why": "消极结果用 せいで，おかげで 只用于好事",
-     "fix": "雨のせいで、行けませんでした。",
-     "learner": "zh"
-    },
-    {
      "wrong": "先生のおかげで（漏 の）",
      "why": "名词后接 おかげで 要加 の：先生のおかげで",
      "fix": "先生のおかげで…",
@@ -478,10 +536,10 @@
    "source_ids": [
     "S000"
    ],
-   "review_status": "self_reviewed",
+   "review_status": "needs_review",
    "provenance": "self_reviewed",
    "ko_equiv": "-덕분에 / -때문에",
-   "ko_diff": "韩语积极原因用덕분에，消极原因用때문에(中性)；日语せいで专表负面，色彩更固定。"
+   "ko_diff": "韩语 덕분에 通常表示多亏，也可反讽；때문에 可用于中性原因。日语 せいで 常带不满或归因。"
   }
  ],
  "sentences": [
@@ -673,21 +731,22 @@
    ]
   },
   {
-   "qid": "Q-077-V5-d24f7bfc43ca",
-   "prompt": "「不動産」是什么意思？",
+   "qid": "A077-1-32e3cb0f25f9",
+   "prompt": "記入した申込書はどこへ持って行きますか。",
    "options": [
-    "拜见；见面",
-    "房地产",
-    "委员",
-    "(我)姐姐"
+    "三階の教室",
+    "受付の外",
+    "二階の窓口",
+    "駅の窓口"
    ],
-   "h": "92389987",
+   "h": "9bff0a69",
    "oh": [
-    "b12c65b8",
-    "92389987",
-    "90d5ea01",
-    "bbb16169"
-   ]
+    "20bbf89d",
+    "2ab89f8e",
+    "9bff0a69",
+    "9c04a908"
+   ],
+   "passage": "申込書は受付にあります。記入してから、二階の窓口へ持って行ってください。"
   }
  ],
  "listening_material": null

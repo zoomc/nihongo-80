@@ -44,7 +44,7 @@
       "migrations_dir": "migrations"
     }
   ],
-  "observability": { "enabled": true },
+  "observability": { "enabled": false },
   "env": {
     "preview": {
       // 独立 Worker、无 cron、无自定义域名；D1 同样为可选绑定。
@@ -69,7 +69,7 @@
           "migrations_dir": "migrations"
         }
       ],
-      "observability": { "enabled": true }
+      "observability": { "enabled": false }
     }
   }
 }

@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "高校",
    "kana": "こうこう",
    "meaning": "高中",
-   "ko": "고교",
+   "ko": "고교（高中） / 고등학교（高中）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私の息子は、高校に入学した。",
@@ -130,7 +132,9 @@
    "surface": "高校生",
    "kana": "こうこうせい",
    "meaning": "高中生",
-   "ko": "고교생",
+   "ko": "고교생（高中生） / 고등학생（高中生）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私はアメリカの高校生と文通をしている。",
@@ -143,7 +147,9 @@
    "surface": "工場",
    "kana": "こうじょう",
    "meaning": "工厂",
-   "ko": "공장",
+   "ko": "공장（厂，工厂）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "その工場は来月から作業を中止する。",
@@ -156,7 +162,9 @@
    "surface": "校長",
    "kana": "こうちょう",
    "meaning": "校长",
-   "ko": "교장",
+   "ko": "교장（校长） / 학교장（校长）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "校長が先生の後ろから入ってきた。",
@@ -169,7 +177,9 @@
    "surface": "交通",
    "kana": "こうつう",
    "meaning": "交通",
-   "ko": "교통",
+   "ko": "교통（交通）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)",
    "ex": {
     "ja": "交通に注意しなければいけない。",
@@ -182,7 +192,9 @@
    "surface": "講堂",
    "kana": "こうどう",
    "meaning": "礼堂",
-   "ko": "강당",
+   "ko": "강당（礼堂，大礼堂）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "その教師は講堂に学生を集めた。",
@@ -196,6 +208,8 @@
    "kana": "こうとうがっこう",
    "meaning": "高级中学",
    "ko": "고등학교",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼は高等学校の生徒ではありません。",
@@ -208,7 +222,9 @@
    "surface": "公務員",
    "kana": "こうむいん",
    "meaning": "公务员",
-   "ko": "공무원",
+   "ko": "공무원（公务员） / 공복（公仆，公务员） / 공직자（公职人员，公务员）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私は公務員です。",
@@ -221,7 +237,9 @@
    "surface": "国際",
    "kana": "こくさい",
    "meaning": "国际",
-   "ko": "국제",
+   "ko": "국제（国际）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "连体词/名词",
    "ex": {
     "ja": "英語は国際言語である。",
@@ -234,7 +252,9 @@
    "surface": "心",
    "kana": "こころ",
    "meaning": "心；内心",
-   "ko": "未标注对应（待核对）",
+   "ko": "맘（心，心思） / 속（心，心眼，心地） / 마음（内心）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私は心によい考えを持っている。",
@@ -247,7 +267,9 @@
    "surface": "御主人",
    "kana": "ごしゅじん",
    "meaning": "您丈夫",
-   "ko": "未标注对应（待核对）",
+   "ko": "남편（상대방의）",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "あなたのご主人は食事にうるさいのかな？",
@@ -260,7 +282,9 @@
    "surface": "ご存じ",
    "kana": "ごぞんじ",
    "meaning": "知道",
-   "ko": "未标注对应（待核对）",
+   "ko": "알고 계시다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "シンガポールについてご存じですか。",
@@ -273,7 +297,9 @@
    "surface": "答",
    "kana": "こたえ",
    "meaning": "回答；答案",
-   "ko": "未标注对应（待核对）",
+   "ko": "대답 / 답",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "それの正しいこたえを教えてくれ。",
@@ -286,7 +312,9 @@
    "surface": "ごちそう",
    "kana": "ごちそう",
    "meaning": "盛宴；款待",
-   "ko": "未标注对应（待核对）",
+   "ko": "진수성찬 / 대접",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "なんとすばらしいごちそうでしょう。",
@@ -299,7 +327,9 @@
    "surface": "こと",
    "kana": "こと",
    "meaning": "事情",
-   "ko": "未标注对应（待核对）",
+   "ko": "일 / 것",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "問題はお金がないということです。",
@@ -312,7 +342,9 @@
    "surface": "小鳥",
    "kana": "ことり",
    "meaning": "小鸟",
-   "ko": "未标注对应（待核对）",
+   "ko": "작은 새",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "小鳥たちはたのしそうにさえずっています。",
@@ -325,7 +357,9 @@
    "surface": "このあいだ",
    "kana": "このあいだ",
    "meaning": "前几天",
-   "ko": "未标注对应（待核对）",
+   "ko": "요전 / 며칠 전",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "名词/副词",
    "ex": {
     "ja": "この間の台風で、時速２００キロの風が吹きました。",
@@ -338,7 +372,9 @@
    "surface": "このごろ",
    "kana": "このごろ",
    "meaning": "近来",
-   "ko": "未标注对应（待核对）",
+   "ko": "요즘",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "副词/名词",
    "ex": {
     "ja": "このごろは読書する時間が少しはある。",
@@ -351,7 +387,9 @@
    "surface": "細かい",
    "kana": "こまかい",
    "meaning": "细小；琐碎",
-   "ko": "未标注对应（待核对）",
+   "ko": "잘다（细小） / 가늘다（细，细小，细碎） / 사소하다（琐碎，微不足道）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "い形容词",
    "ex": {
     "ja": "彼はひどく金に細かい。",
@@ -364,7 +402,9 @@
    "surface": "ごみ",
    "kana": "ごみ",
    "meaning": "垃圾",
-   "ko": "未标注对应（待核对）",
+   "ko": "쓰레기（垃圾）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "毎週月曜日にゴミを集めにきます。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V1053",
+  "V1054",
+  "V1055",
+  "V1056",
+  "V1057",
+  "V1058",
+  "V1059",
+  "V1060",
+  "V1061",
+  "V1062",
+  "V1063",
+  "V1064",
+  "V1065",
+  "V1066",
+  "V1067",
+  "V1068"
+ ],
+ "extension_vocab_ids": [
+  "V1069",
+  "V1070",
+  "V1071",
+  "V1072"
  ],
  "grammar": [
   {
@@ -671,21 +735,22 @@
    ]
   },
   {
-   "qid": "Q-049-V5-d3439a1917e5",
-   "prompt": "「校長」是什么意思？",
+   "qid": "A049-1-566d4385ce3b",
+   "prompt": "メールはいつまでに送りますか。",
    "options": [
-    "难",
-    "傻瓜；荒唐",
-    "身体",
-    "校长"
+    "土曜日",
+    "金曜日",
+    "月曜日",
+    "日曜日"
    ],
-   "h": "2d7f6769",
+   "h": "914654df",
    "oh": [
-    "ba2612a1",
-    "bd9bf131",
-    "200c597b",
-    "2d7f6769"
-   ]
+    "e389fde9",
+    "914654df",
+    "ab1845fc",
+    "7a4c34c3"
+   ],
+   "passage": "金曜日までにメールを送ってください。土曜日は担当者が休みです。"
   }
  ],
  "listening_material": null

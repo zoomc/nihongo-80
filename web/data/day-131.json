@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 8,
-   "desc": "14 个新词；实际用时超预算时记录未完成"
+   "desc": "11 个必学词；3 个选学拓展"
   },
   {
    "type": "语法",
@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -122,7 +122,9 @@
    "surface": "体温",
    "kana": "たいおん",
    "meaning": "体温",
-   "ko": "체온",
+   "ko": "체온（体温）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "さあ、あなたの体温を計りましょう。",
@@ -135,7 +137,9 @@
    "surface": "大会",
    "kana": "たいかい",
    "meaning": "大会；锦标赛",
-   "ko": "대회",
+   "ko": "대회（大会）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼か私のどちらかが大会に出席しなければならない。",
@@ -148,7 +152,9 @@
    "surface": "大気",
    "kana": "たいき",
    "meaning": "大气",
-   "ko": "대기",
+   "ko": "대기（大气，空气）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "大気が汚染されつつある。",
@@ -161,7 +167,9 @@
    "surface": "代金",
    "kana": "だいきん",
    "meaning": "货款；费用",
-   "ko": "대금",
+   "ko": "대금（款，费用）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "本の代金を小切手で払ってもいいですか。",
@@ -174,7 +182,9 @@
    "surface": "退屈",
    "kana": "たいくつ",
    "meaning": "无聊；厌倦",
-   "ko": "未标注对应（待核对）",
+   "ko": "지루하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容词/名词",
    "ex": {
     "ja": "カクテルパーティーは退屈なときもある。",
@@ -187,7 +197,9 @@
    "surface": "滞在",
    "kana": "たいざい",
    "meaning": "停留；逗留",
-   "ko": "체재",
+   "ko": "체류（滞留，逗留，停留）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "いまおじの家に滞在しています。",
@@ -200,7 +212,9 @@
    "surface": "大使",
    "kana": "たいし",
    "meaning": "大使",
-   "ko": "대사",
+   "ko": "대사（大使）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/连体词",
    "ex": {
     "ja": "大使はその任務に対して責任がある。",
@@ -213,7 +227,9 @@
    "surface": "大した",
    "kana": "たいした",
    "meaning": "了不起；严重",
-   "ko": "未标注对应（待核对）",
+   "ko": "대수롭다（了不起，当回事）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "词",
    "ex": {
     "ja": "彼は大した人物にはなれないわね。",
@@ -226,7 +242,9 @@
    "surface": "大臣",
    "kana": "だいじん",
    "meaning": "大臣；部长",
-   "ko": "대신",
+   "ko": "장관 / 대신",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私は大臣自身と話した。",
@@ -239,7 +257,9 @@
    "surface": "対する",
    "kana": "たいする",
    "meaning": "面对；对于",
-   "ko": "未标注对应（待核对）",
+   "ko": "대하다（面对面） / 향하다（对于）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "词",
    "ex": {
     "ja": "原子力事故に対して最大限の努力を尽くしております。",
@@ -252,7 +272,9 @@
    "surface": "大戦",
    "kana": "たいせん",
    "meaning": "大战",
-   "ko": "대전",
+   "ko": "대전（大战）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "あの家の繁栄は大戦中からのことだ。",
@@ -265,7 +287,9 @@
    "surface": "態度",
    "kana": "たいど",
    "meaning": "态度",
-   "ko": "태도",
+   "ko": "태도（态度）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "彼はそれを気取った態度でいった。",
@@ -278,7 +302,9 @@
    "surface": "大統領",
    "kana": "だいとうりょう",
    "meaning": "总统",
-   "ko": "대통령",
+   "ko": "대통령（总统）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "大統領は強硬路線をとった。",
@@ -291,7 +317,9 @@
    "surface": "大半",
    "kana": "たいはん",
    "meaning": "大半；大部分",
-   "ko": "未标注对应（待核对）",
+   "ko": "태반（大半，泰半） / 대부분（大部分，大多，大都）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/连体词",
    "ex": {
     "ja": "ここの学生は大半が真面目である。",
@@ -300,12 +328,30 @@
    "audio": "tts"
   }
  ],
+ "core_vocab_ids": [
+  "V2333",
+  "V2334",
+  "V2335",
+  "V2336",
+  "V2337",
+  "V2338",
+  "V2339",
+  "V2340",
+  "V2341",
+  "V2342",
+  "V2343"
+ ],
+ "extension_vocab_ids": [
+  "V2344",
+  "V2345",
+  "V2346"
+ ],
  "grammar": [
   {
    "id": "G0167",
    "pattern": "〜とすれば / 〜としたら",
    "meaning_zh": "假设…的话",
-   "connection": "动词普通形/い形容词/ナ形容词だ/名词だ + とすれば／としたら",
+   "connection": "动词普通形／い形容词 + とすれば・としたら；名词及な形容词可视表达使用 だとしたら 或 としたら",
    "usage": "提出一个假设，据此推论结果，多用于设想。",
    "register_note": "口语书面均可。",
    "examples": [
@@ -333,9 +379,9 @@
    ],
    "common_errors": [
     {
-     "wrong": "彼の話が本当としたら、大変なことになる。",
-     "why": "名词、ナ形容词接「としたら」要加「だ」，说「本当だとしたら」。",
-     "fix": "本当だとしたら",
+     "wrong": "雨だとしたらら、延期します。",
+     "why": "としたら已有ら，不再重复。",
+     "fix": "雨だとしたら、延期します。",
      "learner": "zh"
     }
    ],
@@ -350,7 +396,7 @@
    "source_ids": [
     "S900"
    ],
-   "review_status": "ai_draft",
+   "review_status": "needs_review",
    "provenance": "OpenJLPT CC-BY-SA-4.0",
    "license": "CC-BY-SA-4.0"
   }
@@ -564,11 +610,10 @@
  "listening_material": {
   "id": "M0105",
   "title": "待ち合わせ・2",
-  "audio_url": "",
-  "audio_kind": "tts",
+  "audio_url": "/audio/M0105.m4a",
+  "audio_kind": "synthetic",
   "transcript": "明日の待ち合わせについて、もう一度確認します。私たちは駅の北口で会います。時間は九時半です。最初は駅の東口で会う予定でしたが、東口の前では工事をしています。道が狭くなっていて、人も多いそうです。そのため、集合場所を変えることにしました。駅に着いたら、まず案内板を見てください。わからなければ、駅員さんに聞いても大丈夫です。私は青いかばんを持って行きます。雨が降っても予定は変わりません。傘を持ってきてください。遅れそうなときは、電車に乗る前にメッセージを送ってください。全員が集まってから、歩いて美術館へ向かいます。美術館までは十五分ぐらいかかります。入場券は私がまとめて買ってありますから、窓口に並ぶ必要はありません。昼ご飯は見学の後で一緒に食べましょう。",
-  "duration_sec": 0,
-  "duration_estimate_sec": 66,
+  "duration_sec": 65.125,
   "questions": [
    {
     "qid": "L-131-0-fb4f63bbe624",

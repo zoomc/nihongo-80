@@ -35,8 +35,14 @@ def load_cur():
 
 
 def progress():
-    if PROGRESS.is_file():
-        return json.loads(PROGRESS.read_text(encoding="utf-8"))
+    # Canonical completion comes from SQLite, never the last page viewed.
+    db = ROOT / "data/state.db"
+    if db.is_file():
+        import sqlite3
+        from contextlib import closing
+        with closing(sqlite3.connect("file:%s?mode=ro" % db, uri=True)) as conn:
+            completed = {r[0] for r in conn.execute("SELECT day FROM sessions WHERE status='finished' AND passed=1")}
+        return {"day": next((n for n in range(1,151) if n not in completed),150)}
     return {"day": 1}
 
 
@@ -62,16 +68,22 @@ def brief(day: int, force=False):
     kanji = {x["id"]: x for x in read_jsonl(ROOT / "knowledge/seeds/kanji.jsonl")}
     out = DAYS / ("day-%03d" % day)
     out.mkdir(parents=True, exist_ok=True)
+    template = out / "output-review.json"
+    if not template.exists():
+        sentence_ids = [x["id"] for x in read_jsonl(ROOT / "knowledge/seeds/sentences.jsonl") if x["day"] == day][:3]
+        template.write_text(json.dumps({"sentences":[{"id":sid,"text":"","feedback":""} for sid in sentence_ids],
+            "grammar_sentences":[{"grammar_id":gid,"text":"","feedback":"","correct":False} for gid in (d["new_grammar_ids"]*2)[:2]],
+            "vocab_check":[{"id":vid,"text":"","feedback":""} for vid in d.get("core_vocab_ids",d["new_vocab_ids"])[:3]]},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     p = out / "brief.md"
     L = ["# Day %03d 任务书" % day, "",
          "- 阶段：%s｜%d 分钟｜%s" % (d["phase"], d["minutes"], "听力日" if d.get("listening") else "常规日"),
          "- 今日页面：%s" % page_link(day),
          "- Can-do：%s" % d["can_do"], "",
          "## 今天要学", ""]
-    L.append("### 新词 %d" % len(d["new_vocab_ids"]))
-    for vid in d["new_vocab_ids"]:
+    L.append("### 必学新词 %d · 拓展 %d（自选）" % (len(d.get("core_vocab_ids", d["new_vocab_ids"])),len(d.get("extension_vocab_ids", []))))
+    for vid in d.get("core_vocab_ids", d["new_vocab_ids"]):
         v = vocab[vid]
-        ko = "｜朝鲜语：%s" % v["ko_hanja"] if v.get("ko_hanja") else ""
+        ko = "｜韩语参考：%s" % (v.get("ko_hint") or v.get("ko_hanja")) if (v.get("ko_hint") or v.get("ko_hanja")) else ""
         L.append("- **%s**（%s）%s%s" % (v["surface"], v["kana"], v["meaning_zh"], ko))
     L += ["", "### 语法 %d" % len(d["new_grammar_ids"])]
     for gid in d["new_grammar_ids"]:
@@ -92,8 +104,10 @@ def brief(day: int, force=False):
           "2. 只回答学生问的，不复述页面。",
           "3. 抽查 3 个旧词（造句，不是认读）。",
           "4. 让学生用今天语法造 2 句，现场改。",
-          "5. 逐句改 10 句翻译（先让他读自己写的）。",
-          "6. 写 `days/day-%03d/report.md`，然后跑：" % day,
+          "5. 逐句改3句必做翻译（其余7句自选），记录2句自主语法造句和3词主动回忆。",
+          "6. 将真实产出和逐条反馈保存为 output-review.json，然后运行：",
+          "   `python3 scripts/nh80.py confirm-output --day %d --file days/day-%03d/output-review.json`" % (day,day),
+          "7. 写 `days/day-%03d/report.md`，然后跑：" % day,
           "   `python3 scripts/nh80.py finish-day %d`" % day,
           "   `python3 scripts/session_v5.py task done day-%03d-tutor --owner <你的名字>`" % day,
           "", "## 禁止", "",
@@ -207,10 +221,10 @@ def task_done(tid, owner):
     return {"ok": True, "task": str(dst)}
 
 
-def state_write():
+def state_write(day_override=None):
     ensure_dirs()
     p = progress()
-    day = int(p.get("day") or 1)
+    day = day_override or int(p.get("day") or 1)
     cur = load_cur()
     d = cur.get(day) or cur[1]
     rep = DAYS / ("day-%03d" % day) / "report.md"
@@ -226,7 +240,7 @@ def state_write():
          "- 今日：days/day-%03d/brief.md ｜ %d 分钟 ｜ %s" % (day, d["minutes"], "听力日" if d.get("listening") else "常规日"),
          "- 今日页面：%s" % page_link(day),
          "- Can-do：%s" % d["can_do"],
-         "- 昨日摘要：%s" % ("；".join(summary) if summary else "无（还没写日报）"),
+         "- 本日摘要：%s" % ("；".join(summary) if summary else "无（还没写日报）"),
          "- 待办：%s" % (", ".join(t["id"] for t in task_list() if t["dir"] == "open") or "无"),
          "- 学生下一步：先打开页面，学完再进会话",
          "", "## 文件索引", "",
@@ -255,11 +269,15 @@ def main(argv=None):
     t.set_defaults(fn=_task)
     dd = sub.add_parser("daily")
     dd.add_argument("--day", type=int)
+    dd.add_argument("--sync", action="store_true", help="先从云端拉取，使用本机密钥，不回显")
     def _daily(a):
+        if a.sync:
+            import subprocess, sys
+            subprocess.run([sys.executable,str(ROOT/"scripts/nh80.py"),"pull-cloud","--base","https://nihongo80.cmjfire.workers.dev"],check=True)
         p = progress()
         day = a.day or int(p.get("day") or 1)
         p["day"] = day; save_progress(p)
-        print(brief(day)); print(state_write()); print(page_link(day))
+        print(brief(day)); print(state_write(day)); print(page_link(day))
     dd.set_defaults(fn=_daily)
     args = ap.parse_args(argv)
     args.fn(args)

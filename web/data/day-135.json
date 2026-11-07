@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "22 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；6 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "地位",
    "kana": "ちい",
    "meaning": "地位",
-   "ko": "지위",
+   "ko": "지위（地位）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼は会社で高い地位にあります。",
@@ -130,7 +132,9 @@
    "surface": "地域",
    "kana": "ちいき",
    "meaning": "地区；区域",
-   "ko": "지역",
+   "ko": "지역（地域，地区，区域） / 지구（地区）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "この地域は雨が続くでしょう。",
@@ -143,7 +147,9 @@
    "surface": "チーズ",
    "kana": "チーズ",
    "meaning": "奶酪",
-   "ko": "未标注对应（待核对）",
+   "ko": "치즈（奶酪）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ジョージは朝にたくさんのチーズを食べた。",
@@ -156,7 +162,9 @@
    "surface": "チーム",
    "kana": "チーム",
    "meaning": "团队；队",
-   "ko": "未标注对应（待核对）",
+   "ko": "팀（组，小组，团队）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼はチームでダントツの好選手だ。",
@@ -169,7 +177,9 @@
    "surface": "知恵",
    "kana": "ちえ",
    "meaning": "智慧",
-   "ko": "지혜",
+   "ko": "지혜（智慧） / 슬기（智慧）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼は知恵のある人だ。",
@@ -182,7 +192,9 @@
    "surface": "地下",
    "kana": "ちか",
    "meaning": "地下；地下室",
-   "ko": "지하",
+   "ko": "지하（地下）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/连体词",
    "ex": {
     "ja": "彼は地下活動の疑いをかけられた。",
@@ -195,7 +207,9 @@
    "surface": "違い",
    "kana": "ちがい",
    "meaning": "差别；不同",
-   "ko": "未标注对应（待核对）",
+   "ko": "차이（差异，差别） / 차이점（差异，不同点）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "実際両者にはほとんど違いがない。",
@@ -208,7 +222,9 @@
    "surface": "違いない",
    "kana": "ちがいない",
    "meaning": "一定；肯定",
-   "ko": "未标注对应（待核对）",
+   "ko": "틀림없다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "惯用表达/い形容词",
    "ex": {
     "ja": "再婚した今、彼はもっと幸福に違いない。",
@@ -221,7 +237,9 @@
    "surface": "近頃",
    "kana": "ちかごろ",
    "meaning": "近来；最近",
-   "ko": "未标注对应（待核对）",
+   "ko": "근래（近来，最近） / 요새（近来，日来，最近） / 요즘（最近，近来，这阵子）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "副词/名词/连体词",
    "ex": {
     "ja": "近ごろ彼女から便りがない。",
@@ -234,7 +252,9 @@
    "surface": "地球",
    "kana": "ちきゅう",
    "meaning": "地球",
-   "ko": "지구",
+   "ko": "지구（地球）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼らは地球が平らであると信じた。",
@@ -247,7 +267,9 @@
    "surface": "地区",
    "kana": "ちく",
    "meaning": "地区",
-   "ko": "지구",
+   "ko": "지구（地区）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "あなたはこの地区をよく知っていますか。",
@@ -260,7 +282,9 @@
    "surface": "遅刻",
    "kana": "ちこく",
    "meaning": "迟到",
-   "ko": "지각",
+   "ko": "지각（迟到）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "遅刻するのではないかと心配した。",
@@ -273,7 +297,9 @@
    "surface": "知事",
    "kana": "ちじ",
    "meaning": "知事；县长",
-   "ko": "지사",
+   "ko": "지사（일본 광역자치단체장）",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼は知事と長年の付き合いです。",
@@ -286,7 +312,9 @@
    "surface": "知識",
    "kana": "ちしき",
    "meaning": "知识",
-   "ko": "지식",
+   "ko": "지식（知识）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私のドイツ語の知識は貧弱です。",
@@ -299,7 +327,9 @@
    "surface": "父親",
    "kana": "ちちおや",
    "meaning": "父亲",
-   "ko": "부친",
+   "ko": "부친（父亲） / 아버지（父亲，爸爸）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "その少年は父親に似ている。",
@@ -312,7 +342,9 @@
    "surface": "知能",
    "kana": "ちのう",
    "meaning": "智能；智力",
-   "ko": "지능",
+   "ko": "지능（智能）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "イルカは非常に知能の高い動物です。",
@@ -325,7 +357,9 @@
    "surface": "地平線",
    "kana": "ちへいせん",
    "meaning": "地平线",
-   "ko": "지평선",
+   "ko": "지평선（地平线） / 지평（地平线）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "月が地平線の上にあった。",
@@ -338,7 +372,9 @@
    "surface": "地方",
    "kana": "ちほう",
    "meaning": "地方；地区",
-   "ko": "지방",
+   "ko": "지방（地区） / 고장（地方，家乡）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "彼は今年の夏、東北地方を旅行した。",
@@ -351,7 +387,9 @@
    "surface": "茶",
    "kana": "ちゃ",
    "meaning": "茶；棕色",
-   "ko": "차",
+   "ko": "차（茶，茶水）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "その猫の一方は黒で、もう一方は茶だ。",
@@ -364,7 +402,9 @@
    "surface": "チャンス",
    "kana": "チャンス",
    "meaning": "机会",
-   "ko": "未标注对应（待核对）",
+   "ko": "기회（机会，机遇，时机）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "お願いだ！俺にチャンスをくれ。",
@@ -377,7 +417,9 @@
    "surface": "ちゃんと",
    "kana": "ちゃんと",
    "meaning": "好好地；确实",
-   "ko": "未标注对应（待核对）",
+   "ko": "제대로",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "副词/动词(サ变)",
    "ex": {
     "ja": "この道具はちゃんと使えばとても役に立つ。",
@@ -390,7 +432,9 @@
    "surface": "中",
    "kana": "ちゅう",
    "meaning": "中；其中",
-   "ko": "중",
+   "ko": "중（中，中等）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "１０人中３人はビデオを持っている。",
@@ -398,6 +442,32 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V2405",
+  "V2406",
+  "V2407",
+  "V2408",
+  "V2409",
+  "V2410",
+  "V2411",
+  "V2412",
+  "V2413",
+  "V2414",
+  "V2415",
+  "V2416",
+  "V2417",
+  "V2418",
+  "V2419",
+  "V2420"
+ ],
+ "extension_vocab_ids": [
+  "V2421",
+  "V2422",
+  "V2423",
+  "V2424",
+  "V2425",
+  "V2426"
  ],
  "grammar": [
   {

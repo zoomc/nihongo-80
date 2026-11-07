@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "19 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；3 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "かける",
    "kana": "かける",
    "meaning": "打电话；挂",
-   "ko": "未标注对应（待核对）",
+   "ko": "전화하다 / 걸다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "１０円で電話がかけられますか。",
@@ -130,7 +132,9 @@
    "surface": "傘",
    "kana": "かさ",
    "meaning": "伞",
-   "ko": "未标注对应（待核对）",
+   "ko": "우산",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "タクシーに傘を忘れてしまった。",
@@ -143,7 +147,9 @@
    "surface": "貸す",
    "kana": "かす",
    "meaning": "借出",
-   "ko": "未标注对应（待核对）",
+   "ko": "빌려주다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "ホッチキスを貸してくれませんか。",
@@ -156,7 +162,9 @@
    "surface": "風",
    "kana": "かぜ",
    "meaning": "风",
-   "ko": "未标注对应（待核对）",
+   "ko": "바람（风） / 바람결（风，随风）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "カーテンが風になびいた。",
@@ -169,7 +177,9 @@
    "surface": "風邪",
    "kana": "かぜ",
    "meaning": "感冒",
-   "ko": "未标注对应（待核对）",
+   "ko": "감기（感冒）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ただの風邪でしょう。",
@@ -182,7 +192,9 @@
    "surface": "方",
    "kana": "かた",
    "meaning": "人；方法",
-   "ko": "未标注对应（待核对）",
+   "ko": "분 / 방법",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "こちらはあなたがお話しになるお方です。",
@@ -195,7 +207,9 @@
    "surface": "カップ",
    "kana": "カップ",
    "meaning": "杯子",
-   "ko": "未标注对应（待核对）",
+   "ko": "컵（杯子）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "テーブルの上にカップがある。",
@@ -208,7 +222,9 @@
    "surface": "家庭",
    "kana": "かてい",
    "meaning": "家庭",
-   "ko": "가정",
+   "ko": "가정（家庭，家园）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "食事は家庭で食べますか、外食ですか。",
@@ -221,7 +237,9 @@
    "surface": "角",
    "kana": "かど",
    "meaning": "角；拐角",
-   "ko": "未标注对应（待核对）",
+   "ko": "각（角，棱角） / 모（角，棱） / 코너（拐角）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "角のテーブルがいいのですが。",
@@ -234,7 +252,9 @@
    "surface": "かばん",
    "kana": "かばん",
    "meaning": "包",
-   "ko": "未标注对应（待核对）",
+   "ko": "가방（包，背包，提包）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "これはジェーンさんのかばんです。",
@@ -247,7 +267,9 @@
    "surface": "花瓶",
    "kana": "かびん",
    "meaning": "花瓶",
-   "ko": "화병",
+   "ko": "화병（花瓶） / 꽃병（花瓶）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "花びんに水を入れなさい。",
@@ -260,7 +282,9 @@
    "surface": "紙",
    "kana": "かみ",
    "meaning": "纸",
-   "ko": "未标注对应（待核对）",
+   "ko": "종이（纸，纸片）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "紙は木から作られる。",
@@ -273,7 +297,9 @@
    "surface": "カメラ",
    "kana": "カメラ",
    "meaning": "相机",
-   "ko": "未标注对应（待核对）",
+   "ko": "사진기（照相机，相机） / 카메라（照相机）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "おじさんがぼくにカメラをくれました。",
@@ -286,7 +312,9 @@
    "surface": "辛い",
    "kana": "からい",
    "meaning": "辣",
-   "ko": "未标注对应（待核对）",
+   "ko": "맵다（辣）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "このカレーは辛すぎて食べられない。",
@@ -299,7 +327,9 @@
    "surface": "体",
    "kana": "からだ",
    "meaning": "身体",
-   "ko": "未标注对应（待核对）",
+   "ko": "몸（身体，身子）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "とりわけ体に気をつけなさい。",
@@ -312,7 +342,9 @@
    "surface": "軽い",
    "kana": "かるい",
    "meaning": "轻",
-   "ko": "未标注对应（待核对）",
+   "ko": "가볍다（轻） / 경하다（轻，轻微） / 가뿐하다（轻，轻便）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "軽く食べましょう。",
@@ -325,7 +357,9 @@
    "surface": "カレー",
    "kana": "カレー",
    "meaning": "咖喱",
-   "ko": "未标注对应（待核对）",
+   "ko": "카레（咖喱，咖喱粉）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "このレストランのカレーはうまいよ。",
@@ -338,7 +372,9 @@
    "surface": "カレンダー",
    "kana": "カレンダー",
    "meaning": "日历",
-   "ko": "未标注对应（待核对）",
+   "ko": "달력（日历）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "このカレンダーはどこにかけましょうか。",
@@ -351,7 +387,9 @@
    "surface": "川",
    "kana": "かわ",
    "meaning": "河",
-   "ko": "未标注对应（待核对）",
+   "ko": "강（江，河）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "その川はあまりきれいではなかった。",
@@ -359,6 +397,29 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0455",
+  "V0456",
+  "V0457",
+  "V0458",
+  "V0459",
+  "V0460",
+  "V0461",
+  "V0462",
+  "V0463",
+  "V0464",
+  "V0465",
+  "V0466",
+  "V0467",
+  "V0468",
+  "V0469",
+  "V0470"
+ ],
+ "extension_vocab_ids": [
+  "V0471",
+  "V0472",
+  "V0473"
  ],
  "grammar": [
   {
@@ -395,12 +456,6 @@
      "why": "「ましょう」前接ます形词干（見），不接辞书形 見る",
      "fix": "映画を見ましょう。",
      "learner": "zh"
-    },
-    {
-     "wrong": "映画を見ましょうか。（当邀约）",
-     "why": "「ましょうか」多表「我来帮你做吧」，邀约对方用 ませんか",
-     "fix": "映画を見ませんか。",
-     "learner": "zh"
     }
    ],
    "jlpt": "N5",
@@ -410,7 +465,7 @@
    "source_ids": [
     "S000"
    ],
-   "review_status": "self_reviewed",
+   "review_status": "needs_review",
    "provenance": "self_reviewed",
    "ko_equiv": "-(으)ㅂ시다 / -(으)ㄹ래요?",
    "ko_diff": "韩语提议用ㅂ시다，邀约用ㄹ래요；对长辈ㅂ시다不礼貌，须换ㄹ까요。"

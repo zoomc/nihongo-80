@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "19 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；3 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "キロ",
    "kana": "キロ",
    "meaning": "公里；公斤",
-   "ko": "未标注对应（待核对）",
+   "ko": "킬로（公斤） / 킬로그램（公斤） / 킬로미터（公里）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ヘレンはせいぜい４０キロだ。",
@@ -130,7 +132,9 @@
    "surface": "銀行",
    "kana": "ぎんこう",
    "meaning": "银行",
-   "ko": "은행",
+   "ko": "은행（银行）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "銀行にどれだけお金がありますか。",
@@ -143,7 +147,9 @@
    "surface": "ください",
    "kana": "ください",
    "meaning": "请给我",
-   "ko": "未标注对应（待核对）",
+   "ko": "주세요",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "惯用表达",
    "ex": {
     "ja": "ニューススタンドで聞いて下さい。",
@@ -156,7 +162,9 @@
    "surface": "果物",
    "kana": "くだもの",
    "meaning": "水果",
-   "ko": "未标注对应（待核对）",
+   "ko": "과일",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "父はそんなに果物を食べないんです。",
@@ -169,7 +177,9 @@
    "surface": "口",
    "kana": "くち",
    "meaning": "嘴；口子",
-   "ko": "未标注对应（待核对）",
+   "ko": "입（嘴，口） / 주둥이（嘴）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "口にものをほおばってしゃべるな。",
@@ -182,7 +192,9 @@
    "surface": "靴",
    "kana": "くつ",
    "meaning": "鞋",
-   "ko": "未标注对应（待核对）",
+   "ko": "신발",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "靴のほこりをはけではらいなさい。",
@@ -195,7 +207,9 @@
    "surface": "靴下",
    "kana": "くつした",
    "meaning": "袜子",
-   "ko": "未标注对应（待核对）",
+   "ko": "양말（袜子）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "この靴下はちぐはぐだ。",
@@ -208,7 +222,9 @@
    "surface": "国",
    "kana": "くに",
    "meaning": "国家",
-   "ko": "未标注对应（待核对）",
+   "ko": "나라",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "あなたの国では何語を話しますか。",
@@ -221,7 +237,9 @@
    "surface": "曇り",
    "kana": "くもり",
    "meaning": "阴天",
-   "ko": "未标注对应（待核对）",
+   "ko": "흐린 날씨",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "曇りの日です。",
@@ -234,7 +252,9 @@
    "surface": "曇る",
    "kana": "くもる",
    "meaning": "阴天；变模糊",
-   "ko": "未标注对应（待核对）",
+   "ko": "흐려지다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "今日は曇っている。",
@@ -247,7 +267,9 @@
    "surface": "暗い",
    "kana": "くらい",
    "meaning": "暗；阴沉",
-   "ko": "未标注对应（待核对）",
+   "ko": "어둡다（暗，黑暗）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "あたりがもう暗くなっていることに気がついた。",
@@ -260,7 +282,9 @@
    "surface": "クラス",
    "kana": "クラス",
    "meaning": "班级",
-   "ko": "未标注对应（待核对）",
+   "ko": "학급（班级）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "あいつはクラスでいちばんのまぬけだ。",
@@ -273,7 +297,9 @@
    "surface": "グラム",
    "kana": "グラム",
    "meaning": "克",
-   "ko": "未标注对应（待核对）",
+   "ko": "그램（克）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "砂糖を百グラム入れてください。",
@@ -286,7 +312,9 @@
    "surface": "黒",
    "kana": "くろ",
    "meaning": "黑色",
-   "ko": "未标注对应（待核对）",
+   "ko": "흑（黑，黑色） / 검정（黑，黑色） / 껌정（黑，黑色）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/连体词",
    "ex": {
     "ja": "黒に黒をたしても白にはならぬ。",
@@ -299,7 +327,9 @@
    "surface": "黒い",
    "kana": "くろい",
    "meaning": "黑色的",
-   "ko": "未标注对应（待核对）",
+   "ko": "검다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "ナンシーはヘレンよりもほんのすこし色が黒い。",
@@ -312,7 +342,9 @@
    "surface": "警官",
    "kana": "けいかん",
    "meaning": "警察",
-   "ko": "경관",
+   "ko": "경찰관（警察）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "二人の警官もへとへとになった。",
@@ -325,7 +357,9 @@
    "surface": "今朝",
    "kana": "けさ",
    "meaning": "今天早上",
-   "ko": "未标注对应（待核对）",
+   "ko": "오늘 아침",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "名词/副词",
    "ex": {
     "ja": "今朝はとても寒かった。",
@@ -338,7 +372,9 @@
    "surface": "消す",
    "kana": "けす",
    "meaning": "关；擦掉",
-   "ko": "未标注对应（待核对）",
+   "ko": "끄다（关） / 지우다（消除，擦掉）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "寝る前に電気を消してください。",
@@ -351,7 +387,9 @@
    "surface": "結婚",
    "kana": "けっこん",
    "meaning": "结婚",
-   "ko": "결혼",
+   "ko": "결혼（结婚）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "ジョンはジェーンと結婚していた。",
@@ -360,13 +398,36 @@
    "audio": "tts"
   }
  ],
+ "core_vocab_ids": [
+  "V0493",
+  "V0494",
+  "V0495",
+  "V0496",
+  "V0497",
+  "V0498",
+  "V0499",
+  "V0500",
+  "V0501",
+  "V0502",
+  "V0503",
+  "V0504",
+  "V0505",
+  "V0506",
+  "V0507",
+  "V0508"
+ ],
+ "extension_vocab_ids": [
+  "V0509",
+  "V0510",
+  "V0511"
+ ],
  "grammar": [
   {
    "id": "G0041",
    "pattern": "～たり ～たり する",
    "meaning_zh": "又…又…／时而…时而…",
    "connection": "動詞た形 + り + 動詞た形 + り + する",
-   "usage": "列举代表性动作/状态；句末必须 する 收尾",
+   "usage": "列举代表性动作或状态，完整的基本句式常用 たりする 收尾；口语中也会省略或以列举形式结束。",
    "register_note": "たりたりする 口语叙事常用，书面列举也可。",
    "examples": [
     {
@@ -390,12 +451,6 @@
      "why": "「たり」接た形，不是ます形词干 読み",
      "fix": "本を読んだり音楽を聞いたりします。",
      "learner": "zh"
-    },
-    {
-     "wrong": "本を読んだり、音楽を聞いたり",
-     "why": "句末必须 する 收尾，不能只停在 たり",
-     "fix": "…聞いたりします。",
-     "learner": "zh"
     }
    ],
    "jlpt": "N5",
@@ -405,7 +460,7 @@
    "source_ids": [
     "S000"
    ],
-   "review_status": "self_reviewed",
+   "review_status": "needs_review",
    "provenance": "self_reviewed",
    "ko_equiv": "-기도 하고 -기도 하다",
    "ko_diff": "韩语用기도 하고…기도 하다列举，句末必须하다；거나表选择，语义不同。"

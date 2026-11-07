@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "19 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；3 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "新しい",
    "kana": "あたらしい",
    "meaning": "新",
-   "ko": "未标注对应（待核对）",
+   "ko": "새롭다（新）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容詞",
    "ex": {
     "ja": "新しいパソコンがほしいです。",
@@ -130,7 +132,9 @@
    "surface": "美味しい",
    "kana": "おいしい",
    "meaning": "好吃；美味",
-   "ko": "未标注对应（待核对）",
+   "ko": "맛나다（好吃，可口） / 맛있다（好吃，可口，香） / 맛깔나다（可口，美味）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容詞",
    "ex": {
     "ja": "この料理は美味しいです。",
@@ -143,7 +147,9 @@
    "surface": "忙しい",
    "kana": "いそがしい",
    "meaning": "忙",
-   "ko": "未标注对应（待核对）",
+   "ko": "바쁘다（忙，忙碌，紧张）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容詞",
    "ex": {
     "ja": "今週は忙しいです。",
@@ -156,7 +162,9 @@
    "surface": "寒い",
    "kana": "さむい",
    "meaning": "冷（天气/体感）",
-   "ko": "未标注对应（待核对）",
+   "ko": "춥다（冷）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容詞",
    "ex": {
     "ja": "今日は昨日ほど寒くないです。",
@@ -169,7 +177,9 @@
    "surface": "好き",
    "kana": "すき",
    "meaning": "喜欢",
-   "ko": "未标注对应（待核对）",
+   "ko": "좋아하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容詞",
    "ex": {
     "ja": "魚が好きです。",
@@ -182,7 +192,9 @@
    "surface": "元気",
    "kana": "げんき",
    "meaning": "精神；健康；有活力",
-   "ko": "未标注对应（待核对）",
+   "ko": "건강하다 / 활기차다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容詞",
    "ex": {
     "ja": "彼女は元気です。",
@@ -195,7 +207,9 @@
    "surface": "静か",
    "kana": "しずか",
    "meaning": "安静；宁静",
-   "ko": "未标注对应（待核对）",
+   "ko": "조용하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容詞",
    "ex": {
     "ja": "この部屋は静かです。",
@@ -208,7 +222,9 @@
    "surface": "便利",
    "kana": "べんり",
    "meaning": "方便；便利",
-   "ko": "未标注对应（待核对）",
+   "ko": "편리（便利，方便）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "な形容詞",
    "ex": {
     "ja": "この地図は便利です。",
@@ -221,7 +237,9 @@
    "surface": "とても",
    "kana": "とても",
    "meaning": "非常；很",
-   "ko": "未标注对应（待核对）",
+   "ko": "된통（很，厉害） / 매우（非常，极其，很） / 몹시（十分，非常，太）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "副詞",
    "ex": {
     "ja": "この本はとても高いです。",
@@ -234,7 +252,9 @@
    "surface": "少し",
    "kana": "すこし",
    "meaning": "稍微；一点",
-   "ko": "未标注对应（待核对）",
+   "ko": "좀（一点点，有一点） / 살짝（稍微） / 슬쩍（稍微）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "副詞",
    "ex": {
     "ja": "少し休みます。",
@@ -247,7 +267,9 @@
    "surface": "いつも",
    "kana": "いつも",
    "meaning": "总是；平时",
-   "ko": "未标注对应（待核对）",
+   "ko": "노상（老是，总是） / 매양（回回，总是，老是） / 백날（天天，总是）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "副詞",
    "ex": {
     "ja": "いつも電車で行きます。",
@@ -260,7 +282,9 @@
    "surface": "時々",
    "kana": "ときどき",
    "meaning": "有时；时常",
-   "ko": "未标注对应（待核对）",
+   "ko": "가끔가다（偶尔，有时）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "副詞",
    "ex": {
     "ja": "時々映画を見ます。",
@@ -273,7 +297,9 @@
    "surface": "まだ",
    "kana": "まだ",
    "meaning": "还；尚未",
-   "ko": "未标注对应（待核对）",
+   "ko": "채（还，尚） / 미처（尚未，来不及）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "副詞",
    "ex": {
     "ja": "まだ食べていません。",
@@ -286,7 +312,9 @@
    "surface": "もう",
    "kana": "もう",
    "meaning": "已经；再（一次）",
-   "ko": "未标注对应（待核对）",
+   "ko": "벌써（已经） / 이미（已经）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "副詞",
    "ex": {
     "ja": "もう帰りました。",
@@ -299,7 +327,9 @@
    "surface": "そして",
    "kana": "そして",
    "meaning": "然后；而且",
-   "ko": "未标注对应（待核对）",
+   "ko": "그리고（而且，并且，况且）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "接続詞",
    "ex": {
     "ja": "本を読んで、そして寝ます。",
@@ -312,7 +342,9 @@
    "surface": "だから",
    "kana": "だから",
    "meaning": "所以；因此",
-   "ko": "未标注对应（待核对）",
+   "ko": "그러므로（因此，所以）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "接続詞",
    "ex": {
     "ja": "雨です。だから、行きません。",
@@ -325,7 +357,9 @@
    "surface": "でも",
    "kana": "でも",
    "meaning": "但是；不过；连…也",
-   "ko": "未标注对应（待核对）",
+   "ko": "그런데（可是，但是）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "接続詞/助詞",
    "ex": {
     "ja": "高いです。でも、買います。",
@@ -338,7 +372,9 @@
    "surface": "すぐ",
    "kana": "すぐ",
    "meaning": "马上；立刻；就近",
-   "ko": "未标注对应（待核对）",
+   "ko": "곧（马上，就） / 금방（马上，立刻，立马） / 당장（当前，立刻）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "副詞",
    "ex": {
     "ja": "すぐ行きます。",
@@ -351,7 +387,9 @@
    "surface": "ゆっくり",
    "kana": "ゆっくり",
    "meaning": "慢慢地；好好地",
-   "ko": "未标注对应（待核对）",
+   "ko": "천천히（慢慢地，缓慢地） / 슬렁슬렁（慢慢地，轻轻地）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "副詞",
    "ex": {
     "ja": "ゆっくり話してください。",
@@ -359,6 +397,29 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0129",
+  "V0130",
+  "V0131",
+  "V0133",
+  "V0134",
+  "V0135",
+  "V0136",
+  "V0137",
+  "V0139",
+  "V0140",
+  "V0141",
+  "V0142",
+  "V0143",
+  "V0144",
+  "V0145",
+  "V0147"
+ ],
+ "extension_vocab_ids": [
+  "V0148",
+  "V0149",
+  "V0150"
  ],
  "grammar": [
   {
@@ -417,10 +478,10 @@
    "source_ids": [
     "S000"
    ],
-   "review_status": "self_reviewed",
+   "review_status": "needs_review",
    "provenance": "self_reviewed",
    "ko_equiv": "형용사(하다형)",
-   "ko_diff": "韩语하다类形容词修饰名词时不变形；日语な形必须加な，否定用지 않다。"
+   "ko_diff": "韩语 하다 类形容词修饰名词时通常变成 -한，如 조용한 방；日语な形容词连体用 な。"
   },
   {
    "id": "G0017",

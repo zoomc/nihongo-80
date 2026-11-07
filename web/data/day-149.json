@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "22 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；6 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "端",
    "kana": "はし",
    "meaning": "边缘；端",
-   "ko": "未标注对应（待核对）",
+   "ko": "끝（头，尖，端） / 가장자리（边，边缘）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "こっちの端を持っててくれる？",
@@ -130,7 +132,9 @@
    "surface": "始まり",
    "kana": "はじまり",
    "meaning": "开始；开端",
-   "ko": "未标注对应（待核对）",
+   "ko": "머리（开始，开头） / 시발（开端，开头） / 시작（开始，开端，开头，起始，起头）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "始まりがうまければ半ばうまくいったもおなじ。",
@@ -143,7 +147,9 @@
    "surface": "パス",
    "kana": "パス",
    "meaning": "通行证；传球",
-   "ko": "未标注对应（待核对）",
+   "ko": "패스（传球）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "隣の選手にパスを出しました。",
@@ -156,7 +162,9 @@
    "surface": "外す",
    "kana": "はずす",
    "meaning": "取下；除去",
-   "ko": "未标注对应（待核对）",
+   "ko": "떼다 / 벗기다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "私は野球チームから外された。",
@@ -169,7 +177,9 @@
    "surface": "パスポート",
    "kana": "パスポート",
    "meaning": "护照",
-   "ko": "未标注对应（待核对）",
+   "ko": "여권（护照） / 패스（护照） / 패스포트（护照）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "パスポートを拝見できますか。",
@@ -182,7 +192,9 @@
    "surface": "旗",
    "kana": "はた",
    "meaning": "旗子",
-   "ko": "未标注对应（待核对）",
+   "ko": "깃발（旗，旗帜，旗子）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼は旗を上下に動かした。",
@@ -195,7 +207,9 @@
    "surface": "肌",
    "kana": "はだ",
    "meaning": "皮肤；性子",
-   "ko": "未标注对应（待核对）",
+   "ko": "살（皮肤） / 피부（皮肤）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "中国の音楽はどうも僕の肌に合わない。",
@@ -208,7 +222,9 @@
    "surface": "裸",
    "kana": "はだか",
    "meaning": "裸体；光着",
-   "ko": "未标注对应（待核对）",
+   "ko": "나신（裸体） / 나체（裸体） / 누드（裸体）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/连体词",
    "ex": {
     "ja": "子供たちは裸で泳いでいた。",
@@ -221,7 +237,9 @@
    "surface": "畑",
    "kana": "はたけ",
    "meaning": "旱田；田地",
-   "ko": "未标注对应（待核对）",
+   "ko": "밭（旱田）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "春になると畑をほりかえして種をまきます。",
@@ -234,7 +252,9 @@
    "surface": "働き",
    "kana": "はたらき",
    "meaning": "工作；作用",
-   "ko": "未标注对应（待核对）",
+   "ko": "일 / 작용",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "働きすぎると体によくないだろう。",
@@ -247,7 +267,9 @@
    "surface": "バッグ",
    "kana": "バッグ",
    "meaning": "包；手提包",
-   "ko": "未标注对应（待核对）",
+   "ko": "백（袋，皮包，手提包） / 가방（包，背包，提包）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "バッグはどこに置けばいいですか。",
@@ -260,7 +282,9 @@
    "surface": "発見",
    "kana": "はっけん",
    "meaning": "发现",
-   "ko": "발견",
+   "ko": "발견（发现）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "だれがそれを発見したのかと思う。",
@@ -273,7 +297,9 @@
    "surface": "発行",
    "kana": "はっこう",
    "meaning": "发行；出版",
-   "ko": "발행",
+   "ko": "발행（发行）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "この地方新聞は週に１回発行される。",
@@ -286,7 +312,9 @@
    "surface": "発車",
    "kana": "はっしゃ",
    "meaning": "发车",
-   "ko": "발차",
+   "ko": "발차（发车）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "バスは五分後に発車します。",
@@ -299,7 +327,9 @@
    "surface": "罰する",
    "kana": "ばっする",
    "meaning": "惩罚",
-   "ko": "未标注对应（待核对）",
+   "ko": "벌주다（罚，惩罚） / 벌하다（罚，惩罚） / 벌세우다（罚，惩罚）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "他动词",
    "ex": {
     "ja": "どうしてあなたは彼らを罰しているのですか。",
@@ -312,7 +342,9 @@
    "surface": "発達",
    "kana": "はったつ",
    "meaning": "发达；发育",
-   "ko": "발달",
+   "ko": "발달（发达，发育）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "水泳は筋肉を発達させる。",
@@ -325,7 +357,9 @@
    "surface": "ばったり",
    "kana": "ばったり",
    "meaning": "突然；碰巧",
-   "ko": "未标注对应（待核对）",
+   "ko": "발딱（突然，一下子）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "副词",
    "ex": {
     "ja": "道でばったり彼女に会いましてね。",
@@ -338,7 +372,9 @@
    "surface": "発展",
    "kana": "はってん",
    "meaning": "发展",
-   "ko": "발전",
+   "ko": "발전（发展）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "商業は都市の発展をもたらした。",
@@ -351,7 +387,9 @@
    "surface": "発明",
    "kana": "はつめい",
    "meaning": "发明",
-   "ko": "발명",
+   "ko": "발명（发明）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "エジソンが電球を発明した。",
@@ -364,7 +402,9 @@
    "surface": "話し合う",
    "kana": "はなしあう",
    "meaning": "商谈；商量",
-   "ko": "未标注对应（待核对）",
+   "ko": "서로 이야기하다 / 협의하다",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "ここでその問題について話し合いましょう。",
@@ -377,7 +417,9 @@
    "surface": "放す",
    "kana": "はなす",
    "meaning": "放开；放走",
-   "ko": "未标注对应（待核对）",
+   "ko": "내놓다（放，放开）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "その犬はボールを放そうとしなかった。",
@@ -390,7 +432,9 @@
    "surface": "離す",
    "kana": "はなす",
    "meaning": "分开；隔开",
-   "ko": "未标注对应（待核对）",
+   "ko": "떨어뜨리다（隔开） / 떨어트리다（拉开，隔开）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "すみません。いま手が離せないんです。",
@@ -398,6 +442,32 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V2665",
+  "V2666",
+  "V2667",
+  "V2668",
+  "V2669",
+  "V2670",
+  "V2671",
+  "V2672",
+  "V2673",
+  "V2674",
+  "V2675",
+  "V2676",
+  "V2677",
+  "V2678",
+  "V2679",
+  "V2680"
+ ],
+ "extension_vocab_ids": [
+  "V2681",
+  "V2682",
+  "V2683",
+  "V2684",
+  "V2685",
+  "V2686"
  ],
  "grammar": [
   {

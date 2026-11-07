@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -118,6 +118,8 @@
    "kana": "しゃちょう",
    "meaning": "社长",
    "ko": "사장",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "この会社の社長は誰ですか。",
@@ -130,7 +132,9 @@
    "surface": "じゃま",
    "kana": "じゃま",
    "meaning": "妨碍",
-   "ko": "未标注对应（待核对）",
+   "ko": "방해",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词/な形容词/动词(サ变)/他动词",
    "ex": {
     "ja": "その車がじゃまです。動かしてください。",
@@ -143,7 +147,9 @@
    "surface": "ジャム",
    "kana": "ジャム",
    "meaning": "果酱",
-   "ko": "未标注对应（待核对）",
+   "ko": "잼（果酱）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "イチゴはジャムに作られる。",
@@ -156,7 +162,9 @@
    "surface": "自由",
    "kana": "じゆう",
    "meaning": "自由",
-   "ko": "자유",
+   "ko": "자유（自由）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/な形容词",
    "ex": {
     "ja": "お金を使うも貯めるも自由にしなさい。",
@@ -169,7 +177,9 @@
    "surface": "習慣",
    "kana": "しゅうかん",
    "meaning": "习惯",
-   "ko": "습관",
+   "ko": "습관（习惯）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "その習慣は中国で始まった。",
@@ -182,7 +192,9 @@
    "surface": "住所",
    "kana": "じゅうしょ",
    "meaning": "住址",
-   "ko": "주소",
+   "ko": "주소（地址，住址）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "あなたの名前と住所を記入しなさい。",
@@ -195,7 +207,9 @@
    "surface": "柔道",
    "kana": "じゅうどう",
    "meaning": "柔道",
-   "ko": "유도",
+   "ko": "유도（柔道）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "柔道では力より技のほうが大切である。",
@@ -208,7 +222,9 @@
    "surface": "十分",
    "kana": "じゅうぶん",
    "meaning": "充分；足够",
-   "ko": "십분",
+   "ko": "십분（十分，充分） / 백분（完全，充分） / 함빡（足足地，充分地）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "な形容词",
    "ex": {
     "ja": "私はこの本を買うのに十分なお金を持っている。",
@@ -221,7 +237,9 @@
    "surface": "出席",
    "kana": "しゅっせき",
    "meaning": "出席；参加",
-   "ko": "출석",
+   "ko": "출석（出勤，出席，到场） / 참석（参加，出席）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "出席できないんですか。どうして？",
@@ -234,7 +252,9 @@
    "surface": "趣味",
    "kana": "しゅみ",
    "meaning": "爱好；兴趣",
-   "ko": "취미",
+   "ko": "취미（爱好，嗜好，趣味，兴趣）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "趣味については話しましたか？",
@@ -247,7 +267,9 @@
    "surface": "紹介",
    "kana": "しょうかい",
    "meaning": "介绍",
-   "ko": "소개",
+   "ko": "소개（介绍，推荐）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "あなたを私の両親に紹介したい。",
@@ -260,7 +282,9 @@
    "surface": "小学校",
    "kana": "しょうがっこう",
    "meaning": "小学",
-   "ko": "未标注对应（待核对）",
+   "ko": "소학교（小学） / 국민학교（小学） / 초등학교（小学）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "あなたは小学校に通っているの？",
@@ -273,7 +297,9 @@
    "surface": "小説",
    "kana": "しょうせつ",
    "meaning": "小说",
-   "ko": "소설",
+   "ko": "소설（小说）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "トムは小説を読んでいる。",
@@ -286,7 +312,9 @@
    "surface": "招待",
    "kana": "しょうたい",
    "meaning": "邀请；招待",
-   "ko": "초대",
+   "ko": "초대（邀请；招待） / 초청（邀请）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "ご招待をありがとうございます。",
@@ -299,7 +327,9 @@
    "surface": "承知",
    "kana": "しょうち",
    "meaning": "知道；同意",
-   "ko": "未标注对应（待核对）",
+   "ko": "알다 / 승낙",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "人はすべて死すべきものと承知している。",
@@ -312,7 +342,9 @@
    "surface": "将来",
    "kana": "しょうらい",
    "meaning": "将来；前途",
-   "ko": "장래",
+   "ko": "장래（将来，未来） / 뒷길（前程，前途） / 미래（未来，将来）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "将来の事を考えずにはいられない。",
@@ -325,7 +357,9 @@
    "surface": "食事",
    "kana": "しょくじ",
    "meaning": "吃饭；用餐",
-   "ko": "식사",
+   "ko": "식사（用餐，就餐，餐）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "食事は母に作ってもらっています。",
@@ -338,7 +372,9 @@
    "surface": "食料品",
    "kana": "しょくりょうひん",
    "meaning": "食品",
-   "ko": "식료품",
+   "ko": "식료품（食品原料）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "あの店では良質の食料品を売っている。",
@@ -351,7 +387,9 @@
    "surface": "女性",
    "kana": "じょせい",
    "meaning": "女性",
-   "ko": "여성",
+   "ko": "여성（女性）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/连体词",
    "ex": {
     "ja": "その少女は大きくなってすらりとした女性になった。",
@@ -364,7 +402,9 @@
    "surface": "知らせる",
    "kana": "しらせる",
    "meaning": "通知；告知",
-   "ko": "未标注对应（待核对）",
+   "ko": "알리다（告知） / 기별하다（送信，传信，通知）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "彼女はそれをどのようにして知らせたのですか。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V1121",
+  "V1122",
+  "V1123",
+  "V1124",
+  "V1125",
+  "V1126",
+  "V1127",
+  "V1128",
+  "V1129",
+  "V1130",
+  "V1131",
+  "V1132",
+  "V1133",
+  "V1134",
+  "V1135",
+  "V1136"
+ ],
+ "extension_vocab_ids": [
+  "V1137",
+  "V1138",
+  "V1139",
+  "V1140"
  ],
  "grammar": [
   {

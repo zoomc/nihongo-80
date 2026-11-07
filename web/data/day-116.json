@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "沈む",
    "kana": "しずむ",
    "meaning": "下沉；消沉",
-   "ko": "未标注对应（待核对）",
+   "ko": "가라앉다 / 침울해지다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "まるで、沈む船から逃げるネズミみたいね。",
@@ -130,7 +132,9 @@
    "surface": "自然",
    "kana": "しぜん",
    "meaning": "自然",
-   "ko": "자연",
+   "ko": "자연（自然） / 자연적（自然而然的）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "夫婦が愛し合うのは全く自然である。",
@@ -143,7 +147,9 @@
    "surface": "思想",
    "kana": "しそう",
    "meaning": "思想",
-   "ko": "사상",
+   "ko": "사상（思想） / 메시지（寓意，宗旨，思想，启示）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼には思想の理想がかけている。",
@@ -156,7 +162,9 @@
    "surface": "舌",
    "kana": "した",
    "meaning": "舌头",
-   "ko": "설",
+   "ko": "혀（舌头）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "コーヒーは舌が焼けるほど熱かった。",
@@ -169,7 +177,9 @@
    "surface": "次第",
    "kana": "しだい",
    "meaning": "取决于；一…就",
-   "ko": "未标注对应（待核对）",
+   "ko": "~에 달려 있다 / ~하자마자",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "空港に着き次第、電話します。",
@@ -182,7 +192,9 @@
    "surface": "事態",
    "kana": "じたい",
    "meaning": "事态",
-   "ko": "사태",
+   "ko": "사태（事态，事件）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "事態はかなり切迫している。",
@@ -195,7 +207,9 @@
    "surface": "従う",
    "kana": "したがう",
    "meaning": "遵从；跟随",
-   "ko": "未标注对应（待核对）",
+   "ko": "뒤좇다（遵从） / 따르다（跟随，尾随） / 뒤따르다（跟随）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "本能に従うと道を誤ることが多い。",
@@ -208,7 +222,9 @@
    "surface": "したがって",
    "kana": "したがって",
    "meaning": "因此；按照",
-   "ko": "未标注对应（待核对）",
+   "ko": "따라서 / ~에 따라",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "接续词",
    "ex": {
     "ja": "君は能力にしたがって上達する。",
@@ -221,7 +237,9 @@
    "surface": "親しい",
    "kana": "したしい",
    "meaning": "亲密",
-   "ko": "未标注对应（待核对）",
+   "ko": "정답다（亲切，亲密，温情） / 친하다（亲近，要好，亲密） / 친근하다（亲近，亲密）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "犬は人間の最も親しい友達である。",
@@ -234,7 +252,9 @@
    "surface": "質",
    "kana": "しつ",
    "meaning": "质量；质地",
-   "ko": "질",
+   "ko": "질（质，质量）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "お茶の質は下がりつつある。",
@@ -247,7 +267,9 @@
    "surface": "失業",
    "kana": "しつぎょう",
    "meaning": "失业",
-   "ko": "실업",
+   "ko": "실업（失业） / 실직（失业）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "この地域の失業はほぼないに等しい。",
@@ -260,7 +282,9 @@
    "surface": "実験",
    "kana": "じっけん",
    "meaning": "实验",
-   "ko": "실험",
+   "ko": "실험（实验）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "この実験では不注意は許されない。",
@@ -273,7 +297,9 @@
    "surface": "実現",
    "kana": "じつげん",
    "meaning": "实现",
-   "ko": "실현",
+   "ko": "실현（实现） / 구현（体现，实现，贯彻）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词/自动词",
    "ex": {
     "ja": "あなたの夢がみんな実現されますように。",
@@ -286,7 +312,9 @@
    "surface": "実行",
    "kana": "じっこう",
    "meaning": "实行；执行",
-   "ko": "실행",
+   "ko": "실행（实行，执行，实施）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "彼は計画を立てれば必ず実行する。",
@@ -299,7 +327,9 @@
    "surface": "実際",
    "kana": "じっさい",
    "meaning": "实际",
-   "ko": "실제",
+   "ko": "실제（实际） / 기실（其实，实际上） / 실상（实际上，其实）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/连体词",
    "ex": {
     "ja": "人間は実際自然のなすがままである。",
@@ -312,7 +342,9 @@
    "surface": "実施",
    "kana": "じっし",
    "meaning": "实施",
-   "ko": "실시",
+   "ko": "실시（实施，实行）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "その計画は実施された。",
@@ -325,7 +357,9 @@
    "surface": "じっと",
    "kana": "じっと",
    "meaning": "一动不动；凝神",
-   "ko": "未标注对应（待核对）",
+   "ko": "떡（直挺挺，一动不动）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "副词/动词(サ变)",
    "ex": {
     "ja": "小さいおうちはお金で売れなかったのでじーとそこにとどまったままながめつづけていました。",
@@ -338,7 +372,9 @@
    "surface": "実に",
    "kana": "じつに",
    "meaning": "实在；确实",
-   "ko": "未标注对应（待核对）",
+   "ko": "참（真，实在，的确） / 정말로（真的，实在）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "副词",
    "ex": {
     "ja": "今日は実によい天気だ。",
@@ -351,7 +387,9 @@
    "surface": "実は",
    "kana": "じつは",
    "meaning": "其实",
-   "ko": "未标注对应（待核对）",
+   "ko": "기실（实际上，其实） / 실은（其实）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "惯用表达/副词",
    "ex": {
     "ja": "実はそれはただのうわさだったよ。",
@@ -364,7 +402,9 @@
    "surface": "失望",
    "kana": "しつぼう",
    "meaning": "失望",
-   "ko": "실망",
+   "ko": "실망（失望） / 낙심（灰心，失望，垂头丧气）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "私はその結果に失望した。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V2069",
+  "V2070",
+  "V2071",
+  "V2072",
+  "V2073",
+  "V2074",
+  "V2075",
+  "V2076",
+  "V2077",
+  "V2078",
+  "V2079",
+  "V2080",
+  "V2081",
+  "V2082",
+  "V2083",
+  "V2084"
+ ],
+ "extension_vocab_ids": [
+  "V2085",
+  "V2086",
+  "V2087",
+  "V2088"
  ],
  "grammar": [
   {
@@ -430,7 +494,7 @@
    "id": "G0142",
    "pattern": "〜にしては",
    "meaning_zh": "照…来说；以…而言",
-   "connection": "动词普通形/名词 + にしては",
+   "connection": "动词普通形／名词 + にしては；名词化的 の + にしては 也可用",
    "usage": "表示实际情况与从前提推想的预期不符，含意外感。",
    "register_note": "口语书面均可。",
    "examples": [
@@ -458,9 +522,9 @@
    ],
    "common_errors": [
     {
-     "wrong": "初めて作ったのにしては、このケーキはよくできている。",
-     "why": "「にしては」直接接普通形或名词，不能加「の」。",
-     "fix": "初めて作ったにしては",
+     "wrong": "初めてのにしてはは上手です。",
+     "why": "にしては已有は，不叠加第二个は。",
+     "fix": "初めてにしては上手です。",
      "learner": "zh"
     }
    ],
@@ -475,7 +539,7 @@
    "source_ids": [
     "S900"
    ],
-   "review_status": "ai_draft",
+   "review_status": "needs_review",
    "provenance": "OpenJLPT CC-BY-SA-4.0",
    "license": "CC-BY-SA-4.0"
   }

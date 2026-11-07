@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "四日",
    "kana": "よっか",
    "meaning": "四天；四号",
-   "ko": "未标注对应（待核对）",
+   "ko": "나흘（四天）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "長くても４日しか待てませんよ。",
@@ -130,7 +132,9 @@
    "surface": "四つ",
    "kana": "よっつ",
    "meaning": "四个",
-   "ko": "未标注对应（待核对）",
+   "ko": "네 개",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "数词",
    "ex": {
     "ja": "その紙を四つ折りにしなさい。",
@@ -143,7 +147,9 @@
    "surface": "呼ぶ",
    "kana": "よぶ",
    "meaning": "叫；邀请",
-   "ko": "未标注对应（待核对）",
+   "ko": "부르다（叫） / 초대하다（邀请，招待）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "あなたをケパと呼ぶことにします。",
@@ -156,7 +162,9 @@
    "surface": "より",
    "kana": "より",
    "meaning": "比；与…相比",
-   "ko": "未标注对应（待核对）",
+   "ko": "보다（比）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "助词",
    "ex": {
     "ja": "もうこれよりほかに手はない。",
@@ -169,7 +177,9 @@
    "surface": "夜",
    "kana": "よる",
    "meaning": "夜晚",
-   "ko": "未标注对应（待核对）",
+   "ko": "야간（夜间，夜晚）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "あなたは夜よく寝れませんか。",
@@ -182,7 +192,9 @@
    "surface": "弱い",
    "kana": "よわい",
    "meaning": "弱；薄弱",
-   "ko": "未标注对应（待核对）",
+   "ko": "약하다（弱，小）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "それを言われると弱いなあ。",
@@ -195,7 +207,9 @@
    "surface": "来月",
    "kana": "らいげつ",
    "meaning": "下个月",
-   "ko": "未标注对应（待核对）",
+   "ko": "내달（下月，下个月）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "来月タクシー料金があがります。",
@@ -208,7 +222,9 @@
    "surface": "来週",
    "kana": "らいしゅう",
    "meaning": "下周",
-   "ko": "未标注对应（待核对）",
+   "ko": "내주（下周，下星期）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "来週ヨーロッパへ行くつもりなんです。",
@@ -221,7 +237,9 @@
    "surface": "来年",
    "kana": "らいねん",
    "meaning": "明年",
-   "ko": "내년",
+   "ko": "내년（明年，来年） / 명년（明年）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "あなたは来年この本を読むことが出来るでしょう。",
@@ -234,7 +252,9 @@
    "surface": "ラジオ",
    "kana": "ラジオ",
    "meaning": "收音机；广播",
-   "ko": "未标注对应（待核对）",
+   "ko": "라디오（电台广播）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "そのニュースはラジオで聞いたよ。",
@@ -247,7 +267,9 @@
    "surface": "ラジカセ",
    "kana": "ラジカセ",
    "meaning": "收录机",
-   "ko": "未标注对应（待核对）",
+   "ko": "라디오 카세트",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "確かに今の日本では、「ラジカセ」はもう古い言葉なのかもしれない。",
@@ -260,7 +282,9 @@
    "surface": "りっぱ",
    "kana": "りっぱ",
    "meaning": "出色；气派",
-   "ko": "未标注对应（待核对）",
+   "ko": "훌륭하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容词",
    "ex": {
     "ja": "どうもごりっぱな言いわけだよ。",
@@ -273,7 +297,9 @@
    "surface": "留学生",
    "kana": "りゅうがくせい",
    "meaning": "留学生",
-   "ko": "유학생",
+   "ko": "유학생（留学生）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "留学生も入れるのかしら。",
@@ -286,7 +312,9 @@
    "surface": "両親",
    "kana": "りょうしん",
    "meaning": "父母；双亲",
-   "ko": "未标注对应（待核对）",
+   "ko": "부모（父母） / 양친（双亲） / 어버이（父母）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "両親は二人ともまだ生きています。",
@@ -299,7 +327,9 @@
    "surface": "零",
    "kana": "れい",
    "meaning": "零",
-   "ko": "未标注对应（待核对）",
+   "ko": "공（零） / 영（零） / 제로（零）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "今朝の気温は零度でした。",
@@ -312,7 +342,9 @@
    "surface": "冷蔵庫",
    "kana": "れいぞうこ",
    "meaning": "冰箱",
-   "ko": "냉장고",
+   "ko": "냉장고（冰箱）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "冷蔵庫の中にバターが２ポンドある。",
@@ -325,7 +357,9 @@
    "surface": "レコード",
    "kana": "レコード",
    "meaning": "唱片",
-   "ko": "未标注对应（待核对）",
+   "ko": "디스크（唱片） / 레코드（唱片） / 레코드판（唱片）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "ステレオにレコードをかけてください。",
@@ -338,7 +372,9 @@
    "surface": "レストラン",
    "kana": "レストラン",
    "meaning": "餐厅",
-   "ko": "未标注对应（待核对）",
+   "ko": "식당（饭店，餐厅） / 레스토랑（西餐厅）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "あのレストランはサービスがよい。",
@@ -351,7 +387,9 @@
    "surface": "廊下",
    "kana": "ろうか",
    "meaning": "走廊",
-   "ko": "未标注对应（待核对）",
+   "ko": "복도（走廊，楼道）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "廊下の突き当たりで火事が起きました。",
@@ -364,7 +402,9 @@
    "surface": "ワイシャツ",
    "kana": "ワイシャツ",
    "meaning": "衬衫",
-   "ko": "未标注对应（待核对）",
+   "ko": "와이셔츠（衬衣，衬衫）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "ワイシャツにボタンをつけて。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0848",
+  "V0849",
+  "V0850",
+  "V0851",
+  "V0852",
+  "V0853",
+  "V0854",
+  "V0855",
+  "V0856",
+  "V0857",
+  "V0858",
+  "V0859",
+  "V0860",
+  "V0861",
+  "V0862",
+  "V0863"
+ ],
+ "extension_vocab_ids": [
+  "V0864",
+  "V0865",
+  "V0866",
+  "V0867"
  ],
  "grammar": [
   {
@@ -450,15 +514,9 @@
    "compare": [],
    "common_errors": [
     {
-     "wrong": "この本を読みました（当经验）",
-     "why": "「〜ました」只叙述过去一次动作；经验用 たことがある",
-     "fix": "この本を読んだことがあります。",
-     "learner": "zh"
-    },
-    {
-     "wrong": "本を読むことがあります",
-     "why": "经验用 た形 + ことがある，辞书形 読む 是「有时会读」",
-     "fix": "本を読んだことがあります。",
+     "wrong": "京都に行くたことがあります。",
+     "why": "表达经历用动词た形接ことがある。",
+     "fix": "京都に行ったことがあります。",
      "learner": "zh"
     }
    ],
@@ -469,7 +527,7 @@
    "source_ids": [
     "S000"
    ],
-   "review_status": "self_reviewed",
+   "review_status": "needs_review",
    "provenance": "self_reviewed",
    "ko_equiv": "-(으)ㄴ 적이 있다",
    "ko_diff": "韩语经验用ㄴ 적이 있다，否定ㄴ 적이 없다；与单纯过去았/었的区分同日语。"

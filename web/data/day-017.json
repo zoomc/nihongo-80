@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "19 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；3 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "かわいい",
    "kana": "かわいい",
    "meaning": "可爱",
-   "ko": "未标注对应（待核对）",
+   "ko": "귀엽다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "ルーシーはかわいい女の子だ。",
@@ -130,7 +132,9 @@
    "surface": "漢字",
    "kana": "かんじ",
    "meaning": "汉字",
-   "ko": "한자",
+   "ko": "한자（汉字）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "この漢字はどういう意味ですか。",
@@ -143,7 +147,9 @@
    "surface": "木",
    "kana": "き",
    "meaning": "树；木头",
-   "ko": "未标注对应（待核对）",
+   "ko": "나무（树，树木）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "その木には実がたわわになっていた。",
@@ -156,7 +162,9 @@
    "surface": "黄色",
    "kana": "きいろ",
    "meaning": "黄色",
-   "ko": "황색",
+   "ko": "노란색（黄色，鹅黄色，嫩黄色）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/连体词/な形容词",
    "ex": {
     "ja": "木の葉は秋には黄色になる。",
@@ -169,7 +177,9 @@
    "surface": "黄色い",
    "kana": "きいろい",
    "meaning": "黄色的",
-   "ko": "未标注对应（待核对）",
+   "ko": "노랗다（黄色的）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "その黄色いのをいただきましょう。",
@@ -182,7 +192,9 @@
    "surface": "消える",
    "kana": "きえる",
    "meaning": "消失；熄灭",
-   "ko": "未标注对应（待核对）",
+   "ko": "들어가다（消失） / 사라지다（消失） / 스러지다（消失）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "火が消えないようにしてください。",
@@ -195,7 +207,9 @@
    "surface": "北",
    "kana": "きた",
    "meaning": "北",
-   "ko": "未标注对应（待核对）",
+   "ko": "북（北）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "その町はロンドンのすぐ北にある。",
@@ -208,7 +222,9 @@
    "surface": "ギター",
    "kana": "ギター",
    "meaning": "吉他",
-   "ko": "未标注对应（待核对）",
+   "ko": "기타（吉他）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "どちらがあなたのギターですか。",
@@ -221,7 +237,9 @@
    "surface": "汚い",
    "kana": "きたない",
    "meaning": "脏",
-   "ko": "未标注对应（待核对）",
+   "ko": "더럽다（脏，污浊）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "ジャックは私に汚いいたずらをした。",
@@ -234,7 +252,9 @@
    "surface": "喫茶店",
    "kana": "きっさてん",
    "meaning": "咖啡馆",
-   "ko": "未标注对应（待核对）",
+   "ko": "다방（茶馆，咖啡馆） / 카페（咖啡店，咖啡馆） / 커피숍（咖啡店，咖啡馆，咖啡厅）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私たちは喫茶店で昼食をとった。",
@@ -247,7 +267,9 @@
    "surface": "切手",
    "kana": "きって",
    "meaning": "邮票",
-   "ko": "未标注对应（待核对）",
+   "ko": "우표（邮票）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "切手の上からサインをしてください。",
@@ -260,7 +282,9 @@
    "surface": "牛肉",
    "kana": "ぎゅうにく",
    "meaning": "牛肉",
-   "ko": "未标注对应（待核对）",
+   "ko": "소고기（牛肉） / 쇠고기（牛肉）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "日本人はイギリス人より牛肉を食べる。",
@@ -273,7 +297,9 @@
    "surface": "牛乳",
    "kana": "ぎゅうにゅう",
    "meaning": "牛奶",
-   "ko": "우유",
+   "ko": "우유（牛奶）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "牛乳はバターやチーズになります。",
@@ -286,7 +312,9 @@
    "surface": "教室",
    "kana": "きょうしつ",
    "meaning": "教室",
-   "ko": "교실",
+   "ko": "교실（教室）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ＬＬ教室を使ってもよいですか。",
@@ -299,7 +327,9 @@
    "surface": "兄弟",
    "kana": "きょうだい",
    "meaning": "兄弟姐妹",
-   "ko": "형제",
+   "ko": "형제（兄弟） / 오라비（兄弟）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "あなたは何人兄弟がいますか。",
@@ -312,7 +342,9 @@
    "surface": "去年",
    "kana": "きょねん",
    "meaning": "去年",
-   "ko": "未标注对应（待核对）",
+   "ko": "작년（去年） / 지난해（去年）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "ビルは去年の秋に私に会いに来た。",
@@ -325,7 +357,9 @@
    "surface": "嫌い",
    "kana": "きらい",
    "meaning": "讨厌",
-   "ko": "未标注对应（待核对）",
+   "ko": "싫어하다",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "な形容词/名词",
    "ex": {
     "ja": "ジムくんは行き過ぎの嫌いがある。",
@@ -338,7 +372,9 @@
    "surface": "切る",
    "kana": "きる",
    "meaning": "切；剪",
-   "ko": "未标注对应（待核对）",
+   "ko": "썰다（切，锯） / 째다（割，切） / 자르다（切断，剪，砍断）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "トランプをよく切ってください。",
@@ -351,7 +387,9 @@
    "surface": "着る",
    "kana": "きる",
    "meaning": "穿",
-   "ko": "未标注对应（待核对）",
+   "ko": "입다（穿）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "このセーターを着てごらんなさい。",
@@ -359,6 +397,29 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0474",
+  "V0475",
+  "V0476",
+  "V0477",
+  "V0478",
+  "V0479",
+  "V0480",
+  "V0481",
+  "V0482",
+  "V0483",
+  "V0484",
+  "V0485",
+  "V0486",
+  "V0487",
+  "V0488",
+  "V0489"
+ ],
+ "extension_vocab_ids": [
+  "V0490",
+  "V0491",
+  "V0492"
  ],
  "grammar": [
   {
@@ -414,10 +475,10 @@
    "source_ids": [
     "S000"
    ],
-   "review_status": "self_reviewed",
+   "review_status": "needs_review",
    "provenance": "self_reviewed",
    "ko_equiv": "A가 B보다 + 형용사",
-   "ko_diff": "韩语比较用보다，语序与日语相近；「不如」用B만 못하다，不用否定形。"
+   "ko_diff": "韩语可用 보다 表比较基准；「没昨天冷」可说 어제보다 춥지 않다，也可用 만큼 与否定表达。"
   },
   {
    "id": "G0040",

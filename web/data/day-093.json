@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "化学",
    "kana": "かがく",
    "meaning": "化学",
-   "ko": "화학",
+   "ko": "화학（化学）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "貴方は、化学を勉強しますか。",
@@ -130,7 +132,9 @@
    "surface": "輝く",
    "kana": "かがやく",
    "meaning": "闪耀；发光",
-   "ko": "未标注对应（待核对）",
+   "ko": "빛나다（发光，照射）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "空には太陽が輝いています。",
@@ -143,7 +147,9 @@
    "surface": "係",
    "kana": "かかり",
    "meaning": "负责人员",
-   "ko": "未标注对应（待核对）",
+   "ko": "담당자",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "今、誰か係りの者を差し向けます。",
@@ -156,7 +162,9 @@
    "surface": "罹る",
    "kana": "かかる",
    "meaning": "患病",
-   "ko": "未标注对应（待核对）",
+   "ko": "병에 걸리다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "私はかつて大病にかかったことがあった。",
@@ -169,7 +177,9 @@
    "surface": "限る",
    "kana": "かぎる",
    "meaning": "限于；限定",
-   "ko": "未标注对应（待核对）",
+   "ko": "한하다（限于，仅限） / 제한하다（限制，限定） / 한정하다（限定）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "金持ちが必ずしも幸福とは限らない。",
@@ -182,7 +192,9 @@
    "surface": "家具",
    "kana": "かぐ",
    "meaning": "家具",
-   "ko": "가구",
+   "ko": "가구（家具）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "部屋には家具がない。",
@@ -195,7 +207,9 @@
    "surface": "学",
    "kana": "がく",
    "meaning": "学问；学识",
-   "ko": "학",
+   "ko": "학문 / 학식",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼は非常に学がある。",
@@ -208,7 +222,9 @@
    "surface": "額",
    "kana": "がく",
    "meaning": "金额；额头",
-   "ko": "액",
+   "ko": "금액（金额）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "この額は税込みです。",
@@ -221,7 +237,9 @@
    "surface": "覚悟",
    "kana": "かくご",
    "meaning": "思想准备；决心",
-   "ko": "각오",
+   "ko": "각오（心理准备，思想准备）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "私はすでに覚悟はできています。",
@@ -234,7 +252,9 @@
    "surface": "確実",
    "kana": "かくじつ",
    "meaning": "确实；可靠",
-   "ko": "확실",
+   "ko": "확실하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容词/名词",
    "ex": {
     "ja": "これは遅いけど確実な方法だ。",
@@ -247,7 +267,9 @@
    "surface": "学者",
    "kana": "がくしゃ",
    "meaning": "学者",
-   "ko": "학자",
+   "ko": "학자（学者） / 학사（学者）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "その学者はライフワークを続けた。",
@@ -260,7 +282,9 @@
    "surface": "学習",
    "kana": "がくしゅう",
    "meaning": "学习",
-   "ko": "학습",
+   "ko": "학습（学习） / 공부（学习，读书）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "これは生物の学習法としてはあまりよくないと思う。",
@@ -273,7 +297,9 @@
    "surface": "隠す",
    "kana": "かくす",
    "meaning": "隐藏；遮掩",
-   "ko": "未标注对应（待核对）",
+   "ko": "감추다（藏，隐藏） / 숨기다（隐藏，藏匿） / 파묻다（埋藏，隐藏）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "私は母がケーキを隠すのを見た。",
@@ -286,7 +312,9 @@
    "surface": "拡大",
    "kana": "かくだい",
    "meaning": "扩大",
-   "ko": "확대",
+   "ko": "확대（扩大，拓宽，开拓，扩充）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词/自动词",
    "ex": {
     "ja": "今年は事業が５０％拡大した。",
@@ -299,7 +327,9 @@
    "surface": "学問",
    "kana": "がくもん",
    "meaning": "学问",
-   "ko": "학문",
+   "ko": "학문（做学问，学问，学识）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "学問に王道なし。",
@@ -312,7 +342,9 @@
    "surface": "隠れる",
    "kana": "かくれる",
    "meaning": "躲藏；隐藏",
-   "ko": "未标注对应（待核对）",
+   "ko": "숨다（躲藏，隐藏）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "太陽が雲のかげに隠れた。",
@@ -325,7 +357,9 @@
    "surface": "陰",
    "kana": "かげ",
    "meaning": "背阴处；背后",
-   "ko": "未标注对应（待核对）",
+   "ko": "그늘（阴影，背阴） / 배후（背后，幕后）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "あの木の陰に腰をおろしましょう。",
@@ -338,7 +372,9 @@
    "surface": "影",
    "kana": "かげ",
    "meaning": "影子；影像",
-   "ko": "未标注对应（待核对）",
+   "ko": "그림자（影子）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "水たまりに映った影が見えた。",
@@ -351,7 +387,9 @@
    "surface": "欠ける",
    "kana": "かける",
    "meaning": "缺少；欠缺",
-   "ko": "未标注对应（待核对）",
+   "ko": "결하다（缺，缺乏，欠缺） / 부재하다（不在，不力，欠缺）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "メアリーは思いやりに欠けている。",
@@ -364,7 +402,9 @@
    "surface": "加減",
    "kana": "かげん",
    "meaning": "程度；火候",
-   "ko": "未标注对应（待核对）",
+   "ko": "정도 / 불 조절",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "お肉の焼き加減は、いかがなさいますか？",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V1669",
+  "V1670",
+  "V1671",
+  "V1672",
+  "V1673",
+  "V1674",
+  "V1675",
+  "V1676",
+  "V1677",
+  "V1678",
+  "V1679",
+  "V1680",
+  "V1681",
+  "V1682",
+  "V1683",
+  "V1684"
+ ],
+ "extension_vocab_ids": [
+  "V1685",
+  "V1686",
+  "V1687",
+  "V1688"
  ],
  "grammar": [
   {

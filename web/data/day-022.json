@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "19 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；3 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "しょうゆ",
    "kana": "しょうゆ",
    "meaning": "酱油",
-   "ko": "未标注对应（待核对）",
+   "ko": "간장",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "同社は醤油その他の食品を生産する。",
@@ -130,7 +132,9 @@
    "surface": "食堂",
    "kana": "しょくどう",
    "meaning": "食堂；餐厅",
-   "ko": "식당",
+   "ko": "식당（食堂）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "食堂はセルフサービスでした。",
@@ -143,7 +147,9 @@
    "surface": "知る",
    "kana": "しる",
    "meaning": "知道",
-   "ko": "未标注对应（待核对）",
+   "ko": "알다（知道，明白）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "ぼくは知らないし、気にもしない。",
@@ -156,7 +162,9 @@
    "surface": "白",
    "kana": "しろ",
    "meaning": "白色",
-   "ko": "未标注对应（待核对）",
+   "ko": "하양（白色，白）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/连体词",
    "ex": {
     "ja": "黒に黒をたしても白にはならぬ。",
@@ -169,7 +177,9 @@
    "surface": "白い",
    "kana": "しろい",
    "meaning": "白的",
-   "ko": "未标注对应（待核对）",
+   "ko": "하얗다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "白いベルトがついてるのがいいな。",
@@ -182,7 +192,9 @@
    "surface": "新聞",
    "kana": "しんぶん",
    "meaning": "报纸",
-   "ko": "신문",
+   "ko": "신문（报纸）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ジョンのことが新聞に出ていた。",
@@ -195,7 +207,9 @@
    "surface": "吸う",
    "kana": "すう",
    "meaning": "吸；抽（烟）",
-   "ko": "未标注对应（待核对）",
+   "ko": "먹다（抽，吸） / 빨다（吸，吮吸） / 마시다（吸，呼吸）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "この紙はインクを吸わない。",
@@ -208,7 +222,9 @@
    "surface": "スカート",
    "kana": "スカート",
    "meaning": "裙子",
-   "ko": "未标注对应（待核对）",
+   "ko": "치마（裙，裙子）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "スカートを見せていただけませんか。",
@@ -221,7 +237,9 @@
    "surface": "少ない",
    "kana": "すくない",
    "meaning": "少",
-   "ko": "未标注对应（待核对）",
+   "ko": "작다（小，少） / 적다（少，小，欠缺）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "読書の時間がますます少なくなっている。",
@@ -234,7 +252,9 @@
    "surface": "すぐに",
    "kana": "すぐに",
    "meaning": "马上",
-   "ko": "未标注对应（待核对）",
+   "ko": "금세（马上，立马，立刻） / 금방금방（马上，立马，快速地）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "副词",
    "ex": {
     "ja": "すぐに書かなければなりませんか。",
@@ -247,7 +267,9 @@
    "surface": "涼しい",
    "kana": "すずしい",
    "meaning": "凉爽",
-   "ko": "未标注对应（待核对）",
+   "ko": "서늘하다（凉，凉爽） / 선선하다（凉丝丝，凉爽） / 시원하다（凉爽，凉快）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "日増しに涼しくなっていく。",
@@ -260,7 +282,9 @@
    "surface": "ストーブ",
    "kana": "ストーブ",
    "meaning": "取暖炉",
-   "ko": "未标注对应（待核对）",
+   "ko": "난로",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私は古いストーブに１０ドルの値をつけた。",
@@ -273,7 +297,9 @@
    "surface": "スプーン",
    "kana": "スプーン",
    "meaning": "勺子",
-   "ko": "未标注对应（待核对）",
+   "ko": "수저（勺子，勺儿，汤匙，调羹） / 숟갈（勺子，勺儿，汤匙，调羹） / 숟가락（勺子，勺儿，汤匙，调羹）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "スプーンをいただけますか。",
@@ -286,7 +312,9 @@
    "surface": "スポーツ",
    "kana": "スポーツ",
    "meaning": "运动",
-   "ko": "未标注对应（待核对）",
+   "ko": "운동（运动） / 스포츠（体育，运动，竞赛）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ビリーはスポーツがうまいです。",
@@ -299,7 +327,9 @@
    "surface": "ズボン",
    "kana": "ズボン",
    "meaning": "裤子",
-   "ko": "未标注对应（待核对）",
+   "ko": "바지（裤子）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ちょっとこのズボンにつめて。",
@@ -312,7 +342,9 @@
    "surface": "住む",
    "kana": "すむ",
    "meaning": "居住",
-   "ko": "未标注对应（待核对）",
+   "ko": "살다 / 거주하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "どうしてアメリカに住んでいたの？",
@@ -325,7 +357,9 @@
    "surface": "スリッパ",
    "kana": "スリッパ",
    "meaning": "拖鞋",
-   "ko": "未标注对应（待核对）",
+   "ko": "슬리퍼（拖鞋）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "スリッパをはいてください。",
@@ -338,7 +372,9 @@
    "surface": "座る",
    "kana": "すわる",
    "meaning": "坐",
-   "ko": "未标注对应（待核对）",
+   "ko": "앉다（坐）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "父と母は木の下に座っていました。",
@@ -351,7 +387,9 @@
    "surface": "背",
    "kana": "せ",
    "meaning": "身高；背",
-   "ko": "未标注对应（待核对）",
+   "ko": "등（背，脊背，背部） / 키（身高，身长，个子，个儿，个头儿）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "トムはジャックと背が同じくらいだ。",
@@ -359,6 +397,29 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0569",
+  "V0570",
+  "V0571",
+  "V0572",
+  "V0573",
+  "V0574",
+  "V0575",
+  "V0576",
+  "V0577",
+  "V0578",
+  "V0579",
+  "V0580",
+  "V0581",
+  "V0582",
+  "V0583",
+  "V0584"
+ ],
+ "extension_vocab_ids": [
+  "V0585",
+  "V0586",
+  "V0587"
  ],
  "grammar": [
   {

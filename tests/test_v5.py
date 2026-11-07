@@ -222,7 +222,8 @@ class TestReviewRegressions(unittest.TestCase):
 
     def test_all_web_questions_registered_for_import(self):
         import sqlite3
-        with sqlite3.connect(ROOT / 'data/state.db') as db:
+        from contextlib import closing
+        with closing(sqlite3.connect(ROOT / 'data/state.db')) as db:
             ids = {r[0] for r in db.execute('select id from questions')}
         p = json.loads((ROOT / 'web/data/day-047.json').read_text())
         for q in p['quiz']:

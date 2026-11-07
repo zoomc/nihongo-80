@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "9 个新词；实际用时超预算时记录未完成"
+   "desc": "9 个必学词；0 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -69,7 +69,9 @@
    "surface": "二",
    "kana": "に",
    "meaning": "二",
-   "ko": "未标注对应（待核对）",
+   "ko": "이（二）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "数詞",
    "ex": {
     "ja": "二人で行きます。",
@@ -82,7 +84,9 @@
    "surface": "三",
    "kana": "さん",
    "meaning": "三",
-   "ko": "未标注对应（待核对）",
+   "ko": "삼（三） / 서（三） / 석（三）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "数詞",
    "ex": {
     "ja": "三時に会います。",
@@ -95,7 +99,9 @@
    "surface": "四",
    "kana": "よん",
    "meaning": "四（し／よん）",
-   "ko": "未标注对应（待核对）",
+   "ko": "사 / 넷",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "数詞",
    "ex": {
     "ja": "四つください。",
@@ -108,7 +114,9 @@
    "surface": "五",
    "kana": "ご",
    "meaning": "五",
-   "ko": "未标注对应（待核对）",
+   "ko": "오（五） / 다섯（五）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "数詞",
    "ex": {
     "ja": "五円です。",
@@ -121,7 +129,9 @@
    "surface": "六",
    "kana": "ろく",
    "meaning": "六",
-   "ko": "未标注对应（待核对）",
+   "ko": "엿（六） / 육（六） / 여섯（六）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "数詞",
    "ex": {
     "ja": "六時です。",
@@ -134,7 +144,9 @@
    "surface": "七",
    "kana": "なな",
    "meaning": "七（なな／しち）",
-   "ko": "未标注对应（待核对）",
+   "ko": "칠 / 일곱",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "数詞",
    "ex": {
     "ja": "七時に起きます。",
@@ -147,7 +159,9 @@
    "surface": "八",
    "kana": "はち",
    "meaning": "八",
-   "ko": "未标注对应（待核对）",
+   "ko": "팔（八） / 여덟（八）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "数詞",
    "ex": {
     "ja": "八日から休みます。",
@@ -160,7 +174,9 @@
    "surface": "九",
    "kana": "きゅう",
    "meaning": "九（きゅう／く）",
-   "ko": "未标注对应（待核对）",
+   "ko": "구（九）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "数詞",
    "ex": {
     "ja": "九時です。",
@@ -173,7 +189,9 @@
    "surface": "十",
    "kana": "じゅう",
    "meaning": "十",
-   "ko": "未标注对应（待核对）",
+   "ko": "십（十）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "数詞",
    "ex": {
     "ja": "十人います。",
@@ -182,6 +200,18 @@
    "audio": "tts"
   }
  ],
+ "core_vocab_ids": [
+  "V0010",
+  "V0011",
+  "V0012",
+  "V0013",
+  "V0014",
+  "V0015",
+  "V0016",
+  "V0017",
+  "V0018"
+ ],
+ "extension_vocab_ids": [],
  "grammar": [
   {
    "id": "G0002",
@@ -210,12 +240,6 @@
      "why": "把「ではありません」拆成「ない＋です」，中文「不是」直译导致词类错误；「じゃありません」是合法的口语礼貌否定，不在纠错范围。",
      "fix": "私は先生ではありません。",
      "learner": "zh"
-    },
-    {
-     "wrong": "私は先生じゃないです。",
-     "why": "「じゃないです」虽然口语能听到，但规范礼貌否定是「ではありません」或「じゃありません」；这里把两种说法混在了一起。",
-     "fix": "私は先生ではありません。",
-     "learner": "zh"
     }
    ],
    "jlpt": "N5",
@@ -226,7 +250,7 @@
    "source_ids": [
     "S000"
    ],
-   "review_status": "self_reviewed",
+   "review_status": "needs_review",
    "provenance": "self_reviewed",
    "ko_equiv": "이/가 아닙니다",
    "ko_diff": "韩语否定用이/가 아니다，助词随收音变化；日语では可缩成じゃ，韩语无对应缩略。"

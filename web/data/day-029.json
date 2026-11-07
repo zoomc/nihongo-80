@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "ネクタイ",
    "kana": "ネクタイ",
    "meaning": "领带",
-   "ko": "未标注对应（待核对）",
+   "ko": "타이（领带） / 넥타이（领带，领结）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "このネクタイはいくらですか。",
@@ -130,7 +132,9 @@
    "surface": "寝る",
    "kana": "ねる",
    "meaning": "睡觉",
-   "ko": "未标注对应（待核对）",
+   "ko": "자다（睡，睡觉） / 잠자다（睡觉，睡眠）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "本を読んでるうちに寝てしまった。",
@@ -143,7 +147,9 @@
    "surface": "ノート",
    "kana": "ノート",
    "meaning": "笔记本",
-   "ko": "未标注对应（待核对）",
+   "ko": "공책（笔记本） / 노트（笔记本）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "これらの語をノートに書きなさい。",
@@ -156,7 +162,9 @@
    "surface": "登る",
    "kana": "のぼる",
    "meaning": "登；爬",
-   "ko": "未标注对应（待核对）",
+   "ko": "타다（爬，攀，登） / 오르다（上，登，攀登） / 치오르다（上，爬，去）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "木は高ければ高いほど登りにくい。",
@@ -169,7 +177,9 @@
    "surface": "飲み物",
    "kana": "のみもの",
    "meaning": "饮料",
-   "ko": "未标注对应（待核对）",
+   "ko": "음료（饮料） / 음료수（饮料）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "何か飲み物をいただけますか。",
@@ -182,7 +192,9 @@
    "surface": "歯",
    "kana": "は",
    "meaning": "牙",
-   "ko": "未标注对应（待核对）",
+   "ko": "치아（牙齿，牙，齿）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "その赤ちゃんは歯が生えはじめている。",
@@ -195,7 +207,9 @@
    "surface": "パーティー",
    "kana": "パーティー",
    "meaning": "聚会",
-   "ko": "未标注对应（待核对）",
+   "ko": "파티（聚会，派对）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "パーティーはたのしかったですか。",
@@ -208,7 +222,9 @@
    "surface": "はい",
    "kana": "はい",
    "meaning": "是；好",
-   "ko": "未标注对应（待核对）",
+   "ko": "네（是，是的，哎） / 예（是，唉）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "感叹词",
    "ex": {
     "ja": "「もしもし、ブラウンさんですか」「はい、そうです」",
@@ -221,7 +237,9 @@
    "surface": "灰皿",
    "kana": "はいざら",
    "meaning": "烟灰缸",
-   "ko": "未标注对应（待核对）",
+   "ko": "재떨이（烟灰缸）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "灰皿を下さい。",
@@ -234,7 +252,9 @@
    "surface": "入る",
    "kana": "はいる",
    "meaning": "进入",
-   "ko": "未标注对应（待核对）",
+   "ko": "들다（进入，陷入） / 들어가다（进入，转入） / 들어서다（进入，走进，踏进）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "入る前にドアをノックして下さい。",
@@ -247,7 +267,9 @@
    "surface": "葉書",
    "kana": "はがき",
    "meaning": "明信片",
-   "ko": "未标注对应（待核对）",
+   "ko": "엽서（明信片）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "この店に葉書がたくさんある。",
@@ -260,7 +282,9 @@
    "surface": "はく",
    "kana": "はく",
    "meaning": "穿（鞋袜）",
-   "ko": "未标注对应（待核对）",
+   "ko": "신다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "この靴はきつすぎてはけない。",
@@ -273,7 +297,9 @@
    "surface": "箱",
    "kana": "はこ",
    "meaning": "箱子",
-   "ko": "未标注对应（待核对）",
+   "ko": "함（箱 ，箱子） / 박스（盒子，箱子） / 상자（箱子）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "その箱はほとんどいっぱいでした。",
@@ -286,7 +312,9 @@
    "surface": "はし",
    "kana": "はし",
    "meaning": "筷子",
-   "ko": "未标注对应（待核对）",
+   "ko": "젓가락",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "パーカーさんは箸で食べてみました。",
@@ -299,7 +327,9 @@
    "surface": "橋",
    "kana": "はし",
    "meaning": "桥",
-   "ko": "未标注对应（待核对）",
+   "ko": "다리（桥，桥梁）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "その橋はどれくらいの長さですか。",
@@ -312,7 +342,9 @@
    "surface": "始まる",
    "kana": "はじまる",
    "meaning": "开始",
-   "ko": "未标注对应（待核对）",
+   "ko": "시작되다（被开始）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "今コンサートが始まろうとしている。",
@@ -325,7 +357,9 @@
    "surface": "初め",
    "kana": "はじめ",
    "meaning": "开始；起初",
-   "ko": "未标注对应（待核对）",
+   "ko": "시초（开始，一开始） / 초두（起初，最初） / 초장（开端，开始）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/副词",
    "ex": {
     "ja": "旅行の初めの二日間は雨降りだった。",
@@ -338,7 +372,9 @@
    "surface": "初めて",
    "kana": "はじめて",
    "meaning": "第一次",
-   "ko": "未标注对应（待核对）",
+   "ko": "처음으로",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "副词/连体词",
    "ex": {
     "ja": "初めてドリアンを食べました。",
@@ -351,7 +387,9 @@
    "surface": "はじめまして",
    "kana": "はじめまして",
    "meaning": "初次见面",
-   "ko": "未标注对应（待核对）",
+   "ko": "처음 뵙겠습니다",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "惯用表达",
    "ex": {
     "ja": "初めましてケン。",
@@ -364,7 +402,9 @@
    "surface": "走る",
    "kana": "はしる",
    "meaning": "跑",
-   "ko": "未标注对应（待核对）",
+   "ko": "뛰다（跑，奔跑） / 달리다（跑，奔跑，快跑）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "あの走ってる少年をごらんなさい。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0708",
+  "V0709",
+  "V0710",
+  "V0711",
+  "V0712",
+  "V0713",
+  "V0714",
+  "V0715",
+  "V0716",
+  "V0717",
+  "V0718",
+  "V0719",
+  "V0720",
+  "V0721",
+  "V0722",
+  "V0723"
+ ],
+ "extension_vocab_ids": [
+  "V0724",
+  "V0725",
+  "V0726",
+  "V0727"
  ],
  "grammar": [
   {

@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "19 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；3 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "生まれる",
    "kana": "うまれる",
    "meaning": "出生",
-   "ko": "未标注对应（待核对）",
+   "ko": "나다（生，出生） / 출생되다（出生，出世） / 출생하다（出生，出世）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "どんぐりからオークが生まれる。",
@@ -130,7 +132,9 @@
    "surface": "海",
    "kana": "うみ",
    "meaning": "海",
-   "ko": "未标注对应（待核对）",
+   "ko": "바다（海，大海，海洋）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "何としても海をひと目みたいものだ。",
@@ -143,7 +147,9 @@
    "surface": "売る",
    "kana": "うる",
    "meaning": "卖",
-   "ko": "未标注对应（待核对）",
+   "ko": "팔다（卖，出售） / 팔아먹다（卖）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "トムはメアリーにバイクを売った。",
@@ -156,7 +162,9 @@
    "surface": "煩い",
    "kana": "うるさい",
    "meaning": "吵；烦人",
-   "ko": "未标注对应（待核对）",
+   "ko": "시끄럽다 / 귀찮다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "あの子はなんてうるさい子だろう。",
@@ -169,7 +177,9 @@
    "surface": "上着",
    "kana": "うわぎ",
    "meaning": "上衣；外套",
-   "ko": "未标注对应（待核对）",
+   "ko": "겉옷（外衣，外套） / 상의（上衣，上装） / 웃옷（上衣，上装）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ドアのそばのかぎに上着をかけなさい。",
@@ -182,7 +192,9 @@
    "surface": "絵",
    "kana": "え",
    "meaning": "画",
-   "ko": "未标注对应（待核对）",
+   "ko": "그림",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "絵がテーブルの上にかかっている。",
@@ -195,7 +207,9 @@
    "surface": "映画館",
    "kana": "えいがかん",
    "meaning": "电影院",
-   "ko": "영화관",
+   "ko": "영화관（电影院） / 상영관（电影院，影厅）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "その映画館は人々でいっぱいだった。",
@@ -208,7 +222,9 @@
    "surface": "英語",
    "kana": "えいご",
    "meaning": "英语",
-   "ko": "영어",
+   "ko": "영어（英语）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "アメリカでは英語を話します。",
@@ -221,7 +237,9 @@
    "surface": "ええ",
    "kana": "ええ",
    "meaning": "是；嗯",
-   "ko": "未标注对应（待核对）",
+   "ko": "네（是，行） / 응（是，行）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "感叹词",
    "ex": {
     "ja": "「テニスをしましょうか」「ええ」",
@@ -234,7 +252,9 @@
    "surface": "エレベーター",
    "kana": "エレベーター",
    "meaning": "电梯",
-   "ko": "未标注对应（待核对）",
+   "ko": "엘리베이터（电梯，升降梯）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "エレベーターはどこですか。",
@@ -247,7 +267,9 @@
    "surface": "鉛筆",
    "kana": "えんぴつ",
    "meaning": "铅笔",
-   "ko": "연필",
+   "ko": "연필（铅笔）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "えんぴつであなたの名前を書きなさい。",
@@ -260,7 +282,9 @@
    "surface": "おいしい",
    "kana": "おいしい",
    "meaning": "好吃",
-   "ko": "未标注对应（待核对）",
+   "ko": "맛있다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "おいしい食事をありがとう。",
@@ -273,7 +297,9 @@
    "surface": "多い",
    "kana": "おおい",
    "meaning": "多",
-   "ko": "未标注对应（待核对）",
+   "ko": "많다（多，丰富，强）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "この学校は男子よりも女子が多い。",
@@ -286,7 +312,9 @@
    "surface": "大きな",
    "kana": "おおきな",
    "meaning": "大的",
-   "ko": "未标注对应（待核对）",
+   "ko": "큰",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "词",
    "ex": {
     "ja": "それらはとても大きなりんごです。",
@@ -299,7 +327,9 @@
    "surface": "大勢",
    "kana": "おおぜい",
    "meaning": "很多人",
-   "ko": "未标注对应（待核对）",
+   "ko": "많은 사람",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词/连体词",
    "ex": {
     "ja": "大ぜいの人たちがいた。",
@@ -312,7 +342,9 @@
    "surface": "お母さん",
    "kana": "おかあさん",
    "meaning": "母亲；妈妈",
-   "ko": "未标注对应（待核对）",
+   "ko": "엄마（妈妈） / 어머니（母亲，妈妈）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "お母さんに口答えしてはいけませんよ。",
@@ -325,7 +357,9 @@
    "surface": "お菓子",
    "kana": "おかし",
    "meaning": "点心；零食",
-   "ko": "과자",
+   "ko": "과자 / 간식",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "もうすこしお菓子を食べませんか。",
@@ -338,7 +372,9 @@
    "surface": "お金",
    "kana": "おかね",
    "meaning": "钱",
-   "ko": "未标注对应（待核对）",
+   "ko": "돈（钱，金钱，钱币）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "どうやってそのお金を手に入れたんですか。",
@@ -351,7 +387,9 @@
    "surface": "置く",
    "kana": "おく",
    "meaning": "放；放置",
-   "ko": "未标注对应（待核对）",
+   "ko": "놓다（放，放置） / 두다（搁，放置，摆放）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "それをテーブルの上に置きなさい。",
@@ -359,6 +397,29 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0398",
+  "V0399",
+  "V0400",
+  "V0401",
+  "V0402",
+  "V0403",
+  "V0404",
+  "V0405",
+  "V0406",
+  "V0407",
+  "V0408",
+  "V0409",
+  "V0410",
+  "V0411",
+  "V0412",
+  "V0413"
+ ],
+ "extension_vocab_ids": [
+  "V0414",
+  "V0415",
+  "V0416"
  ],
  "grammar": [
   {

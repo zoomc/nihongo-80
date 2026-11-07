@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "引く",
    "kana": "ひく",
    "meaning": "拉；查（词典）",
-   "ko": "未标注对应（待核对）",
+   "ko": "끌다（引，拉） / 당기다（拉，拖，拽）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "カーテンがゆっくり引かれた。",
@@ -130,7 +132,9 @@
    "surface": "弾く",
    "kana": "ひく",
    "meaning": "弹奏（乐器）",
-   "ko": "未标注对应（待核对）",
+   "ko": "치다（弹，弹奏，打） / 타다（弹，弹奏，演奏）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "ギターをひくのはおもしろい。",
@@ -143,7 +147,9 @@
    "surface": "低い",
    "kana": "ひくい",
    "meaning": "低；矮",
-   "ko": "未标注对应（待核对）",
+   "ko": "낮다（低，矮，低洼） / 얕다（浅，低，矮） / 옅다（矮）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "ラジオの音を低くして下さい。",
@@ -156,7 +162,9 @@
    "surface": "左",
    "kana": "ひだり",
    "meaning": "左；左边",
-   "ko": "未标注对应（待核对）",
+   "ko": "좌（左）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/连体词",
    "ex": {
     "ja": "アラビア語は右から左へ書きます。",
@@ -169,7 +177,9 @@
    "surface": "一つ",
    "kana": "ひとつ",
    "meaning": "一个；一样",
-   "ko": "未标注对应（待核对）",
+   "ko": "하나 / 한 개",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "数词",
    "ex": {
     "ja": "車にはハンドルが一つある。",
@@ -182,7 +192,9 @@
    "surface": "一月",
    "kana": "ひとつき",
    "meaning": "一个月",
-   "ko": "未标注对应（待核对）",
+   "ko": "한 달",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "金がなくなる頃にはもうひと月ある。",
@@ -195,7 +207,9 @@
    "surface": "一人",
    "kana": "ひとり",
    "meaning": "一个人；独自",
-   "ko": "未标注对应（待核对）",
+   "ko": "한 사람 / 혼자",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "どうしてあなたは一人になったの？",
@@ -208,7 +222,9 @@
    "surface": "暇",
    "kana": "ひま",
    "meaning": "空闲；余暇",
-   "ko": "未标注对应（待核对）",
+   "ko": "짬（空，空闲） / 틈（暇，余暇） / 사이（空儿，空闲）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ジョンはひどく急いでいたので話をする暇もなかった。",
@@ -221,7 +237,9 @@
    "surface": "百",
    "kana": "ひゃく",
    "meaning": "百",
-   "ko": "未标注对应（待核对）",
+   "ko": "백（百）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "数词",
    "ex": {
     "ja": "百年後にはみな同じになる。",
@@ -234,7 +252,9 @@
    "surface": "病気",
    "kana": "びょうき",
    "meaning": "生病；疾病",
-   "ko": "未标注对应（待核对）",
+   "ko": "우환（疾病） / 질병（疾病）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ボブはいったい病気なのだろうか。",
@@ -247,7 +267,9 @@
    "surface": "昼",
    "kana": "ひる",
    "meaning": "中午；白天",
-   "ko": "未标注对应（待核对）",
+   "ko": "낮（白天，白日，日间） / 점심（中午） / 점심때（中午，晌午，午饭时间）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "昼はホットドッグを食べたんだ。",
@@ -260,7 +282,9 @@
    "surface": "昼御飯",
    "kana": "ひるごはん",
    "meaning": "午饭",
-   "ko": "未标注对应（待核对）",
+   "ko": "점심밥",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "昼ご飯を食べに外に出ませんか。",
@@ -273,7 +297,9 @@
    "surface": "広い",
    "kana": "ひろい",
    "meaning": "宽；宽广",
-   "ko": "未标注对应（待核对）",
+   "ko": "넓다（宽敞，宽阔，宽广） / 크다（大，宽，广） / 너르다（宽，宽广）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "この通りは広いが、あまり長くない。",
@@ -286,7 +312,9 @@
    "surface": "フィルム",
    "kana": "フィルム",
    "meaning": "胶卷；胶片",
-   "ko": "未标注对应（待核对）",
+   "ko": "필름（胶卷）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "カラーフィルムを一本ください。",
@@ -299,7 +327,9 @@
    "surface": "封筒",
    "kana": "ふうとう",
    "meaning": "信封",
-   "ko": "봉투",
+   "ko": "봉투（信封） / 겉봉（信封） / 편지봉투（信封）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "だれがこの封筒を破って開けたのか。",
@@ -312,7 +342,9 @@
    "surface": "プール",
    "kana": "プール",
    "meaning": "游泳池",
-   "ko": "未标注对应（待核对）",
+   "ko": "풀（游泳场，游泳池，泳池）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "サウナとプールがあります。",
@@ -325,7 +357,9 @@
    "surface": "フォーク",
    "kana": "フォーク",
    "meaning": "叉子",
-   "ko": "未标注对应（待核对）",
+   "ko": "포크（叉子，餐叉）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "フォークでパスタを食べます。",
@@ -338,7 +372,9 @@
    "surface": "吹く",
    "kana": "ふく",
    "meaning": "吹；刮",
-   "ko": "未标注对应（待核对）",
+   "ko": "불다（刮，吹）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "あの日は強い風が吹いていました。",
@@ -351,7 +387,9 @@
    "surface": "服",
    "kana": "ふく",
    "meaning": "衣服",
-   "ko": "未标注对应（待核对）",
+   "ko": "옷（衣服，衣裳，服装）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "この服はわたしにはもったいない。",
@@ -364,7 +402,9 @@
    "surface": "二つ",
    "kana": "ふたつ",
    "meaning": "两个",
-   "ko": "未标注对应（待核对）",
+   "ko": "두엇（两三，两个左右）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "数词",
    "ex": {
     "ja": "二つのうちでどちらが高いですか。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0748",
+  "V0749",
+  "V0750",
+  "V0751",
+  "V0752",
+  "V0753",
+  "V0754",
+  "V0755",
+  "V0756",
+  "V0757",
+  "V0758",
+  "V0759",
+  "V0760",
+  "V0761",
+  "V0762",
+  "V0763"
+ ],
+ "extension_vocab_ids": [
+  "V0764",
+  "V0765",
+  "V0766",
+  "V0767"
  ],
  "grammar": [
   {
@@ -414,7 +478,7 @@
    ],
    "jlpt": "N5",
    "ko_equiv": "입니다",
-   "ko_diff": "韩语 입니다 与 です 对应，但韩语名词有收音变化（학생입니다/학생입니다），日语 です 形式固定；い形容词后日语加 です，韩语则用形容词本身。",
+   "ko_diff": "韩语正式礼貌判断常用 입니다，例如 학생입니다、의사입니다；日常礼貌体可用 이에요／예요，形式受词尾影响。日语名词与な形容词常接です。",
    "notes": "",
    "tags": [
     "copula",
@@ -423,7 +487,7 @@
    "source_ids": [
     "S900"
    ],
-   "review_status": "ai_draft",
+   "review_status": "needs_review",
    "provenance": "OpenJLPT CC-BY-SA-4.0",
    "license": "CC-BY-SA-4.0"
   },

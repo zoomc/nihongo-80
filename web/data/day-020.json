@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "19 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；3 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "この",
    "kana": "この",
    "meaning": "这个",
-   "ko": "未标注对应（待核对）",
+   "ko": "요（这个） / 이（这，这个）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "词",
    "ex": {
     "ja": "このコップをミルクで満たした。",
@@ -130,7 +132,9 @@
    "surface": "御飯",
    "kana": "ごはん",
    "meaning": "米饭；饭",
-   "ko": "未标注对应（待核对）",
+   "ko": "밥",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ご飯とパンどちらがいいですか。",
@@ -143,7 +147,9 @@
    "surface": "コピーする",
    "kana": "コピーする",
    "meaning": "复印",
-   "ko": "未标注对应（待核对）",
+   "ko": "복사하다（复印）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "コピーするページに付箋をつけておいてください。",
@@ -156,7 +162,9 @@
    "surface": "困る",
    "kana": "こまる",
    "meaning": "为难；困扰",
-   "ko": "未标注对应（待核对）",
+   "ko": "딱하다（为难，难堪，尴尬） / 난처하다（为难，不好办）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "時間がなくてたいへん困っている。",
@@ -169,7 +177,9 @@
    "surface": "ごめんなさい",
    "kana": "ごめんなさい",
    "meaning": "对不起",
-   "ko": "未标注对应（待核对）",
+   "ko": "미안합니다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "惯用表达",
    "ex": {
     "ja": "お話し中、ごめんなさい。",
@@ -182,7 +192,9 @@
    "surface": "これ",
    "kana": "これ",
    "meaning": "这个",
-   "ko": "未标注对应（待核对）",
+   "ko": "요（这个） / 이것（这个）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "代名词",
    "ex": {
     "ja": "これは兄です。かっこいいですね。",
@@ -195,7 +207,9 @@
    "surface": "今月",
    "kana": "こんげつ",
    "meaning": "这个月",
-   "ko": "금월",
+   "ko": "이번 달 / 금월",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "今月の売り上げはよくない。",
@@ -208,7 +222,9 @@
    "surface": "こんな",
    "kana": "こんな",
    "meaning": "这样的",
-   "ko": "未标注对应（待核对）",
+   "ko": "이런（这样的）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "词",
    "ex": {
     "ja": "こんな本を読んで何になるのか。",
@@ -221,7 +237,9 @@
    "surface": "今晩",
    "kana": "こんばん",
    "meaning": "今晚",
-   "ko": "未标注对应（待核对）",
+   "ko": "오늘 밤",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "今晩はパーティーがあるのかなあ。",
@@ -234,7 +252,9 @@
    "surface": "さあ",
    "kana": "さあ",
    "meaning": "来吧；这个嘛",
-   "ko": "未标注对应（待核对）",
+   "ko": "자 / 글쎄",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "感叹词",
    "ex": {
     "ja": "さあ、パーティーをおしまいにしよう。",
@@ -247,7 +267,9 @@
    "surface": "財布",
    "kana": "さいふ",
    "meaning": "钱包",
-   "ko": "未标注对应（待核对）",
+   "ko": "지갑（钱包，钱夹，钱袋） / 손지갑（小钱包）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "サイフがないのにふと気がついた。",
@@ -260,7 +282,9 @@
    "surface": "先",
    "kana": "さき",
    "meaning": "前面；先前",
-   "ko": "未标注对应（待核对）",
+   "ko": "앞 / 먼저",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词/连体词",
    "ex": {
     "ja": "それから先の話を聞きたい。",
@@ -273,7 +297,9 @@
    "surface": "咲く",
    "kana": "さく",
    "meaning": "开花",
-   "ko": "未标注对应（待核对）",
+   "ko": "꽃이 피다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "チューリップがみごとに咲いた。",
@@ -286,7 +312,9 @@
    "surface": "作文",
    "kana": "さくぶん",
    "meaning": "作文",
-   "ko": "작문",
+   "ko": "작문（作文，写作） / 글짓기（作文，写作）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "作文は書いてしまいましたか。",
@@ -299,7 +327,9 @@
    "surface": "差す",
    "kana": "さす",
    "meaning": "撑（伞）；照射",
-   "ko": "未标注对应（待核对）",
+   "ko": "들다（照射进来，涨，起） / 쓰다（撑，打） / 받치다（撑）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "彼は雨の中を傘もささずに歩きつづけた。",
@@ -312,7 +342,9 @@
    "surface": "雑誌",
    "kana": "ざっし",
    "meaning": "杂志",
-   "ko": "잡지",
+   "ko": "잡지（杂志） / 잡지책（杂志）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "その雑誌はどこで買えますか。",
@@ -325,7 +357,9 @@
    "surface": "砂糖",
    "kana": "さとう",
    "meaning": "糖",
-   "ko": "사탕",
+   "ko": "설탕（糖，砂糖）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "ポットにはあまり砂糖がなかった。",
@@ -338,7 +372,9 @@
    "surface": "さようなら",
    "kana": "さようなら",
    "meaning": "再见",
-   "ko": "未标注对应（待核对）",
+   "ko": "안녕히 가세요 / 안녕히 계세요",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "感叹词",
    "ex": {
     "ja": "では今晩またね、さようなら。",
@@ -351,7 +387,9 @@
    "surface": "再来年",
    "kana": "さらいねん",
    "meaning": "后年",
-   "ko": "未标注对应（待核对）",
+   "ko": "후년（后年） / 내후년（大后年）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/副词",
    "ex": {
     "ja": "祖父は、再来年引退する予定です。",
@@ -359,6 +397,29 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0531",
+  "V0532",
+  "V0533",
+  "V0534",
+  "V0535",
+  "V0536",
+  "V0537",
+  "V0538",
+  "V0539",
+  "V0540",
+  "V0541",
+  "V0542",
+  "V0543",
+  "V0544",
+  "V0545",
+  "V0546"
+ ],
+ "extension_vocab_ids": [
+  "V0547",
+  "V0548",
+  "V0549"
  ],
  "grammar": [
   {
@@ -401,7 +462,7 @@
    ],
    "jlpt": "N5",
    "ko_equiv": "에（시간）",
-   "ko_diff": "韩语 에 与 に 对应，但韩语「내일」后也可加 에；日语相对时间词后一般不加 に，需注意。",
+   "ko_diff": "韩语时点可用 에，日语具体时点常用 に；两种语言的相对时间词是否加助词都需看实际用法，不可机械对应。",
    "notes": "",
    "tags": [
     "particle",
@@ -410,7 +471,7 @@
    "source_ids": [
     "S900"
    ],
-   "review_status": "ai_draft",
+   "review_status": "needs_review",
    "provenance": "OpenJLPT CC-BY-SA-4.0",
    "license": "CC-BY-SA-4.0"
   },

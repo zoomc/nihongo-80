@@ -1,6 +1,6 @@
-# Nihongo 150 · 当前项目入口（v5.1）
+# Nihongo 150 · 当前项目入口（v6）
 
-先读 `HANDOFF.md`、`reports/v5_review_codex.md`、`CONTRACTS.md`（末尾 v5.1 修订优先于旧版示例）。当前目录名 nihongo-80 是历史名称，课程是 150 天。
+先读 `HANDOFF.md`、`reports/v6_completion.md`、`CONTRACTS.md`（末尾 v6 修订优先于旧版示例）。当前目录名 nihongo-80 是历史名称，课程是 150 天。
 
 ## 产品与学习者
 
@@ -32,9 +32,9 @@ python3 scripts/session_v5.py daily --day N
 python3 scripts/nh80.py start-day N
 ```
 
-读 STATE、当天 brief、curriculum 与数据库（只读）。先给页面链接，等学生看完；答疑、抽词造句、语法造两句、批改十句翻译。网页预算 42 分钟，会话 18 分钟，听力已包含在 42 分钟内。当天精确内容和时间只取课程 blocks，不使用旧 80 天模板。
+读 STATE、当天 brief、curriculum 与数据库（只读）。先给页面链接，等学生看完；答疑、抽词造句、语法造两句、批改三句必做翻译，其余七句拓展。网页预算 42 分钟，会话 18 分钟，听力已包含在 42 分钟内。当天精确内容和时间只取课程 blocks，不使用旧 80 天模板。
 
-网页提交只代表原始作答保存。云端拉取要使用本机密钥（禁止显示或提交），见 `nh80.py pull-cloud --help`。句子草稿拉取后在 days/day-NNN/web-drafts.json，需教师批改。写 report 后再 finish-day；未达标记录 incomplete，不降低难度。
+网页提交只代表原始作答保存。云端拉取要使用本机密钥（禁止显示或提交），见 `nh80.py pull-cloud --help`。句子草稿拉取后在 days/day-NNN/web-drafts.json，需教师批改。教师填 output-review.json 并运行 confirm-output 后，写 report 再 finish-day；未达标记录 incomplete，不降低难度。
 
 ## 不可违反
 
@@ -47,4 +47,4 @@ python3 scripts/nh80.py start-day N
 
 ## 角色
 
-agents/teacher.md / examiner.md / reviewer.md / director.md 仅作为教师、考官、复习官、总监职责参考。其旧时间块和回传码流程不覆盖本文件与 v5.1 契约。数据评分继续按 CONTRACTS 的掌握门控执行。
+agents/teacher.md / examiner.md / reviewer.md / director.md 仅作为教师、考官、复习官、总监职责参考。其旧时间块和回传码流程不覆盖本文件与 v6 契约。数据评分继续按 CONTRACTS 的掌握门控执行。

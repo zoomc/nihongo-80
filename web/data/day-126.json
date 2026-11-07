@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "済ませる",
    "kana": "すませる",
    "meaning": "做完；办完",
-   "ko": "未标注对应（待核对）",
+   "ko": "끝내다 / 마치다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "私はまだ朝食を済ませていません。",
@@ -130,7 +132,9 @@
    "surface": "鋭い",
    "kana": "するどい",
    "meaning": "尖锐；敏锐",
-   "ko": "未标注对应（待核对）",
+   "ko": "거칠다（尖锐） / 날카롭다（尖锐，敏锐） / 뾰족하다（尖，尖锐）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "ここに鋭い痛みがあります。",
@@ -143,7 +147,9 @@
    "surface": "せい",
    "kana": "せい",
    "meaning": "缘故；因为",
-   "ko": "未标注对应（待核对）",
+   "ko": "탓 / 때문",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "あなたの頭痛は過労のせいだ。",
@@ -156,7 +162,9 @@
    "surface": "性",
    "kana": "せい",
    "meaning": "性；性质",
-   "ko": "성",
+   "ko": "성（性）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "習い性となる。",
@@ -169,7 +177,9 @@
    "surface": "正",
    "kana": "せい",
    "meaning": "正；正确",
-   "ko": "정",
+   "ko": "정（正） / 정-（正）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/连体词",
    "ex": {
     "ja": "彼の言ったことは全て正しかった。",
@@ -182,7 +192,9 @@
    "surface": "背",
    "kana": "せい",
    "meaning": "身高",
-   "ko": "未标注对应（待核对）",
+   "ko": "키",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "弟は私より背が高いです。",
@@ -195,7 +207,9 @@
    "surface": "税",
    "kana": "ぜい",
    "meaning": "税",
-   "ko": "세",
+   "ko": "세금",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词/后缀",
    "ex": {
     "ja": "タバコにかけられている税は高い。",
@@ -208,7 +222,9 @@
    "surface": "性格",
    "kana": "せいかく",
    "meaning": "性格",
-   "ko": "성격",
+   "ko": "성격（性格）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "あいつもアバウトな性格だよな。",
@@ -221,7 +237,9 @@
    "surface": "正確",
    "kana": "せいかく",
    "meaning": "正确；准确",
-   "ko": "정확",
+   "ko": "정확（正确）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "な形容词/名词",
    "ex": {
     "ja": "この時計の時間は正確だ。",
@@ -234,7 +252,9 @@
    "surface": "世紀",
    "kana": "せいき",
    "meaning": "世纪",
-   "ko": "세기",
+   "ko": "세기（世纪）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼は１９世紀に生まれた。",
@@ -247,7 +267,9 @@
    "surface": "請求",
    "kana": "せいきゅう",
    "meaning": "索要；请求",
-   "ko": "청구",
+   "ko": "청구 / 요청",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "われわれは彼の借金の支払いを請求した。",
@@ -261,6 +283,8 @@
    "kana": "ぜいきん",
    "meaning": "税金",
    "ko": "세금",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "新しい税金がワインにかせられた。",
@@ -273,7 +297,9 @@
    "surface": "清潔",
    "kana": "せいけつ",
    "meaning": "清洁；干净",
-   "ko": "청결",
+   "ko": "청결（清洁，洁净）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "な形容词/名词",
    "ex": {
     "ja": "彼女はいつも髪を清潔にしている。",
@@ -286,7 +312,9 @@
    "surface": "制限",
    "kana": "せいげん",
    "meaning": "限制",
-   "ko": "제한",
+   "ko": "제한（限制，限定）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "彼女はやせるために食事を制限した。",
@@ -299,7 +327,9 @@
    "surface": "成功",
    "kana": "せいこう",
    "meaning": "成功",
-   "ko": "성공",
+   "ko": "성공（成功）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "成功。おめでとうございます。",
@@ -312,7 +342,9 @@
    "surface": "正式",
    "kana": "せいしき",
    "meaning": "正式",
-   "ko": "정식",
+   "ko": "정식（正式）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "な形容词/连体词/名词",
    "ex": {
     "ja": "彼は息子を正式の相続人と認めた。",
@@ -325,7 +357,9 @@
    "surface": "精神",
    "kana": "せいしん",
    "meaning": "精神",
-   "ko": "정신",
+   "ko": "정신（精神） / 정신머리（精神，脑子）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "精神は肉体とともに発達させるべきである。",
@@ -338,7 +372,9 @@
    "surface": "成人",
    "kana": "せいじん",
    "meaning": "成年人",
-   "ko": "성인",
+   "ko": "성인（成人，成年人） / 어른（成年人，大人）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "その映画は成人しかみられない。",
@@ -351,7 +387,9 @@
    "surface": "精々",
    "kana": "せいぜい",
    "meaning": "充其量；尽量",
-   "ko": "未标注对应（待核对）",
+   "ko": "기껏해야 / 힘껏",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "副词",
    "ex": {
     "ja": "狭い部屋をせいぜい広く使った。",
@@ -364,7 +402,9 @@
    "surface": "成績",
    "kana": "せいせき",
    "meaning": "成绩",
-   "ko": "성적",
+   "ko": "성적（成绩）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "学校の成績は普通でしたよ。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V2245",
+  "V2246",
+  "V2247",
+  "V2248",
+  "V2249",
+  "V2250",
+  "V2251",
+  "V2252",
+  "V2253",
+  "V2254",
+  "V2255",
+  "V2256",
+  "V2257",
+  "V2258",
+  "V2259",
+  "V2260"
+ ],
+ "extension_vocab_ids": [
+  "V2261",
+  "V2262",
+  "V2263",
+  "V2264"
  ],
  "grammar": [
   {
@@ -670,21 +734,22 @@
    ]
   },
   {
-   "qid": "Q-126-V5-bebd2f64e247",
-   "prompt": "「性」是什么意思？",
+   "qid": "A126-1-240114ad6671",
+   "prompt": "旅行に行くのは何人ですか。",
    "options": [
-    "化学",
-    "性；性质",
-    "冰箱",
-    "公告；告示"
+    "一人",
+    "三人",
+    "四人",
+    "二人"
    ],
-   "h": "6a1c8e98",
+   "h": "946fce83",
    "oh": [
-    "c55e335d",
-    "6a1c8e98",
-    "13d6ddba",
-    "21fa3d24"
-   ]
+    "1ccec6bf",
+    "1aeca4ba",
+    "fd895380",
+    "946fce83"
+   ],
+   "passage": "旅行の予定を立てたときは三人でしたが、一人が行けなくなりました。"
   }
  ],
  "listening_material": null

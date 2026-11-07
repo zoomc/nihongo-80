@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "どうぞ",
    "kana": "どうぞ",
    "meaning": "请",
-   "ko": "未标注对应（待核对）",
+   "ko": "어서（请，快）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "副词",
    "ex": {
     "ja": "写真をどうぞ見せて下さい。",
@@ -130,7 +132,9 @@
    "surface": "どうぞよろしく",
    "kana": "どうぞよろしく",
    "meaning": "请多关照",
-   "ko": "未标注对应（待核对）",
+   "ko": "잘 부탁합니다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "惯用表达",
    "ex": {
     "ja": "どうぞよろしく。",
@@ -143,7 +147,9 @@
    "surface": "動物",
    "kana": "どうぶつ",
    "meaning": "动物",
-   "ko": "동물",
+   "ko": "동물（动物）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私はその動物の名前を知っている。",
@@ -156,7 +162,9 @@
    "surface": "どうも",
    "kana": "どうも",
    "meaning": "谢谢；似乎",
-   "ko": "未标注对应（待核对）",
+   "ko": "고맙습니다 / 아무래도",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "感叹词",
    "ex": {
     "ja": "あの二人はどうもできているらしい。",
@@ -169,7 +177,9 @@
    "surface": "遠い",
    "kana": "とおい",
    "meaning": "远",
-   "ko": "未标注对应（待核对）",
+   "ko": "멀다（远）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "それはホテルから遠くありません。",
@@ -182,7 +192,9 @@
    "surface": "十日",
    "kana": "とおか",
    "meaning": "十天；十号",
-   "ko": "未标注对应（待核对）",
+   "ko": "열흘（十天）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ジャックは８月１０日に生まれた。",
@@ -195,7 +207,9 @@
    "surface": "どこ",
    "kana": "どこ",
    "meaning": "哪里",
-   "ko": "未标注对应（待核对）",
+   "ko": "어디（哪里，哪儿）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "代名词",
    "ex": {
     "ja": "あなたはどこでテレビを見ますか。",
@@ -208,7 +222,9 @@
    "surface": "所",
    "kana": "ところ",
    "meaning": "地方",
-   "ko": "未标注对应（待核对）",
+   "ko": "곳 / 장소",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词/副词/后缀",
    "ex": {
     "ja": "どんな所でアルバイトできるの。",
@@ -221,7 +237,9 @@
    "surface": "年",
    "kana": "とし",
    "meaning": "年；年龄",
-   "ko": "未标注对应（待核对）",
+   "ko": "해（年） / 나이（年龄，年纪，岁数） / 춘추（年）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "お年をお聞きしてよろしいでしょうか。",
@@ -234,7 +252,9 @@
    "surface": "どちら",
    "kana": "どちら",
    "meaning": "哪个",
-   "ko": "未标注对应（待核对）",
+   "ko": "어느 쪽",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "代名词",
    "ex": {
     "ja": "二つのうちでどちらが高いですか。",
@@ -247,7 +267,9 @@
    "surface": "どっち",
    "kana": "どっち",
    "meaning": "哪个",
-   "ko": "未标注对应（待核对）",
+   "ko": "어느 쪽（구어）",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "代名词",
    "ex": {
     "ja": "この本とあの本とどっちがやさしい？",
@@ -260,7 +282,9 @@
    "surface": "どなた",
    "kana": "どなた",
    "meaning": "哪位",
-   "ko": "未标注对应（待核对）",
+   "ko": "어느 분",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "代名词",
    "ex": {
     "ja": "「どなたですか」「お母さんよ」",
@@ -273,7 +297,9 @@
    "surface": "隣",
    "kana": "となり",
    "meaning": "旁边；隔壁",
-   "ko": "未标注对应（待核对）",
+   "ko": "옆（旁，旁边） / 옆집（邻居，隔壁）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/连体词",
    "ex": {
     "ja": "あのビルのとなりです。",
@@ -286,7 +312,9 @@
    "surface": "どの",
    "kana": "どの",
    "meaning": "哪个",
-   "ko": "未标注对应（待核对）",
+   "ko": "어느（哪，哪个）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "词",
    "ex": {
     "ja": "これはほかのどの木よりも高い。",
@@ -299,7 +327,9 @@
    "surface": "飛ぶ",
    "kana": "とぶ",
    "meaning": "飞",
-   "ko": "未标注对应（待核对）",
+   "ko": "날다（飞，飞行，飞翔）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "ヒューズが飛んだ。",
@@ -312,7 +342,9 @@
    "surface": "止まる",
    "kana": "とまる",
    "meaning": "停止",
-   "ko": "未标注对应（待核对）",
+   "ko": "멎다（停，停止） / 자다（停，停止） / 그치다（停止，结束）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "ちょうどその時バスが止まった。",
@@ -325,7 +357,9 @@
    "surface": "鳥",
    "kana": "とり",
    "meaning": "鸟",
-   "ko": "未标注对应（待核对）",
+   "ko": "새（鸟）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "なんてきれいな鳥なんだろう。",
@@ -338,7 +372,9 @@
    "surface": "鶏肉",
    "kana": "とりにく",
    "meaning": "鸡肉",
-   "ko": "계육",
+   "ko": "닭고기",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "鶏肉を３ポンド分ください。",
@@ -351,7 +387,9 @@
    "surface": "撮る",
    "kana": "とる",
    "meaning": "拍摄",
-   "ko": "未标注对应（待核对）",
+   "ko": "찍다（拍，拍摄） / 촬영하다（摄影，摄制，拍摄）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "外からなら撮ってもかまいません。",
@@ -364,7 +402,9 @@
    "surface": "取る",
    "kana": "とる",
    "meaning": "拿；取",
-   "ko": "未标注对应（待核对）",
+   "ko": "먹다（得， 取） / 취하다（取，拿，获得，获取，摄取）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "そのお金はいざというときのために取っておくよ。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0668",
+  "V0669",
+  "V0670",
+  "V0671",
+  "V0672",
+  "V0673",
+  "V0674",
+  "V0675",
+  "V0676",
+  "V0677",
+  "V0678",
+  "V0679",
+  "V0680",
+  "V0681",
+  "V0682",
+  "V0683"
+ ],
+ "extension_vocab_ids": [
+  "V0684",
+  "V0685",
+  "V0686",
+  "V0687"
  ],
  "grammar": [
   {
@@ -433,7 +497,7 @@
    "pattern": "〜か（question）",
    "meaning_zh": "…吗？（疑问）",
    "connection": "句子（礼貌体／普通体）+ か",
-   "usage": "把陈述句变成疑问句，礼貌体后直接加 か，句末语调不上扬。",
+   "usage": "在句末加か构成疑问，实际语调会随语境、句型和说话方式变化。",
    "register_note": "口语与书面通用；普通体疑问多用升调，不加 か。",
    "examples": [
     {
@@ -466,7 +530,7 @@
    ],
    "jlpt": "N5",
    "ko_equiv": "-까? / -니?",
-   "ko_diff": "韩语疑问靠句尾或语调，日语礼貌体加 か；日语 か 后语调不上扬，韩语疑问尾则常上扬。",
+   "ko_diff": "韩语可用疑问词尾或语调构成疑问；日语礼貌体常加か，语调也会随交际语境变化。",
    "notes": "",
    "tags": [
     "particle",
@@ -475,7 +539,7 @@
    "source_ids": [
     "S900"
    ],
-   "review_status": "ai_draft",
+   "review_status": "needs_review",
    "provenance": "OpenJLPT CC-BY-SA-4.0",
    "license": "CC-BY-SA-4.0"
   }

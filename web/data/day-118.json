@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "しまった",
    "kana": "しまった",
    "meaning": "糟糕",
-   "ko": "未标注对应（待核对）",
+   "ko": "아차（糟糕） / 아뿔싸（糟糕，坏了）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "感叹词",
    "ex": {
     "ja": "しまった！ウッカリして、携帯電話をお店に忘れてきちゃった。",
@@ -130,7 +132,9 @@
    "surface": "自慢",
    "kana": "じまん",
    "meaning": "自豪；自夸",
-   "ko": "자만",
+   "ko": "자랑 / 자랑하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词/连体词",
    "ex": {
     "ja": "われわれは体力を自慢した。",
@@ -143,7 +147,9 @@
    "surface": "事務",
    "kana": "じむ",
    "meaning": "事务；总务",
-   "ko": "사무",
+   "ko": "사무（业务，事务）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "退職する前に彼は事務を渡した。",
@@ -156,7 +162,9 @@
    "surface": "示す",
    "kana": "しめす",
    "meaning": "表示；出示",
-   "ko": "未标注对应（待核对）",
+   "ko": "뜻하다（代表，表示，意味着） / 표하다（表示，表达） / 내보이다（出示，露出）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "その子は何の恐怖も示さなかった。",
@@ -169,7 +177,9 @@
    "surface": "占める",
    "kana": "しめる",
    "meaning": "占据；占有",
-   "ko": "未标注对应（待核对）",
+   "ko": "점하다（占，占据） / 차지하다（占据，占有）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "ギャンブルで味を占めるとなかなか止められない。",
@@ -182,7 +192,9 @@
    "surface": "霜",
    "kana": "しも",
    "meaning": "霜",
-   "ko": "상",
+   "ko": "서리（霜）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "今朝、地面は霜で覆われていた。",
@@ -195,7 +207,9 @@
    "surface": "じゃあ",
    "kana": "じゃあ",
    "meaning": "那么",
-   "ko": "未标注对应（待核对）",
+   "ko": "그럼",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "接续词",
    "ex": {
     "ja": "「安いですね。じゃあ10ヤードください」小娘が答えた。",
@@ -208,7 +222,9 @@
    "surface": "借金",
    "kana": "しゃっきん",
    "meaning": "欠债；借款",
-   "ko": "未标注对应（待核对）",
+   "ko": "빚 / 차입금",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "君は借金を払うべきだ。",
@@ -221,7 +237,9 @@
    "surface": "しゃべる",
    "kana": "しゃべる",
    "meaning": "说话；闲聊",
-   "ko": "未标注对应（待核对）",
+   "ko": "말하다 / 수다 떨다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(五段)/他动词/自动词",
    "ex": {
     "ja": "つい彼が病気だということをしゃべってしまった。",
@@ -235,6 +253,8 @@
    "kana": "しゅう",
    "meaning": "州",
    "ko": "주",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "南部の州へ冬期に旅行すると、今旅行するよりも料金が高くなります。",
@@ -247,7 +267,9 @@
    "surface": "週",
    "kana": "しゅう",
    "meaning": "周；星期",
-   "ko": "주",
+   "ko": "주（一周，一星期） / 주일（周，星期）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "それはその前の週に買ったものでした。",
@@ -260,7 +282,9 @@
    "surface": "銃",
    "kana": "じゅう",
    "meaning": "枪；枪支",
-   "ko": "총",
+   "ko": "총（枪）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "警察は簡単に銃を使ってはいけない。",
@@ -273,7 +297,9 @@
    "surface": "周囲",
    "kana": "しゅうい",
    "meaning": "周围；四周",
-   "ko": "주위",
+   "ko": "주위（周围）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/连体词",
    "ex": {
     "ja": "この木は周囲３メートルある。",
@@ -286,7 +312,9 @@
    "surface": "収穫",
    "kana": "しゅうかく",
    "meaning": "收获；收成",
-   "ko": "수확",
+   "ko": "수확（收获，收成，产量） / 소출（收成，产量）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "私たちはみな収穫の手伝いをした。",
@@ -299,7 +327,9 @@
    "surface": "週間",
    "kana": "しゅうかん",
    "meaning": "周；星期",
-   "ko": "주간",
+   "ko": "주간（周，星期） / 주일（周，星期）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "もう２週間たったら帰ります。",
@@ -312,7 +342,9 @@
    "surface": "宗教",
    "kana": "しゅうきょう",
    "meaning": "宗教",
-   "ko": "종교",
+   "ko": "종교（宗教）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "その両国は宗教と文化が違っている。",
@@ -325,7 +357,9 @@
    "surface": "重視",
    "kana": "じゅうし",
    "meaning": "重视",
-   "ko": "중시",
+   "ko": "중시（重视）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "人生においてお金を重視する人もいる。",
@@ -338,7 +372,9 @@
    "surface": "ジュース",
    "kana": "ジュース",
    "meaning": "果汁；饮料",
-   "ko": "未标注对应（待核对）",
+   "ko": "주스（汁，果汁） / 과실음료（果汁饮料）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "私はニワトコジュースが好きだ。",
@@ -351,7 +387,9 @@
    "surface": "修正",
    "kana": "しゅうせい",
    "meaning": "修正；订正",
-   "ko": "수정",
+   "ko": "수정（修正，修改）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "彼は自説を修正した。",
@@ -364,7 +402,9 @@
    "surface": "重大",
    "kana": "じゅうだい",
    "meaning": "重大；严重",
-   "ko": "중대",
+   "ko": "중대（重大）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "な形容词/名词",
    "ex": {
     "ja": "彼は重大な発見をした。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V2103",
+  "V2104",
+  "V2105",
+  "V2106",
+  "V2107",
+  "V2108",
+  "V2109",
+  "V2110",
+  "V2111",
+  "V2112",
+  "V2113",
+  "V2114",
+  "V2115",
+  "V2116",
+  "V2117",
+  "V2118"
+ ],
+ "extension_vocab_ids": [
+  "V2119",
+  "V2120",
+  "V2121",
+  "V2122"
  ],
  "grammar": [
   {

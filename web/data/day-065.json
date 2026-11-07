@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "ビル",
    "kana": "ビル",
    "meaning": "大楼",
-   "ko": "未标注对应（待核对）",
+   "ko": "빌딩（大楼，高楼，大厦）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "駅の前に高いビルがあります。",
@@ -130,7 +132,9 @@
    "surface": "昼間",
    "kana": "ひるま",
    "meaning": "白天",
-   "ko": "주간",
+   "ko": "주간（昼间，白天） / 날（白天） / 해（白昼，白天）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "フクロウは昼間は目が見えない。",
@@ -143,7 +147,9 @@
    "surface": "昼休み",
    "kana": "ひるやすみ",
    "meaning": "午休",
-   "ko": "未标注对应（待核对）",
+   "ko": "점심시간",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "お昼休みは、１時間です。",
@@ -156,7 +162,9 @@
    "surface": "拾う",
    "kana": "ひろう",
    "meaning": "捡；接人",
-   "ko": "未标注对应（待核对）",
+   "ko": "줍다（捡，拾）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "ホテルの前で私を車で拾ってください。",
@@ -169,7 +177,9 @@
    "surface": "ファックス",
    "kana": "ファックス",
    "meaning": "传真",
-   "ko": "未标注对应（待核对）",
+   "ko": "팩스（传真，传真机） / 팩시밀리（传真，传真机）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "ＦＡＸで地図を送っていただけませんか。",
@@ -182,7 +192,9 @@
    "surface": "増える",
    "kana": "ふえる",
    "meaning": "增加",
-   "ko": "未标注对应（待核对）",
+   "ko": "늘다（增大，增长，增加） / 붇다（上涨，增加，增多） / 증가되다（被增加）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "大雨で川の水が急に増えた。",
@@ -195,7 +207,9 @@
    "surface": "深い",
    "kana": "ふかい",
    "meaning": "深的",
-   "ko": "未标注对应（待核对）",
+   "ko": "깊다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "湖の深さはどのくらいですか。",
@@ -208,7 +222,9 @@
    "surface": "複雑",
    "kana": "ふくざつ",
    "meaning": "复杂",
-   "ko": "복잡",
+   "ko": "착잡（复杂，烦杂，心烦意乱，心乱如麻）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "な形容词/名词",
    "ex": {
     "ja": "どのぐらい複雑なのだろうか。",
@@ -222,6 +238,8 @@
    "kana": "ふくしゅう",
    "meaning": "复习",
    "ko": "복습",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "その課の復習をしましたか。",
@@ -234,7 +252,9 @@
    "surface": "部長",
    "kana": "ぶちょう",
    "meaning": "部长；部门经理",
-   "ko": "부장",
+   "ko": "부장（部长）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "社長は新しい部長を任命した。",
@@ -247,7 +267,9 @@
    "surface": "普通",
    "kana": "ふつう",
    "meaning": "普通；通常",
-   "ko": "보통",
+   "ko": "보통（普通，一般） / 일반（普通） / 통상（通常，平常）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私はふつう自転車で通学します。",
@@ -260,7 +282,9 @@
    "surface": "ぶどう",
    "kana": "ぶどう",
    "meaning": "葡萄",
-   "ko": "未标注对应（待核对）",
+   "ko": "포도",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私たちはぶどうをたくさん手に入れた。",
@@ -273,7 +297,9 @@
    "surface": "太る",
    "kana": "ふとる",
    "meaning": "发胖",
-   "ko": "未标注对应（待核对）",
+   "ko": "붇다（长胖，发胖） / 찌다（发胖，长膘） / 살찌다（长胖，发胖）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "あまり太ったのでカラーの前が合わなかった。",
@@ -286,7 +312,9 @@
    "surface": "布団",
    "kana": "ふとん",
    "meaning": "被褥",
-   "ko": "未标注对应（待核对）",
+   "ko": "자리（被褥） / 이부자리（被褥，铺盖）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "布団をたたみなさい。",
@@ -299,7 +327,9 @@
    "surface": "舟",
    "kana": "ふね",
    "meaning": "船；小船",
-   "ko": "未标注对应（待核对）",
+   "ko": "배 / 작은 배",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "船は３時に出ることになっている。",
@@ -312,7 +342,9 @@
    "surface": "不便",
    "kana": "ふべん",
    "meaning": "不方便",
-   "ko": "불편",
+   "ko": "불편（不便，不方便）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/な形容词",
    "ex": {
     "ja": "もし電話がなければ、不便だろう。",
@@ -325,7 +357,9 @@
    "surface": "踏む",
    "kana": "ふむ",
    "meaning": "踩",
-   "ko": "未标注对应（待核对）",
+   "ko": "딛다（踩，踏） / 밟다（踩）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "足を踏むつもりはなかったのです。",
@@ -338,7 +372,9 @@
    "surface": "降り出す",
    "kana": "ふりだす",
    "meaning": "下起来",
-   "ko": "未标注对应（待核对）",
+   "ko": "내리기 시작하다",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "その上雨が降り出している。",
@@ -351,7 +387,9 @@
    "surface": "プレゼント",
    "kana": "プレゼント",
    "meaning": "礼物",
-   "ko": "未标注对应（待核对）",
+   "ko": "선물（礼物）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "ハーモニカはお父さんからのプレゼントですか。",
@@ -364,7 +402,9 @@
    "surface": "文化",
    "kana": "ぶんか",
    "meaning": "文化",
-   "ko": "문화",
+   "ko": "문화（文化）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "私はギリシャ文化について学んだ。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V1331",
+  "V1332",
+  "V1333",
+  "V1334",
+  "V1335",
+  "V1336",
+  "V1337",
+  "V1338",
+  "V1339",
+  "V1340",
+  "V1341",
+  "V1342",
+  "V1343",
+  "V1344",
+  "V1345",
+  "V1346"
+ ],
+ "extension_vocab_ids": [
+  "V1347",
+  "V1348",
+  "V1349",
+  "V1350"
  ],
  "grammar": [
   {

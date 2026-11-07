@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "踊る",
    "kana": "おどる",
    "meaning": "跳舞",
-   "ko": "未标注对应（待核对）",
+   "ko": "춤추다（跳舞） / 무용하다（跳舞）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "なぜ彼と踊らなかったの？",
@@ -130,7 +132,9 @@
    "surface": "驚く",
    "kana": "おどろく",
    "meaning": "吃惊",
-   "ko": "未标注对应（待核对）",
+   "ko": "놀라다（惊吓，吃惊）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "母はそのニュースを聞いて驚いた。",
@@ -143,7 +147,9 @@
    "surface": "お祭り",
    "kana": "おまつり",
    "meaning": "祭典；庙会",
-   "ko": "未标注对应（待核对）",
+   "ko": "축제",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "お祭りでロブスターを食べました。",
@@ -156,7 +162,9 @@
    "surface": "お見舞い",
    "kana": "おみまい",
    "meaning": "探望",
-   "ko": "未标注对应（待核对）",
+   "ko": "병문안",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼女のお見舞いに行こうよ。",
@@ -169,7 +177,9 @@
    "surface": "お土産",
    "kana": "おみやげ",
    "meaning": "土特产；伴手礼",
-   "ko": "未标注对应（待核对）",
+   "ko": "기념품 / 특산품",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "これは北海道からのお土産です。",
@@ -182,7 +192,9 @@
    "surface": "思い出す",
    "kana": "おもいだす",
    "meaning": "想起",
-   "ko": "未标注对应（待核对）",
+   "ko": "나다（想起，想到） / 기억나다（记起，想起） / 상기하다（想起，记起）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "あなたを見るとお兄さんを思い出します。",
@@ -195,7 +207,9 @@
    "surface": "思う",
    "kana": "おもう",
    "meaning": "想；认为",
-   "ko": "未标注对应（待核对）",
+   "ko": "느끼다（认为，觉得，感到） / 여기다（认为，看作） / 생각하다（想，思考）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "晴れだと思うよ。",
@@ -208,7 +222,9 @@
    "surface": "おもちゃ",
    "kana": "おもちゃ",
    "meaning": "玩具",
-   "ko": "未标注对应（待核对）",
+   "ko": "노리개（玩具） / 노리갯감（玩具）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "あのおもちゃは木で作られている。",
@@ -221,7 +237,9 @@
    "surface": "表",
    "kana": "おもて",
    "meaning": "正面；表面",
-   "ko": "未标注对应（待核对）",
+   "ko": "겉（外面，表面，表） / 밖（表，表面） / 거죽（皮，表皮，表面）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "この紙はどちらが表だか見分けがつかない。",
@@ -234,7 +252,9 @@
    "surface": "親",
    "kana": "おや",
    "meaning": "父母",
-   "ko": "未标注对应（待核对）",
+   "ko": "부모（父母） / 어버이（父母）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私たちは親をあてにしてはいけない。",
@@ -247,7 +267,9 @@
    "surface": "泳ぎ方",
    "kana": "およぎかた",
    "meaning": "游法",
-   "ko": "未标注对应（待核对）",
+   "ko": "수영하는 방법",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "君に泳ぎ方を教えよう。",
@@ -260,7 +282,9 @@
    "surface": "下りる",
    "kana": "おりる",
    "meaning": "下来；下车",
-   "ko": "未标注对应（待核对）",
+   "ko": "나오다（下来，出来） / 내려서다（下，下来） / 내려오다（下来）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "一行は、歩いてその山を下りた。",
@@ -273,7 +297,9 @@
    "surface": "折る",
    "kana": "おる",
    "meaning": "折断；折叠",
-   "ko": "未标注对应（待核对）",
+   "ko": "꺾다（折，折断） / 포개다（叠，折叠） / 분지르다（折断，掰断）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "その紙を四つ折りにしなさい。",
@@ -286,7 +312,9 @@
    "surface": "お礼",
    "kana": "おれい",
    "meaning": "道谢",
-   "ko": "未标注对应（待核对）",
+   "ko": "감사 / 사례",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "息子に成り代わってお礼を申し上げます。",
@@ -299,7 +327,9 @@
    "surface": "折れる",
    "kana": "おれる",
    "meaning": "断；折",
-   "ko": "未标注对应（待核对）",
+   "ko": "부러지다（折，折断）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "医者は彼の折れた足をついだ。",
@@ -312,7 +342,9 @@
    "surface": "終わり",
    "kana": "おわり",
    "meaning": "结束",
-   "ko": "未标注对应（待核对）",
+   "ko": "종말（结局，结束，下场）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "さぁ、一日を終わりとしましょう。",
@@ -325,7 +357,9 @@
    "surface": "カーテン",
    "kana": "カーテン",
    "meaning": "窗帘",
-   "ko": "未标注对应（待核对）",
+   "ko": "커튼（窗帘）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "カーテンが風になびいた。",
@@ -338,7 +372,9 @@
    "surface": "海岸",
    "kana": "かいがん",
    "meaning": "海岸",
-   "ko": "해안",
+   "ko": "해안（海岸，海边） / 해변가（海岸，海滨，海边） / 해안가（海岸，海边）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "このバスは、海岸に行きますか。",
@@ -351,7 +387,9 @@
    "surface": "会議室",
    "kana": "かいぎしつ",
    "meaning": "会议室",
-   "ko": "회의실",
+   "ko": "회의실（会议室）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "クラブの会員は会議室に集まった。",
@@ -364,7 +402,9 @@
    "surface": "会場",
    "kana": "かいじょう",
    "meaning": "会场",
-   "ko": "회장",
+   "ko": "회장（会场） / 대회장（大会场）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "私たちは会場の後ろに座った。",
@@ -373,13 +413,37 @@
    "audio": "tts"
   }
  ],
+ "core_vocab_ids": [
+  "V0959",
+  "V0960",
+  "V0961",
+  "V0962",
+  "V0963",
+  "V0964",
+  "V0965",
+  "V0966",
+  "V0967",
+  "V0968",
+  "V0969",
+  "V0970",
+  "V0971",
+  "V0972",
+  "V0973",
+  "V0974"
+ ],
+ "extension_vocab_ids": [
+  "V0975",
+  "V0976",
+  "V0977",
+  "V0978"
+ ],
  "grammar": [
   {
    "id": "G0060",
    "pattern": "N に Vて ほしい / Vないで ほしい",
    "meaning_zh": "希望（别人）做…／希望别…",
    "connection": "動詞 て形 + ほしい；否定 ない形 + で + ほしい；动作主体用 に（或 が）",
-   "usage": "对他人的愿望；不能用于自己（自己用 〜たい G0031）；也不直接对长辈说 てほしい（改用 G0073）",
+   "usage": "てほしい 表说话人希望某事发生，动作主体可以是他人或自然事物；对人直接提出要求时要考虑关系与礼貌程度。",
    "register_note": "てほしい 对平辈或下级用；对上级改用 G0073。",
    "examples": [
     {
@@ -438,7 +502,7 @@
    "source_ids": [
     "S000"
    ],
-   "review_status": "self_reviewed",
+   "review_status": "needs_review",
    "provenance": "self_reviewed",
    "ko_equiv": "-아/어 주기를 바라다",
    "ko_diff": "韩语希望别人做用주기를 바라다，对长辈须加시；日语てほしい不宜直接对长辈说。"

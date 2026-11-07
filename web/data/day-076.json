@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "宛先",
    "kana": "あてさき",
    "meaning": "收件地址；收件人",
-   "ko": "未标注对应（待核对）",
+   "ko": "수신인 / 수신 주소",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "メールの宛先を間違えました。",
@@ -130,7 +132,9 @@
    "surface": "件名",
    "kana": "けんめい",
    "meaning": "（邮件）主题",
-   "ko": "未标注对应（待核对）",
+   "ko": "제목",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "件名には会議の名前を書いてください。",
@@ -143,7 +147,9 @@
    "surface": "添付",
    "kana": "てんぷ",
    "meaning": "附件；附加",
-   "ko": "未标注对应（待核对）",
+   "ko": "첨부（附加，附有，附上，添付）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "見積書をメールに添付しました。",
@@ -156,7 +162,9 @@
    "surface": "返信",
    "kana": "へんしん",
    "meaning": "回信；回复",
-   "ko": "未标注对应（待核对）",
+   "ko": "답신（回信，回复） / 답장（回信，回复） / 회신（回信，回电，回函，回电话，复函）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "メールの返信を待っています。",
@@ -169,7 +177,9 @@
    "surface": "転送",
    "kana": "てんそう",
    "meaning": "转发；转送",
-   "ko": "未标注对应（待核对）",
+   "ko": "전송 / 전달",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "このメールを営業部に転送してください。",
@@ -182,7 +192,9 @@
    "surface": "出張",
    "kana": "しゅっちょう",
    "meaning": "出差",
-   "ko": "未标注对应（待核对）",
+   "ko": "출장（出差）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "来週、大阪へ出張します。",
@@ -195,7 +207,9 @@
    "surface": "勤務",
    "kana": "きんむ",
    "meaning": "工作；任职",
-   "ko": "未标注对应（待核对）",
+   "ko": "근무（工作，上班）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "私は駅前の支社で勤務しています。",
@@ -208,7 +222,9 @@
    "surface": "期限",
    "kana": "きげん",
    "meaning": "期限；到期日",
-   "ko": "未标注对应（待核对）",
+   "ko": "기한（限期，期限）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "提出の期限は明日の午後五時です。",
@@ -221,7 +237,9 @@
    "surface": "窓口",
    "kana": "まどぐち",
    "meaning": "窗口；柜台",
-   "ko": "未标注对应（待核对）",
+   "ko": "창구（窗口，窗洞）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "質問がある方は、三番の窓口へ来てください。",
@@ -234,7 +252,9 @@
    "surface": "受付",
    "kana": "うけつけ",
    "meaning": "接待处；受理",
-   "ko": "未标注对应（待核对）",
+   "ko": "접수（接受，受理）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "受付で名前を書いてください。",
@@ -247,7 +267,9 @@
    "surface": "印鑑",
    "kana": "いんかん",
    "meaning": "印章；图章",
-   "ko": "未标注对应（待核对）",
+   "ko": "인감도장（印鉴图章）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "印鑑を持ってきてください。",
@@ -260,7 +282,9 @@
    "surface": "署名",
    "kana": "しょめい",
    "meaning": "签名",
-   "ko": "未标注对应（待核对）",
+   "ko": "서명（署名，签名）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "ここに署名してください。",
@@ -273,7 +297,9 @@
    "surface": "住民票",
    "kana": "じゅうみんひょう",
    "meaning": "居民票（户籍住址证明）",
-   "ko": "未标注对应（待核对）",
+   "ko": "주민표（거주 증명）",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "住民票の写しを取ります。",
@@ -286,7 +312,9 @@
    "surface": "更新",
    "kana": "こうしん",
    "meaning": "更新；续期",
-   "ko": "未标注对应（待核对）",
+   "ko": "갱신（更新，刷新） / 경신（更新，更改）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "カードの更新は三年ごとです。",
@@ -299,7 +327,9 @@
    "surface": "許可",
    "kana": "きょか",
    "meaning": "许可；批准",
-   "ko": "未标注对应（待核对）",
+   "ko": "허가（许可，批准，准许，应允，应许）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞/サ変",
    "ex": {
     "ja": "許可をもらってから入ってください。",
@@ -312,7 +342,9 @@
    "surface": "対象",
    "kana": "たいしょう",
    "meaning": "对象；适用对象",
-   "ko": "未标注对应（待核对）",
+   "ko": "대상（对象）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "この講座の対象は中学生です。",
@@ -325,7 +357,9 @@
    "surface": "条件",
    "kana": "じょうけん",
    "meaning": "条件",
-   "ko": "未标注对应（待核对）",
+   "ko": "조건（条件）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名詞",
    "ex": {
     "ja": "応募の条件を確認しました。",
@@ -338,7 +372,9 @@
    "surface": "手数料",
    "kana": "てすうりょう",
    "meaning": "手续费",
-   "ko": "未标注对应（待核对）",
+   "ko": "수수료（手续费）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名詞",
    "ex": {
     "ja": "手数料は一通三百円です。",
@@ -351,7 +387,9 @@
    "surface": "代理",
    "kana": "だいり",
    "meaning": "代理；代理人",
-   "ko": "未标注对应（待核对）",
+   "ko": "대리（代理） / 서리（代理）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名詞",
    "ex": {
     "ja": "代理の方が来る場合は、委任状が必要です。",
@@ -364,7 +402,9 @@
    "surface": "家賃",
    "kana": "やちん",
    "meaning": "房租",
-   "ko": "未标注对应（待核对）",
+   "ko": "방세（房租） / 집세（房租）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名詞",
    "ex": {
     "ja": "家賃は毎月二十五日に払います。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0274",
+  "V0275",
+  "V0276",
+  "V0277",
+  "V0278",
+  "V0279",
+  "V0280",
+  "V0281",
+  "V0282",
+  "V0283",
+  "V0284",
+  "V0285",
+  "V0286",
+  "V0287",
+  "V0288",
+  "V0289"
+ ],
+ "extension_vocab_ids": [
+  "V0290",
+  "V0291",
+  "V0292",
+  "V0293"
  ],
  "grammar": [
   {

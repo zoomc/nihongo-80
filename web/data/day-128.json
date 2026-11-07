@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "世間",
    "kana": "せけん",
    "meaning": "世间；社会",
-   "ko": "세간",
+   "ko": "세간（世间） / 세상（世上，世间）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼は世間でいう音楽の真の愛好者だ。",
@@ -130,7 +132,9 @@
    "surface": "説",
    "kana": "せつ",
    "meaning": "学说",
-   "ko": "설",
+   "ko": "설 / 학설",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私はこの説を信じることは出来ない。",
@@ -143,7 +147,9 @@
    "surface": "設計",
    "kana": "せっけい",
    "meaning": "设计",
-   "ko": "설계",
+   "ko": "설계（设计）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "私の設計にしたがって、作ってもらいました。",
@@ -156,7 +162,9 @@
    "surface": "絶対",
    "kana": "ぜったい",
    "meaning": "绝对",
-   "ko": "절대",
+   "ko": "절대（绝对） / 절대로（绝对，绝）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "连体词",
    "ex": {
     "ja": "アーア、絶対うまくいくと思ったのになあ。",
@@ -169,7 +177,9 @@
    "surface": "セット",
    "kana": "セット",
    "meaning": "一套；设置",
-   "ko": "未标注对应（待核对）",
+   "ko": "세트 / 설정",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "目覚ましを７時にセットしよう。",
@@ -182,7 +192,9 @@
    "surface": "絶滅",
    "kana": "ぜつめつ",
    "meaning": "灭绝",
-   "ko": "절멸",
+   "ko": "멸종（灭绝，灭种，绝种）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "絶滅は進化の一部である。",
@@ -195,7 +207,9 @@
    "surface": "節約",
    "kana": "せつやく",
    "meaning": "节约",
-   "ko": "절약",
+   "ko": "절약（节约）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "主婦は節約に努めるべきである。",
@@ -208,7 +222,9 @@
    "surface": "責める",
    "kana": "せめる",
    "meaning": "责备",
-   "ko": "未标注对应（待核对）",
+   "ko": "책하다（责备，训斥，斥责） / 책망하다（责备，训斥，指责、数落）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "彼はうそをついたと彼女を責めた。",
@@ -221,7 +237,9 @@
    "surface": "善",
    "kana": "ぜん",
    "meaning": "善；善行",
-   "ko": "선",
+   "ko": "선（善，善行）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "競争それ自体は善でも悪でもない。",
@@ -234,7 +252,9 @@
    "surface": "全",
    "kana": "ぜん",
    "meaning": "全；整个",
-   "ko": "전",
+   "ko": "전（全） / 모든（全，所有）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "前缀",
    "ex": {
     "ja": "全新聞がその事件を大きく取り上げた。",
@@ -247,7 +267,9 @@
    "surface": "全員",
    "kana": "ぜんいん",
    "meaning": "全体成员；所有人",
-   "ko": "전원",
+   "ko": "전원 / 모든 사람",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "学生のほとんど全員英語が好きだ。",
@@ -260,7 +282,9 @@
    "surface": "専攻",
    "kana": "せんこう",
    "meaning": "专业；专攻",
-   "ko": "전공",
+   "ko": "전공（专业，专攻，主修）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词/连体词",
    "ex": {
     "ja": "私はフランス語を専攻するつもりです。",
@@ -273,7 +297,9 @@
    "surface": "全国",
    "kana": "ぜんこく",
    "meaning": "全国",
-   "ko": "전국",
+   "ko": "전국（全国）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "その報道は全国に行き渡った。",
@@ -286,7 +312,9 @@
    "surface": "先日",
    "kana": "せんじつ",
    "meaning": "前几天",
-   "ko": "未标注对应（待核对）",
+   "ko": "며칠 전",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "先日小学校のクラス会に出席した。",
@@ -299,7 +327,9 @@
    "surface": "前者",
    "kana": "ぜんしゃ",
    "meaning": "前者",
-   "ko": "전자",
+   "ko": "전자（前者）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "前者より後者の方がいい。",
@@ -312,7 +342,9 @@
    "surface": "選手",
    "kana": "せんしゅ",
    "meaning": "选手；运动员",
-   "ko": "선수",
+   "ko": "선수（选手，运动员）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "アキラは上手なテニス選手です。",
@@ -325,7 +357,9 @@
    "surface": "前進",
    "kana": "ぜんしん",
    "meaning": "前进",
-   "ko": "전진",
+   "ko": "전진（前进）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "彼は前進も後退もすまいと決めた。",
@@ -338,7 +372,9 @@
    "surface": "センター",
    "kana": "センター",
    "meaning": "中心；中心站",
-   "ko": "未标注对应（待核对）",
+   "ko": "센터（中场，中锋，场地中心）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "学生センターは話をするのに良いところだ。",
@@ -352,6 +388,8 @@
    "kana": "ぜんたい",
    "meaning": "整体；全部",
    "ko": "전체",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "名词/连体词/副词",
    "ex": {
     "ja": "私はその話の全体を知っている。",
@@ -364,7 +402,9 @@
    "surface": "選択",
    "kana": "せんたく",
    "meaning": "选择",
-   "ko": "선택",
+   "ko": "선택（选择）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "人生における難しさは選択である。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V2279",
+  "V2280",
+  "V2281",
+  "V2282",
+  "V2283",
+  "V2284",
+  "V2285",
+  "V2286",
+  "V2287",
+  "V2288",
+  "V2289",
+  "V2290",
+  "V2291",
+  "V2292",
+  "V2293",
+  "V2294"
+ ],
+ "extension_vocab_ids": [
+  "V2295",
+  "V2296",
+  "V2297",
+  "V2298"
  ],
  "grammar": [
   {

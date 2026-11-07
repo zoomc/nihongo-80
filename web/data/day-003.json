@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "9 个新词；实际用时超预算时记录未完成"
+   "desc": "9 个必学词；0 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -69,7 +69,9 @@
    "surface": "何",
    "kana": "なん",
    "meaning": "什么",
-   "ko": "未标注对应（待核对）",
+   "ko": "무엇 / 뭐",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "代名詞/疑問詞",
    "ex": {
     "ja": "これは何ですか。",
@@ -82,7 +84,9 @@
    "surface": "いくら",
    "kana": "いくら",
    "meaning": "多少钱",
-   "ko": "未标注对应（待核对）",
+   "ko": "얼마",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名詞/疑問詞",
    "ex": {
     "ja": "これはいくらですか。",
@@ -95,7 +99,9 @@
    "surface": "円",
    "kana": "えん",
    "meaning": "日元（货币单位）",
-   "ko": "未标注对应（待核对）",
+   "ko": "엔（일본 화폐 단위）",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "百円です。",
@@ -108,7 +114,9 @@
    "surface": "今",
    "kana": "いま",
    "meaning": "现在",
-   "ko": "未标注对应（待核对）",
+   "ko": "시방（刚刚，现在） / 이제（现在） / 인제（现在，到现在）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "今、何時ですか。",
@@ -121,7 +129,9 @@
    "surface": "今日",
    "kana": "きょう",
    "meaning": "今天",
-   "ko": "未标注对应（待核对）",
+   "ko": "금일（今日，今天） / 오늘（今天，今日）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "今日は月曜日です。",
@@ -134,7 +144,9 @@
    "surface": "明日",
    "kana": "あした",
    "meaning": "明天",
-   "ko": "未标注对应（待核对）",
+   "ko": "내일（明天）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "明日、学校へ行きます。",
@@ -147,7 +159,9 @@
    "surface": "昨日",
    "kana": "きのう",
    "meaning": "昨天",
-   "ko": "未标注对应（待核对）",
+   "ko": "어제（昨天，昨日） / 어저께（在昨天，在昨日）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "昨日は日曜日でした。",
@@ -160,7 +174,9 @@
    "surface": "朝",
    "kana": "あさ",
    "meaning": "早晨",
-   "ko": "未标注对应（待核对）",
+   "ko": "아침（早上，早晨）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "朝ご飯を食べます。",
@@ -173,7 +189,9 @@
    "surface": "時間",
    "kana": "じかん",
    "meaning": "时间；小时",
-   "ko": "未标注对应（待核对）",
+   "ko": "시간（时间）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "時間がありません。",
@@ -182,6 +200,18 @@
    "audio": "tts"
   }
  ],
+ "core_vocab_ids": [
+  "V0019",
+  "V0020",
+  "V0021",
+  "V0022",
+  "V0023",
+  "V0024",
+  "V0025",
+  "V0026",
+  "V0027"
+ ],
+ "extension_vocab_ids": [],
  "grammar": [
   {
    "id": "G0004",
@@ -225,10 +255,10 @@
    "source_ids": [
     "S000"
    ],
-   "review_status": "self_reviewed",
+   "review_status": "needs_review",
    "provenance": "self_reviewed",
    "ko_equiv": "도",
-   "ko_diff": "韩语도同样替代主格/宾格助词，但能与는/은叠加成도는；日语も不能与は叠加。"
+   "ko_diff": "韩语 도 和日语 も 都可表示追加，常替换主格或宾格助词；叠加其他助词须按具体语境判断。"
   },
   {
    "id": "G0005",

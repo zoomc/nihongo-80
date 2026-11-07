@@ -149,8 +149,9 @@ function indexAnswerKey(raw: unknown): AnswerKey {
   return key;
 }
 
+const BUNDLED_KEY = indexAnswerKey(generatedKey);
 async function loadAnswerKey(env: Env, url: URL): Promise<AnswerKey | null> {
-  return indexAnswerKey(generatedKey);
+  return BUNDLED_KEY;
 }
 
 /** 客观题重判；开放题 / 缺标准答案 / 缺条目 → null（无法重判）。 */
@@ -235,6 +236,9 @@ function parseResults(raw: unknown): IncomingResult[] | string {
 
 async function handlePostEvents(request: Request, env: Env, url: URL): Promise<Response> {
   const origin = okOrigin(request, url);
+  if (!env.NH80_SYNC_KEY) return jsonResponse({ok:false,reason:"no_key"},503,origin);
+  if (!constantTimeEqual(request.headers.get("X-NH80-Key") ?? "",env.NH80_SYNC_KEY))
+    return jsonResponse({ok:false,reason:"unauthorized"},401,origin);
   const rawBody = await request.text();
   if (rawBody.length > MAX_BODY_BYTES) {
     return jsonResponse({ ok: false, reason: "body_too_large" }, 413, origin);
@@ -253,6 +257,16 @@ async function handlePostEvents(request: Request, env: Env, url: URL): Promise<R
   }
   const day = strictInt(body.day, 1, 150);
   if (day === null) return jsonResponse({ ok: false, reason: "bad_day" }, 400, origin);
+
+  const dbHandle = env.DB;
+  if (body.check === true) {
+    // Owner-only deployment smoke check: exercise the D1 binding without storing events.
+    if (!dbHandle) return jsonResponse({ ok: false, reason: "no_db" }, 503, origin);
+    try {
+      await dbHandle.prepare("SELECT id FROM sync_budget WHERE id='total'").first();
+      return jsonResponse({ ok: true, check: true, stored: 0, day }, 200, origin);
+    } catch { return jsonResponse({ ok: false, reason: "db_error" }, 503, origin); }
+  }
 
   const session = typeof body.session === "string" ? body.session.trim() : "";
   if (session.length < 3 || session.length > 96 || !/^[A-Za-z0-9_.:-]+$/.test(session)) {
@@ -283,6 +297,20 @@ async function handlePostEvents(request: Request, env: Env, url: URL): Promise<R
     return { r, entry, correct };
   });
 
+  const metadata = JSON.stringify({review_ratings:body.review_ratings ?? [],sentences:body.sentences ?? []});
+  if (metadata.length > 16384) return jsonResponse({ok:false,reason:"drafts_too_large"},413,origin);
+  const dayKey = new Date().toISOString().slice(0,10);
+  try {
+    await db.prepare("INSERT OR IGNORE INTO sync_budget(id,used) VALUES(?,0),('total',0)").bind(dayKey).run();
+    const daily = await db.prepare("UPDATE sync_budget SET used=used+? WHERE id=? AND used+?<=1000 RETURNING used")
+      .bind(results.length,dayKey,results.length).first();
+    if (!daily) return jsonResponse({ok:false,reason:"daily_budget",local_export:true},429,origin);
+    const total = await db.prepare("UPDATE sync_budget SET used=used+? WHERE id='total' AND used+?<=5000 RETURNING used")
+      .bind(results.length,results.length).first();
+    if (!total) return jsonResponse({ok:false,reason:"storage_budget",local_export:true},429,origin);
+  } catch {
+    return jsonResponse({ok:false,reason:"budget_unavailable",local_export:true},503,origin);
+  }
   const statements: D1PreparedStatement[] = [];
   for (const item of graded) {
     const { r, entry, correct } = item;
@@ -311,7 +339,7 @@ async function handlePostEvents(request: Request, env: Env, url: URL): Promise<R
           entry && typeof entry.capability === "string" ? entry.capability : null,
           correct === null ? null : correct ? 1 : 0,
           payloadHash,
-          JSON.stringify({review_ratings:body.review_ratings ?? [], sentences:body.sentences ?? []}),
+          metadata,
         ),
     );
   }

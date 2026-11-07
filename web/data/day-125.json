@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "姿",
    "kana": "すがた",
    "meaning": "身影；姿态",
-   "ko": "未标注对应（待核对）",
+   "ko": "자태（姿态）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "和服姿の男性は東京ではもうあまり見かけない。",
@@ -130,7 +132,9 @@
    "surface": "スキー",
    "kana": "スキー",
    "meaning": "滑雪",
-   "ko": "未标注对应（待核对）",
+   "ko": "스키（滑雪板）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "あなたは毎年何回スキーに行きますか。",
@@ -143,7 +147,9 @@
    "surface": "救う",
    "kana": "すくう",
    "meaning": "救；拯救",
-   "ko": "未标注对应（待核对）",
+   "ko": "구하다（救，救助，营救）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "その犬は少女の命を救った。",
@@ -156,7 +162,9 @@
    "surface": "優れる",
    "kana": "すぐれる",
    "meaning": "优秀；出色",
-   "ko": "未标注对应（待核对）",
+   "ko": "뛰어나다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "彼女は現代の最も優れた画家の一人である。",
@@ -169,7 +177,9 @@
    "surface": "スケート",
    "kana": "スケート",
    "meaning": "滑冰",
-   "ko": "未标注对应（待核对）",
+   "ko": "스케이트（滑冰）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)",
    "ex": {
     "ja": "とても寒いからスケートが出来るよ。",
@@ -182,7 +192,9 @@
    "surface": "少しも",
    "kana": "すこしも",
    "meaning": "一点也不",
-   "ko": "未标注对应（待核对）",
+   "ko": "조금도（부정과 함께）",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "副词",
    "ex": {
     "ja": "コックさんは少しもかけていない。",
@@ -195,7 +207,9 @@
    "surface": "過ごす",
    "kana": "すごす",
    "meaning": "度过",
-   "ko": "未标注对应（待核对）",
+   "ko": "나다（度过） / 지내다（度过） / 지우다（度过）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "いいクリスマスを過ごしましたか。",
@@ -208,7 +222,9 @@
    "surface": "筋",
    "kana": "すじ",
    "meaning": "筋；情节",
-   "ko": "근",
+   "ko": "힘줄（筋，腱）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "その小説の筋はわからない。",
@@ -221,7 +237,9 @@
    "surface": "勧める",
    "kana": "すすめる",
    "meaning": "劝；推荐",
-   "ko": "未标注对应（待核对）",
+   "ko": "권하다（建议，推荐）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "父は私にピアノを習うように勧めた。",
@@ -234,7 +252,9 @@
    "surface": "進める",
    "kana": "すすめる",
    "meaning": "推进",
-   "ko": "未标注对应（待核对）",
+   "ko": "진행시키다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "その計画は進められている。",
@@ -247,7 +267,9 @@
    "surface": "スター",
    "kana": "スター",
    "meaning": "明星",
-   "ko": "未标注对应（待核对）",
+   "ko": "별（巨星，明星） / 스타（明星）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "スターの野球選手はよくサインを求められる。",
@@ -260,7 +282,9 @@
    "surface": "スタイル",
    "kana": "スタイル",
    "meaning": "风格；体型",
-   "ko": "未标注对应（待核对）",
+   "ko": "체（体格，体型） / 스타일（风格，作风）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ダンスはスタイルをよくするのにいい。",
@@ -273,7 +297,9 @@
    "surface": "スタンド",
    "kana": "スタンド",
    "meaning": "看台；加油站",
-   "ko": "未标注对应（待核对）",
+   "ko": "관람석 / 주유소",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "次のスタンドまでどのくらいありますか。",
@@ -286,7 +312,9 @@
    "surface": "頭痛",
    "kana": "ずつう",
    "meaning": "头痛",
-   "ko": "두통",
+   "ko": "두통（头痛，头疼）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "今日は少し頭痛がする。",
@@ -299,7 +327,9 @@
    "surface": "ずっと",
    "kana": "ずっと",
    "meaning": "一直；…得多",
-   "ko": "未标注对应（待核对）",
+   "ko": "죽（一直） / 쭉（一直） / 그저（一直）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "副词",
    "ex": {
     "ja": "この時計はあれよりもずっと高価だ。",
@@ -312,7 +342,9 @@
    "surface": "すてき",
    "kana": "すてき",
    "meaning": "漂亮；极好",
-   "ko": "未标注对应（待核对）",
+   "ko": "멋지다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容词",
    "ex": {
     "ja": "彼らはすてきな家を持っている。",
@@ -325,7 +357,9 @@
    "surface": "既に",
    "kana": "すでに",
    "meaning": "已经",
-   "ko": "未标注对应（待核对）",
+   "ko": "이미（已经）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "副词",
    "ex": {
     "ja": "私はもう既に朝食を済ませました。",
@@ -338,7 +372,9 @@
    "surface": "すなわち",
    "kana": "すなわち",
    "meaning": "即；也就是说",
-   "ko": "未标注对应（待核对）",
+   "ko": "즉 / 다시 말해",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "接续词",
    "ex": {
     "ja": "すなわち彼はそれをしたくないのだ。",
@@ -351,7 +387,9 @@
    "surface": "スピーチ",
    "kana": "スピーチ",
    "meaning": "演讲",
-   "ko": "未标注对应（待核对）",
+   "ko": "연설",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "私たちは彼にスピーチを頼んだ。",
@@ -364,7 +402,9 @@
    "surface": "全て",
    "kana": "すべて",
    "meaning": "全部",
-   "ko": "未标注对应（待核对）",
+   "ko": "다（全部，最好） / 전부（全部）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "副词",
    "ex": {
     "ja": "人間は全て平等である。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V2225",
+  "V2226",
+  "V2227",
+  "V2228",
+  "V2229",
+  "V2230",
+  "V2231",
+  "V2232",
+  "V2233",
+  "V2234",
+  "V2235",
+  "V2236",
+  "V2237",
+  "V2238",
+  "V2239",
+  "V2240"
+ ],
+ "extension_vocab_ids": [
+  "V2241",
+  "V2242",
+  "V2243",
+  "V2244"
  ],
  "grammar": [
   {

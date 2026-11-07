@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "22 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；6 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "人間",
    "kana": "にんげん",
    "meaning": "人；人类",
-   "ko": "인간",
+   "ko": "인간（人，人类） / 사람（人）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼は人間としてよくできた人です。",
@@ -130,7 +132,9 @@
    "surface": "抜く",
    "kana": "ぬく",
    "meaning": "拔出；胜过",
-   "ko": "未标注对应（待核对）",
+   "ko": "빼내다（抽出，拔出）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "最後まで戦い抜こう。",
@@ -143,7 +147,9 @@
    "surface": "抜ける",
    "kana": "ぬける",
    "meaning": "脱落；漏掉",
-   "ko": "未标注对应（待核对）",
+   "ko": "빠지다（脱落，掉）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "歯が１本抜けた。",
@@ -156,7 +162,9 @@
    "surface": "布",
    "kana": "ぬの",
    "meaning": "布",
-   "ko": "未标注对应（待核对）",
+   "ko": "천（布）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "この布は値段の割に品質が良い。",
@@ -169,7 +177,9 @@
    "surface": "ね",
    "kana": "ね",
    "meaning": "价值；价钱",
-   "ko": "未标注对应（待核对）",
+   "ko": "값 / 가격",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼はその絵にたいへん高い値をつけた。",
@@ -182,7 +192,9 @@
    "surface": "根",
    "kana": "ね",
    "meaning": "根；根性",
-   "ko": "未标注对应（待核对）",
+   "ko": "뿌리（根）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼は根はやさしい男だった。",
@@ -195,7 +207,9 @@
    "surface": "願い",
    "kana": "ねがい",
    "meaning": "愿望；请求",
-   "ko": "未标注对应（待核对）",
+   "ko": "원（愿，愿望，心愿） / 청（请求，委托，嘱托） / 소원（心愿，愿望）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "市長は私達の願いを聞き入れてくれた。",
@@ -208,7 +222,9 @@
    "surface": "願う",
    "kana": "ねがう",
    "meaning": "希望；请求",
-   "ko": "未标注对应（待核对）",
+   "ko": "원하다（希望，想要）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "足元に御用心願います。",
@@ -221,7 +237,9 @@
    "surface": "鼠",
    "kana": "ねずみ",
    "meaning": "老鼠",
-   "ko": "未标注对应（待核对）",
+   "ko": "쥐（老鼠，耗子）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "猫がいなくなるとネズミたちが遊びだす。",
@@ -234,7 +252,9 @@
    "surface": "熱帯",
    "kana": "ねったい",
    "meaning": "热带",
-   "ko": "열대",
+   "ko": "열대（热带）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "あの島は熱帯性気候です。",
@@ -247,7 +267,9 @@
    "surface": "熱中",
    "kana": "ねっちゅう",
    "meaning": "热衷；着迷",
-   "ko": "열중",
+   "ko": "열중（热衷）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "この頃は彼女はテニスに熱中している。",
@@ -260,7 +282,9 @@
    "surface": "年間",
    "kana": "ねんかん",
    "meaning": "一年间；年度",
-   "ko": "연간",
+   "ko": "연간（年，年间）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/副词",
    "ex": {
     "ja": "私はここで１０年間働いている。",
@@ -273,7 +297,9 @@
    "surface": "年中",
    "kana": "ねんじゅう",
    "meaning": "全年；一年到头",
-   "ko": "연중",
+   "ko": "일 년 내내",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私は１年中テニスをします。",
@@ -286,7 +312,9 @@
    "surface": "年代",
    "kana": "ねんだい",
    "meaning": "年代",
-   "ko": "연대",
+   "ko": "연대（年代） / 년대（年代）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "１９９０年代は湾岸戦争で始まった。",
@@ -299,7 +327,9 @@
    "surface": "年齢",
    "kana": "ねんれい",
    "meaning": "年龄",
-   "ko": "연령",
+   "ko": "연령（年龄） / 나이（年龄，年纪，岁数）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼女は私と同じくらいの年齢です。",
@@ -312,7 +342,9 @@
    "surface": "野",
    "kana": "の",
    "meaning": "野地；田野",
-   "ko": "未标注对应（待核对）",
+   "ko": "들판",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "この野バラは甘い香りを放つ。",
@@ -325,7 +357,9 @@
    "surface": "能",
    "kana": "のう",
    "meaning": "能乐",
-   "ko": "未标注对应（待核对）",
+   "ko": "노가쿠（일본 전통극）",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "私は能に興味を持つアメリカ人に会いました。",
@@ -338,7 +372,9 @@
    "surface": "農家",
    "kana": "のうか",
    "meaning": "农户；农家",
-   "ko": "농가",
+   "ko": "농가（农家） / 농삿집（农家）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "農家の子になりたいかね。",
@@ -351,7 +387,9 @@
    "surface": "農業",
    "kana": "のうぎょう",
    "meaning": "农业",
-   "ko": "농업",
+   "ko": "농업（农业）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "農業はその国の経済のもとである。",
@@ -364,7 +402,9 @@
    "surface": "農民",
    "kana": "のうみん",
    "meaning": "农民",
-   "ko": "농민",
+   "ko": "농민（农民）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词/连体词",
    "ex": {
     "ja": "私は貧しい農民に過ぎない。",
@@ -377,7 +417,9 @@
    "surface": "能力",
    "kana": "のうりょく",
    "meaning": "能力",
-   "ko": "능력",
+   "ko": "능력（能力，才能） / 실력（实力，能力）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "彼はすぐれた能力をもっていた。",
@@ -390,7 +432,9 @@
    "surface": "ノー",
    "kana": "ノー",
    "meaning": "不；不行",
-   "ko": "未标注对应（待核对）",
+   "ko": "아니요 / 안 됨",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "感叹词",
    "ex": {
     "ja": "うちの母はノーと言うに決まっている。",
@@ -398,6 +442,32 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V2607",
+  "V2608",
+  "V2609",
+  "V2610",
+  "V2611",
+  "V2612",
+  "V2613",
+  "V2614",
+  "V2615",
+  "V2616",
+  "V2617",
+  "V2618",
+  "V2619",
+  "V2620",
+  "V2621",
+  "V2622"
+ ],
+ "extension_vocab_ids": [
+  "V2623",
+  "V2624",
+  "V2625",
+  "V2626",
+  "V2627",
+  "V2628"
  ],
  "grammar": [
   {

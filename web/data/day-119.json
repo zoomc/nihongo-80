@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "住宅",
    "kana": "じゅうたく",
    "meaning": "住宅；住房",
-   "ko": "주택",
+   "ko": "주택（住宅，住房）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "どちらかといえば木造住宅に住みたい。",
@@ -130,7 +132,9 @@
    "surface": "集団",
    "kana": "しゅうだん",
    "meaning": "集体；群体",
-   "ko": "집단",
+   "ko": "집단（集团，团队，团伙，集体） / 단체（团体，集体）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "君はいまやエリート集団の一員だ。",
@@ -143,7 +147,9 @@
    "surface": "集中",
    "kana": "しゅうちゅう",
    "meaning": "集中",
-   "ko": "집중",
+   "ko": "집중（集中）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词/自动词",
    "ex": {
     "ja": "私は読書に集中していた。",
@@ -156,7 +162,9 @@
    "surface": "収入",
    "kana": "しゅうにゅう",
    "meaning": "收入",
-   "ko": "수입",
+   "ko": "수입（收入）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "収入以上の生活をするな。",
@@ -169,7 +177,9 @@
    "surface": "住民",
    "kana": "じゅうみん",
    "meaning": "居民",
-   "ko": "주민",
+   "ko": "주민（居民） / 거주민（居民）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "住民の半数以上はその計画に反対だ。",
@@ -182,7 +192,9 @@
    "surface": "重要",
    "kana": "じゅうよう",
    "meaning": "重要",
-   "ko": "중요",
+   "ko": "중요（重要）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "な形容词",
    "ex": {
     "ja": "彼女はすぐに出発する事が重要だ。",
@@ -195,7 +207,9 @@
    "surface": "修理",
    "kana": "しゅうり",
    "meaning": "修理",
-   "ko": "수리",
+   "ko": "수리（修理，维修）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "その車は修理する価値がない。",
@@ -208,7 +222,9 @@
    "surface": "主義",
    "kana": "しゅぎ",
    "meaning": "主义；原则",
-   "ko": "주의",
+   "ko": "주의（主义）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "それは私の主義に反する。",
@@ -221,7 +237,9 @@
    "surface": "宿泊",
    "kana": "しゅくはく",
    "meaning": "住宿",
-   "ko": "숙박",
+   "ko": "숙박（住宿，投宿）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "６人宿泊させて欲しい。",
@@ -234,7 +252,9 @@
    "surface": "手術",
    "kana": "しゅじゅつ",
    "meaning": "手术",
-   "ko": "수술",
+   "ko": "수술（手术）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "手術をしなければなりません。",
@@ -247,7 +267,9 @@
    "surface": "首相",
    "kana": "しゅしょう",
    "meaning": "首相；总理",
-   "ko": "수상",
+   "ko": "수상（首相） / 국무총리（国务总理）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "首相の留守中は外務大臣が代理を務める。",
@@ -260,7 +282,9 @@
    "surface": "手段",
    "kana": "しゅだん",
    "meaning": "手段；方法",
-   "ko": "수단",
+   "ko": "수（手段，办法，方法）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "全ての手段が試みられたわけではない。",
@@ -273,7 +297,9 @@
    "surface": "主張",
    "kana": "しゅちょう",
    "meaning": "主张",
-   "ko": "주장",
+   "ko": "주장（主张）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "私たちはその重要性を主張した。",
@@ -286,7 +312,9 @@
    "surface": "出身",
    "kana": "しゅっしん",
    "meaning": "出身；毕业",
-   "ko": "출신",
+   "ko": "출신（出身，身份）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼女は神戸大学の出身です。",
@@ -299,7 +327,9 @@
    "surface": "出版",
    "kana": "しゅっぱん",
    "meaning": "出版",
-   "ko": "출판",
+   "ko": "출판（出版，出刊，刊行） / 출간（出刊，出版）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "ついにその本を出版した。",
@@ -312,7 +342,9 @@
    "surface": "首都",
    "kana": "しゅと",
    "meaning": "首都",
-   "ko": "수도",
+   "ko": "수도（首都） / 서울（首都）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "東京は日本の首都です。",
@@ -325,7 +357,9 @@
    "surface": "主婦",
    "kana": "しゅふ",
    "meaning": "家庭主妇",
-   "ko": "주부",
+   "ko": "주부（主妇，家庭主妇）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "主婦は節約に努めるべきである。",
@@ -338,7 +372,9 @@
    "surface": "主要",
    "kana": "しゅよう",
    "meaning": "主要",
-   "ko": "주요",
+   "ko": "주요（主要）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "な形容词/名词",
    "ex": {
     "ja": "日本の主要作物は米である。",
@@ -351,7 +387,9 @@
    "surface": "需要",
    "kana": "じゅよう",
    "meaning": "需求",
-   "ko": "수요",
+   "ko": "수요（需要，需求）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "これらの品物の需要は多いですか。",
@@ -364,7 +402,9 @@
    "surface": "種類",
    "kana": "しゅるい",
    "meaning": "种类",
-   "ko": "종류",
+   "ko": "종류（种类）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "動物園にはたくさんの種類の動物がいる。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V2123",
+  "V2124",
+  "V2125",
+  "V2126",
+  "V2127",
+  "V2128",
+  "V2129",
+  "V2130",
+  "V2131",
+  "V2132",
+  "V2133",
+  "V2134",
+  "V2135",
+  "V2136",
+  "V2137",
+  "V2138"
+ ],
+ "extension_vocab_ids": [
+  "V2139",
+  "V2140",
+  "V2141",
+  "V2142"
  ],
  "grammar": [
   {
@@ -670,21 +734,22 @@
    ]
   },
   {
-   "qid": "Q-119-V5-4b1695425c8d",
-   "prompt": "「収入」是什么意思？",
+   "qid": "A119-1-b22c1dadce48",
+   "prompt": "紙の収集日はいつですか。",
    "options": [
-    "活；生存",
-    "前面；之前",
-    "上面；上方",
-    "收入"
+    "金曜日",
+    "木曜日",
+    "火曜日",
+    "水曜日"
    ],
-   "h": "2a228884",
+   "h": "7da6f79c",
    "oh": [
-    "31ce6414",
-    "effd3533",
-    "c9d29053",
-    "2a228884"
-   ]
+    "914654df",
+    "7da6f79c",
+    "45fc79a5",
+    "b2ad1458"
+   ],
+   "passage": "今月からごみの収集日が変わります。紙は木曜日、プラスチックは火曜日です。"
   }
  ],
  "listening_material": null

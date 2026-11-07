@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 8,
-   "desc": "14 个新词；实际用时超预算时记录未完成"
+   "desc": "11 个必学词；3 个选学拓展"
   },
   {
    "type": "语法",
@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -122,7 +122,9 @@
    "surface": "製造",
    "kana": "せいぞう",
    "meaning": "制造",
-   "ko": "제조",
+   "ko": "제조（制造）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "その時計はスイスで製造されている。",
@@ -135,7 +137,9 @@
    "surface": "贅沢",
    "kana": "ぜいたく",
    "meaning": "奢侈；奢华",
-   "ko": "未标注对应（待核对）",
+   "ko": "사치（奢侈）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/な形容词",
    "ex": {
     "ja": "彼女はぜいたくに暮らしている。",
@@ -148,7 +152,9 @@
    "surface": "成長",
    "kana": "せいちょう",
    "meaning": "成长",
-   "ko": "성장",
+   "ko": "성장（生长，成长）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "彼女は成長して美しい婦人になった。",
@@ -161,7 +167,9 @@
    "surface": "制度",
    "kana": "せいど",
    "meaning": "制度",
-   "ko": "제도",
+   "ko": "제도（制度）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "この制度には改良の余地がない。",
@@ -174,7 +182,9 @@
    "surface": "青年",
    "kana": "せいねん",
    "meaning": "青年",
-   "ko": "청년",
+   "ko": "청년（青年）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "あの長髪の青年は粗野だ。",
@@ -187,7 +197,9 @@
    "surface": "製品",
    "kana": "せいひん",
    "meaning": "产品；制品",
-   "ko": "제품",
+   "ko": "제품（产品，制品）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "この製品は美しく仕上がっている。",
@@ -200,7 +212,9 @@
    "surface": "政府",
    "kana": "せいふ",
    "meaning": "政府",
-   "ko": "정부",
+   "ko": "정부（政府）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "政府は倒された。",
@@ -213,7 +227,9 @@
    "surface": "生物",
    "kana": "せいぶつ",
    "meaning": "生物",
-   "ko": "생물",
+   "ko": "생물（生物） / 생물체（生物体，生物）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "地球以外の天体に生物はいますか。",
@@ -226,7 +242,9 @@
    "surface": "生命",
    "kana": "せいめい",
    "meaning": "生命",
-   "ko": "생명",
+   "ko": "생명（命，性命，生命） / 생（生，生命） / 목숨（命，生命，性命）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "生命はいつ誕生したのですか。",
@@ -239,7 +257,9 @@
    "surface": "整理",
    "kana": "せいり",
    "meaning": "整理",
-   "ko": "정리",
+   "ko": "정리（整理，收拾，清理）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "部屋の整理をしたほうがいいよ。",
@@ -252,7 +272,9 @@
    "surface": "咳",
    "kana": "せき",
    "meaning": "咳嗽",
-   "ko": "未标注对应（待核对）",
+   "ko": "기침（咳嗽）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "母親はトムの咳のことを心配している。",
@@ -265,7 +287,9 @@
    "surface": "石炭",
    "kana": "せきたん",
    "meaning": "煤",
-   "ko": "석탄",
+   "ko": "석탄（煤，煤炭）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "石炭を石油の代わりに使いました。",
@@ -278,7 +302,9 @@
    "surface": "責任",
    "kana": "せきにん",
    "meaning": "责任",
-   "ko": "책임",
+   "ko": "책임（责任） / 책임감（责任感，责任心）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "けんかは両方に責任がある。",
@@ -291,7 +317,9 @@
    "surface": "石油",
    "kana": "せきゆ",
    "meaning": "石油",
-   "ko": "석유",
+   "ko": "석유（石油）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "彼らは石油を船に積み込んでいる。",
@@ -299,6 +327,24 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V2265",
+  "V2266",
+  "V2267",
+  "V2268",
+  "V2269",
+  "V2270",
+  "V2271",
+  "V2272",
+  "V2273",
+  "V2274",
+  "V2275"
+ ],
+ "extension_vocab_ids": [
+  "V2276",
+  "V2277",
+  "V2278"
  ],
  "grammar": [
   {
@@ -564,11 +610,10 @@
  "listening_material": {
   "id": "M0103",
   "title": "ごみの日・1",
-  "audio_url": "",
-  "audio_kind": "tts",
+  "audio_url": "/audio/M0103.m4a",
+  "audio_kind": "synthetic",
   "transcript": "引っ越してきたばかりなので、管理人さんにごみの出し方を教えてもらいました。燃えるごみを出せるのは月曜日と木曜日です。朝八時までに、建物の裏のごみ置き場に置きます。前の日の夜に出すと、猫が袋を破ることがあるので、必ず当日の朝に出してくださいと言われました。缶や瓶は燃えるごみと一緒にできません。別の日に、種類ごとに分けて出します。段ボールは小さくたたんで、ひもでまとめます。大きな家具を捨てたい場合は、市の窓口に予約しなければなりません。普通のごみ置き場にそのまま置いてはいけません。詳しい説明は、入口の掲示板にも貼ってあります。日本語が難しくてわからないときは、管理人さんに聞いてもいいそうです。私は曜日を忘れないように、冷蔵庫にメモを貼りました。今週は荷物の箱がたくさんあるので、まず段ボールを片付けようと思います。",
-  "duration_sec": 0,
-  "duration_estimate_sec": 72,
+  "duration_sec": 66.2,
   "questions": [
    {
     "qid": "L-127-0-41e7424b01ed",

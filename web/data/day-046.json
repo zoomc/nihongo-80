@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "通う",
    "kana": "かよう",
    "meaning": "通勤；上学",
-   "ko": "未标注对应（待核对）",
+   "ko": "다니다（上班，上学，上）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "マイクはバスで学校に通っている。",
@@ -130,7 +132,9 @@
    "surface": "ガラス",
    "kana": "ガラス",
    "meaning": "玻璃",
-   "ko": "未标注对应（待核对）",
+   "ko": "유리",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "ビールびんはガラスでできている。",
@@ -143,7 +147,9 @@
    "surface": "彼ら",
    "kana": "かれら",
    "meaning": "他们",
-   "ko": "未标注对应（待核对）",
+   "ko": "그네（他们，那些人）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "代名词",
    "ex": {
     "ja": "彼らは二度と会うことはなかった。",
@@ -156,7 +162,9 @@
    "surface": "乾く",
    "kana": "かわく",
    "meaning": "变干",
-   "ko": "未标注对应（待核对）",
+   "ko": "마르다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "そのぬれたシャツはすぐに乾くだろう。",
@@ -169,7 +177,9 @@
    "surface": "代わり",
    "kana": "かわり",
    "meaning": "代替；替代",
-   "ko": "未标注对应（待核对）",
+   "ko": "대신（代，替，代替）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/连体词",
    "ex": {
     "ja": "その代わりにトランプをしようよ。",
@@ -182,7 +192,9 @@
    "surface": "変わる",
    "kana": "かわる",
    "meaning": "改变",
-   "ko": "未标注对应（待核对）",
+   "ko": "바뀌다（改变，转变，更改） / 변하다（变，改变，变成） / 달라지다（变，改变）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "私のE-mailアドレスが変わりました。",
@@ -195,7 +207,9 @@
    "surface": "考える",
    "kana": "かんがえる",
    "meaning": "思考；考虑",
-   "ko": "未标注对应（待核对）",
+   "ko": "생각하다（想，思考）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "あなたは家族の事を考えるべきです。",
@@ -208,7 +222,9 @@
    "surface": "看護婦",
    "kana": "かんごふ",
    "meaning": "女护士",
-   "ko": "간호부",
+   "ko": "간호원（护士）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "なぜ看護婦になりたいのですか。",
@@ -221,7 +237,9 @@
    "surface": "気",
    "kana": "き",
    "meaning": "心；心情",
-   "ko": "未标注对应（待核对）",
+   "ko": "맘（心，心思）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼は親切というよりむしろ気がやさしい。",
@@ -234,7 +252,9 @@
    "surface": "危険",
    "kana": "きけん",
    "meaning": "危险",
-   "ko": "위험",
+   "ko": "위험（危险）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/な形容词",
    "ex": {
     "ja": "危険は見くびるとすぐやってくる。",
@@ -247,7 +267,9 @@
    "surface": "聞こえる",
    "kana": "きこえる",
    "meaning": "听得见",
-   "ko": "未标注对应（待核对）",
+   "ko": "들리다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "車が家の前に止まる音が聞こえた。",
@@ -260,7 +282,9 @@
    "surface": "汽車",
    "kana": "きしゃ",
    "meaning": "火车",
-   "ko": "기차",
+   "ko": "기차（火车，列车）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "汽車はまだ着きません。",
@@ -273,7 +297,9 @@
    "surface": "季節",
    "kana": "きせつ",
    "meaning": "季节",
-   "ko": "계절",
+   "ko": "계절（季节，季） / 철（季节） / 시절（季节，时节）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/连体词",
    "ex": {
     "ja": "秋は読書にもってこいの季節だ。",
@@ -286,7 +312,9 @@
    "surface": "規則",
    "kana": "きそく",
    "meaning": "规则",
-   "ko": "규칙",
+   "ko": "규칙（规则，规定，条例）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "この規則はあなたにも当てはまる。",
@@ -299,7 +327,9 @@
    "surface": "きっと",
    "kana": "きっと",
    "meaning": "一定",
-   "ko": "未标注对应（待核对）",
+   "ko": "필시（一定，肯定，必定，无疑） / 필연（一定，肯定，必定，无疑） / 필히（一定要，必须）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "副词",
    "ex": {
     "ja": "でもよー、オラのおとうさんは良い気しねーよ、きっと。",
@@ -312,7 +342,9 @@
    "surface": "絹",
    "kana": "きぬ",
    "meaning": "丝绸",
-   "ko": "未标注对应（待核对）",
+   "ko": "견（绢，丝绸） / 명주（绸子，丝绸）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "この美しいドレスは絹で出来ている。",
@@ -325,7 +357,9 @@
    "surface": "厳しい",
    "kana": "きびしい",
    "meaning": "严厉；严酷",
-   "ko": "未标注对应（待核对）",
+   "ko": "되다（狠毒，严厉） / 따갑다（严厉，逼人） / 매섭다（凛冽，严酷）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "い形容词",
    "ex": {
     "ja": "厳しい冬になるという話です。",
@@ -338,7 +372,9 @@
    "surface": "決まる",
    "kana": "きまる",
    "meaning": "决定",
-   "ko": "未标注对应（待核对）",
+   "ko": "정해지다",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "いつ始めるのかはまだ決まっていない。",
@@ -351,7 +387,9 @@
    "surface": "君",
    "kana": "きみ",
    "meaning": "你",
-   "ko": "未标注对应（待核对）",
+   "ko": "너（你） / 네（你） / 당신（你）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "代名词",
    "ex": {
     "ja": "宿題を忘れるなんて君は不注意だった。",
@@ -364,7 +402,9 @@
    "surface": "着物",
    "kana": "きもの",
    "meaning": "和服",
-   "ko": "未标注对应（待核对）",
+   "ko": "기모노 / 일본 전통 의복",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "彼女はその着物を着ると変に見える。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V0999",
+  "V1000",
+  "V1001",
+  "V1002",
+  "V1003",
+  "V1004",
+  "V1005",
+  "V1006",
+  "V1007",
+  "V1008",
+  "V1009",
+  "V1010",
+  "V1011",
+  "V1012",
+  "V1013",
+  "V1014"
+ ],
+ "extension_vocab_ids": [
+  "V1015",
+  "V1016",
+  "V1017",
+  "V1018"
  ],
  "grammar": [
   {

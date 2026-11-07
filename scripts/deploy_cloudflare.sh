@@ -35,6 +35,7 @@ esac
 echo "==> [1/3] 本地构建 web/ (v5)"
 python3 "$ROOT/scripts/nh80.py" --root "$ROOT" build
 python3 "$ROOT/scripts/nh80.py" --root "$ROOT" validate
+python3 "$ROOT/scripts/release_guard.py"
 
 # 2) 部署：Worker + assets.directory 一起由 wrangler deploy 发布。
 echo "==> [2/3] wrangler deploy ($ENVIRONMENT)"

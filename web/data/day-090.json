@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "汚染",
    "kana": "おせん",
    "meaning": "污染",
-   "ko": "오염",
+   "ko": "오염（污染）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词/自动词",
    "ex": {
     "ja": "汚染が地球を傷つけている。",
@@ -130,7 +132,9 @@
    "surface": "おそらく",
    "kana": "おそらく",
    "meaning": "恐怕；大概",
-   "ko": "未标注对应（待核对）",
+   "ko": "아마 / 어쩌면",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "副词",
    "ex": {
     "ja": "首相はおそらく辞任するであろう。",
@@ -143,7 +147,9 @@
    "surface": "恐れる",
    "kana": "おそれる",
    "meaning": "害怕；担心",
-   "ko": "未标注对应（待核对）",
+   "ko": "겁나다（畏惧，害怕） / 겁내다（害怕，畏惧） / 겁먹다（受惊吓，害怕）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/他动词",
    "ex": {
     "ja": "大人はしばしば変化を恐れる。",
@@ -156,7 +162,9 @@
    "surface": "恐ろしい",
    "kana": "おそろしい",
    "meaning": "可怕；惊人",
-   "ko": "未标注对应（待核对）",
+   "ko": "무섭다（怕，害怕，可怕，恐惧）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "い形容词",
    "ex": {
     "ja": "その嵐の天候は恐ろしかった。",
@@ -169,7 +177,9 @@
    "surface": "お互い",
    "kana": "おたがい",
    "meaning": "互相；双方",
-   "ko": "未标注对应（待核对）",
+   "ko": "서로",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词/连体词/副词",
    "ex": {
     "ja": "お互い相性がいい。",
@@ -182,7 +192,9 @@
    "surface": "穏やか",
    "kana": "おだやか",
    "meaning": "平静；温和",
-   "ko": "未标注对应（待核对）",
+   "ko": "평온（平稳，平静，安稳）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "な形容词",
    "ex": {
     "ja": "海は穏やかに、そしてなめらかに見える。",
@@ -195,7 +207,9 @@
    "surface": "男の人",
    "kana": "おとこのひと",
    "meaning": "男人；男性",
-   "ko": "未标注对应（待核对）",
+   "ko": "남자",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "惯用表达/名词",
    "ex": {
     "ja": "若い男の人がドアの前で歌っています。",
@@ -208,7 +222,9 @@
    "surface": "劣る",
    "kana": "おとる",
    "meaning": "劣于；不如",
-   "ko": "未标注对应（待核对）",
+   "ko": "못하다（不如，逊色） / 빠지다（不足，不及，不如）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "彼女は、彼より、数学において劣っている。",
@@ -221,7 +237,9 @@
    "surface": "鬼",
    "kana": "おに",
    "meaning": "鬼；妖怪",
-   "ko": "未标注对应（待核对）",
+   "ko": "도깨비 / 귀신",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "遅れたやつは鬼に食われろ。",
@@ -234,7 +252,9 @@
    "surface": "帯",
    "kana": "おび",
    "meaning": "腰带；地带",
-   "ko": "未标注对应（待核对）",
+   "ko": "띠（腰带） / 벨트（腰带）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼女の着物と帯の取り合わせはおつだね。",
@@ -247,7 +267,9 @@
    "surface": "お昼",
    "kana": "おひる",
    "meaning": "中午；午饭",
-   "ko": "未标注对应（待核对）",
+   "ko": "점심 / 정오",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "お昼をおごってくれたのを覚えてますか。",
@@ -260,7 +282,9 @@
    "surface": "オフィス",
    "kana": "オフィス",
    "meaning": "办公室",
-   "ko": "未标注对应（待核对）",
+   "ko": "사무실",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "いつでも私のオフィスを訪ねなさい。",
@@ -273,7 +297,9 @@
    "surface": "溺れる",
    "kana": "おぼれる",
    "meaning": "溺水；沉溺",
-   "ko": "未标注对应（待核对）",
+   "ko": "탐닉하다（沉湎，沉溺，迷恋）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "彼女は危うく溺れるところだった。",
@@ -286,7 +312,9 @@
    "surface": "おまえ",
    "kana": "おまえ",
    "meaning": "你",
-   "ko": "未标注对应（待核对）",
+   "ko": "너",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "代名词",
    "ex": {
     "ja": "お前を娘の夫にしよう。",
@@ -299,7 +327,9 @@
    "surface": "おめでとう",
    "kana": "おめでとう",
    "meaning": "恭喜",
-   "ko": "未标注对应（待核对）",
+   "ko": "축하해",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "感叹词",
    "ex": {
     "ja": "クリスマスおめでとうございます。",
@@ -312,7 +342,9 @@
    "surface": "お目に掛かる",
    "kana": "おめにかかる",
    "meaning": "拜见；见面",
-   "ko": "未标注对应（待核对）",
+   "ko": "뵙다（겸양）",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "惯用表达/动词(五段)",
    "ex": {
     "ja": "家内もお目にかかることを楽しみにしておりますから。",
@@ -325,7 +357,9 @@
    "surface": "思い出",
    "kana": "おもいで",
    "meaning": "回忆",
-   "ko": "未标注对应（待核对）",
+   "ko": "추억（回忆）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "この旅行はいい思い出になるでしょう。",
@@ -338,7 +372,9 @@
    "surface": "主に",
    "kana": "おもに",
    "meaning": "主要；大多",
-   "ko": "未标注对应（待核对）",
+   "ko": "주로（主要）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "副词",
    "ex": {
     "ja": "スペインの雨は主に平原に降る。",
@@ -351,7 +387,9 @@
    "surface": "思わず",
    "kana": "おもわず",
    "meaning": "不由得；禁不住",
-   "ko": "未标注对应（待核对）",
+   "ko": "무심코 / 저도 모르게",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "副词",
    "ex": {
     "ja": "彼は思わず笑った。",
@@ -364,7 +402,9 @@
    "surface": "泳ぎ",
    "kana": "およぎ",
    "meaning": "游泳",
-   "ko": "未标注对应（待核对）",
+   "ko": "헤엄（游泳，凫水，游水）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "このごろは子供は学校で泳ぎを習う。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V1615",
+  "V1616",
+  "V1617",
+  "V1618",
+  "V1619",
+  "V1620",
+  "V1621",
+  "V1622",
+  "V1623",
+  "V1624",
+  "V1625",
+  "V1626",
+  "V1627",
+  "V1628",
+  "V1629",
+  "V1630"
+ ],
+ "extension_vocab_ids": [
+  "V1631",
+  "V1632",
+  "V1633",
+  "V1634"
  ],
  "grammar": [
   {

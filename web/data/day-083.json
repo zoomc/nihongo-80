@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "20 个新词；实际用时超预算时记录未完成"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "先独立写，再交会话批改"
+   "desc": "3句必做，7句拓展；先写，再批改"
   },
   {
    "type": "练习",
@@ -117,7 +117,9 @@
    "surface": "息",
    "kana": "いき",
    "meaning": "呼吸",
-   "ko": "未标注对应（待核对）",
+   "ko": "숨（呼吸）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "おぼれかけた人は息を吹き返した。",
@@ -130,7 +132,9 @@
    "surface": "勢い",
    "kana": "いきおい",
    "meaning": "势头",
-   "ko": "未标注对应（待核对）",
+   "ko": "세（势头）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "勢いに流されているんですよ。",
@@ -143,7 +147,9 @@
    "surface": "生き物",
    "kana": "いきもの",
    "meaning": "生物；活物",
-   "ko": "未标注对应（待核对）",
+   "ko": "생물체（生物体，生物）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "人は意識のある生き物だ。",
@@ -156,7 +162,9 @@
    "surface": "いけない",
    "kana": "いけない",
    "meaning": "不行；必须",
-   "ko": "未标注对应（待核对）",
+   "ko": "안 된다 / 반드시 ~해야 한다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "惯用表达/い形容词",
    "ex": {
     "ja": "友人は助け合わなければいけない。",
@@ -169,7 +177,9 @@
    "surface": "意志",
    "kana": "いし",
    "meaning": "意志",
-   "ko": "의지",
+   "ko": "의지（意志） / 심지（意志，心志）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "私は辞職する意志はまったくない。",
@@ -182,7 +192,9 @@
    "surface": "意思",
    "kana": "いし",
    "meaning": "意思；意图",
-   "ko": "의사",
+   "ko": "용의（用意，意思）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "人間は互いに言葉で意思を通じ合う。",
@@ -195,7 +207,9 @@
    "surface": "医師",
    "kana": "いし",
    "meaning": "医生",
-   "ko": "의사",
+   "ko": "의사（医生）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "彼は医師になるために勉強している。",
@@ -208,7 +222,9 @@
    "surface": "維持",
    "kana": "いじ",
    "meaning": "维持",
-   "ko": "유지",
+   "ko": "유지（维持，维护）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "この車の維持は高くつく。",
@@ -221,7 +237,9 @@
    "surface": "意識",
    "kana": "いしき",
    "meaning": "意识；顾及",
-   "ko": "의식",
+   "ko": "의식（意识）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词/动词(サ变)/他动词/自动词",
    "ex": {
     "ja": "このお料理は、パリのエスプリを意識して、味付けしてみました。",
@@ -234,7 +252,9 @@
    "surface": "異常",
    "kana": "いじょう",
    "meaning": "异常",
-   "ko": "이상",
+   "ko": "이상（异常，反常，不正常）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "な形容词/名词",
    "ex": {
     "ja": "そんなにたくさん食べるのは異常だ。",
@@ -247,7 +267,9 @@
    "surface": "泉",
    "kana": "いずみ",
    "meaning": "泉；喷泉",
-   "ko": "未标注对应（待核对）",
+   "ko": "샘（泉，泉水）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "泉はおよそ１７０フィートの高さまで温水を吹き出す。",
@@ -260,7 +282,9 @@
    "surface": "いずれ",
    "kana": "いずれ",
    "meaning": "早晚；哪个",
-   "ko": "未标注对应（待核对）",
+   "ko": "언젠가 / 어느 쪽",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "代名词",
    "ex": {
     "ja": "人間はいずれ死ぬのだ。",
@@ -273,7 +297,9 @@
    "surface": "以前",
    "kana": "いぜん",
    "meaning": "以前",
-   "ko": "이전",
+   "ko": "이전（以前，之前） / 앞（前，以前） / 예（以前）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "词",
    "ex": {
     "ja": "彼女はもはや以前の彼女ではない。",
@@ -286,7 +312,9 @@
    "surface": "板",
    "kana": "いた",
    "meaning": "板",
-   "ko": "판",
+   "ko": "판 / 널빤지",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "名词",
    "ex": {
     "ja": "この鉄の板はすずでメッキしてある。",
@@ -299,7 +327,9 @@
    "surface": "偉大",
    "kana": "いだい",
    "meaning": "伟大",
-   "ko": "위대",
+   "ko": "위대하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
    "pos": "な形容词",
    "ex": {
     "ja": "リンカーンは偉大な政治家であった。",
@@ -312,7 +342,9 @@
    "surface": "抱く",
    "kana": "いだく",
    "meaning": "怀抱；怀有",
-   "ko": "未标注对应（待核对）",
+   "ko": "안다（抱着，怀有）",
+   "ko_status": "dictionary",
+   "optional": false,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "母への感謝の気持ちを抱いています。",
@@ -325,7 +357,9 @@
    "surface": "いたずら",
    "kana": "いたずら",
    "meaning": "恶作剧；淘气",
-   "ko": "未标注对应（待核对）",
+   "ko": "장난 / 개구쟁이짓",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "名词/动词(サ变)/他动词/自动词",
    "ex": {
     "ja": "私はいたずらな子供を大目に見る事ができない。",
@@ -338,7 +372,9 @@
    "surface": "痛み",
    "kana": "いたみ",
    "meaning": "疼痛",
-   "ko": "未标注对应（待核对）",
+   "ko": "통증（疼痛）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "ここにしつこい痛みがあります。",
@@ -351,7 +387,9 @@
    "surface": "至る",
    "kana": "いたる",
    "meaning": "达到",
-   "ko": "未标注对应（待核对）",
+   "ko": "이르다（达到） / 다다르다（达到）",
+   "ko_status": "dictionary",
+   "optional": true,
    "pos": "动词(五段)/自动词",
    "ex": {
     "ja": "その語は広い意味を持つに至った。",
@@ -364,7 +402,9 @@
    "surface": "いち",
    "kana": "いち",
    "meaning": "集市",
-   "ko": "未标注对应（待核对）",
+   "ko": "시장",
+   "ko_status": "ai_gloss",
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "市は月曜ごとに立つ。",
@@ -372,6 +412,30 @@
    },
    "audio": "tts"
   }
+ ],
+ "core_vocab_ids": [
+  "V1493",
+  "V1494",
+  "V1495",
+  "V1496",
+  "V1497",
+  "V1498",
+  "V1499",
+  "V1500",
+  "V1501",
+  "V1502",
+  "V1503",
+  "V1504",
+  "V1505",
+  "V1506",
+  "V1507",
+  "V1508"
+ ],
+ "extension_vocab_ids": [
+  "V1509",
+  "V1510",
+  "V1511",
+  "V1512"
  ],
  "grammar": [
   {

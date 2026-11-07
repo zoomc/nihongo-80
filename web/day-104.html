@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Day 104 · 请求与帮助｜〜によって / 〜による、〜によると / 〜によれば | Nihongo 150</title>
+<link rel="icon" href="data:,"><link rel="stylesheet" href="assets/app.css">
+</head><body data-day="104">
+<header class="top">
+  <span class="day">Day 104</span>
+  <span class="goal">在「请求与帮助」场景里，用 〜によって / 〜による 说清一件事</span>
+  <button class="mode" id="modeBtn" type="button">遮盖：中文</button>
+  <span class="prog">60 分钟</span>
+</header>
+<div class="wrap">
+<nav class="toc">
+  <a href="#review">① 复习</a><a href="#vocab">② 新词</a><a href="#grammar">③ 语法</a>
+  <a href="#sentences">④ 句子</a><a href="#quiz">⑤ 练习</a>
+</nav>
+<main>
+<section class="card" id="review">
+  <h2>① 今日复习 <span class="min">12 分钟</span></h2>
+  <p class="hint">先自己想，再翻面；三档自评。<span id="rIdx"></span></p>
+  <div class="vcard"><div class="surface" id="rFront"></div>
+    <div class="meaning mask" id="rBack"></div></div>
+  <div class="row"><button class="btn" id="rShow" type="button">翻面</button></div>
+  <div class="row" style="margin-top:8px">
+    <button class="btn rRate" data-rate="again" type="button">忘了</button>
+    <button class="btn rRate" data-rate="hard" type="button">模糊</button>
+    <button class="btn rRate" data-rate="good" type="button">记住了</button>
+  </div>
+  <div style="height:4px;background:var(--line);border-radius:2px;margin-top:10px"><div id="rBar" style="height:4px;background:var(--accent);width:0"></div></div>
+  <script type="application/json" id="reviewData">[{"kid": "V1845", "front": "管", "back": "管子", "stage": "planned"}, {"kid": "V1846", "front": "具体", "back": "具体", "stage": "planned"}, {"kid": "V1847", "front": "下す", "back": "下达；作出", "stage": "planned"}, {"kid": "V1848", "front": "下り", "back": "下行；下坡", "stage": "planned"}, {"kid": "V1811", "front": "教授", "back": "教授", "stage": "planned"}, {"kid": "V1812", "front": "強調", "back": "强调", "stage": "planned"}, {"kid": "V1813", "front": "共通", "back": "共同；共通", "stage": "planned"}, {"kid": "V1814", "front": "共同", "back": "共同", "stage": "planned"}, {"kid": "V1737", "front": "考え", "back": "想法", "stage": "planned"}, {"kid": "V1738", "front": "感覚", "back": "感觉", "stage": "planned"}, {"kid": "V1739", "front": "観客", "back": "观众", "stage": "planned"}, {"kid": "V1740", "front": "歓迎", "back": "欢迎", "stage": "planned"}]</script>
+</section>
+
+<section class="card" id="vocab">
+  <h2>② 新词 <span class="min">14 分钟</span></h2>
+  <p class="hint"><span id="vCur">1</span> / <span id="vTotal">0</span>　点「切换遮盖」可遮中文或遮日语。</p>
+  <div id="vArea"></div>
+  <div class="kstrip"><span class="kchip"><strong>宅</strong> 住宅；家 <span class="small">タク</span></span><span class="kchip"><strong>害</strong> 害处；损害 <span class="small">ガイ</span></span><span class="kchip"><strong>配</strong> 分配；担心 <span class="small">ハイ</span></span><span class="kchip"><strong>警</strong> 警告；警察 <span class="small">ケイ</span></span></div>
+  <div class="row"><button class="btn" id="vPrev" type="button">上一个</button>
+    <button class="btn primary" id="vNext" type="button">下一个</button></div>
+</section>
+
+<section class="card" id="grammar">
+  <h2>③ 语法 <span class="min">7 分钟</span></h2>
+  <div class="gcard" data-mode="all"><button class="eye" type="button">切换遮盖</button><div class="pattern" data-role="ja">〜によって / 〜による</div><div class="conn" data-role="ja">名词 + によって；名词 + による + 名词</div><div class="meaning" data-role="zh">由…；由于…；因…而异</div><p class="small">表被动句的动作主体、原因手段，或“依…而不同”。</p><div class="ex"><span data-role="ja">この橋は、有名な建築家によって設計された。</span><br><span class="zh" data-role="zh">这座桥是由著名建筑师设计的。</span></div><div class="ex"><span data-role="ja">台風による被害は、まだ正確には分かっていない。</span><br><span class="zh" data-role="zh">台风造成的损失还没有准确查明。</span></div><div class="ex"><span data-role="ja">国によって、食事のマナーはずいぶん違う。</span><br><span class="zh" data-role="zh">餐桌礼仪因国家不同而差别很大。</span></div><div class="ko-box"><strong>朝鲜语：</strong>-에 의해서<br><span class="small">韩语「-에 의해서」主要用于被动主体；日语还能表原因和“因…而异”，韩语后者要用「-에 따라」。</span></div><p class="small">易错：台風によっての被害は、まだ正確には分かっていない。 → 台風による被害（修饰名词要用「による」，「によっての」不合法。）</p></div><div class="gcard" data-mode="all"><button class="eye" type="button">切换遮盖</button><div class="pattern" data-role="ja">〜によると / 〜によれば</div><div class="conn" data-role="ja">名词 + によると／によれば（句末须有传闻表达）</div><div class="meaning" data-role="zh">据…说</div><p class="small">引出消息来源，句末接「そうだ／らしい／ということだ」。</p><div class="ex"><span data-role="ja">天気予報によると、週末は大雪になるそうだ。</span><br><span class="zh" data-role="zh">据天气预报，周末会下大雪。</span></div><div class="ex"><span data-role="ja">ニュースによれば、事故の原因はまだ分かっていないらしい。</span><br><span class="zh" data-role="zh">据新闻说，事故原因似乎还不清楚。</span></div><div class="ex"><span data-role="ja">姉の話によると、あのレストランは予約がないと入れないということだ。</span><br><span class="zh" data-role="zh">听姐姐说，那家餐厅不预约进不去。</span></div><div class="ko-box"><strong>朝鲜语：</strong>-에 따르면<br><span class="small">韩语「-에 따르면」同样要求句末有传闻标记；日语「によると」必须与「そうだ/らしい」呼应，韩语可与多种转述形式搭配。</span></div><p class="small">易错：天気予報によって、週末は大雪になるそうだ。 → 天気予報によると（表示传闻来源要用「によると／によれば」，「によって」表手段或原因，不能引出消息来源。）</p></div>
+</section>
+
+<section class="card" id="sentences">
+  <h2>④ 句子输出 <span class="min">6 分钟</span></h2>
+  <p class="hint">先自己写，不判对错；会话里逐句改。草稿自动保存。</p>
+  <div id="sentences"></div>
+</section>
+
+<section class="card" id="quiz">
+  <h2>⑤ 练习 <span class="min">6 分钟</span></h2>
+  <p class="hint">即时判分。当前：<strong id="score">0 / 0</strong></p>
+  <div id="quiz"></div>
+</section>
+
+<button class="btn primary" id="finish" type="button" style="width:100%;margin-top:16px">今天学完了，记录一下</button>
+<p class="small" style="margin-top:12px">资源骨架来自 OpenJLPT（CC-BY-SA-4.0），中文释义与翻译为 AI 草稿；无真人录音时用浏览器 TTS，已标注 tts。</p>
+</main>
+</div>
+<script>window.__REVIEW__=[{"kid": "V1845", "front": "管", "back": "管子", "stage": "planned"}, {"kid": "V1846", "front": "具体", "back": "具体", "stage": "planned"}, {"kid": "V1847", "front": "下す", "back": "下达；作出", "stage": "planned"}, {"kid": "V1848", "front": "下り", "back": "下行；下坡", "stage": "planned"}, {"kid": "V1811", "front": "教授", "back": "教授", "stage": "planned"}, {"kid": "V1812", "front": "強調", "back": "强调", "stage": "planned"}, {"kid": "V1813", "front": "共通", "back": "共同；共通", "stage": "planned"}, {"kid": "V1814", "front": "共同", "back": "共同", "stage": "planned"}, {"kid": "V1737", "front": "考え", "back": "想法", "stage": "planned"}, {"kid": "V1738", "front": "感覚", "back": "感觉", "stage": "planned"}, {"kid": "V1739", "front": "観客", "back": "观众", "stage": "planned"}, {"kid": "V1740", "front": "歓迎", "back": "欢迎", "stage": "planned"}];window.__VOCAB__=[{"id": "V1859", "surface": "グラス", "kana": "グラス", "meaning": "玻璃杯", "ko": "", "pos": "名词", "ex": {"ja": "グラスは粉々に割れてしまった。", "zh": "玻璃杯摔得粉碎。"}, "audio": null}, {"id": "V1860", "surface": "グランド", "kana": "グランド", "meaning": "场地；运动场", "ko": "", "pos": "词", "ex": {"ja": "イングランドはその試合に勝つだろう。", "zh": "英格兰大概会赢下那场比赛。"}, "audio": null}, {"id": "V1861", "surface": "クリーム", "kana": "クリーム", "meaning": "奶油", "ko": "", "pos": "名词", "ex": {"ja": "彼女はデザート用にクリームを泡立てた。", "zh": "她为做甜点打了奶油。"}, "audio": null}, {"id": "V1862", "surface": "繰り返す", "kana": "くりかえす", "meaning": "重复", "ko": "", "pos": "动词(五段)/他动词/自动词", "ex": {"ja": "「いいえ」とイギリス人は繰り返しました。", "zh": "那个英国人又说了一遍「不」。"}, "audio": null}, {"id": "V1863", "surface": "クリスマス", "kana": "クリスマス", "meaning": "圣诞节", "ko": "", "pos": "名词", "ex": {"ja": "いいクリスマスを過ごしましたか。", "zh": "圣诞节过得好吗？"}, "audio": null}, {"id": "V1864", "surface": "狂う", "kana": "くるう", "meaning": "失常；错乱", "ko": "", "pos": "动词(五段)/自动词", "ex": {"ja": "あなたの時計、時間は狂いませんか。", "zh": "你的表走时准吗？"}, "audio": null}, {"id": "V1865", "surface": "グループ", "kana": "グループ", "meaning": "小组", "ko": "", "pos": "名词", "ex": {"ja": "先生は私たちを二つのグループに分けた。", "zh": "老师把我们分成两组。"}, "audio": null}, {"id": "V1866", "surface": "苦しい", "kana": "くるしい", "meaning": "痛苦；难受", "ko": "", "pos": "い形容词", "ex": {"ja": "苦しい、やめろ。", "zh": "难受死了，停下吧。"}, "audio": null}, {"id": "V1867", "surface": "苦しむ", "kana": "くるしむ", "meaning": "受苦", "ko": "", "pos": "动词(五段)/自动词", "ex": {"ja": "彼はどんなに苦しんだことだろう。", "zh": "他不知道受了多少苦。"}, "audio": null}, {"id": "V1868", "surface": "暮れ", "kana": "くれ", "meaning": "年末；傍晚", "ko": "", "pos": "名词/副词/连体词", "ex": {"ja": "彼女はどうして良いか途方に暮れた。", "zh": "她不知如何是好，束手无策。"}, "audio": null}, {"id": "V1869", "surface": "苦労", "kana": "くろう", "meaning": "辛苦；劳累", "ko": "", "pos": "名词/动词(サ变)/他动词/自动词", "ex": {"ja": "せっかくの苦労もあだになった。", "zh": "一番辛苦全白费了。"}, "audio": null}, {"id": "V1870", "surface": "加える", "kana": "くわえる", "meaning": "添加；加上", "ko": "", "pos": "动词(一段)/他动词", "ex": {"ja": "水を加えてペースト状になるまでかき回しなさい。", "zh": "加水搅成糊状。"}, "audio": null}, {"id": "V1871", "surface": "詳しい", "kana": "くわしい", "meaning": "详细；熟悉", "ko": "", "pos": "い形容词", "ex": {"ja": "このあたりはお詳しいですか。", "zh": "您对这一带熟吗？"}, "audio": null}, {"id": "V1872", "surface": "加わる", "kana": "くわわる", "meaning": "加入；增加", "ko": "", "pos": "动词(五段)/自动词", "ex": {"ja": "あなたはどちらのグループに加わりたいですか。", "zh": "你想加入哪一组？"}, "audio": null}, {"id": "V1873", "surface": "訓", "kana": "くん", "meaning": "训读", "ko": "훈", "pos": "名词", "ex": {"ja": "漢字の読み方には、音と訓の2通りがあるの。", "zh": "汉字的读法有音读和训读两种。"}, "audio": null}, {"id": "V1874", "surface": "軍", "kana": "ぐん", "meaning": "军队", "ko": "군", "pos": "名词", "ex": {"ja": "戦争は連合軍の勝利に終わった。", "zh": "战争以盟军的胜利告终。"}, "audio": null}, {"id": "V1875", "surface": "軍隊", "kana": "ぐんたい", "meaning": "军队", "ko": "군대", "pos": "名词", "ex": {"ja": "軍隊は川のところまで進出した。", "zh": "军队推进到了河边。"}, "audio": null}, {"id": "V1876", "surface": "訓練", "kana": "くんれん", "meaning": "训练", "ko": "훈련", "pos": "名词/动词(サ变)/他动词", "ex": {"ja": "私は馬をレース用に訓練している。", "zh": "我在训练一匹马参加比赛。"}, "audio": null}, {"id": "V1877", "surface": "計", "kana": "けい", "meaning": "计划；计算", "ko": "계", "pos": "名词", "ex": {"ja": "一年の計は元旦にあり。", "zh": "一年之计在于元旦。"}, "audio": null}, {"id": "V1878", "surface": "敬意", "kana": "けいい", "meaning": "敬意", "ko": "경의", "pos": "名词", "ex": {"ja": "親に対して敬意を表さなければいけない。", "zh": "对父母必须表示敬意。"}, "audio": null}];window.__QUIZ__=[{"qid": "Q-104-V0", "prompt": "「グラス」是什么意思？", "options": ["玻璃杯", "维持", "世间；社会", "援助"], "h": "41321c", "oh": ["41321c", "c4b15486", "5fd06d8c", "6fe5083e"], "rationale": "グラス（グラス）＝玻璃杯"}, {"qid": "Q-104-V1", "prompt": "「グランド」是什么意思？", "options": ["住宿", "场地；运动场", "祝贺；庆祝", "关系；交情"], "h": "7b9500e2", "oh": ["14dfa713", "7b9500e2", "5bdba2da", "7fa7030b"], "rationale": "グランド（グランド）＝场地；运动场"}, {"qid": "Q-104-V2", "prompt": "「クリーム」是什么意思？", "options": ["奶油", "空的", "喜好", "石油"], "h": "6d281b50", "oh": ["6d281b50", "6087258b", "bdbda792", "4e2c3361"], "rationale": "クリーム（クリーム）＝奶油"}, {"qid": "Q-104-K", "prompt": "汉字「宅」的读音是？", "options": ["ホウ", "タク", "ガイ", "シャ"], "h": "a97d6273", "oh": ["cfcb7794", "a97d6273", "33ee9c3d", "59b388f"], "rationale": "宅：音 タク｜训 无"}, {"qid": "Q-104-G", "prompt": "句型「〜によって / 〜による」的意思是？", "options": ["由…；由于…；因…而异", "难保不会…、恐怕会…／难以…、不便…", "能否请您…（很礼貌的请求）", "不必…；用不着…"], "h": "aa6bb417", "oh": ["aa6bb417", "3bcca7b0", "74d9212d", "8c5f4369"], "rationale": "〜によって / 〜による＝由…；由于…；因…而异"}, {"qid": "Q-104-R", "prompt": "复习：「管」是什么意思？", "options": ["义务", "意思；意图", "管子", "控诉；呼吁"], "h": "2fda7a74", "oh": ["823d2b1f", "3caef80f", "2fda7a74", "9fccb1f1"], "rationale": "管＝管子"}];window.__SENT__=[{"id": "S1031", "day": 104, "direction": "zh-ja", "prompt": "他在演讲当中昏了过去。", "answer": "彼はスピーチの最中に気を失った。", "knowledge_ids": ["V2002"], "hint": "〜として"}, {"id": "S1032", "day": 104, "direction": "zh-ja", "prompt": "我至少能走两英里。", "answer": "私は最低２マイルは歩ける。", "knowledge_ids": ["V2003"], "hint": "〜として"}, {"id": "S1033", "day": 104, "direction": "zh-ja", "prompt": "你有音乐才能。", "answer": "君には音楽の才能がある。", "knowledge_ids": ["V2004"], "hint": "〜として"}, {"id": "S1034", "day": 104, "direction": "zh-ja", "prompt": "审判要求公正无私。", "answer": "裁判は公明正大であることが要求される。", "knowledge_ids": ["V2005"], "hint": "〜として"}, {"id": "S1035", "day": 104, "direction": "zh-ja", "prompt": "用好材料做的家具很畅销。", "answer": "すぐれた材料で作られた家具は、売れ行きがよい。", "knowledge_ids": ["V2006"], "hint": "〜として"}, {"id": "S1036", "day": 104, "direction": "zh-ja", "prompt": "幸好你当时在这儿。", "answer": "あなたがここに居たのは幸いでした。", "knowledge_ids": ["V2007"], "hint": "〜として"}, {"id": "S1037", "day": 104, "direction": "zh-ja", "prompt": "他在生死之间徘徊。", "answer": "彼は生死の境をさ迷った。", "knowledge_ids": ["V2009"], "hint": "〜として"}, {"id": "S1038", "day": 104, "direction": "ja-zh", "prompt": "彼は世の風潮に逆らう。", "answer": "他逆时代潮流而行。", "knowledge_ids": ["V2010"], "hint": "〜として"}, {"id": "S1039", "day": 104, "direction": "ja-zh", "prompt": "彼は今男盛りだ。", "answer": "他正处在男人的壮年。", "knowledge_ids": ["V2011"], "hint": "〜として"}, {"id": "S1040", "day": 104, "direction": "ja-zh", "prompt": "私がいない間も作業を続けなさい。", "answer": "我不在的时候也继续干活。", "knowledge_ids": ["V2012"], "hint": "〜として"}];</script>
+<script src="assets/app.js"></script>
+<script>
+document.getElementById('review').setAttribute('data-cards',JSON.stringify(window.__REVIEW__));
+document.getElementById('vocab').setAttribute('data-cards',JSON.stringify(window.__VOCAB__));
+document.getElementById('quiz').setAttribute('data-qs',JSON.stringify(window.__QUIZ__));
+document.getElementById('sentences').setAttribute('data-items',JSON.stringify(window.__SENT__));
+</script>
+</body></html>

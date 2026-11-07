@@ -1,625 +1,660 @@
 {
-  "day": 21,
-  "phase": "P2",
-  "theme": "问路｜～が ほしい・いる・なる",
-  "scene": "【问路】问路：在 weekly（问路｜问路）中分项展示五维能力，并用「～が ほしい」完成 1 次独立输出（素材：駅はどこですか｜主题键：asking_directions｜对齐：exact）",
-  "scene_tag": "问路",
-  "scene_topic_key": "asking_directions",
-  "scene_topic": "问路",
-  "topic_match": "exact",
-  "material_topic_keys": [
-    "asking_directions",
-    "shopping"
-  ],
-  "material_pair": "mixed_topic",
-  "can_do": "在 weekly（问路｜问路）中分项展示五维能力，并用「～が ほしい」完成 1 次独立输出",
-  "focus": [
-    "listening",
-    "reading"
-  ],
-  "objectives": [
-    "能从一小段通知或短文里找出主要意思，并说出一句依据",
-    "能把今天学的说法用到一个新场景，而不是只背原句",
-    "能分清「这是事实」和「这是我猜的」，不把猜测说成肯定",
-    "当天新词：いる、なる、読む（读音与用法都要验证，不靠汉字猜义）",
-    "当天句型：～が ほしい，须说出接续条件",
-    "当天汉字：社、話，音读/训读各给一例",
-    "Can-do：在 weekly（问路｜问路）中分项展示五维能力，并用「～が ほしい」完成 1 次独立输出",
-    "本日评估 weekly：分项记录词汇/语法/阅读/听力/表达得分"
-  ],
-  "minutes": 60,
-  "blocks": [
-    {
-      "min": 10,
-      "type": "review",
-      "desc": "FSRS 到期项主动回忆，无提示优先"
-    },
-    {
-      "min": 10,
-      "type": "new",
-      "desc": "当天新知识快速回顾（不新增超纲内容）"
-    },
-    {
-      "min": 5,
-      "type": "interaction",
-      "desc": "短场景口头输出，保持表达能力训练"
-    },
-    {
-      "min": 30,
-      "type": "assessment",
-      "desc": "合并执行当天唯一的 weekly，不叠加多套试卷"
-    },
-    {
-      "min": 5,
-      "type": "feedback",
-      "desc": "归因、写档、生成下一日任务"
-    }
-  ],
-  "vocab": [
-    {
-      "id": "V0109",
-      "surface": "いる",
-      "kana": "いる",
-      "romaji": "iru",
-      "pos": "動詞/一段",
-      "meaning_zh": "有；在（有生命）",
-      "jlpt": "N5",
-      "examples": [
-        {
-          "ja": "部屋に猫がいます。",
-          "zh": "房间里有猫。",
-          "audio_text": "部屋に猫がいます。"
-        }
-      ],
-      "notes_for_zh": "有生命（人/动物）用 いる；一段动词：います／いて／いた／いない。与「要る(いる，需要)」同音异义，别混。",
-      "confusables": [
-        "V0108"
-      ],
-      "ko": "",
-      "ko_hint": "",
-      "caution": ""
-    },
-    {
-      "id": "V0110",
-      "surface": "なる",
-      "kana": "なる",
-      "romaji": "naru",
-      "pos": "動詞/五段",
-      "meaning_zh": "变成；成为",
-      "jlpt": "N5",
-      "examples": [
-        {
-          "ja": "医者になりました。",
-          "zh": "当上医生了。",
-          "audio_text": "医者になりました。"
-        }
-      ],
-      "notes_for_zh": "自动词，前接 名詞/な形+に、い形+く（〜くなる）；「する」是他动词表人为改变，中文「变/使…变」不分自他，日语 なる/する 要分。",
-      "confusables": [],
-      "ko": "",
-      "ko_hint": "",
-      "caution": ""
-    },
-    {
-      "id": "V0113",
-      "surface": "読む",
-      "kana": "よむ",
-      "romaji": "yomu",
-      "pos": "動詞/五段",
-      "meaning_zh": "读；念",
-      "jlpt": "N5",
-      "examples": [
-        {
-          "ja": "本を読みます。",
-          "zh": "读书。",
-          "audio_text": "本を読みます。"
-        }
-      ],
-      "notes_for_zh": "五段：読みます／読んで（拨音便）／読んだ；「読む」读 よむ，音读 どく（読書 どくしょ），训读与音读差很远。",
-      "confusables": [
-        "V0112"
-      ],
-      "ko": "",
-      "ko_hint": "",
-      "caution": ""
-    },
-    {
-      "id": "V0114",
-      "surface": "話す",
-      "kana": "はなす",
-      "romaji": "hanasu",
-      "pos": "動詞/五段",
-      "meaning_zh": "说；讲",
-      "jlpt": "N5",
-      "examples": [
-        {
-          "ja": "日本語を話します。",
-          "zh": "说日语。",
-          "audio_text": "日本語を話します。"
-        }
-      ],
-      "notes_for_zh": "五段：話します／話して／話した（さ 行不音便）；可能形 話せる、受身 話される。「話す(他动)」与「話(はなし，名词)」同根不同类。",
-      "confusables": [
-        "V0115"
-      ],
-      "ko": "",
-      "ko_hint": "",
-      "caution": ""
-    },
-    {
-      "id": "V0115",
-      "surface": "聞く",
-      "kana": "きく",
-      "romaji": "kiku",
-      "pos": "動詞/五段",
-      "meaning_zh": "听；问",
-      "jlpt": "N5",
-      "examples": [
-        {
-          "ja": "音楽を聞きます。",
-          "zh": "听音乐。",
-          "audio_text": "音楽を聞きます。"
-        }
-      ],
-      "notes_for_zh": "五段：聞きます／聞いて（い音便）／聞いた；一词兼「听」和「问」，「聞こえる(听得见)」是自发，中文「听/听见」不分，日语 聞く/聞こえる 要分。",
-      "confusables": [
-        "V0114"
-      ],
-      "ko": "",
-      "ko_hint": "",
-      "caution": ""
-    }
-  ],
-  "grammar": [
-    {
-      "id": "G0033",
-      "pattern": "～が ほしい",
-      "meaning_zh": "想要（某物）",
-      "connection": "名詞 + が + ほしい（です）",
-      "example": "新しいパソコンがほしいです。",
-      "usage": "表说话人想要某物；对象用 が，不是 を；第三人称用 ほしがる",
-      "explanation_zh": "意思是「想要（某物）」；接续：名詞 + が + ほしい（です）（中文术语：名词 + が + ほしい（です））；用法：表说话人想要某物；对象用 が，不是 を；第三人称用 ほしがる",
-      "common_errors": [
-        {
-          "wrong": "パソコンを ほしいです。",
-          "why": "「ほしい」对象格用 が；中文「想要(某物)」是动宾，直译成 を 错",
-          "fix": "パソコンがほしいです。",
-          "learner": "zh"
-        },
-        {
-          "wrong": "ほしいだ。",
-          "why": "「ほしい」い形容词型，结句用 です",
-          "fix": "ほしいです。",
-          "learner": "zh"
-        }
-      ],
-      "compare": [
-        {
-          "id": "G0031",
-          "diff": "ほしい 想要「物」+が；たい 想要「做动作」，两者对象不同"
-        }
-      ],
-      "examples": [
-        {
-          "ja": "新しいパソコンがほしいです。",
-          "zh": "想要新电脑。",
-          "audio_text": "新しいパソコンがほしいです。"
-        }
-      ],
-      "ko": "-이/가 갖고 싶다 / -을/를 원하다",
-      "ko_hint": "都表『想要某物』，对象用助词标出，概念可对照。",
-      "caution": "が 标想要的对象，韩语说 돈이 필요해요(이/가) 或 책을 원해요(을/를) 两种都有，直接套 이/가 会漏；ほしい 是い形容词、第三人称要用 ほしがる，韩语 싶어하다 对应，但形态不同源。"
-    }
-  ],
-  "kanji": [
-    {
-      "id": "K0050",
-      "char": "社",
-      "onyomi": [
-        "シャ"
-      ],
-      "kunyomi": [],
-      "meaning_zh": "公司；神社；社",
-      "zh_trap": "中文「社」读 shè（社团）；日语「社」音读 シャ，「会社」かいしゃ=公司，「神社」じんじゃ=神社；中文「社员」是社团成员，日语「社員」是公司职员，词义偏移。",
-      "vocab_refs": [
-        "V0040",
-        "V0086"
-      ],
-      "examples": [
-        {
-          "ja": "会社",
-          "kana": "かいしゃ",
-          "zh": "公司"
-        },
-        {
-          "ja": "会社員",
-          "kana": "かいしゃいん",
-          "zh": "公司职员"
-        }
-      ],
-      "ko_hint": "韩语汉字词可参考：회사。日韩汉字词同形同义（かいしゃ／회사＝公司），可对照。"
-    },
-    {
-      "id": "K0055",
-      "char": "話",
-      "onyomi": [
-        "ワ"
-      ],
-      "kunyomi": [
-        "はな",
-        "はなし"
-      ],
-      "meaning_zh": "话；说",
-      "zh_trap": "中文「话/話」读 huà；日语「話」音读 ワ（電話 でんわ、会話 かいわ）、训读 はなす/はなし；「話す」是动词，中文「话」是名词，词类不同。",
-      "vocab_refs": [
-        "V0089",
-        "V0114"
-      ],
-      "examples": [
-        {
-          "ja": "電話",
-          "kana": "でんわ",
-          "zh": "电话"
-        },
-        {
-          "ja": "話す",
-          "kana": "はなす",
-          "zh": "说；讲"
-        }
-      ],
-      "ko_hint": "韩语汉字词可参考：전화。日韩汉字词同形同义（でんわ／전화＝电话）。"
-    }
-  ],
-  "questions": [
-    {
-      "id": "Q0062",
-      "type": "free_production",
-      "prompt_ja": "请用 で 写一句「在某处做某事」。",
-      "prompt_zh": "自由写作",
-      "options": [],
-      "answer": "",
-      "rationale": "考查 で 表动作场所的迁移",
-      "audio_text": "",
-      "rubric": "①场所后用 で 得 1 分；②宾语用 を 得 1 分；③ます形礼貌体得 1 分",
-      "expected_production": "図書館で本を読みます。",
-      "difficulty": 2
-    },
-    {
-      "id": "Q0108",
-      "type": "dialogue",
-      "prompt_ja": "A 问「今、何をしていますか」，请回答。",
-      "prompt_zh": "电话场景对话",
-      "options": [],
-      "answer": "",
-      "rationale": "考查 ている 进行体在问答中的运用",
-      "audio_text": "",
-      "rubric": "①用て形 + います 得 1 分；②宾语用 を 得 1 分；③动词搭配自然得 1 分",
-      "expected_production": "本を読んでいます。",
-      "difficulty": 3
-    },
-    {
-      "id": "Q0046",
-      "type": "mcq",
-      "prompt_ja": "ご飯___食べます。",
-      "prompt_zh": "选出他动词宾语助词",
-      "options": [
-        "で",
-        "が",
-        "を",
-        "に"
-      ],
-      "answer": "を",
-      "rationale": "他动词宾语用 を；中文「饭」易感觉成主语而误用 が",
-      "audio_text": "ご飯を食べます。",
-      "rubric": "选 を 得 1 分，其余 0 分",
-      "expected_production": "",
-      "difficulty": 2
-    },
-    {
-      "id": "Q0050",
-      "type": "reorder",
-      "prompt_ja": "把词块排成「吃饭」",
-      "prompt_zh": "句序：宾语 + を + ます形",
-      "options": [
-        "食べます",
-        "ご飯",
-        "を",
-        "。"
-      ],
-      "answer": "2,3,1,4",
-      "rationale": "宾语 ご飯 + を + 食べます",
-      "audio_text": "",
-      "rubric": "顺序完全正确得 1 分，否则 0 分",
-      "expected_production": "",
-      "difficulty": 2
-    },
-    {
-      "id": "Q0052",
-      "type": "translate",
-      "prompt_ja": "中译日：我喝水。",
-      "prompt_zh": "日译，注意 を 与 飲む",
-      "options": [],
-      "answer": "",
-      "rationale": "日语药/茶/水都用 飲む，宾语用 を；中文「吃」不能套 食べる",
-      "audio_text": "",
-      "rubric": "①宾语用 を 得 1 分；②动词用 飲みます 得 1 分；③整体礼貌体得 1 分",
-      "expected_production": "私は水を飲みます。",
-      "difficulty": 2
-    },
-    {
-      "id": "Q0053",
-      "type": "free_production",
-      "prompt_ja": "请用 を 写一句「每天做～」。",
-      "prompt_zh": "自由写作",
-      "options": [],
-      "answer": "",
-      "rationale": "考查 を + 他动词与频率副词搭配",
-      "audio_text": "",
-      "rubric": "①含频率词得 1 分；②宾语后用 を 得 1 分；③ます形礼貌体得 1 分",
-      "expected_production": "毎日、日本語を勉強します。",
-      "difficulty": 2
-    }
-  ],
-  "materials": [
-    {
-      "id": "M0010",
-      "kind": "listening",
-      "title": "駅はどこですか",
-      "text_ja": "すみません、駅はどこですか。駅の前に店があります。",
-      "text_kana": "すみません、えきはどこですか。えきのまえにみせがあります。",
-      "text_zh": "劳驾，车站在哪里？车站前有家店。",
-      "focus_zh": "「駅はどこですか」的「は」提示我们要问的是车站这个话题，不是主语；「ですか」是「です」的疑问形。",
-      "audio_text": "すみません、駅はどこですか。駅の前に店があります。",
-      "url": "",
-      "license": "original"
-    },
-    {
-      "id": "M0003",
-      "kind": "reading",
-      "title": "駅の前の店",
-      "text_ja": "駅の前に店があります。店でパンを買います。すみません、これはいくらですか。",
-      "text_kana": "えきのまえにみせがあります。みせでパンをかいます。すみません、これはいくらですか。",
-      "text_zh": "车站前有家店。在店里买面包。劳驾，这个多少钱？",
-      "focus_zh": "「駅の前に店があります」用「に」标存在点、「があります」表无生命的有；「すみません」在问价时是劳驾／打扰一下，不是道歉。",
-      "audio_text": "駅の前に店があります。店でパンを買います。すみません、これはいくらですか。",
-      "url": "",
-      "license": "original"
-    },
-    {
-      "id": "M0032",
-      "kind": "reading",
-      "title": "Tadoku: Free Tadoku Books 利用ガイド（NPO多言語多読・公式）",
-      "text_ja": "",
-      "text_kana": "",
-      "text_zh": "",
-      "focus_zh": "",
-      "audio_text": "",
-      "url": "https://tadoku.org/japanese/en/free-books-en/note-en",
-      "license": "CC BY-NC-ND 4.0（NPO多言語多読 / Tadoku Supporters：免费多読用 graded readers，需署名、禁止商用转售、禁止改编）"
-    }
-  ],
-  "viz": {
-    "day": 21,
-    "phase": "P2",
-    "new_count": 8,
-    "review_count": 12,
-    "question_count": 6
+ "day": 21,
+ "phase": "P1",
+ "theme": "医院与身体｜〜に（place of existence）、〜に（indirect object）",
+ "can_do": "在「医院与身体」场景里，用 〜に（place of existence） 说清一件事",
+ "minutes": 60,
+ "listening": false,
+ "review": [
+  {
+   "kid": "V0531",
+   "front": "この",
+   "back": "这个",
+   "stage": "planned"
   },
-  "assessment": "weekly",
-  "lesson_core": [
-    {
-      "ja": "すみません、駅はどこですか。",
-      "kana": "すみません、えきはどこですか。",
-      "zh": "劳驾，车站在哪里？",
-      "note_zh": "「駅はどこですか」的「は」提示我们要问的是车站这个话题，不是主语；「ですか」是「です」的疑问形。",
-      "audio_text": "すみません、駅はどこですか。",
-      "origin": "material",
-      "source_id": "M0010"
-    },
-    {
-      "ja": "駅の前に店があります。",
-      "kana": "えきのまえにみせがあります。",
-      "zh": "车站前有家店。",
-      "note_zh": "「駅はどこですか」的「は」提示我们要问的是车站这个话题，不是主语；「ですか」是「です」的疑问形。",
-      "audio_text": "駅の前に店があります。",
-      "origin": "material",
-      "source_id": "M0010"
-    },
-    {
-      "ja": "店でパンを買います。",
-      "kana": "みせでパンをかいます。",
-      "zh": "在店里买面包。",
-      "note_zh": "「駅の前に店があります」用「に」标存在点、「があります」表无生命的有；「すみません」在问价时是劳驾／打扰一下，不是道歉。",
-      "audio_text": "店でパンを買います。",
-      "origin": "material",
-      "source_id": "M0003"
-    }
-  ],
-  "review_plan": [
-    {
-      "kid": "V0081",
-      "surface": "日本語",
-      "kana": "にほんご",
-      "zh": "日语",
-      "reason_zh": "这是预习建议（非 FSRS 到期项）：1 天前学过，可按 1/2/3/7/14/30 天间隔预看",
-      "learned_day": 20,
-      "next_hint_zh": "按课程间隔，大约 Day 22 再预习",
-      "planned_only": true
-    },
-    {
-      "kid": "V0089",
-      "surface": "電話",
-      "kana": "でんわ",
-      "zh": "电话",
-      "reason_zh": "这是预习建议（非 FSRS 到期项）：1 天前学过，可按 1/2/3/7/14/30 天间隔预看",
-      "learned_day": 20,
-      "next_hint_zh": "按课程间隔，大约 Day 22 再预习",
-      "planned_only": true
-    },
-    {
-      "kid": "V0091",
-      "surface": "旅行",
-      "kana": "りょこう",
-      "zh": "旅行",
-      "reason_zh": "这是预习建议（非 FSRS 到期项）：1 天前学过，可按 1/2/3/7/14/30 天间隔预看",
-      "learned_day": 20,
-      "next_hint_zh": "按课程间隔，大约 Day 22 再预习",
-      "planned_only": true
-    },
-    {
-      "kid": "V0104",
-      "surface": "来る",
-      "kana": "くる",
-      "zh": "来",
-      "reason_zh": "这是预习建议（非 FSRS 到期项）：1 天前学过，可按 1/2/3/7/14/30 天间隔预看",
-      "learned_day": 20,
-      "next_hint_zh": "按课程间隔，大约 Day 22 再预习",
-      "planned_only": true
-    },
-    {
-      "kid": "V0108",
-      "surface": "ある",
-      "kana": "ある",
-      "zh": "有；存在（无生命）",
-      "reason_zh": "这是预习建议（非 FSRS 到期项）：1 天前学过，可按 1/2/3/7/14/30 天间隔预看",
-      "learned_day": 20,
-      "next_hint_zh": "按课程间隔，大约 Day 22 再预习",
-      "planned_only": true
-    },
-    {
-      "kid": "G0027",
-      "surface": "～て いる",
-      "kana": "",
-      "zh": "正在…／…着（结果状态）",
-      "reason_zh": "这是预习建议（非 FSRS 到期项）：1 天前学过，可按 1/2/3/7/14/30 天间隔预看",
-      "learned_day": 20,
-      "next_hint_zh": "按课程间隔，大约 Day 22 再预习",
-      "planned_only": true
-    },
-    {
-      "kid": "K0041",
-      "surface": "姉",
-      "kana": "",
-      "zh": "姐姐",
-      "reason_zh": "这是预习建议（非 FSRS 到期项）：1 天前学过，可按 1/2/3/7/14/30 天间隔预看",
-      "learned_day": 20,
-      "next_hint_zh": "按课程间隔，大约 Day 22 再预习",
-      "planned_only": true
-    },
-    {
-      "kid": "K0042",
-      "surface": "弟",
-      "kana": "",
-      "zh": "弟弟",
-      "reason_zh": "这是预习建议（非 FSRS 到期项）：1 天前学过，可按 1/2/3/7/14/30 天间隔预看",
-      "learned_day": 20,
-      "next_hint_zh": "按课程间隔，大约 Day 22 再预习",
-      "planned_only": true
-    }
-  ],
-  "teaching_notes": [
-    "记住：「ほしい」对象格用 が；中文「想要(某物)」是动宾，直译成 を 错",
-    "注意：「ほしい」い形容词型，结句用 です",
-    "容易错：有生命（人/动物）用 いる；一段动词：います／いて／いた／いない。与「要る(いる，需要)」同音异义，别混。",
-    "小提醒：自动词，前接 名詞/な形+に、い形+く（〜くなる）；「する」是他动词表人为改变，中文「变/使…变」不分自他，日语 なる/する 要分。"
-  ],
-  "ko_analogy": {
-    "grammar": [
-      {
-        "match": "G0033",
-        "pattern": "～が ほしい",
-        "ko": "-이/가 갖고 싶다 / -을/를 원하다",
-        "hint_zh": "都表『想要某物』，对象用助词标出，概念可对照。",
-        "caution": "が 标想要的对象，韩语说 돈이 필요해요(이/가) 或 책을 원해요(을/를) 两种都有，直接套 이/가 会漏；ほしい 是い形容词、第三人称要用 ほしがる，韩语 싶어하다 对应，但形态不同源。"
-      }
-    ],
-    "vocab": []
+  {
+   "kid": "V0532",
+   "front": "御飯",
+   "back": "米饭；饭",
+   "stage": "planned"
   },
-  "review": {
-    "source": "planned",
-    "generated_at": "2026-11-07T01:40:31+00:00",
-    "due": [],
-    "planned": [
-      {
-        "kid": "V0081",
-        "surface": "日本語",
-        "kana": "にほんご",
-        "zh": "日语",
-        "reason_zh": "这是预习建议（非 FSRS 到期项）：1 天前学过，可按 1/2/3/7/14/30 天间隔预看",
-        "learned_day": 20,
-        "next_hint_zh": "按课程间隔，大约 Day 22 再预习",
-        "planned_only": true
-      },
-      {
-        "kid": "V0089",
-        "surface": "電話",
-        "kana": "でんわ",
-        "zh": "电话",
-        "reason_zh": "这是预习建议（非 FSRS 到期项）：1 天前学过，可按 1/2/3/7/14/30 天间隔预看",
-        "learned_day": 20,
-        "next_hint_zh": "按课程间隔，大约 Day 22 再预习",
-        "planned_only": true
-      },
-      {
-        "kid": "V0091",
-        "surface": "旅行",
-        "kana": "りょこう",
-        "zh": "旅行",
-        "reason_zh": "这是预习建议（非 FSRS 到期项）：1 天前学过，可按 1/2/3/7/14/30 天间隔预看",
-        "learned_day": 20,
-        "next_hint_zh": "按课程间隔，大约 Day 22 再预习",
-        "planned_only": true
-      },
-      {
-        "kid": "V0104",
-        "surface": "来る",
-        "kana": "くる",
-        "zh": "来",
-        "reason_zh": "这是预习建议（非 FSRS 到期项）：1 天前学过，可按 1/2/3/7/14/30 天间隔预看",
-        "learned_day": 20,
-        "next_hint_zh": "按课程间隔，大约 Day 22 再预习",
-        "planned_only": true
-      },
-      {
-        "kid": "V0108",
-        "surface": "ある",
-        "kana": "ある",
-        "zh": "有；存在（无生命）",
-        "reason_zh": "这是预习建议（非 FSRS 到期项）：1 天前学过，可按 1/2/3/7/14/30 天间隔预看",
-        "learned_day": 20,
-        "next_hint_zh": "按课程间隔，大约 Day 22 再预习",
-        "planned_only": true
-      },
-      {
-        "kid": "G0027",
-        "surface": "～て いる",
-        "kana": "",
-        "zh": "正在…／…着（结果状态）",
-        "reason_zh": "这是预习建议（非 FSRS 到期项）：1 天前学过，可按 1/2/3/7/14/30 天间隔预看",
-        "learned_day": 20,
-        "next_hint_zh": "按课程间隔，大约 Day 22 再预习",
-        "planned_only": true
-      },
-      {
-        "kid": "K0041",
-        "surface": "姉",
-        "kana": "",
-        "zh": "姐姐",
-        "reason_zh": "这是预习建议（非 FSRS 到期项）：1 天前学过，可按 1/2/3/7/14/30 天间隔预看",
-        "learned_day": 20,
-        "next_hint_zh": "按课程间隔，大约 Day 22 再预习",
-        "planned_only": true
-      },
-      {
-        "kid": "K0042",
-        "surface": "弟",
-        "kana": "",
-        "zh": "弟弟",
-        "reason_zh": "这是预习建议（非 FSRS 到期项）：1 天前学过，可按 1/2/3/7/14/30 天间隔预看",
-        "learned_day": 20,
-        "next_hint_zh": "按课程间隔，大约 Day 22 再预习",
-        "planned_only": true
-      }
-    ]
+  {
+   "kid": "V0533",
+   "front": "コピーする",
+   "back": "复印",
+   "stage": "planned"
+  },
+  {
+   "kid": "V0534",
+   "front": "困る",
+   "back": "为难；困扰",
+   "stage": "planned"
+  },
+  {
+   "kid": "V0493",
+   "front": "キロ",
+   "back": "公里；公斤",
+   "stage": "planned"
+  },
+  {
+   "kid": "V0494",
+   "front": "銀行",
+   "back": "银行",
+   "stage": "planned"
+  },
+  {
+   "kid": "V0495",
+   "front": "ください",
+   "back": "请给我",
+   "stage": "planned"
+  },
+  {
+   "kid": "V0496",
+   "front": "果物",
+   "back": "水果",
+   "stage": "planned"
+  },
+  {
+   "kid": "V0417",
+   "front": "奥さん",
+   "back": "夫人；太太",
+   "stage": "planned"
+  },
+  {
+   "kid": "V0418",
+   "front": "お酒",
+   "back": "酒",
+   "stage": "planned"
+  },
+  {
+   "kid": "V0419",
+   "front": "お皿",
+   "back": "盘子",
+   "stage": "planned"
+  },
+  {
+   "kid": "V0420",
+   "front": "お祖父さん",
+   "back": "祖父；老爷爷",
+   "stage": "planned"
   }
+ ],
+ "vocab": [
+  {
+   "id": "V0550",
+   "surface": "散歩",
+   "kana": "さんぽ",
+   "meaning": "散步",
+   "ko": "",
+   "pos": "名词/动词(サ变)/自动词",
+   "ex": {
+    "ja": "散歩に出かけてもよろしいですか。",
+    "zh": "我可以出去散散步吗？"
+   },
+   "audio": null
+  },
+  {
+   "id": "V0551",
+   "surface": "四",
+   "kana": "し",
+   "meaning": "四",
+   "ko": "사",
+   "pos": "数词",
+   "ex": {
+    "ja": "列車でならここからたった四分だ。",
+    "zh": "坐电车的话，从这里只要四分钟。"
+   },
+   "audio": null
+  },
+  {
+   "id": "V0552",
+   "surface": "塩",
+   "kana": "しお",
+   "meaning": "盐",
+   "ko": "",
+   "pos": "名词",
+   "ex": {
+    "ja": "このスープは塩が少し足りない。",
+    "zh": "这汤盐放得有点少。"
+   },
+   "audio": null
+  },
+  {
+   "id": "V0553",
+   "surface": "辞書",
+   "kana": "じしょ",
+   "meaning": "词典",
+   "ko": "",
+   "pos": "名词",
+   "ex": {
+    "ja": "それはどの辞書にもでています。",
+    "zh": "那在任何词典里都有。"
+   },
+   "audio": null
+  },
+  {
+   "id": "V0554",
+   "surface": "下",
+   "kana": "した",
+   "meaning": "下面",
+   "ko": "",
+   "pos": "名词",
+   "ex": {
+    "ja": "クッキーはテーブルの下にいる。",
+    "zh": "饼干在桌子底下。"
+   },
+   "audio": null
+  },
+  {
+   "id": "V0555",
+   "surface": "七",
+   "kana": "しち",
+   "meaning": "七",
+   "ko": "칠",
+   "pos": "数词",
+   "ex": {
+    "ja": "どういっても七時までにいかないと。",
+    "zh": "不管怎样，七点前都得过去。"
+   },
+   "audio": null
+  },
+  {
+   "id": "V0556",
+   "surface": "質問",
+   "kana": "しつもん",
+   "meaning": "提问；问题",
+   "ko": "질문",
+   "pos": "名词/动词(サ变)/他动词/自动词/连体词",
+   "ex": {
+    "ja": "あの先生に質問してもいいですよ。",
+    "zh": "可以向那位老师提问。"
+   },
+   "audio": null
+  },
+  {
+   "id": "V0557",
+   "surface": "自動車",
+   "kana": "じどうしゃ",
+   "meaning": "汽车",
+   "ko": "자동차",
+   "pos": "名词",
+   "ex": {
+    "ja": "自動車にひかれたのではないですか。",
+    "zh": "他是不是被车撞了？"
+   },
+   "audio": null
+  },
+  {
+   "id": "V0558",
+   "surface": "死ぬ",
+   "kana": "しぬ",
+   "meaning": "死",
+   "ko": "",
+   "pos": "动词(五段)/自动词",
+   "ex": {
+    "ja": "その少年は死んだものとしてあきらめられた。",
+    "zh": "人们认定那个少年已死，放弃了寻找。"
+   },
+   "audio": null
+  },
+  {
+   "id": "V0559",
+   "surface": "字引",
+   "kana": "じびき",
+   "meaning": "词典",
+   "ko": "",
+   "pos": "名词",
+   "ex": {
+    "ja": "ジョンソンさんはまるで生き字引です。",
+    "zh": "约翰逊先生简直是一部活词典。"
+   },
+   "audio": null
+  },
+  {
+   "id": "V0560",
+   "surface": "自分",
+   "kana": "じぶん",
+   "meaning": "自己",
+   "ko": "",
+   "pos": "代名词",
+   "ex": {
+    "ja": "自分でそれをしなければならない。",
+    "zh": "那件事得自己做。"
+   },
+   "audio": null
+  },
+  {
+   "id": "V0561",
+   "surface": "閉まる",
+   "kana": "しまる",
+   "meaning": "关闭",
+   "ko": "",
+   "pos": "动词(五段)/自动词",
+   "ex": {
+    "ja": "あいにく店は閉まっていた。",
+    "zh": "不巧店已经关门了。"
+   },
+   "audio": null
+  },
+  {
+   "id": "V0562",
+   "surface": "締める",
+   "kana": "しめる",
+   "meaning": "系紧；勒紧",
+   "ko": "",
+   "pos": "动词(一段)/他动词",
+   "ex": {
+    "ja": "いつもシートベルトを締めなさい。",
+    "zh": "要始终系好安全带。"
+   },
+   "audio": null
+  },
+  {
+   "id": "V0563",
+   "surface": "閉める",
+   "kana": "しめる",
+   "meaning": "关上",
+   "ko": "",
+   "pos": "动词(一段)/他动词",
+   "ex": {
+    "ja": "どうかドアを閉めてくれませんか。",
+    "zh": "能不能请你把门关上？"
+   },
+   "audio": null
+  },
+  {
+   "id": "V0564",
+   "surface": "じゃ",
+   "kana": "じゃ",
+   "meaning": "那么",
+   "ko": "",
+   "pos": "接续词",
+   "ex": {
+    "ja": "じゃあ、キーをもらえますか。",
+    "zh": "那么，能把钥匙给我吗？"
+   },
+   "audio": null
+  },
+  {
+   "id": "V0565",
+   "surface": "写真",
+   "kana": "しゃしん",
+   "meaning": "照片",
+   "ko": "사진",
+   "pos": "名词",
+   "ex": {
+    "ja": "なんてキレイな写真なんでしょう。",
+    "zh": "多漂亮的照片啊。"
+   },
+   "audio": null
+  },
+  {
+   "id": "V0566",
+   "surface": "シャツ",
+   "kana": "シャツ",
+   "meaning": "衬衫",
+   "ko": "",
+   "pos": "名词",
+   "ex": {
+    "ja": "シャツにアイロンをかけてください。",
+    "zh": "请把衬衫熨一下。"
+   },
+   "audio": null
+  },
+  {
+   "id": "V0567",
+   "surface": "シャワー",
+   "kana": "シャワー",
+   "meaning": "淋浴",
+   "ko": "",
+   "pos": "名词",
+   "ex": {
+    "ja": "シャワーの水が出ません。",
+    "zh": "淋浴不出水。"
+   },
+   "audio": null
+  },
+  {
+   "id": "V0568",
+   "surface": "授業",
+   "kana": "じゅぎょう",
+   "meaning": "课；上课",
+   "ko": "수업",
+   "pos": "名词/动词(サ变)/自动词",
+   "ex": {
+    "ja": "それは授業の終わりだった。",
+    "zh": "那是课结束的时候。"
+   },
+   "audio": null
+  }
+ ],
+ "grammar": [
+  {
+   "id": "G0252",
+   "pattern": "〜に（place of existence）",
+   "meaning_zh": "在…（存在场所）",
+   "connection": "名词（场所）+ に + ある／いる",
+   "usage": "表示人或物存在的场所，有生命用 いる，其余用 ある。",
+   "register_note": "口语与书面通用。",
+   "examples": [
+    {
+     "ja": "机の上に辞書があります。",
+     "zh": "桌子上有一本词典。"
+    },
+    {
+     "ja": "姉は東京に住んでいます。",
+     "zh": "姐姐住在东京。"
+    },
+    {
+     "ja": "猫は今どこにいますか。",
+     "zh": "猫现在在哪里？"
+    }
+   ],
+   "prerequisites": [
+    "G0014"
+   ],
+   "compare": [
+    {
+     "id": "G0256",
+     "diff": "に 表存在场所，で 表动作发生场所"
+    }
+   ],
+   "common_errors": [
+    {
+     "wrong": "机の上で辞書があります。",
+     "why": "存在句的场所用 に，で 表动作发生场所",
+     "fix": "机の上に辞書があります。",
+     "learner": "zh"
+    }
+   ],
+   "jlpt": "N5",
+   "ko_equiv": "에（존재 장소）",
+   "ko_diff": "韩语 에 表存在场所，与 に 对应；但韩语 있다 不区分有无生命，日语必须区分 ある／いる。",
+   "notes": "",
+   "tags": [
+    "particle"
+   ],
+   "source_ids": [
+    "S900"
+   ],
+   "review_status": "ai_draft",
+   "provenance": "OpenJLPT CC-BY-SA-4.0",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "id": "G0253",
+   "pattern": "〜に（indirect object）",
+   "meaning_zh": "向…（动作的对象）",
+   "connection": "名词（人）+ に",
+   "usage": "表示动作的接受者或对象，常与言う、貸す、電話する等搭配。",
+   "register_note": "口语与书面通用；口语可用「〜に」代替「〜に対して」。",
+   "examples": [
+    {
+     "ja": "母に手紙を書きます。",
+     "zh": "我要给母亲写信。"
+    },
+    {
+     "ja": "妹に本を貸しました。",
+     "zh": "我把书借给了妹妹。"
+    },
+    {
+     "ja": "友達に電話をかけました。",
+     "zh": "我给朋友打了电话。"
+    }
+   ],
+   "prerequisites": [
+    "G0009"
+   ],
+   "compare": [
+    {
+     "id": "G0252",
+     "diff": "に 可表对象，也可表存在场所，依动词判断"
+    }
+   ],
+   "common_errors": [
+    {
+     "wrong": "母を手紙を書きます。",
+     "why": "信的收件人用 に，を 只能标一个宾语",
+     "fix": "母に手紙を書きます。",
+     "learner": "zh"
+    }
+   ],
+   "jlpt": "N5",
+   "ko_equiv": "에게（대상）",
+   "ko_diff": "韩语对人用 에게/한테，对物用 에；日语统一用 に，需根据动词和名词性质判断是对象还是场所。",
+   "notes": "",
+   "tags": [
+    "particle"
+   ],
+   "source_ids": [
+    "S900"
+   ],
+   "review_status": "ai_draft",
+   "provenance": "OpenJLPT CC-BY-SA-4.0",
+   "license": "CC-BY-SA-4.0"
+  }
+ ],
+ "sentences": [
+  {
+   "id": "S0201",
+   "day": 21,
+   "direction": "zh-ja",
+   "prompt": "这条街很热闹。",
+   "answer": "この通りは賑やかだ。",
+   "knowledge_ids": [
+    "V0701"
+   ],
+   "hint": "〜てある"
+  },
+  {
+   "id": "S0202",
+   "day": 21,
+   "direction": "zh-ja",
+   "prompt": "列车一直向西行驶。",
+   "answer": "列車は西へ走っていた。",
+   "knowledge_ids": [
+    "V0702"
+   ],
+   "hint": "〜てある"
+  },
+  {
+   "id": "S0203",
+   "day": 21,
+   "direction": "zh-ja",
+   "prompt": "我把这件行李放上去可以吗？",
+   "answer": "これ荷物を上にあげてもよろしい。",
+   "knowledge_ids": [
+    "V0703"
+   ],
+   "hint": "〜てある"
+  },
+  {
+   "id": "S0204",
+   "day": 21,
+   "direction": "zh-ja",
+   "prompt": "那条新闻我是在广播里听到的。",
+   "answer": "そのニュースはラジオで聞いたよ。",
+   "knowledge_ids": [
+    "V0704"
+   ],
+   "hint": "〜てある"
+  },
+  {
+   "id": "S0205",
+   "day": 21,
+   "direction": "zh-ja",
+   "prompt": "那个院子里一朵玫瑰也没有。",
+   "answer": "その庭にはバラがまったくなかった。",
+   "knowledge_ids": [
+    "V0705"
+   ],
+   "hint": "〜てある"
+  },
+  {
+   "id": "S0206",
+   "day": 21,
+   "direction": "zh-ja",
+   "prompt": "这里必须脱鞋吗？",
+   "answer": "ここで靴を脱がなければなりませんか。",
+   "knowledge_ids": [
+    "V0706"
+   ],
+   "hint": "〜てある"
+  },
+  {
+   "id": "S0207",
+   "day": 21,
+   "direction": "zh-ja",
+   "prompt": "这咖啡不够烫。",
+   "answer": "このコーヒーはぬるいです。",
+   "knowledge_ids": [
+    "V0707"
+   ],
+   "hint": "〜てある"
+  },
+  {
+   "id": "S0208",
+   "day": 21,
+   "direction": "ja-zh",
+   "prompt": "このネクタイはいくらですか。",
+   "answer": "这条领带多少钱？",
+   "knowledge_ids": [
+    "V0708"
+   ],
+   "hint": "〜てある"
+  },
+  {
+   "id": "S0209",
+   "day": 21,
+   "direction": "ja-zh",
+   "prompt": "本を読んでるうちに寝てしまった。",
+   "answer": "看着书就睡着了。",
+   "knowledge_ids": [
+    "V0709"
+   ],
+   "hint": "〜てある"
+  },
+  {
+   "id": "S0210",
+   "day": 21,
+   "direction": "ja-zh",
+   "prompt": "これらの語をノートに書きなさい。",
+   "answer": "把这些词写在笔记本上。",
+   "knowledge_ids": [
+    "V0710"
+   ],
+   "hint": "〜てある"
+  }
+ ],
+ "quiz": [
+  {
+   "qid": "Q-021-V0",
+   "prompt": "「散歩」是什么意思？",
+   "options": [
+    "去",
+    "远",
+    "懂；明白",
+    "散步"
+   ],
+   "h": "3d0ac895",
+   "oh": [
+    "be59105a",
+    "58307d5b",
+    "b7d2ad13",
+    "3d0ac895"
+   ],
+   "rationale": "散歩（さんぽ）＝散步"
+  },
+  {
+   "qid": "Q-021-V1",
+   "prompt": "「四」是什么意思？",
+   "options": [
+    "酱油",
+    "那边",
+    "信封",
+    "四"
+   ],
+   "h": "5e53c03a",
+   "oh": [
+    "ac4dd17f",
+    "2b7a8bb1",
+    "ade0e657",
+    "5e53c03a"
+   ],
+   "rationale": "四（し）＝四"
+  },
+  {
+   "qid": "Q-021-V2",
+   "prompt": "「塩」是什么意思？",
+   "options": [
+    "盐",
+    "留学生",
+    "温的",
+    "来"
+   ],
+   "h": "5586120f",
+   "oh": [
+    "5586120f",
+    "6b2a7fcb",
+    "2c423e00",
+    "e09e89e0"
+   ],
+   "rationale": "塩（しお）＝盐"
+  },
+  {
+   "qid": "Q-021-K",
+   "prompt": "汉字「川」的读音是？",
+   "options": [
+    "セン",
+    "トウ",
+    "カイ",
+    "オウ"
+   ],
+   "h": "fd86e10b",
+   "oh": [
+    "fd86e10b",
+    "413c8a03",
+    "b291bb8a",
+    "d2929981"
+   ],
+   "rationale": "川：音 セン｜训 かわ"
+  },
+  {
+   "qid": "Q-021-G",
+   "prompt": "句型「〜に（place of existence）」的意思是？",
+   "options": [
+    "也许…／大概…吧",
+    "据说…；也就是说…",
+    "在…（存在场所）",
+    "一方面…另一方面…／…但另一方面／取而代之、作为交换"
+   ],
+   "h": "65c81c26",
+   "oh": [
+    "a1bb3b97",
+    "699c026b",
+    "65c81c26",
+    "af9ce999"
+   ],
+   "rationale": "〜に（place of existence）＝在…（存在场所）"
+  },
+  {
+   "qid": "Q-021-R",
+   "prompt": "复习：「この」是什么意思？",
+   "options": [
+    "这个",
+    "窄",
+    "回；回家",
+    "拉；查（词典）"
+   ],
+   "h": "cbd1859a",
+   "oh": [
+    "cbd1859a",
+    "81800b53",
+    "e41c2df2",
+    "e8927e4c"
+   ],
+   "rationale": "この＝这个"
+  }
+ ],
+ "listening_material": null
 }

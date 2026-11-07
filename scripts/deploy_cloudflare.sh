@@ -32,8 +32,8 @@ case "$ENVIRONMENT" in
 esac
 
 # 1) 本地构建 / 校验：缺 curriculum 或 seeds 会立即失败，绝不发布空页。
-echo "==> [1/3] 本地构建 web/ (build_site.py)"
-python3 "$ROOT/scripts/build_site.py" --root "$ROOT"
+echo "==> [1/3] 本地构建 web/ (v5)"
+python3 "$ROOT/scripts/nh80.py" --root "$ROOT" build
 
 # 2) 部署：Worker + assets.directory 一起由 wrangler deploy 发布。
 echo "==> [2/3] wrangler deploy ($ENVIRONMENT)"

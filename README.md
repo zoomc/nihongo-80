@@ -1,4 +1,15 @@
-# Nihongo 80 — AI 私人日语学校（本地可运行项目）
+# Nihongo 150 — AI 私人日语学校（0 基础 → N3）
+
+> **v5（2026-11-07）**：周期改为 **150 天 × 60 分钟**，核心 **2,700 词 / 276 语法 / 620 汉字**。
+> 网页只留 5 块：复习、新词、语法（含朝鲜语对照）、句子输出、练习；支持**遮盖背诵**（遮中文/遮日文/双向）。
+> 主会话 + 每日会话用**文件协议**编排（`STATE.md` / `days/` / `tasks/`），任何 agent 都能接手。
+> 2,700 词 / 276 语法 / 620 汉字**全部排入 150 天**，不是“库里有但课不教”。
+> 听力 Day 46 起，每周 3 次，隔天一次。设计见 `docs/v5/00–04`。
+> 线上：https://nihongo80.cmjfire.workers.dev/day-001.html
+
+---
+
+# 旧版说明（v4，保留作历史）
 
 > **已上线（2026-11-06）**：https://nihongo80.cmjfire.workers.dev
 > **GitHub 仓库**：https://github.com/zoomc/nihongo-80
@@ -81,7 +92,7 @@ cd /Users/mj/Documents/learn/jp/nihongo-80
 python3 scripts/nh80.py init
 ```
 
-`init` 会：建库 → 导入 **1066 条**种子 → 校验并生成 Day 1–80 课程 → 生成 80 个网页 → 导出状态镜像。
+`init` 会：建库 → 导入 **6,136 条**种子 → 生成 Day 1–150 课程 → 生成 150 个网页 → 导出状态镜像。
 预期输出 `curriculum.validation: true, errors: 0`。
 
 若只改了知识种子或课程规则，重建用：
@@ -89,7 +100,7 @@ python3 scripts/nh80.py init
 ```bash
 python3 scripts/merge_sources.py     # 来源清单重映射（幂等）
 python3 scripts/nh80.py build        # 重建课程 + 网页
-python3 -m unittest discover -s tests   # 49 项验收测试
+python3 -m unittest discover -s tests -p "test_v5.py"   # v5 验收（19 项）
 ```
 
 ---

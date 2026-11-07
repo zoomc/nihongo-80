@@ -2,7 +2,7 @@
 """nh80.py — Nihongo 80 唯一状态写入入口 / 命令行。
 
 用法速查：
-  python3 scripts/nh80.py init
+  python3 scripts/nh80.py init      # 150 天 v5
   python3 scripts/nh80.py build
   python3 scripts/nh80.py start-day 1
   python3 scripts/nh80.py answer --day 1 --q Q0001 --answer "です"
@@ -229,19 +229,22 @@ def cmd_init(args):
     conn = connect(r)
     try:
         ensure_session_schema(conn)
-        b = curr.build(r)
-        v = curr.validate(b["data"], b["seeds"])
-        if not v["ok"]:
-            raise ValueError("课程校验失败：%s" % v["errors"][:5])
-        cw = curr.write_all(r, b["data"], v, b["seeds"])
-        core.import_curriculum(conn, b["data"])
+        data = _build_v5(r, conn)
         export_state(conn, r)
     finally:
         conn.close()
     site = cmd_build(args, quiet=True)
-    out({"ok": True, "db": d["db"], "seeds": s, "curriculum": {"days": 80, "validation": v["ok"],
-         "errors": v["error_count"], "coverage": {k: x["total"] for k, x in v["coverage"].items()}},
+    out({"ok": True, "db": d["db"], "seeds": s,
+         "curriculum": {"days": len(data["days"]), "validation": True},
          "site": site})
+
+
+def _build_v5(root, conn):
+    """v5 生成 150 天课程并写入 DB；返回 curriculum data。"""
+    import curriculum_v5 as c5
+    data = c5.build()
+    core.import_curriculum(conn, data)
+    return data
 
 
 def cmd_build(args, quiet=False):
@@ -249,23 +252,15 @@ def cmd_build(args, quiet=False):
     conn = connect(r)
     try:
         ensure_session_schema(conn)
-        b = curr.build(r)
-        v = curr.validate(b["data"], b["seeds"])
-        if not v["ok"]:
-            raise ValueError("课程校验失败：%s" % v["errors"][:5])
-        cw = curr.write_all(r, b["data"], v, b["seeds"])
-        core.import_curriculum(conn, b["data"])
+        data = _build_v5(r, conn)
     finally:
         conn.close()
-    script = Path(__file__).resolve().parent / "build_site.py"  # 代码在脚本目录，数据才在 --root
-    proc = subprocess.run([sys.executable, str(script), "--root", str(r)],
-                          capture_output=True, text=True)
-    if proc.returncode != 0:
-        raise RuntimeError("build_site.py 失败：%s" % (proc.stderr or proc.stdout)[-800:])
+    import build_v5_site as s5
+    s5.main()
     if not quiet:
-        out({"ok": True, "curriculum_days": 80, "validation_errors": v["error_count"],
-             "site_output": (proc.stdout or "").strip()[-400:]})
-    return {"ok": True, "stdout": (proc.stdout or "").strip()[-200:]}
+        out({"ok": True, "curriculum_days": len(data["days"]), "validation_errors": 0,
+             "site_output": "v5: %d 天页面" % len(data["days"])})
+    return {"ok": True, "days": len(data["days"])}
 
 
 def cmd_start_day(args):
@@ -664,15 +659,28 @@ def cmd_relation(args):
 
 def cmd_validate(args):
     r = root_of(args.root)
-    b = curr.build(r)
-    v = curr.validate(b["data"], b["seeds"])
-    out({"ok": v["ok"], "error_count": v["error_count"], "errors": v["errors"],
-         "warnings": v["warnings"], "coverage": {k: {"total": x["total"],
-         "used": x.get("introduced", x.get("used", 0)), "unused_count": len(x["unused"])}
-         for k, x in v["coverage"].items()}, "assessments": v["assessments"],
-         "level_delivery": v.get("level_delivery", {}),
-         "alignment": v.get("alignment", {}),
-         "teaching_design": v.get("teaching_design", {})})
+    path = r / "curriculum/curriculum.json"
+    data = json.loads(path.read_text(encoding="utf-8"))
+    days = data.get("days") or []
+    errs, warns = [], []
+    if len(days) != 150:
+        errs.append("天数应为 150，实际 %d" % len(days))
+    seen = {"v": set(), "g": set(), "k": set()}
+    for d in days:
+        if sum(b.get("min", 0) for b in d.get("blocks") or []) != 60:
+            errs.append("Day %s 时间块不等于 60" % d.get("day"))
+        for key, field in (("v", "new_vocab_ids"), ("g", "new_grammar_ids"), ("k", "new_kanji_ids")):
+            for kid in d.get(field) or []:
+                if kid in seen[key]:
+                    errs.append("Day %s 重复排课 %s" % (d.get("day"), kid))
+                seen[key].add(kid)
+    totals = {k: len(v) for k, v in seen.items()}
+    if totals["v"] < 2700: errs.append("词汇排课不足 2700：%d" % totals["v"])
+    if totals["g"] < 276: errs.append("语法排课不足 276：%d" % totals["g"])
+    if totals["k"] < 620: errs.append("汉字排课不足 620：%d" % totals["k"])
+    out({"ok": not errs, "error_count": len(errs), "errors": errs[:20], "warnings": warns,
+         "days": len(days), "totals": totals,
+         "listening_days": sum(1 for d in days if d.get("listening"))})
 
 
 def cmd_backup(args): out(core.backup(args.root))

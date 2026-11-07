@@ -1,10 +1,11 @@
-# HANDOFF · Nihongo 150 v6
+# HANDOFF · Nihongo 150 v7
 
-2026-11-07 完成并上线。验收、命令输出与线上版本见 `reports/v6_completion.md`；
+2026-11-08 完成并上线。v7 做了三路独立复审（内容库 / 免费听力资源 / 课程与题目质量）并修掉点名问题；
+验收与命令输出见 `reports/v7_completion.md`，v6 记录见 `reports/v6_completion.md`，
 数据来源与许可见 `DATA_LICENSES.md`。Git 具体提交以 `git log -1` 为准。
 
-- Production：`https://nihongo80.cmjfire.workers.dev`，Version `18d87f04-8414-43e6-a28d-3fa8e5fbd696`
-- Preview：`https://nihongo80-preview.cmjfire.workers.dev`，Version `4c022eca-0a84-4244-9f3c-f707e4f46c21`
+- Production：`https://nihongo80.cmjfire.workers.dev`，Version `10f39372-6f11-4de0-b76f-0811b4066c84`
+- Preview：`https://nihongo80-preview.cmjfire.workers.dev`，Version `12a083a4-e4be-4944-b78a-95ef4a35e8b8`
 
 ## 产品决策
 
@@ -17,7 +18,10 @@
 - 2700词、276语法、620汉字、1500句，全部可访问。
 - 每词均有韩语提示：2050词典匹配＋650 AI释义，来源单独标识。
 - 276语法和620汉字完成AI复审，修正多处错判、接续及韩语解释；不冒充人工教师审校或逐字词典认证。
-- 45篇原创完整合成音频，Kokoro开放模型本机生成，实测63.3–71.575秒；不是人声录音。正文哈希、编码和时长均验证；来源声明位于web/audio/NOTICE.txt。
+- 45篇原创完整合成音频，Kokoro开放模型本机生成，实测63.3–71.575秒；不是人声录音。
+- 45 篇听力共 135 道理解题已重写：9 个模板的 5 变体 Q3 答案互不相同，`audio_text` 哈希与音频逐条一致。
+- 新增 `web/listening.html`：4 条 Wikimedia Commons PD/CC BY-SA 开放音频可在本页播放并逐文件署名；
+  15 条免费真人听力/官方样题按阶段分组跳转原站；8 条不采用源列明原因。每日精听主线仍是本站合成音频。
 - 21个周测日、6个阶段/自测日有39道原创阅读/语境题，替换每日六题中的部分题；Day1有三道假名/助词诊断。45个听力日另三题，不以短测假冒官方模拟卷。
 - 官方N3题型、练习集与真人听力、Irodori、Tadoku、NHK入口位于resources.html，受限内容只链接原站。
 - 首页按周分组、有继续学习入口；旧n3-mock入口改为官方资源引导。
@@ -36,6 +40,9 @@
 | scripts/cloud_sync.py | 从D1拉取原始事件，再由本地重判 |
 | scripts/open_audio_assets.py | 开放模型离线重建音频，固定版本并校验哈希 |
 | scripts/release_guard.py | 发布前阻止超文件限额、私有文件或付费服务绑定混入 |
+| knowledge/resources_v7.json | 27 个外部听力/阅读源的许可与嵌入能力清单 |
+| web/listening.html | 真人听力页（4 条可播开放音频 + 分阶段外链，生成物） |
+| tests/test_v7.py | 14 项 v7 核心不变量回归 |
 | data/state.db | 私人权威状态，gitignore；不得手改 |
 | student/*.json | 自动导出的只读镜像，gitignore |
 | curriculum/、web/、generated-key.json | 构建产物；音频文件随仓库交付，不必下载模型即可运行 |
@@ -47,7 +54,7 @@
 python3 scripts/nh80.py init
 python3 scripts/nh80.py validate
 python3 scripts/release_guard.py
-python3 -m unittest discover -s tests -p 'test*.py'
+python3 -m unittest discover -s tests -p 'test*.py'   # 41 项
 node tests/test_worker_access.mjs  # 需要deploy/npm install后的esbuild
 python3 -m http.server 8099 -d web
 ```
@@ -80,4 +87,4 @@ bash scripts/deploy_cloudflare.sh production
 
 ## 接手纪律
 
-先看本文件、v6完成报告和CONTRACTS末尾v6修订。不得改DB、镜像或评分计数伪造进度；不得覆盖人工日报；不因一次答对判掌握。测试遵循先复现bug再修复，不补实现镜像测试、不新增CI测试。不操作Surge引擎或家庭旁路由。
+先看本文件、v7完成报告和CONTRACTS末尾v7修订。不得改DB、镜像或评分计数伪造进度；不得覆盖人工日报；不因一次答对判掌握。测试遵循先复现bug再修复，不补实现镜像测试、不新增CI测试。不操作Surge引擎或家庭旁路由。

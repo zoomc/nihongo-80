@@ -111,9 +111,13 @@ function initQuiz(selector, scoreSelector){
   var qs=JSON.parse(box.getAttribute('data-qs')||'[]');
   var done=0,right=0;
   var score=$(scoreSelector);
+  var lastPassage=null;
   qs.forEach(function(q,qi){
     var wrap=document.createElement('div'); wrap.className='q';
-    wrap.innerHTML=(q.passage?'<div class="passage" lang="ja">'+safe(q.passage)+'</div>':'')+'<div><strong>'+(qi+1)+'.</strong> '+safe(q.prompt)+'</div>';
+    var ph='';
+    if(q.passage&&q.passage!==lastPassage){ph='<div class="passage" lang="ja">'+safe(q.passage)+'</div>';lastPassage=q.passage;}
+    else if(q.passage){ph='<div class="small">（同上材料）</div>';}
+    wrap.innerHTML=ph+'<div><strong>'+(qi+1)+'.</strong> '+safe(q.prompt)+'</div>';
     var opts=document.createElement('div'); opts.className='opts';
     (q.options||[]).forEach(function(o,oi){
       var lab=document.createElement('label'); lab.className='opt';

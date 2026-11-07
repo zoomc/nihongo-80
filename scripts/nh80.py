@@ -265,6 +265,12 @@ def _build_v5(root, conn):
                 core._insert_kind(conn, "questions", q)
                 keys[q["qid"]] = {"day": day["day"], "type": "mcq", "answer": q["answer"]}
         audit(conn, "build_v5_questions", {"count": len(keys)})
+        # 清掉历史题库/旧构建遗留的孤儿题，避免 import-web-result 接受不在本次答案表里的题号。
+        stale = [row[0] for row in conn.execute("SELECT id FROM questions").fetchall()
+                 if row[0] not in keys]
+        if stale:
+            conn.executemany("DELETE FROM questions WHERE id=?", [(qid,) for qid in stale])
+            audit(conn, "purge_stale_questions", {"count": len(stale)})
         core.import_curriculum(conn, data)
     (root / "curriculum/curriculum.json").write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     (root / "deploy/worker/src/generated-key.json").write_text(jdump({"answers": keys}) + "\n", encoding="utf-8")
@@ -460,8 +466,9 @@ def cmd_import_web(args):
         unknown = [x.get("qid") for x in data["results"] if x.get("qid") not in qmap]
         if unknown:
             raise ValueError("回传码含未知题目 id，拒绝导入：%s" % unknown[:5])
+        # 没有 day 的题（历史题库残留）一律拒绝，不再用 payload 的 day 兜底。
         wrong_day = [x["qid"] for x in data["results"]
-                     if qmap[x["qid"]]["raw"].get("day", data["day"]) != data["day"]]
+                     if qmap[x["qid"]]["raw"].get("day") != data["day"]]
         if wrong_day:
             raise ValueError("题目不属于当天，拒绝导入")
         _ensure_session(conn, data["day"], data["session"])

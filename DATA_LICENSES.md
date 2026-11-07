@@ -21,3 +21,19 @@
 - 早期 `data/audio/` 下的 macOS `say` 产物仅限本机个人使用，已被 `.gitignore` 排除，**不发布、不提交**。
 - 所有 `review_status=ai_draft` 的内容都未经日语/韩语教师逐条人工审校；AI 复审不等于人工认证。
 - 许可可能随上游更新，再分发前请重新核对来源页面。
+
+## Commons 开放音频逐文件署名（v7 新增，2026-11-08）
+
+`web/listening.html` 直接播放以下 4 条 Wikimedia Commons 文件（`<audio src>` 指向 `upload.wikimedia.org`
+官方 CDN，不下载转存）。页面卡片同时给出文件页、作者与许可全文链接。
+
+| 文件 | 作者 | 许可 | 直链 |
+|---|---|---|---|
+| `Ja-pronunciation-practice5.ogg` | marsian | Public domain | `https://upload.wikimedia.org/wikipedia/commons/4/49/Ja-pronunciation-practice5.ogg` |
+| `Ja-arigato.oga` | Fête | CC BY-SA 3.0 | `https://upload.wikimedia.org/wikipedia/commons/f/fb/Ja-arigato.oga` |
+| `Ja-aisukurimu.ogg` | TAKASUGI Shinji | CC BY-SA 3.0 | `https://upload.wikimedia.org/wikipedia/commons/d/df/Ja-aisukurimu.ogg` |
+| 维基百科日语版朗读记事「藤村紀雄」 | 朗读 Prefuture；条目作者见维基百科 | CC BY-SA 4.0 | `https://upload.wikimedia.org/wikipedia/commons/9/95/…ogg` |
+
+四条直链 2026-11-08 实测 HTTP 200 `application/ogg`。许可与作者信息经
+`commons.wikimedia.org/w/api.php` 的 `imageinfo/extmetadata` 逐文件核实。
+CC BY-SA 文件仅播放、未改编；署名与许可链接已随音频卡片给出。

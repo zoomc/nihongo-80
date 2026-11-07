@@ -6,18 +6,20 @@
 
 每天网页 42 分钟＋会话 18 分钟。常规日最多 16 个必学词，听力日最多 11 个；完整 2700 词中的其余内容按天提供选学拓展。每天先做三句，再由会话批改、抽词与自主造句，不靠刷完页面判完成。
 
-包含 2700 词、276 语法、620 汉字、1500 句、45 篇可播放的原创合成听力，以及周阅读、阶段检测、假名诊断。韩语提示覆盖全部词汇：2050 条开放词典匹配、650 条 AI 释义。官方真人听力与 JLPT N3 题型、练习集从资源页进入原站，不重新托管受限内容。
+包含 2700 词、276 语法、620 汉字、1500 句、45 篇可播放的原创合成听力，以及周阅读、阶段检测、假名诊断。韩语提示覆盖全部词汇：2050 条开放词典匹配、650 条 AI 释义。
 
-- [怎么学](docs/STUDY_GUIDE.md)
+听力分两层：**每日精听**是 45 篇原创文本的合成音频 + 3 道理解题；**真人听力页**提供 4 条开放许可音频可在本页播放，以及 JLPT 官方样题、Irodori、Erin、NHK、免费播客等按阶段分组的免费入口（跳转官方原站，不托管第三方音频）。课程内容与题目经过三路独立复审并修复，详见 [v7 完成报告](reports/v7_completion.md)。
+
+- [怎么学](docs/STUDY_GUIDE.md) · [真人听力页](web/listening.html)
 - [接手与构建](HANDOFF.md)
-- [完成验收](reports/v6_completion.md)
-- [数据来源与许可](DATA_LICENSES.md)
-- [外部资源、模型署名与免费额度](docs/RESOURCE_POLICY.md)
+- [v7 完成验收](reports/v7_completion.md)（[v6 验收](reports/v6_completion.md)）
+- [三路复审报告](reports/v7_content_review.md) · [课程与题目复审](reports/v7_curriculum_quiz_review.md) · [听力资源调研](reports/v7_listening_sources.md)
+- [数据来源与许可](DATA_LICENSES.md) · [外部资源、模型署名与免费额度](docs/RESOURCE_POLICY.md)
 
 ```sh
 python3 scripts/nh80.py init
 python3 scripts/nh80.py validate
-python3 -m unittest discover -s tests -p 'test*.py'
+python3 -m unittest discover -s tests -p 'test*.py'   # 41 项
 node tests/test_worker_access.mjs
 ```
 

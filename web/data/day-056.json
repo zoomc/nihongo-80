@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "16 个必学词；4 个选学拓展"
+   "desc": "16 个必学词；3 个选学拓展"
   },
   {
    "type": "语法",
@@ -39,79 +39,214 @@
  "listening": false,
  "review": [
   {
-   "kid": "V1155",
-   "front": "進む",
-   "back": "前进；有进展",
+   "kid": "V1147",
+   "front": "ずいぶん",
+   "back": "相当；很",
    "stage": "planned"
   },
   {
-   "kid": "V1156",
-   "front": "すっと",
-   "back": "一下子；顺畅地",
+   "kid": "V1148",
+   "front": "数学",
+   "back": "数学",
    "stage": "planned"
   },
   {
-   "kid": "V1157",
-   "front": "ステーキ",
-   "back": "牛排",
+   "kid": "V1149",
+   "front": "スーツ",
+   "back": "西装",
    "stage": "planned"
   },
   {
-   "kid": "V1158",
-   "front": "捨てる",
-   "back": "扔掉；抛弃",
+   "kid": "G0205",
+   "front": "〜すぎる",
+   "back": "过于…；…过头",
    "stage": "planned"
   },
   {
-   "kid": "V1121",
-   "front": "社長",
-   "back": "社长",
+   "kid": "G0206",
+   "front": "〜方",
+   "back": "…的方法；…的方式",
    "stage": "planned"
   },
   {
-   "kid": "V1122",
-   "front": "じゃま",
-   "back": "妨碍",
+   "kid": "K0272",
+   "front": "服",
+   "back": "衣服；服从｜音 フク",
    "stage": "planned"
   },
   {
-   "kid": "V1123",
-   "front": "ジャム",
-   "back": "果酱",
+   "kid": "K0273",
+   "front": "夕",
+   "back": "傍晚；夕｜音 セキ",
    "stage": "planned"
   },
   {
-   "kid": "V1124",
-   "front": "自由",
-   "back": "自由",
+   "kid": "V1114",
+   "front": "辞典",
+   "back": "辞典",
    "stage": "planned"
   },
   {
-   "kid": "V1053",
-   "front": "高校",
-   "back": "高中",
+   "kid": "V1115",
+   "front": "品物",
+   "back": "物品",
    "stage": "planned"
   },
   {
-   "kid": "V1054",
-   "front": "高校生",
-   "back": "高中生",
+   "kid": "V1116",
+   "front": "しばらく",
+   "back": "暂时",
    "stage": "planned"
   },
   {
-   "kid": "V1055",
-   "front": "工場",
-   "back": "工厂",
+   "kid": "G0201",
+   "front": "〜そうだ（hearsay）",
+   "back": "听说…；据说…",
    "stage": "planned"
   },
   {
-   "kid": "V1056",
-   "front": "校長",
-   "back": "校长",
+   "kid": "G0202",
+   "front": "〜らしい（hearsay/conjecture）",
+   "back": "好像…；据说…",
    "stage": "planned"
   }
  ],
  "vocab": [
+  {
+   "id": "V1166",
+   "surface": "すると",
+   "kana": "すると",
+   "meaning": "于是；那么",
+   "ko": "그러자 / 그러면",
+   "ko_status": "ai_gloss",
+   "optional": false,
+   "pos": "接续词",
+   "ex": {
+    "ja": "するとあなたは幸せでしょう。",
+    "zh": "那样的话你就会幸福吧。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1167",
+   "surface": "生活",
+   "kana": "せいかつ",
+   "meaning": "生活",
+   "ko": "생활（生活）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名词/动词(サ变)/自动词",
+   "ex": {
+    "ja": "どのようにして生活していきますか。",
+    "zh": "你打算怎么生活下去？"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1168",
+   "surface": "生産",
+   "kana": "せいさん",
+   "meaning": "生产",
+   "ko": "생산（生产）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名词/动词(サ变)/他动词",
+   "ex": {
+    "ja": "この工場はＣＤプレーヤーを生産している。",
+    "zh": "这家工厂生产CD播放机。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1169",
+   "surface": "政治",
+   "kana": "せいじ",
+   "meaning": "政治",
+   "ko": "정치（政治）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "政治については語りたくない。",
+    "zh": "我不想谈论政治。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1170",
+   "surface": "西洋",
+   "kana": "せいよう",
+   "meaning": "西方；西洋",
+   "ko": "서양（西方，欧美，西洋）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "それらは西洋の風呂よりずっといいです。",
+    "zh": "那些比西式的浴缸好得多。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1171",
+   "surface": "世界",
+   "kana": "せかい",
+   "meaning": "世界",
+   "ko": "세계（世界）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "愛の力は世界を動かす。",
+    "zh": "爱的力量能推动世界。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1172",
+   "surface": "席",
+   "kana": "せき",
+   "meaning": "座位",
+   "ko": "자리（座位，席位）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "この席を見ていてくれませんか。",
+    "zh": "能帮我看住这个座位吗？"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1173",
+   "surface": "背中",
+   "kana": "せなか",
+   "meaning": "后背",
+   "ko": "등",
+   "ko_status": "ai_gloss",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "このブラウスはボタンが背中にある。",
+    "zh": "这件女衬衫的扣子在背上。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1174",
+   "surface": "ぜひ",
+   "kana": "ぜひ",
+   "meaning": "务必；一定",
+   "ko": "꼭 / 부디",
+   "ko_status": "ai_gloss",
+   "optional": false,
+   "pos": "副词",
+   "ex": {
+    "ja": "ぜひパーティーにおいでください。",
+    "zh": "请务必来参加聚会。"
+   },
+   "audio": "tts"
+  },
   {
    "id": "V1175",
    "surface": "線",
@@ -224,7 +359,7 @@
    "meaning": "祖父；外祖父",
    "ko": "조부（祖父，外祖父）",
    "ko_status": "dictionary",
-   "optional": false,
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "祖父はステッキがないと歩けない。",
@@ -239,7 +374,7 @@
    "meaning": "柔软；温和",
    "ko": "부드럽다 / 온화하다",
    "ko_status": "ai_gloss",
-   "optional": false,
+   "optional": true,
    "pos": "な形容词/连体词",
    "ex": {
     "ja": "スミスさんはソフトな語り口の人物です。",
@@ -254,188 +389,37 @@
    "meaning": "祖母；外祖母",
    "ko": "조모（祖母，外祖母）",
    "ko_status": "dictionary",
-   "optional": false,
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "私は祖母が大好きです。",
     "zh": "我很爱我的祖母。"
    },
    "audio": "tts"
-  },
-  {
-   "id": "V1185",
-   "surface": "それで",
-   "kana": "それで",
-   "meaning": "因此；所以",
-   "ko": "따라서（因此，所以）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "接续词",
-   "ex": {
-    "ja": "それで、その金はどこから出るんだよ？",
-    "zh": "那么，那笔钱从哪里来？"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1186",
-   "surface": "それに",
-   "kana": "それに",
-   "meaning": "而且；加上",
-   "ko": "게다가",
-   "ko_status": "ai_gloss",
-   "optional": false,
-   "pos": "接续词",
-   "ex": {
-    "ja": "それに、みんなに仲間もできるしね。",
-    "zh": "而且，大家还能交到伙伴。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1187",
-   "surface": "それほど",
-   "kana": "それほど",
-   "meaning": "那么；那种程度",
-   "ko": "그다지 / 그 정도로",
-   "ko_status": "ai_gloss",
-   "optional": false,
-   "pos": "副词",
-   "ex": {
-    "ja": "いや、それほど混んでなかったよ。",
-    "zh": "不，没那么挤。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1188",
-   "surface": "そんな",
-   "kana": "そんな",
-   "meaning": "那样的",
-   "ko": "고런（那样的） / 그런（那种，那样）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "词",
-   "ex": {
-    "ja": "どうしてそんなことが起こったの？",
-    "zh": "怎么会发生那种事？"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1189",
-   "surface": "そんなに",
-   "kana": "そんなに",
-   "meaning": "那么；那样地",
-   "ko": "그리（如此，那么） / 그다지（如此，那么）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "副词",
-   "ex": {
-    "ja": "でも、そんなに悪くはなかったよ。",
-    "zh": "不过，也没那么糟。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1190",
-   "surface": "退院",
-   "kana": "たいいん",
-   "meaning": "出院",
-   "ko": "퇴원（出院）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名词/动词(サ变)/自动词",
-   "ex": {
-    "ja": "彼女は１時間前に退院しました。",
-    "zh": "她一小时前出院了。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1191",
-   "surface": "大学生",
-   "kana": "だいがくせい",
-   "meaning": "大学生",
-   "ko": "대학생（大学生）",
-   "ko_status": "dictionary",
-   "optional": true,
-   "pos": "名词",
-   "ex": {
-    "ja": "私の兄は大学生です。",
-    "zh": "我哥哥是大学生。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1192",
-   "surface": "大事",
-   "kana": "だいじ",
-   "meaning": "重要；宝贵",
-   "ko": "소중하다 / 중요하다",
-   "ko_status": "ai_gloss",
-   "optional": true,
-   "pos": "な形容词",
-   "ex": {
-    "ja": "彼は私たちにとって大事な人だ。",
-    "zh": "他对我们来说是重要的人。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1193",
-   "surface": "大体",
-   "kana": "だいたい",
-   "meaning": "大致；大概",
-   "ko": "한（大概） / 대강（大致，大略，草草） / 대개（大部分，大概，大致）",
-   "ko_status": "dictionary",
-   "optional": true,
-   "pos": "副词",
-   "ex": {
-    "ja": "それらはだいたい同じくらいの大きさだ。",
-    "zh": "它们大小差不多。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1194",
-   "surface": "たいてい",
-   "kana": "たいてい",
-   "meaning": "大都；通常",
-   "ko": "대개 / 보통",
-   "ko_status": "ai_gloss",
-   "optional": true,
-   "pos": "な形容词/副词/名词",
-   "ex": {
-    "ja": "夜はたいていの人が寝る時である。",
-    "zh": "夜晚是大多数人睡觉的时候。"
-   },
-   "audio": "tts"
   }
  ],
  "core_vocab_ids": [
+  "V1166",
+  "V1167",
+  "V1168",
+  "V1169",
+  "V1170",
+  "V1171",
+  "V1172",
+  "V1173",
+  "V1174",
   "V1175",
   "V1176",
   "V1177",
   "V1178",
   "V1179",
   "V1180",
-  "V1181",
-  "V1182",
-  "V1183",
-  "V1184",
-  "V1185",
-  "V1186",
-  "V1187",
-  "V1188",
-  "V1189",
-  "V1190"
+  "V1181"
  ],
  "extension_vocab_ids": [
-  "V1191",
-  "V1192",
-  "V1193",
-  "V1194"
+  "V1182",
+  "V1183",
+  "V1184"
  ],
  "grammar": [
   {
@@ -647,88 +631,88 @@
  ],
  "quiz": [
   {
-   "qid": "Q-056-V0-07df21c0a009",
-   "prompt": "「線」是什么意思？",
-   "options": [
-    "多亏；托福",
-    "线",
-    "祖母；外祖母",
-    "文化"
-   ],
-   "h": "ba7a190e",
-   "oh": [
-    "4ae8ae46",
-    "ba7a190e",
-    "dad50eb0",
-    "89650dd0"
-   ]
-  },
-  {
-   "qid": "Q-056-V1-24c826b30b74",
-   "prompt": "「ぜんぜん」是什么意思？",
-   "options": [
-    "完全（不）",
-    "掉落；落榜",
-    "手套",
-    "记住；学会"
-   ],
-   "h": "7ca9eed9",
-   "oh": [
-    "7ca9eed9",
-    "836c3761",
-    "2c746ae7",
-    "63f479ad"
-   ]
-  },
-  {
-   "qid": "Q-056-V2-0c1d86cbddd2",
-   "prompt": "「戦争」是什么意思？",
-   "options": [
-    "滑；打滑",
-    "战争",
-    "数学",
-    "改变"
-   ],
-   "h": "1b259f2a",
-   "oh": [
-    "97dfbd89",
-    "1b259f2a",
-    "2d60e4ab",
-    "d5088f04"
-   ]
-  },
-  {
-   "qid": "Q-056-K-08f9caa543af",
+   "qid": "Q-056-K0-092121cf2295",
    "prompt": "汉字「堂」的一个常用读音是？",
    "options": [
+    "き.まる",
+    "ネン",
     "ドウ",
-    "シ",
-    "シツ",
-    "キン"
+    "か.う"
    ],
    "h": "1f3882e6",
    "oh": [
+    "d4a6d1ad",
+    "fc2f5171",
     "1f3882e6",
-    "b2250a76",
-    "229b6636",
-    "fcea7411"
+    "4ce182de"
    ]
   },
   {
-   "qid": "Q-056-G-59b35f3aa2e9",
+   "qid": "Q-056-K1-45c3fd7b6b4d",
+   "prompt": "汉字「鳥」的一个常用读音是？",
+   "options": [
+    "なご.む",
+    "ギン",
+    "しろがね",
+    "チョウ"
+   ],
+   "h": "f271e9b5",
+   "oh": [
+    "78f88a2d",
+    "ecf2a9a6",
+    "1016afee",
+    "f271e9b5"
+   ]
+  },
+  {
+   "qid": "Q-056-G-f6e7e1383ac6",
    "prompt": "句型「〜中」的意思是？",
    "options": [
-    "为了…；以便…",
-    "让…做；转告…",
-    "连…都…",
-    "正在…中；整个…；全…"
+    "正在…中；整个…；全…",
+    "容易…；往往…（多指不好的倾向）",
+    "规定…；按理…",
+    "预定…；计划…"
    ],
    "h": "efc2322f",
    "oh": [
-    "f157d5a4",
-    "36fa7083",
-    "72e51bce",
-    "efc2322f"
+    "efc2322f",
+    "875912c5",
+    "e96edb8f",
+    "650d5393"
+   ]
+  },
+  {
+   "qid": "Q-056-V0-f4ae0cec112e",
+   "prompt": "「すると」是什么意思？",
+   "options": [
+    "辣",
+    "于是；那么",
+    "九（きゅう／く）",
+    "探望"
+   ],
+   "h": "40241428",
+   "oh": [
+    "a530f692",
+    "40241428",
+    "31c22c1d",
+    "2556e29a"
+   ]
+  },
+  {
+   "qid": "Q-056-V1-f187435ffda5",
+   "prompt": "假名「せいかつ」对应的词形是？",
+   "options": [
+    "河",
+    "生活",
+    "今に",
+    "続ける"
+   ],
+   "h": "d109e70f",
+   "oh": [
+    "b6901cc2",
+    "d109e70f",
+    "ead1d342",
+    "6a378a0d"
    ]
   },
   {

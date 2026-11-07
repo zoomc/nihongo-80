@@ -1,8 +1,8 @@
 {
  "day": 144,
  "phase": "P4",
- "theme": "〜ふりをする",
- "can_do": "用「〜ふりをする」造两句自己的话，表达：假装…",
+ "theme": "〜気味",
+ "can_do": "用「〜気味」造两句自己的话，表达：有点…；稍有…迹象",
  "minutes": 60,
  "blocks": [
   {
@@ -13,12 +13,12 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "16 个必学词；6 个选学拓展"
+   "desc": "16 个必学词；5 个选学拓展"
   },
   {
    "type": "语法",
    "min": 6,
-   "desc": "〜ふりをする"
+   "desc": "〜気味"
   },
   {
    "type": "句子输出",
@@ -39,79 +39,334 @@
  "listening": false,
  "review": [
   {
-   "kid": "V2557",
-   "front": "トランプ",
-   "back": "扑克牌",
+   "kid": "V2533",
+   "front": "解ける",
+   "back": "解开；解出",
    "stage": "planned"
   },
   {
-   "kid": "V2558",
-   "front": "取り上げる",
-   "back": "拿起；没收",
+   "kid": "V2534",
+   "front": "どこか",
+   "back": "某处；总觉得",
    "stage": "planned"
   },
   {
-   "kid": "V2559",
-   "front": "努力",
-   "back": "努力",
+   "kid": "V2535",
+   "front": "ところが",
+   "back": "然而；可是",
    "stage": "planned"
   },
   {
-   "kid": "V2560",
-   "front": "ドレス",
-   "back": "连衣裙；礼服",
+   "kid": "G0182",
+   "front": "〜がち",
+   "back": "容易…；动不动就…",
    "stage": "planned"
   },
   {
-   "kid": "V2521",
-   "front": "通り",
-   "back": "大街；通风",
+   "kid": "K0589",
+   "front": "掛",
+   "back": "挂；花费；架｜音 カイ、ケイ",
    "stage": "planned"
   },
   {
-   "kid": "V2522",
-   "front": "通り過ぎる",
-   "back": "走过；经过",
+   "kid": "K0590",
+   "front": "到",
+   "back": "到达；达到｜音 トウ",
    "stage": "planned"
   },
   {
-   "kid": "V2523",
-   "front": "都会",
-   "back": "城市；都市",
+   "kid": "V2491",
+   "front": "手品",
+   "back": "魔术；戏法",
    "stage": "planned"
   },
   {
-   "kid": "V2524",
-   "front": "時",
-   "back": "时候；时间",
+   "kid": "V2492",
+   "front": "ですから",
+   "back": "所以",
    "stage": "planned"
   },
   {
-   "kid": "V2441",
-   "front": "貯金",
-   "back": "存款；存钱",
+   "kid": "V2493",
+   "front": "鉄",
+   "back": "铁",
    "stage": "planned"
   },
   {
-   "kid": "V2442",
-   "front": "直接",
-   "back": "直接",
+   "kid": "G0180",
+   "front": "〜ふりをする",
+   "back": "假装…",
    "stage": "planned"
   },
   {
-   "kid": "V2443",
-   "front": "著者",
-   "back": "作者",
+   "kid": "K0581",
+   "front": "閉",
+   "back": "关闭；关｜音 ヘイ",
    "stage": "planned"
   },
   {
-   "kid": "V2444",
-   "front": "塵",
-   "back": "尘土",
+   "kid": "K0582",
+   "front": "緒",
+   "back": "头绪；开端｜音 ショ、チョ",
    "stage": "planned"
   }
  ],
  "vocab": [
+  {
+   "id": "V2554",
+   "surface": "ドライブ",
+   "kana": "ドライブ",
+   "meaning": "开车游玩",
+   "ko": "드라이브",
+   "ko_status": "ai_gloss",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "ドライブするのはどうですか。",
+    "zh": "开车去兜风怎么样？"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2555",
+   "surface": "トラック",
+   "kana": "トラック",
+   "meaning": "卡车",
+   "ko": "트럭（卡车，货车）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "トラックが荷物を運んでいます。",
+    "zh": "卡车正在运货。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2556",
+   "surface": "ドラマ",
+   "kana": "ドラマ",
+   "meaning": "电视剧；戏剧",
+   "ko": "드라마（电视剧，连续剧）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "ナポレオンの一生はすばらしいドラマだった。",
+    "zh": "拿破仑的一生是一出精彩的戏剧。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2557",
+   "surface": "トランプ",
+   "kana": "トランプ",
+   "meaning": "扑克牌",
+   "ko": "카드（扑克牌） / 트럼프（扑克） / 카드놀이（纸牌，扑克）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "トランプでごまかすのはよくないことだ。",
+    "zh": "打牌作弊是不好的。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2558",
+   "surface": "取り上げる",
+   "kana": "とりあげる",
+   "meaning": "拿起；没收",
+   "ko": "들어 올리다 / 압수하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
+   "pos": "动词(一段)/他动词",
+   "ex": {
+    "ja": "彼女はガラスの花瓶を取り上げた。",
+    "zh": "她拿起了一个玻璃花瓶。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2559",
+   "surface": "努力",
+   "kana": "どりょく",
+   "meaning": "努力",
+   "ko": "노력（努力，下工夫）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名词/动词(サ变)/自动词",
+   "ex": {
+    "ja": "彼はその問題を解こうと努力した。",
+    "zh": "他努力想解开那道题。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2560",
+   "surface": "ドレス",
+   "kana": "ドレス",
+   "meaning": "连衣裙；礼服",
+   "ko": "드레스（(连衣裙式)礼服）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "あのドレスは彼女によく似合う。",
+    "zh": "那条连衣裙很适合她。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2561",
+   "surface": "取れる",
+   "kana": "とれる",
+   "meaning": "脱落；能取到",
+   "ko": "떨어지다 / 얻을 수 있다",
+   "ko_status": "ai_gloss",
+   "optional": false,
+   "pos": "动词(一段)/自动词",
+   "ex": {
+    "ja": "オリーブの実から油が取れます。",
+    "zh": "橄榄果能榨出油。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2562",
+   "surface": "泥",
+   "kana": "どろ",
+   "meaning": "泥",
+   "ko": "진흙",
+   "ko_status": "ai_gloss",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "彼はブーツの泥をこすり落とした。",
+    "zh": "他刮掉了靴子上的泥。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2563",
+   "surface": "トン",
+   "kana": "トン",
+   "meaning": "吨",
+   "ko": "톤（吨）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "この荷物は一トンあります。",
+    "zh": "这批货重一吨。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2564",
+   "surface": "とんでもない",
+   "kana": "とんでもない",
+   "meaning": "岂有此理；哪里的话",
+   "ko": "천만에요 / 터무니없다",
+   "ko_status": "ai_gloss",
+   "optional": false,
+   "pos": "感叹词",
+   "ex": {
+    "ja": "彼女が歌手だなんてとんでもない。",
+    "zh": "说她是歌手，简直荒唐。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2565",
+   "surface": "どんな",
+   "kana": "どんな",
+   "meaning": "什么样的",
+   "ko": "뭔（什么） / 무슨（什么） / 아무（任何，什么）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "连体词",
+   "ex": {
+    "ja": "私はどんな戦争にも反対だ。",
+    "zh": "我反对任何形式的战争。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2566",
+   "surface": "どんなに",
+   "kana": "どんなに",
+   "meaning": "多么",
+   "ko": "좀（多么） / 암만（多么） / 오죽（多么，多）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "副词",
+   "ex": {
+    "ja": "君は私がどんなに心配しているかを知らない。",
+    "zh": "你不知道我有多担心。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2567",
+   "surface": "トンネル",
+   "kana": "トンネル",
+   "meaning": "隧道",
+   "ko": "굴（隧道） / 터널（隧道）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "汽車はトンネルを通り抜けた。",
+    "zh": "火车穿过了隧道。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2568",
+   "surface": "名",
+   "kana": "な",
+   "meaning": "名字；名声",
+   "ko": "이름（名字，名称）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "私はいつまでも彼の名を覚えている。",
+    "zh": "我会永远记得他的名字。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2569",
+   "surface": "なお",
+   "kana": "なお",
+   "meaning": "仍然；另外",
+   "ko": "여전히 / 또한",
+   "ko_status": "ai_gloss",
+   "optional": false,
+   "pos": "副词",
+   "ex": {
+    "ja": "あとで起こったことはなお悪かった。",
+    "zh": "后来发生的事更糟。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2570",
+   "surface": "仲",
+   "kana": "なか",
+   "meaning": "关系；交情",
+   "ko": "사이（关系）",
+   "ko_status": "dictionary",
+   "optional": true,
+   "pos": "名词",
+   "ex": {
+    "ja": "私は彼とは訪問し合う仲だ。",
+    "zh": "我和他是互相串门的交情。"
+   },
+   "audio": "tts"
+  },
   {
    "id": "V2571",
    "surface": "流す",
@@ -119,7 +374,7 @@
    "meaning": "冲；流（泪）",
    "ko": "쏟다（流，淌）",
    "ko_status": "dictionary",
-   "optional": false,
+   "optional": true,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "あんな恐ろしい男のために流す涙はない。",
@@ -134,7 +389,7 @@
    "meaning": "一半；中途",
    "ko": "반（一半，半） / 중턱（一半）",
    "ko_status": "dictionary",
-   "optional": false,
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "彼女は４０代半ばで再婚した。",
@@ -149,7 +404,7 @@
    "meaning": "伙伴；同伴",
    "ko": "동료",
    "ko_status": "ai_gloss",
-   "optional": false,
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "田中さんは父のつり仲間の一人だ。",
@@ -164,357 +419,85 @@
    "meaning": "景色；眺望",
    "ko": "경치（风景，景色）",
    "ko_status": "dictionary",
-   "optional": false,
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "眺めのよい部屋をお願いします。",
     "zh": "请给我一间视野好的房间。"
    },
    "audio": "tts"
-  },
-  {
-   "id": "V2575",
-   "surface": "眺める",
-   "kana": "ながめる",
-   "meaning": "眺望；凝视",
-   "ko": "내다보다（眺望，远望） / 바라다보다（注视，凝视）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "动词(一段)/他动词",
-   "ex": {
-    "ja": "何時間も海を眺めた。",
-    "zh": "我望着大海看了好几个小时。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V2576",
-   "surface": "流れ",
-   "kana": "ながれ",
-   "meaning": "水流；潮流",
-   "ko": "흐름（潮流，长河，进程，流程）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名词",
-   "ex": {
-    "ja": "流れは池に注いでいる。",
-    "zh": "溪水流进池塘。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V2577",
-   "surface": "流れる",
-   "kana": "ながれる",
-   "meaning": "流动；漂流",
-   "ko": "흐르다",
-   "ko_status": "ai_gloss",
-   "optional": false,
-   "pos": "动词(一段)/自动词",
-   "ex": {
-    "ja": "当時はきれいな水がこの川にも流れていた。",
-    "zh": "当时这条河里也流着干净的水。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V2578",
-   "surface": "無し",
-   "kana": "なし",
-   "meaning": "没有",
-   "ko": "없음",
-   "ko_status": "ai_gloss",
-   "optional": false,
-   "pos": "名词",
-   "ex": {
-    "ja": "ようやくその男と貸し借り無しになった。",
-    "zh": "我终于和那个男人两清了。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V2579",
-   "surface": "なぜなら",
-   "kana": "なぜなら",
-   "meaning": "因为",
-   "ko": "왜냐하면",
-   "ko_status": "ai_gloss",
-   "optional": false,
-   "pos": "接续词",
-   "ex": {
-    "ja": "なぜなら新聞記者だったからです。",
-    "zh": "因为当时我是报社记者。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V2580",
-   "surface": "謎",
-   "kana": "なぞ",
-   "meaning": "谜；谜团",
-   "ko": "수수께끼（谜）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名词",
-   "ex": {
-    "ja": "彼がなぜ仕事をやめたのかは謎だ。",
-    "zh": "他为什么辞职是个谜。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V2581",
-   "surface": "納得",
-   "kana": "なっとく",
-   "meaning": "理解；认可",
-   "ko": "납득（接受，理解）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名词/动词(サ变)/他动词/自动词",
-   "ex": {
-    "ja": "「そっか」ウィリーはようやく納得した。",
-    "zh": "「原来如此。」威利终于接受了。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V2582",
-   "surface": "何",
-   "kana": "なに",
-   "meaning": "什么",
-   "ko": "머（什么） / 뭐（什么） / 뭣（什么）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "代名词",
-   "ex": {
-    "ja": "今のアナウンスは何だったのですか。",
-    "zh": "刚才的广播说了什么？"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V2583",
-   "surface": "何か",
-   "kana": "なにか",
-   "meaning": "某物；什么",
-   "ko": "무슨（什么）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "代名词",
-   "ex": {
-    "ja": "ここまでのところで何か落としていることはありませんか。",
-    "zh": "到这里为止，有没有落下什么东西？"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V2584",
-   "surface": "なにも",
-   "kana": "なにも",
-   "meaning": "什么也（不）",
-   "ko": "아무것도（부정과 함께）",
-   "ko_status": "ai_gloss",
-   "optional": false,
-   "pos": "惯用表达",
-   "ex": {
-    "ja": "過ちのない者は何も作り出せない。",
-    "zh": "不犯错的人什么也创造不出来。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V2585",
-   "surface": "鍋",
-   "kana": "なべ",
-   "meaning": "锅",
-   "ko": "냄비",
-   "ko_status": "ai_gloss",
-   "optional": false,
-   "pos": "名词",
-   "ex": {
-    "ja": "ここに手のないナベがある。",
-    "zh": "这里有一口没有把手的锅。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V2586",
-   "surface": "生",
-   "kana": "なま",
-   "meaning": "生的；鲜的",
-   "ko": "날것 / 신선함",
-   "ko_status": "ai_gloss",
-   "optional": false,
-   "pos": "名词",
-   "ex": {
-    "ja": "ゴムをすると確かに性感が落ちるので、出来れば生でしたいです。",
-    "zh": "戴避孕套确实会影响感觉，所以可能的话想不用。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V2587",
-   "surface": "怠ける",
-   "kana": "なまける",
-   "meaning": "懒惰；懈怠",
-   "ko": "게으름 피우다",
-   "ko_status": "ai_gloss",
-   "optional": true,
-   "pos": "动词(一段)/自动词",
-   "ex": {
-    "ja": "彼は勉強を怠けている。",
-    "zh": "他学习很懈怠。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V2588",
-   "surface": "波",
-   "kana": "なみ",
-   "meaning": "波浪",
-   "ko": "물결（水波，波浪） / 파도（波涛，浪涛，波浪）",
-   "ko_status": "dictionary",
-   "optional": true,
-   "pos": "名词",
-   "ex": {
-    "ja": "船は波のなすがままになっている。",
-    "zh": "船随波浪摆布。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V2589",
-   "surface": "涙",
-   "kana": "なみだ",
-   "meaning": "眼泪",
-   "ko": "눈물（眼泪，泪水）",
-   "ko_status": "dictionary",
-   "optional": true,
-   "pos": "名词",
-   "ex": {
-    "ja": "２粒の涙が彼女のほおを流れ落ちた。",
-    "zh": "两滴眼泪顺着她的脸颊流下来。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V2590",
-   "surface": "悩む",
-   "kana": "なやむ",
-   "meaning": "烦恼；苦恼",
-   "ko": "고민되다（苦恼，发愁） / 고민하다（苦恼，发愁）",
-   "ko_status": "dictionary",
-   "optional": true,
-   "pos": "动词(五段)/自动词",
-   "ex": {
-    "ja": "悩んでも何の利益にもならない。",
-    "zh": "烦恼也没有任何好处。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V2591",
-   "surface": "縄",
-   "kana": "なわ",
-   "meaning": "绳子",
-   "ko": "끈（绳子，绳索，线） / 줄（绳，绳子） / 밧줄（绳子，麻绳）",
-   "ko_status": "dictionary",
-   "optional": true,
-   "pos": "名词",
-   "ex": {
-    "ja": "彼は縄で木に縛り付けられた。",
-    "zh": "他被绳子绑在树上。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V2592",
-   "surface": "何で",
-   "kana": "なんで",
-   "meaning": "为什么",
-   "ko": "왜（为什么）",
-   "ko_status": "dictionary",
-   "optional": true,
-   "pos": "副词",
-   "ex": {
-    "ja": "何で彼女はそんなことをしたのか。",
-    "zh": "她为什么做那种事？"
-   },
-   "audio": "tts"
   }
  ],
  "core_vocab_ids": [
+  "V2554",
+  "V2555",
+  "V2556",
+  "V2557",
+  "V2558",
+  "V2559",
+  "V2560",
+  "V2561",
+  "V2562",
+  "V2563",
+  "V2564",
+  "V2565",
+  "V2566",
+  "V2567",
+  "V2568",
+  "V2569"
+ ],
+ "extension_vocab_ids": [
+  "V2570",
   "V2571",
   "V2572",
   "V2573",
-  "V2574",
-  "V2575",
-  "V2576",
-  "V2577",
-  "V2578",
-  "V2579",
-  "V2580",
-  "V2581",
-  "V2582",
-  "V2583",
-  "V2584",
-  "V2585",
-  "V2586"
- ],
- "extension_vocab_ids": [
-  "V2587",
-  "V2588",
-  "V2589",
-  "V2590",
-  "V2591",
-  "V2592"
+  "V2574"
  ],
  "grammar": [
   {
-   "id": "G0180",
-   "pattern": "〜ふりをする",
-   "meaning_zh": "假装…",
-   "connection": "动词普通形/い形容词/ナ形容词な/名词の + ふりをする",
-   "usage": "表示故意做出与实际不符的样子。",
-   "register_note": "口语书面均可。",
+   "id": "G0183",
+   "pattern": "〜気味",
+   "meaning_zh": "有点…；稍有…迹象",
+   "connection": "名词/动词ます形词干 + 気味",
+   "usage": "表示已经出现某种轻微、不太好的迹象。",
+   "register_note": "口语书面均可，书面偏多。",
    "examples": [
     {
-     "ja": "母に呼ばれたが、聞こえないふりをしてゲームを続けた。",
-     "zh": "妈妈叫我，我装作没听见继续玩游戏。"
+     "ja": "少し風邪気味なので、今日は早めに帰ります。",
+     "zh": "有点感冒，今天早点回去。"
     },
     {
-     "ja": "彼は本当は知っているのに、知らないふりをしている。",
-     "zh": "他其实知道，却装作不知道。"
+     "ja": "最近、仕事が忙しくて疲れ気味だ。",
+     "zh": "最近工作忙，有点累。"
     },
     {
-     "ja": "電車の中で、寝たふりをして席を譲らない人がいる。",
-     "zh": "电车里有人装睡不让座。"
+     "ja": "人手が足りず、工事は予定より遅れ気味だ。",
+     "zh": "人手不足，工程有点滞后。"
     }
    ],
-   "prerequisites": [
-    "G0023"
-   ],
+   "prerequisites": [],
    "compare": [
     {
-     "id": "G0122",
-     "diff": "らしい 是“看起来像”，ふりをする 是故意假装，含欺骗意图。"
+     "id": "G0182",
+     "diff": "気味 是“已有轻微迹象”，がち 是“容易反复出现的倾向”。"
     }
    ],
    "common_errors": [
     {
-     "wrong": "母に呼ばれたが、聞こえないのふりをしてゲームを続けた。",
-     "why": "动词、形容词直接接「ふり」，不加「の」。",
-     "fix": "聞こえないふりをして",
+     "wrong": "少し風邪の気味なので、今日は早めに帰ります。",
+     "why": "「気味」直接接名词或动词词干，不加「の」。",
+     "fix": "風邪気味なので",
      "learner": "zh"
     }
    ],
    "jlpt": "N3",
-   "ko_equiv": "-는 척하다",
-   "ko_diff": "韩语「-는 척하다」与「ふりをする」对应；但日语「ふり」是名词，要用「〜のふり」，韩语直接接「척」。",
+   "ko_equiv": "-기가 있다",
+   "ko_diff": "韩语没有简洁对应，常说「좀 -은 편이다」；日语「気味」专指轻微不良迹象，程度更轻、更具体。",
    "notes": "",
    "tags": [
-    "appearance",
-    "manner"
+    "tendency",
+    "degree",
+    "state"
    ],
    "source_ids": [
     "S900"
@@ -628,105 +611,105 @@
  ],
  "quiz": [
   {
-   "qid": "Q-144-V0-e696c1048369",
-   "prompt": "「流す」是什么意思？",
-   "options": [
-    "日常；平常",
-    "冲；流（泪）",
-    "货款；费用",
-    "存在"
-   ],
-   "h": "deff0c7e",
-   "oh": [
-    "a6f6ca42",
-    "deff0c7e",
-    "38774f48",
-    "6f33f19d"
-   ]
-  },
-  {
-   "qid": "Q-144-V1-0612c39f555d",
-   "prompt": "「半ば」是什么意思？",
-   "options": [
-    "一半；中途",
-    "大大地；非常",
-    "通宵",
-    "分店"
-   ],
-   "h": "8779ca95",
-   "oh": [
-    "8779ca95",
-    "60fc51f0",
-    "336a18a8",
-    "b6c1302a"
-   ]
-  },
-  {
-   "qid": "Q-144-V2-f081b584e2e2",
-   "prompt": "「仲間」是什么意思？",
-   "options": [
-    "伙伴；同伴",
-    "这些",
-    "意思；意图",
-    "响应；根据"
-   ],
-   "h": "1e0d36f9",
-   "oh": [
-    "1e0d36f9",
-    "1cd2051d",
-    "3caef80f",
-    "bc7a6036"
-   ]
-  },
-  {
-   "qid": "Q-144-K-2731bf6f7319",
+   "qid": "Q-144-K0-5b1af3065276",
    "prompt": "汉字「盗」的一个常用读音是？",
    "options": [
-    "イ",
+    "とし",
     "トウ",
-    "ト",
-    "コウ"
+    "ヨ",
+    "はや.まる"
    ],
    "h": "413c8a03",
    "oh": [
-    "a124efb3",
+    "51c7f500",
     "413c8a03",
-    "4d246b77",
-    "2071fd6c"
+    "6d249dd7",
+    "4cec15c3"
    ]
   },
   {
-   "qid": "Q-144-G-664fa1271224",
-   "prompt": "句型「〜ふりをする」的意思是？",
+   "qid": "Q-144-K1-fdea522d227e",
+   "prompt": "汉字「吸」的一个常用读音是？",
    "options": [
-    "假装…",
-    "（第三人称）显得…；表现出…",
-    "…了一半；刚要…",
-    "…吗？（疑问）"
+    "キュウ",
+    "ま.つ",
+    "むすめ",
+    "くさ"
    ],
-   "h": "2a00309d",
+   "h": "3c5b0fd3",
    "oh": [
-    "2a00309d",
-    "de8ea081",
-    "82743b15",
-    "dec652ad"
+    "3c5b0fd3",
+    "710162bb",
+    "52b2049",
+    "a33fa871"
    ]
   },
   {
-   "qid": "Q-144-V5-4e9e4b16bb91",
-   "prompt": "「眺め」是什么意思？",
+   "qid": "Q-144-G-af6032a89d14",
+   "prompt": "句型「〜気味」的意思是？",
    "options": [
-    "景色；眺望",
-    "播放；广播",
-    "上面；表面",
-    "克服"
+    "有点…；稍有…迹象",
+    "习惯上…；坚持…",
+    "变得会…／变得不…了",
+    "关于…"
    ],
-   "h": "eccd2bea",
+   "h": "2d8b0ebe",
    "oh": [
-    "eccd2bea",
-    "deb45503",
-    "f8537414",
-    "59004085"
+    "2d8b0ebe",
+    "a54f712a",
+    "89b2ffab",
+    "10dd6ffa"
+   ]
+  },
+  {
+   "qid": "Q-144-V0-cec54856d1b3",
+   "prompt": "「ドライブ」是什么意思？",
+   "options": [
+    "宠物",
+    "开车游玩",
+    "贸易",
+    "清楚；明确"
+   ],
+   "h": "b24c2c70",
+   "oh": [
+    "ccda7222",
+    "b24c2c70",
+    "11be8c3c",
+    "1744d507"
+   ]
+  },
+  {
+   "qid": "Q-144-V1-12c71acb6fc2",
+   "prompt": "「トラック」是什么意思？",
+   "options": [
+    "卡车",
+    "管子",
+    "顺序；次序",
+    "体温"
+   ],
+   "h": "c34e6d7e",
+   "oh": [
+    "c34e6d7e",
+    "2fda7a74",
+    "2b380ee7",
+    "84009551"
+   ]
+  },
+  {
+   "qid": "Q-144-R-d907827dc0f0",
+   "prompt": "复习：「解ける」是什么意思？",
+   "options": [
+    "互相",
+    "解开；解出",
+    "自杀",
+    "回答；回复"
+   ],
+   "h": "bb466052",
+   "oh": [
+    "5a595977",
+    "bb466052",
+    "4c1c7787",
+    "5f8fbef1"
    ]
   }
  ],

@@ -221,9 +221,13 @@ function initQuiz(selector, scoreSelector){
   var qs=JSON.parse(box.getAttribute('data-qs')||'[]');
   var done=0,right=0;
   var score=$(scoreSelector);
+  var lastPassage=null;
   qs.forEach(function(q,qi){
     var wrap=document.createElement('div'); wrap.className='q';
-    wrap.innerHTML=(q.passage?'<div class="passage" lang="ja">'+safe(q.passage)+'</div>':'')+'<div><strong>'+(qi+1)+'.</strong> '+safe(q.prompt)+'</div>';
+    var ph='';
+    if(q.passage&&q.passage!==lastPassage){ph='<div class="passage" lang="ja">'+safe(q.passage)+'</div>';lastPassage=q.passage;}
+    else if(q.passage){ph='<div class="small">（同上材料）</div>';}
+    wrap.innerHTML=ph+'<div><strong>'+(qi+1)+'.</strong> '+safe(q.prompt)+'</div>';
     var opts=document.createElement('div'); opts.className='opts';
     (q.options||[]).forEach(function(o,oi){
       var lab=document.createElement('label'); lab.className='opt';
@@ -336,7 +340,7 @@ HTML = """<!DOCTYPE html>
   @@TOC_LISTEN@@<a href="#sentences">@@SNUM@@ 句子</a><a href="#quiz">@@QNUM@@ 练习</a>
 </nav>
 <main>
-<p class="hint">@@CAN_DO@@</p><p class="small"><a href="/">课程目录</a> · <a href="resources.html">官方真人听力与N3样题</a></p>
+<p class="hint">@@CAN_DO@@</p><p class="small"><a href="/">课程目录</a> · <a href="listening.html">真人听力</a> · <a href="resources.html">N3资源</a></p>
 <section class="card" id="review">
   <h2>① 今日复习 <span class="min">@@RMIN@@ 分钟</span></h2>
   <p class="hint">课程复习词：先想再翻面；会话再核对权威到期队列。<span id="rIdx"></span></p>
@@ -382,7 +386,7 @@ HTML = """<!DOCTYPE html>
 <details><summary>云端保存设置（仅首次）</summary><label class="small">学习口令 <input id="accessKey" type="password" autocomplete="off" placeholder="个人学习口令"></label><p class="small">口令只保留在当前标签页；未输入时也可导出作答交给老师。</p></details>
 <p id="saveStatus" class="small" role="status" aria-live="polite"></p><button class="btn" type="button" id="exportAnswers">导出作答</button>
 <button class="btn primary" id="finish" type="button" style="width:100%;margin-top:16px">今天学完了，记录一下</button>
-<p class="small" style="margin-top:12px"><a href="resources.html">官方真人听力、样题与资源署名</a> · 原创文本合成语音；内容包含 AI 草稿。</p>
+<p class="small" style="margin-top:12px"><a href="listening.html">真人听力</a> · <a href="resources.html">样题与资源署名</a> · 原创文本合成语音；内容包含 AI 草稿。</p>
 </main>
 </div>
 <script>window.__REVIEW__=@@REVIEW@@;window.__VOCAB__=@@VOCAB__;window.__QUIZ__=@@QUIZ__;window.__SENT__=@@SENT__;window.__LISTEN__=@@LQS@@;</script>
@@ -400,17 +404,22 @@ document.getElementById('sentenceItems').setAttribute('data-items',JSON.stringif
 from quiz_v5 import fnv, build_quiz, listening_quiz, public_question, day_questions
 
 
-def build_review(day, vocab, grammar):
-    """公开页面只放课程复习词；权威到期队列由私人会话读取，避免公开学习状态。"""
+def build_review(day, vocab, grammar, kanji):
+    """静态复习预览：词汇/语法/汉字三类都出现；权威到期队列由私人会话读取。"""
     cards = []
-    if not cards:
-        for kid in day.get("review_knowledge_ids") or []:
-            if kid in vocab:
-                cards.append({"kid": kid, "front": vocab[kid]["surface"],
-                              "back": vocab[kid]["meaning_zh"], "stage": "planned"})
-            elif kid in grammar:
-                cards.append({"kid": kid, "front": grammar[kid]["pattern"],
-                              "back": grammar[kid]["meaning_zh"], "stage": "planned"})
+    for kid in day.get("review_knowledge_ids") or []:
+        if kid in vocab:
+            cards.append({"kid": kid, "front": vocab[kid]["surface"],
+                          "back": vocab[kid]["meaning_zh"], "stage": "planned"})
+        elif kid in grammar:
+            cards.append({"kid": kid, "front": grammar[kid]["pattern"],
+                          "back": grammar[kid]["meaning_zh"], "stage": "planned"})
+        elif kid in kanji:
+            k = kanji[kid]
+            cards.append({"kid": kid, "front": k["char"],
+                          "back": k["meaning_zh"] + "｜音 " +
+                                  ("、".join(k.get("onyomi") or []) or "无"),
+                          "stage": "planned"})
     return cards[:80]
 
 
@@ -438,6 +447,57 @@ def build_grammar_html(day, grammar):
                 (esc(err.get("wrong")), esc(err.get("fix")), esc(err.get("why"))))
                if err.get("wrong") else ""))
     return "".join(out) or '<p class="hint">今天没有新语法。</p>'
+
+
+def resource_sources():
+    """外部资源清单：v7 核实过的 25 源优先，缺失时回退旧清单。"""
+    p = ROOT / "knowledge/resources_v7.json"
+    if p.exists():
+        return json.loads(p.read_text(encoding="utf-8"))
+    return {"sources": json.loads((ROOT / "knowledge/resources.json").read_text(encoding="utf-8"))["resources"],
+            "stage_plan": [], "conclusion": {}}
+
+
+SHORT_NAME = {
+    "commons-ja-pron": "日语发音音频", "commons-ja-spokenwiki": "日语朗读维基",
+    "jlpt-n3-sample": "JLPT N3 官方样题", "jlpt-sample-forlearners": "JLPT 在线样题",
+    "irodori": "Irodori 生活日语", "tadoku": "Tadoku 免费读物",
+    "nhk-easy-japanese": "NHK Easy Japanese", "hirogaru": "ひろがる日本語",
+    "erin": "Erin 情景短剧", "podcast-teppei-beginners": "Teppei 播客",
+    "podcast-shun": "Shun 播客", "podcast-sakura-tips": "Sakura Tips 播客",
+    "podcast-meg": "Meg 播客", "podcast-yuyu": "YUYU 播客",
+    "podcast-noriko": "Noriko 播客", "podcast-lets-talk": "Let's Talk 播客",
+}
+
+
+def real_listen_links(day):
+    """按阶段给 3 个免费真人听力外链；网页优先，RSS 只作补充，不嵌入受限音频。"""
+    data = resource_sources()
+    by_id = {x["id"]: x for x in data["sources"]}
+    stage = next((x for x in data.get("stage_plan", [])
+                  if x["days"].split("-")[0].isdigit()
+                  and int(x["days"].split("-")[0]) <= day <= int(x["days"].split("-")[1])), None)
+    ids = (stage or {}).get("items", [])
+    allowed = [by_id[i] for i in ids if i in by_id
+               and by_id[i].get("embed") == "link"
+               and by_id[i].get("type") in ("listening", "video", "mock")
+               and by_id[i].get("free") is not False]
+    def is_rss(x):
+        return any(k in (x.get("url") or "") for k in ("anchor.fm", "feeds.redcircle", "/rss"))
+    chosen = [x for x in allowed if not is_rss(x)][:3]
+    for x in allowed:
+        if len(chosen) >= 3:
+            break
+        if x not in chosen:
+            chosen.append(x)
+    out = []
+    for x in chosen[:3]:
+        name = SHORT_NAME.get(x["id"]) or x["title"][:16]
+        if is_rss(x):
+            name += "（播客订阅）"
+        out.append('<a href="%s" target="_blank" rel="noopener noreferrer">%s</a>'
+                   % (esc(x["url"]), esc(name)))
+    return " · ".join(out) or '<a href="listening.html">真人听力页</a>'
 
 
 def main():
@@ -489,7 +549,7 @@ def main():
                esc(kanji[k].get("ko_hanja") or ""), esc(kanji[k].get("ko_note") or ""),
                esc(kanji[k].get("zh_trap") or "按词语核对实际读音，不把单字读音机械拼词。"))
             for k in d["new_kanji_ids"])
-        review = build_review(d, vocab, grammar)
+        review = build_review(d, vocab, grammar, kanji)
         listen_html = ""
         listen_json = None
         if d.get("listening"):
@@ -511,9 +571,11 @@ def main():
                     '<audio controls preload="metadata" src="%s" aria-label="当天听力"></audio>'
                     '<details><summary>音频无法播放时</summary><button class="btn" type="button" data-speak="%s">设备朗读（TTS）</button></details>'
                     '<div id="listenQuiz" data-qs="%s"></div><p>得分：<span id="listenScore">0 / 0</span></p>'
-                    '<details id="transcript"><summary>看脚本（计为提示）</summary><p lang="ja">%s</p></details></section>'
+                    '<details id="transcript"><summary>看脚本（计为提示）</summary><p lang="ja">%s</p></details>'
+                    '<p class="small">真人听力（免费，跳转到原站收听）：%s　·　<a href="listening.html">打开真人听力页</a></p></section>'
                     % (round(audio["duration_sec"], 1), esc(audio["url"]), esc(m["audio_text"]),
-                       esc(json.dumps(lqs, ensure_ascii=False)), esc(m["text_ja"])))
+                       esc(json.dumps(lqs, ensure_ascii=False)), esc(m["text_ja"]),
+                       real_listen_links(n)))
         budget = {b["type"]: b["min"] for b in d["blocks"]}
         page = (HTML
                 .replace("@@DAY@@", "%03d" % n)
@@ -550,7 +612,10 @@ def main():
     (OUT / "n3-mock.html").write_text('<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>N3 自测入口</title><h1>N3 自测</h1><p>使用官方样题，答后对照答案。本站阶段练习不换算官方分数。</p><a href="resources.html">打开官方听力、阅读与样题</a></html>',encoding="utf-8")
     (OUT / "manifest.webmanifest").write_text(json.dumps({"name":"Nihongo 150","short_name":"Nihongo","start_url":"/","display":"standalone","background_color":"#fbfaf7","theme_color":"#b4472e","icons":[{"src":"/icon.svg","sizes":"any","type":"image/svg+xml"}]},ensure_ascii=False),encoding="utf-8")
     # 首页：只做索引，不做统计
-    links = '<p><a id="resume" class="btn primary" href="day-001.html">开始或继续学习</a></p><p><a href="resources.html">N3 官方样题、真人听力与阅读资源</a></p>'
+    links = ('<p><a id="resume" class="btn primary" href="day-001.html">开始或继续学习</a></p>'
+             '<p><a href="listening.html">真人听力（免费资源与可播放开放音频）</a> · '
+             '<a href="resources.html">N3 官方样题与资源</a> · '
+             '<a href="library.html">原创听读资料</a></p>')
     for start in range(1, 151, 7):
         chunk = [d for d in cur["days"] if start <= d["day"] < start + 7]
         links += '<details%s><summary>第 %d 周 · Day %d–%d</summary><ul class="week-grid">%s</ul></details>' % (
@@ -564,12 +629,112 @@ def main():
         '<p class="hint">每天 60 分钟：复习 / 新词 / 语法 / 句子 / 练习。听力 Day 47 起，每周 3 次。</p>'
         + links + '</main></div><script>var n=Number(localStorage.getItem("nh80.v5.lastDay")||1);if(n>=1&&n<=150){document.getElementById("resume").href="day-"+String(n).padStart(3,"0")+".html";}</script></body></html>', encoding="utf-8")
 
-    resource_data = json.loads((ROOT / "knowledge/resources.json").read_text())
-    resources_html = '<h1>N3 学习资源</h1><p>先完成每日必学，再按阶段使用官方样题检查。外部材料只在原站使用。</p>'
-    for resource in resource_data["resources"]:
-        resources_html += '<section class="card"><h2><a href="%s" target="_blank" rel="noopener noreferrer">%s</a></h2><p>%s</p><p class="small">%s</p></section>' % (esc(resource["url"]),esc(resource["title"]),esc(resource["usage"]),esc(resource["license"]))
-    resources_html += '<p><a href="library.html">更多原创短文与听读练习</a> · <a href="audio/NOTICE.txt">完整音频署名与许可声明</a></p><h2>本地内容与署名</h2><p class="small">词汇等资源来自 OpenJLPT（CC BY-SA 4.0）；韩语词典字段来自韩国国立国语院 한국어기초사전（CC BY-SA 2.0 KR），词典整理项目 spellcheck-ko/korean-dict-nikl。未匹配字段为标注的 AI 韩语释义。不同词在语境中并非总能互换。汉字韩语字音补充来自 EDRDG KANJIDIC2（<a href="https://www.edrdg.org/wiki/index.php/KANJIDIC_Project">项目与许可</a>），字音参考不能机械拼成韩语词。</p><p class="small">原创文本合成音频：<a href="https://huggingface.co/hexgrad/Kokoro-82M">Kokoro-82M</a>（Apache-2.0，jf_alpha），日语处理使用 The UniDic Consortium 的 UniDic 3.1.0（BSD选项），源字典由原作者保留版权；工具使用 Misaki 和 Open JTalk。本站不重新分发官方试题、第三方真人录音或系统内置声音。</p>'
-    (OUT / "resources.html").write_text('<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>N3 学习资源</title><link rel="stylesheet" href="assets/app.css"><div class="wrap" style="display:block;max-width:760px"><a href="/">返回课程</a>'+resources_html+'</div></html>',encoding="utf-8")
+    rdata = resource_sources()
+    sources = rdata["sources"]
+
+    def src_meta(x):
+        bits = []
+        if x.get("level"):
+            bits.append("级别 " + str(x["level"]))
+        if x.get("speed"):
+            bits.append(str(x["speed"]))
+        if x.get("transcript") is True:
+            bits.append("有脚本")
+        if x.get("free") is False:
+            bits.append("付费")
+        if x.get("region_limit"):
+            bits.append("地区限制")
+        if x.get("requires_login"):
+            bits.append("需登录")
+        return " · ".join(bits)
+
+    def is_rss(x):
+        return any(k in (x.get("url") or "") for k in ("anchor.fm", "feeds.redcircle", "/rss"))
+
+    def link_card(x):
+        label = esc(x["title"])
+        note = "（RSS 订阅，用播客 App 打开）" if is_rss(x) else ""
+        return ('<section class="card"><h2><a href="%s" target="_blank" rel="noopener noreferrer">%s</a>%s</h2>'
+                '<p class="small">%s</p><p>%s</p><p class="small">许可：%s</p></section>'
+                % (esc(x["url"]), label, note, esc(src_meta(x)),
+                   esc(x.get("usage") or ""), esc(x.get("license") or "")))
+
+    def audio_card(x):
+        return ('<section class="card"><h2>%s</h2>'
+                '<audio controls preload="none" src="%s" aria-label="%s"></audio>'
+                '<p class="small">%s　·　Ogg 格式：Chrome / Firefox 可直接播放，Safari 请打开'
+                '<a href="%s" target="_blank" rel="noopener noreferrer">来源文件页</a>。</p>'
+                '<p class="small">许可：%s　·　署名：%s　·　'
+                '<a href="%s" target="_blank" rel="noopener noreferrer">文件页</a>　·　'
+                '<a href="%s" target="_blank" rel="noopener noreferrer">许可全文</a></p>'
+                '</section>'
+                % (esc(x["title"]), esc(x.get("embed_url") or ""), esc(x["title"]),
+                   esc(src_meta(x)), esc(x.get("file_url") or x["url"]),
+                   esc(x.get("license") or ""), esc(x.get("attribution") or "见文件页"),
+                   esc(x.get("file_url") or x["url"]), esc(x.get("license_url") or x["url"])))
+
+    inline = [x for x in sources if x.get("embed") == "inline"]
+    links = [x for x in sources if x.get("embed") == "link" and x.get("free") is not False]
+    rejected = [x for x in sources if x.get("embed") == "none"]
+    stage_plan = rdata.get("stage_plan", [])
+
+    honesty = ('<p class="small"><strong>使用边界：</strong>本站每日精听仍是 45 篇原创文本的合成语音（见 '
+               '<a href="audio/NOTICE.txt">音频署名</a>）。下面这些真人材料<strong>不托管在本站</strong>：'
+               '除明确开放许可、可在本页直接播放的 Commons 音频外，其余一律跳转到官方原站收听，'
+               '不复制、不下载、不热链第三方音频。免费不等于可以任意转载。</p>')
+
+    listen_html = ('<h1>真人听力 · 免费资源</h1>' + honesty +
+                   '<p><a href="/">返回课程</a> · <a href="resources.html">全部 N3 资源</a> · '
+                   '<a href="library.html">原创听读资料</a></p>')
+    listen_html += '<h2>可在本页播放（开放许可）</h2>'
+    listen_html += "".join(audio_card(x) for x in inline)
+    for st in stage_plan:
+        ids = st.get("items", [])
+        listen_html += '<h2>Day %s · 建议组合</h2>' % esc(st.get("days", ""))
+        listen_html += '<p class="small">%s</p>' % esc(st.get("note") or "")
+        for sid in ids:
+            x = next((y for y in sources if y["id"] == sid), None)
+            if not x or x.get("embed") == "none":
+                continue
+            tag = "本页可播" if x.get("embed") == "inline" else "跳转原站"
+            listen_html += ('<section class="card"><h2><a href="%s" target="_blank" rel="noopener noreferrer">%s</a>'
+                            ' <span class="small">［%s］</span></h2><p class="small">%s</p><p>%s</p></section>'
+                            % (esc(x["url"]), esc(x["title"]), tag, esc(src_meta(x)),
+                               esc(x.get("usage") or "")))
+    listen_html += '<details><summary>未采用的源与原因（%d）</summary><ul>' % len(rejected)
+    for x in rejected:
+        listen_html += '<li><a href="%s" target="_blank" rel="noopener noreferrer">%s</a> — %s</li>' % (
+            esc(x["url"]), esc(x["title"]), esc((x.get("risk") or x.get("license") or "许可待核实")[:160]))
+    listen_html += '</ul></details>'
+    (OUT / "listening.html").write_text(
+        '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">'
+        '<meta name="viewport" content="width=device-width,initial-scale=1">'
+        '<title>真人听力 · Nihongo 150</title><link rel="stylesheet" href="assets/app.css"></head>'
+        '<body><div class="wrap" style="display:block;max-width:760px">' + listen_html +
+        '</div></body></html>', encoding="utf-8")
+
+    resources_html = ('<h1>N3 学习资源</h1>' + honesty +
+                      '<p><a href="listening.html">真人听力与可播放的开放音频</a> · '
+                      '<a href="library.html">原创短文与听读练习</a> · '
+                      '<a href="audio/NOTICE.txt">完整音频署名与许可声明</a></p>')
+    resources_html += '<h2>官方样题与免费真人听力（跳转原站）</h2>'
+    resources_html += "".join(link_card(x) for x in links)
+    resources_html += '<details><summary>未采用：付费 / 地区限制 / 许可不明 / 不适用（%d）</summary><ul>' % len(rejected)
+    for x in rejected:
+        resources_html += '<li><a href="%s" target="_blank" rel="noopener noreferrer">%s</a> — %s</li>' % (
+            esc(x["url"]), esc(x["title"]), esc((x.get("risk") or x.get("license") or "许可待核实")[:160]))
+    resources_html += '</ul></details>'
+    resources_html += ('<h2>本地内容与署名</h2><p class="small">词汇等资源来自 OpenJLPT（CC BY-SA 4.0）；'
+                       '韩语词典字段来自韩国国立国语院 한국어기초사전（CC BY-SA 2.0 KR），整理项目 '
+                       'spellcheck-ko/korean-dict-nikl。汉字韩语字音补充来自 EDRDG KANJIDIC2（CC BY-SA 4.0）'
+                       '与 Unicode Unihan。原创文本合成音频：Kokoro-82M（Apache-2.0，jf_alpha）+ '
+                       'UniDic 3.1.0（BSD 选项）。详见 <a href="/">项目根目录</a>的 DATA_LICENSES.md。</p>')
+    (OUT / "resources.html").write_text(
+        '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">'
+        '<meta name="viewport" content="width=device-width,initial-scale=1">'
+        '<title>N3 学习资源</title><link rel="stylesheet" href="assets/app.css"></head>'
+        '<body><div class="wrap" style="display:block;max-width:760px"><a href="/">返回课程</a>' +
+        resources_html + '</div></body></html>', encoding="utf-8")
     library = '<h1>原创听读资料</h1><p>按级别选一篇。先理解大意，再看译文；短篇可用设备朗读。</p>'
     for level in ("N5", "N4", "N3"):
         library += '<h2>'+level+'</h2>'

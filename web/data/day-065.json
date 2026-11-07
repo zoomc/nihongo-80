@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "16 个必学词；4 个选学拓展"
+   "desc": "16 个必学词；3 个选学拓展"
   },
   {
    "type": "语法",
@@ -39,79 +39,289 @@
  "listening": false,
  "review": [
   {
-   "kid": "V1317",
-   "front": "光",
-   "back": "光；光线",
+   "kid": "V1303",
+   "front": "場所",
+   "back": "地点；场所",
    "stage": "planned"
   },
   {
-   "kid": "V1318",
-   "front": "光る",
-   "back": "发光；闪耀",
+   "kid": "V1304",
+   "front": "はず",
+   "back": "应该；理应",
    "stage": "planned"
   },
   {
-   "kid": "V1319",
-   "front": "引き出し",
-   "back": "抽屉",
+   "kid": "V1305",
+   "front": "発音",
+   "back": "发音",
    "stage": "planned"
   },
   {
-   "kid": "V1320",
-   "front": "引き出す",
-   "back": "取出；提取",
+   "kid": "G0223",
+   "front": "〜なら",
+   "back": "如果是…的话",
    "stage": "planned"
   },
   {
-   "kid": "V1277",
-   "front": "苦い",
-   "back": "苦",
+   "kid": "G0224",
+   "front": "〜と（conditional）",
+   "back": "一…就…；如果…就…",
    "stage": "planned"
   },
   {
-   "kid": "V1278",
-   "front": "二階建て",
-   "back": "二层楼",
+   "kid": "K0128",
+   "front": "運",
+   "back": "运；搬运；运气；驾驶｜音 ウン",
    "stage": "planned"
   },
   {
-   "kid": "V1279",
-   "front": "逃げる",
-   "back": "逃跑；逃避",
+   "kid": "K0129",
+   "front": "転",
+   "back": "转；转动；摔倒；调职｜音 テン",
    "stage": "planned"
   },
   {
-   "kid": "V1280",
-   "front": "日記",
-   "back": "日记",
+   "kid": "V1265",
+   "front": "どんどん",
+   "back": "不断；一个劲",
    "stage": "planned"
   },
   {
-   "kid": "V1209",
-   "front": "楽しむ",
-   "back": "享受；欣赏",
+   "kid": "V1266",
+   "front": "治る",
+   "back": "痊愈；治好",
    "stage": "planned"
   },
   {
-   "kid": "V1210",
-   "front": "たまに",
-   "back": "偶尔",
+   "kid": "V1267",
+   "front": "直る",
+   "back": "修好；改正",
    "stage": "planned"
   },
   {
-   "kid": "V1211",
-   "front": "為",
-   "back": "为了；因为",
+   "kid": "G0219",
+   "front": "〜な（prohibition）",
+   "back": "不许…；别…",
    "stage": "planned"
   },
   {
-   "kid": "V1212",
-   "front": "だめ",
-   "back": "不行；没用",
+   "kid": "G0220",
+   "front": "〜なさい",
+   "back": "（长辈指示）做…",
    "stage": "planned"
   }
  ],
  "vocab": [
+  {
+   "id": "V1317",
+   "surface": "光",
+   "kana": "ひかり",
+   "meaning": "光；光线",
+   "ko": "빛（光，光线）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "光が世にやって来た。",
+    "zh": "光来到了世上。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1318",
+   "surface": "光る",
+   "kana": "ひかる",
+   "meaning": "发光；闪耀",
+   "ko": "빛나다（发光，照射）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "动词(五段)/自动词",
+   "ex": {
+    "ja": "上部前方で何かが光っている。",
+    "zh": "前方上方有什么东西在发光。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1319",
+   "surface": "引き出し",
+   "kana": "ひきだし",
+   "meaning": "抽屉",
+   "ko": "서랍（抽屉）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "きれいなタオルは引き出しにありますよ。",
+    "zh": "干净的毛巾在抽屉里。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1320",
+   "surface": "引き出す",
+   "kana": "ひきだす",
+   "meaning": "取出；提取",
+   "ko": "인출하다（支取，提取） / 찾아가다（取，取回，领取，提取）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "动词(五段)/他动词",
+   "ex": {
+    "ja": "彼のいいところを引き出すようにしなさい。",
+    "zh": "要设法把他好的一面引导出来。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1321",
+   "surface": "ひげ",
+   "kana": "ひげ",
+   "meaning": "胡子",
+   "ko": "수염",
+   "ko_status": "ai_gloss",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "お父さんがバスルームでひげを剃っている。",
+    "zh": "爸爸在浴室里刮胡子。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1322",
+   "surface": "飛行場",
+   "kana": "ひこうじょう",
+   "meaning": "机场",
+   "ko": "비행장（机场）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "その島の飛行場は、今では草がぼうぼうだ。",
+    "zh": "那个岛上的机场如今杂草丛生。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1323",
+   "surface": "久しぶり",
+   "kana": "ひさしぶり",
+   "meaning": "好久不见",
+   "ko": "오랜만（好久，久违） / 오래간만（好久，久违）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "连体词/な形容词/名词",
+   "ex": {
+    "ja": "彼女から久しぶりに電話があった。",
+    "zh": "好久没联系的她打来了电话。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1324",
+   "surface": "美術館",
+   "kana": "びじゅつかん",
+   "meaning": "美术馆",
+   "ko": "미술관（美术馆）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "このバスは美術館まで行きますか。",
+    "zh": "这趟公交到美术馆吗？"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1325",
+   "surface": "非常に",
+   "kana": "ひじょうに",
+   "meaning": "非常",
+   "ko": "마냥（非常，十分） / 매우（非常，极其，很） / 몹시（十分，非常，太）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "副词",
+   "ex": {
+    "ja": "車を運転することは非常に楽しい。",
+    "zh": "开车非常愉快。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1326",
+   "surface": "びっくりする",
+   "kana": "びっくりする",
+   "meaning": "吃惊",
+   "ko": "놀라다（惊吓，吃惊）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "动词(サ变)/自动词/副词",
+   "ex": {
+    "ja": "彼はびっくりするほどのアクロバットができる。",
+    "zh": "他会的杂技多得让人吃惊。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1327",
+   "surface": "引っ越す",
+   "kana": "ひっこす",
+   "meaning": "搬家",
+   "ko": "이사하다（搬家）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "动词(五段)/自动词",
+   "ex": {
+    "ja": "去年の秋、私たちはニューヨークに引っ越した。",
+    "zh": "去年秋天，我们搬到了纽约。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1328",
+   "surface": "必要",
+   "kana": "ひつよう",
+   "meaning": "必要；需要",
+   "ko": "필요（必要，需要）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "な形容词",
+   "ex": {
+    "ja": "歯医者に行く必要はないですよ。",
+    "zh": "没必要去看牙医。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1329",
+   "surface": "ひどい",
+   "kana": "ひどい",
+   "meaning": "糟糕的；过分的",
+   "ko": "심하다 / 끔찍하다",
+   "ko_status": "ai_gloss",
+   "optional": false,
+   "pos": "い形容词",
+   "ex": {
+    "ja": "この薬はひどい味がする。",
+    "zh": "这药味道很糟。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1330",
+   "surface": "開く",
+   "kana": "ひらく",
+   "meaning": "开；绽放",
+   "ko": "갖다（开，举办，举行） / 내다（开） / 열다（开）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "动词(五段)/自动词/他动词",
+   "ex": {
+    "ja": "庭のバラの木のつぼみが少しずつ開き始める。",
+    "zh": "院子里玫瑰树的花蕾一点点开了。"
+   },
+   "audio": "tts"
+  },
   {
    "id": "V1331",
    "surface": "ビル",
@@ -149,7 +359,7 @@
    "meaning": "午休",
    "ko": "점심시간",
    "ko_status": "ai_gloss",
-   "optional": false,
+   "optional": true,
    "pos": "名词/副词",
    "ex": {
     "ja": "お昼休みは、１時間です。",
@@ -164,7 +374,7 @@
    "meaning": "捡；接人",
    "ko": "줍다（捡，拾）",
    "ko_status": "dictionary",
-   "optional": false,
+   "optional": true,
    "pos": "动词(五段)/他动词",
    "ex": {
     "ja": "ホテルの前で私を車で拾ってください。",
@@ -179,263 +389,37 @@
    "meaning": "传真",
    "ko": "팩스（传真，传真机） / 팩시밀리（传真，传真机）",
    "ko_status": "dictionary",
-   "optional": false,
+   "optional": true,
    "pos": "名词/动词(サ变)/他动词",
    "ex": {
     "ja": "ＦＡＸで地図を送っていただけませんか。",
     "zh": "能麻烦您把地图传真给我吗。"
    },
    "audio": "tts"
-  },
-  {
-   "id": "V1336",
-   "surface": "増える",
-   "kana": "ふえる",
-   "meaning": "增加",
-   "ko": "늘다（增大，增长，增加） / 붇다（上涨，增加，增多） / 증가되다（被增加）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "动词(一段)/自动词",
-   "ex": {
-    "ja": "大雨で川の水が急に増えた。",
-    "zh": "大雨让河水一下子涨了起来。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1337",
-   "surface": "深い",
-   "kana": "ふかい",
-   "meaning": "深的",
-   "ko": "깊다",
-   "ko_status": "ai_gloss",
-   "optional": false,
-   "pos": "い形容词",
-   "ex": {
-    "ja": "湖の深さはどのくらいですか。",
-    "zh": "湖水有多深。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1338",
-   "surface": "複雑",
-   "kana": "ふくざつ",
-   "meaning": "复杂",
-   "ko": "착잡（复杂，烦杂，心烦意乱，心乱如麻）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "な形容词/名词",
-   "ex": {
-    "ja": "どのぐらい複雑なのだろうか。",
-    "zh": "到底有多复杂呢。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1339",
-   "surface": "復習",
-   "kana": "ふくしゅう",
-   "meaning": "复习",
-   "ko": "복습",
-   "ko_status": "ai_gloss",
-   "optional": false,
-   "pos": "名词/动词(サ变)/他动词",
-   "ex": {
-    "ja": "その課の復習をしましたか。",
-    "zh": "那一课复习了吗。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1340",
-   "surface": "部長",
-   "kana": "ぶちょう",
-   "meaning": "部长；部门经理",
-   "ko": "부장（部长）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名词",
-   "ex": {
-    "ja": "社長は新しい部長を任命した。",
-    "zh": "社长任命了新的部长。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1341",
-   "surface": "普通",
-   "kana": "ふつう",
-   "meaning": "普通；通常",
-   "ko": "보통（普通，一般） / 일반（普通） / 통상（通常，平常）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名词",
-   "ex": {
-    "ja": "私はふつう自転車で通学します。",
-    "zh": "我通常骑自行车上学。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1342",
-   "surface": "ぶどう",
-   "kana": "ぶどう",
-   "meaning": "葡萄",
-   "ko": "포도",
-   "ko_status": "ai_gloss",
-   "optional": false,
-   "pos": "名词",
-   "ex": {
-    "ja": "私たちはぶどうをたくさん手に入れた。",
-    "zh": "我们弄到了很多葡萄。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1343",
-   "surface": "太る",
-   "kana": "ふとる",
-   "meaning": "发胖",
-   "ko": "붇다（长胖，发胖） / 찌다（发胖，长膘） / 살찌다（长胖，发胖）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "动词(五段)/自动词",
-   "ex": {
-    "ja": "あまり太ったのでカラーの前が合わなかった。",
-    "zh": "因为太胖了，衣领扣不上。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1344",
-   "surface": "布団",
-   "kana": "ふとん",
-   "meaning": "被褥",
-   "ko": "자리（被褥） / 이부자리（被褥，铺盖）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名词",
-   "ex": {
-    "ja": "布団をたたみなさい。",
-    "zh": "把被褥叠起来。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1345",
-   "surface": "舟",
-   "kana": "ふね",
-   "meaning": "船；小船",
-   "ko": "배 / 작은 배",
-   "ko_status": "ai_gloss",
-   "optional": false,
-   "pos": "名词",
-   "ex": {
-    "ja": "船は３時に出ることになっている。",
-    "zh": "船定在三点开。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1346",
-   "surface": "不便",
-   "kana": "ふべん",
-   "meaning": "不方便",
-   "ko": "불편（不便，不方便）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名词/な形容词",
-   "ex": {
-    "ja": "もし電話がなければ、不便だろう。",
-    "zh": "要是没有电话，大概很不方便吧。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1347",
-   "surface": "踏む",
-   "kana": "ふむ",
-   "meaning": "踩",
-   "ko": "딛다（踩，踏） / 밟다（踩）",
-   "ko_status": "dictionary",
-   "optional": true,
-   "pos": "动词(五段)/他动词",
-   "ex": {
-    "ja": "足を踏むつもりはなかったのです。",
-    "zh": "我并不是故意踩你的脚。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1348",
-   "surface": "降り出す",
-   "kana": "ふりだす",
-   "meaning": "下起来",
-   "ko": "내리기 시작하다",
-   "ko_status": "ai_gloss",
-   "optional": true,
-   "pos": "动词(五段)/自动词",
-   "ex": {
-    "ja": "その上雨が降り出している。",
-    "zh": "而且雨也开始下了。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1349",
-   "surface": "プレゼント",
-   "kana": "プレゼント",
-   "meaning": "礼物",
-   "ko": "선물（礼物）",
-   "ko_status": "dictionary",
-   "optional": true,
-   "pos": "名词/动词(サ变)/他动词",
-   "ex": {
-    "ja": "ハーモニカはお父さんからのプレゼントですか。",
-    "zh": "口琴是爸爸送的礼物吗。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1350",
-   "surface": "文化",
-   "kana": "ぶんか",
-   "meaning": "文化",
-   "ko": "문화（文化）",
-   "ko_status": "dictionary",
-   "optional": true,
-   "pos": "名词",
-   "ex": {
-    "ja": "私はギリシャ文化について学んだ。",
-    "zh": "我学过希腊文化。"
-   },
-   "audio": "tts"
   }
  ],
  "core_vocab_ids": [
+  "V1317",
+  "V1318",
+  "V1319",
+  "V1320",
+  "V1321",
+  "V1322",
+  "V1323",
+  "V1324",
+  "V1325",
+  "V1326",
+  "V1327",
+  "V1328",
+  "V1329",
+  "V1330",
   "V1331",
-  "V1332",
-  "V1333",
-  "V1334",
-  "V1335",
-  "V1336",
-  "V1337",
-  "V1338",
-  "V1339",
-  "V1340",
-  "V1341",
-  "V1342",
-  "V1343",
-  "V1344",
-  "V1345",
-  "V1346"
+  "V1332"
  ],
  "extension_vocab_ids": [
-  "V1347",
-  "V1348",
-  "V1349",
-  "V1350"
+  "V1333",
+  "V1334",
+  "V1335"
  ],
  "grammar": [
   {
@@ -650,105 +634,105 @@
  ],
  "quiz": [
   {
-   "qid": "Q-065-V0-ef4ed4458501",
-   "prompt": "「ビル」是什么意思？",
-   "options": [
-    "碎；裂",
-    "大楼",
-    "人口",
-    "厉害；非常"
-   ],
-   "h": "b3bf16ce",
-   "oh": [
-    "a6aed554",
-    "b3bf16ce",
-    "5320af0a",
-    "e3d2a74c"
-   ]
-  },
-  {
-   "qid": "Q-065-V1-891cf95de75f",
-   "prompt": "「昼間」是什么意思？",
-   "options": [
-    "白天",
-    "搬家",
-    "车票；票",
-    "停下；阻止"
-   ],
-   "h": "bdfbdc13",
-   "oh": [
-    "bdfbdc13",
-    "ff767ac7",
-    "ceb7b1a0",
-    "22fec434"
-   ]
-  },
-  {
-   "qid": "Q-065-V2-57e3f268995f",
-   "prompt": "「昼休み」是什么意思？",
-   "options": [
-    "工具",
-    "近来",
-    "整理；收拾；解决",
-    "午休"
-   ],
-   "h": "29c02212",
-   "oh": [
-    "9f1d3d35",
-    "dac7d5b",
-    "852355ff",
-    "29c02212"
-   ]
-  },
-  {
-   "qid": "Q-065-K-dfe703c79bc3",
+   "qid": "Q-065-K0-960bc19ceb34",
    "prompt": "汉字「記」的一个常用读音是？",
    "options": [
-    "タツ",
-    "ワ",
-    "キ",
-    "シチ"
+    "すこ.し",
+    "-た.てる",
+    "そ.る",
+    "キ"
    ],
    "h": "a824fab8",
    "oh": [
-    "d27da2fe",
-    "6a24991e",
-    "a824fab8",
-    "279b6e15"
+    "5b16d8d2",
+    "a843043a",
+    "a2baed5b",
+    "a824fab8"
    ]
   },
   {
-   "qid": "Q-065-G-78109eeeda65",
-   "prompt": "句型「〜ても / 〜でも」的意思是？",
+   "qid": "Q-065-K1-2e5c622b2c01",
+   "prompt": "汉字「意」的一个常用读音是？",
    "options": [
-    "从…到…",
-    "即使…也…",
-    "关于…；就…",
-    "给（别人）做…／给（我）做…／请（人）做…"
+    "ヒ",
+    "しら.げる",
+    "ヤク",
+    "イ"
    ],
-   "h": "f4b0654a",
+   "h": "a124efb3",
    "oh": [
-    "1a214d9b",
-    "f4b0654a",
-    "7bb0c864",
-    "4cd65e05"
+    "57247b35",
+    "c94948ee",
+    "48d15ed4",
+    "a124efb3"
    ]
   },
   {
-   "qid": "Q-065-V5-39ee3b00764c",
-   "prompt": "「拾う」是什么意思？",
+   "qid": "Q-065-G-3b4cc3757050",
+   "prompt": "句型「〜のに（although）」的意思是？",
    "options": [
-    "失常；错乱",
-    "捡；接人",
-    "观光；旅游",
-    "作业；工作"
+    "由…；由于…；因…而异",
+    "难保不会…、恐怕会…／难以…、不便…",
+    "明明…却…",
+    "不能…；不便…"
    ],
-   "h": "86ede6be",
+   "h": "b00784ab",
    "oh": [
-    "22824aef",
-    "86ede6be",
-    "72078a60",
-    "a9055b61"
+    "aa6bb417",
+    "3bcca7b0",
+    "b00784ab",
+    "35e57e9e"
+   ]
+  },
+  {
+   "qid": "Q-065-V0-9eb6850bf2af",
+   "prompt": "假名「ひかり」对应的词形是？",
+   "options": [
+    "光",
+    "稼ぐ",
+    "教授",
+    "地方"
+   ],
+   "h": "cc560064",
+   "oh": [
+    "cc560064",
+    "31402131",
+    "6462c614",
+    "7d210a2"
+   ]
+  },
+  {
+   "qid": "Q-065-V1-d72f77ab95e7",
+   "prompt": "「光る」是什么意思？",
+   "options": [
+    "结账；计算",
+    "面包",
+    "发光；闪耀",
+    "弄坏"
+   ],
+   "h": "1d3603c6",
+   "oh": [
+    "42818451",
+    "2b9b15a0",
+    "1d3603c6",
+    "9e645b94"
+   ]
+  },
+  {
+   "qid": "Q-065-R-c0148ac048a2",
+   "prompt": "复习：汉字「運」的读音是？",
+   "options": [
+    "おんな",
+    "なお.す",
+    "たぐ.い",
+    "ウン"
+   ],
+   "h": "fcdda81e",
+   "oh": [
+    "171525a0",
+    "8823e28",
+    "a69bb2c8",
+    "fcdda81e"
    ]
   }
  ],

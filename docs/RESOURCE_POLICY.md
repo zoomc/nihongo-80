@@ -31,3 +31,31 @@
 在 macOS 本机具备 Python 3.12、ffmpeg 时，可在隔离环境安装 `kokoro==0.9.4`、`misaki[ja]==0.9.4`、`soundfile`，运行 `python -m unidic download` 下载字典；按脚本内模型 revision 预先下载 `config.json`、`kokoro-v1_0.pth`、`voices/jf_alpha.pt`，再执行 `python scripts/open_audio_assets.py`。工具要求模型本地缓存完整，并离线推理；安装包/模型/词典下载需联网，不调用付费推理 API。每句独立合成并拼接，以免长文本被模型截断，生成时检查每句有音频、波形有限且非静音，并在完成全部素材后更新文件与 manifest。时长以合成波形长度测得，播放器实际支持、发音、自然度和 N3 难度仍须试听核验。
 
 公开音频随附 `web/audio/NOTICE.txt`：包括模型 revision、音色、训练数据致谢以及 UniDic 作者和 BSD 许可全文；生成器会同步生成该文件。官方音色表中 jf_alpha 的 CC BY 一栏为空，其他列有署名来源的日语音色未用于本批；Kokoro 模型卡另列 Koniwa tnc 和 SIWIS 两项 CC BY 训练数据，声明中保留其名称、作者、来源和许可，不声称具体训练样本与某个输出的对应关系。
+
+## v7 免费听力资源核实与落地（2026-11-08）
+
+本轮调研 25 个候选源，实际访问 URL 并逐条核许可，结论见 `reports/v7_listening_sources.md`
+与机器可读清单 `knowledge/resources_v7.json`。补充核实 2 条 Commons 文件后，清单共 **27 源**：
+
+| 分类 | 数量 | 站点行为 |
+|---|---|---|
+| `inline`（可在本页播放） | **4** | Wikimedia Commons 的 PD / CC BY-SA 日语发音与百科朗读，直接 `<audio src>` 官方 CDN，逐文件给作者、文件页、许可链接 |
+| `link`（只跳转原站） | **15** | JLPT 官方样题、Irodori、Erin、NHK Easy Japanese、Tadoku、6 个免费播客等。版权保留 / personal use only / CC BY-NC-ND，**未授权嵌入或热链**，`embed_url` 一律留空 |
+| `none`（不采用） | **8** | 付费墙、明确禁止公开再分发、海外地区限制、许可待核实、或「日语」内容实为英语朗读 |
+
+**落地方式（诚实口径）**：新增 `web/listening.html` —— 4 条开放音频可在本页播放；15 条免费资源按
+Day 47–90 / 91–130 / 131–150 三阶段分组，点击跳转官方原站收听；8 条未采用源折叠列出原因。
+`web/resources.html` 同步改版；每个听力日的每日页在听力块内按阶段给 3 个真人听力外链。
+**每日精听主线仍是 45 篇本站原创文本的 Kokoro 合成音频**（`web/audio/`），真人材料是补充。
+页面明确写出「不托管在本站、不复制、不下载、不热链第三方音频」。
+
+不能对使用者说的话：已内置真人听力音频库、已替换为真人语音、站内可直接播放 N3 官方真题音频、
+已集成 JLPT/NHK/播客音频、免费=可随意转载、做完这些=刷完 N3 真题。
+
+纠错记录：原 `jlpt-workbook` 实为凡人社**付费**练习册（免费的是 `sample09.html`）；
+`nhk-easy` 已迁移 `news.web.nhk` 且海外受限；`hirogaru` 旧域名只剩变更告知；
+`erin` 必须用 www 别名；`archive.org` 两个「PD/CC0」条目实为 Tuttle 商业教材配套 MP3 与 NEWS 乐队商业专辑，
+平台标签不是权利证明，一律不用；`marugoto` 版权政策 Q7 明文禁止把音频放到公开网站。
+
+**额度**：Commons 音频是外链，不计本站静态资源；Wikimedia 不建议大流量热链，本项目为低流量个人站。
+Cloudflare 仍为 Workers Free，无新增付费绑定。

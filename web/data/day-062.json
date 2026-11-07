@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "16 个必学词；4 个选学拓展"
+   "desc": "16 个必学词；3 个选学拓展"
   },
   {
    "type": "语法",
@@ -39,79 +39,259 @@
  "listening": false,
  "review": [
   {
-   "kid": "V1263",
-   "front": "取り替える",
-   "back": "更换；调换",
+   "kid": "V1251",
+   "front": "道具",
+   "back": "工具",
    "stage": "planned"
   },
   {
-   "kid": "V1264",
-   "front": "泥棒",
-   "back": "小偷",
+   "kid": "V1252",
+   "front": "とうとう",
+   "back": "终于；到底",
    "stage": "planned"
   },
   {
-   "kid": "V1265",
-   "front": "どんどん",
-   "back": "不断；一个劲",
+   "kid": "V1253",
+   "front": "動物園",
+   "back": "动物园",
    "stage": "planned"
   },
   {
-   "kid": "V1266",
-   "front": "治る",
-   "back": "痊愈；治好",
+   "kid": "G0217",
+   "front": "〜(よ)うと思う",
+   "back": "我想…；打算…",
    "stage": "planned"
   },
   {
-   "kid": "V1229",
-   "front": "都合",
-   "back": "方便；情况",
+   "kid": "G0218",
+   "front": "〜え / 〜ろ",
+   "back": "（命令）做！",
    "stage": "planned"
   },
   {
-   "kid": "V1230",
-   "front": "伝える",
-   "back": "传达；转告",
+   "kid": "K0116",
+   "front": "就",
+   "back": "就；就任；就职｜音 シュウ",
    "stage": "planned"
   },
   {
-   "kid": "V1231",
-   "front": "続く",
-   "back": "持续；继续",
+   "kid": "K0117",
+   "front": "続",
+   "back": "续；继续；手续｜音 ゾク",
    "stage": "planned"
   },
   {
-   "kid": "V1232",
-   "front": "包む",
-   "back": "包；包裹",
+   "kid": "V1218",
+   "front": "ちっとも",
+   "back": "一点也不",
    "stage": "planned"
   },
   {
-   "kid": "V1155",
-   "front": "進む",
-   "back": "前进；有进展",
+   "kid": "V1219",
+   "front": "ちゃん",
+   "back": "小…（昵称）",
    "stage": "planned"
   },
   {
-   "kid": "V1156",
-   "front": "すっと",
-   "back": "一下子；顺畅地",
+   "kid": "V1220",
+   "front": "注意",
+   "back": "注意；提醒",
    "stage": "planned"
   },
   {
-   "kid": "V1157",
-   "front": "ステーキ",
-   "back": "牛排",
+   "kid": "G0213",
+   "front": "〜れる / 〜られる（passive）",
+   "back": "被…；遭受…",
    "stage": "planned"
   },
   {
-   "kid": "V1158",
-   "front": "捨てる",
-   "back": "扔掉；抛弃",
+   "kid": "G0214",
+   "front": "〜せる / 〜させる",
+   "back": "让…做；使…做",
    "stage": "planned"
   }
  ],
  "vocab": [
+  {
+   "id": "V1265",
+   "surface": "どんどん",
+   "kana": "どんどん",
+   "meaning": "不断；一个劲",
+   "ko": "계속 / 점점",
+   "ko_status": "ai_gloss",
+   "optional": false,
+   "pos": "副词",
+   "ex": {
+    "ja": "だれかがドアをどんどんたたいている。",
+    "zh": "有人在不停地敲门。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1266",
+   "surface": "治る",
+   "kana": "なおる",
+   "meaning": "痊愈；治好",
+   "ko": "낫다（痊愈）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "动词(五段)/自动词",
+   "ex": {
+    "ja": "２週間もすれば自然に治ります。",
+    "zh": "过两周就会自然痊愈。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1267",
+   "surface": "直る",
+   "kana": "なおる",
+   "meaning": "修好；改正",
+   "ko": "고쳐지다 / 낫다",
+   "ko_status": "ai_gloss",
+   "optional": false,
+   "pos": "动词(五段)/自动词",
+   "ex": {
+    "ja": "いったい、いつになったらそのケチは直るの？",
+    "zh": "到底什么时候你才能改掉那小气的毛病？"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1268",
+   "surface": "中々",
+   "kana": "なかなか",
+   "meaning": "相当；怎么也（不）",
+   "ko": "상당히 / 좀처럼（부정과 함께）",
+   "ko_status": "ai_gloss",
+   "optional": false,
+   "pos": "副词/な形容词",
+   "ex": {
+    "ja": "試験中はなかなか大変だった。",
+    "zh": "考试期间相当辛苦。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1269",
+   "surface": "泣く",
+   "kana": "なく",
+   "meaning": "哭",
+   "ko": "울다（哭，哭泣）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "动词(五段)/自动词",
+   "ex": {
+    "ja": "ビルは何時間も泣き続けた。",
+    "zh": "比尔哭了好几个小时。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1270",
+   "surface": "亡くなる",
+   "kana": "なくなる",
+   "meaning": "去世",
+   "ko": "가다（去世） / 돌아가다（去世，逝世）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "动词(五段)/自动词",
+   "ex": {
+    "ja": "父が亡くなってから３年になります。",
+    "zh": "父亲去世已经三年了。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1271",
+   "surface": "無くなる",
+   "kana": "なくなる",
+   "meaning": "不见；用完",
+   "ko": "없어지다（没有了，不见了）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "动词(五段)/自动词",
+   "ex": {
+    "ja": "あなたの青いペンがなくなってしまいました。",
+    "zh": "你的蓝笔不见了。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1272",
+   "surface": "投げる",
+   "kana": "なげる",
+   "meaning": "扔；投",
+   "ko": "던지다（投，掷，扔）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "动词(一段)/他动词",
+   "ex": {
+    "ja": "その子は犬に石を投げた。",
+    "zh": "那个孩子朝狗扔石头。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1273",
+   "surface": "鳴る",
+   "kana": "なる",
+   "meaning": "响；鸣",
+   "ko": "울다（响，鸣） / 치다（敲，响） / 울리다（响，鸣）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "动词(五段)/自动词",
+   "ex": {
+    "ja": "電話が鳴ったらただちに出なさい。",
+    "zh": "电话一响就马上接。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1274",
+   "surface": "なるべく",
+   "kana": "なるべく",
+   "meaning": "尽量",
+   "ko": "되도록（尽量） / 될 수 있는 대로（尽量）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "副词",
+   "ex": {
+    "ja": "なるべく安いほうがいいです。",
+    "zh": "尽量便宜一点的好。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1275",
+   "surface": "なるほど",
+   "kana": "なるほど",
+   "meaning": "原来如此",
+   "ko": "그렇군요",
+   "ko_status": "ai_gloss",
+   "optional": false,
+   "pos": "感叹词/副词",
+   "ex": {
+    "ja": "ああ、なるほど！",
+    "zh": "啊，原来如此！"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V1276",
+   "surface": "におい",
+   "kana": "におい",
+   "meaning": "气味",
+   "ko": "냄새",
+   "ko_status": "ai_gloss",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "あの花はにおいが強いな。",
+    "zh": "那花的气味真冲。"
+   },
+   "audio": "tts"
+  },
   {
    "id": "V1277",
    "surface": "苦い",
@@ -179,7 +359,7 @@
    "meaning": "入学",
    "ko": "입학（入学）",
    "ko_status": "dictionary",
-   "optional": false,
+   "optional": true,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
     "ja": "私はこの学校に２年前に入学した。",
@@ -194,7 +374,7 @@
    "meaning": "像；相似",
    "ko": "닮다（像，随）",
    "ko_status": "dictionary",
-   "optional": false,
+   "optional": true,
    "pos": "动词(一段)/自动词",
    "ex": {
     "ja": "私も似た話を聞いたことがある。",
@@ -209,233 +389,37 @@
    "meaning": "人偶；娃娃",
    "ko": "인형（娃娃）",
    "ko_status": "dictionary",
-   "optional": false,
+   "optional": true,
    "pos": "名词",
    "ex": {
     "ja": "メアリーは私にアメリカの人形をくれた。",
     "zh": "玛丽送给我一个美国人偶。"
    },
    "audio": "tts"
-  },
-  {
-   "id": "V1284",
-   "surface": "盗む",
-   "kana": "ぬすむ",
-   "meaning": "偷；盗窃",
-   "ko": "훔치다（偷，盗，盗取） / 도둑질하다（偷窃，盗窃）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "动词(五段)/他动词",
-   "ex": {
-    "ja": "盗まれたお金があきらめられない。",
-    "zh": "被偷的钱我放不下。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1285",
-   "surface": "塗る",
-   "kana": "ぬる",
-   "meaning": "涂；抹",
-   "ko": "바르다（涂，抹）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "动词(五段)/他动词",
-   "ex": {
-    "ja": "ジョンがドアにペンキを塗っていた。",
-    "zh": "约翰在给门刷漆。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1286",
-   "surface": "ぬれる",
-   "kana": "ぬれる",
-   "meaning": "淋湿；湿",
-   "ko": "젖다",
-   "ko_status": "ai_gloss",
-   "optional": false,
-   "pos": "动词(一段)/自动词",
-   "ex": {
-    "ja": "木のおかげで雨にぬれずにすんだ。",
-    "zh": "多亏那些树，我才没被雨淋湿。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1287",
-   "surface": "ねだん",
-   "kana": "ねだん",
-   "meaning": "价格",
-   "ko": "가격",
-   "ko_status": "ai_gloss",
-   "optional": false,
-   "pos": "名词",
-   "ex": {
-    "ja": "このラジオの値段はいくらですか。",
-    "zh": "这台收音机多少钱？"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1288",
-   "surface": "熱",
-   "kana": "ねつ",
-   "meaning": "发烧；热度",
-   "ko": "신열（发烧，发热）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名词",
-   "ex": {
-    "ja": "１０２゜Ｆの熱があります。",
-    "zh": "烧到华氏102度。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1289",
-   "surface": "ねっしん",
-   "kana": "ねっしん",
-   "meaning": "热心；勤奋",
-   "ko": "열심이다",
-   "ko_status": "ai_gloss",
-   "optional": false,
-   "pos": "な形容词/名词",
-   "ex": {
-    "ja": "彼女は熱心に小鳥にえさをやった。",
-    "zh": "她热心地给小鸟喂食。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1290",
-   "surface": "寝坊",
-   "kana": "ねぼう",
-   "meaning": "睡懒觉；睡过头",
-   "ko": "늦잠（懒觉）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名词/动词(サ变)/自动词/な形容词/连体词",
-   "ex": {
-    "ja": "彼はときどき寝坊する。",
-    "zh": "他有时会睡过头。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1291",
-   "surface": "眠い",
-   "kana": "ねむい",
-   "meaning": "困；发困",
-   "ko": "졸리다（困）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "い形容词",
-   "ex": {
-    "ja": "テレビを見ているとすぐ眠くなる。",
-    "zh": "一看电视就容易犯困。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1292",
-   "surface": "眠る",
-   "kana": "ねむる",
-   "meaning": "睡；睡眠",
-   "ko": "자다（睡，睡觉） / 잠자다（睡觉，睡眠）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "动词(五段)/自动词",
-   "ex": {
-    "ja": "もし眠るといけないので目覚し時計をセットしなさい。",
-    "zh": "免得睡着，把闹钟设好。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1293",
-   "surface": "残る",
-   "kana": "のこる",
-   "meaning": "剩下；留下",
-   "ko": "남다（剩，剩下）",
-   "ko_status": "dictionary",
-   "optional": true,
-   "pos": "动词(五段)/自动词",
-   "ex": {
-    "ja": "もう３ページ残っている。",
-    "zh": "还剩三页。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1294",
-   "surface": "のど",
-   "kana": "のど",
-   "meaning": "喉咙",
-   "ko": "목 / 목구멍",
-   "ko_status": "ai_gloss",
-   "optional": true,
-   "pos": "名词",
-   "ex": {
-    "ja": "のどがヒリヒリします。",
-    "zh": "喉咙火辣辣地疼。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1295",
-   "surface": "乗り換える",
-   "kana": "のりかえる",
-   "meaning": "换乘",
-   "ko": "갈아타다（换乘，倒） / 환승하다（换乘，换车）",
-   "ko_status": "dictionary",
-   "optional": true,
-   "pos": "动词(一段)/他动词",
-   "ex": {
-    "ja": "東京駅で列車を乗り換えなさい。",
-    "zh": "请在东京站换乘列车。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1296",
-   "surface": "乗り物",
-   "kana": "のりもの",
-   "meaning": "交通工具",
-   "ko": "탈것（交通工具）",
-   "ko_status": "dictionary",
-   "optional": true,
-   "pos": "名词",
-   "ex": {
-    "ja": "乗り物は子供向けである。",
-    "zh": "这些游乐设施是给小孩玩的。"
-   },
-   "audio": "tts"
   }
  ],
  "core_vocab_ids": [
+  "V1265",
+  "V1266",
+  "V1267",
+  "V1268",
+  "V1269",
+  "V1270",
+  "V1271",
+  "V1272",
+  "V1273",
+  "V1274",
+  "V1275",
+  "V1276",
   "V1277",
   "V1278",
   "V1279",
-  "V1280",
-  "V1281",
-  "V1282",
-  "V1283",
-  "V1284",
-  "V1285",
-  "V1286",
-  "V1287",
-  "V1288",
-  "V1289",
-  "V1290",
-  "V1291",
-  "V1292"
+  "V1280"
  ],
  "extension_vocab_ids": [
-  "V1293",
-  "V1294",
-  "V1295",
-  "V1296"
+  "V1281",
+  "V1282",
+  "V1283"
  ],
  "grammar": [
   {
@@ -648,105 +632,105 @@
  ],
  "quiz": [
   {
-   "qid": "Q-062-V0-aac5e4cb7ade",
-   "prompt": "「苦い」是什么意思？",
-   "options": [
-    "血",
-    "苦",
-    "自动扶梯",
-    "柔软"
-   ],
-   "h": "62450419",
-   "oh": [
-    "c435e05f",
-    "62450419",
-    "d272b9fc",
-    "266573c4"
-   ]
-  },
-  {
-   "qid": "Q-062-V1-481b28bdd1b4",
-   "prompt": "「二階建て」是什么意思？",
-   "options": [
-    "得到；请人做",
-    "意见；看法",
-    "二层楼",
-    "去世"
-   ],
-   "h": "88ea8d55",
-   "oh": [
-    "236e2a30",
-    "2d3b6b7a",
-    "88ea8d55",
-    "f2af71a4"
-   ]
-  },
-  {
-   "qid": "Q-062-V2-e6dcbe52987a",
-   "prompt": "「逃げる」是什么意思？",
-   "options": [
-    "逃跑；逃避",
-    "忘记；忘带",
-    "洗衣服；洗涤",
-    "回答；回复"
-   ],
-   "h": "69643020",
-   "oh": [
-    "69643020",
-    "2783aa10",
-    "306594fc",
-    "5f8fbef1"
-   ]
-  },
-  {
-   "qid": "Q-062-K-cc87e0f6f9df",
+   "qid": "Q-062-K0-4193b3c7a78f",
    "prompt": "汉字「技」的一个常用读音是？",
    "options": [
-    "ソ",
-    "ドク",
+    "たお.す",
     "ギ",
-    "カ"
+    "あきな.う",
+    "あ.く"
    ],
    "h": "ab24ff71",
    "oh": [
-    "b82513e8",
-    "28389111",
+    "c7b8506d",
     "ab24ff71",
-    "ae25042a"
+    "5b3a1f8a",
+    "6b19505a"
    ]
   },
   {
-   "qid": "Q-062-G-8adb27c837c2",
+   "qid": "Q-062-K1-d744beebacc8",
+   "prompt": "汉字「術」的一个常用读音是？",
+   "options": [
+    "き.める",
+    "ま",
+    "な.る",
+    "ジュツ"
+   ],
+   "h": "68f749e6",
+   "oh": [
+    "cc85ae36",
+    "fb257d61",
+    "8a902586",
+    "68f749e6"
+   ]
+  },
+  {
+   "qid": "Q-062-G-17261821caa2",
    "prompt": "句型「〜な（prohibition）」的意思是？",
    "options": [
-    "正当…的时候",
+    "与…一起；随着…",
     "不许…；别…",
-    "如果…／一…就…（条件形总览）",
-    "正在…中；整个…；全…"
+    "（是）因为…；其实是…（说明/强调语气）",
+    "用…；靠…；以…"
    ],
    "h": "4a2e19fa",
    "oh": [
-    "69f0cec4",
+    "670183f4",
     "4a2e19fa",
-    "a5bed444",
-    "efc2322f"
+    "fde1e3c5",
+    "ab0836fc"
    ]
   },
   {
-   "qid": "Q-062-V5-916a5b4e482f",
-   "prompt": "「日記」是什么意思？",
+   "qid": "Q-062-V0-58ae2b6c5a50",
+   "prompt": "「どんどん」是什么意思？",
    "options": [
-    "环境",
-    "日记",
-    "背面；里面",
-    "门；大门"
+    "收入",
+    "不满；不满意",
+    "说",
+    "不断；一个劲"
    ],
-   "h": "e28a0a70",
+   "h": "6195b18",
    "oh": [
-    "d5de2a67",
-    "e28a0a70",
-    "b8054e22",
-    "ff3f1ce3"
+    "2a228884",
+    "2409c557",
+    "7036ef23",
+    "6195b18"
+   ]
+  },
+  {
+   "qid": "Q-062-V1-af4afbc6ff1f",
+   "prompt": "「治る」是什么意思？",
+   "options": [
+    "医疗",
+    "痊愈；治好",
+    "牛排",
+    "低吼；呻吟"
+   ],
+   "h": "4b9d6308",
+   "oh": [
+    "742a3d37",
+    "4b9d6308",
+    "807ea0f8",
+    "448f97b6"
+   ]
+  },
+  {
+   "qid": "Q-062-R-63091e878cc0",
+   "prompt": "复习：汉字「就」的读音是？",
+   "options": [
+    "ボン",
+    "しろ",
+    "さかさま",
+    "シュウ"
+   ],
+   "h": "7c0a24dd",
+   "oh": [
+    "fc27d278",
+    "2b527341",
+    "c417abc6",
+    "7c0a24dd"
    ]
   }
  ],

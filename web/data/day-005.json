@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "16 个必学词；3 个选学拓展"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -39,39 +39,45 @@
  "listening": false,
  "review": [
   {
-   "kid": "V0028",
-   "front": "時計",
-   "back": "钟表；手表",
+   "kid": "V0034",
+   "front": "木曜日",
+   "back": "星期四",
    "stage": "planned"
   },
   {
-   "kid": "V0029",
-   "front": "毎日",
-   "back": "每天",
+   "kid": "V0035",
+   "front": "金曜日",
+   "back": "星期五",
    "stage": "planned"
   },
   {
-   "kid": "V0030",
-   "front": "今週",
-   "back": "本周",
+   "kid": "V0036",
+   "front": "土曜日",
+   "back": "星期六",
    "stage": "planned"
   },
   {
-   "kid": "V0031",
-   "front": "月曜日",
-   "back": "星期一",
+   "kid": "G0006",
+   "front": "N の N",
+   "back": "…的…；所属/修饰",
    "stage": "planned"
   },
   {
-   "kid": "V0010",
-   "front": "二",
-   "back": "二",
+   "kid": "G0007",
+   "front": "が（主语／新信息／存在主体）",
+   "back": "…（主语/新信息/存在主体/能力对象）",
    "stage": "planned"
   },
   {
-   "kid": "V0011",
-   "front": "三",
-   "back": "三",
+   "kid": "K0016",
+   "front": "九",
+   "back": "九｜音 キュウ、ク",
+   "stage": "planned"
+  },
+  {
+   "kid": "K0017",
+   "front": "十",
+   "back": "十｜音 ジュウ、ジッ",
    "stage": "planned"
   },
   {
@@ -85,114 +91,27 @@
    "front": "五",
    "back": "五",
    "stage": "planned"
+  },
+  {
+   "kid": "V0014",
+   "front": "六",
+   "back": "六",
+   "stage": "planned"
+  },
+  {
+   "kid": "G0002",
+   "front": "N は N ではありません / じゃない",
+   "back": "…不是…",
+   "stage": "planned"
+  },
+  {
+   "kid": "G0003",
+   "front": "N は N でした",
+   "back": "…（过去）是…",
+   "stage": "planned"
   }
  ],
  "vocab": [
-  {
-   "id": "V0048",
-   "surface": "中",
-   "kana": "なか",
-   "meaning": "里面；中间",
-   "ko": "속（里面，里头） / 안（里，里面） / 가운데（中间，正中，中央）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "部屋の中にいます。",
-    "zh": "在房间里。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0049",
-   "surface": "前",
-   "kana": "まえ",
-   "meaning": "前面；之前",
-   "ko": "앞（前，前面）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "駅の前に店があります。",
-    "zh": "车站前有店。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0050",
-   "surface": "後",
-   "kana": "あと",
-   "meaning": "后面；之后",
-   "ko": "담（之后） / 뒤（后，之后，后来） / 후（后，以后，之后）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "食事の後に、薬を飲みます。",
-    "zh": "饭后吃药。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0051",
-   "surface": "ご飯",
-   "kana": "ごはん",
-   "meaning": "米饭；饭（餐）",
-   "ko": "밥 / 식사",
-   "ko_status": "ai_gloss",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "ご飯を食べます。",
-    "zh": "吃饭。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0052",
-   "surface": "朝ご飯",
-   "kana": "あさごはん",
-   "meaning": "早饭",
-   "ko": "아침（早饭，早餐）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "朝ご飯を食べます。",
-    "zh": "吃早饭。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0053",
-   "surface": "水",
-   "kana": "みず",
-   "meaning": "水（冷水／生水）",
-   "ko": "물（水）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "水を飲みます。",
-    "zh": "喝水。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0054",
-   "surface": "お茶",
-   "kana": "おちゃ",
-   "meaning": "茶",
-   "ko": "차（茶，茶水）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "お茶を飲みます。",
-    "zh": "喝茶。"
-   },
-   "audio": "tts"
-  },
   {
    "id": "V0055",
    "surface": "肉",
@@ -335,7 +254,7 @@
    "meaning": "飞机",
    "ko": "비행기（飞机）",
    "ko_status": "dictionary",
-   "optional": true,
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "飛行機で旅行します。",
@@ -350,7 +269,7 @@
    "meaning": "(我)父亲",
    "ko": "아버지（父亲，爸爸）",
    "ko_status": "dictionary",
-   "optional": true,
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "父は会社員です。",
@@ -365,23 +284,136 @@
    "meaning": "(我)母亲",
    "ko": "어머니（母亲，妈妈）",
    "ko_status": "dictionary",
-   "optional": true,
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "母は医者です。",
     "zh": "我母亲是医生。"
    },
    "audio": "tts"
+  },
+  {
+   "id": "V0068",
+   "surface": "兄",
+   "kana": "あに",
+   "meaning": "(我)哥哥",
+   "ko": "형（哥，哥哥） / 오빠（哥哥） / 오라비（哥哥）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "兄は東京にいます。",
+    "zh": "我哥哥在东京。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V0069",
+   "surface": "姉",
+   "kana": "あね",
+   "meaning": "(我)姐姐",
+   "ko": "누나（姐姐） / 언니（姐姐）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "姉は学生です。",
+    "zh": "我姐姐是学生。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V0070",
+   "surface": "弟",
+   "kana": "おとうと",
+   "meaning": "(我)弟弟",
+   "ko": "동생（弟弟；妹妹） / 아우（弟弟） / 남동생（弟弟）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "弟に本を貸します。",
+    "zh": "借书给弟弟。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V0071",
+   "surface": "妹",
+   "kana": "いもうと",
+   "meaning": "(我)妹妹",
+   "ko": "동생（弟弟；妹妹） / 여동생（妹妹） / 누이동생（妹妹）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "妹は元気です。",
+    "zh": "我妹妹很精神。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V0072",
+   "surface": "家族",
+   "kana": "かぞく",
+   "meaning": "家人；家庭",
+   "ko": "가족（家庭，家人） / 식구（家人）",
+   "ko_status": "dictionary",
+   "optional": true,
+   "pos": "名詞",
+   "ex": {
+    "ja": "家族と旅行します。",
+    "zh": "和家人旅行。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V0073",
+   "surface": "子供",
+   "kana": "こども",
+   "meaning": "孩子；小孩",
+   "ko": "애（孩子，小孩） / 아이（小孩，孩子） / 어린애（小孩）",
+   "ko_status": "dictionary",
+   "optional": true,
+   "pos": "名詞",
+   "ex": {
+    "ja": "子供が公園にいます。",
+    "zh": "孩子在公园。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V0074",
+   "surface": "彼",
+   "kana": "かれ",
+   "meaning": "他；男朋友",
+   "ko": "그（他）",
+   "ko_status": "dictionary",
+   "optional": true,
+   "pos": "代名詞",
+   "ex": {
+    "ja": "彼は学生です。",
+    "zh": "他是学生。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V0075",
+   "surface": "彼女",
+   "kana": "かのじょ",
+   "meaning": "她；女朋友",
+   "ko": "그녀（她） / 여자 친구（女朋友）",
+   "ko_status": "dictionary",
+   "optional": true,
+   "pos": "代名詞",
+   "ex": {
+    "ja": "彼女は元気です。",
+    "zh": "她很精神。"
+   },
+   "audio": "tts"
   }
  ],
  "core_vocab_ids": [
-  "V0048",
-  "V0049",
-  "V0050",
-  "V0051",
-  "V0052",
-  "V0053",
-  "V0054",
   "V0055",
   "V0056",
   "V0057",
@@ -390,12 +422,20 @@
   "V0060",
   "V0061",
   "V0062",
-  "V0063"
- ],
- "extension_vocab_ids": [
+  "V0063",
   "V0064",
   "V0066",
-  "V0067"
+  "V0067",
+  "V0068",
+  "V0069",
+  "V0070",
+  "V0071"
+ ],
+ "extension_vocab_ids": [
+  "V0072",
+  "V0073",
+  "V0074",
+  "V0075"
  ],
  "grammar": [
   {
@@ -615,105 +655,105 @@
  ],
  "quiz": [
   {
-   "qid": "Q-005-V0-56a870c9d969",
-   "prompt": "「中」是什么意思？",
-   "options": [
-    "放；放置",
-    "里面；中间",
-    "明信片",
-    "大的"
-   ],
-   "h": "bc565869",
-   "oh": [
-    "c837633a",
-    "bc565869",
-    "e17d3135",
-    "3bdc42e6"
-   ]
-  },
-  {
-   "qid": "Q-005-V1-ae86abe193af",
-   "prompt": "「前」是什么意思？",
-   "options": [
-    "便宜",
-    "前面；之前",
-    "对面；那边",
-    "楼梯"
-   ],
-   "h": "effd3533",
-   "oh": [
-    "f5a25cd6",
-    "effd3533",
-    "49ec3b83",
-    "7a18ddfc"
-   ]
-  },
-  {
-   "qid": "Q-005-V2-88f2d11375df",
-   "prompt": "「後」是什么意思？",
-   "options": [
-    "后面；之后",
-    "百",
-    "母亲；妈妈",
-    "拍摄"
-   ],
-   "h": "59e0ed6b",
-   "oh": [
-    "59e0ed6b",
-    "fb871761",
-    "108e5d27",
-    "37ee0154"
-   ]
-  },
-  {
-   "qid": "Q-005-K-81a9dc796d17",
+   "qid": "Q-005-K0-94b7b8c4de8c",
    "prompt": "汉字「間」的一个常用读音是？",
    "options": [
-    "ビ",
+    "つど.う",
+    "おも.り",
     "カン",
-    "セイ",
-    "ヨウ"
+    "うご.く"
    ],
    "h": "fd92319b",
    "oh": [
-    "562479a2",
+    "47c2f772",
+    "93a4d5a9",
     "fd92319b",
-    "528766da",
-    "41bd08e3"
+    "4cf899c"
    ]
   },
   {
-   "qid": "Q-005-G-2b7aebc6534b",
-   "prompt": "句型「を（宾语／移动经过）」的意思是？",
+   "qid": "Q-005-K1-3265aebc2eb8",
+   "prompt": "汉字「今」的一个常用读音是？",
    "options": [
-    "把…（标宾语）",
-    "听说…；好像说…",
-    "…下去／…起来（趋势）；去…再来／…过来（移动）",
-    "并不是…；并非…"
+    "おとうと",
+    "トツ",
+    "コン",
+    "むか.う"
    ],
-   "h": "235aacc0",
+   "h": "ed71ad23",
    "oh": [
-    "235aacc0",
-    "aaf72ae0",
-    "40ef5b4",
-    "ca292ff4"
+    "2062e619",
+    "233c5ac9",
+    "ed71ad23",
+    "beabb7b0"
    ]
   },
   {
-   "qid": "Q-005-V5-d7e8aa0bd4b4",
-   "prompt": "「ご飯」是什么意思？",
+   "qid": "Q-005-G-d3a308a65cb1",
+   "prompt": "句型「に（时点／归着点／存在场所／对象）」的意思是？",
    "options": [
-    "篮子",
-    "原因（客观）",
-    "米饭；饭（餐）",
-    "感动"
+    "只有…之后才…",
+    "在…情况下",
+    "在／于／向…",
+    "给…；别人给我…；从…得到"
    ],
-   "h": "b6ffbfc",
+   "h": "fb7936b0",
    "oh": [
-    "18716c33",
-    "ffced6f9",
-    "b6ffbfc",
-    "7392edf2"
+    "2f0d9e84",
+    "72935cba",
+    "fb7936b0",
+    "33e948d4"
+   ]
+  },
+  {
+   "qid": "Q-005-V0-9fa5436cd7bc",
+   "prompt": "假名「にく」对应的词形是？",
+   "options": [
+    "肉",
+    "設備",
+    "泉",
+    "こちら"
+   ],
+   "h": "8b421ea4",
+   "oh": [
+    "8b421ea4",
+    "6138f373",
+    "4c8f75e4",
+    "fd855fd0"
+   ]
+  },
+  {
+   "qid": "Q-005-V1-03e89a0a14c9",
+   "prompt": "「魚」是什么意思？",
+   "options": [
+    "课",
+    "身体",
+    "鱼",
+    "世间；社会"
+   ],
+   "h": "f816b63b",
+   "oh": [
+    "7a36fee1",
+    "200c597b",
+    "f816b63b",
+    "5fd06d8c"
+   ]
+  },
+  {
+   "qid": "Q-005-R-133544f6fe46",
+   "prompt": "复习：汉字「九」的读音是？",
+   "options": [
+    "こ",
+    "キュウ",
+    "アン",
+    "かえ.る"
+   ],
+   "h": "3c5b0fd3",
+   "oh": [
+    "d6254322",
+    "3c5b0fd3",
+    "f4e9bbe2",
+    "5de09a29"
    ]
   }
  ],

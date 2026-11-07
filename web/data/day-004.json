@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "16 个必学词；3 个选学拓展"
+   "desc": "16 个必学词；4 个选学拓展"
   },
   {
    "type": "语法",
@@ -39,27 +39,45 @@
  "listening": false,
  "review": [
   {
-   "kid": "V0019",
-   "front": "何",
-   "back": "什么",
+   "kid": "V0023",
+   "front": "今日",
+   "back": "今天",
    "stage": "planned"
   },
   {
-   "kid": "V0020",
-   "front": "いくら",
-   "back": "多少钱",
+   "kid": "V0024",
+   "front": "明日",
+   "back": "明天",
    "stage": "planned"
   },
   {
-   "kid": "V0021",
-   "front": "円",
-   "back": "日元（货币单位）",
+   "kid": "V0025",
+   "front": "昨日",
+   "back": "昨天",
    "stage": "planned"
   },
   {
-   "kid": "V0022",
-   "front": "今",
-   "back": "现在",
+   "kid": "G0004",
+   "front": "N も",
+   "back": "…也…",
+   "stage": "planned"
+  },
+  {
+   "kid": "G0005",
+   "front": "これ / それ / あれ / どれ は N です",
+   "back": "这/那/那是…",
+   "stage": "planned"
+  },
+  {
+   "kid": "K0011",
+   "front": "四",
+   "back": "四｜音 シ",
+   "stage": "planned"
+  },
+  {
+   "kid": "K0012",
+   "front": "五",
+   "back": "五｜音 ゴ",
    "stage": "planned"
   },
   {
@@ -81,103 +99,19 @@
    "stage": "planned"
   },
   {
-   "kid": "V0004",
-   "front": "こんにちは",
-   "back": "你好（白天问候）",
+   "kid": "G0001",
+   "front": "N は N です",
+   "back": "…是…",
+   "stage": "planned"
+  },
+  {
+   "kid": "G0261",
+   "front": "〜か（or）",
+   "back": "…或…",
    "stage": "planned"
   }
  ],
  "vocab": [
-  {
-   "id": "V0028",
-   "surface": "時計",
-   "kana": "とけい",
-   "meaning": "钟表；手表",
-   "ko": "시계",
-   "ko_status": "ai_gloss",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "時計を見ます。",
-    "zh": "看表。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0029",
-   "surface": "毎日",
-   "kana": "まいにち",
-   "meaning": "每天",
-   "ko": "매일",
-   "ko_status": "ai_gloss",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "毎日、学校へ行きます。",
-    "zh": "每天去学校。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0030",
-   "surface": "今週",
-   "kana": "こんしゅう",
-   "meaning": "本周",
-   "ko": "금주（本周，这周，这星期）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "今週は忙しいです。",
-    "zh": "这周很忙。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0031",
-   "surface": "月曜日",
-   "kana": "げつようび",
-   "meaning": "星期一",
-   "ko": "월요일（星期一，周一，礼拜一）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "月曜日に試験があります。",
-    "zh": "周一有考试。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0032",
-   "surface": "火曜日",
-   "kana": "かようび",
-   "meaning": "星期二",
-   "ko": "화요일（星期二，周二，礼拜二）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "火曜日に試験があります。",
-    "zh": "周二有考试。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0033",
-   "surface": "水曜日",
-   "kana": "すいようび",
-   "meaning": "星期三",
-   "ko": "수（周三，星期三） / 수요일（星期三，周三，礼拜三）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "水曜日は休みです。",
-    "zh": "周三休息。"
-   },
-   "audio": "tts"
-  },
   {
    "id": "V0034",
    "surface": "木曜日",
@@ -335,7 +269,7 @@
    "meaning": "图书馆",
    "ko": "도서관（图书馆）",
    "ko_status": "dictionary",
-   "optional": true,
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "図書館で本を読みます。",
@@ -350,7 +284,7 @@
    "meaning": "房间",
    "ko": "방（房间） / 집칸（房间）",
    "ko_status": "dictionary",
-   "optional": true,
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "部屋に猫がいます。",
@@ -365,22 +299,121 @@
    "meaning": "上面；上方",
    "ko": "위",
    "ko_status": "ai_gloss",
-   "optional": true,
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "机の上に本があります。",
     "zh": "桌上有书。"
    },
    "audio": "tts"
+  },
+  {
+   "id": "V0048",
+   "surface": "中",
+   "kana": "なか",
+   "meaning": "里面；中间",
+   "ko": "속（里面，里头） / 안（里，里面） / 가운데（中间，正中，中央）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "部屋の中にいます。",
+    "zh": "在房间里。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V0049",
+   "surface": "前",
+   "kana": "まえ",
+   "meaning": "前面；之前",
+   "ko": "앞（前，前面）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "駅の前に店があります。",
+    "zh": "车站前有店。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V0050",
+   "surface": "後",
+   "kana": "あと",
+   "meaning": "后面；之后",
+   "ko": "담（之后） / 뒤（后，之后，后来） / 후（后，以后，之后）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "食事の後に、薬を飲みます。",
+    "zh": "饭后吃药。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V0051",
+   "surface": "ご飯",
+   "kana": "ごはん",
+   "meaning": "米饭；饭（餐）",
+   "ko": "밥 / 식사",
+   "ko_status": "ai_gloss",
+   "optional": true,
+   "pos": "名詞",
+   "ex": {
+    "ja": "ご飯を食べます。",
+    "zh": "吃饭。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V0052",
+   "surface": "朝ご飯",
+   "kana": "あさごはん",
+   "meaning": "早饭",
+   "ko": "아침（早饭，早餐）",
+   "ko_status": "dictionary",
+   "optional": true,
+   "pos": "名詞",
+   "ex": {
+    "ja": "朝ご飯を食べます。",
+    "zh": "吃早饭。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V0053",
+   "surface": "水",
+   "kana": "みず",
+   "meaning": "水（冷水／生水）",
+   "ko": "물（水）",
+   "ko_status": "dictionary",
+   "optional": true,
+   "pos": "名詞",
+   "ex": {
+    "ja": "水を飲みます。",
+    "zh": "喝水。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V0054",
+   "surface": "お茶",
+   "kana": "おちゃ",
+   "meaning": "茶",
+   "ko": "차（茶，茶水）",
+   "ko_status": "dictionary",
+   "optional": true,
+   "pos": "名詞",
+   "ex": {
+    "ja": "お茶を飲みます。",
+    "zh": "喝茶。"
+   },
+   "audio": "tts"
   }
  ],
  "core_vocab_ids": [
-  "V0028",
-  "V0029",
-  "V0030",
-  "V0031",
-  "V0032",
-  "V0033",
   "V0034",
   "V0035",
   "V0036",
@@ -390,12 +423,19 @@
   "V0040",
   "V0041",
   "V0042",
-  "V0043"
- ],
- "extension_vocab_ids": [
+  "V0043",
   "V0044",
   "V0045",
-  "V0047"
+  "V0047",
+  "V0048",
+  "V0049",
+  "V0050"
+ ],
+ "extension_vocab_ids": [
+  "V0051",
+  "V0052",
+  "V0053",
+  "V0054"
  ],
  "grammar": [
   {
@@ -616,105 +656,105 @@
  ],
  "quiz": [
   {
-   "qid": "Q-004-V0-065ea51e442f",
-   "prompt": "「時計」是什么意思？",
-   "options": [
-    "钟表；手表",
-    "汉字",
-    "下面",
-    "出口"
-   ],
-   "h": "bce4f0d8",
-   "oh": [
-    "bce4f0d8",
-    "3a4dbc49",
-    "cc3cccf8",
-    "421e004a"
-   ]
-  },
-  {
-   "qid": "Q-004-V1-4380dc128eee",
-   "prompt": "「毎日」是什么意思？",
-   "options": [
-    "教；告诉",
-    "难吃；糟糕",
-    "每天",
-    "衬衫"
-   ],
-   "h": "2c285b5",
-   "oh": [
-    "7682a1d4",
-    "1fa0e2e7",
-    "2c285b5",
-    "ede6da20"
-   ]
-  },
-  {
-   "qid": "Q-004-V2-0a333a39e9eb",
-   "prompt": "「今週」是什么意思？",
-   "options": [
-    "本周",
-    "长",
-    "借出",
-    "拍摄"
-   ],
-   "h": "27c37899",
-   "oh": [
-    "27c37899",
-    "f921bcce",
-    "4d1edabc",
-    "37ee0154"
-   ]
-  },
-  {
-   "qid": "Q-004-K-eb28183610de",
+   "qid": "Q-004-K0-6f4205349380",
    "prompt": "汉字「九」的一个常用读音是？",
    "options": [
+    "まつりごと",
     "キュウ",
-    "ギ",
-    "チュウ",
-    "ツウ"
+    "つかさ",
+    "ド"
    ],
    "h": "3c5b0fd3",
    "oh": [
+    "a4a9e84b",
     "3c5b0fd3",
-    "ab24ff71",
-    "e26d5357",
-    "c1500b6f"
+    "97d4e0c7",
+    "4c2469e4"
    ]
   },
   {
-   "qid": "Q-004-G-12a3ad688cfb",
+   "qid": "Q-004-K1-d7a6ab73adfc",
+   "prompt": "汉字「十」的一个常用读音是？",
+   "options": [
+    "いな",
+    "みなと",
+    "と.ざす",
+    "ジュウ"
+   ],
+   "h": "46f71460",
+   "oh": [
+    "865c147b",
+    "66b9840c",
+    "e0836c8a",
+    "46f71460"
+   ]
+  },
+  {
+   "qid": "Q-004-G-ed0d5e0e74cb",
    "prompt": "句型「N の N」的意思是？",
    "options": [
-    "必须…／不得不…",
     "…的…；所属/修饰",
-    "是否…；…还是不…",
-    "给…；别人给我…；从…得到"
+    "因为…所以…",
+    "向…（动作的对象）",
+    "但愿…；希望…"
    ],
    "h": "49c98541",
    "oh": [
-    "f5a943c9",
     "49c98541",
-    "edbc22c1",
-    "33e948d4"
+    "a6b77642",
+    "dfc1a123",
+    "5edc215a"
    ]
   },
   {
-   "qid": "Q-004-V5-da78f8eb7cc9",
-   "prompt": "「月曜日」是什么意思？",
+   "qid": "Q-004-V0-2edc60934fc3",
+   "prompt": "「木曜日」是什么意思？",
    "options": [
-    "星期一",
-    "机场",
-    "天气预报",
-    "这次"
+    "星期四",
+    "气候",
+    "手续费",
+    "土；土壤"
    ],
-   "h": "bf477319",
+   "h": "943c2a68",
    "oh": [
-    "bf477319",
-    "7ebee0f5",
-    "6355867b",
-    "c2ff1e6f"
+    "943c2a68",
+    "c13cdcee",
+    "9cc27b14",
+    "96569fbc"
+   ]
+  },
+  {
+   "qid": "Q-004-V1-52187023eaef",
+   "prompt": "「金曜日」是什么意思？",
+   "options": [
+    "安全",
+    "星期五",
+    "拼命；努力",
+    "严厉；严酷"
+   ],
+   "h": "53485c15",
+   "oh": [
+    "a8622924",
+    "53485c15",
+    "95f2d198",
+    "45890ac8"
+   ]
+  },
+  {
+   "qid": "Q-004-R-3c9b34774718",
+   "prompt": "复习：句型「N も」的意思是？",
+   "options": [
+    "必须…；不得…",
+    "多亏…；托…的福",
+    "…也…",
+    "向…（动作的对象）"
+   ],
+   "h": "1aca9020",
+   "oh": [
+    "b72f8fc4",
+    "90862f16",
+    "1aca9020",
+    "dfc1a123"
    ]
   }
  ],

@@ -37,3 +37,13 @@
 四条直链 2026-11-08 实测 HTTP 200 `application/ogg`。许可与作者信息经
 `commons.wikimedia.org/w/api.php` 的 `imageinfo/extmetadata` 逐文件核实。
 CC BY-SA 文件仅播放、未改编；署名与许可链接已随音频卡片给出。
+
+### mp3 官方转码（v7.1，2026-11-08）
+
+`web/listening.html` 的每个 `<audio>` 同时给出两条 `<source>`：原始 Ogg/Oga 文件，以及 Wikimedia
+自己生成的 mp3 转码（`https://upload.wikimedia.org/wikipedia/commons/transcoded/<hash>/<file>/<file>.mp3`）。
+四条转码直链 2026-11-08 实测 HTTP 206 `audio/mpeg`，Safari 因此可以直接播放。
+
+这里**只是引用 Wikimedia 官方 CDN 上已有的转码 URL**：项目没有下载、没有自行转码、没有改编音频文件，
+因此不产生新的衍生作品，也不改变上表逐文件的作者与许可要求。页面卡片仍给出原作者、文件页与许可全文链接；
+CC BY-SA / PD 的署名义务按原文件履行。

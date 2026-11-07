@@ -254,3 +254,21 @@ payload：
   `cmd_import_web` 拒绝没有 `day` 的题，不再用 payload 的 day 兜底。
 - **完成门控不变**：`finish-day` 仍需全部题作答、正确率 ≥70% 且教师输出验收通过。
   6 题日最多错 1 题、9 题（听力日）最多错 2 题；不存在「听力日必须全对」。
+
+## v7.1 收尾修订（2026-11-08）
+
+- **开放音频格式**：`knowledge/resources_v7.json` 的 4 条 `inline` 源新增 `mp3_url`，指向 Wikimedia
+  官方 `transcoded/.../*.mp3`（2026-11-08 实测 206 `audio/mpeg`）。`build_v5_site.py::audio_card`
+  给每个 `<audio>` 输出 mp3 + Ogg 两个 `<source>`，Safari 不再需要跳文件页。仍是外链播放，
+  未下载转存、未自行转码、未改编，署名与许可链接不变。
+- **环境隔离**：preview 绑定独立 D1 `nihongo80-preview`（三段 migration 已应用），与 production
+  `nihongo80` 数据互不相通。`wrangler.jsonc` 顶部注释改为真实配置口径，移除过时的
+  `REPLACE_WITH_D1_ID` 与「不含任何 database_id」表述；`0001_events.sql` 的 `day` 注释 80→150。
+- **发布守卫**：新增断言「恰好两个且互不相同的 `database_id`、`database_name` 含
+  `nihongo80-preview`」，拒绝共用库的回退；输出标明 `D1 prod` / `D1 preview (isolated)`。
+- **回归**：`tests/test_v7.py` 新增 3 项（双格式源、D1 隔离、守卫真的会拦截共用库回退），
+  Python 测试 41→44 项。
+- **静态音频 Range**：实测 `audio/*.m4a` 对 `Range` 返回 200 全量（无 `accept-ranges`），
+  Commons mp3 返回 206 + `content-range`。给静态 m4a 加 Range 必须把 `/audio/*` 放进
+  `run_worker_first`，会让所有音频请求进入 Worker 请求额度，与「静态绕过 Worker」冲突；
+  单篇仅 0.56–0.62 MB 且 `preload="none"`，实测播放/拖动正常，故**评估后不引入**，如实记录。

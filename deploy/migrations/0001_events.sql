@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS events (
   id                INTEGER PRIMARY KEY AUTOINCREMENT,
   client_ts         TEXT,             -- 客户端提交时间（ISO 8601，原样保留）
   server_ts         TEXT NOT NULL,    -- Worker 收到请求的时间（UTC ISO 8601）
-  day               INTEGER NOT NULL, -- 1..80
+  day               INTEGER NOT NULL, -- 1..150
   session           TEXT NOT NULL,    -- 形如 session-YYYYMMDD-NNN
   qid               TEXT NOT NULL,
   answer            TEXT,             -- 原始作答文本（不做任何判分前的清洗）

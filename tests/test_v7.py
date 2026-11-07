@@ -188,5 +188,64 @@ class TestDatabaseAndPages(unittest.TestCase):
         self.assertIn("lastPassage", js, "共用读解材料会重复渲染")
 
 
+
+class TestV7FinalHardening(unittest.TestCase):
+    """收尾加固：Safari 音频兼容、preview D1 隔离、配置注释不回退。"""
+
+    def test_inline_audio_has_dual_format_sources(self):
+        import re
+        data = json.loads((ROOT / "knowledge/resources_v7.json").read_text(encoding="utf-8"))
+        inline = [x for x in data["sources"] if x.get("embed") == "inline"]
+        self.assertEqual(len(inline), 4)
+        for x in inline:
+            self.assertTrue(x.get("mp3_url", "").startswith(
+                "https://upload.wikimedia.org/wikipedia/commons/transcoded/"), x["id"])
+            self.assertTrue(x["mp3_url"].endswith(".mp3"), x["id"])
+        h = (ROOT / "web/listening.html").read_text(encoding="utf-8")
+        self.assertEqual(h.count('type="audio/mpeg"'), 4)
+        self.assertEqual(h.count('type="audio/ogg"'), 4)
+        self.assertEqual(h.count("<audio"), 4)
+        self.assertNotIn("Safari 请打开", h, "Safari 兼容提示已过时")
+
+    def test_prod_and_preview_use_separate_d1(self):
+        import re
+        import subprocess
+        cfg = (ROOT / "deploy/wrangler.jsonc").read_text(encoding="utf-8")
+        ids = re.findall(r'"database_id"\s*:\s*"([0-9a-f-]+)"', cfg)
+        self.assertEqual(len(ids), 2)
+        self.assertEqual(len(set(ids)), 2, "preview 不得与 production 共用一个 D1")
+        self.assertIn('"database_name": "nihongo80-preview"', cfg)
+        self.assertNotIn("REPLACE_WITH_D1_ID", cfg)
+        out = subprocess.check_output(
+            [sys.executable, str(ROOT / "scripts/release_guard.py")], text=True)
+        self.assertIn("isolated", out)
+        self.assertIn('"paid_features": false', out)
+
+    def test_release_guard_rejects_shared_d1(self):
+        """守卫必须真的会拦住「两环境共用一个库」的回退，而不是只打印口号。"""
+        import re
+        import tempfile
+        import shutil
+        import subprocess
+        cfg = (ROOT / "deploy/wrangler.jsonc").read_text(encoding="utf-8")
+        prod_id = re.findall(r'"database_id"\s*:\s*"([0-9a-f-]+)"', cfg)[0]
+        tmp = Path(tempfile.mkdtemp(prefix="nh80-guard-"))
+        try:
+            shutil.copytree(ROOT / "deploy", tmp / "deploy", ignore=shutil.ignore_patterns("node_modules"))
+            shutil.copytree(ROOT / "web", tmp / "web")
+            shutil.copytree(ROOT / "knowledge", tmp / "knowledge")
+            (tmp / "scripts").mkdir(exist_ok=True)
+            shutil.copy2(ROOT / "scripts/release_guard.py", tmp / "scripts/release_guard.py")
+            broken = (tmp / "deploy/wrangler.jsonc").read_text(encoding="utf-8").replace(
+                "7b4c50be-9b93-4f65-b994-a2aec0d97380", prod_id)
+            (tmp / "deploy/wrangler.jsonc").write_text(broken, encoding="utf-8")
+            r = subprocess.run([sys.executable, str(tmp / "scripts/release_guard.py")],
+                               capture_output=True, text=True)
+            self.assertNotEqual(r.returncode, 0)
+            self.assertIn("separate free-tier D1", r.stderr)
+        finally:
+            shutil.rmtree(tmp, ignore_errors=True)
+
+
 if __name__ == "__main__":
     unittest.main()

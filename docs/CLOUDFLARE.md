@@ -405,13 +405,17 @@ data/state.db（唯一真源）
 ```bash
 cd deploy
 
-# 1) 创建 D1（免费额度足够；把返回的 database_id 填到 wrangler.jsonc 两处 REPLACE_WITH_D1_ID）
+# 1) 两个环境各建一个 D1（Workers Free 含 10 个库，第 2 个不额外收费）
+#    当前已建好，database_id 已写入 wrangler.jsonc；仅在重建环境时才需要重跑
 npx wrangler d1 create nihongo80
+npx wrangler d1 create nihongo80-preview
 
-# 2) 建表 + 索引（本地调试去掉 --remote）
-npx wrangler d1 execute nihongo80 --remote --file=./migrations/0001_events.sql
-# 或者用 wrangler 的迁移通道：
-npx wrangler d1 migrations apply nihongo80 --remote
+# 2) 对两个库分别应用三段 migration（本地调试去掉 --remote）
+for db in nihongo80 nihongo80-preview; do
+  for f in migrations/0001_events.sql migrations/0002_session_payload.sql migrations/0003_personal_budget.sql; do
+    npx wrangler d1 execute "$db" --remote --file="$f"
+  done
+done
 
 # 3) 设置拉取密钥（只在 Cloudflare secret 里，**不要写进仓库**）
 npx wrangler secret put NH80_SYNC_KEY
@@ -422,9 +426,9 @@ cd .. && CI=1 bash scripts/deploy_cloudflare.sh preview
 CI=1 bash scripts/deploy_cloudflare.sh production
 ```
 
-`deploy/wrangler.jsonc` 里 `d1_databases[].database_id` 的占位值就是 `REPLACE_WITH_D1_ID`；
-未替换时**不要**直接发布到 production（wrangler 会在部署时报错）。绑定了 D1 但忘了建表，
-接口返回 `503 {"ok":false,"reason":"db_error"}`，静态页不受影响。
+`deploy/wrangler.jsonc` 的 production 与 `env.preview` 各绑定一个**不同**的 `database_id`；
+`scripts/release_guard.py` 会强制校验两者互不相同，防止把 preview 数据写进生产库。
+绑定了 D1 但忘了建表，接口返回 `503 {"ok":false,"reason":"db_error"}`，静态页不受影响。
 
 ### 10.3 接口契约
 
@@ -512,3 +516,21 @@ python3 scripts/cloud_sync.py pull \
 - `GET /api/events` 带 `X-NH80-Key` 返回事件；不带 key 返回 401，未设 secret 返回 503。
 - `nh80.py pull-cloud --base ...` 在临时库成功导入：`correct` 由本地题库重判，不采信客户端。
 - 冒烟事件已从 D1 删除，线上库当前为空。
+
+## 12. v7.1：preview D1 隔离与开放音频双格式（2026-11-08）
+
+| 项 | 值 |
+|---|---|
+| Production D1 | `nihongo80`，id `9845dbf3-a470-4718-b474-b96e7b0e6223` |
+| Preview D1 | `nihongo80-preview`，id `7b4c50be-9b93-4f65-b994-a2aec0d97380`（APAC，新建） |
+| 迁移 | 两库均已 `--remote` 应用 `0001_events.sql` / `0002_session_payload.sql` / `0003_personal_budget.sql` |
+| Secret | 两环境各自 `NH80_SYNC_KEY`（值仅存本机 `deploy/.sync-key`，已加入 `.gitignore`） |
+| 额度 | Workers Free 含 10 个 D1 库；第 2 个库在免费额度内，超限只报错不计费 |
+
+隔离验证：往 preview 写一条真实事件后，preview 库可见、production 库无该 session；
+两库 `database_id` 由 `release_guard.py` 强制要求互不相同，防止配置回退。
+
+开放音频：`web/listening.html` 的 4 条 Wikimedia Commons 音频现在同时提供原始 Ogg/Oga 与
+Wikimedia 官方 mp3 转码两个 `<source>`，Safari 不再需要跳文件页。转码 URL 均为
+`upload.wikimedia.org/wikipedia/commons/transcoded/...`，实测 206 `audio/mpeg`；
+只引用、不下载转存、不自行转码，逐文件署名与许可链接保持不变。

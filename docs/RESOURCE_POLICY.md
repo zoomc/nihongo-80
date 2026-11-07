@@ -59,3 +59,19 @@ Day 47–90 / 91–130 / 131–150 三阶段分组，点击跳转官方原站收
 
 **额度**：Commons 音频是外链，不计本站静态资源；Wikimedia 不建议大流量热链，本项目为低流量个人站。
 Cloudflare 仍为 Workers Free，无新增付费绑定。
+
+## v7.1 成本与兼容性复核（2026-11-08）
+
+- 再次核对 [D1 定价](https://developers.cloudflare.com/d1/platform/pricing/) 与
+  [D1 限额](https://developers.cloudflare.com/d1/platform/limits/)：Workers Free 含 **10 个数据库**
+  （第 11 个起才 $0.10/月）、每日 500 万行读 / 10 万行写、账户 5 GB 存储；
+  **超过免费额度是查询报错，不会自动转为计费**。因此为 preview 增加第二个 D1 库属于免费额度内，
+  不产生额外扣费风险。
+- preview 已改为独立库 `nihongo80-preview`，与生产 `nihongo80` 数据隔离；两库都只存原始作答事件，
+  三段 migration 均已应用。`release_guard.py` 会拦截「两环境共用一个库」的配置回退。
+- 真人听力页 4 条 Commons 音频新增 Wikimedia 官方 mp3 转码 `<source>`（实测 206 `audio/mpeg`），
+  Safari 可直接播放；仍只是引用官方 CDN URL，未下载、未自行转码、未改编，署名义务不变。
+- **Range 实测**：本站 `audio/*.m4a` 对 `Range` 返回 200 全量、无 `accept-ranges`；
+  Commons mp3 返回 206 + `content-range`。给静态 m4a 加 Range 需把 `/audio/*` 放进
+  `run_worker_first`，会让音频请求进入 Worker 请求额度（静态直出请求本身免费且不限次），
+  与免费设计冲突；单篇 0.56–0.62 MB 且 `preload="none"`，实测播放/拖动正常，故不引入，如实记录。

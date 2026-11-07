@@ -1,11 +1,12 @@
-# HANDOFF · Nihongo 150 v7
+# HANDOFF · Nihongo 150 v7.1
 
 2026-11-08 完成并上线。v7 做了三路独立复审（内容库 / 免费听力资源 / 课程与题目质量）并修掉点名问题；
+v7.1 收尾又消掉两条技术边界：Safari 音频兼容、preview 与 production 的 D1 数据隔离，并清理全部临时残留。
 验收与命令输出见 `reports/v7_completion.md`，v6 记录见 `reports/v6_completion.md`，
 数据来源与许可见 `DATA_LICENSES.md`。Git 具体提交以 `git log -1` 为准。
 
-- Production：`https://nihongo80.cmjfire.workers.dev`，Version `10f39372-6f11-4de0-b76f-0811b4066c84`
-- Preview：`https://nihongo80-preview.cmjfire.workers.dev`，Version `12a083a4-e4be-4944-b78a-95ef4a35e8b8`
+- Production：`https://nihongo80.cmjfire.workers.dev`，Version `86f66f9e-3fda-412d-8650-5f2876d0a4fa`
+- Preview：`https://nihongo80-preview.cmjfire.workers.dev`，Version `0781c3f1-f63e-48da-ad91-7fa314133a77`
 
 ## 产品决策
 
@@ -21,6 +22,10 @@
 - 45篇原创完整合成音频，Kokoro开放模型本机生成，实测63.3–71.575秒；不是人声录音。
 - 45 篇听力共 135 道理解题已重写：9 个模板的 5 变体 Q3 答案互不相同，`audio_text` 哈希与音频逐条一致。
 - 新增 `web/listening.html`：4 条 Wikimedia Commons PD/CC BY-SA 开放音频可在本页播放并逐文件署名；
+  每条同时给 Wikimedia 官方 mp3 转码与原始 Ogg 两个 `<source>`，Chrome / Firefox / Safari 均可播放。
+- D1 已按环境隔离：`nihongo80`（production）与 `nihongo80-preview`（preview）两个独立库，三段 migration
+  均已 `--remote` 应用；preview 的测试事件不会写入生产 `events` 表。两库都在 Workers Free 的
+  10 个 D1 免费额度内，不产生额外费用。`release_guard.py` 会拒绝两环境共用一个库的配置回退。
   15 条免费真人听力/官方样题按阶段分组跳转原站；8 条不采用源列明原因。每日精听主线仍是本站合成音频。
 - 21个周测日、6个阶段/自测日有39道原创阅读/语境题，替换每日六题中的部分题；Day1有三道假名/助词诊断。45个听力日另三题，不以短测假冒官方模拟卷。
 - 官方N3题型、练习集与真人听力、Irodori、Tadoku、NHK入口位于resources.html，受限内容只链接原站。
@@ -54,7 +59,7 @@
 python3 scripts/nh80.py init
 python3 scripts/nh80.py validate
 python3 scripts/release_guard.py
-python3 -m unittest discover -s tests -p 'test*.py'   # 41 项
+python3 -m unittest discover -s tests -p 'test*.py'   # 44 项
 node tests/test_worker_access.mjs  # 需要deploy/npm install后的esbuild
 python3 -m http.server 8099 -d web
 ```

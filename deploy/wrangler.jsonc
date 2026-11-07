@@ -8,10 +8,10 @@
   // html_handling:"none" 让 .html 路径不被 307 规范化，SW 预缓存与本地一致；/ 由 Worker 转发 index.html。
   //
   // 事件同步（可选，docs/CLOUDFLARE.md「事件同步」一节）需要的两步：
-  //   1) npx wrangler d1 create nihongo80
-  //      把返回的 database_id 填到下面 production / preview 两处 REPLACE_WITH_D1_ID；
-  //   2) npx wrangler d1 execute nihongo80 --remote --file=./migrations/0001_events.sql
-  //      建 events 表（本地调试去掉 --remote）。
+  //   1) npx wrangler d1 create nihongo80 / nihongo80-preview，把各自 database_id 填到对应段；
+  //   2) 对两个库分别执行 migrations/0001_events.sql、0002_session_payload.sql、
+  //      0003_personal_budget.sql（npx wrangler d1 execute <name> --remote --file=...）。
+  //   两个库都在 Workers Free 的 10 个 D1 免费额度内，不产生额外费用。
   // 拉取密钥用 secret 管理，**不要**写进本文件：
   //   npx wrangler secret put NH80_SYNC_KEY
   //   npx wrangler secret put NH80_SYNC_KEY --env preview
@@ -33,8 +33,7 @@
     // 仅放行 /api/* 与 /health 进 Worker，其余直接走静态资源。
     "run_worker_first": ["/", "/api/*", "/health"]
   },
-  // 可选：D1 事件表。没有替换 REPLACE_WITH_D1_ID 时不要带 --remote 部署到生产，
-  // 或者先删掉本段（Worker 会以 no_db 503 优雅降级）。
+  // 生产事件表；移除本段则 Worker 以 no_db 503 优雅降级，静态站照常可用。
   "d1_databases": [
     {
       "binding": "DB",
@@ -59,13 +58,13 @@
         "html_handling": "none",
         "run_worker_first": ["/", "/api/*", "/health"]
       },
-      // 预览环境同样绑定 events 库；若想与生产隔离，另建 `nihongo80-preview`
-      // 并把这里的 database_name / database_id 一起换掉（两边都要先跑 migration）。
+      // 预览环境绑定独立的 `nihongo80-preview` 库，三段 migration 已 --remote 应用。
+      // 与生产库完全隔离：preview 上的冒烟/测试事件不会写入生产 events 表。
       "d1_databases": [
         {
           "binding": "DB",
-          "database_name": "nihongo80",
-          "database_id": "9845dbf3-a470-4718-b474-b96e7b0e6223",
+          "database_name": "nihongo80-preview",
+          "database_id": "7b4c50be-9b93-4f65-b994-a2aec0d97380",
           "migrations_dir": "migrations"
         }
       ],

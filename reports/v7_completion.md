@@ -96,8 +96,8 @@ Day110 共用材料只渲染 2 段 + 1 个「同上材料」；
 
 | 项 | 值 |
 |---|---|
-| Production | `https://nihongo80.cmjfire.workers.dev`，Version `10f39372-6f11-4de0-b76f-0811b4066c84` |
-| Preview | `https://nihongo80-preview.cmjfire.workers.dev`，Version `12a083a4-e4be-4944-b78a-95ef4a35e8b8` |
+| Production | `https://nihongo80.cmjfire.workers.dev`，Version `86f66f9e-3fda-412d-8650-5f2876d0a4fa` |
+| Preview | `https://nihongo80-preview.cmjfire.workers.dev`，Version `0781c3f1-f63e-48da-ad91-7fa314133a77` |
 | `/api/health` | `{"status":"ok","features":{"db":true,"sync":true}}`（两环境） |
 | 页面 | `/`、Day 1/7/45/47/110/150、`/listening.html`、`/resources.html`、`/library.html` 全 200 |
 | 音频 | `/audio/M0096.m4a` 561198 B、`/audio/M0140.m4a` 616046 B 均 200 |
@@ -122,7 +122,29 @@ Day110 共用材料只渲染 2 段 + 1 个「同上材料」；
    15 条真人听力只提供官方原站跳转。
 3. 39 道周测/阶段题是轻量练习，不换算 JLPT 分数；官方样题只在资源页外链。
 4. `zh_trap` 空 140/620（设计上「只在真会错时写」），`ko_hanja` 空缺由 `ko_hint` 覆盖，不逐字人工核证。
-5. Safari 不支持 Ogg：Commons 音频在 Safari 需点文件页；本站自有的 45 篇 m4a 不受影响。
-6. preview 与 production 共用同一 D1；静态音频不支持 Range（单篇 0.5–0.6 MB，实测播放拖动正常）。
-7. 6 题为当天新内容抽样，语法/汉字/词汇的评估覆盖率仍低于教学覆盖率；这是 60 分钟预算内的取舍，
+5. 本站静态音频**不支持服务端 Range**：实测 `/audio/M0096.m4a` 对 `Range: bytes=1000-1999`
+   返回 200 全量 561198 B，无 `accept-ranges` / `content-range`；Commons mp3 则返回 206 +
+   `content-range`。要支持必须把 `/audio/*` 放进 `run_worker_first`，让所有音频请求进入
+   Worker 请求额度，与「静态资源绕过 Worker、零计费维度」的既有设计冲突。单篇 0.56–0.62 MB、
+   `preload="none"`、实测播放与拖动正常，因此**评估后不引入**，不是遗漏；若将来需要弱网流式播放，
+   加一个只处理带 Range 请求的 Worker 路由即可，代价是音频请求开始计入 Workers Free 的 10 万次/日。
+6. 6 题为当天新内容抽样，语法/汉字/词汇的评估覆盖率仍低于教学覆盖率；这是 60 分钟预算内的取舍，
    已写进 `meta.honesty`，门控只代表抽样题 + 教师输出验收，不代表全量掌握。
+
+原 v7 第 8 节里的「Safari 不支持 Ogg」「preview 与 production 共用同一 D1」两条，
+已在 v7.1 收尾中消除，见下节。
+
+## 9. v7.1 收尾（2026-11-08，全部完成）
+
+| 项 | 处理 | 证据 |
+|---|---|---|
+| 残留清理 | `/tmp` 里 v6 遗留的 9 个临时脚本全部删除；`deploy/node_modules`、`data/audio` 均未留在仓库 | `git status --porcelain` 为 0，无密钥/运行时文件被跟踪 |
+| Safari 音频 | 4 条 `inline` 源新增 `mp3_url`（Wikimedia 官方转码，实测 206 `audio/mpeg`）；`audio_card` 输出 mp3 + Ogg 双 `<source>` | `web/listening.html` 4 个 `<audio>`、4 个 mp3 source、4 个 Ogg source；旧「Safari 请打开文件页」提示已移除 |
+| D1 隔离 | 新建 `nihongo80-preview`（APAC），三段 migration `--remote` 应用；`wrangler.jsonc` 的 `env.preview` 改绑独立库 | 远端表 `events`/`sync_budget` 存在；两库 `database_id` 不同；preview 写入的事件不出现在生产库 |
+| 零扣费核实 | Cloudflare 官方文档核实：Workers Free 含 10 个 D1 库、5M 行读/天、10 万行写/天、5 GB 存储；超限只报错不自动计费 | `developers.cloudflare.com/d1/platform/pricing/` 与 `/limits/` |
+| 配置注释 | 删掉过时的 `REPLACE_WITH_D1_ID`、「不含任何 database_id」；`0001_events.sql` 的 `day` 注释 80→150 | 配置文件与文档一致 |
+| 发布守卫 | 新增「两环境必须是两个不同 D1」断言；输出标明 `D1 prod` / `D1 preview (isolated)` | 新增回归测试用临时目录故意改回共用库，守卫确实报错拦截 |
+| 回归测试 | `tests/test_v7.py` 新增 3 项 | Python 41→**44 项全绿** + 2 项 Worker 访问测试 |
+| 文档 | README / HANDOFF / CONTRACTS / DATA_LICENSES / RESOURCE_POLICY / CLOUDFLARE / 本报告同步 | 无过时口径 |
+
+**部署版本**：production / preview 的 Version ID 见本节末尾的部署记录。

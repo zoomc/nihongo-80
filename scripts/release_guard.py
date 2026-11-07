@@ -23,6 +23,11 @@ def check():
         raise ValueError('private/runtime/model asset in public output')
     if config.count('"run_worker_first": ["/", "/api/*", "/health"]') != 2:
         raise ValueError('root must be forwarded for html_handling=none (prod+preview)')
+    db_ids = re.findall(r'"database_id"\s*:\s*"([0-9a-f-]+)"', config)
+    if len(db_ids) != 2 or len(set(db_ids)) != 2:
+        raise ValueError('prod and preview must use two separate free-tier D1 databases')
+    if '"database_name": "nihongo80-preview"' not in config:
+        raise ValueError('preview must not share the production D1')
     if not (ROOT/'web/audio/NOTICE.txt').is_file():
         raise ValueError('audio attribution notice missing')
     manifest = json.loads((ROOT/'web/audio/manifest.json').read_text())
@@ -44,6 +49,6 @@ def check():
         core=d['core_vocab_ids'];extra=d['extension_vocab_ids']
         if len(core)>(11 if d['listening'] else 16) or set(core)&set(extra) or len(core)+len(extra)!=len(d['vocab']):
             raise ValueError('daily workload split broken')
-    print(json.dumps({'ok':True,'files':len(files),'asset_bytes':sum(p.stat().st_size for p in files),'public_audio':45,'cloud_bindings':['existing D1'],'paid_features':False}))
+    print(json.dumps({'ok':True,'files':len(files),'asset_bytes':sum(p.stat().st_size for p in files),'public_audio':45,'cloud_bindings':['D1 prod','D1 preview (isolated)'],'paid_features':False}))
 
 if __name__=='__main__':check()

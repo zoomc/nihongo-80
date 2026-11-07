@@ -8,7 +8,7 @@
 
 包含 2700 词、276 语法、620 汉字、1500 句、45 篇可播放的原创合成听力，以及周阅读、阶段检测、假名诊断。韩语提示覆盖全部词汇：2050 条开放词典匹配、650 条 AI 释义。
 
-听力分两层：**每日精听**是 45 篇原创文本的合成音频 + 3 道理解题；**真人听力页**提供 4 条开放许可音频可在本页播放，以及 JLPT 官方样题、Irodori、Erin、NHK、免费播客等按阶段分组的免费入口（跳转官方原站，不托管第三方音频）。课程内容与题目经过三路独立复审并修复，详见 [v7 完成报告](reports/v7_completion.md)。
+听力分两层：**每日精听**是 45 篇原创文本的合成音频 + 3 道理解题；**真人听力页**提供 4 条开放许可音频（mp3 / Ogg 双格式，Safari 也可播）可在本页播放，以及 JLPT 官方样题、Irodori、Erin、NHK、免费播客等按阶段分组的免费入口（跳转官方原站，不托管第三方音频）。课程内容与题目经过三路独立复审并修复，详见 [v7 完成报告](reports/v7_completion.md)。
 
 - [怎么学](docs/STUDY_GUIDE.md) · [真人听力页](web/listening.html)
 - [接手与构建](HANDOFF.md)
@@ -19,7 +19,7 @@
 ```sh
 python3 scripts/nh80.py init
 python3 scripts/nh80.py validate
-python3 -m unittest discover -s tests -p 'test*.py'   # 41 项
+python3 -m unittest discover -s tests -p 'test*.py'   # 44 项
 node tests/test_worker_access.mjs
 ```
 

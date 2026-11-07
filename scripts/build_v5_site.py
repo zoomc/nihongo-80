@@ -660,16 +660,24 @@ def main():
                    esc(x.get("usage") or ""), esc(x.get("license") or "")))
 
     def audio_card(x):
+        """Safari 不支持 Ogg：同时给 Wikimedia 官方 mp3 转码与原始 Ogg，浏览器自动选。
+        两个 src 都在 upload.wikimedia.org 官方 CDN，不下载转存、不改编。"""
+        srcs = ''
+        if x.get("mp3_url"):
+            srcs += '<source src="%s" type="audio/mpeg">' % esc(x["mp3_url"])
+        srcs += '<source src="%s" type="audio/ogg">' % esc(x.get("embed_url") or "")
+        fallback = ('<a href="%s" target="_blank" rel="noopener noreferrer">打开来源文件页收听</a>'
+                    % esc(x.get("file_url") or x["url"]))
         return ('<section class="card"><h2>%s</h2>'
-                '<audio controls preload="none" src="%s" aria-label="%s"></audio>'
-                '<p class="small">%s　·　Ogg 格式：Chrome / Firefox 可直接播放，Safari 请打开'
-                '<a href="%s" target="_blank" rel="noopener noreferrer">来源文件页</a>。</p>'
+                '<audio controls preload="none" aria-label="%s">%s%s</audio>'
+                '<p class="small">%s　·　已提供 mp3 / Ogg 双格式官方转码，Chrome、Firefox、Safari 均可播放；'
+                '若浏览器仍不支持，请%s。</p>'
                 '<p class="small">许可：%s　·　署名：%s　·　'
                 '<a href="%s" target="_blank" rel="noopener noreferrer">文件页</a>　·　'
                 '<a href="%s" target="_blank" rel="noopener noreferrer">许可全文</a></p>'
                 '</section>'
-                % (esc(x["title"]), esc(x.get("embed_url") or ""), esc(x["title"]),
-                   esc(src_meta(x)), esc(x.get("file_url") or x["url"]),
+                % (esc(x["title"]), esc(x["title"]), srcs, fallback,
+                   esc(src_meta(x)), fallback,
                    esc(x.get("license") or ""), esc(x.get("attribution") or "见文件页"),
                    esc(x.get("file_url") or x["url"]), esc(x.get("license_url") or x["url"])))
 

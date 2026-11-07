@@ -236,111 +236,111 @@
    "id": "S0001",
    "day": 1,
    "direction": "zh-ja",
-   "prompt": "您已经见过史密斯先生了吧。",
-   "answer": "もうスミスさんに会われましたね。",
+   "prompt": "我是学生。",
+   "answer": "私は学生です。",
    "knowledge_ids": [
-    "V0341"
+    "V0001"
    ],
-   "hint": "〜は"
+   "hint": ""
   },
   {
    "id": "S0002",
    "day": 1,
    "direction": "zh-ja",
-   "prompt": "信号灯变绿了。",
-   "answer": "信号が青に変わったわよ。",
+   "prompt": "您是老师吗？",
+   "answer": "あなたは先生ですか。",
    "knowledge_ids": [
-    "V0342"
+    "V0002"
    ],
-   "hint": "〜は"
+   "hint": ""
   },
   {
    "id": "S0003",
    "day": 1,
    "direction": "zh-ja",
-   "prompt": "你还嫩着呢。",
-   "answer": "お前はまだ「青い」な。",
+   "prompt": "田中是老师。",
+   "answer": "田中さんは先生です。",
    "knowledge_ids": [
-    "V0343"
+    "V0003"
    ],
-   "hint": "〜は"
+   "hint": ""
   },
   {
    "id": "S0004",
    "day": 1,
    "direction": "zh-ja",
-   "prompt": "不能用红墨水写。",
-   "answer": "赤インクで書いてはいけない。",
+   "prompt": "你好，你好吗？",
+   "answer": "こんにちは、元気ですか。",
    "knowledge_ids": [
-    "V0344"
+    "V0004"
    ],
-   "hint": "〜は"
+   "hint": ""
   },
   {
    "id": "S0005",
    "day": 1,
    "direction": "zh-ja",
-   "prompt": "她穿着一条红裙子。",
-   "answer": "彼女は赤いスカートをはいていた。",
+   "prompt": "晚上好，您好吗？",
+   "answer": "こんばんは、お元気ですか。",
    "knowledge_ids": [
-    "V0345"
+    "V0005"
    ],
-   "hint": "〜は"
+   "hint": ""
   },
   {
    "id": "S0006",
    "day": 1,
    "direction": "zh-ja",
-   "prompt": "外面渐渐亮了起来。",
-   "answer": "外はだんだん明るくなっていく。",
+   "prompt": "早上好。",
+   "answer": "おはようございます。",
    "knowledge_ids": [
-    "V0346"
+    "V0006"
    ],
-   "hint": "〜は"
+   "hint": ""
   },
   {
    "id": "S0007",
    "day": 1,
    "direction": "zh-ja",
-   "prompt": "秋天马上就要到了。",
-   "answer": "秋はもうすぐそこまで来ている。",
+   "prompt": "谢谢。",
+   "answer": "ありがとうございます。",
    "knowledge_ids": [
-    "V0347"
+    "V0007"
    ],
-   "hint": "〜は"
+   "hint": ""
   },
   {
    "id": "S0008",
    "day": 1,
    "direction": "ja-zh",
-   "prompt": "ぐいと押すとドアは開いた。",
-   "answer": "用力一推，门就开了。",
+   "prompt": "すみません、駅はどこですか。",
+   "answer": "劳驾，车站在哪？",
    "knowledge_ids": [
-    "V0348"
+    "V0008"
    ],
-   "hint": "〜は"
+   "hint": ""
   },
   {
    "id": "S0009",
    "day": 1,
    "direction": "ja-zh",
-   "prompt": "ドアはジムによって開けられます。",
-   "answer": "门被吉姆打开了。",
+   "prompt": "りんごを一つください。",
+   "answer": "请给我一个苹果。",
    "knowledge_ids": [
-    "V0349"
+    "V0009"
    ],
-   "hint": "〜は"
+   "hint": ""
   },
   {
    "id": "S0010",
    "day": 1,
    "direction": "ja-zh",
-   "prompt": "左手を上げなさい。",
-   "answer": "把左手举起来。",
+   "prompt": "これは本です。",
+   "answer": "这是书。",
    "knowledge_ids": [
-    "V0350"
+    "G0001"
    ],
-   "hint": "〜は"
+   "hint": "N は N です"
   }
  ],
  "quiz": [
@@ -433,6 +433,24 @@
     "bb8e19d0"
    ],
    "rationale": "N は N です＝…是…"
+  },
+  {
+   "qid": "Q-001-V5",
+   "prompt": "「こんにちは」是什么意思？",
+   "options": [
+    "醒",
+    "你好（白天问候）",
+    "环境",
+    "前几天"
+   ],
+   "h": "538e3734",
+   "oh": [
+    "96276cf5",
+    "538e3734",
+    "d5de2a67",
+    "ec0a7553"
+   ],
+   "rationale": "こんにちは（こんにちは）＝你好（白天问候）"
   }
  ],
  "listening_material": null

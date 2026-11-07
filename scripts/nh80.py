@@ -308,7 +308,9 @@ def cmd_start_day(args):
             "- 新知识 ID：%s" % ("、".join(d["new_vocab_ids"] + d["new_grammar_ids"] + d["new_kanji_ids"]) or "无"),
             "- 复习候选池：%s" % ("、".join(d["review_knowledge_ids"]) or "无"),
             "- 素材 ID：%s" % ("、".join(d["material_ids"]) or "无"),
-            "- 测验题 ID：%s" % "、".join(d["question_ids"]),
+            ("- 练习：网页内按当天内容生成（6 题，答案哈希校验）"
+             if d.get("question_ids") and str(d["question_ids"][0]).startswith("web-")
+             else "- 测验题 ID：%s" % "、".join(d["question_ids"])),
             "", "## 动态任务（state.db，权威）", "",
             "- FSRS 到期：%d 项" % len(due),
             *["  - `%s` due=%s stage=%s" % (x["knowledge_id"], x["due"], x["stage"]) for x in due[:12]],

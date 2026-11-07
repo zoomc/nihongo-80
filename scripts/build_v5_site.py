@@ -120,33 +120,33 @@ function applyMode(root){
   var b=$('#modeBtn'); if(b) b.textContent={all:'遮盖：关',zh:'遮盖：中文',ja:'遮盖：日语',both:'遮盖：双向'}[mode];
 }
 function setMode(m){mode=m;localStorage.setItem(STORE+'mode',m);applyMode(document)}
+var MASK_BOUND=false;
 function initMask(){
-  $$('.eye').forEach(function(b){
-    b.addEventListener('click',function(){
-      var card=b.closest('.vcard,.gcard,.ex');
-      var order=['all','zh','ja','both'];
-      var cur=card.getAttribute('data-mode')||mode;
-      var next=order[(order.indexOf(cur)+1)%4];
-      card.setAttribute('data-mode',next);
-      $$('.mask,[data-role]',card).forEach(function(el){
-        if(!el.hasAttribute('data-role'))return;
-        var role=el.getAttribute('data-role');
-        var hide=(next==='both')||(next==='zh'&&role==='zh')||(next==='ja'&&role==='ja');
-        el.classList.toggle('mask',hide); if(!hide)el.classList.remove('peek');
-      });
-    });
+  applyMode(document);
+  if(MASK_BOUND)return;
+  MASK_BOUND=true;
+  document.addEventListener('click',function(e){
+    var mb=e.target.closest('#modeBtn');
+    if(mb){var order=['zh','ja','both','all'];setMode(order[(order.indexOf(mode)+1)%4]);return;}
+    var eye=e.target.closest('.eye');
+    if(eye){
+      var card=eye.closest('.vcard,.gcard,.ex');
+      if(card){
+        var seq=['all','zh','ja','both'];
+        var cur=card.getAttribute('data-mode')||mode;
+        var next=seq[(seq.indexOf(cur)+1)%4];
+        card.setAttribute('data-mode',next);
+        $$('[data-role]',card).forEach(function(el){
+          var r=el.getAttribute('data-role');
+          var hide=(next==='both')||(next==='zh'&&r==='zh')||(next==='ja'&&r==='ja');
+          el.classList.toggle('mask',hide); if(!hide)el.classList.remove('peek');
+        });
+      }
+      return;
+    }
+    var m=e.target.closest('.mask');
+    if(m){m.classList.add('peek');setTimeout(function(){m.classList.remove('peek')},3000);}
   });
-  $$('.mask,[data-role]').forEach(function(el){
-    el.addEventListener('click',function(){
-      if(!el.classList.contains('mask'))return;
-      el.classList.add('peek');
-      setTimeout(function(){el.classList.remove('peek')},3000);
-    });
-  });
-  var mb=$('#modeBtn'); if(mb) mb.addEventListener('click',function(){
-    var order=['zh','ja','both','all']; setMode(order[(order.indexOf(mode)+1)%4]);
-  });
-  setMode(mode);
 }
 /* 复习 */
 var reviewState={i:0,res:[]};
@@ -415,7 +415,16 @@ def build_quiz(day, vocab, grammar, kanji, rnd):
             [y for y in grammar.values() if y.get("meaning_zh") and y["id"] != gid], 3)]
         add("句型「%s」的意思是？" % g["pattern"], [g["meaning_zh"]] + others, g["meaning_zh"],
             "%s＝%s" % (g["pattern"], g["meaning_zh"]), "Q-%03d-G" % day["day"])
-    # 用复习词补足 6 题
+    # 先用当天其余新词补足 6 题
+    for vid in vids[3:]:
+        if len(qs) >= 6:
+            break
+        v = vocab[vid]
+        distract = [x["meaning_zh"] for x in rnd.sample([x for x in pool if x["id"] != vid], 3)]
+        add("「%s」是什么意思？" % v["surface"], [v["meaning_zh"]] + distract,
+            v["meaning_zh"], "%s（%s）＝%s" % (v["surface"], v["kana"], v["meaning_zh"]),
+            "Q-%03d-V%d" % (day["day"], len(qs)))
+    # 再用复习词补足
     for vid in (day.get("review_knowledge_ids") or []):
         if len(qs) >= 6:
             break

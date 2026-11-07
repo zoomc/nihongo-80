@@ -246,7 +246,7 @@ def build():
             "new_kanji_ids": [k["id"] for k in nk],
             "review_knowledge_ids": rev,
             "material_ids": mby.get(d, []),
-            "question_ids": qby.get(d, []),
+            "question_ids": ["web-%03d" % d],
             "listening": listening,
             "assessment": ("diagnostic" if d == 1 else "weekly" if d % 7 == 0 else
                            "stage" if d in (45, 95, 130) else "mock" if d in (110, 132, 148) else "none"),

@@ -35,7 +35,7 @@
 | 项 | 值 |
 |---|---|
 | Git | `https://github.com/zoomc/nihongo-80.git` |
-| 分支 | `main`（HEAD `5673379`，工作树干净；此前的 `195baed` 是最后一行代码提交） |
+| 分支 | `main`（交接时工作树干净；具体提交以 `git log -1` 为准） |
 | 本地根 | `/Users/mj/Documents/learn/jp/nihongo-80` |
 | Production | `https://nihongo80.cmjfire.workers.dev` |
 | Preview | `https://nihongo80-preview.cmjfire.workers.dev` |
@@ -466,4 +466,4 @@ F. 最后如实报告：修了什么、没修什么、线上版本号。不许�
 ---
 
 _交接人：德华（WorkBuddy）｜2026-11-07 20:40 +08:00_
-_基线：`main@5673379`（代码基线 `195baed`），`validate` 0 error，19 项测试全绿，production 在线_
+_基线：交接时 `main` 工作树干净，`validate` 0 error，19 项测试全绿，production 在线_

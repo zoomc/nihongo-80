@@ -7,6 +7,8 @@
 > 听力每周 3 次，隔天一次（实际第一个听力日 Day 47）。设计见 `docs/v5/00–04`。
 > 线上：https://nihongo80.cmjfire.workers.dev/day-001.html
 >
+> v5.1 修复：42 分钟网页 + 18 分钟会话；45 个原创 TTS 变体各三题；事件可拉取重判。仍未完成人工内容审校与词量取舍，见 [`reports/v5_review_codex.md`](reports/v5_review_codex.md)。
+>
 > **接手/复审先读 [`HANDOFF.md`](HANDOFF.md)**：目录地图、构建链路、已完成与已知缺陷（P0/P1/P2）、陷阱清单、验收标准。
 
 ---

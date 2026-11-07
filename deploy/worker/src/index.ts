@@ -1,3 +1,4 @@
+import generatedKey from "./generated-key.json";
 // Nihongo 80 Worker
 //
 // 职责（docs/REVISION_CONTRACT.md 第 10 节）：
@@ -106,6 +107,7 @@ function norm(value: unknown): string {
 }
 
 interface KeyEntry {
+  day?: number;
   type?: string;
   answer?: string;
   accepted?: string[];
@@ -148,15 +150,7 @@ function indexAnswerKey(raw: unknown): AnswerKey {
 }
 
 async function loadAnswerKey(env: Env, url: URL): Promise<AnswerKey | null> {
-  try {
-    const res = await env.ASSETS.fetch(new Request(new URL("/data/answer-key.json", url.origin).toString()));
-    if (!res.ok) return null;
-    const raw = await res.json();
-    const key = indexAnswerKey(raw);
-    return key.size > 0 ? key : null;
-  } catch {
-    return null;
-  }
+  return indexAnswerKey(generatedKey);
 }
 
 /** 客观题重判；开放题 / 缺标准答案 / 缺条目 → null（无法重判）。 */
@@ -257,7 +251,7 @@ async function handlePostEvents(request: Request, env: Env, url: URL): Promise<R
   if (body.v !== undefined && body.v !== 1) {
     return jsonResponse({ ok: false, reason: "bad_version" }, 400, origin);
   }
-  const day = strictInt(body.day, 1, 80);
+  const day = strictInt(body.day, 1, 150);
   if (day === null) return jsonResponse({ ok: false, reason: "bad_day" }, 400, origin);
 
   const session = typeof body.session === "string" ? body.session.trim() : "";
@@ -279,6 +273,8 @@ async function handlePostEvents(request: Request, env: Env, url: URL): Promise<R
   }
 
   const answerKey = await loadAnswerKey(env, url);
+  const wrong = results.find(r => !answerKey?.has(r.qid) || answerKey.get(r.qid)?.day !== day);
+  if (wrong) return jsonResponse({ok:false, reason:"unknown_or_wrong_day_question"}, 400, origin);
   const serverTs = new Date().toISOString();
 
   const graded = results.map((r) => {
@@ -299,8 +295,8 @@ async function handlePostEvents(request: Request, env: Env, url: URL): Promise<R
         .prepare(
           `INSERT OR IGNORE INTO events
              (client_ts, server_ts, day, session, qid, answer, hinted, revealed, seconds,
-              capability, regraded_correct, payload_hash)
-           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+              capability, regraded_correct, payload_hash, session_payload)
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
         )
         .bind(
           clientTs,
@@ -315,6 +311,7 @@ async function handlePostEvents(request: Request, env: Env, url: URL): Promise<R
           entry && typeof entry.capability === "string" ? entry.capability : null,
           correct === null ? null : correct ? 1 : 0,
           payloadHash,
+          JSON.stringify({review_ratings:body.review_ratings ?? [], sentences:body.sentences ?? []}),
         ),
     );
   }
@@ -351,7 +348,7 @@ async function handlePostEvents(request: Request, env: Env, url: URL): Promise<R
 // ---------------------------------------------------------------------------
 
 const EVENT_COLUMNS =
-  "id, client_ts, server_ts, day, session, qid, answer, hinted, revealed, seconds, capability, regraded_correct, payload_hash";
+  "id, client_ts, server_ts, day, session, qid, answer, hinted, revealed, seconds, capability, regraded_correct, payload_hash, session_payload";
 
 async function handleGetEvents(request: Request, env: Env, url: URL): Promise<Response> {
   const origin = okOrigin(request, url);

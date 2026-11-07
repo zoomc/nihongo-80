@@ -1,6 +1,7 @@
 
 (function(){
 'use strict';
+if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('/sw.js',{updateViaCache:'none'}).catch(function(){});
 var STORE='nh80.v5.';
 var mode=localStorage.getItem(STORE+'mode')||'zh';  // all|zh|ja|both
 function $(s,r){return (r||document).querySelector(s)}
@@ -50,7 +51,7 @@ function initReview(){
   var box=$('#review'); if(!box)return;
   var cards=JSON.parse(box.getAttribute('data-cards')||'[]');
   var idx=$('#rIdx'), front=$('#rFront'), back=$('#rBack'), bar=$('#rBar');
-  if(!cards.length){box.innerHTML='<p class="hint">今天没有到期项。没有就是没有，不编造任务。</p>';return}
+  if(!cards.length){box.querySelectorAll('.vcard,.row').forEach(function(e){e.hidden=true});idx.textContent='暂无到期项';return}
   function render(){
     if(reviewState.i>=cards.length){box.innerHTML='<p class="hint">复习完成：'+cards.length+' 张。'+summary()+'</p>';return}
     var c=cards[reviewState.i];
@@ -59,12 +60,12 @@ function initReview(){
     idx.textContent=(reviewState.i+1)+' / '+cards.length;
     bar.style.width=Math.round(reviewState.i/cards.length*100)+'%';
   }
-  function summary(){var g=reviewState.res.filter(function(x){return x==='good'}).length;
-    return ' 记住 '+g+'｜模糊 '+(reviewState.res.filter(function(x){return x==='hard'}).length)+
-    '｜忘了 '+(reviewState.res.filter(function(x){return x==='again'}).length)}
+  function summary(){var g=reviewState.res.filter(function(x){return x.rating==='good'}).length;
+    return ' 记住 '+g+'｜模糊 '+(reviewState.res.filter(function(x){return x.rating==='hard'}).length)+
+    '｜忘了 '+(reviewState.res.filter(function(x){return x.rating==='again'}).length)}
   $('#rShow').addEventListener('click',function(){back.classList.toggle('mask')});
   $$('.rRate').forEach(function(b){b.addEventListener('click',function(){
-    reviewState.res.push(b.getAttribute('data-rate')); reviewState.i++; render();})});
+    reviewState.res.push({kid:cards[reviewState.i].kid,rating:b.getAttribute('data-rate')}); reviewState.i++; render();})});
   render();
 }
 /* 词卡 */
@@ -96,21 +97,21 @@ function initVocab(){
   render();
 }
 /* 练习：答案只存哈希，不在页面里出现明文 */
-var QUIZ_RESULTS=[];
+var QUIZ_RESULTS=[];var STARTED=Date.now();var TRANSCRIPT_HINTED=false;
 function fnv(t){var s=String(t==null?'':t).normalize('NFKC').replace(/\s+/g,'');
   var h=2166136261>>>0; for (const ch of s){h^=ch.codePointAt(0);h=Math.imul(h,16777619)>>>0;} return h.toString(16);}
-function initQuiz(){
-  var box=$('#quiz'); if(!box)return;
+function initQuiz(selector, scoreSelector){
+  var box=$(selector); if(!box)return;
   var qs=JSON.parse(box.getAttribute('data-qs')||'[]');
   var done=0,right=0;
-  var score=$('#score');
+  var score=$(scoreSelector);
   qs.forEach(function(q,qi){
     var wrap=document.createElement('div'); wrap.className='q';
     wrap.innerHTML='<div><strong>'+(qi+1)+'.</strong> '+q.prompt+'</div>';
     var opts=document.createElement('div'); opts.className='opts';
     (q.options||[]).forEach(function(o,oi){
       var lab=document.createElement('label'); lab.className='opt';
-      lab.innerHTML='<input type="radio" name="q'+qi+'"><span>'+o+'</span>';
+      lab.innerHTML='<input type="radio" name="'+q.qid+'"><span>'+o+'</span>';
       lab.addEventListener('click',function(){
         if(wrap.getAttribute('data-done'))return;
         wrap.setAttribute('data-done','1');
@@ -121,7 +122,7 @@ function initQuiz(){
         fb.textContent=(ok?'对。':'错。')+(q.rationale||'');
         wrap.appendChild(fb); done++; if(ok)right++;
         score.textContent=right+' / '+done;
-        QUIZ_RESULTS.push({qid:q.qid,answer:o,correct:ok,seconds:0,hinted:false,revealed_before_submit:false});
+        QUIZ_RESULTS.push({qid:q.qid,answer:o,seconds:Math.round((Date.now()-STARTED)/1000),hinted:selector==='#listenQuiz'&&TRANSCRIPT_HINTED,revealed_before_submit:selector==='#listenQuiz'&&TRANSCRIPT_HINTED});
       });
       opts.appendChild(lab);
     });
@@ -131,7 +132,7 @@ function initQuiz(){
 }
 /* 句子草稿 */
 function initSentences(){
-  var box=$('#sentences'); if(!box)return;
+  var box=$('#sentenceItems'); if(!box)return;
   var items=JSON.parse(box.getAttribute('data-items')||'[]');
   items.forEach(function(s,i){
     var d=document.createElement('div'); d.className='q';
@@ -155,24 +156,29 @@ function initSpeak(){
 }
 /* 同步：只发原始事件，不发 correct */
 function sync(payload){
-  try{
-    if(location.protocol!=='http:'&&location.protocol!=='https:')return;
-    fetch('/api/events',{method:'POST',headers:{'content-type':'application/json'},
-      body:JSON.stringify(payload),keepalive:true}).catch(function(){});
-  }catch(e){}
+  return fetch('/api/events',{method:'POST',headers:{'content-type':'application/json'},
+    body:JSON.stringify(payload)}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
+    .then(function(r){if(r.ok!==true)throw new Error('未确认保存');return r});
 }
 document.addEventListener('DOMContentLoaded',function(){
-  initMask(); initReview(); initVocab(); initQuiz(); initSentences(); initSpeak();
+  initMask(); initReview(); initVocab(); initQuiz('#quizItems','#score'); initQuiz('#listenQuiz','#listenScore');var tr=$('#transcript');if(tr)tr.addEventListener('toggle',function(){if(tr.open)TRANSCRIPT_HINTED=true}); initSentences(); initSpeak();
   var f=$('#finish');
   if(f)f.addEventListener('click',function(){
     var day=document.body.getAttribute('data-day');
-    var payload={v:1,day:Number(day),session:'web-'+day,minutes:42,results:QUIZ_RESULTS,
-      review_ratings:Object.keys(vState.res).map(function(k){return {kid:k,rating:vState.res[k]}}),
-      sentences:Object.keys(localStorage).filter(function(k){return k.indexOf(STORE+'s.')===0})
+    var payload={v:1,day:Number(day),session:sessionStorage.getItem(STORE+'session.'+day)||('web-'+day+'-'+crypto.randomUUID()),minutes:42,results:QUIZ_RESULTS,
+      review_ratings:reviewState.res,
+      sentences:Object.keys(localStorage).filter(function(k){return k.indexOf(STORE+'s.')===0&&window.__SENT__.some(function(s){return k===STORE+'s.'+s.id})})
         .map(function(k){return {id:k.split('.').pop(),text:localStorage.getItem(k)}})};
-    sync(payload);
-    f.textContent='已记录，可以进会话了';
-    f.disabled=true;
+    var pendingKey=STORE+'pending.'+day;
+    var old=localStorage.getItem(pendingKey);
+    if(old){try{var saved=JSON.parse(old);payload.session=saved.session}catch(e){}}
+    if(old){try{var saved=JSON.parse(old);payload.results=saved.results.filter(function(x){return !payload.results.some(function(y){return y.qid===x.qid})}).concat(payload.results)}catch(e){}}
+    if(old){try{var saved=JSON.parse(old);payload.review_ratings=(saved.review_ratings||[]).filter(function(x){return !payload.review_ratings.some(function(y){return y.kid===x.kid})}).concat(payload.review_ratings)}catch(e){}}
+    sessionStorage.setItem(STORE+'session.'+day,payload.session);
+    localStorage.setItem(pendingKey,JSON.stringify(payload));
+    f.disabled=true;f.textContent='正在保存…';
+    sync(payload).then(function(){localStorage.removeItem(pendingKey);f.textContent='作答已保存；会话中核对完成情况';})
+    .catch(function(){f.disabled=false;f.textContent='保存失败，点击重试（作答已暂存）';});
   });
 });
 })();

@@ -48,7 +48,7 @@ display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 14px}
 .top .prog{font-variant-numeric:tabular-nums;color:var(--accent);font-weight:700;font-size:13px}
 .mode{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;
 padding:6px 12px;font-size:13px;cursor:pointer}
-section.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+section.card{scroll-margin-top:132px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
 padding:16px;margin:14px 0}
 h2{font-size:16px;margin:0 0 4px;display:flex;align-items:center;gap:8px}
 h2 .min{font-size:12px;color:var(--muted);font-weight:400}
@@ -88,6 +88,7 @@ details summary{cursor:pointer;color:var(--muted);font-size:14px}
 .kstrip{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;padding-top:10px;border-top:1px dashed var(--line)}
 .kchip{font-size:14px;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:4px 8px}
 @media(min-width:1024px){
+ section.card{scroll-margin-top:72px}
  .wrap{max-width:1120px;display:grid;grid-template-columns:200px minmax(0,760px);gap:24px;align-items:start}
  nav.toc{position:sticky;top:64px;font-size:14px}
  nav.toc a{display:block;padding:6px 0;color:var(--muted);text-decoration:none}
@@ -105,6 +106,7 @@ details summary{cursor:pointer;color:var(--muted);font-size:14px}
 JS = r"""
 (function(){
 'use strict';
+if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('/sw.js',{updateViaCache:'none'}).catch(function(){});
 var STORE='nh80.v5.';
 var mode=localStorage.getItem(STORE+'mode')||'zh';  // all|zh|ja|both
 function $(s,r){return (r||document).querySelector(s)}
@@ -154,7 +156,7 @@ function initReview(){
   var box=$('#review'); if(!box)return;
   var cards=JSON.parse(box.getAttribute('data-cards')||'[]');
   var idx=$('#rIdx'), front=$('#rFront'), back=$('#rBack'), bar=$('#rBar');
-  if(!cards.length){box.innerHTML='<p class="hint">今天没有到期项。没有就是没有，不编造任务。</p>';return}
+  if(!cards.length){box.querySelectorAll('.vcard,.row').forEach(function(e){e.hidden=true});idx.textContent='暂无到期项';return}
   function render(){
     if(reviewState.i>=cards.length){box.innerHTML='<p class="hint">复习完成：'+cards.length+' 张。'+summary()+'</p>';return}
     var c=cards[reviewState.i];
@@ -163,12 +165,12 @@ function initReview(){
     idx.textContent=(reviewState.i+1)+' / '+cards.length;
     bar.style.width=Math.round(reviewState.i/cards.length*100)+'%';
   }
-  function summary(){var g=reviewState.res.filter(function(x){return x==='good'}).length;
-    return ' 记住 '+g+'｜模糊 '+(reviewState.res.filter(function(x){return x==='hard'}).length)+
-    '｜忘了 '+(reviewState.res.filter(function(x){return x==='again'}).length)}
+  function summary(){var g=reviewState.res.filter(function(x){return x.rating==='good'}).length;
+    return ' 记住 '+g+'｜模糊 '+(reviewState.res.filter(function(x){return x.rating==='hard'}).length)+
+    '｜忘了 '+(reviewState.res.filter(function(x){return x.rating==='again'}).length)}
   $('#rShow').addEventListener('click',function(){back.classList.toggle('mask')});
   $$('.rRate').forEach(function(b){b.addEventListener('click',function(){
-    reviewState.res.push(b.getAttribute('data-rate')); reviewState.i++; render();})});
+    reviewState.res.push({kid:cards[reviewState.i].kid,rating:b.getAttribute('data-rate')}); reviewState.i++; render();})});
   render();
 }
 /* 词卡 */
@@ -200,21 +202,21 @@ function initVocab(){
   render();
 }
 /* 练习：答案只存哈希，不在页面里出现明文 */
-var QUIZ_RESULTS=[];
+var QUIZ_RESULTS=[];var STARTED=Date.now();var TRANSCRIPT_HINTED=false;
 function fnv(t){var s=String(t==null?'':t).normalize('NFKC').replace(/\s+/g,'');
   var h=2166136261>>>0; for (const ch of s){h^=ch.codePointAt(0);h=Math.imul(h,16777619)>>>0;} return h.toString(16);}
-function initQuiz(){
-  var box=$('#quiz'); if(!box)return;
+function initQuiz(selector, scoreSelector){
+  var box=$(selector); if(!box)return;
   var qs=JSON.parse(box.getAttribute('data-qs')||'[]');
   var done=0,right=0;
-  var score=$('#score');
+  var score=$(scoreSelector);
   qs.forEach(function(q,qi){
     var wrap=document.createElement('div'); wrap.className='q';
     wrap.innerHTML='<div><strong>'+(qi+1)+'.</strong> '+q.prompt+'</div>';
     var opts=document.createElement('div'); opts.className='opts';
     (q.options||[]).forEach(function(o,oi){
       var lab=document.createElement('label'); lab.className='opt';
-      lab.innerHTML='<input type="radio" name="q'+qi+'"><span>'+o+'</span>';
+      lab.innerHTML='<input type="radio" name="'+q.qid+'"><span>'+o+'</span>';
       lab.addEventListener('click',function(){
         if(wrap.getAttribute('data-done'))return;
         wrap.setAttribute('data-done','1');
@@ -225,7 +227,7 @@ function initQuiz(){
         fb.textContent=(ok?'对。':'错。')+(q.rationale||'');
         wrap.appendChild(fb); done++; if(ok)right++;
         score.textContent=right+' / '+done;
-        QUIZ_RESULTS.push({qid:q.qid,answer:o,correct:ok,seconds:0,hinted:false,revealed_before_submit:false});
+        QUIZ_RESULTS.push({qid:q.qid,answer:o,seconds:Math.round((Date.now()-STARTED)/1000),hinted:selector==='#listenQuiz'&&TRANSCRIPT_HINTED,revealed_before_submit:selector==='#listenQuiz'&&TRANSCRIPT_HINTED});
       });
       opts.appendChild(lab);
     });
@@ -235,7 +237,7 @@ function initQuiz(){
 }
 /* 句子草稿 */
 function initSentences(){
-  var box=$('#sentences'); if(!box)return;
+  var box=$('#sentenceItems'); if(!box)return;
   var items=JSON.parse(box.getAttribute('data-items')||'[]');
   items.forEach(function(s,i){
     var d=document.createElement('div'); d.className='q';
@@ -259,24 +261,29 @@ function initSpeak(){
 }
 /* 同步：只发原始事件，不发 correct */
 function sync(payload){
-  try{
-    if(location.protocol!=='http:'&&location.protocol!=='https:')return;
-    fetch('/api/events',{method:'POST',headers:{'content-type':'application/json'},
-      body:JSON.stringify(payload),keepalive:true}).catch(function(){});
-  }catch(e){}
+  return fetch('/api/events',{method:'POST',headers:{'content-type':'application/json'},
+    body:JSON.stringify(payload)}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
+    .then(function(r){if(r.ok!==true)throw new Error('未确认保存');return r});
 }
 document.addEventListener('DOMContentLoaded',function(){
-  initMask(); initReview(); initVocab(); initQuiz(); initSentences(); initSpeak();
+  initMask(); initReview(); initVocab(); initQuiz('#quizItems','#score'); initQuiz('#listenQuiz','#listenScore');var tr=$('#transcript');if(tr)tr.addEventListener('toggle',function(){if(tr.open)TRANSCRIPT_HINTED=true}); initSentences(); initSpeak();
   var f=$('#finish');
   if(f)f.addEventListener('click',function(){
     var day=document.body.getAttribute('data-day');
-    var payload={v:1,day:Number(day),session:'web-'+day,minutes:42,results:QUIZ_RESULTS,
-      review_ratings:Object.keys(vState.res).map(function(k){return {kid:k,rating:vState.res[k]}}),
-      sentences:Object.keys(localStorage).filter(function(k){return k.indexOf(STORE+'s.')===0})
+    var payload={v:1,day:Number(day),session:sessionStorage.getItem(STORE+'session.'+day)||('web-'+day+'-'+crypto.randomUUID()),minutes:42,results:QUIZ_RESULTS,
+      review_ratings:reviewState.res,
+      sentences:Object.keys(localStorage).filter(function(k){return k.indexOf(STORE+'s.')===0&&window.__SENT__.some(function(s){return k===STORE+'s.'+s.id})})
         .map(function(k){return {id:k.split('.').pop(),text:localStorage.getItem(k)}})};
-    sync(payload);
-    f.textContent='已记录，可以进会话了';
-    f.disabled=true;
+    var pendingKey=STORE+'pending.'+day;
+    var old=localStorage.getItem(pendingKey);
+    if(old){try{var saved=JSON.parse(old);payload.session=saved.session}catch(e){}}
+    if(old){try{var saved=JSON.parse(old);payload.results=saved.results.filter(function(x){return !payload.results.some(function(y){return y.qid===x.qid})}).concat(payload.results)}catch(e){}}
+    if(old){try{var saved=JSON.parse(old);payload.review_ratings=(saved.review_ratings||[]).filter(function(x){return !payload.review_ratings.some(function(y){return y.kid===x.kid})}).concat(payload.review_ratings)}catch(e){}}
+    sessionStorage.setItem(STORE+'session.'+day,payload.session);
+    localStorage.setItem(pendingKey,JSON.stringify(payload));
+    f.disabled=true;f.textContent='正在保存…';
+    sync(payload).then(function(){localStorage.removeItem(pendingKey);f.textContent='作答已保存；会话中核对完成情况';})
+    .catch(function(){f.disabled=false;f.textContent='保存失败，点击重试（作答已暂存）';});
   });
 });
 })();
@@ -299,11 +306,11 @@ HTML = """<!DOCTYPE html>
 <div class="wrap">
 <nav class="toc">
   <a href="#review">① 复习</a><a href="#vocab">② 新词</a><a href="#grammar">③ 语法</a>
-  <a href="#sentences">④ 句子</a><a href="#quiz">⑤ 练习</a>@@TOC_LISTEN@@
+  @@TOC_LISTEN@@<a href="#sentences">@@SNUM@@ 句子</a><a href="#quiz">@@QNUM@@ 练习</a>
 </nav>
 <main>
 <section class="card" id="review">
-  <h2>① 今日复习 <span class="min">12 分钟</span></h2>
+  <h2>① 今日复习 <span class="min">@@RMIN@@ 分钟</span></h2>
   <p class="hint">先自己想，再翻面；三档自评。<span id="rIdx"></span></p>
   <div class="vcard"><div class="surface" id="rFront"></div>
     <div class="meaning mask" id="rBack"></div></div>
@@ -327,22 +334,22 @@ HTML = """<!DOCTYPE html>
 </section>
 
 <section class="card" id="grammar">
-  <h2>③ 语法 <span class="min">7 分钟</span></h2>
+  <h2>③ 语法 <span class="min">@@GMIN@@ 分钟</span></h2>
   @@GRAMMAR@@
 </section>
 
+@@LISTEN@@
 <section class="card" id="sentences">
-  <h2>④ 句子输出 <span class="min">6 分钟</span></h2>
+  <h2>@@SNUM@@ 句子输出 <span class="min">@@SMIN@@ 分钟</span></h2>
   <p class="hint">先自己写，不判对错；会话里逐句改。草稿自动保存。</p>
-  <div id="sentences"></div>
+  <div id="sentenceItems"></div>
 </section>
 
 <section class="card" id="quiz">
-  <h2>⑤ 练习 <span class="min">6 分钟</span></h2>
+  <h2>@@QNUM@@ 练习 <span class="min">@@QMIN@@ 分钟</span></h2>
   <p class="hint">即时判分。当前：<strong id="score">0 / 0</strong></p>
-  <div id="quiz"></div>
+  <div id="quizItems"></div>
 </section>
-@@LISTEN@@
 <button class="btn primary" id="finish" type="button" style="width:100%;margin-top:16px">今天学完了，记录一下</button>
 <p class="small" style="margin-top:12px">资源骨架来自 OpenJLPT（CC-BY-SA-4.0），中文释义与翻译为 AI 草稿；无真人录音时用浏览器 TTS，已标注 tts。</p>
 </main>
@@ -352,90 +359,14 @@ HTML = """<!DOCTYPE html>
 <script>
 document.getElementById('review').setAttribute('data-cards',JSON.stringify(window.__REVIEW__));
 document.getElementById('vocab').setAttribute('data-cards',JSON.stringify(window.__VOCAB__));
-document.getElementById('quiz').setAttribute('data-qs',JSON.stringify(window.__QUIZ__));
-document.getElementById('sentences').setAttribute('data-items',JSON.stringify(window.__SENT__));
+document.getElementById('quizItems').setAttribute('data-qs',JSON.stringify(window.__QUIZ__));
+document.getElementById('sentenceItems').setAttribute('data-items',JSON.stringify(window.__SENT__));
 </script>
 </body></html>
 """
 
 
-def fnv(text):
-    """与前端一致的 FNV-1a（按 Unicode 码点），用于避免把答案明文写进 HTML。"""
-    h = 2166136261
-    import re as _re
-    import unicodedata as _ud
-    for ch in _re.sub(r"\s+", "", _ud.normalize("NFKC", str(text))):
-        h ^= ord(ch)
-        h = (h * 16777619) & 0xFFFFFFFF
-    return format(h, "x")
-
-
-def build_quiz(day, vocab, grammar, kanji, rnd):
-    """按当天新词/汉字/语法出 6 题，保证与课程对齐；答案只存哈希。"""
-    import random as _r
-    qs = []
-    vids = list(day["new_vocab_ids"])
-    kids = list(day["new_kanji_ids"])
-    gids = list(day["new_grammar_ids"])
-    pool = [v for k, v in vocab.items() if v.get("meaning_zh")]
-
-    def add(prompt, options, answer, rationale, qid):
-        opts = list(dict.fromkeys([o for o in options if o]))
-        if answer not in opts:
-            opts.insert(0, answer)
-        opts = opts[:4]
-        rnd.shuffle(opts)
-        qs.append({"qid": qid, "prompt": prompt, "options": opts,
-                   "h": fnv(answer), "oh": [fnv(o) for o in opts],
-                   "rationale": rationale})
-
-    for vid in vids[:3]:
-        v = vocab[vid]
-        distract = [x["meaning_zh"] for x in rnd.sample(
-            [x for x in pool if x["id"] != vid and x.get("jlpt") == v.get("jlpt")], 3)] if len(pool) > 4 else []
-        add("「%s」是什么意思？" % v["surface"], [v["meaning_zh"]] + distract, v["meaning_zh"],
-            "%s（%s）＝%s" % (v["surface"], v["kana"], v["meaning_zh"]), "Q-%03d-V%d" % (day["day"], len(qs)))
-    for kid in kids[:1]:
-        k = kanji[kid]
-        correct = (k.get("onyomi") or k.get("kunyomi") or [""])[0]
-        if not correct:
-            continue
-        others = []
-        for x in rnd.sample([y for y in kanji.values() if y.get("onyomi") or y.get("kunyomi")], 8):
-            r = (x.get("onyomi") or x.get("kunyomi") or [""])[0]
-            if r and r != correct:
-                others.append(r)
-        add("汉字「%s」的读音是？" % k["char"], [correct] + others[:3], correct,
-            "%s：音 %s｜训 %s" % (k["char"], "、".join(k.get("onyomi") or []) or "无",
-                                 "、".join(k.get("kunyomi") or []) or "无"),
-            "Q-%03d-K" % day["day"])
-    for gid in gids[:1]:
-        g = grammar[gid]
-        others = [x["meaning_zh"] for x in rnd.sample(
-            [y for y in grammar.values() if y.get("meaning_zh") and y["id"] != gid], 3)]
-        add("句型「%s」的意思是？" % g["pattern"], [g["meaning_zh"]] + others, g["meaning_zh"],
-            "%s＝%s" % (g["pattern"], g["meaning_zh"]), "Q-%03d-G" % day["day"])
-    # 先用当天其余新词补足 6 题
-    for vid in vids[3:]:
-        if len(qs) >= 6:
-            break
-        v = vocab[vid]
-        distract = [x["meaning_zh"] for x in rnd.sample([x for x in pool if x["id"] != vid], 3)]
-        add("「%s」是什么意思？" % v["surface"], [v["meaning_zh"]] + distract,
-            v["meaning_zh"], "%s（%s）＝%s" % (v["surface"], v["kana"], v["meaning_zh"]),
-            "Q-%03d-V%d" % (day["day"], len(qs)))
-    # 再用复习词补足
-    for vid in (day.get("review_knowledge_ids") or []):
-        if len(qs) >= 6:
-            break
-        v = vocab.get(vid)
-        if not v or not v.get("meaning_zh"):
-            continue
-        distract = [x["meaning_zh"] for x in rnd.sample(
-            [x for x in pool if x["id"] != vid], 3)]
-        add("复习：「%s」是什么意思？" % v["surface"], [v["meaning_zh"]] + distract,
-            v["meaning_zh"], "%s＝%s" % (v["surface"], v["meaning_zh"]), "Q-%03d-R" % day["day"])
-    return qs[:6]
+from quiz_v5 import fnv, build_quiz, listening_quiz, public_question
 
 
 def build_review(day, vocab, grammar):
@@ -504,12 +435,13 @@ def main():
     grammar = {x["id"]: x for x in read("grammar.jsonl")}
     kanji = {x["id"]: x for x in read("kanji.jsonl")}
     materials = {x["id"]: x for x in read("materials.jsonl")}
-    questions = {x["id"]: x for x in read("questions.jsonl")}
     sentences = defaultdict(list)
     for s in read("sentences.jsonl"):
-        sentences[s["day"]].append(s)
+        sentences[s["day"]].append({k: v for k, v in s.items() if not k.startswith("answer")})
 
     OUT.mkdir(exist_ok=True)
+    (DATA / "answer-key.json").unlink(missing_ok=True)
+    (OUT / "404.html").write_text('<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>页面未找到</title><h1>页面未找到</h1><a href="/">返回课程目录</a></html>', encoding="utf-8")
     DATA.mkdir(exist_ok=True)
     (OUT / "assets").mkdir(exist_ok=True)
     (OUT / "assets/app.css").write_text(CSS, encoding="utf-8")
@@ -523,12 +455,12 @@ def main():
             ex = (v.get("examples") or [{}])[0]
             vcards.append({
                 "id": vid, "surface": v["surface"], "kana": v["kana"], "meaning": v["meaning_zh"],
-                "ko": v.get("ko_hanja") or "", "pos": v.get("pos", ""),
+                "ko": v.get("ko_hanja") or "未标注对应（待核对）", "pos": v.get("pos", ""),
                 "ex": {"ja": ex.get("ja", ""), "zh": ex.get("zh", "")} if ex.get("ja") else None,
-                "audio": None,
+                "audio": "tts",
             })
         import random as _random
-        qs = build_quiz(d, vocab, grammar, kanji, _random.Random(20261107 + n))
+        qs = [public_question(q) for q in build_quiz(d, vocab, grammar, kanji, _random.Random(20261107 + n))]
         # 汉字小条：放在新词块末尾，不单独占一块
         kanji_html = "".join(
             '<span class="kchip"><strong>%s</strong> %s <span class="small">%s</span></span>'
@@ -542,23 +474,33 @@ def main():
             mids = d.get("material_ids") or []
             m = materials.get(mids[0]) if mids else None
             if m:
-                listen_json = {"id": m["id"], "title": m.get("title", ""), "audio_url": m.get("audio_url"),
-                               "audio_kind": m.get("audio_kind", "tts"),
-                               "transcript": m.get("text_ja", "")[:1200],
-                               "duration_sec": m.get("duration_sec", 0)}
+                lqs = [public_question(q) for q in listening_quiz(d, m)]
+                listen_json = {"id": m["id"], "title": m["title"], "audio_url": "",
+                               "audio_kind": "tts", "transcript": m["text_ja"],
+                               "duration_sec": 0, "duration_estimate_sec": m.get("duration_estimate_sec"),
+                               "questions": lqs}
                 listen_html = (
-                    '<section class="card" id="listening"><h2>⑥ 听力 <span class="min">8 分钟</span></h2>'
-                    '<p class="hint">先听，再答题；脚本做完再展开。</p>'
-                    '<div class="row"><button class="btn" type="button" data-speak="%s">播放（TTS）</button></div>'
-                    '<details><summary>看脚本</summary><p data-role="ja">%s</p></details></section>'
-                    % (esc(listen_json["transcript"][:400]), esc(listen_json["transcript"])))
+                    '<section class="card" id="listening"><h2>④ 听力 <span class="min">8 分钟</span></h2>'
+                    '<p class="hint">原创 TTS · 约 %s 秒（估算）。先听，再回答三题；做完后对照脚本。</p>'
+                    '<button class="btn" type="button" data-speak="%s">播放（TTS）</button>'
+                    '<div id="listenQuiz" data-qs="%s"></div><p>得分：<span id="listenScore">0 / 0</span></p>'
+                    '<details id="transcript"><summary>看脚本（计为提示）</summary><p lang="ja">%s</p></details></section>'
+                    % (m.get("duration_estimate_sec", "未知"), esc(m["audio_text"]),
+                       esc(json.dumps(lqs, ensure_ascii=False)), esc(m["text_ja"])))
+        budget = {b["type"]: b["min"] for b in d["blocks"]}
         page = (HTML
                 .replace("@@DAY@@", "%03d" % n)
                 .replace("@@THEME@@", esc(d["theme"]))
                 .replace("@@CAN_DO@@", esc(d["can_do"]))
                 .replace("@@MIN@@", str(d["minutes"]))
-                .replace("@@VMIN@@", "8" if d.get("listening") else "14")
-                .replace("@@TOC_LISTEN@@", '<a href="#listening">⑥ 听力</a>' if d.get("listening") else "")
+                .replace("@@VMIN@@", str(budget["新词"]))
+                .replace("@@RMIN@@", str(budget["复习"]))
+                .replace("@@GMIN@@", str(budget["语法"]))
+                .replace("@@SMIN@@", str(budget["句子输出"]))
+                .replace("@@QMIN@@", str(budget["练习"]))
+                .replace("@@SNUM@@", "⑤" if d.get("listening") else "④")
+                .replace("@@QNUM@@", "⑥" if d.get("listening") else "⑤")
+                .replace("@@TOC_LISTEN@@", '<a href="#listening">④ 听力</a>' if d.get("listening") else "")
                 .replace("@@GRAMMAR@@", build_grammar_html(d, grammar))
                 .replace("@@KANJI@@", kanji_html).replace("@@LISTEN@@", listen_html)
                 .replace("@@REVIEW@@", json.dumps(review, ensure_ascii=False))
@@ -571,7 +513,7 @@ def main():
         (OUT / ("day-%03d.html" % n)).write_text(page, encoding="utf-8")
         (DATA / ("day-%03d.json" % n)).write_text(json.dumps({
             "day": n, "phase": d["phase"], "theme": d["theme"], "can_do": d["can_do"],
-            "minutes": d["minutes"], "listening": bool(d.get("listening")),
+            "minutes": d["minutes"], "blocks": d["blocks"], "listening": bool(d.get("listening")),
             "review": review, "vocab": vcards, "grammar": [grammar[g] for g in d["new_grammar_ids"]],
             "sentences": sentences.get(n, []), "quiz": qs, "listening_material": listen_json,
         }, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
@@ -584,17 +526,18 @@ def main():
         '<meta name="viewport" content="width=device-width,initial-scale=1">'
         '<title>Nihongo 150</title><link rel="stylesheet" href="assets/app.css"></head>'
         '<body><div class="wrap"><main><h1>Nihongo 150</h1>'
-        '<p class="hint">每天 60 分钟：复习 / 新词 / 语法 / 句子 / 练习。听力 Day 46 起，每周 3 次。</p>'
+        '<p class="hint">每天 60 分钟：复习 / 新词 / 语法 / 句子 / 练习。听力 Day 47 起，每周 3 次。</p>'
         '<ul>' + links + '</ul></main></div></body></html>', encoding="utf-8")
 
+    import hashlib
+    revision = hashlib.sha256((CSS + JS + json.dumps(cur, ensure_ascii=False)).encode()).hexdigest()[:12]
     (OUT / "sw.js").write_text(
-        "const C='nh80-v5';self.addEventListener('install',e=>{self.skipWaiting()});"
-        "self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(k=>Promise.all("
-        "k.filter(x=>x!==C).map(x=>caches.delete(x)))).then(()=>self.clients.claim()))});"
-        "self.addEventListener('fetch',e=>{if(e.request.method!=='GET')return;"
-        "e.respondWith(caches.match(e.request).then(h=>h||fetch(e.request).then(r=>{"
-        "if(r.ok&&r.type==='basic'){let c=r.clone();caches.open(C).then(x=>x.put(e.request,c))}return r"
-        "}).catch(()=>new Response('离线',{status:503}))))});", encoding="utf-8")
+        "const C='nh80-v5.1-" + revision + "';self.addEventListener('install',e=>self.skipWaiting());"
+        "self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(ks=>Promise.all("
+        "ks.filter(k=>k!==C).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));"
+        "self.addEventListener('fetch',e=>{if(e.request.method!=='GET'||new URL(e.request.url).origin!==location.origin||new URL(e.request.url).pathname.startsWith('/api/'))return;"
+        "e.respondWith(fetch(e.request).then(r=>{if(r.ok){const c=r.clone();e.waitUntil(caches.open(C).then(x=>x.put(e.request,c)))}return r})"
+        ".catch(()=>caches.match(e.request).then(r=>r||new Response('离线且本页尚未缓存',{status:503}))));});", encoding="utf-8")
     print(json.dumps({"days": len(cur["days"]), "html": len(list(OUT.glob("day-*.html")))}, ensure_ascii=False))
 
 

@@ -2,12 +2,12 @@
 <html lang="zh-CN"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
-<title>Day 003 · 吃饭与点单｜N も、これ / それ / あれ / どれ は N です | Nihongo 150</title>
+<title>Day 003 · N も、これ / それ / あれ / どれ は N です | Nihongo 150</title>
 <link rel="icon" href="data:,"><link rel="stylesheet" href="assets/app.css">
 </head><body data-day="003">
 <header class="top">
   <span class="day">Day 003</span>
-  <span class="goal">在「吃饭与点单」场景里，用 N も 说清一件事</span>
+  <span class="goal">用「N も、これ / それ / あれ / どれ は N です」造两句自己的话，表达：…也…；这/那/那是…</span>
   <button class="mode" id="modeBtn" type="button">遮盖：中文</button>
   <span class="prog">60 分钟</span>
 </header>
@@ -18,7 +18,7 @@
 </nav>
 <main>
 <section class="card" id="review">
-  <h2>① 今日复习 <span class="min">12 分钟</span></h2>
+  <h2>① 今日复习 <span class="min">10 分钟</span></h2>
   <p class="hint">先自己想，再翻面；三档自评。<span id="rIdx"></span></p>
   <div class="vcard"><div class="surface" id="rFront"></div>
     <div class="meaning mask" id="rBack"></div></div>
@@ -36,38 +36,38 @@
   <h2>② 新词 <span class="min">14 分钟</span></h2>
   <p class="hint"><span id="vCur">1</span> / <span id="vTotal">0</span>　点「切换遮盖」可遮中文或遮日语。</p>
   <div id="vArea"></div>
-  <div class="kstrip"><span class="kchip"><strong>二</strong> 二 <span class="small">ニ、</span></span><span class="kchip"><strong>三</strong> 三 <span class="small">サン</span></span><span class="kchip"><strong>四</strong> 四 <span class="small">シ、</span></span><span class="kchip"><strong>五</strong> 五 <span class="small">ゴ、</span></span></div>
+  <div class="kstrip"><span class="kchip"><strong>四</strong> 四 <span class="small">シ、</span></span><span class="kchip"><strong>五</strong> 五 <span class="small">ゴ、</span></span><span class="kchip"><strong>六</strong> 六 <span class="small">ロク</span></span><span class="kchip"><strong>七</strong> 七 <span class="small">シチ</span></span><span class="kchip"><strong>八</strong> 八 <span class="small">ハチ</span></span></div>
   <div class="row"><button class="btn" id="vPrev" type="button">上一个</button>
     <button class="btn primary" id="vNext" type="button">下一个</button></div>
 </section>
 
 <section class="card" id="grammar">
-  <h2>③ 语法 <span class="min">7 分钟</span></h2>
+  <h2>③ 语法 <span class="min">6 分钟</span></h2>
   <div class="gcard" data-mode="all"><button class="eye" type="button">切换遮盖</button><div class="pattern" data-role="ja">N も</div><div class="conn" data-role="ja">名詞 + も（替代 は/が/を）</div><div class="meaning" data-role="zh">…也…</div><p class="small">表同类追加；替代格助词，不与 は 叠加</p><div class="ex"><span data-role="ja">私も学生です。</span><br><span class="zh" data-role="zh">我也是学生。</span></div><div class="ko-box"><strong>朝鲜语：</strong>도<br><span class="small">韩语도同样替代主格/宾格助词，但能与는/은叠加成도는；日语も不能与は叠加。</span></div><p class="small">易错：私はも学生です。 → 私も学生です。（「も」本身已含「也」，要替换 は，不能 は+も 并存）</p></div><div class="gcard" data-mode="all"><button class="eye" type="button">切换遮盖</button><div class="pattern" data-role="ja">これ / それ / あれ / どれ は N です</div><div class="conn" data-role="ja">指示代名词 + は + 名詞 + です</div><div class="meaning" data-role="zh">这/那/那是…</div><p class="small">コソアド 指示词：近称/中称/远称/疑问</p><div class="ex"><span data-role="ja">これは本です。</span><br><span class="zh" data-role="zh">这是书。</span></div><div class="ex"><span data-role="ja">それはいくらですか。</span><br><span class="zh" data-role="zh">那个多少钱？</span></div><div class="ko-box"><strong>朝鲜语：</strong>이것 / 그것 / 저것 / 어느 것<br><span class="small">韩语指示三分与日语相同，但修饰名词要用이/그/저且与것分写；日语可直接连体。</span></div><p class="small">易错：これ は 本です（分写） → これは本です。（指示词后主题助词 は 不能空格分开写）</p></div>
 </section>
+
 
 <section class="card" id="sentences">
   <h2>④ 句子输出 <span class="min">6 分钟</span></h2>
   <p class="hint">先自己写，不判对错；会话里逐句改。草稿自动保存。</p>
-  <div id="sentences"></div>
+  <div id="sentenceItems"></div>
 </section>
 
 <section class="card" id="quiz">
   <h2>⑤ 练习 <span class="min">6 分钟</span></h2>
   <p class="hint">即时判分。当前：<strong id="score">0 / 0</strong></p>
-  <div id="quiz"></div>
+  <div id="quizItems"></div>
 </section>
-
 <button class="btn primary" id="finish" type="button" style="width:100%;margin-top:16px">今天学完了，记录一下</button>
 <p class="small" style="margin-top:12px">资源骨架来自 OpenJLPT（CC-BY-SA-4.0），中文释义与翻译为 AI 草稿；无真人录音时用浏览器 TTS，已标注 tts。</p>
 </main>
 </div>
-<script>window.__REVIEW__=[{"kid": "V0010", "front": "二", "back": "二", "stage": "planned"}, {"kid": "V0011", "front": "三", "back": "三", "stage": "planned"}, {"kid": "V0012", "front": "四", "back": "四（し／よん）", "stage": "planned"}, {"kid": "V0013", "front": "五", "back": "五", "stage": "planned"}];window.__VOCAB__=[{"id": "V0019", "surface": "何", "kana": "なん", "meaning": "什么", "ko": "", "pos": "代名詞/疑問詞", "ex": {"ja": "これは何ですか。", "zh": "这是什么？"}, "audio": null}, {"id": "V0020", "surface": "いくら", "kana": "いくら", "meaning": "多少钱", "ko": "", "pos": "名詞/疑問詞", "ex": {"ja": "これはいくらですか。", "zh": "这个多少钱？"}, "audio": null}, {"id": "V0021", "surface": "円", "kana": "えん", "meaning": "日元（货币单位）", "ko": "", "pos": "名詞", "ex": {"ja": "百円です。", "zh": "一百日元。"}, "audio": null}, {"id": "V0022", "surface": "今", "kana": "いま", "meaning": "现在", "ko": "", "pos": "名詞", "ex": {"ja": "今、何時ですか。", "zh": "现在几点？"}, "audio": null}, {"id": "V0023", "surface": "今日", "kana": "きょう", "meaning": "今天", "ko": "", "pos": "名詞", "ex": {"ja": "今日は月曜日です。", "zh": "今天是周一。"}, "audio": null}, {"id": "V0024", "surface": "明日", "kana": "あした", "meaning": "明天", "ko": "", "pos": "名詞", "ex": {"ja": "明日、学校へ行きます。", "zh": "明天去学校。"}, "audio": null}, {"id": "V0025", "surface": "昨日", "kana": "きのう", "meaning": "昨天", "ko": "", "pos": "名詞", "ex": {"ja": "昨日は日曜日でした。", "zh": "昨天是周日。"}, "audio": null}, {"id": "V0026", "surface": "朝", "kana": "あさ", "meaning": "早晨", "ko": "", "pos": "名詞", "ex": {"ja": "朝ご飯を食べます。", "zh": "吃早饭。"}, "audio": null}, {"id": "V0027", "surface": "時間", "kana": "じかん", "meaning": "时间；小时", "ko": "", "pos": "名詞", "ex": {"ja": "時間がありません。", "zh": "没时间。"}, "audio": null}];window.__QUIZ__=[{"qid": "Q-003-V0", "prompt": "「何」是什么意思？", "options": ["什么", "黑色的", "父母；双亲", "疼；痛"], "h": "cde747b5", "oh": ["cde747b5", "fbe8158a", "46dec0b", "cd6e5381"], "rationale": "何（なん）＝什么"}, {"qid": "Q-003-V1", "prompt": "「いくら」是什么意思？", "options": ["洗澡；浴室", "这边", "多少钱", "一起"], "h": "1ea152bf", "oh": ["5127bb3a", "39a58757", "1ea152bf", "e0fe39b8"], "rationale": "いくら（いくら）＝多少钱"}, {"qid": "Q-003-V2", "prompt": "「円」是什么意思？", "options": ["日元（货币单位）", "午饭", "厨房", "晚饭"], "h": "ceb46ee8", "oh": ["ceb46ee8", "de470c6e", "8a76bd78", "29acd860"], "rationale": "円（えん）＝日元（货币单位）"}, {"qid": "Q-003-K", "prompt": "汉字「二」的读音是？", "options": ["キュウ", "ドウ", "ニ", "キ"], "h": "4e246d0a", "oh": ["3c5b0fd3", "1f3882e6", "4e246d0a", "a824fab8"], "rationale": "二：音 ニ、ジ｜训 ふた、ふたつ"}, {"qid": "Q-003-G", "prompt": "句型「N も」的意思是？", "options": ["变成…／使…变得…", "会／能…（可能迂说）", "…也…", "…了之后发现…"], "h": "1aca9020", "oh": ["c4614480", "b8e9c690", "1aca9020", "5cc86091"], "rationale": "N も＝…也…"}, {"qid": "Q-003-V5", "prompt": "「今」是什么意思？", "options": ["援助", "现在", "工作；作用", "宽；宽广"], "h": "d1247a05", "oh": ["6fe5083e", "d1247a05", "af459e61", "d0ca0139"], "rationale": "今（いま）＝现在"}];window.__SENT__=[{"id": "S0021", "day": 3, "direction": "zh-ja", "prompt": "这是什么？", "answer": "これは何ですか。", "knowledge_ids": ["V0019"], "hint": ""}, {"id": "S0022", "day": 3, "direction": "zh-ja", "prompt": "这个多少钱？", "answer": "これはいくらですか。", "knowledge_ids": ["V0020"], "hint": ""}, {"id": "S0023", "day": 3, "direction": "zh-ja", "prompt": "一百日元。", "answer": "百円です。", "knowledge_ids": ["V0021"], "hint": ""}, {"id": "S0024", "day": 3, "direction": "zh-ja", "prompt": "现在几点？", "answer": "今、何時ですか。", "knowledge_ids": ["V0022"], "hint": ""}, {"id": "S0025", "day": 3, "direction": "zh-ja", "prompt": "今天是周一。", "answer": "今日は月曜日です。", "knowledge_ids": ["V0023"], "hint": ""}, {"id": "S0026", "day": 3, "direction": "zh-ja", "prompt": "明天去学校。", "answer": "明日、学校へ行きます。", "knowledge_ids": ["V0024"], "hint": ""}, {"id": "S0027", "day": 3, "direction": "zh-ja", "prompt": "昨天是周日。", "answer": "昨日は日曜日でした。", "knowledge_ids": ["V0025"], "hint": ""}, {"id": "S0028", "day": 3, "direction": "ja-zh", "prompt": "朝ご飯を食べます。", "answer": "吃早饭。", "knowledge_ids": ["V0026"], "hint": ""}, {"id": "S0029", "day": 3, "direction": "ja-zh", "prompt": "時間がありません。", "answer": "没时间。", "knowledge_ids": ["V0027"], "hint": ""}, {"id": "S0030", "day": 3, "direction": "ja-zh", "prompt": "私も学生です。", "answer": "我也是学生。", "knowledge_ids": ["G0004"], "hint": "N も"}];</script>
+<script>window.__REVIEW__=[{"kid": "V0010", "front": "二", "back": "二", "stage": "planned"}, {"kid": "V0011", "front": "三", "back": "三", "stage": "planned"}, {"kid": "V0012", "front": "四", "back": "四（し／よん）", "stage": "planned"}, {"kid": "V0013", "front": "五", "back": "五", "stage": "planned"}];window.__VOCAB__=[{"id": "V0019", "surface": "何", "kana": "なん", "meaning": "什么", "ko": "未标注对应（待核对）", "pos": "代名詞/疑問詞", "ex": {"ja": "これは何ですか。", "zh": "这是什么？"}, "audio": "tts"}, {"id": "V0020", "surface": "いくら", "kana": "いくら", "meaning": "多少钱", "ko": "未标注对应（待核对）", "pos": "名詞/疑問詞", "ex": {"ja": "これはいくらですか。", "zh": "这个多少钱？"}, "audio": "tts"}, {"id": "V0021", "surface": "円", "kana": "えん", "meaning": "日元（货币单位）", "ko": "未标注对应（待核对）", "pos": "名詞", "ex": {"ja": "百円です。", "zh": "一百日元。"}, "audio": "tts"}, {"id": "V0022", "surface": "今", "kana": "いま", "meaning": "现在", "ko": "未标注对应（待核对）", "pos": "名詞", "ex": {"ja": "今、何時ですか。", "zh": "现在几点？"}, "audio": "tts"}, {"id": "V0023", "surface": "今日", "kana": "きょう", "meaning": "今天", "ko": "未标注对应（待核对）", "pos": "名詞", "ex": {"ja": "今日は月曜日です。", "zh": "今天是周一。"}, "audio": "tts"}, {"id": "V0024", "surface": "明日", "kana": "あした", "meaning": "明天", "ko": "未标注对应（待核对）", "pos": "名詞", "ex": {"ja": "明日、学校へ行きます。", "zh": "明天去学校。"}, "audio": "tts"}, {"id": "V0025", "surface": "昨日", "kana": "きのう", "meaning": "昨天", "ko": "未标注对应（待核对）", "pos": "名詞", "ex": {"ja": "昨日は日曜日でした。", "zh": "昨天是周日。"}, "audio": "tts"}, {"id": "V0026", "surface": "朝", "kana": "あさ", "meaning": "早晨", "ko": "未标注对应（待核对）", "pos": "名詞", "ex": {"ja": "朝ご飯を食べます。", "zh": "吃早饭。"}, "audio": "tts"}, {"id": "V0027", "surface": "時間", "kana": "じかん", "meaning": "时间；小时", "ko": "未标注对应（待核对）", "pos": "名詞", "ex": {"ja": "時間がありません。", "zh": "没时间。"}, "audio": "tts"}];window.__QUIZ__=[{"qid": "Q-003-V0-34e190fb4690", "prompt": "「何」是什么意思？", "options": ["什么", "黑色的", "父母；双亲", "疼；痛"], "h": "cde747b5", "oh": ["cde747b5", "fbe8158a", "46dec0b", "cd6e5381"]}, {"qid": "Q-003-V1-33067fe6d6f2", "prompt": "「いくら」是什么意思？", "options": ["洗澡；浴室", "这边", "多少钱", "一起"], "h": "1ea152bf", "oh": ["5127bb3a", "39a58757", "1ea152bf", "e0fe39b8"]}, {"qid": "Q-003-V2-9e279f8d0c20", "prompt": "「円」是什么意思？", "options": ["日元（货币单位）", "午饭", "厨房", "晚饭"], "h": "ceb46ee8", "oh": ["ceb46ee8", "de470c6e", "8a76bd78", "29acd860"]}, {"qid": "Q-003-K-d74a9886eb71", "prompt": "汉字「四」的一个常用读音是？", "options": ["キュウ", "ドウ", "シ", "キ"], "h": "b2250a76", "oh": ["3c5b0fd3", "1f3882e6", "b2250a76", "a824fab8"]}, {"qid": "Q-003-G-e864861e60b8", "prompt": "句型「N も」的意思是？", "options": ["变成…／使…变得…", "会／能…（可能迂说）", "…也…", "…了之后发现…"], "h": "1aca9020", "oh": ["c4614480", "b8e9c690", "1aca9020", "5cc86091"]}, {"qid": "Q-003-V5-40441b9e941f", "prompt": "「今」是什么意思？", "options": ["援助", "现在", "工作；作用", "宽；宽广"], "h": "d1247a05", "oh": ["6fe5083e", "d1247a05", "af459e61", "d0ca0139"]}];window.__SENT__=[{"id": "S0021", "day": 3, "direction": "zh-ja", "prompt": "这是什么？", "knowledge_ids": ["V0019"], "hint": ""}, {"id": "S0022", "day": 3, "direction": "zh-ja", "prompt": "这个多少钱？", "knowledge_ids": ["V0020"], "hint": ""}, {"id": "S0023", "day": 3, "direction": "zh-ja", "prompt": "一百日元。", "knowledge_ids": ["V0021"], "hint": ""}, {"id": "S0024", "day": 3, "direction": "zh-ja", "prompt": "现在几点？", "knowledge_ids": ["V0022"], "hint": ""}, {"id": "S0025", "day": 3, "direction": "zh-ja", "prompt": "今天是周一。", "knowledge_ids": ["V0023"], "hint": ""}, {"id": "S0026", "day": 3, "direction": "zh-ja", "prompt": "明天去学校。", "knowledge_ids": ["V0024"], "hint": ""}, {"id": "S0027", "day": 3, "direction": "zh-ja", "prompt": "昨天是周日。", "knowledge_ids": ["V0025"], "hint": ""}, {"id": "S0028", "day": 3, "direction": "ja-zh", "prompt": "朝ご飯を食べます。", "knowledge_ids": ["V0026"], "hint": ""}, {"id": "S0029", "day": 3, "direction": "ja-zh", "prompt": "時間がありません。", "knowledge_ids": ["V0027"], "hint": ""}, {"id": "S0030", "day": 3, "direction": "ja-zh", "prompt": "私も学生です。", "knowledge_ids": ["G0004"], "hint": "N も"}];</script>
 <script src="assets/app.js"></script>
 <script>
 document.getElementById('review').setAttribute('data-cards',JSON.stringify(window.__REVIEW__));
 document.getElementById('vocab').setAttribute('data-cards',JSON.stringify(window.__VOCAB__));
-document.getElementById('quiz').setAttribute('data-qs',JSON.stringify(window.__QUIZ__));
-document.getElementById('sentences').setAttribute('data-items',JSON.stringify(window.__SENT__));
+document.getElementById('quizItems').setAttribute('data-qs',JSON.stringify(window.__QUIZ__));
+document.getElementById('sentenceItems').setAttribute('data-items',JSON.stringify(window.__SENT__));
 </script>
 </body></html>

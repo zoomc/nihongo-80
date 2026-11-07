@@ -184,7 +184,17 @@ def build_payload(session_events: list[dict]) -> dict:
         if ev.get("client_ts"):
             ts = str(ev["client_ts"])
             break
+    metadata = {}
+    for ev in session_events:
+        try:
+            raw = json.loads(ev.get("session_payload") or "{}")
+            if isinstance(raw, dict):
+                metadata = raw
+        except (ValueError, TypeError):
+            continue
     return {
+        "review_ratings": metadata.get("review_ratings", []),
+        "sentences": metadata.get("sentences", []),
         "v": 1,
         "day": int(first.get("day")),
         "session": str(first.get("session") or ""),

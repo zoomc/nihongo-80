@@ -63,8 +63,6 @@ def brief(day: int, force=False):
     out = DAYS / ("day-%03d" % day)
     out.mkdir(parents=True, exist_ok=True)
     p = out / "brief.md"
-    if p.exists() and not force:
-        return p
     L = ["# Day %03d 任务书" % day, "",
          "- 阶段：%s｜%d 分钟｜%s" % (d["phase"], d["minutes"], "听力日" if d.get("listening") else "常规日"),
          "- 今日页面：%s" % page_link(day),

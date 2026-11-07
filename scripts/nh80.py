@@ -243,7 +243,30 @@ def _build_v5(root, conn):
     """v5 生成 150 天课程并写入 DB；返回 curriculum data。"""
     import curriculum_v5 as c5
     data = c5.build()
-    core.import_curriculum(conn, data)
+    from quiz_v5 import day_questions
+    tables = {name: {x["id"]: x for x in core.read_jsonl(root / "knowledge/seeds" / (name + ".jsonl"))}
+              for name in ("vocabulary", "grammar", "kanji", "materials")}
+    keys = {}
+    with conn:
+        for day in data["days"]:
+            qs = day_questions(day, tables["vocabulary"], tables["grammar"], tables["kanji"], tables["materials"])
+            day["question_ids"] = [q["qid"] for q in qs]
+            for q in qs:
+                q["prompt_ja"] = q["prompt"]
+                q["source"] = "v5-generated"
+                q["review_status"] = "ai_draft"
+                q["day"] = day["day"]
+                if q["knowledge_ids"]:
+                    q["targets"] = [{"id": kid, "capability": "reading" if kid.startswith("K") else "meaning"}
+                                    for kid in q["knowledge_ids"]]
+                else:
+                    q["evidence_only"] = True
+                core._insert_kind(conn, "questions", q)
+                keys[q["qid"]] = {"day": day["day"], "type": "mcq", "answer": q["answer"]}
+        audit(conn, "build_v5_questions", {"count": len(keys)})
+        core.import_curriculum(conn, data)
+    (root / "curriculum/curriculum.json").write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    (root / "deploy/worker/src/generated-key.json").write_text(jdump({"answers": keys}) + "\n", encoding="utf-8")
     return data
 
 
@@ -432,7 +455,12 @@ def cmd_import_web(args):
         unknown = [x.get("qid") for x in data["results"] if x.get("qid") not in qmap]
         if unknown:
             raise ValueError("回传码含未知题目 id，拒绝导入：%s" % unknown[:5])
-        sid = _ensure_session(conn, data["day"], data["session"])
+        wrong_day = [x["qid"] for x in data["results"]
+                     if qmap[x["qid"]]["raw"].get("day", data["day"]) != data["day"]]
+        if wrong_day:
+            raise ValueError("题目不属于当天，拒绝导入")
+        _ensure_session(conn, data["day"], data["session"])
+        sid = data["session"]  # 原始浏览器会话不能被按天的日程会话覆盖
         applied, dup, pending = [], [], []
         regraded, disagreements, hinted_forced = [], [], []
         valid_err = getattr(learning, "ERROR_TYPES", None) or set()
@@ -466,6 +494,15 @@ def cmd_import_web(args):
                     conn, day=data["day"], session_id=sid, qid=qid,
                     raw=qmap[qid]["raw"], answer=answer, hinted=hinted,
                     seconds=int(x.get("seconds") or 0), source="web")
+            elif qmap[qid]["raw"].get("evidence_only"):
+                duplicate = conn.execute("SELECT 1 FROM attempts WHERE session_id=? AND qid=?", (sid, qid)).fetchone()
+                if not duplicate:
+                    conn.execute("""INSERT INTO attempts(day,session_id,qid,question_id,knowledge_ids,answer,
+                        correct,hinted,seconds,created_at,source) VALUES(?,?,?,?,?,?,?,?,?,?,?)""",
+                        (data["day"], sid, qid, qid, "[]", answer, int(bool(server_correct)), int(hinted),
+                         int(x.get("seconds") or 0), iso(), "web"))
+                    audit(conn, "record_comprehension", {"day": data["day"], "qid": qid, "correct": server_correct})
+                res = {"duplicate": bool(duplicate)}
             else:
                 res = learning.record_attempt(
                     conn, day=data["day"], session_id=sid, qid=qid, answer=answer,
@@ -474,10 +511,23 @@ def cmd_import_web(args):
             regraded.append({"qid": qid, "client_correct": None if client_correct is None else bool(client_correct),
                              "server_correct": server_correct, "open_pending": bool(is_open)})
             (dup if res.get("duplicate") else pending if (is_open or res.get("open_pending")) else applied).append(qid)
+        # 原始草稿仅供教师批改，不自动评分或计完成。
+        drafts = data.get("sentences") or []
+        valid_sentences = {x["id"] for x in core.read_jsonl(r / "knowledge/seeds/sentences.jsonl")
+                           if x.get("day") == data["day"]}
+        drafts = [{"id": x["id"], "text": str(x.get("text") or "")}
+                  for x in drafts if isinstance(x, dict) and x.get("id") in valid_sentences]
+        if drafts:
+            path = r / "days" / ("day-%03d" % data["day"])
+            path.mkdir(parents=True, exist_ok=True)
+            (path / "web-drafts.json").write_text(jdump({"session": sid, "drafts": drafts}) + "\n", encoding="utf-8")
+            audit(conn, "import_web_drafts", {"day": data["day"], "count": len(drafts)})
         # v3：网页「今日复习」三档自评 → FSRS 排期（只排期，不判掌握）
         review_applied, review_dup, review_bad = [], [], []
         rate_fn = getattr(learning, "apply_review_rating", None)
         for x in data.get("review_ratings") or []:
+            if not isinstance(x, dict):
+                continue
             kid = str(x.get("kid") or "")
             label = str(x.get("rating") or "")
             if not kid or not label:
@@ -530,7 +580,9 @@ def cmd_finish_day(args):
             if x["correct"] == 0:
                 errs[x["error_type"] or "other"] = errs.get(x["error_type"] or "other", 0) + 1
         d = _curriculum_payload(conn, day)
-        passed = (acc is not None and acc >= 0.70 and len(graded) >= len(d["question_ids"]))
+        expected = set(d["question_ids"])
+        answered = {x["qid"] for x in graded}
+        passed = (acc is not None and acc >= 0.70 and bool(expected) and expected <= answered)
         status = "finished" if passed else "incomplete"
         summary = ("Day %d 完成：作答 %d（已判分 %d），正确率 %s，错误 %s。"
                    "完成条件 %s。%s") % (
@@ -667,12 +719,31 @@ def cmd_validate(args):
     errs, warns = [], []
     if len(days) != 150:
         errs.append("天数应为 150，实际 %d" % len(days))
+    seeds = {name: {x["id"]: x for x in core.read_jsonl(r / "knowledge/seeds" / (name + ".jsonl"))}
+             for name in ("vocabulary", "grammar", "kanji", "materials")}
+    listening_seen = set()
+    grammar_days = {gid: d["day"] for d in days for gid in d["new_grammar_ids"]}
     seen = {"v": set(), "g": set(), "k": set()}
     for d in days:
         if sum(b.get("min", 0) for b in d.get("blocks") or []) != 60:
             errs.append("Day %s 时间块不等于 60" % d.get("day"))
+        if sum(b["min"] for b in d["blocks"] if b["type"] != "会话") != 42:
+            errs.append("Day %s 网页预算不等于42" % d["day"])
+        for gid in d["new_grammar_ids"]:
+            for pre in seeds["grammar"].get(gid, {}).get("prerequisites", []):
+                if pre not in grammar_days or grammar_days[pre] >= d["day"]:
+                    errs.append("Day %s 先修未满足 %s -> %s" % (d["day"], gid, pre))
+        if d.get("listening"):
+            for mid in d["material_ids"]:
+                m = seeds["materials"].get(mid, {})
+                if mid in listening_seen or len(m.get("questions", [])) != 3 or len(m.get("text_ja", "")) < 300:
+                    errs.append("Day %s 听力重复或缺内容/三题" % d["day"])
+                listening_seen.add(mid)
         for key, field in (("v", "new_vocab_ids"), ("g", "new_grammar_ids"), ("k", "new_kanji_ids")):
             for kid in d.get(field) or []:
+                table = {"v": "vocabulary", "g": "grammar", "k": "kanji"}[key]
+                if kid not in seeds[table]:
+                    errs.append("未知知识 id %s" % kid)
                 if kid in seen[key]:
                     errs.append("Day %s 重复排课 %s" % (d.get("day"), kid))
                 seen[key].add(kid)
@@ -683,6 +754,8 @@ def cmd_validate(args):
     out({"ok": not errs, "error_count": len(errs), "errors": errs[:20], "warnings": warns,
          "days": len(days), "totals": totals,
          "listening_days": sum(1 for d in days if d.get("listening"))})
+    if errs:
+        raise ValueError("课程校验失败")
 
 
 def cmd_backup(args): out(core.backup(args.root))

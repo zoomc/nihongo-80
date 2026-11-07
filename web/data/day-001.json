@@ -1,9 +1,41 @@
 {
  "day": 1,
  "phase": "P0",
- "theme": "问候与自我介绍｜N は N です、〜か（or）",
- "can_do": "在「问候与自我介绍」场景里，用 N は N です 说清一件事",
+ "theme": "N は N です、〜か（or）",
+ "can_do": "用「N は N です、〜か（or）」造两句自己的话，表达：…是…；…或…",
  "minutes": 60,
+ "blocks": [
+  {
+   "type": "复习",
+   "min": 10,
+   "desc": "到期项优先；未完成顺延，不追赶"
+  },
+  {
+   "type": "新词",
+   "min": 14,
+   "desc": "9 个新词；实际用时超预算时记录未完成"
+  },
+  {
+   "type": "语法",
+   "min": 6,
+   "desc": "N は N です、〜か（or）"
+  },
+  {
+   "type": "句子输出",
+   "min": 6,
+   "desc": "先独立写，再交会话批改"
+  },
+  {
+   "type": "练习",
+   "min": 6,
+   "desc": "6 题即时自评"
+  },
+  {
+   "type": "会话",
+   "min": 18,
+   "desc": "抽词、造句、批改"
+  }
+ ],
  "listening": false,
  "review": [],
  "vocab": [
@@ -12,117 +44,117 @@
    "surface": "私",
    "kana": "わたし",
    "meaning": "我",
-   "ko": "",
+   "ko": "未标注对应（待核对）",
    "pos": "名詞/代名詞",
    "ex": {
     "ja": "私は学生です。",
     "zh": "我是学生。"
    },
-   "audio": null
+   "audio": "tts"
   },
   {
    "id": "V0002",
    "surface": "あなた",
    "kana": "あなた",
    "meaning": "你；您",
-   "ko": "",
+   "ko": "未标注对应（待核对）",
    "pos": "名詞/代名詞",
    "ex": {
     "ja": "あなたは先生ですか。",
     "zh": "您是老师吗？"
    },
-   "audio": null
+   "audio": "tts"
   },
   {
    "id": "V0003",
    "surface": "さん",
    "kana": "さん",
    "meaning": "…先生／…小姐（敬称）",
-   "ko": "",
+   "ko": "未标注对应（待核对）",
    "pos": "名詞/接尾辞",
    "ex": {
     "ja": "田中さんは先生です。",
     "zh": "田中是老师。"
    },
-   "audio": null
+   "audio": "tts"
   },
   {
    "id": "V0004",
    "surface": "こんにちは",
    "kana": "こんにちは",
    "meaning": "你好（白天问候）",
-   "ko": "",
+   "ko": "未标注对应（待核对）",
    "pos": "感動詞",
    "ex": {
     "ja": "こんにちは、元気ですか。",
     "zh": "你好，你好吗？"
    },
-   "audio": null
+   "audio": "tts"
   },
   {
    "id": "V0005",
    "surface": "こんばんは",
    "kana": "こんばんは",
    "meaning": "晚上好",
-   "ko": "",
+   "ko": "未标注对应（待核对）",
    "pos": "感動詞",
    "ex": {
     "ja": "こんばんは、お元気ですか。",
     "zh": "晚上好，您好吗？"
    },
-   "audio": null
+   "audio": "tts"
   },
   {
    "id": "V0006",
    "surface": "おはようございます",
    "kana": "おはようございます",
    "meaning": "早上好（敬体）",
-   "ko": "",
+   "ko": "未标注对应（待核对）",
    "pos": "感動詞",
    "ex": {
     "ja": "おはようございます。",
     "zh": "早上好。"
    },
-   "audio": null
+   "audio": "tts"
   },
   {
    "id": "V0007",
    "surface": "ありがとうございます",
    "kana": "ありがとうございます",
    "meaning": "谢谢（敬体）",
-   "ko": "",
+   "ko": "未标注对应（待核对）",
    "pos": "感動詞",
    "ex": {
     "ja": "ありがとうございます。",
     "zh": "谢谢。"
    },
-   "audio": null
+   "audio": "tts"
   },
   {
    "id": "V0008",
    "surface": "すみません",
    "kana": "すみません",
    "meaning": "对不起；劳驾／借过",
-   "ko": "",
+   "ko": "未标注对应（待核对）",
    "pos": "感動詞",
    "ex": {
     "ja": "すみません、駅はどこですか。",
     "zh": "劳驾，车站在哪？"
    },
-   "audio": null
+   "audio": "tts"
   },
   {
    "id": "V0009",
    "surface": "一",
    "kana": "いち",
    "meaning": "一",
-   "ko": "",
+   "ko": "未标注对应（待核对）",
    "pos": "数詞",
    "ex": {
     "ja": "りんごを一つください。",
     "zh": "请给我一个苹果。"
    },
-   "audio": null
+   "audio": "tts"
   }
  ],
  "grammar": [
@@ -237,7 +269,6 @@
    "day": 1,
    "direction": "zh-ja",
    "prompt": "我是学生。",
-   "answer": "私は学生です。",
    "knowledge_ids": [
     "V0001"
    ],
@@ -248,7 +279,6 @@
    "day": 1,
    "direction": "zh-ja",
    "prompt": "您是老师吗？",
-   "answer": "あなたは先生ですか。",
    "knowledge_ids": [
     "V0002"
    ],
@@ -259,7 +289,6 @@
    "day": 1,
    "direction": "zh-ja",
    "prompt": "田中是老师。",
-   "answer": "田中さんは先生です。",
    "knowledge_ids": [
     "V0003"
    ],
@@ -270,7 +299,6 @@
    "day": 1,
    "direction": "zh-ja",
    "prompt": "你好，你好吗？",
-   "answer": "こんにちは、元気ですか。",
    "knowledge_ids": [
     "V0004"
    ],
@@ -281,7 +309,6 @@
    "day": 1,
    "direction": "zh-ja",
    "prompt": "晚上好，您好吗？",
-   "answer": "こんばんは、お元気ですか。",
    "knowledge_ids": [
     "V0005"
    ],
@@ -292,7 +319,6 @@
    "day": 1,
    "direction": "zh-ja",
    "prompt": "早上好。",
-   "answer": "おはようございます。",
    "knowledge_ids": [
     "V0006"
    ],
@@ -303,7 +329,6 @@
    "day": 1,
    "direction": "zh-ja",
    "prompt": "谢谢。",
-   "answer": "ありがとうございます。",
    "knowledge_ids": [
     "V0007"
    ],
@@ -314,7 +339,6 @@
    "day": 1,
    "direction": "ja-zh",
    "prompt": "すみません、駅はどこですか。",
-   "answer": "劳驾，车站在哪？",
    "knowledge_ids": [
     "V0008"
    ],
@@ -325,7 +349,6 @@
    "day": 1,
    "direction": "ja-zh",
    "prompt": "りんごを一つください。",
-   "answer": "请给我一个苹果。",
    "knowledge_ids": [
     "V0009"
    ],
@@ -336,7 +359,6 @@
    "day": 1,
    "direction": "ja-zh",
    "prompt": "これは本です。",
-   "answer": "这是书。",
    "knowledge_ids": [
     "G0001"
    ],
@@ -345,7 +367,7 @@
  ],
  "quiz": [
   {
-   "qid": "Q-001-V0",
+   "qid": "Q-001-V0-77b4d867c188",
    "prompt": "「私」是什么意思？",
    "options": [
     "成年人",
@@ -359,11 +381,10 @@
     "14a6babc",
     "cbd1859a",
     "c2b81a59"
-   ],
-   "rationale": "私（わたし）＝我"
+   ]
   },
   {
-   "qid": "Q-001-V1",
+   "qid": "Q-001-V1-7ebe48a0574c",
    "prompt": "「あなた」是什么意思？",
    "options": [
     "信封",
@@ -377,11 +398,10 @@
     "6989b6c",
     "927d0016",
     "ec2afa1f"
-   ],
-   "rationale": "あなた（あなた）＝你；您"
+   ]
   },
   {
-   "qid": "Q-001-V2",
+   "qid": "Q-001-V2-c576f1cc5fa2",
    "prompt": "「さん」是什么意思？",
    "options": [
     "裤子",
@@ -395,12 +415,11 @@
     "7490f9f9",
     "14a6babc",
     "ce56038a"
-   ],
-   "rationale": "さん（さん）＝…先生／…小姐（敬称）"
+   ]
   },
   {
-   "qid": "Q-001-K",
-   "prompt": "汉字「日」的读音是？",
+   "qid": "Q-001-K-ceace4bb57d6",
+   "prompt": "汉字「日」的一个常用读音是？",
    "options": [
     "リュウ",
     "ニチ",
@@ -413,11 +432,10 @@
     "ce3fa691",
     "41bd08e3",
     "28bc35f1"
-   ],
-   "rationale": "日：音 ニチ、ジツ｜训 ひ、か"
+   ]
   },
   {
-   "qid": "Q-001-G",
+   "qid": "Q-001-G-24104b2b10a0",
    "prompt": "句型「N は N です」的意思是？",
    "options": [
     "用…；靠…；以…",
@@ -431,11 +449,10 @@
     "ae311340",
     "235aacc0",
     "bb8e19d0"
-   ],
-   "rationale": "N は N です＝…是…"
+   ]
   },
   {
-   "qid": "Q-001-V5",
+   "qid": "Q-001-V5-105b14fe398c",
    "prompt": "「こんにちは」是什么意思？",
    "options": [
     "醒",
@@ -449,8 +466,7 @@
     "538e3734",
     "d5de2a67",
     "ec0a7553"
-   ],
-   "rationale": "こんにちは（こんにちは）＝你好（白天问候）"
+   ]
   }
  ],
  "listening_material": null

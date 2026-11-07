@@ -8,7 +8,7 @@
 
 设计要点：
 - 每天 60 分钟，5 块：复习/新词/语法/听力(可选)/练习
-- 听力从 Day 46 起，每 7 天 3 次（学习日 %7 ∈ {1,3,5}）
+- 听力从 Day 47 起，每 7 天 3 次（学习日 %7 ∈ {1,3,5}）
 - 新词：常规日约 17，听力日约 12，总量精确等于入库新增数
 - 语法：每天 1 条，30 天各 2 条
 - 汉字：每天 3 个，30 天各 4 个
@@ -33,23 +33,6 @@ PHASES = [
     ("P4", 131, 150, "N3 后半 + 真题"),
 ]
 
-SCENES = [
-    ("greeting", "问候与自我介绍", "第一次见面，介绍自己是谁、从哪来"),
-    ("family", "家人与朋友", "说清家里有谁、做什么工作"),
-    ("food", "吃饭与点单", "在店里点餐、说忌口、结账"),
-    ("shopping", "购物与价格", "问价、比较、决定买哪个"),
-    ("transport", "电车与问路", "问怎么走、几点到、在哪换乘"),
-    ("health", "医院与身体", "说症状、从什么时候开始、拿药"),
-    ("work", "打工与职场", "请假、汇报进度、接电话"),
-    ("housing", "租房与邻居", "看房、问条件、和邻居打招呼"),
-    ("study", "学校与学习", "选课、问作业、和同学商量"),
-    ("travel", "旅行与住宿", "订房、办手续、问观光信息"),
-    ("notice", "通知与手续", "读市政/公司通知，找出截止时间和要办的事"),
-    ("news", "新闻与天气", "听懂大意、抓时间地点数字"),
-    ("emotion", "心情与评价", "说喜欢/担心/后悔，评价事物"),
-    ("request", "请求与帮助", "请人帮忙、拒绝、提条件"),
-    ("plan", "计划与约定", "约时间、改计划、说明理由"),
-]
 
 
 def read(name):
@@ -99,7 +82,6 @@ def build():
     grammar = sorted(read("grammar.jsonl"), key=lambda x: ("N5 N4 N3".index(x.get("jlpt", "N5")), int(x["id"][1:])))
     kanji = sorted(read("kanji.jsonl"), key=lambda x: ("N5 N4 N3".index(x.get("jlpt", "N5")), int(x["id"][1:])))
     materials = read("materials.jsonl")
-    questions = read("questions.jsonl")
 
     # v5：从 0 基础开始，全部 2700 词 / 276 语法 / 620 汉字都要排进 150 天，
     # 不能只排「新增」，否则旧 340 词永远不教（复审 P0）。
@@ -160,59 +142,24 @@ def build():
     # 汉字：620 / 150 ≈ 4.1，每天 4 个，最后几天补 5
     kby, ki = defaultdict(list), 0
     for d in range(1, DAYS + 1):
-        n = 4 if d < DAYS else 8
+        n = 5 if d <= 20 else 4
         kby[d] = new_kanji[ki:ki + n]; ki += n
     while ki < len(new_kanji):
         kby[DAYS].append(new_kanji[ki]); ki += 1
 
-    # 素材：按级别分池，听力日优先 listening
-    pool = defaultdict(lambda: {"reading": [], "listening": []})
-    for m in materials:
-        lvl = m.get("level") or "N5"
-        kind = m.get("kind")
-        if kind in ("reading", "listening") and m.get("text_ja"):
-            pool[lvl][kind].append(m["id"])
-    for lvl in pool:
-        for k in pool[lvl]:
-            pool[lvl][k].sort()
-
-    used_m = Counter()
-    mby = {}
-    for d in range(1, DAYS + 1):
-        lvl = level_of_day(d)
-        cand = pool.get(lvl) or pool.get("N3") or pool.get("N4")
-        if not cand:
-            mby[d] = []; continue
-        kind = "listening" if is_listening_day(d) else "reading"
-        ids = cand.get(kind) or cand.get("reading") or []
-        if not ids:
-            mby[d] = []
-            continue
-        ids = sorted(ids, key=lambda x: (used_m[x], x))
-        pick = ids[0]
-        used_m[pick] += 1
-        mby[d] = [pick]
-
-    # 题目：按级别分池，每天 6 题
-    qpool = defaultdict(list)
-    for q in questions:
-        lv = q.get("jlpt") or q.get("level") or "N5"
-        qpool[lv].append(q["id"])
-    qby, qidx = {}, defaultdict(int)
-    for d in range(1, DAYS + 1):
-        lv = level_of_day(d)
-        ids = qpool.get(lv) or qpool.get("N5") or []
-        if not ids:
-            qby[d] = []; continue
-        take = [ids[(qidx[lv] + i) % len(ids)] for i in range(6)]
-        qidx[lv] += 6
-        qby[d] = take
+    # 只使用带三题的 v5 原创听力；按级别顺序一次性分配，不循环复用。
+    listening_pool = sorted([m for m in materials if m.get("kind") == "listening"
+                             and len(m.get("questions", [])) == 3],
+                            key=lambda m: (m.get("level", "N4"), m["id"]))
+    listening_days = [d for d in range(1, DAYS + 1) if is_listening_day(d)]
+    if len(listening_pool) < len(listening_days):
+        raise ValueError("听力材料不足，拒绝重复填充")
+    mby = {d: [m["id"]] for d, m in zip(listening_days, listening_pool)}
 
     days = []
     learned_v, learned_g = [], []
     for d in range(1, DAYS + 1):
         ph, a, b = phase_of(d)
-        scene_key, scene_zh, can_do_scene = SCENES[(d - 1) % len(SCENES)]
         nv = vby.get(d, [])
         ng = gby.get(d, [])
         nk = kby.get(d, [])
@@ -224,19 +171,25 @@ def build():
                 rev += [v["id"] for v in vby.get(d - back, [])][:4]
         rev = list(dict.fromkeys(rev))[:12]
         gpat = ng[0]["pattern"] if ng else ""
-        can_do = "在「%s」场景里，用 %s 说清一件事" % (scene_zh, gpat) if gpat else can_do_scene
-        blocks = [
-            {"min": 12, "type": "复习", "desc": "FSRS 到期 ≤80 张，三档自评"},
-            {"min": 14 if not listening else 8, "type": "新词", "desc": "%d 个新词 + 朝鲜语汉字词对照" % len(nv)},
-            {"min": 7, "type": "语法", "desc": "、".join(g["pattern"] for g in ng) + "（含韩语对照）"},
-            {"min": 8 if listening else 0, "type": "听力", "desc": "1 段 60–90 秒 + 3 题" if listening else ""},
-            {"min": 6 if not listening else 4, "type": "练习", "desc": "6 题，交错混合"},
-        ]
-        blocks = [x for x in blocks if x["min"] > 0]
-        blocks.append({"min": 60 - sum(x["min"] for x in blocks), "type": "会话", "desc": "抽词/改句子/讲错题"})
+        patterns = "、".join(g["pattern"] for g in ng)
+        meanings = "；".join(g["meaning_zh"] for g in ng)
+        scene_key = "grammar-" + "-".join(g["id"] for g in ng)
+        scene_zh = patterns or "词句复习"
+        can_do_scene = meanings or "用当天新词组织句子"
+        can_do = "用「%s」造两句自己的话，表达：%s" % (scene_zh, can_do_scene)
+        budgets = [("复习", 10), ("新词", 14 if not listening else 8),
+                   ("语法", 6), ("听力", 8 if listening else 0),
+                   ("句子输出", 6 if not listening else 5), ("练习", 6 if not listening else 5),
+                   ("会话", 18)]
+        blocks = [{"type": kind, "min": minutes, "desc": {
+            "复习": "到期项优先；未完成顺延，不追赶",
+            "新词": "%d 个新词；实际用时超预算时记录未完成" % len(nv),
+            "语法": patterns, "听力": "原创 TTS + 3 道理解题；时长为估计，非真人音频",
+            "句子输出": "先独立写，再交会话批改", "练习": "6 题即时自评",
+            "会话": "抽词、造句、批改"}[kind]} for kind, minutes in budgets if minutes]
         days.append({
-            "day": d, "phase": ph, "phase_name": phase_of(d)[0],
-            "theme": "%s｜%s" % (scene_zh, "、".join(g["pattern"] for g in ng[:2])),
+            "day": d, "phase": ph, "phase_name": next(name for code, _, _, name in PHASES if code == ph),
+            "theme": scene_zh,
             "scene": can_do_scene, "scene_tag": scene_key, "scene_topic_key": scene_key,
             "scene_topic": scene_zh, "can_do": can_do,
             "focus": ["词汇", "语法", "输出"] if not listening else ["词汇", "听力", "输出"],
@@ -253,7 +206,7 @@ def build():
             "objectives": [
                 "认出并读出今天的 %d 个新词" % len(nv),
                 "用 %s 造 2 句自己的话" % ("、".join(g["pattern"] for g in ng) or "今天语法"),
-                "听懂/读懂今天的素材并答对 3 题",
+                "听完当天素材并回答 3 题" if listening else "独立写当天句子，记录不会的表达",
             ],
             "lesson_core": [
                 {"ja": e.get("ja", ""), "zh": e.get("zh", ""), "origin": "grammar_example"}
@@ -261,7 +214,7 @@ def build():
             ][:3],
             "review_plan": [],
             "teaching_notes": [],
-            "completion": "复习完成 + 新词自评 + 语法造句 2 句 + 练习 ≥4/6",
+            "completion": "当天客观题全部作答且正确率 ≥70%；复习与独立输出另由教师核对",
             "review_status": "generated",
         })
         learned_v += [v["id"] for v in nv]
@@ -270,7 +223,7 @@ def build():
     data = {
         "meta": {
             "version": "5.0", "days": DAYS, "minutes_per_day": 60,
-            "total_hours": DAYS, "listening_from": 46,
+            "total_hours": DAYS, "listening_from": 47,
             "target": "N3 范围覆盖 85%，真题 55–65%",
             "honesty": "2,700 词覆盖 N3 高频约 85%，不是全量 3,700；不承诺 N3 合格。",
             "generated_at": "2026-11-07",
@@ -292,7 +245,7 @@ def build():
     lines = ["# v5 覆盖报告", "",
              "- 天数：%d｜总时长：%d 小时" % (DAYS, DAYS),
              "- 新词：%d｜新语法：%d｜新汉字：%d" % (c["vocab"], c["grammar"], c["kanji"]),
-             "- 听力日：%d 天（Day 46 起，每周 3 次）" % c["listening_days"],
+             "- 听力日：%d 天（Day 47 起，每周 3 次）" % c["listening_days"],
              "- 词库总量：%d｜语法：%d｜汉字：%d" % (len(vocab), len(grammar), len(kanji)),
              "", "## 每天新词分布", ""]
     dist = Counter(len(d["new_vocab_ids"]) for d in days)
@@ -313,7 +266,7 @@ def build():
             x = v[vid]
             ko = "｜朝鲜语：%s" % x["ko_hanja"] if x.get("ko_hanja") else ""
             ex = x["examples"][0] if x.get("examples") else {"ja": "", "zh": ""}
-            md.append("- **%s**（%s）%s%s  " % (x["surface"], x["kana"], x["meaning_zh"], ko))
+            md.append("- **%s**（%s）%s%s<br>" % (x["surface"], x["kana"], x["meaning_zh"], ko))
             if ex.get("ja"):
                 md.append("  例：%s（%s）" % (ex["ja"], ex.get("zh", "")))
         md += ["", "## 语法", ""]

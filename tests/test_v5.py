@@ -168,3 +168,94 @@ class TestSessionProtocol(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
+
+
+class TestReviewRegressions(unittest.TestCase):
+    """2026-11-07 修复前冻结的缺陷复现；不随实现调整。"""
+
+    def test_visible_minutes_match_curriculum(self):
+        cur = json.loads((ROOT / 'curriculum/curriculum.json').read_text())['days']
+        for d in cur:
+            page = (ROOT / ('web/day-%03d.html' % d['day'])).read_text()
+            mins = [int(n) for n in re.findall(r'class="min">(\d+) 分钟', page)]
+            self.assertEqual(sum(mins), 42, d['day'])
+            self.assertEqual(sum(b['min'] for b in d['blocks'] if b['type'] != '会话'), 42)
+
+    def test_listening_distinct_and_three_questions(self):
+        cur = json.loads((ROOT / 'curriculum/curriculum.json').read_text())['days']
+        seen = set()
+        for d in cur:
+            if not d['listening']:
+                continue
+            p = json.loads((ROOT / ('web/data/day-%03d.json' % d['day'])).read_text())
+            m = p['listening_material']
+            self.assertNotIn(m['id'], seen)
+            seen.add(m['id'])
+            self.assertEqual(len(m.get('questions', [])), 3)
+            self.assertGreaterEqual(len(m['transcript']), 300)
+            html = (ROOT / ('web/day-%03d.html' % d['day'])).read_text()
+            self.assertLess(html.index('id="listening"'), html.index('id="sentences"'))
+
+    def test_no_plain_solution_in_public_exercises(self):
+        p = json.loads((ROOT / 'web/data/day-001.json').read_text())
+        for q in p['quiz']:
+            self.assertNotIn('rationale', q)
+        for s in p['sentences']:
+            self.assertNotIn('answer_ja', s)
+            self.assertNotIn('answer_zh', s)
+
+    def test_daily_refreshes_stale_brief_preserves_report(self):
+        import tempfile
+        from unittest.mock import patch
+        sys.path.insert(0, str(ROOT / 'scripts'))
+        import session_v5 as s
+        with tempfile.TemporaryDirectory() as td:
+            days = Path(td)
+            folder = days / 'day-001'; folder.mkdir()
+            (folder / 'brief.md').write_text('stale')
+            (folder / 'report.md').write_text('student work')
+            with patch.object(s, 'DAYS', days):
+                s.brief(1)
+                self.assertNotEqual((folder / 'brief.md').read_text(), 'stale')
+                s.report(1)
+                self.assertEqual((folder / 'report.md').read_text(), 'student work')
+
+    def test_all_web_questions_registered_for_import(self):
+        import sqlite3
+        with sqlite3.connect(ROOT / 'data/state.db') as db:
+            ids = {r[0] for r in db.execute('select id from questions')}
+        p = json.loads((ROOT / 'web/data/day-047.json').read_text())
+        for q in p['quiz']:
+            self.assertIn(q['qid'], ids)
+
+    def test_distinct_sessions_do_not_collapse_into_day_session(self):
+        import tempfile
+        import sqlite3
+        import argparse
+        import io
+        from contextlib import redirect_stdout
+        sys.path.insert(0, str(ROOT / 'scripts'))
+        import nh80
+        import cloud_sync
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            (root / 'data').mkdir()
+            (root / 'knowledge').symlink_to(ROOT / 'knowledge')
+            src = sqlite3.connect(ROOT / 'data/state.db')
+            dst = sqlite3.connect(root / 'data/state.db')
+            src.backup(dst)
+            src.close(); dst.close()
+            page = json.loads((ROOT / 'web/data/day-150.json').read_text())
+            qid = page['quiz'][0]['qid']
+            key = json.loads((ROOT / 'deploy/worker/src/generated-key.json').read_text())['answers']
+            results = []
+            for sid in ('codex-test-first', 'codex-test-retake'):
+                payload = {'v': 1, 'day': 150, 'session': sid, 'ts': '2026-11-07T00:00:00Z',
+                           'minutes': None, 'source': 'test',
+                           'results': [{'qid': qid, 'answer': key[qid]['answer']}]}
+                with redirect_stdout(io.StringIO()) as buf:
+                    nh80.cmd_import_web(argparse.Namespace(root=str(root), code=cloud_sync.encode_payload(payload)))
+                results.append(json.loads(buf.getvalue()))
+            self.assertEqual(len(results[0]['applied']), 1)
+            self.assertEqual(len(results[1]['applied']), 1)
+            self.assertNotEqual(results[0]['session_id'], results[1]['session_id'])

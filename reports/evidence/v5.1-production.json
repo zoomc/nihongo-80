@@ -1,0 +1,47 @@
+{
+  "worker_version": "0237b65b-0623-4062-b404-02d9cf6a548f",
+  "checks": [
+    {
+      "path": "/day-001.html",
+      "status": 200,
+      "sha256": "01b96a8b60e82952ddf23a15570f4b3287037139cdf8e6909ce1bbdb5385865a",
+      "matches_local": true
+    },
+    {
+      "path": "/day-047.html",
+      "status": 200,
+      "sha256": "e800760cf14651cfed19b3e37535678138b64afcc93f1da4300dbb8eb2c5e59b",
+      "matches_local": true
+    },
+    {
+      "path": "/day-150.html",
+      "status": 200,
+      "sha256": "ca27040bafef165cc6195bf825c205656ac798b846af2f11cfa0c9a98fe2b0f4",
+      "matches_local": true
+    },
+    {
+      "path": "/assets/app.js",
+      "status": 200,
+      "sha256": "e52762fe0f99885b8a5f83085ba5c9c32ff3e6bf6c264ebdb58fdbbc72c0dd14",
+      "matches_local": true
+    },
+    {
+      "path": "/assets/app.css",
+      "status": 200,
+      "sha256": "2c58ffea3d08d62fa7482a3f8f06b93679aa1f4db6303b3606d10b289f74d095",
+      "matches_local": true
+    },
+    {
+      "path": "/api/health",
+      "status": 200,
+      "sha256": "9f740070512df426f1fcf71f6292ba6fc839f379edc0cc15981b02b4bde8bda4",
+      "health": {
+        "status": "ok",
+        "features": {
+          "db": true,
+          "sync": true
+        }
+      }
+    }
+  ]
+}

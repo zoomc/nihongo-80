@@ -1,6 +1,6 @@
-# Nihongo 150 · 当前项目入口（v8）
+# Nihongo 150 · 当前项目入口（v9）
 
-先读 `HANDOFF.md`、`reports/v6_completion.md`、`CONTRACTS.md`（末尾 v8 修订优先于旧版示例）。当前目录名 nihongo-80 是历史名称，课程是 150 天。
+先读 `HANDOFF.md`、`reports/v6_completion.md`、`CONTRACTS.md`（末尾 v9 修订优先于旧版示例）。当前目录名 nihongo-80 是历史名称，课程是 150 天。
 
 ## 产品与学习者
 
@@ -28,13 +28,15 @@ python3 -m unittest discover -s tests -p test_v5.py
 ## 每日会话
 
 ```sh
-python3 scripts/session_v5.py daily --day N
+python3 scripts/session_v5.py daily --sync --day N
 python3 scripts/nh80.py start-day N
+# 会话结束，生成并发布本地复习建议，检查 published 字段
+python3 scripts/nh80.py study-sync --push-only
 ```
 
-读 STATE、当天 brief、curriculum 与数据库（只读）。先给页面链接，等学生看完；答疑、解释选择题错因；可选口头复述或造句。网页不要求手写，三道选句必做、七道选句拓展。网页预算 42 分钟，会话 18 分钟，听力已包含在 42 分钟内。当天精确内容和时间只取课程 blocks，不使用旧 80 天模板。
+开始时 `daily --sync` 经 nh80 CLI 拉取作答和自评并生成复习上下文；同步失败要说明，发布失败检查 `published` 并可重试。显式读取 `data/review/CONTEXT.md`、`data/review/context.json`，以及 STATE、当天 brief、curriculum 与数据库（只读）。先给页面链接，等学生看完；答疑、解释选择题错因；可选口头复述或造句。网页不要求手写，三道选句必做、七道选句拓展。网页预算 42 分钟，会话 18 分钟，听力已包含在 42 分钟内。当天精确内容和时间只取课程 blocks，不使用旧 80 天模板。
 
-网页提交只代表原始作答保存。云端拉取要使用本机密钥（禁止显示或提交），见 `nh80.py pull-cloud --help`。choice模式导入后，CLI自动按必做题完整性及70%正确率计算完成，无需手写验收；未达标记录incomplete，不降低难度。旧教师输出接口仅兼容历史会话。
+网页提交只代表原始作答保存。同步使用 `deploy/.sync-key` 本机密钥（禁止显示或提交）。choice模式导入后，CLI自动按必做题完整性及70%正确率计算完成，无需手写验收；未达标记录incomplete，不降低难度。旧教师输出接口仅兼容历史会话。
 
 ## 不可违反
 

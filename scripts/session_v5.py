@@ -98,7 +98,7 @@ def brief(day: int, force=False):
                                                 "、".join(k.get("onyomi") or []),
                                                 "、".join(k.get("kunyomi") or [])))
     L += ["", "## 复习到期", ""]
-    L.append("见页面「今日复习」；上限 80 张，超出顺延。")
+    L.append("会话开始同步后读取 `data/review/CONTEXT.md` 和 `data/review/context.json`，优先真实 FSRS 到期项；页面内容是课程复习资源。")
     L += ["", "## 会话流程（18 分钟）", "",
           "1. **先发页面链接**，等学生看完，不要一上来讲课。",
           "2. 只回答学生问的，不复述页面。",
@@ -106,6 +106,7 @@ def brief(day: int, force=False):
           "4. 拉取或导入choice模式作答后，CLI自动按必做题完整性和70%正确率计算当天完成，不要求手写或confirm-output。",
           "5. 会话优先解释错题；有余力可口头复述或造句，不作为网页完成的前置条件。",
           "6. 写 `days/day-%03d/report.md` 记录难点；未答齐或未达标就补做，不降低难度。" % day,
+          "7. 会话结束执行 `python3 scripts/nh80.py study-sync --push-only`，检查发布结果。",
           "", "## 禁止", "",
           "- 不改 `plan/`、`STATE.md`、`knowledge/seeds/`。",
           "- 不把答案写进本文件。",
@@ -154,6 +155,7 @@ def task_new(day: int, role="tutor"):
     fm = ["---", "id: " + tid, "role: " + role, "day: %d" % day, "owner: null",
           "status: open", "depends_on: []",
           "inputs:", "  - STATE.md", "  - days/day-%03d/brief.md" % day, "  - data/state.db",
+          "  - data/review/CONTEXT.md", "  - data/review/context.json",
           "outputs:", "  - days/day-%03d/report.md" % day,
           "acceptance:", "  - 6 块完成或明确记录未完成原因", "  - 报告含「摘要」≤5 行",
           "created_at: %s" % now(), "claimed_at: null", "done_at: null", "---", "",
@@ -269,11 +271,13 @@ def main(argv=None):
     def _daily(a):
         if a.sync:
             import subprocess, sys
-            subprocess.run([sys.executable,str(ROOT/"scripts/nh80.py"),"pull-cloud","--base","https://nihongo80.cmjfire.workers.dev"],check=True)
+            subprocess.run([sys.executable,str(ROOT/"scripts/nh80.py"),"study-sync"],check=True)
         p = progress()
         day = a.day or int(p.get("day") or 1)
         p["day"] = day; save_progress(p)
         print(brief(day)); print(state_write(day)); print(page_link(day))
+        print("复习上下文：data/review/CONTEXT.md；data/review/context.json（需显式读取）")
+        print("会话结束：python3 scripts/nh80.py study-sync --push-only")
     dd.set_defaults(fn=_daily)
     args = ap.parse_args(argv)
     args.fn(args)

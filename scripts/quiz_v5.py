@@ -190,7 +190,7 @@ def listening_quiz(day, material):
 
 
 def public_question(q):
-    return {k: q[k] for k in ("qid", "prompt", "options", "h", "oh", "passage") if k in q}
+    return {k: q[k] for k in ("id", "qid", "type", "prompt", "options", "h", "oh", "passage", "day", "group", "capability", "knowledge_ids", "source_day", "optional") if k in q}
 
 
 def day_questions(day, vocab, grammar, kanji, materials):

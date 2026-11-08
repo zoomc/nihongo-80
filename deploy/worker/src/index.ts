@@ -1,4 +1,3 @@
-import generatedKey from "./generated-key.json";
 // Nihongo 80 Worker
 //
 // 职责（docs/REVISION_CONTRACT.md 第 10 节）：
@@ -26,6 +25,7 @@ interface D1Result<T = unknown> {
 interface D1PreparedStatement {
   bind(...values: unknown[]): D1PreparedStatement;
   run(): Promise<D1Result>;
+  first<T = Record<string, unknown>>(): Promise<T | null>;
   all<T = Record<string, unknown>>(): Promise<D1Result<T>>;
 }
 
@@ -107,69 +107,28 @@ function norm(value: unknown): string {
 }
 
 interface KeyEntry {
-  day?: number;
-  type?: string;
-  answer?: string;
-  accepted?: string[];
+  day: number;
+  type: string;
+  answer_hash: string;
+  knowledge_ids: string[];
   capability?: string;
 }
-
 type AnswerKey = Map<string, KeyEntry>;
 
-/**
- * answer-key.json 由 scripts/build_site.py 生成，这里做容错解析，避免形状差异导致整站失效。
- * 支持：{answers:{qid:{type,answer,accepted,capability}}}、{key:{...}}、
- *       {questions:[{id|qid,...}]}、以及顶层直接是 qid -> 答案 的映射。
- */
-function indexAnswerKey(raw: unknown): AnswerKey {
-  const key: AnswerKey = new Map();
-  const put = (qid: unknown, value: unknown) => {
-    if (typeof qid !== "string" || !qid) return;
-    if (typeof value === "string") {
-      key.set(qid, { answer: value });
-    } else if (value && typeof value === "object") {
-      key.set(qid, value as KeyEntry);
-    }
-  };
-
-  const root = raw as Record<string, unknown> | null;
-  let table: unknown = root;
-  if (root && !Array.isArray(root) && typeof root === "object") {
-    table = root.answers ?? root.key ?? root.questions ?? root;
-  }
-  if (Array.isArray(table)) {
-    for (const item of table) {
-      if (!item || typeof item !== "object") continue;
-      const obj = item as Record<string, unknown>;
-      put(obj.qid ?? obj.id, obj);
-    }
-  } else if (table && typeof table === "object") {
-    for (const [qid, value] of Object.entries(table as Record<string, unknown>)) put(qid, value);
-  }
-  return key;
+async function loadAnswerKey(env: Env, url: URL, day: number): Promise<AnswerKey | null> {
+  try {
+    const path = `/data/grade/day-${String(day).padStart(3, "0")}.json`;
+    const response = await env.ASSETS.fetch(new Request(new URL(path, url.origin)));
+    if (!response.ok) return null;
+    const data = await response.json() as { answers?: Record<string, KeyEntry> };
+    if (!data.answers || typeof data.answers !== "object" || Array.isArray(data.answers)) return null;
+    return new Map(Object.entries(data.answers));
+  } catch { return null; }
 }
 
-const BUNDLED_KEY = indexAnswerKey(generatedKey);
-async function loadAnswerKey(env: Env, url: URL): Promise<AnswerKey | null> {
-  return BUNDLED_KEY;
-}
-
-/** 客观题重判；开放题 / 缺标准答案 / 缺条目 → null（无法重判）。 */
-function regrade(entry: KeyEntry | undefined, answer: unknown): boolean | null {
-  if (!entry) return null;
-  const type = typeof entry.type === "string" ? entry.type : "";
-  if (OPEN_TYPES.has(type)) return null;
-
-  const candidates: string[] = [];
-  if (Array.isArray(entry.accepted)) {
-    for (const item of entry.accepted) candidates.push(String(item));
-  }
-  if (typeof entry.answer === "string") candidates.push(entry.answer);
-  if (candidates.length === 0) return null;
-
-  const strip = (s: string) => (type === "reorder" ? norm(s).replace(/,/g, "") : norm(s));
-  const actual = strip(String(answer ?? ""));
-  return candidates.some((c) => strip(c) === actual);
+async function regrade(entry: KeyEntry | undefined, answer: unknown): Promise<boolean | null> {
+  if (!entry || entry.type !== "mcq" || !/^[a-f0-9]{64}$/.test(entry.answer_hash ?? "")) return null;
+  return constantTimeEqual(await sha256Hex(norm(answer)), entry.answer_hash);
 }
 
 async function sha256Hex(text: string): Promise<string> {
@@ -185,6 +144,7 @@ function constantTimeEqual(a: string, b: string): boolean {
 }
 
 function asInt(value: unknown, fallback: number | null, min: number, max: number): number | null {
+  if (value === null || value === undefined || value === "") return fallback;
   const n = typeof value === "number" ? value : Number(value);
   if (!Number.isFinite(n)) return fallback;
   return Math.min(max, Math.max(min, Math.trunc(n)));
@@ -240,7 +200,7 @@ async function handlePostEvents(request: Request, env: Env, url: URL): Promise<R
   if (!constantTimeEqual(request.headers.get("X-NH80-Key") ?? "",env.NH80_SYNC_KEY))
     return jsonResponse({ok:false,reason:"unauthorized"},401,origin);
   const rawBody = await request.text();
-  if (rawBody.length > MAX_BODY_BYTES) {
+  if (new TextEncoder().encode(rawBody).length > MAX_BODY_BYTES) {
     return jsonResponse({ ok: false, reason: "body_too_large" }, 413, origin);
   }
   let body: Record<string, unknown>;
@@ -286,97 +246,57 @@ async function handlePostEvents(request: Request, env: Env, url: URL): Promise<R
     return jsonResponse({ ok: false, reason: "no_db" }, 503, origin);
   }
 
-  const answerKey = await loadAnswerKey(env, url);
-  const wrong = results.find(r => !answerKey?.has(r.qid) || answerKey.get(r.qid)?.day !== day);
-  if (wrong) return jsonResponse({ok:false, reason:"unknown_or_wrong_day_question"}, 400, origin);
-  const serverTs = new Date().toISOString();
-
-  const graded = results.map((r) => {
-    const entry = answerKey ? answerKey.get(r.qid) : undefined;
-    const correct = answerKey ? regrade(entry, r.answer) : null;
-    return { r, entry, correct };
+  const answerKey = await loadAnswerKey(env, url, day);
+  if (!answerKey) return jsonResponse({ok:false,reason:"grade_unavailable",local_export:true},503,origin);
+  const wrong = results.find(r => {
+    const entry = answerKey.get(r.qid);
+    return !entry || entry.day !== day || entry.type !== "mcq" ||
+      !/^[a-f0-9]{64}$/.test(entry.answer_hash ?? "") || !Array.isArray(entry.knowledge_ids) ||
+      entry.knowledge_ids.some(k => typeof k !== "string" || !/^[VGK]\d{4}$/.test(k));
   });
-
+  if (wrong) return jsonResponse({ok:false,reason:"unknown_or_wrong_day_question",local_export:true},400,origin);
+  const serverTs = new Date().toISOString();
   const metadata = JSON.stringify({review_ratings:body.review_ratings ?? [],sentences:body.sentences ?? [],practice_mode:body.practice_mode === "choice" ? "choice" : "teacher"});
-  if (metadata.length > 16384) return jsonResponse({ok:false,reason:"drafts_too_large"},413,origin);
-  const dayKey = new Date().toISOString().slice(0,10);
+  if (new TextEncoder().encode(metadata).length > 16384) return jsonResponse({ok:false,reason:"drafts_too_large",local_export:true},413,origin);
   try {
-    await db.prepare("INSERT OR IGNORE INTO sync_budget(id,used) VALUES(?,0),('total',0)").bind(dayKey).run();
-    const daily = await db.prepare("UPDATE sync_budget SET used=used+? WHERE id=? AND used+?<=1000 RETURNING used")
-      .bind(results.length,dayKey,results.length).first();
-    if (!daily) return jsonResponse({ok:false,reason:"daily_budget",local_export:true},429,origin);
-    const total = await db.prepare("UPDATE sync_budget SET used=used+? WHERE id='total' AND used+?<=5000 RETURNING used")
-      .bind(results.length,results.length).first();
-    if (!total) return jsonResponse({ok:false,reason:"storage_budget",local_export:true},429,origin);
-  } catch {
-    return jsonResponse({ok:false,reason:"budget_unavailable",local_export:true},503,origin);
-  }
-  const statements: D1PreparedStatement[] = [];
-  for (const item of graded) {
-    const { r, entry, correct } = item;
-    const hinted = r.hinted || r.revealed;
-    const payloadHash = await sha256Hex(
-      JSON.stringify([day, session, r.qid, r.answer, hinted, r.revealed, r.seconds, clientTs ?? ""]),
-    );
-    statements.push(
-      db
-        .prepare(
-          `INSERT OR IGNORE INTO events
-             (client_ts, server_ts, day, session, qid, answer, hinted, revealed, seconds,
-              capability, regraded_correct, payload_hash, session_payload)
-           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-        )
-        .bind(
-          clientTs,
-          serverTs,
-          day,
-          session,
-          r.qid,
-          r.answer,
-          hinted ? 1 : 0,
-          r.revealed ? 1 : 0,
-          r.seconds,
-          entry && typeof entry.capability === "string" ? entry.capability : null,
-          correct === null ? null : correct ? 1 : 0,
-          payloadHash,
-          metadata,
-        ),
-    );
-  }
-
-  let changes: number[] = [];
-  try {
-    if (typeof db.batch === "function") {
-      const batchResults = await db.batch(statements);
-      changes = batchResults.map((x) => x?.meta?.changes ?? 0);
-    } else {
-      for (const stmt of statements) {
-        const res = await stmt.run();
-        changes.push(res?.meta?.changes ?? 0);
-      }
+    const existing = await db.prepare("SELECT day,payload FROM study_sessions WHERE session=?").bind(session).first<{day:number,payload:string}>();
+    if (existing && existing.day !== day) return jsonResponse({ok:false,reason:"session_day_conflict",local_export:true},409,origin);
+    if (existing && existing.payload !== metadata) return jsonResponse({ok:false,reason:"session_metadata_conflict",local_export:true},409,origin);
+    // The guarded upsert also detects concurrent conflicting first submissions;
+    // a NOT NULL violation aborts the entire D1 batch before any event is committed.
+    const statements: D1PreparedStatement[] = [db.prepare(`INSERT INTO study_sessions(session,day,payload) VALUES(?,?,?)
+      ON CONFLICT(session) DO UPDATE SET payload=CASE
+        WHEN study_sessions.day=excluded.day AND study_sessions.payload=excluded.payload
+        THEN study_sessions.payload ELSE NULL END`).bind(session,day,metadata)];
+    for (const r of results) {
+      const entry = answerKey.get(r.qid)!;
+      const correct = await regrade(entry, r.answer);
+      const hinted = r.hinted || r.revealed;
+      const payloadHash = await sha256Hex(JSON.stringify([day,session,r.qid,r.answer,hinted,r.revealed,r.seconds,clientTs ?? ""]));
+      statements.push(db.prepare(`INSERT OR IGNORE INTO events
+        (client_ts,server_ts,day,session,qid,answer,hinted,revealed,seconds,capability,regraded_correct,payload_hash,session_payload,knowledge_ids)
+        VALUES (?,?,?,?,?,?,?,?,?,?,?,?,NULL,?)`)
+        .bind(clientTs,serverTs,day,session,r.qid,r.answer,hinted?1:0,r.revealed?1:0,r.seconds,
+          entry.capability ?? null,correct === null ? null : correct ? 1 : 0,payloadHash,JSON.stringify(entry.knowledge_ids)));
     }
+    if (!db.batch) throw new Error("batch_unavailable");
+    const batch = await db.batch(statements);
+    const stored = batch.slice(1).filter(x => (x.meta?.changes ?? 0) > 0).length;
+    return jsonResponse({ok:true,stored,duplicates:results.length-stored,regraded:results.length},200,origin);
   } catch (err) {
-    // 表不存在 / D1 异常：明确报错，但不吞成 500 让前端以为成功了。
-    return jsonResponse(
-      { ok: false, reason: "db_error", detail: String((err as Error)?.message ?? err).slice(0, 200) },
-      503,
-      origin,
-    );
+    if (String((err as Error)?.message ?? err).includes("NOT NULL constraint failed: study_sessions.payload"))
+      return jsonResponse({ok:false,reason:"session_metadata_conflict",local_export:true},409,origin);
+    return databaseError(err,origin);
   }
-
-  const stored = changes.filter((n) => n > 0).length;
-  const duplicates = changes.length - stored;
-  const regraded = answerKey ? graded.filter((x) => x.correct !== null).length : "unavailable";
-
-  return jsonResponse({ ok: true, stored, duplicates, regraded }, 200, origin);
 }
 
 // ---------------------------------------------------------------------------
 // GET /api/events
 // ---------------------------------------------------------------------------
 
-const EVENT_COLUMNS =
-  "id, client_ts, server_ts, day, session, qid, answer, hinted, revealed, seconds, capability, regraded_correct, payload_hash, session_payload";
+const EVENT_COLUMNS = `e.id, e.client_ts, e.server_ts, e.day, e.session, e.qid, e.answer,
+ e.hinted, e.revealed, e.seconds, e.capability, e.regraded_correct, e.payload_hash,
+ COALESCE(e.session_payload, s.payload) AS session_payload, e.knowledge_ids`;
 
 async function handleGetEvents(request: Request, env: Env, url: URL): Promise<Response> {
   const origin = okOrigin(request, url);
@@ -397,7 +317,7 @@ async function handleGetEvents(request: Request, env: Env, url: URL): Promise<Re
 
   try {
     const res = await env.DB
-      .prepare(`SELECT ${EVENT_COLUMNS} FROM events WHERE id > ? ORDER BY id ASC LIMIT ?`)
+      .prepare(`SELECT ${EVENT_COLUMNS} FROM events e LEFT JOIN study_sessions s ON s.session=e.session WHERE e.id > ? ORDER BY e.id ASC LIMIT ?`)
       .bind(since, limit)
       .all<Record<string, unknown>>();
     const events = res.results ?? [];
@@ -410,6 +330,106 @@ async function handleGetEvents(request: Request, env: Env, url: URL): Promise<Re
       origin,
     );
   }
+}
+
+function databaseError(err: unknown, origin: string | null): Response {
+  const message = String((err as Error)?.message ?? err);
+  const reason = message.includes("daily_budget") ? "daily_budget" : message.includes("storage_budget") ? "storage_budget" : "db_error";
+  return jsonResponse({ok:false,reason,local_export:true},reason === "db_error" ? 503 : 429,origin);
+}
+
+function authenticate(request: Request, env: Env, origin: string | null): Response | null {
+  if (!env.NH80_SYNC_KEY) return jsonResponse({ok:false,reason:"no_key"},503,origin);
+  if (!constantTimeEqual(request.headers.get("X-NH80-Key") ?? "",env.NH80_SYNC_KEY))
+    return jsonResponse({ok:false,reason:"unauthorized"},401,origin);
+  if (!env.DB) return jsonResponse({ok:false,reason:"no_db",local_export:true},503,origin);
+  return null;
+}
+
+async function readJson(request: Request, maxBytes: number): Promise<Record<string, unknown> | string> {
+  const raw = await request.text();
+  if (new TextEncoder().encode(raw).length > maxBytes) return "body_too_large";
+  try {
+    const parsed = JSON.parse(raw);
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return "bad_json";
+    return parsed;
+  } catch { return "bad_json"; }
+}
+
+async function handleReviews(request: Request, env: Env, url: URL): Promise<Response> {
+  const origin = okOrigin(request,url);
+  const denied = authenticate(request,env,origin); if (denied) return denied;
+  const db = env.DB!;
+  try {
+    if (request.method === "GET") {
+      const since = asInt(url.searchParams.get("since"),0,0,Number.MAX_SAFE_INTEGER) ?? 0;
+      const limit = asInt(url.searchParams.get("limit"),200,1,500) ?? 200;
+      const rows = await db.prepare("SELECT id,event_id,kid,day,rating,created_at FROM rating_events WHERE id>? ORDER BY id ASC LIMIT ?").bind(since,limit).all();
+      return jsonResponse(rows.results ?? [],200,origin);
+    }
+    if (request.method !== "POST") return jsonResponse({ok:false,reason:"method_not_allowed"},405,origin);
+    const body = await readJson(request,MAX_BODY_BYTES);
+    if (typeof body === "string") return jsonResponse({ok:false,reason:body,local_export:true},body === "body_too_large" ? 413 : 400,origin);
+    if (!Array.isArray(body.reviews) || body.reviews.length < 1 || body.reviews.length > 40)
+      return jsonResponse({ok:false,reason:"bad_reviews",local_export:true},400,origin);
+    const now = new Date().toISOString();
+    const statements: D1PreparedStatement[] = [];
+    for (const raw of body.reviews) {
+      if (!raw || typeof raw !== "object" || Array.isArray(raw)) return jsonResponse({ok:false,reason:"bad_review",local_export:true},400,origin);
+      const r = raw as Record<string,unknown>;
+      if (typeof r.event_id !== "string" || !/^[A-Za-z0-9_.:-]{3,96}$/.test(r.event_id) ||
+          typeof r.kid !== "string" || !/^[VGK]\d{4}$/.test(r.kid) || strictInt(r.day,1,150) === null ||
+          !["again","hard","good"].includes(String(r.rating)))
+        return jsonResponse({ok:false,reason:"bad_review",local_export:true},400,origin);
+      statements.push(db.prepare("INSERT OR IGNORE INTO rating_events(event_id,kid,day,rating,created_at) VALUES(?,?,?,?,?)").bind(r.event_id,r.kid,r.day,r.rating,now));
+    }
+    if (!db.batch) throw new Error("batch_unavailable");
+    const out = await db.batch(statements);
+    const stored = out.filter(x => (x.meta?.changes ?? 0)>0).length;
+    return jsonResponse({ok:true,stored,duplicates:statements.length-stored},200,origin);
+  } catch (err) { return databaseError(err,origin); }
+}
+
+async function handleStudyPlan(request: Request, env: Env, url: URL): Promise<Response> {
+  const origin = okOrigin(request,url);
+  const denied = authenticate(request,env,origin); if (denied) return denied;
+  if (request.method !== "POST") return jsonResponse({ok:false,reason:"method_not_allowed"},405,origin);
+  const body = await readJson(request,128*1024);
+  if (typeof body === "string") return jsonResponse({ok:false,reason:body,local_export:true},body === "body_too_large" ? 413 : 400,origin);
+  const plan = body.plan;
+  if (!plan || typeof plan !== "object" || Array.isArray(plan) || typeof (plan as any).updated_at !== "string" ||
+      !Array.isArray((plan as any).due) || (plan as any).due.length > 1000 ||
+      (plan as any).due.some((d: any) => !d || typeof d !== "object" || typeof d.kid !== "string" || !/^[VGK]\d{4}$/.test(d.kid) ||
+       typeof d.due !== "string" || typeof d.stage !== "string" || !["string","number"].includes(typeof d.priority)))
+    return jsonResponse({ok:false,reason:"bad_plan",local_export:true},400,origin);
+  try {
+    await env.DB!.prepare("INSERT INTO study_projection(id,payload) VALUES(1,?) ON CONFLICT(id) DO UPDATE SET payload=excluded.payload").bind(JSON.stringify(plan)).run();
+    return jsonResponse({ok:true},200,origin);
+  } catch (err) { return databaseError(err,origin); }
+}
+
+async function handleStudy(request: Request, env: Env, url: URL): Promise<Response> {
+  const origin = okOrigin(request,url);
+  const denied = authenticate(request,env,origin); if (denied) return denied;
+  if (request.method !== "GET") return jsonResponse({ok:false,reason:"method_not_allowed"},405,origin);
+  try {
+    const db = env.DB!;
+    const ratings = await db.prepare(`SELECT r.kid,r.rating,r.day,r.created_at,
+      EXISTS(SELECT 1 FROM rating_events b WHERE b.kid=r.kid AND b.rating IN ('again','hard')) AS ever_bad
+      FROM rating_events r WHERE r.id=(SELECT MAX(x.id) FROM rating_events x WHERE x.kid=r.kid)
+      ORDER BY r.id DESC LIMIT 4000`).all();
+    const questions = await db.prepare(`SELECT e.qid,e.day,e.knowledge_ids,e.regraded_correct AS last_correct,
+      (SELECT COUNT(*) FROM events w WHERE w.qid=e.qid AND w.day=e.day AND w.regraded_correct=0) AS wrong_count
+      FROM events e WHERE e.id=(SELECT MAX(x.id) FROM events x WHERE x.qid=e.qid AND x.day=e.day)
+      AND EXISTS(SELECT 1 FROM events w WHERE w.qid=e.qid AND w.day=e.day AND w.regraded_correct=0)
+      ORDER BY e.id DESC LIMIT 10000`).all();
+    const projection = await db.prepare("SELECT payload FROM study_projection WHERE id=1").first<{payload:string}>();
+    const rows = (questions.results ?? []).map((row: any) => {
+      let ids: unknown = []; try { ids = JSON.parse(row.knowledge_ids ?? "[]"); } catch { /* legacy */ }
+      return {...row,knowledge_ids:Array.isArray(ids) ? ids : []};
+    });
+    return jsonResponse({ratings:ratings.results ?? [],questions:rows,plan:projection ? JSON.parse(projection.payload) : null},200,origin);
+  } catch (err) { return databaseError(err,origin); }
 }
 
 // ---------------------------------------------------------------------------
@@ -428,12 +448,15 @@ export default {
       );
     }
 
-    if (url.pathname === "/api/events") {
+    if (["/api/events", "/api/reviews", "/api/study", "/api/study-plan"].includes(url.pathname)) {
       const denied = rejectCrossOrigin(request, url);
       if (denied) return denied;
       const opt = preflight(request, url);
       if (opt) return opt;
 
+      if (url.pathname === "/api/reviews") return handleReviews(request,env,url);
+      if (url.pathname === "/api/study") return handleStudy(request,env,url);
+      if (url.pathname === "/api/study-plan") return handleStudyPlan(request,env,url);
       if (request.method === "POST") return handlePostEvents(request, env, url);
       if (request.method === "GET") return handleGetEvents(request, env, url);
       return jsonResponse({ ok: false, reason: "method_not_allowed" }, 405, okOrigin(request, url));

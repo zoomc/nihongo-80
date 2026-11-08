@@ -1,12 +1,22 @@
-# HANDOFF · Nihongo 150 v8
+# HANDOFF · Nihongo 150 v9
 
-2026-11-08：当前网页学习方式已更新至v8，验收见 `reports/v8_learning_ui.md`。v7.1历史发布基线：v7 做了三路独立复审（内容库 / 免费听力资源 / 课程与题目质量）并修掉点名问题；
+2026-11-08：当前为 v9，新增词法翻页练习、五日复习单元、私有错题与跨会话 FSRS 同步，验收见 `reports/v9_completion.md`。v8记录见 `reports/v8_learning_ui.md`。v7.1历史发布基线：v7 做了三路独立复审（内容库 / 免费听力资源 / 课程与题目质量）并修掉点名问题；
 v7.1 收尾又消掉两条技术边界：Safari 音频兼容、preview 与 production 的 D1 数据隔离，并清理全部临时残留。
 验收与命令输出见 `reports/v7_completion.md`，v6 记录见 `reports/v6_completion.md`，
 数据来源与许可见 `DATA_LICENSES.md`。Git 具体提交以 `git log -1` 为准。
 
-- 当前v8 Production：`https://nihongo80.cmjfire.workers.dev`，Version `9d67c82c-10ff-438f-b2aa-ea392018dfc3`
-- 当前v8 Preview：`https://nihongo80-preview.cmjfire.workers.dev`，Version `3a96fa8f-4467-4922-9ad1-6299b27acfed`
+- 当前v9 Production：`https://nihongo80.cmjfire.workers.dev`，Version `fd52e145-11e2-48d9-ab86-030d50b8c399`
+- 当前v9 Preview：`https://nihongo80-preview.cmjfire.workers.dev`，Version `632d564c-65da-423b-b9c4-a6be99f2e912`
+
+## v9 学习与同步入口
+
+- 普通语法讲解不遮盖；今日重点红色加粗、句型与接续蓝色，浅色／深色均可用。
+- 全题库 8007 题：既有2535＋每日词法选做4872＋五日单元600；每天选做24–36题，必做门槛保持原样。
+- `review.html` 私人错题／忘了／不熟／到期清单，`unit-005.html` 至 `unit-150.html` 共30个完整五日词法清单与20题抽样巩固。
+- 浏览器先持久化再批量同步，失败保留；自评和答题分别幂等。个人状态通过口令API取，公开catalog不含个人进度。
+- WorkBuddy／其他 agent 开始：`python3 scripts/session_v5.py daily --sync`，显式读取 `data/review/CONTEXT.md`、`context.json` 及当天brief；结束：`python3 scripts/nh80.py study-sync --push-only`，确认 `published: true`。这由项目工作流执行，不依赖平台记忆。
+- 离线导出的 `nihongo-pending.json` 与旧每日作答文件均可经 `nh80 import-file --file ...` 导入，再发布计划；不手改SQLite。
+- 私有同步上下文、SQLite、学习口令不入Git。新增构建模块 `practice_v9.py` / `study_ui.py`，同步模块 `study_sync.py`。D1 的 `0004_study.sql` 已应用两环境。
 
 ## 产品决策
 
@@ -23,7 +33,7 @@ v7.1 收尾又消掉两条技术边界：Safari 音频兼容、preview 与 produ
 - 45 篇听力共 135 道理解题已重写：9 个模板的 5 变体 Q3 答案互不相同，`audio_text` 哈希与音频逐条一致。
 - 新增 `web/listening.html`：4 条 Wikimedia Commons PD/CC BY-SA 开放音频可在本页播放并逐文件署名；
   每条同时给 Wikimedia 官方 mp3 转码与原始 Ogg 两个 `<source>`，Chrome / Firefox / Safari 均可播放。
-- D1 已按环境隔离：`nihongo80`（production）与 `nihongo80-preview`（preview）两个独立库，三段 migration
+- D1 已按环境隔离：`nihongo80`（production）与 `nihongo80-preview`（preview）两个独立库，四段 migration
   均已 `--remote` 应用；preview 的测试事件不会写入生产 `events` 表。两库都在 Workers Free 的
   10 个 D1 免费额度内，不产生额外费用。`release_guard.py` 会拒绝两环境共用一个库的配置回退。
   15 条免费真人听力/官方样题按阶段分组跳转原站；8 条不采用源列明原因。每日精听主线仍是本站合成音频。

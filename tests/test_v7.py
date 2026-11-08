@@ -174,7 +174,8 @@ class TestDatabaseAndPages(unittest.TestCase):
         finally:
             con.close()
         self.assertEqual(set(ids), set(keys))
-        self.assertEqual(len(ids), 2535)
+        # Existing bank 2535 + audited daily 4872 + five-day units 600.
+        self.assertEqual(len(ids), 8007)
 
     def test_real_listening_page_is_honest_and_playable(self):
         h = (ROOT / "web/listening.html").read_text(encoding="utf-8")

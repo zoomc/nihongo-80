@@ -10,7 +10,7 @@
   // 事件同步（可选，docs/CLOUDFLARE.md「事件同步」一节）需要的两步：
   //   1) npx wrangler d1 create nihongo80 / nihongo80-preview，把各自 database_id 填到对应段；
   //   2) 对两个库分别执行 migrations/0001_events.sql、0002_session_payload.sql、
-  //      0003_personal_budget.sql（npx wrangler d1 execute <name> --remote --file=...）。
+  //      0003_personal_budget.sql、0004_study.sql（npx wrangler d1 migrations apply DB --remote）。
   //   两个库都在 Workers Free 的 10 个 D1 免费额度内，不产生额外费用。
   // 拉取密钥用 secret 管理，**不要**写进本文件：
   //   npx wrangler secret put NH80_SYNC_KEY

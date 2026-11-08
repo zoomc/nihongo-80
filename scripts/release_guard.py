@@ -44,11 +44,17 @@ def check():
             raise ValueError('incomplete Korean hints')
     for p in (ROOT/'web/data').glob('day-*.json'):
         d=json.loads(p.read_text())
-        if any('answer' in q or 'rationale' in q for q in d['quiz']) or any(any(k.startswith('answer') for k in s) for s in d['sentences']):
+        public_questions=d['quiz']+d['sentences']+d.get('practice',[])+d.get('unit_questions',[])+(d.get('listening_material') or {}).get('questions',[])
+        if any('answer' in q or 'rationale' in q for q in public_questions):
             raise ValueError('public reference answer: '+p.name)
         core=d['core_vocab_ids'];extra=d['extension_vocab_ids']
         if len(core)>(11 if d['listening'] else 16) or set(core)&set(extra) or len(core)+len(extra)!=len(d['vocab']):
             raise ValueError('daily workload split broken')
+    shards=list((ROOT/'web/data/grade').glob('day-*.json'))
+    if len(shards)!=150 or any('answer' in q or not re.fullmatch('[a-f0-9]{64}',q.get('answer_hash','')) for p in shards for q in json.loads(p.read_text())['answers'].values()):
+        raise ValueError('grading shards incomplete or contain plaintext answers')
+    if 'generated-key.json' in (ROOT/'deploy/worker/src/index.ts').read_text():
+        raise ValueError('private full bank must not be bundled into Worker')
     print(json.dumps({'ok':True,'files':len(files),'asset_bytes':sum(p.stat().st_size for p in files),'public_audio':45,'cloud_bindings':['D1 prod','D1 preview (isolated)'],'paid_features':False}))
 
 if __name__=='__main__':check()

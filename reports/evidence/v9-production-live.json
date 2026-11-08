@@ -1,0 +1,120 @@
+{
+  "base": "https://nihongo80.cmjfire.workers.dev",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "becd3f3e28b4e02336f68bfdd444eb36aef447868ee571a1b9e5c18651954f18",
+      "matches_local": true
+    },
+    {
+      "path": "/day-001.html",
+      "status": 200,
+      "sha256": "18261bdd5e5e71c99097017836f331a4ef7b97c687694173e755b130ef8dadb6",
+      "matches_local": true
+    },
+    {
+      "path": "/day-047.html",
+      "status": 200,
+      "sha256": "6e0d9b19b4d2a863cd8a7755b251391da25696881faca3a48cd8b43887340b65",
+      "matches_local": true
+    },
+    {
+      "path": "/day-150.html",
+      "status": 200,
+      "sha256": "33ad81365ff995be6719ddac982275e3d8dfb7756f54385a02ccc0e46726a24a",
+      "matches_local": true
+    },
+    {
+      "path": "/resources.html",
+      "status": 200,
+      "sha256": "f86fbcc39290ab6daa78865694f14fa649a286b46437cac3925bdc12f3d185fe",
+      "matches_local": true
+    },
+    {
+      "path": "/library.html",
+      "status": 200,
+      "sha256": "828bbc338478221d3b70cac7d8e0bb74a812ab7c9a3375cec597bc928077154a",
+      "matches_local": true
+    },
+    {
+      "path": "/assets/app.js",
+      "status": 200,
+      "sha256": "e12964407823be8726d6e0446f7e2640e940a68e0b411fa9d1fcdf74e3dfa5c2",
+      "matches_local": true
+    },
+    {
+      "path": "/audio/NOTICE.txt",
+      "status": 200,
+      "sha256": "4de4c8a7b7e04d7c8dec7491d284312d80a6389e32d0ba9aec81a3a2f79804aa",
+      "matches_local": true
+    },
+    {
+      "path": "/audio/M0096.m4a",
+      "status": 200,
+      "sha256": "0669f447420907368103694b18881e6d832a290211250df98352aa0da566b7fb",
+      "matches_local": true
+    },
+    {
+      "path": "/audio/M0140.m4a",
+      "status": 200,
+      "sha256": "464214f21a0c06cff31fbd3b0293583f3b1e15ce33b17fc05b1dfd9c20fca44e",
+      "matches_local": true
+    },
+    {
+      "path": "/api/health",
+      "status": 200,
+      "sha256": "9f740070512df426f1fcf71f6292ba6fc839f379edc0cc15981b02b4bde8bda4",
+      "health": {
+        "status": "ok",
+        "features": {
+          "db": true,
+          "sync": true
+        }
+      }
+    },
+    {
+      "path": "/review.html",
+      "status": 200,
+      "sha256": "b7329da0d21615c469552a7213d55dfcda3e734e1d55dad5f5a5ee66100aa429",
+      "matches_local": true
+    },
+    {
+      "path": "/unit-005.html",
+      "status": 200,
+      "sha256": "d703cda3666bc353b3214fe72d1e46ce667ee0591e37fbea616dcbabb6ed14c5",
+      "matches_local": true
+    },
+    {
+      "path": "/unit-150.html",
+      "status": 200,
+      "sha256": "dbdd0ec4bbb26b5a2c3443e5a8c1863cca77b49bb7bdad89100f205345248486",
+      "matches_local": true
+    },
+    {
+      "path": "/assets/study.js",
+      "status": 200,
+      "sha256": "d11bfbc2e5fed9a7dfdcbc1248a9edd5c97924367fe03abc8de753d67e314230",
+      "matches_local": true
+    },
+    {
+      "path": "/data/catalog.json",
+      "status": 200,
+      "sha256": "8d32199fd371c2c377b07b3e2b268963511ee72ce2561bc9bdb476df6592c148",
+      "matches_local": true
+    },
+    {
+      "path": "/data/grade/day-005.json",
+      "status": 200,
+      "sha256": "4643cec1612309b88adcbd54a94f5a3170c4a73272153ed34b2545fea27d2425",
+      "matches_local": true
+    }
+  ],
+  "unauthenticated_post": 401,
+  "owner_dry_check": {
+    "ok": true,
+    "check": true,
+    "stored": 0,
+    "day": 150
+  }
+}

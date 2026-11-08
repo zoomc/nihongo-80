@@ -242,31 +242,44 @@ def cmd_init(args):
 
 def _build_v5(root, conn):
     """v5 生成 150 天课程并写入 DB；返回 curriculum data。"""
+    import hashlib
     import curriculum_v5 as c5
     data = c5.build()
     from quiz_v5 import day_questions
     from sentence_choices import build_for_day as sentence_questions
+    from practice_v9 import build_daily, build_unit
     sentence_rows = core.read_jsonl(root / "knowledge/seeds/sentences.jsonl")
     tables = {name: {x["id"]: x for x in core.read_jsonl(root / "knowledge/seeds" / (name + ".jsonl"))}
               for name in ("vocabulary", "grammar", "kanji", "materials")}
     keys = {}
+    grade_shards = {}
     with conn:
         for day in data["days"]:
             qs = day_questions(day, tables["vocabulary"], tables["grammar"], tables["kanji"], tables["materials"])
             sqs = sentence_questions(day, sentence_rows)
             day["question_ids"] = [q["qid"] for q in qs] + [q["qid"] for q in sqs if not q["optional"]]
-            for q in qs + sqs:
+            practice = build_daily(day, tables["vocabulary"], tables["grammar"], tables["kanji"])
+            if day["day"] % 5 == 0:
+                practice += build_unit(day["day"], data["days"], tables["vocabulary"],
+                                       tables["grammar"], tables["kanji"])["questions"]
+            shard = {}
+            grade_shards[day["day"]] = shard
+            for q in qs + sqs + practice:
                 q["prompt_ja"] = q["prompt"]
                 q["source"] = "v5-generated"
                 q["review_status"] = "ai_draft"
                 q["day"] = day["day"]
                 if q["knowledge_ids"]:
-                    q["targets"] = [{"id": kid, "capability": "reading" if kid.startswith("K") else "meaning"}
+                    q["targets"] = [{"id": kid, "capability": q.get("capability") or ("reading" if kid.startswith("K") else "meaning")}
                                     for kid in q["knowledge_ids"]]
                 else:
                     q["evidence_only"] = True
                 core._insert_kind(conn, "questions", q)
                 keys[q["qid"]] = {"day": day["day"], "type": "mcq", "answer": q["answer"]}
+                shard[q["qid"]] = {"day": day["day"], "type": "mcq",
+                                   "answer_hash": hashlib.sha256(_norm_answer(q["answer"]).encode("utf-8")).hexdigest(),
+                                   "knowledge_ids": q["knowledge_ids"],
+                                   "capability": q.get("capability")}
         audit(conn, "build_v5_questions", {"count": len(keys)})
         # 清掉历史题库/旧构建遗留的孤儿题，避免 import-web-result 接受不在本次答案表里的题号。
         stale = [row[0] for row in conn.execute("SELECT id FROM questions").fetchall()
@@ -277,6 +290,10 @@ def _build_v5(root, conn):
         core.import_curriculum(conn, data)
     (root / "curriculum/curriculum.json").write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     (root / "deploy/worker/src/generated-key.json").write_text(jdump({"answers": keys}) + "\n", encoding="utf-8")
+    grade_dir = root / "web/data/grade"
+    grade_dir.mkdir(parents=True, exist_ok=True)
+    for day, answers in grade_shards.items():
+        (grade_dir / ("day-%03d.json" % day)).write_text(jdump({"answers": answers}) + "\n", encoding="utf-8")
     return data
 
 
@@ -597,8 +614,109 @@ def cmd_import_web(args):
 def cmd_import_file(args):
     import cloud_sync
     data = json.loads(Path(args.file).read_text(encoding="utf-8"))
+    if not isinstance(data, dict):
+        raise ValueError("导入文件必须为 JSON 对象")
+    if "pending" in data:
+        return _import_pending(args, data)
     data.setdefault("ts", iso()); data.setdefault("minutes", None); data.setdefault("source", "web-export")
     return cmd_import_web(argparse.Namespace(root=args.root, code=cloud_sync.encode_payload(data)))
+
+
+def _import_pending(args, data):
+    """导入 v9 离线队列；先核验全部记录，再交给既有判分路径。"""
+    import cloud_sync
+    from collections import OrderedDict
+    from datetime import datetime
+
+    items = data.get("pending")
+    if data.get("version") != 1 or not isinstance(items, list) or len(items) > 20000:
+        raise ValueError("离线队列版本或结构不合法")
+    root = root_of(args.root)
+    conn = connect(root, readonly=True)
+    groups, ratings, sessions, result_ids, rating_ids = OrderedDict(), [], {}, {}, {}
+    try:
+        questions = {}
+        for row in conn.execute("SELECT id,raw FROM questions"):
+            raw = json.loads(row["raw"] or "{}")
+            questions[row["id"]] = raw
+        for item in items:
+            if not isinstance(item, dict):
+                raise ValueError("离线队列记录不合法")
+            if item.get("kind") == "attempt":
+                day, session, result = item.get("day"), item.get("session"), item.get("result")
+                if type(day) is not int or not 1 <= day <= 150 or not isinstance(session, str) or not re.fullmatch(r"[A-Za-z0-9_.:-]{3,96}", session) or not isinstance(result, dict):
+                    raise ValueError("离线作答字段不合法")
+                if session in sessions and sessions[session] != day:
+                    raise ValueError("离线会话对应多个学习日")
+                sessions[session] = day
+                qid, answer = result.get("qid"), result.get("answer")
+                if not isinstance(qid, str) or qid not in questions or questions[qid].get("day") != day:
+                    raise ValueError("离线作答包含未知或非当天题目")
+                if not isinstance(answer, str) or len(answer) > 2000:
+                    raise ValueError("离线作答答案不合法")
+                seconds = result.get("seconds")
+                if seconds is not None and (type(seconds) is not int or not 0 <= seconds <= 86400):
+                    raise ValueError("离线作答时间不合法")
+                if any(k in result and not isinstance(result[k], bool) for k in ("hinted", "revealed_before_submit")):
+                    raise ValueError("离线提示标记不合法")
+                clean = {"qid": qid, "answer": answer, "hinted": result.get("hinted", False),
+                         "revealed_before_submit": result.get("revealed_before_submit", False), "seconds": seconds}
+                identity = (session, qid)
+                if identity in result_ids and result_ids[identity] != (day, clean):
+                    raise ValueError("同一会话题目出现冲突作答")
+                result_ids[identity] = (day, clean)
+                groups.setdefault((day, session), []).append(clean)
+            elif item.get("kind") == "rating":
+                row = item.get("review")
+                if not isinstance(row, dict):
+                    raise ValueError("离线自评字段不合法")
+                kid, event_id, day, label = (row.get(x) for x in ("kid", "event_id", "day", "rating"))
+                if not isinstance(kid, str) or not re.fullmatch(r"[VGK]\d{4}", kid) or not isinstance(event_id, str) or not re.fullmatch(r"[A-Za-z0-9_.:-]{3,96}", event_id) or type(day) is not int or not 1 <= day <= 150 or label not in ("again", "hard", "good"):
+                    raise ValueError("离线自评字段不合法")
+                table = {"V": "vocabulary", "G": "grammar", "K": "kanji"}[kid[0]]
+                if not conn.execute("SELECT 1 FROM %s WHERE id=?" % table, (kid,)).fetchone():
+                    raise ValueError("离线自评包含未知知识点")
+                values = (kid, day, label)
+                if event_id in rating_ids and rating_ids[event_id] != values:
+                    raise ValueError("同一自评事件出现冲突")
+                rating_ids[event_id] = values
+                card = conn.execute("SELECT last_review FROM fsrs_cards WHERE knowledge_id=?", (learning.card_key(kid, learning.default_capability(kid)),)).fetchone()
+                if card and card["last_review"]:
+                    last = datetime.fromisoformat(card["last_review"].replace("Z", "+00:00"))
+                    if last.tzinfo is None or last > learning.now_utc():
+                        raise ValueError("FSRS last_review 晚于导入时间或缺少时区")
+                ratings.append(row)
+            else:
+                raise ValueError("未知离线队列记录类型")
+        for day, _session in groups:
+            if not conn.execute("SELECT 1 FROM curriculum_days WHERE day=?", (day,)).fetchone():
+                raise ValueError("离线作答对应的课程不存在")
+    finally:
+        conn.close()
+    sessions_out = []
+    for (day, session), rows in groups.items():
+        for offset in range(0, len(rows), 40):
+            payload = {"v": 1, "day": day, "session": session, "ts": iso(), "minutes": None,
+                       "source": "web-export", "practice_mode": "teacher" if session.startswith("replay-") else "choice",
+                       "results": rows[offset:offset + 40]}
+            sessions_out.append(cloud_sync.import_session(root, payload, sys.modules[__name__]))
+    conn = connect(root)
+    try:
+        applied, duplicates = 0, 0
+        with conn:
+            for row in ratings:
+                result = learning.apply_review_rating(conn, kid=row["kid"], label=row["rating"], day=row["day"],
+                            session_id="rating-" + row["event_id"], at=learning.now_utc())
+                if result.get("duplicate"):
+                    duplicates += 1
+                else:
+                    applied += 1
+            audit(conn, "import_offline_queue", {"attempts": sum(map(len, groups.values())), "ratings": len(ratings),
+                                                "ratings_applied": applied, "ratings_duplicate": duplicates})
+    finally:
+        conn.close()
+    out({"ok": True, "attempts": sum(map(len, groups.values())), "sessions": sessions_out,
+         "ratings_applied": applied, "ratings_duplicate": duplicates})
 
 
 def cmd_confirm_output(args):
@@ -739,6 +857,20 @@ def cmd_pull_cloud(args):
     code = cloud_sync.main(argv)
     if code:
         raise SystemExit(code)
+
+
+def cmd_study_sync(args):
+    """Sync personal study records using the local key, never a command-line secret."""
+    import study_sync
+    r = root_of(args.root)
+    keyfile = r / "deploy/.sync-key"
+    try:
+        key = keyfile.read_text(encoding="utf-8").strip()
+    except OSError:
+        raise ValueError("无法读取本机同步密钥 deploy/.sync-key") from None
+    if not key:
+        raise ValueError("本机同步密钥为空")
+    out(study_sync.run(r, args.base, key, push_only=args.push_only))
 
 
 def cmd_sync_web(args):
@@ -889,6 +1021,10 @@ def main():
     pc.add_argument("--since", type=int, default=0)
     pc.add_argument("--limit", type=int, default=200)
     pc.set_defaults(fn=cmd_pull_cloud)
+    ss = sub.add_parser("study-sync", help="同步个人作答和自评，生成并发布复习建议")
+    ss.add_argument("--base", default="https://nihongo80.cmjfire.workers.dev", help="站点根地址")
+    ss.add_argument("--push-only", action="store_true", help="仅根据本地状态生成和发布复习建议")
+    ss.set_defaults(fn=cmd_study_sync)
     sub.add_parser("status").set_defaults(fn=cmd_status)
     ad = sub.add_parser("adjust"); ad.add_argument("--day", type=int, required=True); ad.set_defaults(fn=cmd_adjust)
     rp = sub.add_parser("report"); rp.add_argument("--week", type=int); rp.add_argument("--stage", type=int)

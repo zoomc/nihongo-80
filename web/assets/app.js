@@ -27,6 +27,7 @@ function $(s,r){return (r||document).querySelector(s)}
 function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))}
 function applyMode(root){
   $$('[data-role]',root).forEach(function(el){
+    if(el.closest('#grammar')){el.classList.remove('mask','peek');el.removeAttribute('tabindex');el.removeAttribute('role');el.removeAttribute('aria-label');return;}
     var role=el.getAttribute('data-role');
     var override=el.closest('[data-mode]');var active=override?override.getAttribute('data-mode'):mode;
     var hide=(active==='both')||(active==='zh'&&role==='zh')||(active==='ja'&&role==='ja');
@@ -73,10 +74,10 @@ function initReview(){
   var cards=window.__REVIEW__||[];var list=$('#reviewList');
   var idx=$('#rIdx'),front=$('#rFront'),back=$('#rBack'),bar=$('#rBar');
   if(!cards.length){list.innerHTML='<p class="hint">本课没有安排旧内容，直接开始今日新词。</p>';$('#reviewCard').innerHTML=list.innerHTML;return}
-  function rate(kid,value){var existing=reviewState.res.find(function(x){return x.kid===kid});if(existing)existing.rating=value;else reviewState.res.push({kid:kid,rating:value});
+  function rate(kid,value){if(window.NHStudy)window.NHStudy.rate(kid,value);var existing=reviewState.res.find(function(x){return x.kid===kid});if(existing)existing.rating=value;else reviewState.res.push({kid:kid,rating:value});
     $$('.rRateList').forEach(function(b){if(b.getAttribute('data-kid')===kid)b.setAttribute('aria-pressed',String(b.getAttribute('data-rate')===value))});
   }
-  cards.forEach(function(c,i){var row=document.createElement('div');row.className='study-row';
+  cards.forEach(function(c,i){var row=document.createElement('div');row.className='study-row';row.setAttribute('data-kid',c.kid);
     row.innerHTML='<div class="study-ja" data-role="ja"><span class="list-word">'+focus(c.front)+'</span>'+(c.kana?'<span class="small kana-line">'+safe(c.kana)+'</span>':'')+'</div><div class="study-meaning" data-role="zh">'+safe(c.back)+'</div><div class="rating-row" aria-label="第'+(i+1)+'项复习自评">'+['again','hard','good'].map(function(value,j){return '<button type="button" class="btn small rRateList" data-kid="'+c.kid+'" data-rate="'+value+'" aria-pressed="false">'+['忘了','不熟','记得'][j]+'</button>'}).join('')+'</div>';
     list.appendChild(row);
   });
@@ -109,14 +110,16 @@ function initVocab(){
       '<div class="surface" data-role="ja">'+safe(c.surface)+'</div>'+
       '<div class="kana" data-role="ja">'+safe(c.kana)+'</div>'+
       '<div class="meaning" data-role="zh">'+safe(c.meaning)+'</div>'+ko+ex+
+      ('<div class="rating-row">'+['again','hard','good'].map(function(r,j){return '<button type="button" class="btn small card-rate" data-rate="'+r+'">'+['忘了','不熟','记得'][j]+'</button>'}).join('')+'</div>')+
       (c.audio?'<div class="row" style="margin-top:8px"><button class="btn" data-speak="'+safe(c.surface)+'">听发音</button></div>':'')+
       '</div>';
+    area.querySelectorAll('.card-rate').forEach(function(b){b.onclick=function(){if(window.NHStudy)window.NHStudy.rate(c.id,b.dataset.rate)}});
     applyMode(area); initMask();
   }
   function renderList(){
-    var list=$('#vocabList');list.innerHTML='';cards.forEach(function(c,i){var row=document.createElement('div');row.className='study-row';
+    var list=$('#vocabList');list.innerHTML='';cards.forEach(function(c,i){var row=document.createElement('div');row.className='study-row';row.setAttribute('data-kid',c.id);
       row.innerHTML='<div class="study-ja" data-role="ja"><span class="list-word">'+focus(c.surface)+'</span><span class="kana-line small">'+safe(c.kana)+'</span></div><div class="study-meaning" data-role="zh">'+safe(c.meaning)+'</div><button class="btn speak" type="button" data-speak="'+safe(c.surface)+'" aria-label="朗读第'+(i+1)+'个词">朗读</button>'+
-        '<details class="list-meta"><summary>例句与韩语参考</summary>'+(c.ex?'<p class="list-example"><span data-role="ja">'+focus(c.ex.ja)+'</span><br><span data-role="zh" class="small">'+safe(c.ex.zh)+'</span></p>':'')+(c.ko?'<p class="small" data-role="zh">韩语参考'+(c.ko_status==='ai_gloss'?'（AI）':'')+'：'+safe(c.ko)+'</p>':'')+'</details>';list.appendChild(row);
+        '<details class="list-meta"><summary>例句与韩语参考</summary>'+(c.ex?'<p class="list-example"><span data-role="ja">'+focus(c.ex.ja)+'</span><br><span data-role="zh" class="small">'+safe(c.ex.zh)+'</span></p>':'')+(c.ko?'<p class="small" data-role="zh">韩语参考'+(c.ko_status==='ai_gloss'?'（AI）':'')+'：'+safe(c.ko)+'</p>':'')+'</details><div class="rating-row">'+['again','hard','good'].map(function(r,j){return '<button type="button" class="btn small new-rate" data-rate="'+r+'">'+['忘了','不熟','记得'][j]+'</button>'}).join('')+'</div>';row.querySelectorAll('.new-rate').forEach(function(b){b.onclick=function(){if(window.NHStudy)window.NHStudy.rate(c.id,b.dataset.rate)}});list.appendChild(row);
     });applyMode(list);
   }
   renderList();
@@ -156,6 +159,7 @@ function initQuiz(selector, scoreSelector){
         fb.textContent=ok?'答对了。':'本题未答对。正确答案：'+q.options[q.oh.indexOf(q.h)];
         wrap.appendChild(fb); done++; if(ok)right++;
         score.textContent=right+' / '+done;
+        if(window.NHStudy)window.NHStudy.attempt(q,o,ok,{hinted:selector==='#listenQuiz'&&TRANSCRIPT_HINTED,revealed_before_submit:selector==='#listenQuiz'&&TRANSCRIPT_HINTED,seconds:Math.round((Date.now()-STARTED)/1000)});
         QUIZ_RESULTS.push({qid:q.qid,answer:o,seconds:Math.round((Date.now()-STARTED)/1000),hinted:selector==='#listenQuiz'&&TRANSCRIPT_HINTED,revealed_before_submit:selector==='#listenQuiz'&&TRANSCRIPT_HINTED});
       });
       opts.appendChild(lab);
@@ -183,7 +187,7 @@ function initSpeak(){
 function collectPayload(){
   var day=document.body.getAttribute('data-day');
   return {v:1,practice_mode:'choice',day:Number(day),session:sessionStorage.getItem(STORE+'session.'+day)||('web-'+day+'-'+crypto.randomUUID()),minutes:null,ts:new Date().toISOString(),source:'web',results:QUIZ_RESULTS,
-      review_ratings:reviewState.res,
+      review_ratings:[],
       sentences:[]};
 }
 /* 同步：只发原始事件，不发 correct */

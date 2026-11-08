@@ -30,7 +30,10 @@ class CompletionGate(unittest.TestCase):
                        'results': [{'qid': q, 'answer': x['answer']} for q, x in key.items() if x['day'] == 149],
                        'minutes': None, 'source': 'test'}
             with contextlib.redirect_stdout(io.StringIO()):
-                nh80.cmd_import_web(argparse.Namespace(root=str(root), code=cloud_sync.encode_payload(payload)))
+                results = payload["results"]
+                for offset in range(0, len(results), 40):
+                    batch = dict(payload, results=results[offset:offset + 40])
+                    nh80.cmd_import_web(argparse.Namespace(root=str(root), code=cloud_sync.encode_payload(batch)))
             with contextlib.redirect_stdout(io.StringIO()) as result:
                 nh80.cmd_finish_day(argparse.Namespace(root=str(root), day=149, minutes=60))
             self.assertFalse(json.loads(result.getvalue())['passed'])

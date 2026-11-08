@@ -295,3 +295,38 @@ payload：
 - API增加GET /api/study、POST /api/reviews、POST /api/study-plan、GET /api/reviews，均先鉴权再碰D1。新增sessions元数据表去重载荷、rating_events表记录自评、study_projection表保存CLI发布的派生计划；D1原有events增加knowledge_ids列。生产/预览继续隔离，不创建额外云产品。
 - 同一session可追加不同题，但元数据必须一致；有变化返回409并保留本机记录，使用新session重传，不静默丢弃。作答和自评每请求最多40项，为D1 Free单次调用50查询保留余量。
 - 应用预算使用去重后的新事件数：每日1000、总计20000；新事件不重复存整批元数据，个人计划上限128KB，元数据上限16KB，失败保留离线导出。所有状态读写均有界且无自动轮询，不升级付费套餐。
+
+## v10 修订（2026-11-08）：页面只留内容 + 完成按钮进度链路
+
+用户明确否决了 v8/v9 叠加出的复杂 UI，以下契约优先于前面所有版本的页面约定。
+
+- **页面结构**：每日页只有 `review / vocab / grammar / questions` 四个内容块 + 一个「完成」按钮。
+  顶部 `modeBtn`、分钟数、`nav.toc`、`study-toolbar`、站点外链、提示文案，底部口令 / 同步 /
+  导出 / 保存 / 再练一轮 / 课程翻页 / 署名行，一律删除；每日页不再加载 `assets/study.js`。
+  `build_v5_site.py` 在构建期生成完整 HTML，`app.js` 只做遮挡、朗读、判分、完成上报。
+- **遮盖下沉**：`applyScope(section, mode)` 只作用于该 section 内的 `[data-role]`；
+  新词与语法各一个 `.mask-switch`（all/zh/ja/both），偏好按 section 存 localStorage，互不干扰。
+- **练习一整块**：`merge_questions()` 以 `curriculum.question_ids` 为必做骨架，
+  再按 `knowledge_ids` 去重（每点最多 2 题）吸收选句 / 综合 / 词法练习，
+  最后用 `coverage_question()` 为未覆盖的当天新词（含选学拓展）与新语法各补 1 题。
+  硬断言：150 天全部覆盖、qid 唯一、恰好 4 选项、`h ∈ oh`、无 `answer`/`rationale`、总量 ≤ 60。
+  听力日音频与脚本并入练习块，`id="listening"` 保留但不再是独立 section。
+- **小日语文字 + 发音**：中文正上方必须有 `.kana-line` 小假名，日文汉字用 `<ruby>` 注音，
+  每条例句带 `data-speak`（`speechSynthesis`, `ja-JP`）。`ruby_text()`/`kana_hint()` 只做
+  当天词表最长匹配，文案明确写「读音提示」，不冒充逐字转写。
+- **完成 → 云端**：`POST /api/progress` 写 D1 `study_progress`（`day INTEGER PRIMARY KEY`，
+  幂等覆盖，全表 ≤ 150 行），页面**不带任何密钥或口令**；服务端靠 Origin 白名单、64KB 体上限、
+  字段白名单、按天覆盖、每 IP/日限流兜底。`questions[].correct` 是客户端自算，
+  整份标 `self_reported=1`，服务端不重判、不作为掌握依据。
+  `GET /api/progress?day=N|latest=1` 必须 `X-NH80-Key`。
+- **agent 读取**：`skills/nh80-progress/SKILL.md`（仓库内 + 项目级 + 用户级三份）与
+  `scripts/progress_read.py`；任何能跑 Python 的 agent 都可用。agent 只读云端、不回写，
+  不据此判「已达标」；本机 `data/state.db`（`finish-day`）仍是唯一掌握权威。
+- **移除口令链路**：`study_ui.py` 不再注入「学习口令 / 同步 / 导出待同步记录」，
+  `flush()` 改为纯本地合并，不再 POST `/api/events`；旧 `/api/events`、`/api/reviews`、
+  `/api/study` 路由保持不变但每日页不再调用。
+- **数据卫生**：明文答案表 `deploy/worker/src/generated-key.json` 移出版本库并 gitignore；
+  Worker 只用公开哈希分片 `web/data/grade/day-*.json`。`release_guard.py` 新增合并题契约校验。
+- **缓存**：SW 版本升到 `nh80-v10-*`，HTML 模板纳入 revision，避免只改模板时命中旧缓存。
+- **完成门控不变**：`finish-day` 仍要求 `curriculum.question_ids` 齐全且正确率 ≥70%。
+  页面合并题与 CLI 门控 qid 集合不同，因此**页面「完成」不等于本地已完成**，文档不得混淆。

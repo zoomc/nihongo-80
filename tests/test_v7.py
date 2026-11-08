@@ -166,6 +166,7 @@ class TestContentFixes(unittest.TestCase):
 
 class TestDatabaseAndPages(unittest.TestCase):
     def test_question_table_matches_answer_key(self):
+        # 明文答案表是本地构建产物，clone 后需先跑 nh80.py build 生成。
         keys = json.loads((ROOT / "deploy/worker/src/generated-key.json").read_text(
             encoding="utf-8"))["answers"]
         con = sqlite3.connect(ROOT / "data/state.db")
@@ -183,10 +184,12 @@ class TestDatabaseAndPages(unittest.TestCase):
         self.assertIn("不托管在本站", h)
         self.assertIn("不复制、不下载、不热链", h)
         day47 = (ROOT / "web/day-047.html").read_text(encoding="utf-8")
-        self.assertIn("listening.html", day47)
-        self.assertIn("真人听力", day47)
+        self.assertIn('id="questions"', day47)
+        self.assertIn('id="finish"', day47)
+        self.assertNotIn("study.js", day47, "每日页不应加载旧私有同步脚本")
         js = (ROOT / "web/assets/app.js").read_text(encoding="utf-8")
-        self.assertIn("lastPassage", js, "共用读解材料会重复渲染")
+        self.assertIn("/api/progress", js, "完成按钮必须上报进度")
+        self.assertIn("fnv(", js, "本地哈希判分必须保留")
 
 
 

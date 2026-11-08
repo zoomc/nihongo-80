@@ -50,3 +50,14 @@ python3 scripts/nh80.py study-sync --push-only
 ## 角色
 
 agents/teacher.md / examiner.md / reviewer.md / director.md 仅作为教师、考官、复习官、总监职责参考。其旧时间块和回传码流程不覆盖本文件与 v8 契约。数据评分继续按 CONTRACTS 的掌握门控执行。
+
+## 通过 skill 读取学习进度
+
+云端「完成」按钮把当天**自报快照**写入 `POST /api/progress`；任何 agent 用 `GET /api/progress` + `X-NH80-Key` 读取。**云端进度是自报、非掌握权威**；本机 `data/state.db`（只经 `python3 scripts/nh80.py finish-day` 写入）才是权威，不回写、不据此判掌握。
+
+- Skill 规范：`skills/nh80-progress/SKILL.md`（同一份已放到 `~/.workbuddy/skills/nh80-progress/` 与 `.workbuddy/skills/nh80-progress/`，WorkBuddy 本机立即可用）。
+- CLI：`python3 scripts/progress_read.py --latest`（最近 7 天）/ `--day N` / `--json`；密钥默认读 `deploy/.sync-key`，**禁止打印或写入**。
+
+给 Claude Code / Codex 的一句话提示词：
+
+> 读一下我的日语学习进度：在仓库根执行 `python3 scripts/progress_read.py --latest`，按 `skills/nh80-progress/SKILL.md` 把「错题优先 + 自评 again/hard 优先 + 当天新词/语法」整理成今天的复习重点；记住云端进度是自报快照、本机 SQLite 才是掌握权威，别据此判定已掌握，也别打印密钥。

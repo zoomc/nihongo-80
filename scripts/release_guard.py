@@ -44,9 +44,18 @@ def check():
             raise ValueError('incomplete Korean hints')
     for p in (ROOT/'web/data').glob('day-*.json'):
         d=json.loads(p.read_text())
-        public_questions=d['quiz']+d['sentences']+d.get('practice',[])+d.get('unit_questions',[])+(d.get('listening_material') or {}).get('questions',[])
+        merged=d.get('questions',[])
+        public_questions=(d['quiz']+d['sentences']+d.get('practice',[])+d.get('unit_questions',[])
+                          +(d.get('listening_material') or {}).get('questions',[])+merged)
         if any('answer' in q or 'rationale' in q for q in public_questions):
             raise ValueError('public reference answer: '+p.name)
+        if merged:
+            if len({q['qid'] for q in merged})!=len(merged):
+                raise ValueError('duplicate merged qid: '+p.name)
+            if any(len(q.get('options',[]))!=4 or len(q.get('oh',[]))!=4 or q.get('h') not in q.get('oh',[]) for q in merged):
+                raise ValueError('merged question contract broken: '+p.name)
+            if len(merged)>60:
+                raise ValueError('merged questions exceed progress API limit: '+p.name)
         core=d['core_vocab_ids'];extra=d['extension_vocab_ids']
         if len(core)>(11 if d['listening'] else 16) or set(core)&set(extra) or len(core)+len(extra)!=len(d['vocab']):
             raise ValueError('daily workload split broken')

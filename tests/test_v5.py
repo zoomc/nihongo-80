@@ -105,13 +105,18 @@ class TestWeb(unittest.TestCase):
             for kw in ("热力图", "雷达", "时间块", "能力雷达"):
                 self.assertNotIn(kw, h, "%s 仍含仪表盘元素 %s" % (p.name, kw))
 
-    def test_five_blocks_and_masking(self):
+    def test_four_content_blocks_and_local_masking(self):
+        """v10：页面只有 4 个内容块 + 完成按钮，遮盖只在新词与语法模块内。"""
         h = (ROOT / "web/day-001.html").read_text(encoding="utf-8")
-        for sec in ("review", "vocab", "grammar", "sentences", "quiz"):
+        for sec in ("review", "vocab", "grammar", "questions"):
             self.assertIn('id="%s"' % sec, h)
-        self.assertIn("data-role=\"ja\"", h)
-        self.assertIn("data-role=\"zh\"", h)
-        self.assertIn("modeBtn", h)
+        self.assertIn('id="finish"', h)
+        self.assertEqual(h.count('class="mask-switch"'), 2)
+        self.assertIn('data-role="ja"', h)
+        self.assertIn('data-role="zh"', h)
+        for junk in ("modeBtn", "背诵模式", "网页 42 分钟", 'id="sentences"', "综合小测",
+                     "翻页练习", "学习口令", "导出作答", "保存本次作答", "lesson-nav", "study.js"):
+            self.assertNotIn(junk, h, "每日页仍含被移除的元素：" + junk)
 
     def test_listening_day_has_section(self):
         h = (ROOT / "web/day-047.html").read_text(encoding="utf-8")
@@ -173,13 +178,14 @@ if __name__ == "__main__":
 class TestReviewRegressions(unittest.TestCase):
     """2026-11-07 修复前冻结的缺陷复现；不随实现调整。"""
 
-    def test_visible_minutes_match_curriculum(self):
+    def test_no_minute_labels_on_page(self):
+        """v10 页面不显示时间块；课程表仍保留 60 分钟结构。"""
         cur = json.loads((ROOT / 'curriculum/curriculum.json').read_text())['days']
         for d in cur:
             page = (ROOT / ('web/day-%03d.html' % d['day'])).read_text()
-            mins = [int(n) for n in re.findall(r'class="min">(\d+) 分钟', page)]
-            self.assertEqual(sum(mins), 42, d['day'])
+            self.assertNotIn('class="min">', page, d['day'])
             self.assertEqual(sum(b['min'] for b in d['blocks'] if b['type'] != '会话'), 42)
+            self.assertEqual(sum(b['min'] for b in d['blocks']), 60)
 
     def test_listening_distinct_and_three_questions(self):
         cur = json.loads((ROOT / 'curriculum/curriculum.json').read_text())['days']
@@ -194,7 +200,9 @@ class TestReviewRegressions(unittest.TestCase):
             self.assertEqual(len(m.get('questions', [])), 3)
             self.assertGreaterEqual(len(m['transcript']), 300)
             html = (ROOT / ('web/day-%03d.html' % d['day'])).read_text()
-            self.assertLess(html.index('id="listening"'), html.index('id="sentences"'))
+            self.assertIn('id="listening"', html)
+            self.assertIn('id="questions"', html)
+            self.assertLess(html.index('id="listening"'), html.index('class="q"'))
 
     def test_no_plain_solution_in_public_exercises(self):
         p = json.loads((ROOT / 'web/data/day-001.json').read_text())

@@ -433,6 +433,274 @@ async function handleStudy(request: Request, env: Env, url: URL): Promise<Respon
 }
 
 // ---------------------------------------------------------------------------
+// /api/progress — 当天完成快照（公开写、鉴权读；自报，非掌握权威）
+// ---------------------------------------------------------------------------
+// 与 /api/events 完全解耦：独立表 study_progress（day 主键覆盖，≤150 行）。
+// POST 无用户口令，靠 Origin 白名单 + content-type + 64KB 双检 + 字段白名单
+// + 每 IP/每日与全局每日限流（复用 sync_budget）保护 D1 写额度。
+// GET 必须 X-NH80-Key（复用 authenticate / constantTimeEqual）。
+// 服务端不重判 questions[].correct：整份快照以 self_reported=1 标注，
+// 权威完成/FSRS 只由本机 SQLite（nh80.py finish-day）负责。
+
+const PROGRESS_SITE_ORIGINS = new Set([
+  "https://nihongo80.cmjfire.workers.dev",
+  "https://nihongo80-preview.cmjfire.workers.dev",
+]);
+const PROGRESS_MAX_QUESTIONS = 60;
+const PROGRESS_MAX_IDS = 200;
+const PROGRESS_MAX_NOTE = 2000;
+const PROGRESS_MAX_ANSWER = 2000;
+const PROGRESS_MAX_QID = 48;
+const PROGRESS_IP_DAILY_LIMIT = 50;
+const PROGRESS_GLOBAL_DAILY_LIMIT = 500;
+const PROGRESS_LIMIT_DEFAULT = 7;
+
+type ProgressObject = Record<string, unknown>;
+
+/** 无 Origin：允许但强制 content-type 与全套强限制；有 Origin：须在白名单。 */
+function progressOrigin(request: Request, url: URL): { allowed: boolean; corsOrigin: string | null } {
+  const origin = request.headers.get("Origin");
+  if (!origin) return { allowed: true, corsOrigin: null };
+  let parsed: URL;
+  try { parsed = new URL(origin); } catch { return { allowed: false, corsOrigin: null }; }
+  const isLoopback = parsed.protocol === "http:" &&
+    (parsed.hostname === "127.0.0.1" || parsed.hostname === "localhost");
+  const isSite = parsed.origin === url.origin || PROGRESS_SITE_ORIGINS.has(parsed.origin);
+  if (!isLoopback && !isSite) return { allowed: false, corsOrigin: null };
+  return { allowed: true, corsOrigin: origin };
+}
+
+function progressPreflight(corsOrigin: string | null): Response {
+  const headers = new Headers({
+    "access-control-allow-methods": "GET, POST, OPTIONS",
+    "access-control-allow-headers": "content-type, x-nh80-key",
+    "access-control-max-age": "86400",
+    "vary": "Origin",
+  });
+  if (corsOrigin) headers.set("access-control-allow-origin", corsOrigin);
+  return new Response(null, { status: 204, headers });
+}
+
+function progressId(value: unknown): value is string {
+  return typeof value === "string" && value.length >= 1 && value.length <= 24 &&
+    /^[A-Za-z0-9_-]+$/.test(value);
+}
+
+function progressQid(value: unknown): value is string {
+  return typeof value === "string" && value.length >= 1 && value.length <= PROGRESS_MAX_QID &&
+    /^[A-Za-z0-9_.:-]+$/.test(value);
+}
+
+function progressIdList(value: unknown, max: number): string[] | null {
+  if (value === undefined || value === null) return [];
+  if (!Array.isArray(value) || value.length > max) return null;
+  const out: string[] = [];
+  for (const item of value) {
+    if (!progressId(item)) return null;
+    out.push(item);
+  }
+  return out;
+}
+
+/** 字段白名单 + 逐项校验；返回规范化对象（未知字段一律丢弃）或错误 reason。 */
+function parseProgressBody(body: ProgressObject): ProgressObject | string {
+  if (body.v !== undefined && body.v !== 1) return "bad_version";
+  const day = strictInt(body.day, 1, 150);
+  if (day === null) return "bad_day";
+
+  const requiredIds = progressIdList(body.required_ids, PROGRESS_MAX_IDS);
+  const extraIds = progressIdList(body.extra_ids, PROGRESS_MAX_IDS);
+  const grammarIds = progressIdList(body.grammar_ids, PROGRESS_MAX_IDS);
+  if (requiredIds === null || extraIds === null || grammarIds === null) return "bad_ids";
+
+  const reviewSummary = progressIdList(body.review_summary, PROGRESS_MAX_IDS);
+  if (reviewSummary === null) return "bad_review_summary";
+
+  const questions: ProgressObject[] = [];
+  if (body.questions !== undefined && body.questions !== null) {
+    if (!Array.isArray(body.questions) || body.questions.length > PROGRESS_MAX_QUESTIONS) return "bad_questions";
+    for (const raw of body.questions) {
+      if (!raw || typeof raw !== "object" || Array.isArray(raw)) return "bad_questions";
+      const q = raw as ProgressObject;
+      if (!progressQid(q.qid)) return "bad_questions";
+      const answer = typeof q.answer === "string" ? q.answer : "";
+      if (answer.length > PROGRESS_MAX_ANSWER) return "answer_too_long";
+      const seconds = q.seconds === undefined || q.seconds === null
+        ? null : asInt(q.seconds, null, 0, 86400);
+      // correct/hinted/revealed 原样保留，但服务端不采信 correct 为权威（整体 self_reported=1）。
+      questions.push({
+        qid: q.qid,
+        answer,
+        correct: q.correct === true,
+        hinted: q.hinted === true,
+        revealed: q.revealed === true,
+        seconds,
+      });
+    }
+  }
+
+  const selfRating: Record<string, string> = {};
+  if (body.self_rating !== undefined && body.self_rating !== null) {
+    const sr = body.self_rating;
+    if (typeof sr !== "object" || Array.isArray(sr)) return "bad_self_rating";
+    const entries = Object.entries(sr as ProgressObject);
+    if (entries.length > PROGRESS_MAX_IDS) return "bad_self_rating";
+    for (const [kid, rating] of entries) {
+      if (!progressId(kid) || !["again", "hard", "good"].includes(String(rating))) return "bad_self_rating";
+      selfRating[kid] = String(rating);
+    }
+  }
+
+  const wrongSummary: ProgressObject[] = [];
+  if (body.wrong_summary !== undefined && body.wrong_summary !== null) {
+    if (!Array.isArray(body.wrong_summary) || body.wrong_summary.length > PROGRESS_MAX_QUESTIONS) return "bad_wrong_summary";
+    for (const raw of body.wrong_summary) {
+      if (!raw || typeof raw !== "object" || Array.isArray(raw)) return "bad_wrong_summary";
+      const w = raw as ProgressObject;
+      if (!progressQid(w.qid)) return "bad_wrong_summary";
+      const kids = progressIdList(w.knowledge_ids, 20);
+      if (kids === null) return "bad_wrong_summary";
+      wrongSummary.push({ qid: w.qid, knowledge_ids: kids });
+    }
+  }
+
+  const accuracy = typeof body.accuracy === "number" && Number.isFinite(body.accuracy) &&
+    body.accuracy >= 0 && body.accuracy <= 1 ? body.accuracy : null;
+  if (typeof body.note === "string" && body.note.length > PROGRESS_MAX_NOTE) return "note_too_large";
+
+  return {
+    v: 1,
+    day,
+    completed_at: typeof body.completed_at === "string" ? body.completed_at.slice(0, 40) : "",
+    required_ids: requiredIds,
+    extra_ids: extraIds,
+    grammar_ids: grammarIds,
+    questions,
+    accuracy,
+    self_rating: selfRating,
+    wrong_summary: wrongSummary,
+    review_summary: reviewSummary,
+    note: typeof body.note === "string" ? body.note.slice(0, PROGRESS_MAX_NOTE) : "",
+    self_reported: 1,
+  };
+}
+
+async function progressIpKey(request: Request, env: Env, utcDay: string): Promise<string> {
+  const ip = request.headers.get("CF-Connecting-IP") ?? "local";
+  const digest = await sha256Hex(ip + "|" + (env.NH80_SYNC_KEY ?? "nh80-progress"));
+  return "progress_ip:" + utcDay + ":" + digest.slice(0, 12);
+}
+
+/** 复用 sync_budget 的 UPSERT 计数行（不追加行数）；返回是否仍在额度内。 */
+async function progressBudget(db: D1Database, key: string, limit: number): Promise<boolean> {
+  await db.prepare("INSERT INTO sync_budget(id,used) VALUES(?,1) ON CONFLICT(id) DO UPDATE SET used=used+1")
+    .bind(key).run();
+  const row = await db.prepare("SELECT used FROM sync_budget WHERE id=?").bind(key).first<{ used: number }>();
+  return (row?.used ?? 1) <= limit;
+}
+
+async function handleGetProgress(env: Env, url: URL, origin: string | null): Promise<Response> {
+  const db = env.DB!;
+  const dayParam = url.searchParams.get("day");
+  const latestParam = url.searchParams.get("latest");
+  try {
+    let res: D1Result<Record<string, unknown>>;
+    if (dayParam !== null) {
+      const day = strictInt(dayParam, 1, 150);
+      if (day === null) return jsonResponse({ ok: false, reason: "bad_query" }, 400, origin);
+      res = await db.prepare("SELECT day,server_ts,completed_at,payload,accuracy,self_reported FROM study_progress WHERE day=?")
+        .bind(day).all<Record<string, unknown>>();
+    } else if (latestParam !== null && latestParam !== "0") {
+      const limit = asInt(url.searchParams.get("limit"), PROGRESS_LIMIT_DEFAULT, 1, 150) ?? PROGRESS_LIMIT_DEFAULT;
+      res = await db.prepare("SELECT day,server_ts,completed_at,payload,accuracy,self_reported FROM study_progress ORDER BY server_ts DESC, day DESC LIMIT ?")
+        .bind(limit).all<Record<string, unknown>>();
+    } else {
+      return jsonResponse({ ok: false, reason: "bad_query" }, 400, origin);
+    }
+    const items = (res.results ?? []).map((row) => {
+      let payload: ProgressObject = {};
+      try { payload = JSON.parse(String(row.payload ?? "{}")) as ProgressObject; } catch { /* corrupt row */ }
+      return { ...payload, day: row.day, server_ts: row.server_ts, self_reported: row.self_reported ?? 1 };
+    });
+    return jsonResponse({ ok: true, items }, 200, origin);
+  } catch (err) {
+    return jsonResponse(
+      { ok: false, reason: "db_error", detail: String((err as Error)?.message ?? err).slice(0, 200) },
+      503, origin,
+    );
+  }
+}
+
+async function handleProgress(request: Request, env: Env, url: URL): Promise<Response> {
+  const { allowed, corsOrigin } = progressOrigin(request, url);
+  if (!allowed) return jsonResponse({ ok: false, reason: "cross_origin" }, 403, null);
+  if (request.method === "OPTIONS") return progressPreflight(corsOrigin);
+
+  if (request.method === "GET") {
+    const denied = authenticate(request, env, corsOrigin);
+    if (denied) return denied;
+    return handleGetProgress(env, url, corsOrigin);
+  }
+  if (request.method !== "POST") {
+    return jsonResponse({ ok: false, reason: "method_not_allowed" }, 405, corsOrigin);
+  }
+
+  // 无 Origin 时也强制 JSON content-type；curl/CLI 冒烟需显式带 -H content-type。
+  const contentType = (request.headers.get("content-type") ?? "").split(";")[0].trim().toLowerCase();
+  if (contentType !== "application/json") {
+    return jsonResponse({ ok: false, reason: "bad_content_type" }, 400, corsOrigin);
+  }
+  const declared = request.headers.get("content-length");
+  if (declared !== null) {
+    const n = Number(declared);
+    if (!Number.isFinite(n) || n > MAX_BODY_BYTES) {
+      return jsonResponse({ ok: false, reason: "body_too_large" }, 413, corsOrigin);
+    }
+  }
+  const raw = await request.text();
+  if (new TextEncoder().encode(raw).length > MAX_BODY_BYTES) {
+    return jsonResponse({ ok: false, reason: "body_too_large" }, 413, corsOrigin);
+  }
+  let body: ProgressObject;
+  try {
+    const parsed = JSON.parse(raw);
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) throw new Error("bad");
+    body = parsed as ProgressObject;
+  } catch {
+    return jsonResponse({ ok: false, reason: "bad_json" }, 400, corsOrigin);
+  }
+  const normalized = parseProgressBody(body);
+  if (typeof normalized === "string") {
+    return jsonResponse({ ok: false, reason: normalized }, 400, corsOrigin);
+  }
+  const db = env.DB;
+  if (!db) return jsonResponse({ ok: false, reason: "no_db" }, 503, corsOrigin);
+
+  const utcDay = new Date().toISOString().slice(0, 10);
+  const serverTs = new Date().toISOString();
+  try {
+    if (!(await progressBudget(db, "progress_day:" + utcDay, PROGRESS_GLOBAL_DAILY_LIMIT))) {
+      return jsonResponse({ ok: false, reason: "daily_write_budget" }, 429, corsOrigin);
+    }
+    if (!(await progressBudget(db, await progressIpKey(request, env, utcDay), PROGRESS_IP_DAILY_LIMIT))) {
+      return jsonResponse({ ok: false, reason: "ip_write_budget" }, 429, corsOrigin);
+    }
+    const day = normalized.day as number;
+    const payload = JSON.stringify(normalized);
+    await db.prepare(`INSERT INTO study_progress(day,server_ts,completed_at,payload,accuracy,self_reported)
+      VALUES(?,?,?,?,?,1)
+      ON CONFLICT(day) DO UPDATE SET server_ts=excluded.server_ts,
+        completed_at=excluded.completed_at, payload=excluded.payload,
+        accuracy=excluded.accuracy, self_reported=1`)
+      .bind(day, serverTs, String(normalized.completed_at ?? ""), payload, normalized.accuracy as number | null)
+      .run();
+    return jsonResponse({ ok: true, day, saved: true }, 200, corsOrigin);
+  } catch (err) {
+    return databaseError(err, corsOrigin);
+  }
+}
+
+// ---------------------------------------------------------------------------
 // 入口
 // ---------------------------------------------------------------------------
 
@@ -446,6 +714,12 @@ export default {
         200,
         okOrigin(request, url),
       );
+    }
+
+    // 独立分支：/api/progress 需允许 production/preview/本地回环三类 Origin，
+    // 不能套用只认同源的 rejectCrossOrigin，也不改动既有路由数组的任何行为。
+    if (url.pathname === "/api/progress") {
+      return handleProgress(request, env, url);
     }
 
     if (["/api/events", "/api/reviews", "/api/study", "/api/study-plan"].includes(url.pathname)) {

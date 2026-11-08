@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V2130",
    "front": "主義",
    "back": "主义；原则",
+   "kana": "しゅぎ",
    "stage": "planned"
   },
   {
    "kid": "V2131",
    "front": "宿泊",
    "back": "住宿",
+   "kana": "しゅくはく",
    "stage": "planned"
   },
   {
    "kid": "V2132",
    "front": "手術",
    "back": "手术",
+   "kana": "しゅじゅつ",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0505",
    "front": "彼",
-   "back": "他；那个｜音 ヒ",
+   "back": "他；那个",
+   "kana": "ヒ、かれ、かの、か.の",
    "stage": "planned"
   },
   {
    "kid": "K0506",
    "front": "未",
-   "back": "未；尚未｜音 ミ、ビ",
+   "back": "未；尚未",
+   "kana": "ミ、ビ、いま.だ、ま.だ、ひつじ",
    "stage": "planned"
   },
   {
    "kid": "V2097",
    "front": "支払",
    "back": "支付",
+   "kana": "しはらい",
    "stage": "planned"
   },
   {
    "kid": "V2098",
    "front": "支払う",
    "back": "支付",
+   "kana": "しはらう",
    "stage": "planned"
   },
   {
    "kid": "V2099",
    "front": "死亡",
    "back": "死亡",
+   "kana": "しぼう",
    "stage": "planned"
   },
   {
@@ -532,104 +540,204 @@
  ],
  "sentences": [
   {
-   "id": "S1221",
-   "day": 123,
-   "direction": "zh-ja",
+   "qid": "P-123-00-6eff0459c7be",
    "prompt": "在不会发音的词上做个记号。",
-   "knowledge_ids": [
-    "V2191"
+   "options": [
+    "それは私が見たことのない景色だ。",
+    "発音できない語に印をつけなさい。",
+    "それは翼の全長が約４インチある。",
+    "トムはメアリーにバイクを売った。"
    ],
-   "hint": ""
+   "h": "e9eacaa1",
+   "oh": [
+    "af5a2328",
+    "e9eacaa1",
+    "18490b8d",
+    "3db0f9d3"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1221"
   },
   {
-   "id": "S1222",
-   "day": 123,
-   "direction": "zh-ja",
+   "qid": "P-123-01-13782be1bb82",
    "prompt": "那座城堡建于1610年。",
-   "knowledge_ids": [
-    "V2192"
+   "options": [
+    "ラジオの音を下げてくれませんか。",
+    "その城は１６１０年に建てられた。",
+    "ホッチキスを貸してくれませんか。",
+    "タバコにかけられている税は高い。"
    ],
-   "hint": ""
+   "h": "6b28f1e6",
+   "oh": [
+    "2be3730e",
+    "6b28f1e6",
+    "1b2dc8f1",
+    "37e548c7"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1222"
   },
   {
-   "id": "S1223",
-   "day": 123,
-   "direction": "zh-ja",
+   "qid": "P-123-02-88c52e8adc6d",
    "prompt": "他大概不会读研究生吧。",
-   "knowledge_ids": [
-    "V2193"
+   "options": [
+    "向こうの交番で聞いてください。",
+    "彼は大学院に進学しないだろう。",
+    "医者は彼の苦痛を除いてやった。",
+    "レーンコートのボタンがとれた。"
    ],
-   "hint": ""
+   "h": "f470c15a",
+   "oh": [
+    "266f52ac",
+    "f470c15a",
+    "8a6a13e3",
+    "933240ec"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1223"
   },
   {
-   "id": "S1224",
-   "day": 123,
-   "direction": "zh-ja",
+   "qid": "P-123-03-3856885a1191",
    "prompt": "他因为那件事神经紧绷。",
-   "knowledge_ids": [
-    "V2194"
+   "options": [
+    "彼はそのことで神経をとがらせている。",
+    "ホテルの前で私を車で拾ってください。",
+    "環境を守るために、ごみを減らします。",
+    "私たちはその老夫婦を気の毒に思った。"
    ],
-   "hint": ""
+   "h": "db5e9ca4",
+   "oh": [
+    "db5e9ca4",
+    "a75d76f8",
+    "b5f6fbf2",
+    "93268a2d"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1224"
   },
   {
-   "id": "S1225",
-   "day": 123,
-   "direction": "zh-ja",
+   "qid": "P-123-04-af5d1bb6740b",
    "prompt": "乔治对学习不认真。",
-   "knowledge_ids": [
-    "V2195"
+   "options": [
+    "カーテンがゆっくり引かれた。",
+    "このコーヒーは苦い味がする。",
+    "彼女は４０代半ばで再婚した。",
+    "ジョージは勉強に真剣でない。"
    ],
-   "hint": ""
+   "h": "112da97",
+   "oh": [
+    "9a704e8a",
+    "6c7fed0f",
+    "7f05d656",
+    "112da97"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1225"
   },
   {
-   "id": "S1226",
-   "day": 123,
-   "direction": "zh-ja",
+   "qid": "P-123-05-76689a982f5f",
    "prompt": "你信仰基督教吗？",
-   "knowledge_ids": [
-    "V2196"
+   "options": [
+    "彼は危険に気づいていなかった。",
+    "その八百屋は客にとても親切だ。",
+    "いまおじの家に滞在しています。",
+    "キリスト教を信仰していますか。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1227",
-   "day": 123,
+   "h": "bd6a6e0c",
+   "oh": [
+    "29d30393",
+    "4586f317",
+    "ee03280",
+    "bd6a6e0c"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1226"
+  },
+  {
+   "qid": "P-123-06-af04275edaf9",
    "prompt": "信号灯变绿了哦。",
-   "knowledge_ids": [
-    "V2197"
+   "options": [
+    "まもなく雨が降りそうだ。",
+    "あなたはなぜ働いているの。",
+    "一人の教授がささやいた。",
+    "信号が青に変わったわよ。"
    ],
-   "hint": ""
+   "h": "a3da3ad",
+   "oh": [
+    "ff08c000",
+    "6298fea3",
+    "44eb1b0d",
+    "a3da3ad"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1227"
   },
   {
-   "id": "S1228",
-   "day": 123,
-   "direction": "ja-zh",
+   "qid": "P-123-07-110802b53831",
    "prompt": "この庭の美しさは自然より人工のおかげだ。",
-   "knowledge_ids": [
-    "V2198"
+   "options": [
+    "多亏那些树，我才没被雨淋湿。",
+    "往前走两个街区，然后向左拐。",
+    "这道菜是顾及巴黎风味调味的。",
+    "这庭院的美更多归功于人工而非自然。"
    ],
-   "hint": ""
+   "h": "e6b6efe9",
+   "oh": [
+    "e8d78e8b",
+    "b81afcce",
+    "53e2bb2d",
+    "e6b6efe9"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1228"
   },
   {
-   "id": "S1229",
-   "day": 123,
-   "direction": "ja-zh",
+   "qid": "P-123-08-4cd088ca3988",
    "prompt": "事態は非常に深刻である。",
-   "knowledge_ids": [
-    "V2199"
+   "options": [
+    "你以为我好骗吧。",
+    "我在学开车。",
+    "事态非常严重。",
+    "开车非常愉快。"
    ],
-   "hint": ""
+   "h": "7e196bc1",
+   "oh": [
+    "dbbf4ad2",
+    "a8d3152",
+    "7e196bc1",
+    "81ac924d"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1229"
   },
   {
-   "id": "S1230",
-   "day": 123,
-   "direction": "ja-zh",
+   "qid": "P-123-09-451e9002cff9",
    "prompt": "世界にはいろいろな人種がいる。",
-   "knowledge_ids": [
-    "V2200"
+   "options": [
+    "希望让我们六个人住下。",
+    "可以问一下您的年龄吗？",
+    "世界上有各种各样的人种。",
+    "游客数量近年大幅增加。"
    ],
-   "hint": ""
+   "h": "1d508341",
+   "oh": [
+    "d10da833",
+    "868eaf76",
+    "1d508341",
+    "45b99f8d"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1230"
   }
  ],
  "quiz": [

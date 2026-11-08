@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V1960",
    "front": "故郷",
    "back": "故乡",
+   "kana": "こきょう",
    "stage": "planned"
   },
   {
    "kid": "V1961",
    "front": "極",
    "back": "极其",
+   "kana": "ごく",
    "stage": "planned"
   },
   {
    "kid": "V1962",
    "front": "国語",
    "back": "国语；语文",
+   "kana": "こくご",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0465",
    "front": "候",
-   "back": "气候；候｜音 コウ",
+   "back": "气候；候",
+   "kana": "コウ、そうろう",
    "stage": "planned"
   },
   {
    "kid": "K0466",
    "front": "程",
-   "back": "程度；分寸｜音 テイ",
+   "back": "程度；分寸",
+   "kana": "テイ、ほど、-ほど",
    "stage": "planned"
   },
   {
    "kid": "V1927",
    "front": "講演",
    "back": "演讲；报告",
+   "kana": "こうえん",
    "stage": "planned"
   },
   {
    "kid": "V1928",
    "front": "効果",
    "back": "效果",
+   "kana": "こうか",
    "stage": "planned"
   },
   {
    "kid": "V1929",
    "front": "硬貨",
    "back": "硬币",
+   "kana": "こうか",
    "stage": "planned"
   },
   {
@@ -456,104 +464,204 @@
  ],
  "sentences": [
   {
-   "id": "S1121",
-   "day": 113,
-   "direction": "zh-ja",
+   "qid": "P-113-00-8fb9bba6c36e",
    "prompt": "「＆」这个符号指的是 and。",
-   "knowledge_ids": [
-    "V2021"
+   "options": [
+    "トムは頭にきつい一発を受けた。",
+    "＆という記号は、ａｎｄを指す。",
+    "その場合には警察を呼びなさい。",
+    "交通に注意しなければいけない。"
    ],
-   "hint": ""
+   "h": "a0b5f1",
+   "oh": [
+    "b9186836",
+    "a0b5f1",
+    "dba5375d",
+    "208febf8"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1121"
   },
   {
-   "id": "S1122",
-   "day": 113,
-   "direction": "zh-ja",
+   "qid": "P-113-01-990a3c4d17d2",
    "prompt": "请把包放在座位下面。",
-   "knowledge_ids": [
-    "V2022"
+   "options": [
+    "鞄を座席の下に置いてください。",
+    "彼はよく友人をいじめたものだ。",
+    "いつ旅行においでになりますか。",
+    "タクシーに傘を忘れてしまった。"
    ],
-   "hint": ""
+   "h": "a61eb02d",
+   "oh": [
+    "a61eb02d",
+    "25027c50",
+    "a1751ea1",
+    "6425ef0e"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1122"
   },
   {
-   "id": "S1123",
-   "day": 113,
-   "direction": "zh-ja",
+   "qid": "P-113-02-0418950aad93",
    "prompt": "暖洋洋的阳光让人犯困，我不知不觉睡着了。",
-   "knowledge_ids": [
-    "V2023"
+   "options": [
+    "叔母さんを訪ねた時はすごいごちそうだったね。",
+    "ウラウラとした日差しに誘われて、眠りに落ちた。",
+    "ドアをそのままにしておいてはいけません。",
+    "彼女は現代の最も優れた画家の一人である。"
    ],
-   "hint": ""
+   "h": "865e8c7a",
+   "oh": [
+    "5ac98c01",
+    "865e8c7a",
+    "6fe1fecd",
+    "ee752b0"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1123"
   },
   {
-   "id": "S1124",
-   "day": 113,
-   "direction": "zh-ja",
+   "qid": "P-113-03-8265cd036a07",
    "prompt": "能帮我把一千日元换开吗？",
-   "knowledge_ids": [
-    "V2024"
+   "options": [
+    "１０００円札をくずしていただけませんか。",
+    "彼女は現代の最も優れた画家の一人である。",
+    "お父さんがバスルームでひげを剃っている。",
+    "その機関は１９６０年代後半に設立された。"
    ],
-   "hint": ""
+   "h": "f4383fa8",
+   "oh": [
+    "f4383fa8",
+    "ee752b0",
+    "4f3c3e45",
+    "504171b4"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1124"
   },
   {
-   "id": "S1125",
-   "day": 113,
-   "direction": "zh-ja",
+   "qid": "P-113-04-c64931bee688",
    "prompt": "那位作家我们很熟悉。",
-   "knowledge_ids": [
-    "V2025"
+   "options": [
+    "君はそのコンサートをテープにとったか。",
+    "その作家は私たちによく知られています。",
+    "ＦＡＸで地図を送っていただけませんか。",
+    "こういうタイプの人はおもしろくない。"
    ],
-   "hint": ""
+   "h": "44206ac1",
+   "oh": [
+    "843b69e0",
+    "44206ac1",
+    "4a77dbf7",
+    "b9ffc63c"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1125"
   },
   {
-   "id": "S1126",
-   "day": 113,
-   "direction": "zh-ja",
+   "qid": "P-113-05-1fb441f33ea4",
    "prompt": "这首曲子是巴赫作的。",
-   "knowledge_ids": [
-    "V2026"
+   "options": [
+    "この音楽はバッハによって作曲された。",
+    "マリーゴールドは太陽とともに起きる。",
+    "いくつかの点で私は彼女が気に入らない。",
+    "環境を守るために、ごみを減らします。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1127",
-   "day": 113,
+   "h": "4681d2ed",
+   "oh": [
+    "4681d2ed",
+    "f5e5e2a3",
+    "e6e371c4",
+    "b5f6fbf2"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1126"
+  },
+  {
+   "qid": "P-113-06-dfaaf4fd9942",
    "prompt": "我大致浏览了一遍小册子。",
-   "knowledge_ids": [
-    "V2027"
+   "options": [
+    "私のところの図書は自由にお使い下さい。",
+    "私はアメリカの高校生と文通をしている。",
+    "メアリーは私にアメリカの人形をくれた。",
+    "私はパンフレットにざっと目をとおした。"
    ],
-   "hint": ""
+   "h": "2d56f04d",
+   "oh": [
+    "be2495b9",
+    "48cfd48e",
+    "9316f6d5",
+    "2d56f04d"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1127"
   },
   {
-   "id": "S1128",
-   "day": 113,
-   "direction": "ja-zh",
+   "qid": "P-113-07-8b5e7ba3eba9",
    "prompt": "私はこの手のことにはさっぱりだ。",
-   "knowledge_ids": [
-    "V2028"
+   "options": [
+    "从哪个机场出发？",
+    "这类事我完全不懂。",
+    "哪一把是你的吉他？",
+    "请给我一个烟灰缸。"
    ],
-   "hint": ""
+   "h": "39d0bd54",
+   "oh": [
+    "df477bcd",
+    "39d0bd54",
+    "4a841a74",
+    "c873af5f"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1128"
   },
   {
-   "id": "S1129",
-   "day": 113,
-   "direction": "ja-zh",
+   "qid": "P-113-08-1d71df3d25c2",
    "prompt": "サハラは広大な砂漠です。",
-   "knowledge_ids": [
-    "V2030"
+   "options": [
+    "撒哈拉是一片广阔的沙漠。",
+    "我就当你的第一个病人吧。",
+    "我手边总放着三本辞典。",
+    "他成不了什么大人物啊。"
    ],
-   "hint": ""
+   "h": "7c2b4748",
+   "oh": [
+    "7c2b4748",
+    "40e562c4",
+    "84b99cfe",
+    "e8602c84"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1129"
   },
   {
-   "id": "S1130",
-   "day": 113,
-   "direction": "ja-zh",
+   "qid": "P-113-09-9c2eaa966776",
    "prompt": "その週間は差別とは関係がなかった。",
-   "knowledge_ids": [
-    "V2031"
+   "options": [
+    "史密斯先生说话语气温和。",
+    "那一周和歧视问题没有关系。",
+    "我的错误招来了他的怒气。",
+    "演讲比赛在11月9日举行。"
    ],
-   "hint": ""
+   "h": "f623e0cd",
+   "oh": [
+    "9e51d31a",
+    "f623e0cd",
+    "3604d3ec",
+    "d0a4ec72"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1130"
   }
  ],
  "quiz": [

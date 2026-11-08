@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V0306",
    "front": "栄養",
    "back": "营养",
+   "kana": "えいよう",
    "stage": "planned"
   },
   {
    "kid": "V0307",
    "front": "睡眠",
    "back": "睡眠",
+   "kana": "すいみん",
    "stage": "planned"
   },
   {
    "kid": "V0308",
    "front": "回復",
    "back": "恢复；康复",
+   "kana": "かいふく",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0333",
    "front": "産",
-   "back": "生产；出产｜音 サン",
+   "back": "生产；出产",
+   "kana": "サン、う.む、う.まれる、うぶ-、む.す",
    "stage": "planned"
   },
   {
    "kid": "K0334",
    "front": "点",
-   "back": "点；分数｜音 テン",
+   "back": "点；分数",
+   "kana": "テン、つ.ける、つ.く、た.てる、さ.す、とぼ.す、とも.す、ぼち",
    "stage": "planned"
   },
   {
    "kid": "V0273",
    "front": "書類",
    "back": "文件；书面材料",
+   "kana": "しょるい",
    "stage": "planned"
   },
   {
    "kid": "V0274",
    "front": "宛先",
    "back": "收件地址；收件人",
+   "kana": "あてさき",
    "stage": "planned"
   },
   {
    "kid": "V0275",
    "front": "件名",
    "back": "（邮件）主题",
+   "kana": "けんめい",
    "stage": "planned"
   },
   {
@@ -479,104 +487,204 @@
  ],
  "sentences": [
   {
-   "id": "S0791",
-   "day": 80,
-   "direction": "zh-ja",
+   "qid": "P-080-00-d76f4156acfd",
    "prompt": "我用熨斗把手烫伤了。",
-   "knowledge_ids": [
-    "V1445"
+   "options": [
+    "そのオレンジは後味が変だった。",
+    "彼は市場に出す牛を育てている。",
+    "地球は球のような形をしている。",
+    "アイロンで手をやけどしました。"
    ],
-   "hint": ""
+   "h": "8afa85c",
+   "oh": [
+    "d6185ff2",
+    "8c9d754",
+    "19b4cf96",
+    "8afa85c"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0791"
   },
   {
-   "id": "S0792",
-   "day": 80,
-   "direction": "zh-ja",
+   "qid": "P-080-01-a5c7b7b660c6",
    "prompt": "第一个击球手出局了。",
-   "knowledge_ids": [
-    "V1446"
+   "options": [
+    "最初の打者はアウトになった。",
+    "その火事はおととい発生した。",
+    "だいぶ痛みがなくなりました。",
+    "バスの停留所まで競争しよう。"
    ],
-   "hint": ""
+   "h": "812a999a",
+   "oh": [
+    "812a999a",
+    "d0498af0",
+    "3eba8d1c",
+    "878a19ec"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0792"
   },
   {
-   "id": "S0793",
-   "day": 80,
-   "direction": "zh-ja",
+   "qid": "P-080-02-b7951faf7521",
    "prompt": "请把灯打开。",
-   "knowledge_ids": [
-    "V1447"
+   "options": [
+    "クリスマスが近くなってきた。",
+    "どうか明かりをつけて下さい。",
+    "バスの停留所まで競争しよう。",
+    "きのう旧友の一人に出会った。"
    ],
-   "hint": ""
+   "h": "1b979fbd",
+   "oh": [
+    "173e2429",
+    "1b979fbd",
+    "878a19ec",
+    "bacc7be9"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0793"
   },
   {
-   "id": "S0794",
-   "day": 80,
-   "direction": "zh-ja",
+   "qid": "P-080-03-f0808b50affd",
    "prompt": "把字与字之间的空隙留大一些。",
-   "knowledge_ids": [
-    "V1448"
+   "options": [
+    "字と字の間の空きをもっと広くしなさい。",
+    "「いいえ」とイギリス人は繰り返しました。",
+    "ジェニーは贈り物をありがとうと言った。",
+    "それは、おまえの声をよく聞くためだよ。"
    ],
-   "hint": ""
+   "h": "b87d9fa0",
+   "oh": [
+    "b87d9fa0",
+    "63d86f79",
+    "4982840f",
+    "19802e2c"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0794"
   },
   {
-   "id": "S0795",
-   "day": 80,
-   "direction": "zh-ja",
+   "qid": "P-080-04-b2d1fa81e724",
    "prompt": "那艘船沉了，这是明摆着的。",
-   "knowledge_ids": [
-    "V1449"
+   "options": [
+    "その船が沈んだのは明らかだ。",
+    "彼は商売をたたんで引退した。",
+    "あまり人に頼ってはいけない。",
+    "小さなことでくよくよするな。"
    ],
-   "hint": ""
+   "h": "c794b5c3",
+   "oh": [
+    "c794b5c3",
+    "144390d5",
+    "7f0112b5",
+    "64e534b3"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0795"
   },
   {
-   "id": "S0796",
-   "day": 80,
-   "direction": "zh-ja",
+   "qid": "P-080-05-b6c7d107486e",
    "prompt": "那个少年被当作死了而放弃了。",
-   "knowledge_ids": [
-    "V1450"
+   "options": [
+    "６０にするためには１７に何を足せばよいの。",
+    "その少年は死んだものとしてあきらめられた。",
+    "古き良き時代は去って、二度ともどってこない。",
+    "私は本棚の本をすべて読んだわけではない。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0797",
-   "day": 80,
+   "h": "ab3a94b8",
+   "oh": [
+    "8555cf3a",
+    "ab3a94b8",
+    "45662e4e",
+    "ef0f61c9"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0796"
+  },
+  {
+   "qid": "P-080-06-febb2a4db670",
    "prompt": "儿子吃腻了汉堡。",
-   "knowledge_ids": [
-    "V1451"
+   "options": [
+    "まだ動くうちに売ってしまわなきゃ。",
+    "ライオンとヒョウの違いは何ですか。",
+    "息子はハンバーガーにあきています。",
+    "その場所は今は相当建て込んでいる。"
    ],
-   "hint": ""
+   "h": "9eefe5a6",
+   "oh": [
+    "49f6cdcc",
+    "b866895a",
+    "9eefe5a6",
+    "923b8d6a"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0797"
   },
   {
-   "id": "S0798",
-   "day": 80,
-   "direction": "ja-zh",
+   "qid": "P-080-07-e7d50e8e922f",
    "prompt": "彼は友人と握手した。",
-   "knowledge_ids": [
-    "V1452"
+   "options": [
+    "英语是国际语言。",
+    "他和朋友握了手。",
+    "你的蓝笔不见了。",
+    "下下个月是十二月。"
    ],
-   "hint": ""
+   "h": "9f02e227",
+   "oh": [
+    "c39153d7",
+    "9f02e227",
+    "136317ea",
+    "3d2240f5"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0798"
   },
   {
-   "id": "S0799",
-   "day": 80,
-   "direction": "ja-zh",
+   "qid": "P-080-08-cfa147e1ef0f",
    "prompt": "悪魔がやってくるかもしれないよ。",
-   "knowledge_ids": [
-    "V1453"
+   "options": [
+    "这次可不能失手。",
+    "要咖啡，还是茶？",
+    "下下周四怎么样？",
+    "恶魔也许会来哦。"
    ],
-   "hint": ""
+   "h": "e02eee05",
+   "oh": [
+    "2fe4f620",
+    "c2d3b991",
+    "aab0ec66",
+    "e02eee05"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0799"
   },
   {
-   "id": "S0800",
-   "day": 80,
-   "direction": "ja-zh",
+   "qid": "P-080-09-302a2aadcfec",
    "prompt": "夜が明ける。",
-   "knowledge_ids": [
-    "V1454"
+   "options": [
+    "天亮了。",
+    "买肉。",
+    "收银台在哪里。",
+    "这水真舒服啊。"
    ],
-   "hint": ""
+   "h": "678ca47e",
+   "oh": [
+    "678ca47e",
+    "e9acffb0",
+    "55df731b",
+    "98bf654"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0800"
   }
  ],
  "quiz": [

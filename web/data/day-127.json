@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V2196",
    "front": "信仰",
    "back": "信仰",
+   "kana": "しんこう",
    "stage": "planned"
   },
   {
    "kid": "V2197",
    "front": "信号",
    "back": "信号；红绿灯",
+   "kana": "しんごう",
    "stage": "planned"
   },
   {
    "kid": "V2198",
    "front": "人工",
    "back": "人工",
+   "kana": "じんこう",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0521",
    "front": "熱",
-   "back": "热；发烧｜音 ネツ",
+   "back": "热；发烧",
+   "kana": "ネツ、あつ.い",
    "stage": "planned"
   },
   {
    "kid": "K0522",
    "front": "険",
-   "back": "险峻；危险｜音 ケン",
+   "back": "险峻；危险",
+   "kana": "ケン、けわ.しい",
    "stage": "planned"
   },
   {
    "kid": "V2163",
    "front": "上等",
    "back": "上等；高档",
+   "kana": "じょうとう",
    "stage": "planned"
   },
   {
    "kid": "V2164",
    "front": "衝突",
    "back": "冲突；碰撞",
+   "kana": "しょうとつ",
    "stage": "planned"
   },
   {
    "kid": "V2165",
    "front": "商人",
    "back": "商人",
+   "kana": "しょうにん",
    "stage": "planned"
   },
   {
@@ -403,104 +411,204 @@
  ],
  "sentences": [
   {
-   "id": "S1261",
-   "day": 127,
-   "direction": "zh-ja",
+   "qid": "P-127-00-9d68b96ca551",
    "prompt": "那块表在瑞士制造。",
-   "knowledge_ids": [
-    "V2265"
+   "options": [
+    "この夏はこんがり焼こうと思います。",
+    "彼は中学時代小説ばかり読んでいた。",
+    "どちらのかばんがあなたの物ですか。",
+    "その時計はスイスで製造されている。"
    ],
-   "hint": ""
+   "h": "9593021b",
+   "oh": [
+    "21ead46d",
+    "9db561fe",
+    "1da36d41",
+    "9593021b"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1261"
   },
   {
-   "id": "S1262",
-   "day": 127,
-   "direction": "zh-ja",
+   "qid": "P-127-01-f69023dfdfda",
    "prompt": "她过着奢侈的生活。",
-   "knowledge_ids": [
-    "V2266"
+   "options": [
+    "彼女はぜいたくに暮らしている。",
+    "あのかわいい少女は私の妹です。",
+    "この制度には改良の余地がない。",
+    "その仕事以外ならなんでもやる。"
    ],
-   "hint": ""
+   "h": "5a58f0e9",
+   "oh": [
+    "5a58f0e9",
+    "d8a40238",
+    "849b2eb5",
+    "b9ada927"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1262"
   },
   {
-   "id": "S1263",
-   "day": 127,
-   "direction": "zh-ja",
+   "qid": "P-127-02-51544d40d0dc",
    "prompt": "她长大后成了美丽的妇人。",
-   "knowledge_ids": [
-    "V2267"
+   "options": [
+    "さっきなぜかマイクが入らなかった。",
+    "住民の半数以上はその計画に反対だ。",
+    "夫婦が愛し合うのは全く自然である。",
+    "彼女は成長して美しい婦人になった。"
    ],
-   "hint": ""
+   "h": "f14714b1",
+   "oh": [
+    "f6bd6b75",
+    "7667272d",
+    "80962ba6",
+    "f14714b1"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1263"
   },
   {
-   "id": "S1264",
-   "day": 127,
-   "direction": "zh-ja",
+   "qid": "P-127-03-c1ff7007ee00",
    "prompt": "这个制度没有改良的余地。",
-   "knowledge_ids": [
-    "V2268"
+   "options": [
+    "この制度には改良の余地がない。",
+    "その音で彼女は眠りから覚めた。",
+    "これは北海道からのお土産です。",
+    "その場合には警察を呼びなさい。"
    ],
-   "hint": ""
+   "h": "849b2eb5",
+   "oh": [
+    "849b2eb5",
+    "4bed7830",
+    "7e2c9ed2",
+    "dba5375d"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1264"
   },
   {
-   "id": "S1265",
-   "day": 127,
-   "direction": "zh-ja",
+   "qid": "P-127-04-4ae7c55f47e1",
    "prompt": "那个长发的青年很粗野。",
-   "knowledge_ids": [
-    "V2269"
+   "options": [
+    "私は指に感覚が無かった。",
+    "大気が汚染されつつある。",
+    "お昼休みは、１時間です。",
+    "あの長髪の青年は粗野だ。"
    ],
-   "hint": ""
+   "h": "bc046002",
+   "oh": [
+    "43eea6c6",
+    "c8a57526",
+    "9ff958f1",
+    "bc046002"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1265"
   },
   {
-   "id": "S1266",
-   "day": 127,
-   "direction": "zh-ja",
+   "qid": "P-127-05-446b288526f5",
    "prompt": "这件产品做得很精美。",
-   "knowledge_ids": [
-    "V2270"
+   "options": [
+    "スケートはとてもおもしろかった。",
+    "インドの人口はどのくらいですか。",
+    "おぼれかけた人は息を吹き返した。",
+    "この製品は美しく仕上がっている。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1267",
-   "day": 127,
+   "h": "a8a8c68",
+   "oh": [
+    "ebd819a3",
+    "4c5d8293",
+    "9d54542a",
+    "a8a8c68"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1266"
+  },
+  {
+   "qid": "P-127-06-1e0b4ef1cccd",
    "prompt": "政府被推翻了。",
-   "knowledge_ids": [
-    "V2271"
+   "options": [
+    "あなたは先生ですか。",
+    "公園で遊びます。",
+    "政府は倒された。",
+    "お茶を飲みます。"
    ],
-   "hint": ""
+   "h": "d81a873f",
+   "oh": [
+    "7cbc9d0b",
+    "ef3d5680",
+    "d81a873f",
+    "d303d227"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1267"
   },
   {
-   "id": "S1268",
-   "day": 127,
-   "direction": "ja-zh",
+   "qid": "P-127-07-2be1ac73b0c9",
    "prompt": "地球以外の天体に生物はいますか。",
-   "knowledge_ids": [
-    "V2272"
+   "options": [
+    "你的工作没有达到期待的水准。",
+    "地球以外的天体上有生物吗？",
+    "他打橄榄球的时候受了伤。",
+    "那一周和歧视问题没有关系。"
    ],
-   "hint": ""
+   "h": "26a2ce62",
+   "oh": [
+    "aa45ad00",
+    "26a2ce62",
+    "45de1693",
+    "f623e0cd"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1268"
   },
   {
-   "id": "S1269",
-   "day": 127,
-   "direction": "ja-zh",
+   "qid": "P-127-08-e52cb63f0d90",
    "prompt": "生命はいつ誕生したのですか。",
-   "knowledge_ids": [
-    "V2273"
+   "options": [
+    "跳舞对保持身材有好处。",
+    "生命是什么时候诞生的？",
+    "能让我看看那条裙子吗？",
+    "这条法律适用于所有人。"
    ],
-   "hint": ""
+   "h": "3df29c45",
+   "oh": [
+    "ea070baa",
+    "3df29c45",
+    "372e9993",
+    "64724262"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1269"
   },
   {
-   "id": "S1270",
-   "day": 127,
-   "direction": "ja-zh",
+   "qid": "P-127-09-5cf50b7d7e5b",
    "prompt": "部屋の整理をしたほうがいいよ。",
-   "knowledge_ids": [
-    "V2274"
+   "options": [
+    "吃那么多是不正常的。",
+    "上班时不要看漫画。",
+    "最好把房间整理一下。",
+    "传闻传到了四面八方。"
    ],
-   "hint": ""
+   "h": "9f16195a",
+   "oh": [
+    "80ba9814",
+    "e4763edb",
+    "9f16195a",
+    "8e2c460f"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1270"
   }
  ],
  "quiz": [

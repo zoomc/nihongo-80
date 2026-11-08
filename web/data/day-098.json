@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1705",
    "front": "刀",
    "back": "刀",
+   "kana": "かたな",
    "stage": "planned"
   },
   {
    "kid": "V1706",
    "front": "語る",
    "back": "讲述；谈论",
+   "kana": "かたる",
    "stage": "planned"
   },
   {
    "kid": "V1707",
    "front": "価値",
    "back": "价值",
+   "kana": "かち",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0405",
    "front": "断",
-   "back": "切断；拒绝；判断｜音 ダン",
+   "back": "切断；拒绝；判断",
+   "kana": "ダン、た.つ、ことわ.る、さだ.める",
    "stage": "planned"
   },
   {
    "kid": "K0406",
    "front": "石",
-   "back": "石头｜音 セキ、シャク、コク",
+   "back": "石头",
+   "kana": "セキ、シャク、コク、いし",
    "stage": "planned"
   },
   {
    "kid": "V1672",
    "front": "罹る",
    "back": "患病",
+   "kana": "かかる",
    "stage": "planned"
   },
   {
    "kid": "V1673",
    "front": "限る",
    "back": "限于；限定",
+   "kana": "かぎる",
    "stage": "planned"
   },
   {
    "kid": "V1674",
    "front": "家具",
    "back": "家具",
+   "kana": "かぐ",
    "stage": "planned"
   },
   {
@@ -532,104 +540,204 @@
  ],
  "sentences": [
   {
-   "id": "S0971",
-   "day": 98,
-   "direction": "zh-ja",
+   "qid": "P-098-00-ce0571dc3fbe",
    "prompt": "我也是议员之一。",
-   "knowledge_ids": [
-    "V1757"
+   "options": [
+    "私もまた、議員の一人です。",
+    "船は今夜赤道を越すだろう。",
+    "国会は来週月曜に開かれる。",
+    "喜んで質問に答えましょう。"
    ],
-   "hint": ""
+   "h": "71ef590d",
+   "oh": [
+    "71ef590d",
+    "e22b650a",
+    "cbf2efc5",
+    "b449f1b9"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0971"
   },
   {
-   "id": "S0972",
-   "day": 98,
-   "direction": "zh-ja",
+   "qid": "P-098-01-c3f4d2407f04",
    "prompt": "我试图唤起那天的记忆。",
-   "knowledge_ids": [
-    "V1758"
+   "options": [
+    "私はその日の記憶を呼び覚まそうとした。",
+    "トムはしきりに新車を買いたがっている。",
+    "いつ禁煙のサインを消すのでしょうね。",
+    "私はアメリカの高校生と文通をしている。"
    ],
-   "hint": ""
+   "h": "6a44dc51",
+   "oh": [
+    "6a44dc51",
+    "c09bc483",
+    "755332b2",
+    "48cfd48e"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0972"
   },
   {
-   "id": "S0973",
-   "day": 98,
-   "direction": "zh-ja",
+   "qid": "P-098-02-e8e3dad4491a",
    "prompt": "气温一降，关节就疼。",
-   "knowledge_ids": [
-    "V1759"
+   "options": [
+    "ジョンのことが新聞に出ていた。",
+    "あの交差点で何が起こったのか。",
+    "この家は住むのにとても快適だ。",
+    "気温が下がると関節が痛むんだ。"
    ],
-   "hint": ""
+   "h": "ac9c0e33",
+   "oh": [
+    "83ca759e",
+    "28d0e3e9",
+    "be849b07",
+    "ac9c0e33"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0973"
   },
   {
-   "id": "S0974",
-   "day": 98,
-   "direction": "zh-ja",
+   "qid": "P-098-03-d1269dcd42f6",
    "prompt": "他试了试那台新机器。",
-   "knowledge_ids": [
-    "V1760"
+   "options": [
+    "彼はその新しい機械を試してみた。",
+    "この犬は何でもほとんど食べます。",
+    "コックさんは少しもかけていない。",
+    "この学校は男子よりも女子が多い。"
    ],
-   "hint": ""
+   "h": "4fef9164",
+   "oh": [
+    "4fef9164",
+    "1ebdb937",
+    "9948ee99",
+    "53353c8"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0974"
   },
   {
-   "id": "S0975",
-   "day": 98,
-   "direction": "zh-ja",
+   "qid": "P-098-04-e3b682ba8dd0",
    "prompt": "议会最后吵了起来。",
-   "knowledge_ids": [
-    "V1761"
+   "options": [
+    "それはあなたのナイフではない。",
+    "グラスは粉々に割れてしまった。",
+    "議会はさいごにけんかになった。",
+    "その場合には警察を呼びなさい。"
    ],
-   "hint": ""
+   "h": "2072fdb0",
+   "oh": [
+    "89c04ee5",
+    "c01abf22",
+    "2072fdb0",
+    "dba5375d"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0975"
   },
   {
-   "id": "S0976",
-   "day": 98,
-   "direction": "zh-ja",
+   "qid": "P-098-05-9059b817d85c",
    "prompt": "治好需要多长时间？",
-   "knowledge_ids": [
-    "V1762"
+   "options": [
+    "この紙に記入するのを手伝ってください。",
+    "治るのにどのくらいの期間がかかりますか。",
+    "彼にどこに駐車したのか聞いてください。",
+    "トランプでごまかすのはよくないことだ。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0977",
-   "day": 98,
+   "h": "1c00c3bf",
+   "oh": [
+    "4f6db21e",
+    "1c00c3bf",
+    "468961a2",
+    "7ef07a76"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0976"
+  },
+  {
+   "qid": "P-098-06-d68c8c82a2bf",
    "prompt": "那个机构成立于六十年代后期。",
-   "knowledge_ids": [
-    "V1763"
+   "options": [
+    "その車がじゃまです。動かしてください。",
+    "その機関は１９６０年代後半に設立された。",
+    "せっけんだらけの手で私にさわらないで。",
+    "ここでお買い上げの品は無料で配達します。"
    ],
-   "hint": ""
+   "h": "504171b4",
+   "oh": [
+    "4b3d262c",
+    "504171b4",
+    "41d0d85f",
+    "108078d3"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0977"
   },
   {
-   "id": "S0978",
-   "day": 98,
-   "direction": "ja-zh",
+   "qid": "P-098-07-1aee1e0951ab",
    "prompt": "よくもまあ私にそんな口がきけるね。",
-   "knowledge_ids": [
-    "V1764"
+   "options": [
+    "约翰继承了一大笔财产。",
+    "他不知道受了多少苦。",
+    "你居然敢这么跟我说话。",
+    "他打橄榄球的时候受了伤。"
    ],
-   "hint": ""
+   "h": "a645f8f6",
+   "oh": [
+    "c5e86987",
+    "95b0f650",
+    "a645f8f6",
+    "45de1693"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0978"
   },
   {
-   "id": "S0979",
-   "day": 98,
-   "direction": "ja-zh",
+   "qid": "P-098-08-f340b386de43",
    "prompt": "彼は他人の機嫌を損ねないように気をつけている。",
-   "knowledge_ids": [
-    "V1765"
+   "options": [
+    "他成不了什么大人物啊。",
+    "他注意不去惹别人不高兴。",
+    "世界上有各种各样的人种。",
+    "你是个多么聪明的学生啊。"
    ],
-   "hint": ""
+   "h": "16524355",
+   "oh": [
+    "e8602c84",
+    "16524355",
+    "1d508341",
+    "9c468c5f"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0979"
   },
   {
-   "id": "S0980",
-   "day": 98,
-   "direction": "ja-zh",
+   "qid": "P-098-09-3fa1a15253d4",
    "prompt": "その国は気候が温和だ。",
-   "knowledge_ids": [
-    "V1766"
+   "options": [
+    "山里空气非常清新。",
+    "日元贬值影响物价。",
+    "这方法虽慢但可靠。",
+    "那个国家气候温和。"
    ],
-   "hint": ""
+   "h": "82295631",
+   "oh": [
+    "47258165",
+    "f43a7c97",
+    "1119a5f0",
+    "82295631"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0980"
   }
  ],
  "quiz": [

@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V2344",
    "front": "態度",
    "back": "态度",
+   "kana": "たいど",
    "stage": "planned"
   },
   {
    "kid": "V2345",
    "front": "大統領",
    "back": "总统",
+   "kana": "だいとうりょう",
    "stage": "planned"
   },
   {
    "kid": "V2346",
    "front": "大半",
    "back": "大半；大部分",
+   "kana": "たいはん",
    "stage": "planned"
   },
   {
@@ -65,31 +68,36 @@
   {
    "kid": "K0553",
    "front": "招",
-   "back": "招待；招引｜音 ショウ",
+   "back": "招待；招引",
+   "kana": "ショウ、まね.く",
    "stage": "planned"
   },
   {
    "kid": "K0554",
    "front": "困",
-   "back": "困扰；困难｜音 コン",
+   "back": "困扰；困难",
+   "kana": "コン、こま.る",
    "stage": "planned"
   },
   {
    "kid": "V2302",
    "front": "相続",
    "back": "继承",
+   "kana": "そうぞく",
    "stage": "planned"
   },
   {
    "kid": "V2303",
    "front": "装置",
    "back": "装置；设备",
+   "kana": "そうち",
    "stage": "planned"
   },
   {
    "kid": "V2304",
    "front": "相当",
    "back": "相当；合适",
+   "kana": "そうとう",
    "stage": "planned"
   },
   {
@@ -101,13 +109,15 @@
   {
    "kid": "K0545",
    "front": "曲",
-   "back": "弯曲；曲子｜音 キョク",
+   "back": "弯曲；曲子",
+   "kana": "キョク、ま.がる、ま.げる、くま",
    "stage": "planned"
   },
   {
    "kid": "K0546",
    "front": "払",
-   "back": "支付；拂去｜音 フツ、ヒツ、ホツ",
+   "back": "支付；拂去",
+   "kana": "フツ、ヒツ、ホツ、はら.う、-はら.い、-ばら.い",
    "stage": "planned"
   }
  ],
@@ -510,104 +520,204 @@
  ],
  "sentences": [
   {
-   "id": "S1341",
-   "day": 135,
-   "direction": "zh-ja",
+   "qid": "P-135-00-43d850003d4d",
    "prompt": "他在公司地位很高。",
-   "knowledge_ids": [
-    "V2405"
+   "options": [
+    "彼は会社で高い地位にあります。",
+    "交通に注意しなければいけない。",
+    "その時はシャワーを浴びていた。",
+    "兄はアパートをさがしています。"
    ],
-   "hint": ""
+   "h": "1db91e4",
+   "oh": [
+    "1db91e4",
+    "208febf8",
+    "bc9b8d60",
+    "7f656d90"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1341"
   },
   {
-   "id": "S1342",
-   "day": 135,
-   "direction": "zh-ja",
+   "qid": "P-135-01-149f4b866a1f",
    "prompt": "这个地区会持续下雨吧。",
-   "knowledge_ids": [
-    "V2406"
+   "options": [
+    "何時がご都合よいでしょうか。",
+    "ギターをひくのはおもしろい。",
+    "この手の本はあまり読まない。",
+    "この地域は雨が続くでしょう。"
    ],
-   "hint": ""
+   "h": "f3e64d08",
+   "oh": [
+    "313ba781",
+    "f7aedaae",
+    "771de503",
+    "f3e64d08"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1342"
   },
   {
-   "id": "S1343",
-   "day": 135,
-   "direction": "zh-ja",
+   "qid": "P-135-02-d99c7b1b862c",
    "prompt": "乔治早上吃了很多奶酪。",
-   "knowledge_ids": [
-    "V2407"
+   "options": [
+    "ジョージは朝にたくさんのチーズを食べた。",
+    "いったい、いつになったらそのケチは直るの？",
+    "彼は私の警告に全く注意を払わなかった。",
+    "あなたの言うことは正しいかもしれない。"
    ],
-   "hint": ""
+   "h": "2f26c123",
+   "oh": [
+    "2f26c123",
+    "a9085e74",
+    "c5b749e7",
+    "cdabcfca"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1343"
   },
   {
-   "id": "S1344",
-   "day": 135,
-   "direction": "zh-ja",
+   "qid": "P-135-03-a8ff24dc9250",
    "prompt": "他是队里遥遥领先的好选手。",
-   "knowledge_ids": [
-    "V2408"
+   "options": [
+    "この手袋は両方がそろっていない。",
+    "その事が彼のすべての夢を壊した。",
+    "彼はチームでダントツの好選手だ。",
+    "システムが作動しない場合がある。"
    ],
-   "hint": ""
+   "h": "15a1d883",
+   "oh": [
+    "9ed978b8",
+    "2835eaff",
+    "15a1d883",
+    "e09812e6"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1344"
   },
   {
-   "id": "S1345",
-   "day": 135,
-   "direction": "zh-ja",
+   "qid": "P-135-04-36fae0617760",
    "prompt": "他是个有智慧的人。",
-   "knowledge_ids": [
-    "V2409"
+   "options": [
+    "家族と旅行します。",
+    "お前はまだ「青い」な。",
+    "明日、学校へ行きます。",
+    "彼は知恵のある人だ。"
    ],
-   "hint": ""
+   "h": "f4551fc9",
+   "oh": [
+    "8582dd31",
+    "ad3fba26",
+    "b7b27cd6",
+    "f4551fc9"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1345"
   },
   {
-   "id": "S1346",
-   "day": 135,
-   "direction": "zh-ja",
+   "qid": "P-135-05-9bbe6d78dc01",
    "prompt": "他被怀疑从事地下活动。",
-   "knowledge_ids": [
-    "V2410"
+   "options": [
+    "インドの人口はどのくらいですか。",
+    "おひる頃やっと太陽が顔を出した。",
+    "彼は地下活動の疑いをかけられた。",
+    "この手袋は両方がそろっていない。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1347",
-   "day": 135,
+   "h": "92b9b7f2",
+   "oh": [
+    "4c5d8293",
+    "c5040bc1",
+    "92b9b7f2",
+    "9ed978b8"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1346"
+  },
+  {
+   "qid": "P-135-06-951ef70e4b4b",
    "prompt": "实际上两者几乎没有差别。",
-   "knowledge_ids": [
-    "V2411"
+   "options": [
+    "みんなには優しく話してください。",
+    "実際両者にはほとんど違いがない。",
+    "ホッチキスを貸してくれませんか。",
+    "ジャックは８月１０日に生まれた。"
    ],
-   "hint": ""
+   "h": "b0693a45",
+   "oh": [
+    "125e9885",
+    "b0693a45",
+    "1b2dc8f1",
+    "6df6eadc"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1347"
   },
   {
-   "id": "S1348",
-   "day": 135,
-   "direction": "ja-zh",
+   "qid": "P-135-07-7b7c83d8ea48",
    "prompt": "再婚した今、彼はもっと幸福に違いない。",
-   "knowledge_ids": [
-    "V2412"
+   "options": [
+    "演讲比赛在11月9日举行。",
+    "并列争球是橄榄球的一大特色。",
+    "再婚之后，他现在一定更幸福。",
+    "尼克为了赶上公交加快了脚步。"
    ],
-   "hint": ""
+   "h": "42a05a2e",
+   "oh": [
+    "d0a4ec72",
+    "1d0867cc",
+    "42a05a2e",
+    "f2bdf42e"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1348"
   },
   {
-   "id": "S1349",
-   "day": 135,
-   "direction": "ja-zh",
+   "qid": "P-135-08-264ca176a5c5",
    "prompt": "近ごろ彼女から便りがない。",
-   "knowledge_ids": [
-    "V2413"
+   "options": [
+    "这方法虽慢但可靠。",
+    "最近没有她的消息。",
+    "银行星期天不营业。",
+    "你为什么想当护士？"
    ],
-   "hint": ""
+   "h": "31ae203e",
+   "oh": [
+    "1119a5f0",
+    "31ae203e",
+    "9bf804de",
+    "28ee32c5"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1349"
   },
   {
-   "id": "S1350",
-   "day": 135,
-   "direction": "ja-zh",
+   "qid": "P-135-09-daab44bef6f1",
    "prompt": "彼らは地球が平らであると信じた。",
-   "knowledge_ids": [
-    "V2414"
+   "options": [
+    "感到危险请立即避难。",
+    "他们相信地球是平的。",
+    "女孩子几乎都很温柔。",
+    "他在生死之间徘徊。"
    ],
-   "hint": ""
+   "h": "a51300e1",
+   "oh": [
+    "997ca2a4",
+    "a51300e1",
+    "5bf5f95d",
+    "f32c445a"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1350"
   }
  ],
  "quiz": [

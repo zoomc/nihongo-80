@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0254",
    "front": "操作",
    "back": "操作（机器/界面）",
+   "kana": "そうさ",
    "stage": "planned"
   },
   {
    "kid": "V0255",
    "front": "渋滞",
    "back": "堵车；拥堵",
+   "kana": "じゅうたい",
    "stage": "planned"
   },
   {
    "kid": "V0256",
    "front": "事故",
    "back": "事故；意外事件",
+   "kana": "じこ",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0321",
    "front": "都",
-   "back": "都城；都市；全部｜音 ト、ツ",
+   "back": "都城；都市；全部",
+   "kana": "ト、ツ、みやこ",
    "stage": "planned"
   },
   {
    "kid": "K0322",
    "front": "和",
-   "back": "和；和谐；日本｜音 ワ、オ、カ",
+   "back": "和；和谐；日本",
+   "kana": "ワ、オ、カ、やわ.らぐ、やわ.らげる、なご.む、なご.やか、あ.える",
    "stage": "planned"
   },
   {
    "kid": "V0221",
    "front": "満足",
    "back": "满足；满意",
+   "kana": "まんぞく",
    "stage": "planned"
   },
   {
    "kid": "V0222",
    "front": "不満",
    "back": "不满；不满意",
+   "kana": "ふまん",
    "stage": "planned"
   },
   {
    "kid": "V0223",
    "front": "不安",
    "back": "不安；担心",
+   "kana": "ふあん",
    "stage": "planned"
   },
   {
@@ -559,104 +567,204 @@
  ],
  "sentences": [
   {
-   "id": "S0761",
-   "day": 77,
-   "direction": "zh-ja",
+   "qid": "P-077-00-4b24b364a680",
    "prompt": "下周签房子的合同。",
-   "knowledge_ids": [
-    "V0294"
+   "options": [
+    "来週、部屋の契約をします。",
+    "彼は一時ここに住んでいた。",
+    "彼女には常識が欠けている。",
+    "それは２通りに解釈できる。"
    ],
-   "hint": ""
+   "h": "998461ae",
+   "oh": [
+    "998461ae",
+    "3732accd",
+    "53186bea",
+    "46bbbffc"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0761"
   },
   {
-   "id": "S0762",
-   "day": 77,
-   "direction": "zh-ja",
+   "qid": "P-077-01-3ae21d0178b4",
    "prompt": "请在搬出前一个月联系。",
-   "knowledge_ids": [
-    "V0295"
+   "options": [
+    "あなたは家族の事を考えるべきです。",
+    "彼は世間でいう音楽の真の愛好者だ。",
+    "退去の一か月前に連絡してください。",
+    "同じ色の羽の鳥は共に集まるものだ。"
    ],
-   "hint": ""
+   "h": "218f8460",
+   "oh": [
+    "13384023",
+    "3e786b72",
+    "218f8460",
+    "83985809"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0762"
   },
   {
-   "id": "S0763",
-   "day": 77,
-   "direction": "zh-ja",
+   "qid": "P-077-02-e9f551f97e2f",
    "prompt": "正在打包搬家的行李。",
-   "knowledge_ids": [
-    "V0296"
+   "options": [
+    "引っ越しの荷物をまとめています。",
+    "ムーリエルは２０歳になりました。",
+    "その小説は彼の名声を更に高めた。",
+    "おぼれかけた人は息を吹き返した。"
    ],
-   "hint": ""
+   "h": "4e0c01a2",
+   "oh": [
+    "4e0c01a2",
+    "18597f07",
+    "c4f79a06",
+    "9d54542a"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0763"
   },
   {
-   "id": "S0764",
-   "day": 77,
-   "direction": "zh-ja",
+   "qid": "P-077-03-300e8250a1e7",
    "prompt": "请房产公司介绍了房子。",
-   "knowledge_ids": [
-    "V0297"
+   "options": [
+    "このメールを営業部に転送してください。",
+    "このお客様は田中さんが担当しています。",
+    "不動産会社に部屋を紹介してもらいました。",
+    "ジョージは朝にたくさんのチーズを食べた。"
    ],
-   "hint": ""
+   "h": "e14ddae8",
+   "oh": [
+    "ad45da64",
+    "29b7257a",
+    "e14ddae8",
+    "2f26c123"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0764"
   },
   {
-   "id": "S0765",
-   "day": 77,
-   "direction": "zh-ja",
+   "qid": "P-077-04-e9a12add6c47",
    "prompt": "押金是一个月房租。",
-   "knowledge_ids": [
-    "V0298"
+   "options": [
+    "子供たちは裸で泳いでいた。",
+    "心理学は人間の感情を扱う。",
+    "敷金は家賃の一か月分です。",
+    "「彼女は若いですか」「はい」"
    ],
-   "hint": ""
+   "h": "8a8afc34",
+   "oh": [
+    "b9146d41",
+    "40ba6b43",
+    "8a8afc34",
+    "6bc44878"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0765"
   },
   {
-   "id": "S0766",
-   "day": 77,
-   "direction": "zh-ja",
+   "qid": "P-077-05-af4545ad49d4",
    "prompt": "公共区域费是5000日元。",
-   "knowledge_ids": [
-    "V0299"
+   "options": [
+    "ホテルに泊まります。",
+    "共益費は五千円です。",
+    "放課後は空いてますか？",
+    "駅で友達を待ちます。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0767",
-   "day": 77,
+   "h": "76c95f5d",
+   "oh": [
+    "7f5d8029",
+    "76c95f5d",
+    "6d4ccf23",
+    "2ae190df"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0766"
+  },
+  {
+   "qid": "P-077-06-706510829a2d",
    "prompt": "这个房间有新设备。",
-   "knowledge_ids": [
-    "V0300"
+   "options": [
+    "この部屋には新しい設備があります。",
+    "また別のときにチェスをしましょう。",
+    "これらの単語を一つずつ覚えなさい。",
+    "同じ事が国家についても当てはまる。"
    ],
-   "hint": ""
+   "h": "f4227281",
+   "oh": [
+    "f4227281",
+    "a177b2a7",
+    "b1de96c0",
+    "1bbb6c5b"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0767"
   },
   {
-   "id": "S0768",
-   "day": 77,
-   "direction": "ja-zh",
+   "qid": "P-077-07-85b8b7455c2f",
    "prompt": "症状が良くなりました。",
-   "knowledge_ids": [
-    "V0301"
+   "options": [
+    "我在学开车。",
+    "症状好转了。",
+    "我是公务员。",
+    "从哪个机场出发？"
    ],
-   "hint": ""
+   "h": "ce386345",
+   "oh": [
+    "a8d3152",
+    "ce386345",
+    "cd8b68ac",
+    "df477bcd"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0768"
   },
   {
-   "id": "S0769",
-   "day": 77,
-   "direction": "ja-zh",
+   "qid": "P-077-08-b884ab5f421f",
    "prompt": "午後から診察を受けます。",
-   "knowledge_ids": [
-    "V0302"
+   "options": [
+    "下午去看诊。",
+    "他们躺在草坪上。",
+    "我也是学生。",
+    "下下周四怎么样？"
    ],
-   "hint": ""
+   "h": "3d9f1f18",
+   "oh": [
+    "3d9f1f18",
+    "2bb7a3d6",
+    "4b7daa11",
+    "aab0ec66"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0769"
   },
   {
-   "id": "S0770",
-   "day": 77,
-   "direction": "ja-zh",
+   "qid": "P-077-09-0f4b49565619",
    "prompt": "医者が薬を処方しました。",
-   "knowledge_ids": [
-    "V0303"
+   "options": [
+    "医生开了药。",
+    "他生于19世纪。",
+    "明天预定出差。",
+    "我正在找助手。"
    ],
-   "hint": ""
+   "h": "f53e8688",
+   "oh": [
+    "f53e8688",
+    "122eb4a0",
+    "50d96ff8",
+    "f7ef99a7"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0770"
   }
  ],
  "quiz": [

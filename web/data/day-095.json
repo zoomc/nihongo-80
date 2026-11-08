@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1658",
    "front": "解釈",
    "back": "解释；理解",
+   "kana": "かいしゃく",
    "stage": "planned"
   },
   {
    "kid": "V1659",
    "front": "外出",
    "back": "外出",
+   "kana": "がいしゅつ",
    "stage": "planned"
   },
   {
    "kid": "V1660",
    "front": "改善",
    "back": "改善",
+   "kana": "かいぜん",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0393",
    "front": "供",
-   "back": "供给；供奉；伴随｜音 キョウ、ク、クウ、グ",
+   "back": "供给；供奉；伴随",
+   "kana": "キョウ、ク、クウ、グ、そな.える、とも、-ども",
    "stage": "planned"
   },
   {
    "kid": "K0394",
    "front": "役",
-   "back": "角色；职务；差事｜音 ヤク、エキ",
+   "back": "角色；职务；差事",
+   "kana": "ヤク、エキ",
    "stage": "planned"
   },
   {
    "kid": "V1625",
    "front": "お昼",
    "back": "中午；午饭",
+   "kana": "おひる",
    "stage": "planned"
   },
   {
    "kid": "V1626",
    "front": "オフィス",
    "back": "办公室",
+   "kana": "オフィス",
    "stage": "planned"
   },
   {
    "kid": "V1627",
    "front": "溺れる",
    "back": "溺水；沉溺",
+   "kana": "おぼれる",
    "stage": "planned"
   },
   {
@@ -532,104 +540,204 @@
  ],
  "sentences": [
   {
-   "id": "S0941",
-   "day": 95,
-   "direction": "zh-ja",
+   "qid": "P-095-00-a2d9f8793f76",
    "prompt": "请把鸡蛋煮硬一点。",
-   "knowledge_ids": [
-    "V1703"
+   "options": [
+    "マイクはお酒をやめたの？",
+    "来週、大阪へ出張します。",
+    "卵は硬くゆでてください。",
+    "転んで手首を痛めました。"
    ],
-   "hint": ""
+   "h": "de5ecf19",
+   "oh": [
+    "2c017500",
+    "64af9452",
+    "de5ecf19",
+    "6fd786a"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0941"
   },
   {
-   "id": "S0942",
-   "day": 95,
-   "direction": "zh-ja",
+   "qid": "P-095-01-1ea0ea484c16",
    "prompt": "不懂的话最好到处问问人。",
-   "knowledge_ids": [
-    "V1704"
+   "options": [
+    "わからなかったら方々の人に聞いた方がいいよ。",
+    "デパートの屋上にアドバルーンが上がっている。",
+    "その島の飛行場は、今では草がぼうぼうだ。",
+    "それ以来、彼からは何の便りもありません。"
    ],
-   "hint": ""
+   "h": "e141a543",
+   "oh": [
+    "e141a543",
+    "9bc9f740",
+    "a52d777a",
+    "df9b23d2"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0942"
   },
   {
-   "id": "S0943",
-   "day": 95,
-   "direction": "zh-ja",
+   "qid": "P-095-02-b3cd794ad2f3",
    "prompt": "那把刀配得上王子。",
-   "knowledge_ids": [
-    "V1705"
+   "options": [
+    "事態はかなり切迫している。",
+    "この川の幅が１マイルある。",
+    "その刀は王子にふさわしい。",
+    "スミス氏は市長候補である。"
    ],
-   "hint": ""
+   "h": "6d8b6817",
+   "oh": [
+    "23d029f3",
+    "ee0a3e53",
+    "6d8b6817",
+    "d7451ff4"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0943"
   },
   {
-   "id": "S0944",
-   "day": 95,
-   "direction": "zh-ja",
+   "qid": "P-095-03-8991f7a23849",
    "prompt": "行动比语言更响亮。",
-   "knowledge_ids": [
-    "V1706"
+   "options": [
+    "行動は言葉よりも声高く語る。",
+    "オートバイに乗るのは楽しい。",
+    "日がだんだん短くなっている。",
+    "ギターをひくのはおもしろい。"
    ],
-   "hint": ""
+   "h": "f3fa4224",
+   "oh": [
+    "f3fa4224",
+    "b48df371",
+    "3758f7bc",
+    "f7aedaae"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0944"
   },
   {
-   "id": "S0945",
-   "day": 95,
-   "direction": "zh-ja",
+   "qid": "P-095-04-7490f4200b14",
    "prompt": "这本书有一定价值。",
-   "knowledge_ids": [
-    "V1707"
+   "options": [
+    "私はパレードが見えるいい位置にいた。",
+    "この企業は新しい製品を作っています。",
+    "この本にはある程度の価値はあります。",
+    "ヨーロッパはアジアより人口が少ない。"
    ],
-   "hint": ""
+   "h": "44221dd",
+   "oh": [
+    "3821a6d6",
+    "82d96402",
+    "44221dd",
+    "5244066b"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0945"
   },
   {
-   "id": "S0946",
-   "day": 95,
-   "direction": "zh-ja",
+   "qid": "P-095-05-82869be63f57",
    "prompt": "比赛以他获胜告终。",
-   "knowledge_ids": [
-    "V1708"
+   "options": [
+    "私たちは毎年展覧会を開く。",
+    "私もまた、議員の一人です。",
+    "しっかり勉強してください。",
+    "試合は彼の勝ちに終わった。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0947",
-   "day": 95,
+   "h": "e09f8136",
+   "oh": [
+    "e4b88455",
+    "71ef590d",
+    "f79afcc5",
+    "e09f8136"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0946"
+  },
+  {
+   "qid": "P-095-06-fe1e07ef0440",
    "prompt": "听到那个消息很失望。",
-   "knowledge_ids": [
-    "V1709"
+   "options": [
+    "あなたはなぜ働いているの。",
+    "その知らせにはがっかりだ。",
+    "それは２通りに解釈できる。",
+    "しっかり勉強してください。"
    ],
-   "hint": ""
+   "h": "d49d10e5",
+   "oh": [
+    "6298fea3",
+    "d49d10e5",
+    "46bbbffc",
+    "f79afcc5"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0947"
   },
   {
-   "id": "S0948",
-   "day": 95,
-   "direction": "ja-zh",
+   "qid": "P-095-07-a2c7615881cc",
    "prompt": "その街は活気にあふれていた。",
-   "knowledge_ids": [
-    "V1710"
+   "options": [
+    "我给你点了甜点。",
+    "戏正好准时开演。",
+    "那条街充满活力。",
+    "他逆时代潮流而行。"
    ],
-   "hint": ""
+   "h": "d3ea8b20",
+   "oh": [
+    "5fcdf50d",
+    "998bd8d4",
+    "d3ea8b20",
+    "3ea4412b"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0948"
   },
   {
-   "id": "S0949",
-   "day": 95,
-   "direction": "ja-zh",
+   "qid": "P-095-08-8197613ba47a",
    "prompt": "前学期は成績がよかった。",
-   "knowledge_ids": [
-    "V1711"
+   "options": [
+    "上学期成绩很好。",
+    "两个当中哪个贵？",
+    "那个人口是心非。",
+    "今晚是有聚会吗？"
    ],
-   "hint": ""
+   "h": "964e19e4",
+   "oh": [
+    "964e19e4",
+    "fc08db83",
+    "4f662265",
+    "6ed5872b"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0949"
   },
   {
-   "id": "S0950",
-   "day": 95,
-   "direction": "ja-zh",
+   "qid": "P-095-09-2b13ff8acea4",
    "prompt": "彼女は多くの学校の活動に参加する。",
-   "knowledge_ids": [
-    "V1712"
+   "options": [
+    "她参加很多学校活动。",
+    "布谷鸟春天会来这里。",
+    "读这种书有什么用呢。",
+    "我通常骑自行车上学。"
    ],
-   "hint": ""
+   "h": "46a2a758",
+   "oh": [
+    "46a2a758",
+    "29d516f0",
+    "b0bbf127",
+    "cf5e8493"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0950"
   }
  ],
  "quiz": [

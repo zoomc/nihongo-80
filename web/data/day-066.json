@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V1317",
    "front": "光",
    "back": "光；光线",
+   "kana": "ひかり",
    "stage": "planned"
   },
   {
    "kid": "V1318",
    "front": "光る",
    "back": "发光；闪耀",
+   "kana": "ひかる",
    "stage": "planned"
   },
   {
    "kid": "V1319",
    "front": "引き出し",
    "back": "抽屉",
+   "kana": "ひきだし",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0132",
    "front": "記",
-   "back": "记；记载；报道；记号｜音 キ",
+   "back": "记；记载；报道；记号",
+   "kana": "キ、しるす",
    "stage": "planned"
   },
   {
    "kid": "K0133",
    "front": "意",
-   "back": "意；意思；意见；注意｜音 イ",
+   "back": "意；意思；意见；注意",
+   "kana": "イ",
    "stage": "planned"
   },
   {
    "kid": "V1284",
    "front": "盗む",
    "back": "偷；盗窃",
+   "kana": "ぬすむ",
    "stage": "planned"
   },
   {
    "kid": "V1285",
    "front": "塗る",
    "back": "涂；抹",
+   "kana": "ぬる",
    "stage": "planned"
   },
   {
    "kid": "V1286",
    "front": "ぬれる",
    "back": "淋湿；湿",
+   "kana": "ぬれる",
    "stage": "planned"
   },
   {
@@ -455,104 +463,204 @@
  ],
  "sentences": [
   {
-   "id": "S0651",
-   "day": 66,
-   "direction": "zh-ja",
+   "qid": "P-066-00-ef3c01396dcc",
    "prompt": "她精通西班牙文学。",
-   "knowledge_ids": [
-    "V1351"
+   "options": [
+    "彼女はスペイン文学に明るいです。",
+    "そのショーで観客は大喜びだった。",
+    "あなたはどこでテレビを見ますか。",
+    "あなたの見解は私とは正反対です。"
    ],
-   "hint": ""
+   "h": "198d0ade",
+   "oh": [
+    "198d0ade",
+    "66f9ebb3",
+    "c9e3b484",
+    "65661673"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0651"
   },
   {
-   "id": "S0652",
-   "day": 66,
-   "direction": "zh-ja",
+   "qid": "P-066-01-bc136f439751",
    "prompt": "语法什么的去他的。",
-   "knowledge_ids": [
-    "V1352"
+   "options": [
+    "大気が汚染されつつある。",
+    "文法なんかくそくらえだ。",
+    "この鞄はとても丈夫です。",
+    "デモに参加しようと思う。"
    ],
-   "hint": ""
+   "h": "cc3a97f3",
+   "oh": [
+    "c8a57526",
+    "cc3a97f3",
+    "591995a4",
+    "cd35d93d"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0652"
   },
   {
-   "id": "S0653",
-   "day": 66,
-   "direction": "zh-ja",
+   "qid": "P-066-02-30c1e5059ff6",
    "prompt": "下次再一起下棋吧。",
-   "knowledge_ids": [
-    "V1353"
+   "options": [
+    "息子はハンバーガーにあきています。",
+    "どういっても七時までにいかないと。",
+    "また別のときにチェスをしましょう。",
+    "同じ色の羽の鳥は共に集まるものだ。"
    ],
-   "hint": ""
+   "h": "a177b2a7",
+   "oh": [
+    "9eefe5a6",
+    "91a2dee7",
+    "a177b2a7",
+    "83985809"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0653"
   },
   {
-   "id": "S0654",
-   "day": 66,
-   "direction": "zh-ja",
+   "qid": "P-066-03-38ade543291d",
    "prompt": "电话是贝尔发明的。",
-   "knowledge_ids": [
-    "V1354"
+   "options": [
+    "いまおじの家に滞在しています。",
+    "電話はベルによって発明された。",
+    "主婦は節約に努めるべきである。",
+    "カタツムリがすっと角を出した。"
    ],
-   "hint": ""
+   "h": "816e6bf4",
+   "oh": [
+    "ee03280",
+    "816e6bf4",
+    "ce74be3a",
+    "1141342d"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0654"
   },
   {
-   "id": "S0655",
-   "day": 66,
-   "direction": "zh-ja",
+   "qid": "P-066-04-15e9cdd84c64",
    "prompt": "那个橙子后味很奇怪。",
-   "knowledge_ids": [
-    "V1355"
+   "options": [
+    "そのオレンジは後味が変だった。",
+    "ヒーターをつけたまま外出した。",
+    "その場合には警察を呼びなさい。",
+    "このコップをミルクで満たした。"
    ],
-   "hint": ""
+   "h": "d6185ff2",
+   "oh": [
+    "d6185ff2",
+    "be83661e",
+    "dba5375d",
+    "69585dd2"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0655"
   },
   {
-   "id": "S0656",
-   "day": 66,
-   "direction": "zh-ja",
+   "qid": "P-066-05-54b01e381456",
    "prompt": "希望你能马上回复我。",
-   "knowledge_ids": [
-    "V1356"
+   "options": [
+    "その少年は死んだものとしてあきらめられた。",
+    "彼のいいところを引き出すようにしなさい。",
+    "あんな恐ろしい男のために流す涙はない。",
+    "すぐ返事をしてもらいたいと思っています。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0657",
-   "day": 66,
+   "h": "ffff8377",
+   "oh": [
+    "ab3a94b8",
+    "f8beb9a9",
+    "cfc08b10",
+    "ffff8377"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0656"
+  },
+  {
+   "qid": "P-066-06-f5e7b504198e",
    "prompt": "日本依靠贸易。",
-   "knowledge_ids": [
-    "V1357"
+   "options": [
+    "日本は貿易に頼っている。",
+    "君には音楽の才能がある。",
+    "転んで手首を痛めました。",
+    "本を読むことは大切です。"
    ],
-   "hint": ""
+   "h": "78222732",
+   "oh": [
+    "78222732",
+    "89f7d9b",
+    "6fd786a",
+    "824de756"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0657"
   },
   {
-   "id": "S0658",
-   "day": 66,
-   "direction": "ja-zh",
+   "qid": "P-066-07-2211642b28ce",
    "prompt": "ニュースは毎時放送しています。",
-   "knowledge_ids": [
-    "V1358"
+   "options": [
+    "你父亲托我带个话。",
+    "下下个月是十二月。",
+    "新闻每小时播一次。",
+    "我有一封信必须写。"
    ],
-   "hint": ""
+   "h": "f70f14e",
+   "oh": [
+    "96804bcf",
+    "3d2240f5",
+    "f70f14e",
+    "9e93be90"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0658"
   },
   {
-   "id": "S0659",
-   "day": 66,
-   "direction": "ja-zh",
+   "qid": "P-066-08-3361d3376157",
    "prompt": "この法律はすべての人に適用される。",
-   "knowledge_ids": [
-    "V1359"
+   "options": [
+    "这条法律适用于所有人。",
+    "他的话简单得不能再简单。",
+    "这个工具一点用都没有。",
+    "迟到的人就让鬼吃掉吧。"
    ],
-   "hint": ""
+   "h": "64724262",
+   "oh": [
+    "64724262",
+    "1723f272",
+    "5a4381fe",
+    "3069b7e7"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0659"
   },
   {
-   "id": "S0660",
-   "day": 66,
-   "direction": "ja-zh",
+   "qid": "P-066-09-16a3f9ca350c",
    "prompt": "僕をかもだと思っているんだろう。",
-   "knowledge_ids": [
-    "V1360"
+   "options": [
+    "要咖啡，还是茶？",
+    "要我帮您订购吗？",
+    "下午几点去拜访您？",
+    "你以为我好骗吧。"
    ],
-   "hint": ""
+   "h": "dbbf4ad2",
+   "oh": [
+    "c2d3b991",
+    "fa555a2",
+    "a05c8382",
+    "dbbf4ad2"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0660"
   }
  ],
  "quiz": [

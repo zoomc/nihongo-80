@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V1232",
    "front": "包む",
    "back": "包；包裹",
+   "kana": "つつむ",
    "stage": "planned"
   },
   {
    "kid": "V1233",
    "front": "妻",
    "back": "妻子",
+   "kana": "つま",
    "stage": "planned"
   },
   {
    "kid": "V1234",
    "front": "つもり",
    "back": "打算",
+   "kana": "つもり",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0112",
    "front": "報",
-   "back": "报；报告；报答；信息｜音 ホウ",
+   "back": "报；报告；报答；信息",
+   "kana": "ホウ、むくいる",
    "stage": "planned"
   },
   {
    "kid": "K0113",
    "front": "告",
-   "back": "告；告诉；报告；广告｜音 コク",
+   "back": "告；告诉；报告；广告",
+   "kana": "コク、つげる",
    "stage": "planned"
   },
   {
    "kid": "V1199",
    "front": "足す",
    "back": "加；添",
+   "kana": "たす",
    "stage": "planned"
   },
   {
    "kid": "V1200",
    "front": "尋ねる",
    "back": "询问",
+   "kana": "たずねる",
    "stage": "planned"
   },
   {
    "kid": "V1201",
    "front": "訪ねる",
    "back": "拜访",
+   "kana": "たずねる",
    "stage": "planned"
   },
   {
@@ -456,104 +464,204 @@
  ],
  "sentences": [
   {
-   "id": "S0601",
-   "day": 61,
-   "direction": "zh-ja",
+   "qid": "P-061-00-8ff887ee1efc",
    "prompt": "请把这个换成蓝色的。",
-   "knowledge_ids": [
-    "V1263"
+   "options": [
+    "これを青いのと取り替えてください。",
+    "ぬくもりなどどこにも見つからない。",
+    "どういっても七時までにいかないと。",
+    "その男性はスパイとして逮捕された。"
    ],
-   "hint": ""
+   "h": "6d5148a5",
+   "oh": [
+    "6d5148a5",
+    "b8708731",
+    "91a2dee7",
+    "ae66d5b3"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0601"
   },
   {
-   "id": "S0602",
-   "day": 61,
-   "direction": "zh-ja",
+   "qid": "P-061-01-60a7f67d70ab",
    "prompt": "那个乞丐原来是小偷。",
-   "knowledge_ids": [
-    "V1264"
+   "options": [
+    "そこの乞食が泥棒である事がわかった。",
+    "あんな恐ろしい男のために流す涙はない。",
+    "その赤ちゃんは歯が生えはじめている。",
+    "あの信号の手前で降ろしてください。"
    ],
-   "hint": ""
+   "h": "cc176d6c",
+   "oh": [
+    "cc176d6c",
+    "cfc08b10",
+    "2a005dd5",
+    "4e4f3267"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0602"
   },
   {
-   "id": "S0603",
-   "day": 61,
-   "direction": "zh-ja",
+   "qid": "P-061-02-81f786b91653",
    "prompt": "有人在不停地敲门。",
-   "knowledge_ids": [
-    "V1265"
+   "options": [
+    "私が今日あるのは両親のおかげである。",
+    "だれかがドアをどんどんたたいている。",
+    "マリーゴールドは太陽とともに起きる。",
+    "おはよう。ご飯をよそっても良いかしら？"
    ],
-   "hint": ""
+   "h": "a5411c72",
+   "oh": [
+    "9d3a4023",
+    "a5411c72",
+    "f5e5e2a3",
+    "d3995434"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0603"
   },
   {
-   "id": "S0604",
-   "day": 61,
-   "direction": "zh-ja",
+   "qid": "P-061-03-c89e7896ea64",
    "prompt": "过两周就会自然痊愈。",
-   "knowledge_ids": [
-    "V1266"
+   "options": [
+    "２週間もすれば自然に治ります。",
+    "お答えできる立場にありません。",
+    "グラスは粉々に割れてしまった。",
+    "そのオレンジは後味が変だった。"
    ],
-   "hint": ""
+   "h": "bee44275",
+   "oh": [
+    "bee44275",
+    "3c490fe4",
+    "c01abf22",
+    "d6185ff2"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0604"
   },
   {
-   "id": "S0605",
-   "day": 61,
-   "direction": "zh-ja",
+   "qid": "P-061-04-6a8dc090d3fe",
    "prompt": "到底什么时候你才能改掉那小气的毛病？",
-   "knowledge_ids": [
-    "V1267"
+   "options": [
+    "当時はきれいな水がこの川にも流れていた。",
+    "グレイ先生は仕事を楽しんでいませんでした。",
+    "あんな恐ろしい男のために流す涙はない。",
+    "いったい、いつになったらそのケチは直るの？"
    ],
-   "hint": ""
+   "h": "a9085e74",
+   "oh": [
+    "e9cf2459",
+    "43420de6",
+    "cfc08b10",
+    "a9085e74"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0605"
   },
   {
-   "id": "S0606",
-   "day": 61,
-   "direction": "zh-ja",
+   "qid": "P-061-05-ef39a2699c88",
    "prompt": "考试期间相当辛苦。",
-   "knowledge_ids": [
-    "V1268"
+   "options": [
+    "最初の打者はアウトになった。",
+    "試験中はなかなか大変だった。",
+    "その靴は登山には向かないよ。",
+    "湖の深さはどのくらいですか。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0607",
-   "day": 61,
+   "h": "94f3d33a",
+   "oh": [
+    "812a999a",
+    "94f3d33a",
+    "a799335d",
+    "15a7848c"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0606"
+  },
+  {
+   "qid": "P-061-06-eb55585e5754",
    "prompt": "比尔哭了好几个小时。",
-   "knowledge_ids": [
-    "V1269"
+   "options": [
+    "その習慣は中国で始まった。",
+    "苦痛で彼の顔が歪んでいる。",
+    "ビルは何時間も泣き続けた。",
+    "明日中には国境を越えます。"
    ],
-   "hint": ""
+   "h": "df9f7ee",
+   "oh": [
+    "bd186afc",
+    "15706b98",
+    "df9f7ee",
+    "8f82e408"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0607"
   },
   {
-   "id": "S0608",
-   "day": 61,
-   "direction": "ja-zh",
+   "qid": "P-061-07-cd07ef05c6ae",
    "prompt": "父が亡くなってから３年になります。",
-   "knowledge_ids": [
-    "V1270"
+   "options": [
+    "茶叶的质量正在下降。",
+    "父亲去世已经三年了。",
+    "她委托他去筹集资金。",
+    "感到危险请立即避难。"
    ],
-   "hint": ""
+   "h": "2fe86ae",
+   "oh": [
+    "353aa331",
+    "2fe86ae",
+    "a2dbaa37",
+    "997ca2a4"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0608"
   },
   {
-   "id": "S0609",
-   "day": 61,
-   "direction": "ja-zh",
+   "qid": "P-061-08-2339d3cbe721",
    "prompt": "あなたの青いペンがなくなってしまいました。",
-   "knowledge_ids": [
-    "V1271"
+   "options": [
+    "火车穿过了隧道。",
+    "今晚是有聚会吗？",
+    "这张地图很方便。",
+    "你的蓝笔不见了。"
    ],
-   "hint": ""
+   "h": "136317ea",
+   "oh": [
+    "443acd9c",
+    "6ed5872b",
+    "1be23d38",
+    "136317ea"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0609"
   },
   {
-   "id": "S0610",
-   "day": 61,
-   "direction": "ja-zh",
+   "qid": "P-061-09-9498b9461802",
    "prompt": "その子は犬に石を投げた。",
-   "knowledge_ids": [
-    "V1272"
+   "options": [
+    "他为什么辞职是个谜。",
+    "他在生死之间徘徊。",
+    "他们会组织工会吧。",
+    "那个孩子朝狗扔石头。"
    ],
-   "hint": ""
+   "h": "b8585706",
+   "oh": [
+    "f91d2778",
+    "f32c445a",
+    "4a5d6cc4",
+    "b8585706"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0610"
   }
  ],
  "quiz": [

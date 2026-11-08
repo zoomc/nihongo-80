@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1147",
    "front": "ずいぶん",
    "back": "相当；很",
+   "kana": "ずいぶん",
    "stage": "planned"
   },
   {
    "kid": "V1148",
    "front": "数学",
    "back": "数学",
+   "kana": "すうがく",
    "stage": "planned"
   },
   {
    "kid": "V1149",
    "front": "スーツ",
    "back": "西装",
+   "kana": "スーツ",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0272",
    "front": "服",
-   "back": "衣服；服从｜音 フク",
+   "back": "衣服；服从",
+   "kana": "フク",
    "stage": "planned"
   },
   {
    "kid": "K0273",
    "front": "夕",
-   "back": "傍晚；夕｜音 セキ",
+   "back": "傍晚；夕",
+   "kana": "セキ、ゆう",
    "stage": "planned"
   },
   {
    "kid": "V1114",
    "front": "辞典",
    "back": "辞典",
+   "kana": "じてん",
    "stage": "planned"
   },
   {
    "kid": "V1115",
    "front": "品物",
    "back": "物品",
+   "kana": "しなもの",
    "stage": "planned"
   },
   {
    "kid": "V1116",
    "front": "しばらく",
    "back": "暂时",
+   "kana": "しばらく",
    "stage": "planned"
   },
   {
@@ -529,104 +537,204 @@
  ],
  "sentences": [
   {
-   "id": "S0551",
-   "day": 56,
-   "direction": "zh-ja",
+   "qid": "P-056-00-154efc6e5a09",
    "prompt": "这条线的终点在哪里？",
-   "knowledge_ids": [
-    "V1175"
+   "options": [
+    "この線の終点はどこですか。",
+    "島の天候はとても温暖です。",
+    "あなたは数学が得意ですか。",
+    "写真をどうぞ見せて下さい。"
    ],
-   "hint": ""
+   "h": "4b98e1d7",
+   "oh": [
+    "4b98e1d7",
+    "5dc2523b",
+    "169afc24",
+    "4a68c9ba"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0551"
   },
   {
-   "id": "S0552",
-   "day": 56,
-   "direction": "zh-ja",
+   "qid": "P-056-01-d393819241b3",
    "prompt": "我完全不喝啤酒。",
-   "knowledge_ids": [
-    "V1176"
+   "options": [
+    "みんなには優しく話してください。",
+    "みんなでカブトムシを競争させた。",
+    "私はビールはぜんぜん飲みません。",
+    "こ、こら！ナニやっとるかぁぁ！！"
    ],
-   "hint": ""
+   "h": "2c8a910d",
+   "oh": [
+    "125e9885",
+    "fdf064f8",
+    "2c8a910d",
+    "1b91f40"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0552"
   },
   {
-   "id": "S0553",
-   "day": 56,
-   "direction": "zh-ja",
+   "qid": "P-056-02-c490af379def",
    "prompt": "我希望不要发生战争。",
-   "knowledge_ids": [
-    "V1177"
+   "options": [
+    "戦争が起こらなければいいと思う。",
+    "そんな計画は捨ててしまいなさい。",
+    "それは私が見たことのない景色だ。",
+    "この学校は男子よりも女子が多い。"
    ],
-   "hint": ""
+   "h": "3017a83b",
+   "oh": [
+    "3017a83b",
+    "f1570dd9",
+    "af5a2328",
+    "53353c8"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0553"
   },
   {
-   "id": "S0554",
-   "day": 56,
-   "direction": "zh-ja",
+   "qid": "P-056-03-8cde7cf2085d",
    "prompt": "在工作上他是我的前辈。",
-   "knowledge_ids": [
-    "V1178"
+   "options": [
+    "どうか明かりをつけて下さい。",
+    "その船が沈んだのは明らかだ。",
+    "ルーシーはかわいい女の子だ。",
+    "彼は仕事の上では私の先輩だ。"
    ],
-   "hint": ""
+   "h": "4452aac8",
+   "oh": [
+    "1b979fbd",
+    "c794b5c3",
+    "8d514221",
+    "4452aac8"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0554"
   },
   {
-   "id": "S0555",
-   "day": 56,
-   "direction": "zh-ja",
+   "qid": "P-056-04-2251de78e81f",
    "prompt": "看样子马上就要下雨了。",
-   "knowledge_ids": [
-    "V1179"
+   "options": [
+    "まだ時間はたっぷりある。",
+    "大気が汚染されつつある。",
+    "君の英語は上達している。",
+    "まもなく雨が降りそうだ。"
    ],
-   "hint": ""
+   "h": "ff08c000",
+   "oh": [
+    "9b3b11e5",
+    "c8a57526",
+    "e4ddf50",
+    "ff08c000"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0555"
   },
   {
-   "id": "S0556",
-   "day": 56,
-   "direction": "zh-ja",
+   "qid": "P-056-05-4e122fd302bd",
    "prompt": "库琪是凯特养大的。",
-   "knowledge_ids": [
-    "V1180"
+   "options": [
+    "お年寄りをからかってはいけません。",
+    "クッキーはケイトによって育てられた。",
+    "その赤ちゃんは歯が生えはじめている。",
+    "明日までに報告書を提出してください。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0557",
-   "day": 56,
+   "h": "a7ad5d1c",
+   "oh": [
+    "a3dd40ad",
+    "a7ad5d1c",
+    "2a005dd5",
+    "86002186"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0556"
+  },
+  {
+   "qid": "P-056-06-6fa22e6346c8",
    "prompt": "我想我差不多该告别流行音乐了。",
-   "knowledge_ids": [
-    "V1181"
+   "options": [
+    "それがどこにあるのか、およその見当はついている。",
+    "彼か私のどちらかが大会に出席しなければならない。",
+    "私はポップ・ミュージックはそろそろ卒業しようと思っているの。",
+    "あなたに被害を及ぼそうなどとは夢にも思いませんでした。"
    ],
-   "hint": ""
+   "h": "b5b992e9",
+   "oh": [
+    "6aeaf843",
+    "4e3ac675",
+    "b5b992e9",
+    "c8c2914d"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0557"
   },
   {
-   "id": "S0558",
-   "day": 56,
-   "direction": "ja-zh",
+   "qid": "P-056-07-8edce1deb056",
    "prompt": "祖父はステッキがないと歩けない。",
-   "knowledge_ids": [
-    "V1182"
+   "options": [
+    "祖父没有拐杖就走不了路。",
+    "撒哈拉是一片广阔的沙漠。",
+    "我不明白那本小说的情节。",
+    "我为那本书付了三美元。"
    ],
-   "hint": ""
+   "h": "e511983a",
+   "oh": [
+    "e511983a",
+    "7c2b4748",
+    "4ea6453d",
+    "30a5faed"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0558"
   },
   {
-   "id": "S0559",
-   "day": 56,
-   "direction": "ja-zh",
+   "qid": "P-056-08-fb92bf63891a",
    "prompt": "スミスさんはソフトな語り口の人物です。",
-   "knowledge_ids": [
-    "V1183"
+   "options": [
+    "德语不是一门容易的语言。",
+    "史密斯先生说话语气温和。",
+    "一轻视危险，危险马上就来。",
+    "你为什么拒绝了他的提议？"
    ],
-   "hint": ""
+   "h": "9e51d31a",
+   "oh": [
+    "a69c3150",
+    "9e51d31a",
+    "fc180e94",
+    "59938dd"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0559"
   },
   {
-   "id": "S0560",
-   "day": 56,
-   "direction": "ja-zh",
+   "qid": "P-056-09-284f3f6cfba0",
    "prompt": "私は祖母が大好きです。",
-   "knowledge_ids": [
-    "V1184"
+   "options": [
+    "我很爱我的祖母。",
+    "向上司汇报结果。",
+    "约翰在给门刷漆。",
+    "下下个月是十二月。"
    ],
-   "hint": ""
+   "h": "cb878373",
+   "oh": [
+    "cb878373",
+    "5d580bc5",
+    "5a2d87f9",
+    "3d2240f5"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0560"
   }
  ],
  "quiz": [

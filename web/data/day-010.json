@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0142",
    "front": "時々",
    "back": "有时；时常",
+   "kana": "ときどき",
    "stage": "planned"
   },
   {
    "kid": "V0143",
    "front": "まだ",
    "back": "还；尚未",
+   "kana": "まだ",
    "stage": "planned"
   },
   {
    "kid": "V0144",
    "front": "もう",
    "back": "已经；再（一次）",
+   "kana": "もう",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0042",
    "front": "弟",
-   "back": "弟弟｜音 テイ、ダイ",
+   "back": "弟弟",
+   "kana": "テイ、ダイ、おとうと",
    "stage": "planned"
   },
   {
    "kid": "K0043",
    "front": "妹",
-   "back": "妹妹｜音 マイ",
+   "back": "妹妹",
+   "kana": "マイ、いもうと",
    "stage": "planned"
   },
   {
    "kid": "V0099",
    "front": "映画",
    "back": "电影",
+   "kana": "えいが",
    "stage": "planned"
   },
   {
    "kid": "V0100",
    "front": "音楽",
    "back": "音乐",
+   "kana": "おんがく",
    "stage": "planned"
   },
   {
    "kid": "V0101",
    "front": "食べる",
    "back": "吃",
+   "kana": "たべる",
    "stage": "planned"
   },
   {
@@ -555,104 +563,204 @@
  ],
  "sentences": [
   {
-   "id": "S0091",
-   "day": 10,
-   "direction": "zh-ja",
+   "qid": "P-010-00-1904b4fec9a6",
    "prompt": "您已经见过史密斯先生了吧。",
-   "knowledge_ids": [
-    "V0341"
+   "options": [
+    "もうスミスさんに会われましたね。",
+    "トムは今にもここに来るはずです。",
+    "あなたはどこでテレビを見ますか。",
+    "この小包を船便で送ってください。"
    ],
-   "hint": ""
+   "h": "3c781f85",
+   "oh": [
+    "3c781f85",
+    "1c43f179",
+    "c9e3b484",
+    "79aca341"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0091"
   },
   {
-   "id": "S0092",
-   "day": 10,
-   "direction": "zh-ja",
+   "qid": "P-010-01-d0c0759b7f7a",
    "prompt": "信号灯变绿了。",
-   "knowledge_ids": [
-    "V0342"
+   "options": [
+    "火曜日に試験があります。",
+    "部屋を片付けてください。",
+    "信号が青に変わったわよ。",
+    "私は新しい背広を買った。"
    ],
-   "hint": ""
+   "h": "a3da3ad",
+   "oh": [
+    "8a208808",
+    "d809e606",
+    "a3da3ad",
+    "7bf6ebb6"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0092"
   },
   {
-   "id": "S0093",
-   "day": 10,
-   "direction": "zh-ja",
+   "qid": "P-010-02-9ffc8f3855b3",
    "prompt": "你还嫩着呢。",
-   "knowledge_ids": [
-    "V0343"
+   "options": [
+    "旅行の日を決めました。",
+    "一行はアメリカへ渡った。",
+    "カエルが鳴いたら帰ろう。",
+    "お前はまだ「青い」な。"
    ],
-   "hint": ""
+   "h": "ad3fba26",
+   "oh": [
+    "a06ca4c6",
+    "c3bc3e5",
+    "e5bebda",
+    "ad3fba26"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0093"
   },
   {
-   "id": "S0094",
-   "day": 10,
-   "direction": "zh-ja",
+   "qid": "P-010-03-93ee3d5a64d4",
    "prompt": "不能用红墨水写。",
-   "knowledge_ids": [
-    "V0344"
+   "options": [
+    "水泳が私の楽しみの１つです。",
+    "この地域は雨が続くでしょう。",
+    "ロープから下がっていなさい。",
+    "赤インクで書いてはいけない。"
    ],
-   "hint": ""
+   "h": "ac446b98",
+   "oh": [
+    "2f2ba09b",
+    "f3e64d08",
+    "6e524cfe",
+    "ac446b98"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0094"
   },
   {
-   "id": "S0095",
-   "day": 10,
-   "direction": "zh-ja",
+   "qid": "P-010-04-6ba7c76a1a7b",
    "prompt": "她穿着一条红裙子。",
-   "knowledge_ids": [
-    "V0345"
+   "options": [
+    "彼女は赤いスカートをはいていた。",
+    "そんな計画は捨ててしまいなさい。",
+    "その日は実にすばらしい日だった。",
+    "ルーシーは今台所にいるでしょう。"
    ],
-   "hint": ""
+   "h": "f329c8d5",
+   "oh": [
+    "f329c8d5",
+    "f1570dd9",
+    "5734bd46",
+    "c439c603"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0095"
   },
   {
-   "id": "S0096",
-   "day": 10,
-   "direction": "zh-ja",
+   "qid": "P-010-05-2e4781e144f4",
    "prompt": "外面渐渐亮了起来。",
-   "knowledge_ids": [
-    "V0346"
+   "options": [
+    "この事件に手を貸してください。",
+    "先生から資料をいただきました。",
+    "やっぱり何とかやってのけたね。",
+    "外はだんだん明るくなっていく。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0097",
-   "day": 10,
+   "h": "5f3ff076",
+   "oh": [
+    "3a859cc4",
+    "22261966",
+    "6295853d",
+    "5f3ff076"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0096"
+  },
+  {
+   "qid": "P-010-06-1cfd45ae3647",
    "prompt": "秋天马上就要到了。",
-   "knowledge_ids": [
-    "V0347"
+   "options": [
+    "秋はもうすぐそこまで来ている。",
+    "先生から資料をいただきました。",
+    "向こうの交番で聞いてください。",
+    "あのドレスは彼女によく似合う。"
    ],
-   "hint": ""
+   "h": "3e449bdf",
+   "oh": [
+    "3e449bdf",
+    "22261966",
+    "266f52ac",
+    "d2b39483"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0097"
   },
   {
-   "id": "S0098",
-   "day": 10,
-   "direction": "ja-zh",
+   "qid": "P-010-07-d50400194f99",
    "prompt": "ぐいと押すとドアは開いた。",
-   "knowledge_ids": [
-    "V0348"
+   "options": [
+    "雨正好停了，出发吧。",
+    "你赞成我们的计划吗？",
+    "用力一推，门就开了。",
+    "找老师商量升学去向。"
    ],
-   "hint": ""
+   "h": "a0bec855",
+   "oh": [
+    "65ac9c57",
+    "4a12bcc1",
+    "a0bec855",
+    "57d2ad4c"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0098"
   },
   {
-   "id": "S0099",
-   "day": 10,
-   "direction": "ja-zh",
+   "qid": "P-010-08-21725e514406",
    "prompt": "ドアはジムによって開けられます。",
-   "knowledge_ids": [
-    "V0349"
+   "options": [
+    "您的名字怎么念？",
+    "门被吉姆打开了。",
+    "那条街充满活力。",
+    "你参加比赛了吗？"
    ],
-   "hint": ""
+   "h": "ef27b550",
+   "oh": [
+    "cedc5143",
+    "ef27b550",
+    "d3ea8b20",
+    "51a648e8"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0099"
   },
   {
-   "id": "S0100",
-   "day": 10,
-   "direction": "ja-zh",
+   "qid": "P-010-09-7325bc9be5db",
    "prompt": "左手を上げなさい。",
-   "knowledge_ids": [
-    "V0350"
+   "options": [
+    "他一生独身。",
+    "包放在哪里好？",
+    "传闻原来是真的。",
+    "把左手举起来。"
    ],
-   "hint": ""
+   "h": "1efc45f6",
+   "oh": [
+    "d5317579",
+    "4a4df5b0",
+    "6342e7d8",
+    "1efc45f6"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0100"
   }
  ],
  "quiz": [

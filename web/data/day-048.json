@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1015",
    "front": "厳しい",
    "back": "严厉；严酷",
+   "kana": "きびしい",
    "stage": "planned"
   },
   {
    "kid": "V1016",
    "front": "決まる",
    "back": "决定",
+   "kana": "きまる",
    "stage": "planned"
   },
   {
    "kid": "V1017",
    "front": "君",
    "back": "你",
+   "kana": "きみ",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0240",
    "front": "族",
-   "back": "一族；家族｜音 ゾク",
+   "back": "一族；家族",
+   "kana": "ゾク",
    "stage": "planned"
   },
   {
    "kid": "K0241",
    "front": "銀",
-   "back": "银；银子｜音 ギン",
+   "back": "银；银子",
+   "kana": "ギン、しろがね",
    "stage": "planned"
   },
   {
    "kid": "V0977",
    "front": "会議室",
    "back": "会议室",
+   "kana": "かいぎしつ",
    "stage": "planned"
   },
   {
    "kid": "V0978",
    "front": "会場",
    "back": "会场",
+   "kana": "かいじょう",
    "stage": "planned"
   },
   {
    "kid": "V0979",
    "front": "会話",
    "back": "会话",
+   "kana": "かいわ",
    "stage": "planned"
   },
   {
@@ -536,104 +544,204 @@
  ],
  "sentences": [
   {
-   "id": "S0471",
-   "day": 48,
-   "direction": "zh-ja",
+   "qid": "P-048-00-1d66595ae63f",
    "prompt": "不知不觉天已经全黑了。",
-   "knowledge_ids": [
-    "V1033"
+   "options": [
+    "どれくらいこの寒い天気は続きますか。",
+    "おはよう。ご飯をよそっても良いかしら？",
+    "トムはジャックよりも１０ポンド重い。",
+    "知らぬ間に日はとっぷりと暮れていた。"
    ],
-   "hint": ""
+   "h": "85baee84",
+   "oh": [
+    "7bdec4d9",
+    "d3995434",
+    "c1811a4a",
+    "85baee84"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0471"
   },
   {
-   "id": "S0472",
-   "day": 48,
-   "direction": "zh-ja",
+   "qid": "P-048-01-5acccdf5dca6",
    "prompt": "狗的毛好比一件毛衣。",
-   "knowledge_ids": [
-    "V1034"
+   "options": [
+    "今月の売り上げはよくない。",
+    "あなたはなぜ働いているの。",
+    "犬の毛はいわばセーターだ。",
+    "子供たちは裸で泳いでいた。"
    ],
-   "hint": ""
+   "h": "f20ee6fa",
+   "oh": [
+    "61acb9a7",
+    "6298fea3",
+    "f20ee6fa",
+    "b9146d41"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0472"
   },
   {
-   "id": "S0473",
-   "day": 48,
-   "direction": "zh-ja",
+   "qid": "P-048-02-14dd4a167c70",
    "prompt": "那个计划我倒是赞同他。",
-   "knowledge_ids": [
-    "V1035"
+   "options": [
+    "その計画では彼に同調できました。",
+    "その日は実にすばらしい日だった。",
+    "この学校は男子よりも女子が多い。",
+    "ラジオの音を下げてくれませんか。"
    ],
-   "hint": ""
+   "h": "9c573687",
+   "oh": [
+    "9c573687",
+    "5734bd46",
+    "53353c8",
+    "2be3730e"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0473"
   },
   {
-   "id": "S0474",
-   "day": 48,
-   "direction": "zh-ja",
+   "qid": "P-048-03-c2cec0842c40",
    "prompt": "那种情况下就叫警察。",
-   "knowledge_ids": [
-    "V1036"
+   "options": [
+    "その場合には警察を呼びなさい。",
+    "サムは仕事に関してまじめです。",
+    "彼はよく友人をいじめたものだ。",
+    "この菓子を自由にお取り下さい。"
    ],
-   "hint": ""
+   "h": "dba5375d",
+   "oh": [
+    "dba5375d",
+    "b939740c",
+    "25027c50",
+    "ff6eaffd"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0474"
   },
   {
-   "id": "S0475",
-   "day": 48,
-   "direction": "zh-ja",
+   "qid": "P-048-04-a55d4d0246b0",
    "prompt": "凯特会做蛋糕。",
-   "knowledge_ids": [
-    "V1037"
+   "options": [
+    "これがいわゆる「天ぷら」というものです。",
+    "とにかく、試験が終わってほっとしたよ。",
+    "ケイトはケーキの作り方を知っています。",
+    "チューリップは、私たちの県の県花です。"
    ],
-   "hint": ""
+   "h": "c1f17d29",
+   "oh": [
+    "b094a64a",
+    "47f611de",
+    "c1f17d29",
+    "9f1b20e5"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0475"
   },
   {
-   "id": "S0476",
-   "day": 48,
-   "direction": "zh-ja",
+   "qid": "P-048-05-79baf14dd5a6",
    "prompt": "吃了某些食物后会烧心吗？",
-   "knowledge_ids": [
-    "V1038"
+   "options": [
+    "それ以来、彼からは何の便りもありません。",
+    "不動産会社に部屋を紹介してもらいました。",
+    "特定の食べ物を食べた後に、胸やけがするのですか？",
+    "６０にするためには１７に何を足せばよいの。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0477",
-   "day": 48,
+   "h": "fdca9253",
+   "oh": [
+    "df9b23d2",
+    "e14ddae8",
+    "fdca9253",
+    "8555cf3a"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0476"
+  },
+  {
+   "qid": "P-048-06-493fd8cd9a3a",
    "prompt": "那是我从没见过的景色。",
-   "knowledge_ids": [
-    "V1039"
+   "options": [
+    "その城は１６１０年に建てられた。",
+    "その話は親から子へと伝えられた。",
+    "それは私が見たことのない景色だ。",
+    "その広間は日本画で飾られていた。"
    ],
-   "hint": ""
+   "h": "af5a2328",
+   "oh": [
+    "6b28f1e6",
+    "c65bb93d",
+    "af5a2328",
+    "6d732f36"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0477"
   },
   {
-   "id": "S0478",
-   "day": 48,
-   "direction": "ja-zh",
+   "qid": "P-048-07-23c0b734e56d",
    "prompt": "ちょっと消しゴムをかしてくれませんか。",
-   "knowledge_ids": [
-    "V1040"
+   "options": [
+    "你为什么想当护士？",
+    "威士忌和红茶很搭。",
+    "能借我一下橡皮吗？",
+    "把工作交给了下属。"
    ],
-   "hint": ""
+   "h": "7f225cac",
+   "oh": [
+    "28ee32c5",
+    "4d423da8",
+    "7f225cac",
+    "3a9bafec"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0478"
   },
   {
-   "id": "S0479",
-   "day": 48,
-   "direction": "ja-zh",
+   "qid": "P-048-08-1fac61002204",
    "prompt": "彼女は学生を下宿させている。",
-   "knowledge_ids": [
-    "V1041"
+   "options": [
+    "那条消息让他怒火爆发。",
+    "他正处在男人的壮年。",
+    "她让学生住在自己家里。",
+    "他们相信地球是平的。"
    ],
-   "hint": ""
+   "h": "a77656b2",
+   "oh": [
+    "af292209",
+    "cfa9128b",
+    "a77656b2",
+    "a51300e1"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0479"
   },
   {
-   "id": "S0480",
-   "day": 48,
-   "direction": "ja-zh",
+   "qid": "P-048-09-cf80ce9f7cda",
    "prompt": "これは決して小さなことではない。",
-   "knowledge_ids": [
-    "V1042"
+   "options": [
+    "突然开始下雨了。",
+    "橄榄果可以榨油。",
+    "这绝不是小事。",
+    "下午去看诊。"
    ],
-   "hint": ""
+   "h": "3cf7c71",
+   "oh": [
+    "4c4b05b0",
+    "f55d0426",
+    "3cf7c71",
+    "3d9f1f18"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0480"
   }
  ],
  "quiz": [

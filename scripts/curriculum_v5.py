@@ -202,7 +202,7 @@ def build():
             "复习": "到期项优先；未完成顺延，不追赶",
             "新词": "%d 个必学词；%d 个选学拓展" % (len(essential), len(extension)),
             "语法": patterns, "听力": "原创 TTS + 3 道理解题；时长为估计，非真人音频",
-            "句子输出": "3句必做，7句拓展；先写，再批改", "练习": "6 题即时自评",
+            "句子输出": "3道选句必做，7道拓展；答后核对", "练习": "6 题即时自评",
             "会话": "抽词、造句、批改"}[kind]} for kind, minutes in budgets if minutes]
         days.append({
             "day": d, "phase": ph, "phase_name": next(name for code, _, _, name in PHASES if code == ph),

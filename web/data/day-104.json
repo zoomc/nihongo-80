@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1809",
    "front": "供給",
    "back": "供给",
+   "kana": "きょうきゅう",
    "stage": "planned"
   },
   {
    "kid": "V1810",
    "front": "教師",
    "back": "教师",
+   "kana": "きょうし",
    "stage": "planned"
   },
   {
    "kid": "V1811",
    "front": "教授",
    "back": "教授",
+   "kana": "きょうじゅ",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0429",
    "front": "追",
-   "back": "追赶；追加｜音 ツイ",
+   "back": "追赶；追加",
+   "kana": "ツイ、お.う",
    "stage": "planned"
   },
   {
    "kid": "K0430",
    "front": "商",
-   "back": "商业；商人｜音 ショウ",
+   "back": "商业；商人",
+   "kana": "ショウ、あきな.う",
    "stage": "planned"
   },
   {
    "kid": "V1776",
    "front": "きちんと",
    "back": "好好地；端正",
+   "kana": "きちんと",
    "stage": "planned"
   },
   {
    "kid": "V1777",
    "front": "きつい",
    "back": "紧；够呛",
+   "kana": "きつい",
    "stage": "planned"
   },
   {
    "kid": "V1778",
    "front": "気付く",
    "back": "察觉",
+   "kana": "きづく",
    "stage": "planned"
   },
   {
@@ -530,104 +538,204 @@
  ],
  "sentences": [
   {
-   "id": "S1031",
-   "day": 104,
-   "direction": "zh-ja",
+   "qid": "P-104-00-a3668d3e6298",
    "prompt": "玻璃杯摔得粉碎。",
-   "knowledge_ids": [
-    "V1859"
+   "options": [
+    "グラスは粉々に割れてしまった。",
+    "シャッターを押してくれますか。",
+    "あのかわいい少女は私の妹です。",
+    "ヒーターをつけたまま外出した。"
    ],
-   "hint": ""
+   "h": "c01abf22",
+   "oh": [
+    "c01abf22",
+    "a9a6fa1f",
+    "d8a40238",
+    "be83661e"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1031"
   },
   {
-   "id": "S1032",
-   "day": 104,
-   "direction": "zh-ja",
+   "qid": "P-104-01-a8e07f9a8feb",
    "prompt": "英格兰大概会赢下那场比赛。",
-   "knowledge_ids": [
-    "V1860"
+   "options": [
+    "問題は誰が決定を下すかということだ。",
+    "あなたの時計、時間は狂いませんか。",
+    "イングランドはその試合に勝つだろう。",
+    "その泥棒は刑事を見ると走って逃げた。"
    ],
-   "hint": ""
+   "h": "91c655e0",
+   "oh": [
+    "e44d6dbb",
+    "7697026a",
+    "91c655e0",
+    "ea10fb03"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1032"
   },
   {
-   "id": "S1033",
-   "day": 104,
-   "direction": "zh-ja",
+   "qid": "P-104-02-f3bddb47d450",
    "prompt": "她为做甜点打了奶油。",
-   "knowledge_ids": [
-    "V1861"
+   "options": [
+    "お宅の暖房はどのようにしていますか。",
+    "彼女はデザート用にクリームを泡立てた。",
+    "その写真は空から写されたものである。",
+    "カクテルパーティーは退屈なときもある。"
    ],
-   "hint": ""
+   "h": "cd584f41",
+   "oh": [
+    "754f087f",
+    "cd584f41",
+    "45659cac",
+    "d3332c71"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1033"
   },
   {
-   "id": "S1034",
-   "day": 104,
-   "direction": "zh-ja",
+   "qid": "P-104-03-34354e1bd3e6",
    "prompt": "那个英国人又说了一遍「不」。",
-   "knowledge_ids": [
-    "V1862"
+   "options": [
+    "「いいえ」とイギリス人は繰り返しました。",
+    "ごめんね。明日は朝からパートがあるのよ。",
+    "彼らが眠っている間私がハンドルを握った。",
+    "私は何度も転びながら、坂を下っていった。"
    ],
-   "hint": ""
+   "h": "63d86f79",
+   "oh": [
+    "63d86f79",
+    "9d067c9",
+    "de5b0b5b",
+    "a6ef92e1"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1034"
   },
   {
-   "id": "S1035",
-   "day": 104,
-   "direction": "zh-ja",
+   "qid": "P-104-04-c19e646263b5",
    "prompt": "圣诞节过得好吗？",
-   "knowledge_ids": [
-    "V1863"
+   "options": [
+    "このホールには人が二千人入れる。",
+    "トラとライオンとどちらが強いか。",
+    "この小包を船便で送ってください。",
+    "いいクリスマスを過ごしましたか。"
    ],
-   "hint": ""
+   "h": "a01fba18",
+   "oh": [
+    "cc13a7d1",
+    "a0452d41",
+    "79aca341",
+    "a01fba18"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1035"
   },
   {
-   "id": "S1036",
-   "day": 104,
-   "direction": "zh-ja",
+   "qid": "P-104-05-f055692659aa",
    "prompt": "你的表走时准吗？",
-   "knowledge_ids": [
-    "V1864"
+   "options": [
+    "そのかごはリンゴでいっぱいだった。",
+    "大使はその任務に対して責任がある。",
+    "あなたの時計、時間は狂いませんか。",
+    "まだ動くうちに売ってしまわなきゃ。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1037",
-   "day": 104,
+   "h": "7697026a",
+   "oh": [
+    "8ffcbdb4",
+    "1f9886e5",
+    "7697026a",
+    "49f6cdcc"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1036"
+  },
+  {
+   "qid": "P-104-06-410f7ed54c64",
    "prompt": "老师把我们分成两组。",
-   "knowledge_ids": [
-    "V1865"
+   "options": [
+    "きれいなタオルは引き出しにありますよ。",
+    "私はその日の記憶を呼び覚まそうとした。",
+    "あなたはうちのクラスで歓迎されています。",
+    "先生は私たちを二つのグループに分けた。"
    ],
-   "hint": ""
+   "h": "13bdf689",
+   "oh": [
+    "eaeabc2",
+    "6a44dc51",
+    "70f8c097",
+    "13bdf689"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1037"
   },
   {
-   "id": "S1038",
-   "day": 104,
-   "direction": "ja-zh",
+   "qid": "P-104-07-2ad32f2f3889",
    "prompt": "苦しい、やめろ。",
-   "knowledge_ids": [
-    "V1866"
+   "options": [
+    "我有一封信必须写。",
+    "难受死了，停下吧。",
+    "从第十课开始吧。",
+    "快到睡觉的时间了。"
    ],
-   "hint": ""
+   "h": "50932c91",
+   "oh": [
+    "9e93be90",
+    "50932c91",
+    "7c4687ec",
+    "b1e26b52"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1038"
   },
   {
-   "id": "S1039",
-   "day": 104,
-   "direction": "ja-zh",
+   "qid": "P-104-08-67776de65ae6",
    "prompt": "彼はどんなに苦しんだことだろう。",
-   "knowledge_ids": [
-    "V1867"
+   "options": [
+    "他不知道受了多少苦。",
+    "她在数学方面不如他。",
+    "冷战紧张局势加剧了。",
+    "工作过度对身体不好。"
    ],
-   "hint": ""
+   "h": "95b0f650",
+   "oh": [
+    "95b0f650",
+    "e3e22cfe",
+    "1aa3fb11",
+    "a1b9a686"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1039"
   },
   {
-   "id": "S1040",
-   "day": 104,
-   "direction": "ja-zh",
+   "qid": "P-104-09-518e33778de2",
    "prompt": "彼女はどうして良いか途方に暮れた。",
-   "knowledge_ids": [
-    "V1868"
+   "options": [
+    "地球以外的天体上有生物吗？",
+    "那位歌手是年轻人的偶像。",
+    "我们正为应对核事故竭尽全力。",
+    "她不知如何是好，束手无策。"
    ],
-   "hint": ""
+   "h": "b44dcee5",
+   "oh": [
+    "26a2ce62",
+    "a61776d",
+    "bdbdd9cd",
+    "b44dcee5"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1040"
   }
  ],
  "quiz": [

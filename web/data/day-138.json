@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V2407",
    "front": "チーズ",
    "back": "奶酪",
+   "kana": "チーズ",
    "stage": "planned"
   },
   {
    "kid": "V2408",
    "front": "チーム",
    "back": "团队；队",
+   "kana": "チーム",
    "stage": "planned"
   },
   {
    "kid": "V2409",
    "front": "知恵",
    "back": "智慧",
+   "kana": "ちえ",
    "stage": "planned"
   },
   {
@@ -70,31 +73,36 @@
   {
    "kid": "K0565",
    "front": "願",
-   "back": "愿望；请求｜音 ガン",
+   "back": "愿望；请求",
+   "kana": "ガン、ねが.う、-ねがい",
    "stage": "planned"
   },
   {
    "kid": "K0566",
    "front": "絵",
-   "back": "画；图画｜音 カイ、エ",
+   "back": "画；图画",
+   "kana": "カイ、エ",
    "stage": "planned"
   },
   {
    "kid": "V2365",
    "front": "ただ",
    "back": "只；免费",
+   "kana": "ただ",
    "stage": "planned"
   },
   {
    "kid": "V2366",
    "front": "戦い",
    "back": "战斗；斗争",
+   "kana": "たたかい",
    "stage": "planned"
   },
   {
    "kid": "V2367",
    "front": "戦う",
    "back": "战斗；斗争",
+   "kana": "たたかう",
    "stage": "planned"
   },
   {
@@ -106,13 +114,15 @@
   {
    "kid": "K0557",
    "front": "刻",
-   "back": "雕刻；时刻｜音 コク",
+   "back": "雕刻；时刻",
+   "kana": "コク、きざ.む、きざ.み",
    "stage": "planned"
   },
   {
    "kid": "K0558",
    "front": "賛",
-   "back": "赞成；赞美｜音 サン",
+   "back": "赞成；赞美",
+   "kana": "サン、たす.ける、たた.える",
    "stage": "planned"
   }
  ],
@@ -513,104 +523,204 @@
  ],
  "sentences": [
   {
-   "id": "S1371",
-   "day": 138,
-   "direction": "zh-ja",
+   "qid": "P-138-00-19bb493660a9",
    "prompt": "请帮我接史密斯先生。",
-   "knowledge_ids": [
-    "V2463"
+   "options": [
+    "スミスさんにつないで下さい。",
+    "この手の本はあまり読まない。",
+    "最初の打者はアウトになった。",
+    "ラジオの音を低くして下さい。"
    ],
-   "hint": ""
+   "h": "3dda2614",
+   "oh": [
+    "3dda2614",
+    "771de503",
+    "812a999a",
+    "847c7179"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1371"
   },
   {
-   "id": "S1372",
-   "day": 138,
-   "direction": "zh-ja",
+   "qid": "P-138-01-dd2df7c5a7ee",
    "prompt": "总是有疲劳感。",
-   "knowledge_ids": [
-    "V2464"
+   "options": [
+    "何時間も海を眺めた。",
+    "彼が近所に越してきた。",
+    "ただの風邪でしょう。",
+    "常に疲労感があります。"
    ],
-   "hint": ""
+   "h": "1f9b24a2",
+   "oh": [
+    "aead5bf6",
+    "ff733aee",
+    "8dd6c2d9",
+    "1f9b24a2"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1372"
   },
   {
-   "id": "S1373",
-   "day": 138,
-   "direction": "zh-ja",
+   "qid": "P-138-02-3609ebd2fe75",
    "prompt": "蜗牛一下子伸出了触角。",
-   "knowledge_ids": [
-    "V2465"
+   "options": [
+    "少女は立って鏡をのぞきこんだ。",
+    "兄はアパートをさがしています。",
+    "カタツムリがすっと角を出した。",
+    "あの交差点で何が起こったのか。"
    ],
-   "hint": ""
+   "h": "1141342d",
+   "oh": [
+    "b6b02350",
+    "7f656d90",
+    "1141342d",
+    "28d0e3e9"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1373"
   },
   {
-   "id": "S1374",
-   "day": 138,
-   "direction": "zh-ja",
+   "qid": "P-138-03-aa3d6f653be1",
    "prompt": "它的翼展约有四英寸。",
-   "knowledge_ids": [
-    "V2466"
+   "options": [
+    "それは翼の全長が約４インチある。",
+    "お礼の申し上げようもありません。",
+    "テーブルの上に花が一本あります。",
+    "アラビア語は右から左へ書きます。"
    ],
-   "hint": ""
+   "h": "18490b8d",
+   "oh": [
+    "18490b8d",
+    "d477e2e9",
+    "9718d6f5",
+    "36918c3"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1374"
   },
   {
-   "id": "S1375",
-   "day": 138,
-   "direction": "zh-ja",
+   "qid": "P-138-04-de9d8b313888",
    "prompt": "也就是说，她是个蹩脚的舞者。",
-   "knowledge_ids": [
-    "V2467"
+   "options": [
+    "つまり彼女は下手な踊り子だ。",
+    "最初の打者はアウトになった。",
+    "熱はエネルギーの一種である。",
+    "無事だと聞いて安心しました。"
    ],
-   "hint": ""
+   "h": "c49e2f71",
+   "oh": [
+    "c49e2f71",
+    "812a999a",
+    "c698082b",
+    "a16b8d46"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1375"
   },
   {
-   "id": "S1376",
-   "day": 138,
-   "direction": "zh-ja",
+   "qid": "P-138-05-7d2c756baa85",
    "prompt": "比尔没有犯那项罪。",
-   "knowledge_ids": [
-    "V2468"
+   "options": [
+    "そのコーヒーはいいにおいがする。",
+    "システムが作動しない場合がある。",
+    "ビールびんはガラスでできている。",
+    "ビルはその罪を犯していなかった。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1377",
-   "day": 138,
+   "h": "8cfed4a4",
+   "oh": [
+    "eff509fd",
+    "e09812e6",
+    "45e4dbee",
+    "8cfed4a4"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1376"
+  },
+  {
+   "qid": "P-138-06-977e490b1ec6",
    "prompt": "这件衬衫能帮我改小一点吗？",
-   "knowledge_ids": [
-    "V2469"
+   "options": [
+    "このブラウスをつめていただけますか。",
+    "おじいさんはとてもゆっくりと話す。",
+    "あの人達は都会の生活にあこがれている。",
+    "どちらかといえば木造住宅に住みたい。"
    ],
-   "hint": ""
+   "h": "92c2a853",
+   "oh": [
+    "92c2a853",
+    "ade4fb30",
+    "f7e43dfe",
+    "595610d9"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1377"
   },
   {
-   "id": "S1378",
-   "day": 138,
-   "direction": "ja-zh",
+   "qid": "P-138-07-639c596fd0cb",
    "prompt": "雪はあたり一面に積もっていた。",
-   "knowledge_ids": [
-    "V2470"
+   "options": [
+    "下下周四怎么样？",
+    "这块表走时准确。",
+    "我来给花换水吧。",
+    "雪积得满地都是。"
    ],
-   "hint": ""
+   "h": "8aeb8cdc",
+   "oh": [
+    "aab0ec66",
+    "5111725d",
+    "c570507a",
+    "8aeb8cdc"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1378"
   },
   {
-   "id": "S1379",
-   "day": 138,
-   "direction": "ja-zh",
+   "qid": "P-138-08-a81c3da10896",
    "prompt": "天気予報によれば、まもなく梅雨に入るそうだ。",
-   "knowledge_ids": [
-    "V2471"
+   "options": [
+    "世界上有各种各样的人种。",
+    "那场暴风雨带来了巨大损失。",
+    "据天气预报，马上就要入梅了。",
+    "我看见他们挽着手臂走路。"
    ],
-   "hint": ""
+   "h": "d468a87f",
+   "oh": [
+    "1d508341",
+    "5f9247ec",
+    "d468a87f",
+    "e24b81f7"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1379"
   },
   {
-   "id": "S1380",
-   "day": 138,
-   "direction": "ja-zh",
+   "qid": "P-138-09-58d243fc2395",
    "prompt": "流産はとても辛い経験です。",
-   "knowledge_ids": [
-    "V2472"
+   "options": [
+    "语调有时也能传达感情。",
+    "流产是非常痛苦的经历。",
+    "他的话简单得不能再简单。",
+    "世界上有各种各样的人种。"
    ],
-   "hint": ""
+   "h": "70445b68",
+   "oh": [
+    "ac5b615a",
+    "70445b68",
+    "1723f272",
+    "1d508341"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1380"
   }
  ],
  "quiz": [

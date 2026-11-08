@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0493",
    "front": "キロ",
    "back": "公里；公斤",
+   "kana": "キロ",
    "stage": "planned"
   },
   {
    "kid": "V0494",
    "front": "銀行",
    "back": "银行",
+   "kana": "ぎんこう",
    "stage": "planned"
   },
   {
    "kid": "V0495",
    "front": "ください",
    "back": "请给我",
+   "kana": "ください",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0152",
    "front": "川",
-   "back": "河；河流｜音 セン",
+   "back": "河；河流",
+   "kana": "セン、かわ",
    "stage": "planned"
   },
   {
    "kid": "K0153",
    "front": "半",
-   "back": "一半；半数｜音 ハン",
+   "back": "一半；半数",
+   "kana": "ハン、なか.ば",
    "stage": "planned"
   },
   {
    "kid": "V0453",
    "front": "かかる",
    "back": "花费；启动",
+   "kana": "かかる",
    "stage": "planned"
   },
   {
    "kid": "V0454",
    "front": "かぎ",
    "back": "钥匙",
+   "kana": "かぎ",
    "stage": "planned"
   },
   {
    "kid": "V0455",
    "front": "かける",
    "back": "打电话；挂",
+   "kana": "かける",
    "stage": "planned"
   },
   {
@@ -521,104 +529,204 @@
  ],
  "sentences": [
   {
-   "id": "S0171",
-   "day": 18,
-   "direction": "zh-ja",
+   "qid": "P-018-00-5e6a079e63cb",
    "prompt": "海伦最多也就40公斤。",
-   "knowledge_ids": [
-    "V0493"
+   "options": [
+    "何時がご都合よいでしょうか。",
+    "父は袖に長い裂け目を作った。",
+    "ヘレンはせいぜい４０キロだ。",
+    "あなたは夜よく寝れませんか。"
    ],
-   "hint": ""
+   "h": "4495f400",
+   "oh": [
+    "313ba781",
+    "822d769f",
+    "4495f400",
+    "9b9a05d6"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0171"
   },
   {
-   "id": "S0172",
-   "day": 18,
-   "direction": "zh-ja",
+   "qid": "P-018-01-5d3847082c2c",
    "prompt": "你在银行里有多少钱？",
-   "knowledge_ids": [
-    "V0494"
+   "options": [
+    "その事が彼のすべての夢を壊した。",
+    "マイクはバスで学校に通っている。",
+    "銀行にどれだけお金がありますか。",
+    "タバコにかけられている税は高い。"
    ],
-   "hint": ""
+   "h": "fa012bc3",
+   "oh": [
+    "2835eaff",
+    "1062eb67",
+    "fa012bc3",
+    "37e548c7"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0172"
   },
   {
-   "id": "S0173",
-   "day": 18,
-   "direction": "zh-ja",
+   "qid": "P-018-02-f747c9dba560",
    "prompt": "请到报刊亭问一下。",
-   "knowledge_ids": [
-    "V0495"
+   "options": [
+    "ニューススタンドで聞いて下さい。",
+    "この学校は男子よりも女子が多い。",
+    "おまえはオレを殺そうとしている。",
+    "この小包を船便で送ってください。"
    ],
-   "hint": ""
+   "h": "8d525137",
+   "oh": [
+    "8d525137",
+    "53353c8",
+    "aac242c3",
+    "79aca341"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0173"
   },
   {
-   "id": "S0174",
-   "day": 18,
-   "direction": "zh-ja",
+   "qid": "P-018-03-2d9e94aa8244",
    "prompt": "我父亲不太吃水果。",
-   "knowledge_ids": [
-    "V0496"
+   "options": [
+    "あの信号の手前で降ろしてください。",
+    "いつでも私のオフィスを訪ねなさい。",
+    "スイッチは時間通りに働かなかった。",
+    "父はそんなに果物を食べないんです。"
    ],
-   "hint": ""
+   "h": "58c9793f",
+   "oh": [
+    "4e4f3267",
+    "17a853f2",
+    "e8b6d63c",
+    "58c9793f"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0174"
   },
   {
-   "id": "S0175",
-   "day": 18,
-   "direction": "zh-ja",
+   "qid": "P-018-04-57a0a21df1c3",
    "prompt": "嘴里塞满东西时别说话。",
-   "knowledge_ids": [
-    "V0497"
+   "options": [
+    "口にものをほおばってしゃべるな。",
+    "おまえはオレを殺そうとしている。",
+    "タバコにかけられている税は高い。",
+    "その広間は日本画で飾られていた。"
    ],
-   "hint": ""
+   "h": "3e3e338d",
+   "oh": [
+    "3e3e338d",
+    "aac242c3",
+    "37e548c7",
+    "6d732f36"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0175"
   },
   {
-   "id": "S0176",
-   "day": 18,
-   "direction": "zh-ja",
+   "qid": "P-018-05-643baeaf6e5f",
    "prompt": "把鞋上的灰刷掉。",
-   "knowledge_ids": [
-    "V0498"
+   "options": [
+    "おまえはオレを殺そうとしている。",
+    "靴のほこりをはけではらいなさい。",
+    "トムは今にもここに来るはずです。",
+    "ラジオの音を下げてくれませんか。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0177",
-   "day": 18,
+   "h": "667c1c15",
+   "oh": [
+    "aac242c3",
+    "667c1c15",
+    "1c43f179",
+    "2be3730e"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0176"
+  },
+  {
+   "qid": "P-018-06-11700f6c03fd",
    "prompt": "这双袜子不成对。",
-   "knowledge_ids": [
-    "V0499"
+   "options": [
+    "光が世にやって来た。",
+    "この靴下はちぐはぐだ。",
+    "お手洗いはどこですか。",
+    "毎日、学校へ行きます。"
    ],
-   "hint": ""
+   "h": "6db284b2",
+   "oh": [
+    "f14e475a",
+    "6db284b2",
+    "9f20e43f",
+    "53ed5616"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0177"
   },
   {
-   "id": "S0178",
-   "day": 18,
-   "direction": "ja-zh",
+   "qid": "P-018-07-d44434f519d5",
    "prompt": "あなたの国では何語を話しますか。",
-   "knowledge_ids": [
-    "V0500"
+   "options": [
+    "你们国家说什么语言？",
+    "那个孩子朝狗扔石头。",
+    "鲍勃到底是不是病了？",
+    "墨西哥人说什么语言？"
    ],
-   "hint": ""
+   "h": "72ab8ea4",
+   "oh": [
+    "72ab8ea4",
+    "b8585706",
+    "f2ed1fa9",
+    "f09cbbd1"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0178"
   },
   {
-   "id": "S0179",
-   "day": 18,
-   "direction": "ja-zh",
+   "qid": "P-018-08-080e06f7c597",
    "prompt": "曇りの日です。",
-   "knowledge_ids": [
-    "V0501"
+   "options": [
+    "收银台在哪里。",
+    "吃早饭。",
+    "这水真舒服啊。",
+    "是个阴天。"
    ],
-   "hint": ""
+   "h": "64658613",
+   "oh": [
+    "55df731b",
+    "c30f1232",
+    "98bf654",
+    "64658613"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0179"
   },
   {
-   "id": "S0180",
-   "day": 18,
-   "direction": "ja-zh",
+   "qid": "P-018-09-020ac132673e",
    "prompt": "今日は曇っている。",
-   "knowledge_ids": [
-    "V0502"
+   "options": [
+    "今天天阴。",
+    "明天预定出差。",
+    "南希想养狗吗？",
+    "七点起床。"
    ],
-   "hint": ""
+   "h": "5fbcd739",
+   "oh": [
+    "5fbcd739",
+    "50d96ff8",
+    "a8401a0f",
+    "2fdab03e"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0180"
   }
  ],
  "quiz": [

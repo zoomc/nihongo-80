@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V1875",
    "front": "軍隊",
    "back": "军队",
+   "kana": "ぐんたい",
    "stage": "planned"
   },
   {
    "kid": "V1876",
    "front": "訓練",
    "back": "训练",
+   "kana": "くんれん",
    "stage": "planned"
   },
   {
    "kid": "V1877",
    "front": "計",
    "back": "计划；计算",
+   "kana": "けい",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0445",
    "front": "守",
-   "back": "守护；遵守｜音 シュ、ス",
+   "back": "守护；遵守",
+   "kana": "シュ、ス、まも.る、まも.り、もり、-もり、かみ",
    "stage": "planned"
   },
   {
    "kid": "K0446",
    "front": "若",
-   "back": "年轻；如果｜音 ジャク、ニャク、ニャ",
+   "back": "年轻；如果",
+   "kana": "ジャク、ニャク、ニャ、わか.い、わか-、も.しくわ、も.し、も.しくは、ごと.し",
    "stage": "planned"
   },
   {
    "kid": "V1842",
    "front": "鎖",
    "back": "锁链",
+   "kana": "くさり",
    "stage": "planned"
   },
   {
    "kid": "V1843",
    "front": "腐る",
    "back": "腐烂",
+   "kana": "くさる",
    "stage": "planned"
   },
   {
    "kid": "V1844",
    "front": "癖",
    "back": "习惯；癖好",
+   "kana": "くせ",
    "stage": "planned"
   },
   {
@@ -455,104 +463,204 @@
  ],
  "sentences": [
   {
-   "id": "S1071",
-   "day": 108,
-   "direction": "zh-ja",
+   "qid": "P-108-00-ba490cda608c",
    "prompt": "跟你换个座位吧。",
-   "knowledge_ids": [
-    "V1933"
+   "options": [
+    "この紙はインクを吸わない。",
+    "お話し中、ごめんなさい。",
+    "あなたと席を交換しよう。",
+    "お前はまだ「青い」な。"
    ],
-   "hint": ""
+   "h": "4b92c51b",
+   "oh": [
+    "1efc66f7",
+    "18f2084e",
+    "4b92c51b",
+    "ad3fba26"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1071"
   },
   {
-   "id": "S1072",
-   "day": 108,
-   "direction": "zh-ja",
+   "qid": "P-108-01-ea576ab65c2b",
    "prompt": "机票比火车票贵。",
-   "knowledge_ids": [
-    "V1934"
+   "options": [
+    "その町はロンドンのすぐ北にある。",
+    "航空料金の方が鉄道料金より高い。",
+    "あなたに頼んでもよろしいですか。",
+    "アラビア語は右から左へ書きます。"
    ],
-   "hint": ""
+   "h": "fcfd193f",
+   "oh": [
+    "efe3c905",
+    "fcfd193f",
+    "e84dbeb6",
+    "36918c3"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1072"
   },
   {
-   "id": "S1073",
-   "day": 108,
-   "direction": "zh-ja",
+   "qid": "P-108-02-76e912639b6f",
    "prompt": "看到那番景象，我吓了一跳。",
-   "knowledge_ids": [
-    "V1935"
+   "options": [
+    "父は袖に長い裂け目を作った。",
+    "あまり人に頼ってはいけない。",
+    "このドアは書斎に通じている。",
+    "その光景を見てぎょっとした。"
    ],
-   "hint": ""
+   "h": "f1930e87",
+   "oh": [
+    "822d769f",
+    "7f0112b5",
+    "ba605a4e",
+    "f1930e87"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1073"
   },
   {
-   "id": "S1074",
-   "day": 108,
-   "direction": "zh-ja",
+   "qid": "P-108-03-c0dddfb1c5bc",
    "prompt": "把这一列数字加起来。",
-   "knowledge_ids": [
-    "V1936"
+   "options": [
+    "この数字の列を合計しなさい。",
+    "水泳が私の楽しみの１つです。",
+    "日がだんだん短くなっている。",
+    "このイヤホンは壊れています。"
    ],
-   "hint": ""
+   "h": "3eebc836",
+   "oh": [
+    "3eebc836",
+    "2f2ba09b",
+    "3758f7bc",
+    "cae4bbd8"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1074"
   },
   {
-   "id": "S1075",
-   "day": 108,
-   "direction": "zh-ja",
+   "qid": "P-108-04-33b837322cc2",
    "prompt": "除要害部位外，其他攻击都允许。",
-   "knowledge_ids": [
-    "V1937"
+   "options": [
+    "インドの人口はどのくらいですか。",
+    "急所を除くすべての攻撃を認める。",
+    "その黄色いのをいただきましょう。",
+    "ホッチキスを貸してくれませんか。"
    ],
-   "hint": ""
+   "h": "652d1d4",
+   "oh": [
+    "4c5d8293",
+    "652d1d4",
+    "725d19ee",
+    "1b2dc8f1"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1075"
   },
   {
-   "id": "S1076",
-   "day": 108,
-   "direction": "zh-ja",
+   "qid": "P-108-05-a8b5a82d05ca",
    "prompt": "她为公司做出了很大贡献。",
-   "knowledge_ids": [
-    "V1938"
+   "options": [
+    "その仕事をもう終えましたか。",
+    "「彼女は若いですか」「はい」",
+    "彼女は非常に会社に貢献した。",
+    "最初の打者はアウトになった。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1077",
-   "day": 108,
+   "h": "c6d55b",
+   "oh": [
+    "f2fbd2db",
+    "6bc44878",
+    "c6d55b",
+    "812a999a"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1076"
+  },
+  {
+   "qid": "P-108-06-9a3a1e1af8a8",
    "prompt": "那件商品在电视上做了广告。",
-   "knowledge_ids": [
-    "V1939"
+   "options": [
+    "このコップをミルクで満たした。",
+    "その商品はテレビで広告された。",
+    "この漢字はどういう意味ですか。",
+    "この豚肉は１キロいくらですか。"
    ],
-   "hint": ""
+   "h": "5295e0d9",
+   "oh": [
+    "69585dd2",
+    "5295e0d9",
+    "f391f35e",
+    "24e2e940"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1077"
   },
   {
-   "id": "S1078",
-   "day": 108,
-   "direction": "ja-zh",
+   "qid": "P-108-07-191c7eca7e36",
    "prompt": "その男は妻と交際し始めた。",
-   "knowledge_ids": [
-    "V1940"
+   "options": [
+    "这条河一直延伸到新奥尔良。",
+    "我不小心说漏了他生病的事。",
+    "那个男人开始和妻子交往了。",
+    "这次旅行不是出差，是去玩。"
    ],
-   "hint": ""
+   "h": "b8529c9b",
+   "oh": [
+    "52962a3e",
+    "2844a1ed",
+    "b8529c9b",
+    "f448d16f"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1078"
   },
   {
-   "id": "S1079",
-   "day": 108,
-   "direction": "ja-zh",
+   "qid": "P-108-08-54b73026f084",
    "prompt": "このうち大事なのは後者の方です。",
-   "knowledge_ids": [
-    "V1941"
+   "options": [
+    "快到睡觉的时间了。",
+    "进来之前请先敲门。",
+    "其中重要的是后者。",
+    "最近一直没见到他。"
    ],
-   "hint": ""
+   "h": "6cc1f774",
+   "oh": [
+    "b1e26b52",
+    "cc9d7b6e",
+    "6cc1f774",
+    "382041d4"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1079"
   },
   {
-   "id": "S1080",
-   "day": 108,
-   "direction": "ja-zh",
+   "qid": "P-108-09-9e0bb8b69131",
    "prompt": "委員会は８名から構成されている。",
-   "knowledge_ids": [
-    "V1942"
+   "options": [
+    "她应该多听听别人的话。",
+    "我为那本书付了三美元。",
+    "委员会由八名成员组成。",
+    "我有足够的钱买这本书。"
    ],
-   "hint": ""
+   "h": "27f8744e",
+   "oh": [
+    "c6d6351d",
+    "30a5faed",
+    "27f8744e",
+    "c449930f"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1080"
   }
  ],
  "quiz": [

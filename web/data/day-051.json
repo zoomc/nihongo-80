@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1067",
    "front": "こと",
    "back": "事情",
+   "kana": "こと",
    "stage": "planned"
   },
   {
    "kid": "V1068",
    "front": "小鳥",
    "back": "小鸟",
+   "kana": "ことり",
    "stage": "planned"
   },
   {
    "kid": "V1069",
    "front": "このあいだ",
    "back": "前几天",
+   "kana": "このあいだ",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0252",
    "front": "帰",
-   "back": "返回；回归｜音 キ",
+   "back": "返回；回归",
+   "kana": "キ、かえ.る、かえ.す、おく.る、とつ.ぐ",
    "stage": "planned"
   },
   {
    "kid": "K0253",
    "front": "古",
-   "back": "旧；古老｜音 コ",
+   "back": "旧；古老",
+   "kana": "コ、ふる.い、ふる-、-ふる.す",
    "stage": "planned"
   },
   {
    "kid": "V1029",
    "front": "草",
    "back": "草",
+   "kana": "くさ",
    "stage": "planned"
   },
   {
    "kid": "V1030",
    "front": "首",
    "back": "脖子",
+   "kana": "くび",
    "stage": "planned"
   },
   {
    "kid": "V1031",
    "front": "雲",
    "back": "云",
+   "kana": "くも",
    "stage": "planned"
   },
   {
@@ -533,104 +541,204 @@
  ],
  "sentences": [
   {
-   "id": "S0501",
-   "day": 51,
-   "direction": "zh-ja",
+   "qid": "P-051-00-3aed4ce93db9",
    "prompt": "我摔了好几次，一路走下了坡。",
-   "knowledge_ids": [
-    "V1087"
+   "options": [
+    "私は何度も転びながら、坂を下っていった。",
+    "それ以来、彼からは何の便りもありません。",
+    "その作家は私たちによく知られています。",
+    "あなたはうちのクラスで歓迎されています。"
    ],
-   "hint": ""
+   "h": "a6ef92e1",
+   "oh": [
+    "a6ef92e1",
+    "df9b23d2",
+    "44206ac1",
+    "70f8c097"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0501"
   },
   {
-   "id": "S0502",
-   "day": 51,
-   "direction": "zh-ja",
+   "qid": "P-051-01-2c60acb7fe3b",
    "prompt": "我正在找出租的房子。",
-   "knowledge_ids": [
-    "V1088"
+   "options": [
+    "私は貸間を探しているところです。",
+    "そのニュースは急いで印刷された。",
+    "この小包を船便で送ってください。",
+    "その小説は彼の名声を更に高めた。"
    ],
-   "hint": ""
+   "h": "dca5f6fe",
+   "oh": [
+    "dca5f6fe",
+    "d5c6649d",
+    "79aca341",
+    "c4f79a06"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0502"
   },
   {
-   "id": "S0503",
-   "day": 51,
-   "direction": "zh-ja",
+   "qid": "P-051-02-8b216ac64b00",
    "prompt": "抓住绳子往下退。",
-   "knowledge_ids": [
-    "V1089"
+   "options": [
+    "ロープから下がっていなさい。",
+    "どのぐらい複雑なのだろうか。",
+    "その火事はおととい発生した。",
+    "こっちの端を持っててくれる？"
    ],
-   "hint": ""
+   "h": "6e524cfe",
+   "oh": [
+    "6e524cfe",
+    "c4bbd0fb",
+    "d0498af0",
+    "cde879f8"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0503"
   },
   {
-   "id": "S0504",
-   "day": 51,
-   "direction": "zh-ja",
+   "qid": "P-051-03-d47e2afca8c9",
    "prompt": "日本英语教育很兴盛。",
-   "knowledge_ids": [
-    "V1090"
+   "options": [
+    "日本では英語教育が盛んである。",
+    "その公演は万雷の拍手を受けた。",
+    "どちらの新聞社にお勤めですか。",
+    "この菓子を自由にお取り下さい。"
    ],
-   "hint": ""
+   "h": "e4b2a408",
+   "oh": [
+    "e4b2a408",
+    "4c0102c4",
+    "d5ea31b",
+    "ff6eaffd"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0504"
   },
   {
-   "id": "S0505",
-   "day": 51,
-   "direction": "zh-ja",
+   "qid": "P-051-04-32444dc87115",
    "prompt": "能把收音机声音调小吗？",
-   "knowledge_ids": [
-    "V1091"
+   "options": [
+    "ラジオの音を下げてくれませんか。",
+    "それはたいへんなショックでした。",
+    "この小包を船便で送ってください。",
+    "おひる頃やっと太陽が顔を出した。"
    ],
-   "hint": ""
+   "h": "2be3730e",
+   "oh": [
+    "2be3730e",
+    "4f933c74",
+    "79aca341",
+    "c5040bc1"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0505"
   },
   {
-   "id": "S0506",
-   "day": 51,
-   "direction": "zh-ja",
+   "qid": "P-051-05-6f3d55f9fa4d",
    "prompt": "给您来点饮料吧？",
-   "knowledge_ids": [
-    "V1092"
+   "options": [
+    "熱はエネルギーの一種である。",
+    "飲み物を差し上げましょうか。",
+    "テーブルの上にカップがある。",
+    "もうこれよりほかに手はない。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0507",
-   "day": 51,
+   "h": "b968d8e9",
+   "oh": [
+    "c698082b",
+    "b968d8e9",
+    "b6c3b73b",
+    "9865793f"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0506"
+  },
+  {
+   "qid": "P-051-06-c4b08078554d",
    "prompt": "刚才不知为什么麦克风没声音。",
-   "knowledge_ids": [
-    "V1093"
+   "options": [
+    "息子はハンバーガーにあきています。",
+    "さっきなぜかマイクが入らなかった。",
+    "一日で５００ドルつかってしまった。",
+    "プレゼント用に包んでもらえますか。"
    ],
-   "hint": ""
+   "h": "f6bd6b75",
+   "oh": [
+    "9eefe5a6",
+    "f6bd6b75",
+    "3fe654f9",
+    "c660d6c8"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0507"
   },
   {
-   "id": "S0508",
-   "day": 51,
-   "direction": "ja-zh",
+   "qid": "P-051-07-1f46ae6b6429",
    "prompt": "それで、彼女はとてもさびしく思っています。",
-   "knowledge_ids": [
-    "V1094"
+   "options": [
+    "所以她觉得很寂寞。",
+    "这方法虽慢但可靠。",
+    "那座岛是热带气候。",
+    "新闻每小时播一次。"
    ],
-   "hint": ""
+   "h": "47d7574f",
+   "oh": [
+    "47d7574f",
+    "1119a5f0",
+    "ecf17885",
+    "f70f14e"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0508"
   },
   {
-   "id": "S0509",
-   "day": 51,
-   "direction": "ja-zh",
+   "qid": "P-051-08-7f90e96a3b30",
    "prompt": "再来月は１２月だ。",
-   "knowledge_ids": [
-    "V1095"
+   "options": [
+    "被偷的钱我放不下。",
+    "下下个月是十二月。",
+    "最近一直没见到他。",
+    "他不知道受了多少苦。"
    ],
-   "hint": ""
+   "h": "3d2240f5",
+   "oh": [
+    "220f5cef",
+    "3d2240f5",
+    "382041d4",
+    "95b0f650"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0509"
   },
   {
-   "id": "S0510",
-   "day": 51,
-   "direction": "ja-zh",
+   "qid": "P-051-09-402f4771dd0a",
    "prompt": "再来週の木曜日はどう？",
-   "knowledge_ids": [
-    "V1096"
+   "options": [
+    "下下周四怎么样？",
+    "戏正好准时开演。",
+    "汤姆终于戒烟了。",
+    "那正是我想吃的。"
    ],
-   "hint": ""
+   "h": "aab0ec66",
+   "oh": [
+    "aab0ec66",
+    "998bd8d4",
+    "9c580eba",
+    "247cb573"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0510"
   }
  ],
  "quiz": [

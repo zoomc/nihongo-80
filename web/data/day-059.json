@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V1199",
    "front": "足す",
    "back": "加；添",
+   "kana": "たす",
    "stage": "planned"
   },
   {
    "kid": "V1200",
    "front": "尋ねる",
    "back": "询问",
+   "kana": "たずねる",
    "stage": "planned"
   },
   {
    "kid": "V1201",
    "front": "訪ねる",
    "back": "拜访",
+   "kana": "たずねる",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0284",
    "front": "凄",
-   "back": "厉害；凄惨｜音 セイ、サイ",
+   "back": "厉害；凄惨",
+   "kana": "セイ、サイ、さむ.い、すご.い、すさ.まじい",
    "stage": "planned"
   },
   {
    "kid": "K0285",
    "front": "痩",
-   "back": "瘦；变瘦｜音 ソウ、チュウ、シュウ、シュ",
+   "back": "瘦；变瘦",
+   "kana": "ソウ、チュウ、シュウ、シュ、や.せる",
    "stage": "planned"
   },
   {
    "kid": "V1166",
    "front": "すると",
    "back": "于是；那么",
+   "kana": "すると",
    "stage": "planned"
   },
   {
    "kid": "V1167",
    "front": "生活",
    "back": "生活",
+   "kana": "せいかつ",
    "stage": "planned"
   },
   {
    "kid": "V1168",
    "front": "生産",
    "back": "生产",
+   "kana": "せいさん",
    "stage": "planned"
   },
   {
@@ -456,104 +464,204 @@
  ],
  "sentences": [
   {
-   "id": "S0581",
-   "day": 59,
-   "direction": "zh-ja",
+   "qid": "P-059-00-b505e236c6d9",
    "prompt": "您几点方便？",
-   "knowledge_ids": [
-    "V1229"
+   "options": [
+    "つまり彼女は下手な踊り子だ。",
+    "あまり人に頼ってはいけない。",
+    "何時がご都合よいでしょうか。",
+    "ルーシーはかわいい女の子だ。"
    ],
-   "hint": ""
+   "h": "313ba781",
+   "oh": [
+    "c49e2f71",
+    "7f0112b5",
+    "313ba781",
+    "8d514221"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0581"
   },
   {
-   "id": "S0582",
-   "day": 59,
-   "direction": "zh-ja",
+   "qid": "P-059-01-f7dc0da0cedc",
    "prompt": "那个故事从父母传给了孩子。",
-   "knowledge_ids": [
-    "V1230"
+   "options": [
+    "この手袋は両方がそろっていない。",
+    "トラとライオンとどちらが強いか。",
+    "パスポートを見せてくれませんか。",
+    "その話は親から子へと伝えられた。"
    ],
-   "hint": ""
+   "h": "c65bb93d",
+   "oh": [
+    "9ed978b8",
+    "a0452d41",
+    "e4f54f40",
+    "c65bb93d"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0582"
   },
   {
-   "id": "S0583",
-   "day": 59,
-   "direction": "zh-ja",
+   "qid": "P-059-02-67bdb1bad4d0",
    "prompt": "这种冷天还要持续多久？",
-   "knowledge_ids": [
-    "V1231"
+   "options": [
+    "どれくらいこの寒い天気は続きますか。",
+    "どうして帰りがこんなに遅くなったの。",
+    "その教会は１１７３年までさかのぼる。",
+    "おじいさんはとてもゆっくりと話す。"
    ],
-   "hint": ""
+   "h": "7bdec4d9",
+   "oh": [
+    "7bdec4d9",
+    "a0491ca2",
+    "77ff2e4a",
+    "ade4fb30"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0583"
   },
   {
-   "id": "S0584",
-   "day": 59,
-   "direction": "zh-ja",
+   "qid": "P-059-03-0b7bb0efbf79",
    "prompt": "能帮我包成礼物吗？",
-   "knowledge_ids": [
-    "V1232"
+   "options": [
+    "このテープレコーダーは新しくない。",
+    "あの信号の手前で降ろしてください。",
+    "おじいさんはとてもゆっくりと話す。",
+    "プレゼント用に包んでもらえますか。"
    ],
-   "hint": ""
+   "h": "c660d6c8",
+   "oh": [
+    "37f9d281",
+    "4e4f3267",
+    "ade4fb30",
+    "c660d6c8"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0584"
   },
   {
-   "id": "S0585",
-   "day": 59,
-   "direction": "zh-ja",
+   "qid": "P-059-04-5c124d7a622b",
    "prompt": "我打算明年去留学。",
-   "knowledge_ids": [
-    "V1234"
+   "options": [
+    "私は来年留学するつもりです。",
+    "カーテンがゆっくり引かれた。",
+    "最近、物価が上がっています。",
+    "メールの返信を待っています。"
    ],
-   "hint": ""
+   "h": "9cfac455",
+   "oh": [
+    "9cfac455",
+    "9a704e8a",
+    "bc6a316f",
+    "95cf6c7f"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0585"
   },
   {
-   "id": "S0586",
-   "day": 59,
-   "direction": "zh-ja",
+   "qid": "P-059-05-98677be96147",
    "prompt": "鱼没有预想的那么好钓。",
-   "knowledge_ids": [
-    "V1235"
+   "options": [
+    "いいクリスマスを過ごしましたか。",
+    "マイクはバスで学校に通っている。",
+    "その話は親から子へと伝えられた。",
+    "思っていたほど魚は釣れなかった。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0587",
-   "day": 59,
+   "h": "e3ade7b9",
+   "oh": [
+    "a01fba18",
+    "1062eb67",
+    "c65bb93d",
+    "e3ade7b9"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0586"
+  },
+  {
+   "qid": "P-059-06-a53f0d7f8b5e",
    "prompt": "可是啊，我必须带母亲一起去。",
-   "knowledge_ids": [
-    "V1236"
+   "options": [
+    "でもさ、母を連れて行かなくてはいけないんだ。",
+    "この程度のお金じゃ長くは持たないだろう。",
+    "火曜の朝までにすべて終えなければならないのです。",
+    "彼らが眠っている間私がハンドルを握った。"
    ],
-   "hint": ""
+   "h": "82bd42a3",
+   "oh": [
+    "82bd42a3",
+    "2eab4bd1",
+    "8ea08b4b",
+    "de5b0b5b"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0587"
   },
   {
-   "id": "S0588",
-   "day": 59,
-   "direction": "ja-zh",
+   "qid": "P-059-07-6f99789b7ef4",
    "prompt": "漢字を書くときは点やはらいに気をつけて、なるべく早くていねいに書きましょう。",
-   "knowledge_ids": [
-    "V1237"
+   "options": [
+    "多亏那些树，我才没被雨淋湿。",
+    "你是个多么聪明的学生啊。",
+    "写汉字时要注意点和撇捺，尽量又快又工整地书写。",
+    "这庭院的美更多归功于人工而非自然。"
    ],
-   "hint": ""
+   "h": "2d4131cf",
+   "oh": [
+    "e8d78e8b",
+    "9c468c5f",
+    "2d4131cf",
+    "e6b6efe9"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0588"
   },
   {
-   "id": "S0589",
-   "day": 59,
-   "direction": "ja-zh",
+   "qid": "P-059-08-0a20f05eecc1",
    "prompt": "このテキストは初心者向きにできている。",
-   "knowledge_ids": [
-    "V1238"
+   "options": [
+    "那场暴风雨带来了巨大损失。",
+    "这本教材是为初学者编写的。",
+    "有问题的人请到3号窗口。",
+    "据天气预报，马上就要入梅了。"
    ],
-   "hint": ""
+   "h": "450f0f81",
+   "oh": [
+    "5f9247ec",
+    "450f0f81",
+    "cea33913",
+    "d468a87f"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0589"
   },
   {
-   "id": "S0590",
-   "day": 59,
-   "direction": "ja-zh",
+   "qid": "P-059-09-59147e98ddb9",
    "prompt": "あなたが適当だと思う本なら何でも読みなさい。",
-   "knowledge_ids": [
-    "V1239"
+   "options": [
+    "这庭院的美更多归功于人工而非自然。",
+    "往前走两个街区，然后向左拐。",
+    "只要你觉得合适的书，什么都可以读。",
+    "这道菜是顾及巴黎风味调味的。"
    ],
-   "hint": ""
+   "h": "e07bbd8e",
+   "oh": [
+    "e6b6efe9",
+    "b81afcce",
+    "e07bbd8e",
+    "53e2bb2d"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0590"
   }
  ],
  "quiz": [

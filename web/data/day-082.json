@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V0339",
    "front": "翌日",
    "back": "次日；第二天",
+   "kana": "よくじつ",
    "stage": "planned"
   },
   {
    "kid": "V0340",
    "front": "途中",
    "back": "途中；中途",
+   "kana": "とちゅう",
    "stage": "planned"
   },
   {
    "kid": "V1438",
    "front": "愛",
    "back": "爱",
+   "kana": "あい",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0341",
    "front": "交",
-   "back": "交往；交换｜音 コウ",
+   "back": "交往；交换",
+   "kana": "コウ、まじ.わる、まじ.える、ま.じる、まじ.る、ま.ざる、ま.ぜる、-か.う、か.わす、かわ.す、こもごも",
    "stage": "planned"
   },
   {
    "kid": "K0342",
    "front": "資",
-   "back": "资金；资质｜音 シ",
+   "back": "资金；资质",
+   "kana": "シ",
    "stage": "planned"
   },
   {
    "kid": "V0306",
    "front": "栄養",
    "back": "营养",
+   "kana": "えいよう",
    "stage": "planned"
   },
   {
    "kid": "V0307",
    "front": "睡眠",
    "back": "睡眠",
+   "kana": "すいみん",
    "stage": "planned"
   },
   {
    "kid": "V0308",
    "front": "回復",
    "back": "恢复；康复",
+   "kana": "かいふく",
    "stage": "planned"
   },
   {
@@ -490,104 +498,204 @@
  ],
  "sentences": [
   {
-   "id": "S0811",
-   "day": 82,
-   "direction": "zh-ja",
+   "qid": "P-082-00-857382864c7f",
    "prompt": "他给我看了相册。",
-   "knowledge_ids": [
-    "V1479"
+   "options": [
+    "コックさんは少しもかけていない。",
+    "彼は私にアルバムを見せてくれた。",
+    "ビルはその罪を犯していなかった。",
+    "その町はロンドンのすぐ北にある。"
    ],
-   "hint": ""
+   "h": "ccc3adc3",
+   "oh": [
+    "9948ee99",
+    "ccc3adc3",
+    "8cfed4a4",
+    "efe3c905"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0811"
   },
   {
-   "id": "S0812",
-   "day": 82,
-   "direction": "zh-ja",
+   "qid": "P-082-01-389140964844",
    "prompt": "碎浪形成了泡沫。",
-   "knowledge_ids": [
-    "V1480"
+   "options": [
+    "くだける波が泡を作った。",
+    "この紙はインクを吸わない。",
+    "カーテンが風になびいた。",
+    "今日歯医者へ行きました。"
    ],
-   "hint": ""
+   "h": "99b9615f",
+   "oh": [
+    "99b9615f",
+    "1efc66f7",
+    "f01f9c0a",
+    "6f22df02"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0812"
   },
   {
-   "id": "S0813",
-   "day": 82,
-   "direction": "zh-ja",
+   "qid": "P-082-02-b7af35d35410",
    "prompt": "把你的计划配合我的来。",
-   "knowledge_ids": [
-    "V1481"
+   "options": [
+    "パーティーはたのしかったですか。",
+    "あなたの計画を私に合わせなさい。",
+    "お尋ねしてもよろしいでしょうか。",
+    "このテーブルを頼んだのではない。"
    ],
-   "hint": ""
+   "h": "90f4ca7a",
+   "oh": [
+    "4939410a",
+    "90f4ca7a",
+    "1317d3c0",
+    "e76e4b0"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0813"
   },
   {
-   "id": "S0814",
-   "day": 82,
-   "direction": "zh-ja",
+   "qid": "P-082-03-bb3374fb11fc",
    "prompt": "她的样子令人心酸。",
-   "knowledge_ids": [
-    "V1482"
+   "options": [
+    "きのう旧友の一人に出会った。",
+    "つまり彼女は下手な踊り子だ。",
+    "スミスさんにつないで下さい。",
+    "彼女は哀れを誘う有様だった。"
    ],
-   "hint": ""
+   "h": "6bd849e2",
+   "oh": [
+    "bacc7be9",
+    "c49e2f71",
+    "3dda2614",
+    "6bd849e2"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0814"
   },
   {
-   "id": "S0815",
-   "day": 82,
-   "direction": "zh-ja",
+   "qid": "P-082-04-c544d9d6ba84",
    "prompt": "你觉得哪个方案更好。",
-   "knowledge_ids": [
-    "V1483"
+   "options": [
+    "彼女は自動式の洗濯機をもっている。",
+    "プレゼント用に包んでもらえますか。",
+    "どちらの案がよりよいと思いますか。",
+    "どういっても七時までにいかないと。"
    ],
-   "hint": ""
+   "h": "61fb470f",
+   "oh": [
+    "d2c6d572",
+    "c660d6c8",
+    "61fb470f",
+    "91a2dee7"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0815"
   },
   {
-   "id": "S0816",
-   "day": 82,
-   "direction": "zh-ja",
+   "qid": "P-082-05-ae43d6a85f81",
    "prompt": "他试图把那段对话背下来。",
-   "knowledge_ids": [
-    "V1484"
+   "options": [
+    "トムは今にもここに来るはずです。",
+    "もうスミスさんに会われましたね。",
+    "ここでは煙草は禁止されています。",
+    "彼はその会話を暗記しようとした。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0817",
-   "day": 82,
+   "h": "50ecfd82",
+   "oh": [
+    "1c43f179",
+    "3c781f85",
+    "ecc80e4d",
+    "50ecfd82"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0816"
+  },
+  {
+   "qid": "P-082-06-99ad981b96bd",
    "prompt": "今天的政治局势不太稳定。",
-   "knowledge_ids": [
-    "V1485"
+   "options": [
+    "「いいえ」とイギリス人は繰り返しました。",
+    "今日の政治状況はそれほど安定していない。",
+    "「ご一緒してもいいですか」「もちろんです」",
+    "ここでお買い上げの品は無料で配達します。"
    ],
-   "hint": ""
+   "h": "7a6af499",
+   "oh": [
+    "63d86f79",
+    "7a6af499",
+    "d4b34698",
+    "108078d3"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0817"
   },
   {
-   "id": "S0818",
-   "day": 82,
-   "direction": "ja-zh",
+   "qid": "P-082-07-24dcdd31a3b6",
    "prompt": "あんなに怒るなんて彼らしくない。",
-   "knowledge_ids": [
-    "V1486"
+   "options": [
+    "一到春天就翻地播种。",
+    "我们学校有九个班。",
+    "针扎到了我的拇指。",
+    "那么生气可不像他。"
    ],
-   "hint": ""
+   "h": "d57e1d5a",
+   "oh": [
+    "24c05567",
+    "daa16234",
+    "97a1ec94",
+    "d57e1d5a"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0818"
   },
   {
-   "id": "S0819",
-   "day": 82,
-   "direction": "ja-zh",
+   "qid": "P-082-08-b3bd55bd00c4",
    "prompt": "この手の本はあまり読まない。",
-   "knowledge_ids": [
-    "V1487"
+   "options": [
+    "雪积得满地都是。",
+    "那正是我想吃的。",
+    "这类书我不太读。",
+    "这次可不能失手。"
    ],
-   "hint": ""
+   "h": "bde26ff2",
+   "oh": [
+    "8aeb8cdc",
+    "247cb573",
+    "bde26ff2",
+    "2fe4f620"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0819"
   },
   {
-   "id": "S0820",
-   "day": 82,
-   "direction": "ja-zh",
+   "qid": "P-082-09-4d032e5b2925",
    "prompt": "食物は胃の中で消化される。",
-   "knowledge_ids": [
-    "V1488"
+   "options": [
+    "从第十课开始吧。",
+    "养这辆车很费钱。",
+    "要我帮您订购吗？",
+    "食物在胃里消化。"
    ],
-   "hint": ""
+   "h": "835e5ce8",
+   "oh": [
+    "7c4687ec",
+    "ea0755b5",
+    "fa555a2",
+    "835e5ce8"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0820"
   }
  ],
  "quiz": [

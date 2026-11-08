@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0779",
    "front": "辺",
    "back": "附近；一带",
+   "kana": "へん",
    "stage": "planned"
   },
   {
    "kid": "V0780",
    "front": "ペン",
    "back": "笔；钢笔",
+   "kana": "ペン",
    "stage": "planned"
   },
   {
    "kid": "V0781",
    "front": "帽子",
    "back": "帽子",
+   "kana": "ぼうし",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0180",
    "front": "京",
-   "back": "京城；首都｜音 キョウ、ケイ、キン",
+   "back": "京城；首都",
+   "kana": "キョウ、ケイ、キン、みやこ",
    "stage": "planned"
   },
   {
    "kid": "K0181",
    "front": "目",
-   "back": "眼睛；项目；次序｜音 モク、ボク",
+   "back": "眼睛；项目；次序",
+   "kana": "モク、ボク、め、-め、ま-",
    "stage": "planned"
   },
   {
    "kid": "V0741",
    "front": "半",
    "back": "半；一半",
+   "kana": "はん",
    "stage": "planned"
   },
   {
    "kid": "V0742",
    "front": "晩",
    "back": "晚上；晚间",
+   "kana": "ばん",
    "stage": "planned"
   },
   {
    "kid": "V0743",
    "front": "ハンカチ",
    "back": "手帕",
+   "kana": "ハンカチ",
    "stage": "planned"
   },
   {
@@ -526,104 +534,204 @@
  ],
  "sentences": [
   {
-   "id": "S0321",
-   "day": 33,
-   "direction": "zh-ja",
+   "qid": "P-033-00-3adc4945f50d",
    "prompt": "雨衣的扣子掉了。",
-   "knowledge_ids": [
-    "V0788"
+   "options": [
+    "その教師は講堂に学生を集めた。",
+    "レーンコートのボタンがとれた。",
+    "この布は値段の割に品質が良い。",
+    "やっぱり何とかやってのけたね。"
    ],
-   "hint": ""
+   "h": "933240ec",
+   "oh": [
+    "a8167156",
+    "933240ec",
+    "73db6bba",
+    "6295853d"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0321"
   },
   {
-   "id": "S0322",
-   "day": 33,
-   "direction": "zh-ja",
+   "qid": "P-033-01-7f532da1757b",
    "prompt": "我并没有把书架上的书都读完。",
-   "knowledge_ids": [
-    "V0789"
+   "options": [
+    "私は本棚の本をすべて読んだわけではない。",
+    "この世界の教育にはがっかりしてしまう。",
+    "いくつかの点で私は彼女が気に入らない。",
+    "私のE-mailアドレスが変わりました。"
    ],
-   "hint": ""
+   "h": "ef0f61c9",
+   "oh": [
+    "ef0f61c9",
+    "6b522ac9",
+    "e6e371c4",
+    "6c61f1e5"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0322"
   },
   {
-   "id": "S0323",
-   "day": 33,
-   "direction": "zh-ja",
+   "qid": "P-033-02-b601c7913522",
    "prompt": "这不是真正的公寓。",
-   "knowledge_ids": [
-    "V0790"
+   "options": [
+    "お祭りでロブスターを食べました。",
+    "スケートはとてもおもしろかった。",
+    "本当のマンションではありません。",
+    "もうスミスさんに会われましたね。"
    ],
-   "hint": ""
+   "h": "35f02d30",
+   "oh": [
+    "6e738748",
+    "ebd819a3",
+    "35f02d30",
+    "3c781f85"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0323"
   },
   {
-   "id": "S0324",
-   "day": 33,
-   "direction": "zh-ja",
+   "qid": "P-033-03-868117da17f4",
    "prompt": "我决定每天早上跑步。",
-   "knowledge_ids": [
-    "V0791"
+   "options": [
+    "このスープは塩が少し足りない。",
+    "向こうの交番で聞いてください。",
+    "トムは頭にきつい一発を受けた。",
+    "毎朝ジョギングすることにした。"
    ],
-   "hint": ""
+   "h": "471f3e4a",
+   "oh": [
+    "5e1ae47d",
+    "266f52ac",
+    "b9186836",
+    "471f3e4a"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0324"
   },
   {
-   "id": "S0325",
-   "day": 33,
-   "direction": "zh-ja",
+   "qid": "P-033-04-25513cf48f27",
    "prompt": "每月燃气费多少？",
-   "knowledge_ids": [
-    "V0792"
+   "options": [
+    "毎月のガス代はいくらですか。",
+    "その仕事をもう終えましたか。",
+    "新しいパソコンがほしいです。",
+    "それ以上はお役に立てません。"
    ],
-   "hint": ""
+   "h": "a5257803",
+   "oh": [
+    "a5257803",
+    "f2fbd2db",
+    "70214d18",
+    "717e0b55"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0325"
   },
   {
-   "id": "S0326",
-   "day": 33,
-   "direction": "zh-ja",
+   "qid": "P-033-05-cc731e8fd287",
    "prompt": "父亲每周日打高尔夫。",
-   "knowledge_ids": [
-    "V0793"
+   "options": [
+    "父は毎週日曜日にゴルフをします。",
+    "コックさんは少しもかけていない。",
+    "その象は動物園に連れてこられた。",
+    "このソファーは場所を取りすぎる。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0327",
-   "day": 33,
+   "h": "613c9c3a",
+   "oh": [
+    "613c9c3a",
+    "9948ee99",
+    "f9632f0f",
+    "fa74e348"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0326"
+  },
+  {
+   "qid": "P-033-06-e9589336a142",
    "prompt": "每年都得来这儿。",
-   "knowledge_ids": [
-    "V0794"
+   "options": [
+    "兄は東京にいます。",
+    "部屋には家具がない。",
+    "ご協力に感謝します。",
+    "毎年ここに来なきゃ。"
    ],
-   "hint": ""
+   "h": "61562f59",
+   "oh": [
+    "9a02b653",
+    "7d411b95",
+    "fab0a215",
+    "61562f59"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0327"
   },
   {
-   "id": "S0328",
-   "day": 33,
-   "direction": "ja-zh",
+   "qid": "P-033-07-d463e734bbfe",
    "prompt": "私は毎晩家にいます。",
-   "knowledge_ids": [
-    "V0795"
+   "options": [
+    "针扎到了我的拇指。",
+    "上个月几乎没下雨。",
+    "我每天晚上都在家。",
+    "街上聚集了很多人。"
    ],
-   "hint": ""
+   "h": "e5967fa5",
+   "oh": [
+    "97a1ec94",
+    "42b374eb",
+    "e5967fa5",
+    "96c13ff4"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0328"
   },
   {
-   "id": "S0329",
-   "day": 33,
-   "direction": "ja-zh",
+   "qid": "P-033-08-a66bd29b966c",
    "prompt": "２ブロック先まで歩き、左へ曲がりなさい。",
-   "knowledge_ids": [
-    "V0796"
+   "options": [
+    "电话一接通，她就说了起来。",
+    "再婚之后，他现在一定更幸福。",
+    "往前走两个街区，然后向左拐。",
+    "我就当你的第一个病人吧。"
    ],
-   "hint": ""
+   "h": "b81afcce",
+   "oh": [
+    "46a079b4",
+    "42a05a2e",
+    "b81afcce",
+    "40e562c4"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0329"
   },
   {
-   "id": "S0330",
-   "day": 33,
-   "direction": "ja-zh",
+   "qid": "P-033-09-d8b2fbc44e7e",
    "prompt": "あ！まずい！ガソリンが切れてきた。",
-   "knowledge_ids": [
-    "V0797"
+   "options": [
+    "这座寺院建于780年。",
+    "他注意不去惹别人不高兴。",
+    "能让我看看那条裙子吗？",
+    "啊！糟了！汽油快没了。"
    ],
-   "hint": ""
+   "h": "b6724d72",
+   "oh": [
+    "ea718c6c",
+    "16524355",
+    "372e9993",
+    "b6724d72"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0330"
   }
  ],
  "quiz": [

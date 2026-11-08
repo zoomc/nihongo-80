@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1573",
    "front": "売れる",
    "back": "畅销；卖出",
+   "kana": "うれる",
    "stage": "planned"
   },
   {
    "kid": "V1574",
    "front": "上",
    "back": "上面；表面",
+   "kana": "うわ",
    "stage": "planned"
   },
   {
    "kid": "V1575",
    "front": "噂",
    "back": "传闻；谣言",
+   "kana": "うわさ",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0373",
    "front": "直",
-   "back": "直；修理；立即｜音 チョク、ジキ、ジカ",
+   "back": "直；修理；立即",
+   "kana": "チョク、ジキ、ジカ、ただ.ちに、なお.す、-なお.す、なお.る、なお.き、す.ぐ",
    "stage": "planned"
   },
   {
    "kid": "K0374",
    "front": "両",
-   "back": "两个；两｜音 リョウ",
+   "back": "两个；两",
+   "kana": "リョウ、てる、ふたつ",
    "stage": "planned"
   },
   {
    "kid": "V1540",
    "front": "以来",
    "back": "以来",
+   "kana": "いらい",
    "stage": "planned"
   },
   {
    "kid": "V1541",
    "front": "依頼",
    "back": "委托；请求",
+   "kana": "いらい",
    "stage": "planned"
   },
   {
    "kid": "V1542",
    "front": "いらいら",
    "back": "焦躁；烦躁",
+   "kana": "いらいら",
    "stage": "planned"
   },
   {
@@ -549,104 +557,204 @@
  ],
  "sentences": [
   {
-   "id": "S0891",
-   "day": 90,
-   "direction": "zh-ja",
+   "qid": "P-090-00-ac3b4d01e438",
    "prompt": "污染正在伤害地球。",
-   "knowledge_ids": [
-    "V1615"
+   "options": [
+    "敷金は家賃の一か月分です。",
+    "汚染が地球を傷つけている。",
+    "たまには会いに来て下さい。",
+    "事故の原因を調べています。"
    ],
-   "hint": ""
+   "h": "841a8158",
+   "oh": [
+    "8a8afc34",
+    "841a8158",
+    "1c8b4048",
+    "820e254f"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0891"
   },
   {
-   "id": "S0892",
-   "day": 90,
-   "direction": "zh-ja",
+   "qid": "P-090-01-49affe3efeb1",
    "prompt": "首相恐怕会辞职。",
-   "knowledge_ids": [
-    "V1616"
+   "options": [
+    "ぼくは知らないし、気にもしない。",
+    "その広間は日本画で飾られていた。",
+    "首相はおそらく辞任するであろう。",
+    "おひる頃やっと太陽が顔を出した。"
    ],
-   "hint": ""
+   "h": "358fe30a",
+   "oh": [
+    "c9b35858",
+    "6d732f36",
+    "358fe30a",
+    "c5040bc1"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0892"
   },
   {
-   "id": "S0893",
-   "day": 90,
-   "direction": "zh-ja",
+   "qid": "P-090-02-85898d4c3d6a",
    "prompt": "大人常常害怕变化。",
-   "knowledge_ids": [
-    "V1617"
+   "options": [
+    "「彼女は若いですか」「はい」",
+    "ちょっと寄って行きませんか。",
+    "彼は怒って首を左右に振った。",
+    "大人はしばしば変化を恐れる。"
    ],
-   "hint": ""
+   "h": "6a18603d",
+   "oh": [
+    "6bc44878",
+    "187ef6ad",
+    "332d9f86",
+    "6a18603d"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0893"
   },
   {
-   "id": "S0894",
-   "day": 90,
-   "direction": "zh-ja",
+   "qid": "P-090-03-1c88e6f37209",
    "prompt": "那场暴风雨的天气很可怕。",
-   "knowledge_ids": [
-    "V1618"
+   "options": [
+    "このドアは書斎に通じている。",
+    "今日は昼食をとる時間がない。",
+    "その嵐の天候は恐ろしかった。",
+    "大人はしばしば変化を恐れる。"
    ],
-   "hint": ""
+   "h": "99ad2f6e",
+   "oh": [
+    "ba605a4e",
+    "dadf993c",
+    "99ad2f6e",
+    "6a18603d"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0894"
   },
   {
-   "id": "S0895",
-   "day": 90,
-   "direction": "zh-ja",
+   "qid": "P-090-04-1069832b83ac",
    "prompt": "彼此很合得来。",
-   "knowledge_ids": [
-    "V1619"
+   "options": [
+    "お互い相性がいい。",
+    "彼は重責を解かれた。",
+    "音楽を聞きます。",
+    "部屋の中にいます。"
    ],
-   "hint": ""
+   "h": "e4d2ac20",
+   "oh": [
+    "e4d2ac20",
+    "93f07e6c",
+    "ae738ead",
+    "3d1f2b43"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0895"
   },
   {
-   "id": "S0896",
-   "day": 90,
-   "direction": "zh-ja",
+   "qid": "P-090-05-9f0654512c83",
    "prompt": "大海看上去平静而平滑。",
-   "knowledge_ids": [
-    "V1620"
+   "options": [
+    "この世界の教育にはがっかりしてしまう。",
+    "海は穏やかに、そしてなめらかに見える。",
+    "お父さんがバスルームでひげを剃っている。",
+    "いつ禁煙のサインを消すのでしょうね。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0897",
-   "day": 90,
+   "h": "d60249ab",
+   "oh": [
+    "6b522ac9",
+    "d60249ab",
+    "4f3c3e45",
+    "755332b2"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0896"
+  },
+  {
+   "qid": "P-090-06-36a9d256759d",
    "prompt": "一个年轻男人在门前唱歌。",
-   "knowledge_ids": [
-    "V1621"
+   "options": [
+    "これらのクッキーは星の形をしている。",
+    "若い男の人がドアの前で歌っています。",
+    "おはよう。ご飯をよそっても良いかしら？",
+    "先生は毎日の練習の大切さを強調した。"
    ],
-   "hint": ""
+   "h": "29df4592",
+   "oh": [
+    "97cc4678",
+    "29df4592",
+    "d3995434",
+    "da0a563f"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0897"
   },
   {
-   "id": "S0898",
-   "day": 90,
-   "direction": "ja-zh",
+   "qid": "P-090-07-fbfa3d5c57f5",
    "prompt": "彼女は、彼より、数学において劣っている。",
-   "knowledge_ids": [
-    "V1622"
+   "options": [
+    "我们玩了好几种游戏。",
+    "她在数学方面不如他。",
+    "请寄一份目录供参考。",
+    "那个玩具是木头做的。"
    ],
-   "hint": ""
+   "h": "e3e22cfe",
+   "oh": [
+    "3b0486e",
+    "e3e22cfe",
+    "f28a2368",
+    "709a625b"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0898"
   },
   {
-   "id": "S0899",
-   "day": 90,
-   "direction": "ja-zh",
+   "qid": "P-090-08-003a686b65b1",
    "prompt": "遅れたやつは鬼に食われろ。",
-   "knowledge_ids": [
-    "V1623"
+   "options": [
+    "这个工具一点用都没有。",
+    "那些肉完全不适合食用。",
+    "啊！糟了！汽油快没了。",
+    "迟到的人就让鬼吃掉吧。"
    ],
-   "hint": ""
+   "h": "3069b7e7",
+   "oh": [
+    "5a4381fe",
+    "7d804d6e",
+    "b6724d72",
+    "3069b7e7"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0899"
   },
   {
-   "id": "S0900",
-   "day": 90,
-   "direction": "ja-zh",
+   "qid": "P-090-09-b1edee3d2fb0",
    "prompt": "彼女の着物と帯の取り合わせはおつだね。",
-   "knowledge_ids": [
-    "V1624"
+   "options": [
+    "好了，聚会就到此结束吧。",
+    "多亏那些树，我才没被雨淋湿。",
+    "她和服与腰带的搭配很有品味。",
+    "生病的孩子在床上坐了起来。"
    ],
-   "hint": ""
+   "h": "4e2adfe4",
+   "oh": [
+    "5b171b12",
+    "e8d78e8b",
+    "4e2adfe4",
+    "cc940c92"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0900"
   }
  ],
  "quiz": [

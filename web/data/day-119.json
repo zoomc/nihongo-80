@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V2059",
    "front": "刺激",
    "back": "刺激",
+   "kana": "しげき",
    "stage": "planned"
   },
   {
    "kid": "V2060",
    "front": "資源",
    "back": "资源",
+   "kana": "しげん",
    "stage": "planned"
   },
   {
    "kid": "V2061",
    "front": "事件",
    "back": "事件；案件",
+   "kana": "じけん",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0489",
    "front": "座",
-   "back": "坐；座位｜音 ザ",
+   "back": "坐；座位",
+   "kana": "ザ、すわ.る",
    "stage": "planned"
   },
   {
    "kid": "K0490",
    "front": "破",
-   "back": "破坏；打破｜音 ハ",
+   "back": "破坏；打破",
+   "kana": "ハ、やぶ.る、やぶ.れる、わ.れる",
    "stage": "planned"
   },
   {
    "kid": "V2026",
    "front": "作曲",
    "back": "作曲",
+   "kana": "さっきょく",
    "stage": "planned"
   },
   {
    "kid": "V2027",
    "front": "ざっと",
    "back": "大致；粗略",
+   "kana": "ざっと",
    "stage": "planned"
   },
   {
    "kid": "V2028",
    "front": "さっぱり",
    "back": "清爽；完全（不）",
+   "kana": "さっぱり",
    "stage": "planned"
   },
   {
@@ -530,104 +538,204 @@
  ],
  "sentences": [
   {
-   "id": "S1181",
-   "day": 119,
-   "direction": "zh-ja",
+   "qid": "P-119-00-b886c7dfdefd",
    "prompt": "真要说的话，我想住木结构住宅。",
-   "knowledge_ids": [
-    "V2123"
+   "options": [
+    "どちらかといえば木造住宅に住みたい。",
+    "私たちはその老夫婦を気の毒に思った。",
+    "だれかがドアをどんどんたたいている。",
+    "あなたの名前と住所を記入しなさい。"
    ],
-   "hint": ""
+   "h": "595610d9",
+   "oh": [
+    "595610d9",
+    "93268a2d",
+    "a5411c72",
+    "52eeffa0"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1181"
   },
   {
-   "id": "S1182",
-   "day": 119,
-   "direction": "zh-ja",
+   "qid": "P-119-01-fc698cb91103",
    "prompt": "你现在已经是精英团体的一员了。",
-   "knowledge_ids": [
-    "V2124"
+   "options": [
+    "おまえはオレを殺そうとしている。",
+    "ビルはその罪を犯していなかった。",
+    "ジャックは８月１０日に生まれた。",
+    "君はいまやエリート集団の一員だ。"
    ],
-   "hint": ""
+   "h": "4fca1181",
+   "oh": [
+    "aac242c3",
+    "8cfed4a4",
+    "6df6eadc",
+    "4fca1181"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1182"
   },
   {
-   "id": "S1183",
-   "day": 119,
-   "direction": "zh-ja",
+   "qid": "P-119-02-14f11efc4d4b",
    "prompt": "我正专心读书。",
-   "knowledge_ids": [
-    "V2125"
+   "options": [
+    "私は読書に集中していた。",
+    "君の英語は上達している。",
+    "デモに参加しようと思う。",
+    "梅の花は今週が見頃です。"
    ],
-   "hint": ""
+   "h": "625b4282",
+   "oh": [
+    "625b4282",
+    "e4ddf50",
+    "cd35d93d",
+    "f9da0047"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1183"
   },
   {
-   "id": "S1184",
-   "day": 119,
-   "direction": "zh-ja",
+   "qid": "P-119-03-4d3d0890f37e",
    "prompt": "不要过超出收入的生活。",
-   "knowledge_ids": [
-    "V2126"
+   "options": [
+    "この本の著者は誰ですか。",
+    "収入以上の生活をするな。",
+    "絶滅は進化の一部である。",
+    "この科目は何単位ですか。"
    ],
-   "hint": ""
+   "h": "10ea5c41",
+   "oh": [
+    "7d5d25ac",
+    "10ea5c41",
+    "fb243001",
+    "ae775c39"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1184"
   },
   {
-   "id": "S1185",
-   "day": 119,
-   "direction": "zh-ja",
+   "qid": "P-119-04-01af41e388dd",
    "prompt": "半数以上的居民反对那个计划。",
-   "knowledge_ids": [
-    "V2127"
+   "options": [
+    "彼女はお金をたくさん貯金している。",
+    "彼は高等学校の生徒ではありません。",
+    "さっきなぜかマイクが入らなかった。",
+    "住民の半数以上はその計画に反対だ。"
    ],
-   "hint": ""
+   "h": "7667272d",
+   "oh": [
+    "be911f6a",
+    "31457fd",
+    "f6bd6b75",
+    "7667272d"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1185"
   },
   {
-   "id": "S1186",
-   "day": 119,
-   "direction": "zh-ja",
+   "qid": "P-119-05-ae20e0e39940",
    "prompt": "她必须马上出发，这一点很重要。",
-   "knowledge_ids": [
-    "V2128"
+   "options": [
+    "その計画では彼に同調できました。",
+    "彼女はすぐに出発する事が重要だ。",
+    "それは翼の全長が約４インチある。",
+    "これらの語をノートに書きなさい。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1187",
-   "day": 119,
+   "h": "81a3ce02",
+   "oh": [
+    "9c573687",
+    "81a3ce02",
+    "18490b8d",
+    "7a4a4062"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1186"
+  },
+  {
+   "qid": "P-119-06-27f62aa2ddae",
    "prompt": "那辆车不值得修。",
-   "knowledge_ids": [
-    "V2129"
+   "options": [
+    "市が住民に調査を行いました。",
+    "このイヤホンは壊れています。",
+    "その車は修理する価値がない。",
+    "湖の深さはどのくらいですか。"
    ],
-   "hint": ""
+   "h": "d8740c48",
+   "oh": [
+    "2b753e0a",
+    "cae4bbd8",
+    "d8740c48",
+    "15a7848c"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1187"
   },
   {
-   "id": "S1188",
-   "day": 119,
-   "direction": "ja-zh",
+   "qid": "P-119-07-ea1261cbc97d",
    "prompt": "それは私の主義に反する。",
-   "knowledge_ids": [
-    "V2130"
+   "options": [
+    "橄榄果可以榨油。",
+    "这个碗真不错啊。",
+    "那违背我的原则。",
+    "英语是国际语言。"
    ],
-   "hint": ""
+   "h": "80ad1d1c",
+   "oh": [
+    "f55d0426",
+    "987d26e",
+    "80ad1d1c",
+    "c39153d7"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1188"
   },
   {
-   "id": "S1189",
-   "day": 119,
-   "direction": "ja-zh",
+   "qid": "P-119-08-8005ff274316",
    "prompt": "６人宿泊させて欲しい。",
-   "knowledge_ids": [
-    "V2131"
+   "options": [
+    "比起地理我更喜欢历史。",
+    "希望让我们六个人住下。",
+    "语调有时也能传达感情。",
+    "请从B2出口上到地面。"
    ],
-   "hint": ""
+   "h": "d10da833",
+   "oh": [
+    "10c41b81",
+    "d10da833",
+    "ac5b615a",
+    "12ff463b"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1189"
   },
   {
-   "id": "S1190",
-   "day": 119,
-   "direction": "ja-zh",
+   "qid": "P-119-09-e815bd6e5f86",
    "prompt": "手術をしなければなりません。",
-   "knowledge_ids": [
-    "V2132"
+   "options": [
+    "今天天气好。",
+    "必须做手术。",
+    "健在三跑得最快。",
+    "从第十课开始吧。"
    ],
-   "hint": ""
+   "h": "8e4548b3",
+   "oh": [
+    "1b222922",
+    "8e4548b3",
+    "57e1f82c",
+    "7c4687ec"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1190"
   }
  ],
  "quiz": [

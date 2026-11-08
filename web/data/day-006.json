@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0055",
    "front": "肉",
    "back": "肉",
+   "kana": "にく",
    "stage": "planned"
   },
   {
    "kid": "V0056",
    "front": "魚",
    "back": "鱼",
+   "kana": "さかな",
    "stage": "planned"
   },
   {
    "kid": "V0057",
    "front": "野菜",
    "back": "蔬菜",
+   "kana": "やさい",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0022",
    "front": "間",
-   "back": "间隔；间；时候｜音 カン、ケン",
+   "back": "间隔；间；时候",
+   "kana": "カン、ケン、あいだ、ま",
    "stage": "planned"
   },
   {
    "kid": "K0023",
    "front": "今",
-   "back": "现在；今｜音 コン、キン",
+   "back": "现在；今",
+   "kana": "コン、キン、いま",
    "stage": "planned"
   },
   {
    "kid": "V0023",
    "front": "今日",
    "back": "今天",
+   "kana": "きょう",
    "stage": "planned"
   },
   {
    "kid": "V0024",
    "front": "明日",
    "back": "明天",
+   "kana": "あした",
    "stage": "planned"
   },
   {
    "kid": "V0025",
    "front": "昨日",
    "back": "昨天",
+   "kana": "きのう",
    "stage": "planned"
   },
   {
@@ -554,104 +562,204 @@
  ],
  "sentences": [
   {
-   "id": "S0051",
-   "day": 6,
-   "direction": "zh-ja",
+   "qid": "P-006-00-ae5cccd837f7",
    "prompt": "我哥哥在东京。",
-   "knowledge_ids": [
-    "V0068"
+   "options": [
+    "兄は東京にいます。",
+    "何時間も海を眺めた。",
+    "食糧が不足している。",
+    "部屋には家具がない。"
    ],
-   "hint": ""
+   "h": "9a02b653",
+   "oh": [
+    "9a02b653",
+    "aead5bf6",
+    "fdc63dc1",
+    "7d411b95"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0051"
   },
   {
-   "id": "S0052",
-   "day": 6,
-   "direction": "zh-ja",
+   "qid": "P-006-01-479896b20571",
    "prompt": "我姐姐是学生。",
-   "knowledge_ids": [
-    "V0069"
+   "options": [
+    "お茶を飲みます。",
+    "あなたは先生ですか。",
+    "水曜日は休みです。",
+    "姉は学生です。"
    ],
-   "hint": ""
+   "h": "fcea6a6c",
+   "oh": [
+    "d303d227",
+    "7cbc9d0b",
+    "e29e6c91",
+    "fcea6a6c"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0052"
   },
   {
-   "id": "S0053",
-   "day": 6,
-   "direction": "zh-ja",
+   "qid": "P-006-02-802e5463c03f",
    "prompt": "借书给弟弟。",
-   "knowledge_ids": [
-    "V0070"
+   "options": [
+    "この川の流れは急だ。",
+    "家族と旅行します。",
+    "弟に本を貸します。",
+    "友達に電話します。"
    ],
-   "hint": ""
+   "h": "e1a08215",
+   "oh": [
+    "2deea5d0",
+    "8582dd31",
+    "e1a08215",
+    "ec5f7b75"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0053"
   },
   {
-   "id": "S0054",
-   "day": 6,
-   "direction": "zh-ja",
+   "qid": "P-006-03-f859ebaeec92",
    "prompt": "我妹妹很精神。",
-   "knowledge_ids": [
-    "V0071"
+   "options": [
+    "妹は元気です。",
+    "習い性となる。",
+    "切符を買います。",
+    "予定を変えました。"
    ],
-   "hint": ""
+   "h": "7ab839b7",
+   "oh": [
+    "7ab839b7",
+    "32da4d7b",
+    "9ad3920e",
+    "a0ad83b4"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0054"
   },
   {
-   "id": "S0055",
-   "day": 6,
-   "direction": "zh-ja",
+   "qid": "P-006-04-c71592299613",
    "prompt": "和家人旅行。",
-   "knowledge_ids": [
-    "V0072"
+   "options": [
+    "私は泳げません。",
+    "部屋の中にいます。",
+    "あの山の頂上は平らだ。",
+    "家族と旅行します。"
    ],
-   "hint": ""
+   "h": "8582dd31",
+   "oh": [
+    "1319ae82",
+    "3d1f2b43",
+    "31771ee1",
+    "8582dd31"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0055"
   },
   {
-   "id": "S0056",
-   "day": 6,
-   "direction": "zh-ja",
+   "qid": "P-006-05-b2845d26844d",
    "prompt": "孩子在公园。",
-   "knowledge_ids": [
-    "V0073"
+   "options": [
+    "彼女は料理が上手です。",
+    "この靴下はちぐはぐだ。",
+    "子供が公園にいます。",
+    "この部屋は静かです。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0057",
-   "day": 6,
+   "h": "c0591056",
+   "oh": [
+    "bd50740d",
+    "6db284b2",
+    "c0591056",
+    "ed05be90"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0056"
+  },
+  {
+   "qid": "P-006-06-856d373a1dd3",
    "prompt": "他是学生。",
-   "knowledge_ids": [
-    "V0074"
+   "options": [
+    "本を読みます。",
+    "部屋の中にいます。",
+    "間違いを直します。",
+    "彼は学生です。"
    ],
-   "hint": ""
+   "h": "b1b71837",
+   "oh": [
+    "5a4d748c",
+    "3d1f2b43",
+    "f38675d3",
+    "b1b71837"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0057"
   },
   {
-   "id": "S0058",
-   "day": 6,
-   "direction": "ja-zh",
+   "qid": "P-006-07-b066929d388f",
    "prompt": "彼女は元気です。",
-   "knowledge_ids": [
-    "V0075"
+   "options": [
+    "七点起床。",
+    "上电车。",
+    "她很精神。",
+    "晴转多云。"
    ],
-   "hint": ""
+   "h": "cd3f1586",
+   "oh": [
+    "2fdab03e",
+    "efa44868",
+    "cd3f1586",
+    "3222c51a"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0058"
   },
   {
-   "id": "S0059",
-   "day": 6,
-   "direction": "ja-zh",
+   "qid": "P-006-08-e68b17b6b319",
    "prompt": "友達と映画を見ます。",
-   "knowledge_ids": [
-    "V0076"
+   "options": [
+    "事态非常严重。",
+    "他生于19世纪。",
+    "收银台在哪里。",
+    "和朋友看电影。"
    ],
-   "hint": ""
+   "h": "1d346a36",
+   "oh": [
+    "7e196bc1",
+    "122eb4a0",
+    "55df731b",
+    "1d346a36"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0059"
   },
   {
-   "id": "S0060",
-   "day": 6,
-   "direction": "ja-zh",
+   "qid": "P-006-09-22fa244b1d9d",
    "prompt": "あの人は先生です。",
-   "knowledge_ids": [
-    "V0077"
+   "options": [
+    "那位是老师。",
+    "我还不太清楚。",
+    "她很精神。",
+    "给你五美元。"
    ],
-   "hint": ""
+   "h": "a04fdaaf",
+   "oh": [
+    "a04fdaaf",
+    "e0e1cf46",
+    "cd3f1586",
+    "82b87323"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0060"
   }
  ],
  "quiz": [

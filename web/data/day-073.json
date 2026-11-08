@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V1435",
    "front": "忘れ物",
    "back": "落下的东西",
+   "kana": "わすれもの",
    "stage": "planned"
   },
   {
    "kid": "V1436",
    "front": "笑う",
    "back": "笑",
+   "kana": "わらう",
    "stage": "planned"
   },
   {
    "kid": "V1437",
    "front": "割れる",
    "back": "碎；裂",
+   "kana": "われる",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0305",
    "front": "現",
-   "back": "现在；出现；现实｜音 ゲン",
+   "back": "现在；出现；现实",
+   "kana": "ゲン、あらわ.れる、あらわ.す、うつつ、うつ.つ",
    "stage": "planned"
   },
   {
    "kid": "K0306",
    "front": "調",
-   "back": "调查；调整｜音 チョウ",
+   "back": "调查；调整",
+   "kana": "チョウ、しら.べる、しら.べ、ととの.う、ととの.える",
    "stage": "planned"
   },
   {
    "kid": "V1402",
    "front": "優しい",
    "back": "温柔",
+   "kana": "やさしい",
    "stage": "planned"
   },
   {
    "kid": "V1403",
    "front": "痩せる",
    "back": "变瘦",
+   "kana": "やせる",
    "stage": "planned"
   },
   {
    "kid": "V1404",
    "front": "やっと",
    "back": "终于；好不容易",
+   "kana": "やっと",
    "stage": "planned"
   },
   {
@@ -454,104 +462,204 @@
  ],
  "sentences": [
   {
-   "id": "S0721",
-   "day": 73,
-   "direction": "zh-ja",
+   "qid": "P-073-00-660fc713d40a",
    "prompt": "商量升学/出路的烦恼。",
-   "knowledge_ids": [
-    "V0226"
+   "options": [
+    "この本の著者は誰ですか。",
+    "この川の幅が１マイルある。",
+    "進路の悩みを相談します。",
+    "急行の料金は幾らですか。"
    ],
-   "hint": ""
+   "h": "67e807d",
+   "oh": [
+    "7d5d25ac",
+    "ee0a3e53",
+    "67e807d",
+    "991bf9"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0721"
   },
   {
-   "id": "S0722",
-   "day": 73,
-   "direction": "zh-ja",
+   "qid": "P-073-01-5f7cba30775e",
    "prompt": "考上了很开心。",
-   "knowledge_ids": [
-    "V0227"
+   "options": [
+    "合格して嬉しいです。",
+    "どの芝居がいいですか。",
+    "毎日、学校へ行きます。",
+    "車に乗せてください。"
    ],
-   "hint": ""
+   "h": "f6598066",
+   "oh": [
+    "f6598066",
+    "5a67b73d",
+    "53ed5616",
+    "881c5c96"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0722"
   },
   {
-   "id": "S0723",
-   "day": 73,
-   "direction": "zh-ja",
+   "qid": "P-073-02-d2f5a6a85c05",
    "prompt": "离别令人难过。",
-   "knowledge_ids": [
-    "V0228"
+   "options": [
+    "運賃は二百円です。",
+    "兄は東京にいます。",
+    "別れは悲しいです。",
+    "予定を変えました。"
    ],
-   "hint": ""
+   "h": "98bf6f78",
+   "oh": [
+    "bc3a4c76",
+    "9a02b653",
+    "98bf6f78",
+    "a0ad83b4"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0723"
   },
   {
-   "id": "S0724",
-   "day": 73,
-   "direction": "zh-ja",
+   "qid": "P-073-03-a2b6f851dfc2",
    "prompt": "弄错了，很不好意思。",
-   "knowledge_ids": [
-    "V0229"
+   "options": [
+    "それ以上はお役に立てません。",
+    "その靴は登山には向かないよ。",
+    "何か飲み物をいただけますか。",
+    "間違えて恥ずかしかったです。"
    ],
-   "hint": ""
+   "h": "71becb35",
+   "oh": [
+    "717e0b55",
+    "a799335d",
+    "b5363a4b",
+    "71becb35"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0724"
   },
   {
-   "id": "S0725",
-   "day": 73,
-   "direction": "zh-ja",
+   "qid": "P-073-04-449022a3f770",
    "prompt": "羡慕他的语言能力。",
-   "knowledge_ids": [
-    "V0230"
+   "options": [
+    "彼の語学力が羨ましいです。",
+    "喜んで質問に答えましょう。",
+    "明日中には国境を越えます。",
+    "「彼女は若いですか」「はい」"
    ],
-   "hint": ""
+   "h": "51b280e9",
+   "oh": [
+    "51b280e9",
+    "b449f1b9",
+    "8f82e408",
+    "6bc44878"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0725"
   },
   {
-   "id": "S0726",
-   "day": 73,
-   "direction": "zh-ja",
+   "qid": "P-073-05-f505fdd328b6",
    "prompt": "从老师那里拿到了资料。",
-   "knowledge_ids": [
-    "V0231"
+   "options": [
+    "もっと易しい事を聞いて下さい。",
+    "その商品はテレビで広告された。",
+    "ほかに痛いところはありますか。",
+    "先生から資料をいただきました。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0727",
-   "day": 73,
+   "h": "22261966",
+   "oh": [
+    "84e4e179",
+    "5295e0d9",
+    "f06f274a",
+    "22261966"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0726"
+  },
+  {
+   "qid": "P-073-06-da3a32bab510",
    "prompt": "老师给了我一本书。",
-   "knowledge_ids": [
-    "V0232"
+   "options": [
+    "机はほこりで覆われている。",
+    "でも、これで１つ貸しだね。",
+    "先生が本をくださいました。",
+    "イチゴはジャムに作られる。"
    ],
-   "hint": ""
+   "h": "6a45a506",
+   "oh": [
+    "be98a1bb",
+    "8347f85c",
+    "6a45a506",
+    "fc94d29"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0727"
   },
   {
-   "id": "S0728",
-   "day": 73,
-   "direction": "ja-zh",
+   "qid": "P-073-07-450eceb3ebc6",
    "prompt": "先生にお土産をさしあげました。",
-   "knowledge_ids": [
-    "V0233"
+   "options": [
+    "给老师送了土特产。",
+    "怎么回来得这么晚？",
+    "今后必须多加小心。",
+    "那么生气可不像他。"
    ],
-   "hint": ""
+   "h": "95d856db",
+   "oh": [
+    "95d856db",
+    "da3dbd3d",
+    "643f25c1",
+    "d57e1d5a"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0728"
   },
   {
-   "id": "S0729",
-   "day": 73,
-   "direction": "ja-zh",
+   "qid": "P-073-08-c0efd40ddc69",
    "prompt": "部長はもういらっしゃいますか。",
-   "knowledge_ids": [
-    "V0234"
+   "options": [
+    "雪积得满地都是。",
+    "七大洋是什么？",
+    "进去前请先敲门。",
+    "部长已经到了吗？"
    ],
-   "hint": ""
+   "h": "542308b3",
+   "oh": [
+    "8aeb8cdc",
+    "e2628862",
+    "d6861e47",
+    "542308b3"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0729"
   },
   {
-   "id": "S0730",
-   "day": 73,
-   "direction": "ja-zh",
+   "qid": "P-073-09-71bd753ca402",
    "prompt": "部長が説明なさいました。",
-   "knowledge_ids": [
-    "V0235"
+   "options": [
+    "约翰在给门刷漆。",
+    "这绝不是小事。",
+    "健在三跑得最快。",
+    "部长做了说明。"
    ],
-   "hint": ""
+   "h": "4941703c",
+   "oh": [
+    "5a2d87f9",
+    "3cf7c71",
+    "57e1f82c",
+    "4941703c"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0730"
   }
  ],
  "quiz": [

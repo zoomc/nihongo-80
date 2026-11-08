@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V2248",
    "front": "性",
    "back": "性；性质",
+   "kana": "せい",
    "stage": "planned"
   },
   {
    "kid": "V2249",
    "front": "正",
    "back": "正；正确",
+   "kana": "せい",
    "stage": "planned"
   },
   {
    "kid": "V2250",
    "front": "背",
    "back": "身高",
+   "kana": "せい",
    "stage": "planned"
   },
   {
@@ -65,31 +68,36 @@
   {
    "kid": "K0533",
    "front": "精",
-   "back": "精神；精细｜音 セイ、ショウ",
+   "back": "精神；精细",
+   "kana": "セイ、ショウ、しら.げる、くわ.しい",
    "stage": "planned"
   },
   {
    "kid": "K0534",
    "front": "散",
-   "back": "散；散步；分散｜音 サン",
+   "back": "散；散步；分散",
+   "kana": "サン、ち.る、ち.らす、-ち.らす、ち.らかす、ち.らかる、ち.らばる、ばら、ばら.ける",
    "stage": "planned"
   },
   {
    "kid": "V2215",
    "front": "心理",
    "back": "心理",
+   "kana": "しんり",
    "stage": "planned"
   },
   {
    "kid": "V2216",
    "front": "人類",
    "back": "人类",
+   "kana": "じんるい",
    "stage": "planned"
   },
   {
    "kid": "V2217",
    "front": "巣",
    "back": "巢；窝",
+   "kana": "す",
    "stage": "planned"
   },
   {
@@ -101,13 +109,15 @@
   {
    "kid": "K0525",
    "front": "船",
-   "back": "船；船只｜音 セン",
+   "back": "船；船只",
+   "kana": "セン、ふね、ふな-",
    "stage": "planned"
   },
   {
    "kid": "K0526",
    "front": "途",
-   "back": "路途；途中｜音 ト",
+   "back": "路途；途中",
+   "kana": "ト、みち",
    "stage": "planned"
   }
  ],
@@ -478,104 +488,204 @@
  ],
  "sentences": [
   {
-   "id": "S1291",
-   "day": 130,
-   "direction": "zh-ja",
+   "qid": "P-130-00-9f087d39556b",
    "prompt": "父亲在袖子上划了一道长口子。",
-   "knowledge_ids": [
-    "V2313"
+   "options": [
+    "その車は修理する価値がない。",
+    "勢いに流されているんですよ。",
+    "ギターをひくのはおもしろい。",
+    "父は袖に長い裂け目を作った。"
    ],
-   "hint": ""
+   "h": "822d769f",
+   "oh": [
+    "d8740c48",
+    "75832468",
+    "f7aedaae",
+    "822d769f"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1291"
   },
   {
-   "id": "S1292",
-   "day": 130,
-   "direction": "zh-ja",
+   "qid": "P-130-01-1f15689bb5ed",
    "prompt": "这栋楼配有紧急楼梯。",
-   "knowledge_ids": [
-    "V2314"
+   "options": [
+    "みんなには優しく話してください。",
+    "タバコにかけられている税は高い。",
+    "そのショーで観客は大喜びだった。",
+    "このビルは非常階段を備えている。"
    ],
-   "hint": ""
+   "h": "d631b058",
+   "oh": [
+    "125e9885",
+    "37e548c7",
+    "66f9ebb3",
+    "d631b058"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1292"
   },
   {
-   "id": "S1293",
-   "day": 130,
-   "direction": "zh-ja",
+   "qid": "P-130-02-1efa3afdaaa4",
    "prompt": "我想，希望不久能一起工作。",
-   "knowledge_ids": [
-    "V2315"
+   "options": [
+    "古き良き時代は去って、二度ともどってこない。",
+    "そのうち一緒に仕事ができるといいなと思っています。",
+    "「誰か車の中にいるのですか」「トムがいます」",
+    "彼らはじゅうぶんな食料を手に入れられなかった。"
    ],
-   "hint": ""
+   "h": "37fc99c6",
+   "oh": [
+    "45662e4e",
+    "37fc99c6",
+    "b07b84f",
+    "3969b2c8"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1293"
   },
   {
-   "id": "S1294",
-   "day": 130,
-   "direction": "zh-ja",
+   "qid": "P-130-03-c463260da863",
    "prompt": "不能就让门那样开着。",
-   "knowledge_ids": [
-    "V2316"
+   "options": [
+    "一度にひとつのことをするようにしなさい。",
+    "ドアをそのままにしておいてはいけません。",
+    "先生は私たちを二つのグループに分けた。",
+    "とにかく、試験が終わってほっとしたよ。"
    ],
-   "hint": ""
+   "h": "6fe1fecd",
+   "oh": [
+    "d5063bcc",
+    "6fe1fecd",
+    "13bdf689",
+    "47f611de"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1294"
   },
   {
-   "id": "S1295",
-   "day": 130,
-   "direction": "zh-ja",
+   "qid": "P-130-04-7299a750bb5b",
    "prompt": "少年躺在沙发上。",
-   "knowledge_ids": [
-    "V2317"
+   "options": [
+    "そのショーで観客は大喜びだった。",
+    "その象は動物園に連れてこられた。",
+    "少年はソファーに横になっていた。",
+    "トラとライオンとどちらが強いか。"
    ],
-   "hint": ""
+   "h": "5cef1ff4",
+   "oh": [
+    "66f9ebb3",
+    "f9632f0f",
+    "5cef1ff4",
+    "a0452d41"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1295"
   },
   {
-   "id": "S1296",
-   "day": 130,
-   "direction": "zh-ja",
+   "qid": "P-130-05-775877eb2da3",
    "prompt": "别把工具胡乱使。",
-   "knowledge_ids": [
-    "V2318"
+   "options": [
+    "昨日は日曜日でした。",
+    "道具を粗末に使うな。",
+    "何時間も海を眺めた。",
+    "この靴下はちぐはぐだ。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1297",
-   "day": 130,
+   "h": "6f5b9107",
+   "oh": [
+    "65a7b1d2",
+    "6f5b9107",
+    "aead5bf6",
+    "6db284b2"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1296"
+  },
+  {
+   "qid": "P-130-06-1342b18893e1",
    "prompt": "人各有各的擅长和不擅长。",
-   "knowledge_ids": [
-    "V2319"
+   "options": [
+    "人にはそれぞれ向き不向きがある。",
+    "ジョンは門のところまで出てきた。",
+    "お礼の申し上げようもありません。",
+    "これらの語をノートに書きなさい。"
    ],
-   "hint": ""
+   "h": "e5327864",
+   "oh": [
+    "e5327864",
+    "7aac2a83",
+    "d477e2e9",
+    "7a4a4062"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1297"
   },
   {
-   "id": "S1298",
-   "day": 130,
-   "direction": "ja-zh",
+   "qid": "P-130-07-9e639370396a",
    "prompt": "それと俺がホモだとしたら、罪になるわけ？",
-   "knowledge_ids": [
-    "V2320"
+   "options": [
+    "那一周和歧视问题没有关系。",
+    "非洲是大陆，格陵兰则不是。",
+    "还有，如果我是同性恋，就成罪了吗？",
+    "据天气预报，马上就要入梅了。"
    ],
-   "hint": ""
+   "h": "63b86ed9",
+   "oh": [
+    "f623e0cd",
+    "4ff3b6e5",
+    "63b86ed9",
+    "d468a87f"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1298"
   },
   {
-   "id": "S1299",
-   "day": 130,
-   "direction": "ja-zh",
+   "qid": "P-130-08-39bc40738d82",
    "prompt": "高望みをするとかえって損をする。",
-   "knowledge_ids": [
-    "V2321"
+   "options": [
+    "期望过高反而会吃亏。",
+    "社长任命了新的部长。",
+    "他们会组织工会吧。",
+    "读这种书有什么用呢。"
    ],
-   "hint": ""
+   "h": "b8b7d26b",
+   "oh": [
+    "b8b7d26b",
+    "b9d5235d",
+    "4a5d6cc4",
+    "b0bbf127"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1299"
   },
   {
-   "id": "S1300",
-   "day": 130,
-   "direction": "ja-zh",
+   "qid": "P-130-09-d39ae933616d",
    "prompt": "その暴風雨は大損害をもたらした。",
-   "knowledge_ids": [
-    "V2322"
+   "options": [
+    "他四肢摊开躺在榻榻米上。",
+    "那个人是上周在这里的人。",
+    "那场暴风雨带来了巨大损失。",
+    "并列争球是橄榄球的一大特色。"
    ],
-   "hint": ""
+   "h": "5f9247ec",
+   "oh": [
+    "7e58bdbb",
+    "71c7037a",
+    "5f9247ec",
+    "1d0867cc"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1300"
   }
  ],
  "quiz": [

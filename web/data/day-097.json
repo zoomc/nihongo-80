@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1691",
    "front": "囲む",
    "back": "围住；包围",
+   "kana": "かこむ",
    "stage": "planned"
   },
   {
    "kid": "V1692",
    "front": "火災",
    "back": "火灾",
+   "kana": "かさい",
    "stage": "planned"
   },
   {
    "kid": "V1693",
    "front": "菓子",
    "back": "点心；糕点",
+   "kana": "かし",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0401",
    "front": "難",
-   "back": "困难；灾难｜音 ナン",
+   "back": "困难；灾难",
+   "kana": "ナン、かた.い、-がた.い、むずか.しい、むづか.しい、むつか.しい、-にく.い",
    "stage": "planned"
   },
   {
    "kid": "K0402",
    "front": "優",
-   "back": "优秀；温柔｜音 ユウ、ウ",
+   "back": "优秀；温柔",
+   "kana": "ユウ、ウ、やさ.しい、すぐ.れる、まさ.る",
    "stage": "planned"
   },
   {
    "kid": "V1658",
    "front": "解釈",
    "back": "解释；理解",
+   "kana": "かいしゃく",
    "stage": "planned"
   },
   {
    "kid": "V1659",
    "front": "外出",
    "back": "外出",
+   "kana": "がいしゅつ",
    "stage": "planned"
   },
   {
    "kid": "V1660",
    "front": "改善",
    "back": "改善",
+   "kana": "かいぜん",
    "stage": "planned"
   },
   {
@@ -532,104 +540,204 @@
  ],
  "sentences": [
   {
-   "id": "S0961",
-   "day": 97,
-   "direction": "zh-ja",
+   "qid": "P-097-00-f13385ea0144",
    "prompt": "请说说你的想法。",
-   "knowledge_ids": [
-    "V1737"
+   "options": [
+    "先生から資料をいただきました。",
+    "あなたの考えを言ってください。",
+    "その場合には警察を呼びなさい。",
+    "シャッターを押してくれますか。"
    ],
-   "hint": ""
+   "h": "a9413e5c",
+   "oh": [
+    "22261966",
+    "a9413e5c",
+    "dba5375d",
+    "a9a6fa1f"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0961"
   },
   {
-   "id": "S0962",
-   "day": 97,
-   "direction": "zh-ja",
+   "qid": "P-097-01-c32feeb12ee8",
    "prompt": "我的手指没有知觉。",
-   "knowledge_ids": [
-    "V1738"
+   "options": [
+    "私は指に感覚が無かった。",
+    "あの山の頂上は平らだ。",
+    "大気が汚染されつつある。",
+    "この料理は美味しいです。"
    ],
-   "hint": ""
+   "h": "43eea6c6",
+   "oh": [
+    "43eea6c6",
+    "31771ee1",
+    "c8a57526",
+    "b166969e"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0962"
   },
   {
-   "id": "S0963",
-   "day": 97,
-   "direction": "zh-ja",
+   "qid": "P-097-02-7e2f17dc0af3",
    "prompt": "那场演出让观众非常开心。",
-   "knowledge_ids": [
-    "V1739"
+   "options": [
+    "マイクはバスで学校に通っている。",
+    "その作家は会話を書くのがうまい。",
+    "その話は親から子へと伝えられた。",
+    "そのショーで観客は大喜びだった。"
    ],
-   "hint": ""
+   "h": "66f9ebb3",
+   "oh": [
+    "1062eb67",
+    "34f482bb",
+    "c65bb93d",
+    "66f9ebb3"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0963"
   },
   {
-   "id": "S0964",
-   "day": 97,
-   "direction": "zh-ja",
+   "qid": "P-097-03-8bff52c4c76d",
    "prompt": "你在我们班很受欢迎。",
-   "knowledge_ids": [
-    "V1740"
+   "options": [
+    "私は何度も転びながら、坂を下っていった。",
+    "たとえどんなことがあってもあきらめません。",
+    "その島の飛行場は、今では草がぼうぼうだ。",
+    "あなたはうちのクラスで歓迎されています。"
    ],
-   "hint": ""
+   "h": "70f8c097",
+   "oh": [
+    "a6ef92e1",
+    "282967bb",
+    "a52d777a",
+    "70f8c097"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0964"
   },
   {
-   "id": "S0965",
-   "day": 97,
-   "direction": "zh-ja",
+   "qid": "P-097-04-91630ede2886",
    "prompt": "科学建立在观察之上。",
-   "knowledge_ids": [
-    "V1741"
+   "options": [
+    "スミス氏は市長候補である。",
+    "空には太陽が輝いています。",
+    "私は最低２マイルは歩ける。",
+    "科学は観察に基づいている。"
    ],
-   "hint": ""
+   "h": "d541c6",
+   "oh": [
+    "d7451ff4",
+    "3ed5e986",
+    "133a9034",
+    "d541c6"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0965"
   },
   {
-   "id": "S0966",
-   "day": 97,
-   "direction": "zh-ja",
+   "qid": "P-097-05-8f19a2e5b3e8",
    "prompt": "那个房间让人感觉很舒服。",
-   "knowledge_ids": [
-    "V1742"
+   "options": [
+    "その部屋は居心地の良い感じがした。",
+    "さっきなぜかマイクが入らなかった。",
+    "これらの単語を一つずつ覚えなさい。",
+    "おじいさんはとてもゆっくりと話す。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0967",
-   "day": 97,
+   "h": "52653e66",
+   "oh": [
+    "52653e66",
+    "f6bd6b75",
+    "b1de96c0",
+    "ade4fb30"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0966"
+  },
+  {
+   "qid": "P-097-06-22ee10652d07",
    "prompt": "感谢您的协助。",
-   "knowledge_ids": [
-    "V1743"
+   "options": [
+    "もう手が冷たくって。",
+    "何時間も海を眺めた。",
+    "ご協力に感謝します。",
+    "ホテルに泊まります。"
    ],
-   "hint": ""
+   "h": "fab0a215",
+   "oh": [
+    "36fdb0e",
+    "aead5bf6",
+    "fab0a215",
+    "7f5d8029"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0967"
   },
   {
-   "id": "S0968",
-   "day": 97,
-   "direction": "ja-zh",
+   "qid": "P-097-07-7cbeb53c3140",
    "prompt": "私はあなたの第一号の患者になるわ。",
-   "knowledge_ids": [
-    "V1744"
+   "options": [
+    "德语不是一门容易的语言。",
+    "我就当你的第一个病人吧。",
+    "多亏了奖学金，她得以留学。",
+    "我发现那个问题很简单。"
    ],
-   "hint": ""
+   "h": "40e562c4",
+   "oh": [
+    "a69c3150",
+    "40e562c4",
+    "c69f1267",
+    "da696091"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0968"
   },
   {
-   "id": "S0969",
-   "day": 97,
-   "direction": "ja-zh",
+   "qid": "P-097-08-7e7b064f69c3",
    "prompt": "勘定は合計５００ドルになる。",
-   "knowledge_ids": [
-    "V1745"
+   "options": [
+    "账算下来一共五百美元。",
+    "啊！糟了！汽油快没了。",
+    "约翰继承了一大笔财产。",
+    "他打橄榄球的时候受了伤。"
    ],
-   "hint": ""
+   "h": "2e1e71de",
+   "oh": [
+    "2e1e71de",
+    "b6724d72",
+    "c5e86987",
+    "45de1693"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0969"
   },
   {
-   "id": "S0970",
-   "day": 97,
-   "direction": "ja-zh",
+   "qid": "P-097-09-6457cf661802",
    "prompt": "声の調子が感情を伝える事もある。",
-   "knowledge_ids": [
-    "V1746"
+   "options": [
+    "毛巾一点也没派上用场。",
+    "你们国家说什么语言？",
+    "你不知道我有多担心。",
+    "语调有时也能传达感情。"
    ],
-   "hint": ""
+   "h": "ac5b615a",
+   "oh": [
+    "28891a2d",
+    "72ab8ea4",
+    "80b938b0",
+    "ac5b615a"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0970"
   }
  ],
  "quiz": [

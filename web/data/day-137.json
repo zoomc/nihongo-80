@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V2386",
    "front": "たまたま",
    "back": "偶然；碰巧",
+   "kana": "たまたま",
    "stage": "planned"
   },
   {
    "kid": "V2387",
    "front": "たまらない",
    "back": "受不了；极其",
+   "kana": "たまらない",
    "stage": "planned"
   },
   {
    "kid": "V2388",
    "front": "黙る",
    "back": "沉默；不说话",
+   "kana": "だまる",
    "stage": "planned"
   },
   {
@@ -65,31 +68,36 @@
   {
    "kid": "K0561",
    "front": "恐",
-   "back": "恐惧；害怕｜音 キョウ",
+   "back": "恐惧；害怕",
+   "kana": "キョウ、おそ.れる、おそ.る、おそ.ろしい、こわ.い、こわ.がる",
    "stage": "planned"
   },
   {
    "kid": "K0562",
    "front": "息",
-   "back": "呼吸；儿子｜音 ソク",
+   "back": "呼吸；儿子",
+   "kana": "ソク、いき",
    "stage": "planned"
   },
   {
    "kid": "V2344",
    "front": "態度",
    "back": "态度",
+   "kana": "たいど",
    "stage": "planned"
   },
   {
    "kid": "V2345",
    "front": "大統領",
    "back": "总统",
+   "kana": "だいとうりょう",
    "stage": "planned"
   },
   {
    "kid": "V2346",
    "front": "大半",
    "back": "大半；大部分",
+   "kana": "たいはん",
    "stage": "planned"
   },
   {
@@ -101,13 +109,15 @@
   {
    "kid": "K0553",
    "front": "招",
-   "back": "招待；招引｜音 ショウ",
+   "back": "招待；招引",
+   "kana": "ショウ、まね.く",
    "stage": "planned"
   },
   {
    "kid": "K0554",
    "front": "困",
-   "back": "困扰；困难｜音 コン",
+   "back": "困扰；困难",
+   "kana": "コン、こま.る",
    "stage": "planned"
   }
  ],
@@ -510,104 +520,204 @@
  ],
  "sentences": [
   {
-   "id": "S1361",
-   "day": 137,
-   "direction": "zh-ja",
+   "qid": "P-137-00-009e1096615f",
    "prompt": "她存了很多钱。",
-   "knowledge_ids": [
-    "V2441"
+   "options": [
+    "彼女はお金をたくさん貯金している。",
+    "大使はその任務に対して責任がある。",
+    "とても寒いからスケートが出来るよ。",
+    "彼は世間でいう音楽の真の愛好者だ。"
    ],
-   "hint": ""
+   "h": "be911f6a",
+   "oh": [
+    "be911f6a",
+    "1f9886e5",
+    "9a3d2a27",
+    "3e786b72"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1361"
   },
   {
-   "id": "S1362",
-   "day": 137,
-   "direction": "zh-ja",
+   "qid": "P-137-01-5ae13aa930f9",
    "prompt": "你直接跟她说怎么样？",
-   "knowledge_ids": [
-    "V2442"
+   "options": [
+    "このバスは図書館を経由します。",
+    "どんぐりからオークが生まれる。",
+    "彼女に直接言ったらどうですか。",
+    "だんだん日が長くなっています。"
    ],
-   "hint": ""
+   "h": "8299d089",
+   "oh": [
+    "fca1a48c",
+    "13cc23d0",
+    "8299d089",
+    "b1c203f0"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1362"
   },
   {
-   "id": "S1363",
-   "day": 137,
-   "direction": "zh-ja",
+   "qid": "P-137-02-ba844cc84b6a",
    "prompt": "这本书的作者是谁？",
-   "knowledge_ids": [
-    "V2443"
+   "options": [
+    "この本の著者は誰ですか。",
+    "あなたと席を交換しよう。",
+    "今日歯医者へ行きました。",
+    "最終電車はいつ出ますか。"
    ],
-   "hint": ""
+   "h": "7d5d25ac",
+   "oh": [
+    "7d5d25ac",
+    "4b92c51b",
+    "6f22df02",
+    "227d7a7"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1363"
   },
   {
-   "id": "S1364",
-   "day": 137,
-   "direction": "zh-ja",
+   "qid": "P-137-03-6650ed9a6a70",
    "prompt": "一年过去，他的尸体化为了尘土。",
-   "knowledge_ids": [
-    "V2444"
+   "options": [
+    "その場所は今は相当建て込んでいる。",
+    "また別のときにチェスをしましょう。",
+    "スイッチは時間通りに働かなかった。",
+    "１年が過ぎ、彼の死体は塵と化した。"
    ],
-   "hint": ""
+   "h": "1c331cbf",
+   "oh": [
+    "923b8d6a",
+    "a177b2a7",
+    "e8b6d63c",
+    "1c331cbf"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1364"
   },
   {
-   "id": "S1365",
-   "day": 137,
-   "direction": "zh-ja",
+   "qid": "P-137-04-b48855ca7739",
    "prompt": "他终于辞去了大学校长职务。",
-   "knowledge_ids": [
-    "V2445"
+   "options": [
+    "その代わりにトランプをしようよ。",
+    "この小包を船便で送ってください。",
+    "スケートはとてもおもしろかった。",
+    "彼はついに大学の学長を辞任した。"
    ],
-   "hint": ""
+   "h": "7f11cade",
+   "oh": [
+    "420672f9",
+    "79aca341",
+    "ebd819a3",
+    "7f11cade"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1365"
   },
   {
-   "id": "S1366",
-   "day": 137,
-   "direction": "zh-ja",
+   "qid": "P-137-05-419ced140b5d",
    "prompt": "注意过往的车辆。",
-   "knowledge_ids": [
-    "V2446"
+   "options": [
+    "何時がご都合よいでしょうか。",
+    "彼は商売をたたんで引退した。",
+    "通過する車に気をつけなさい。",
+    "日本語の勉強を続けています。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1367",
-   "day": 137,
+   "h": "7c05f23b",
+   "oh": [
+    "313ba781",
+    "144390d5",
+    "7c05f23b",
+    "3c17b352"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1366"
+  },
+  {
+   "qid": "P-137-06-ee45a47763a9",
    "prompt": "我平时坐公交上学。",
-   "knowledge_ids": [
-    "V2447"
+   "options": [
+    "お手洗いはどこですか。",
+    "いつもバス通学です。",
+    "友達に電話します。",
+    "医者になりました。"
    ],
-   "hint": ""
+   "h": "52973008",
+   "oh": [
+    "9f20e43f",
+    "52973008",
+    "ec5f7b75",
+    "89a7fc5c"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1367"
   },
   {
-   "id": "S1368",
-   "day": 137,
-   "direction": "ja-zh",
+   "qid": "P-137-07-54480a1093d5",
    "prompt": "ここは大型車の通行は禁止されている。",
-   "knowledge_ids": [
-    "V2448"
+   "options": [
+    "那台发动机靠蒸汽驱动。",
+    "你为什么拒绝了他的提议？",
+    "这里禁止大型车辆通行。",
+    "他会的杂技多得让人吃惊。"
    ],
-   "hint": ""
+   "h": "28478f43",
+   "oh": [
+    "49a6e1e7",
+    "59938dd",
+    "28478f43",
+    "c257ae4e"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1368"
   },
   {
-   "id": "S1369",
-   "day": 137,
-   "direction": "ja-zh",
+   "qid": "P-137-08-57a94b46305c",
    "prompt": "彼女は電話が通じるとすぐ話し始めた。",
-   "knowledge_ids": [
-    "V2449"
+   "options": [
+    "巨型油轮刚刚终于出港了。",
+    "多亏了奖学金，她得以留学。",
+    "那位歌手是年轻人的偶像。",
+    "电话一接通，她就说了起来。"
    ],
-   "hint": ""
+   "h": "46a079b4",
+   "oh": [
+    "b64496b6",
+    "c69f1267",
+    "a61776d",
+    "46a079b4"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1369"
   },
   {
-   "id": "S1370",
-   "day": 137,
-   "direction": "ja-zh",
+   "qid": "P-137-09-03d545432a8c",
    "prompt": "彼は、無電で通信を送った。",
-   "knowledge_ids": [
-    "V2450"
+   "options": [
+    "哪一把是你的吉他？",
+    "请报告目前的情况。",
+    "他用无线电发了报。",
+    "给老师送了土特产。"
    ],
-   "hint": ""
+   "h": "3e7102f9",
+   "oh": [
+    "4a841a74",
+    "aabf3a50",
+    "3e7102f9",
+    "95d856db"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1370"
   }
  ],
  "quiz": [

@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0393",
    "front": "いろいろ",
    "back": "各种各样",
+   "kana": "いろいろ",
    "stage": "planned"
   },
   {
    "kid": "V0394",
    "front": "後ろ",
    "back": "后面",
+   "kana": "うしろ",
    "stage": "planned"
   },
   {
    "kid": "V0395",
    "front": "薄い",
    "back": "薄；淡",
+   "kana": "うすい",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0057",
    "front": "本",
-   "back": "书；本；根源｜音 ホン",
+   "back": "书；本；根源",
+   "kana": "ホン、もと",
    "stage": "planned"
   },
   {
    "kid": "K0058",
    "front": "書",
-   "back": "写；书｜音 ショ",
+   "back": "写；书",
+   "kana": "ショ、か",
    "stage": "planned"
   },
   {
    "kid": "V0353",
    "front": "足",
    "back": "脚；腿",
+   "kana": "あし",
    "stage": "planned"
   },
   {
    "kid": "V0354",
    "front": "あそこ",
    "back": "那里",
+   "kana": "あそこ",
    "stage": "planned"
   },
   {
    "kid": "V0355",
    "front": "遊ぶ",
    "back": "玩；游玩",
+   "kana": "あそぶ",
    "stage": "planned"
   },
   {
@@ -541,104 +549,204 @@
  ],
  "sentences": [
   {
-   "id": "S0121",
-   "day": 13,
-   "direction": "zh-ja",
+   "qid": "P-013-00-7b0e982c27c0",
    "prompt": "橡树由橡子长成。",
-   "knowledge_ids": [
-    "V0398"
+   "options": [
+    "ヒーターをつけたまま外出した。",
+    "どんぐりからオークが生まれる。",
+    "フクロウは昼間は目が見えない。",
+    "その場合には警察を呼びなさい。"
    ],
-   "hint": ""
+   "h": "13cc23d0",
+   "oh": [
+    "be83661e",
+    "13cc23d0",
+    "bd30935a",
+    "dba5375d"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0121"
   },
   {
-   "id": "S0122",
-   "day": 13,
-   "direction": "zh-ja",
+   "qid": "P-013-01-6a4e2ff79d32",
    "prompt": "我真想看一眼大海。",
-   "knowledge_ids": [
-    "V0399"
+   "options": [
+    "その木には実がたわわになっていた。",
+    "どういっても七時までにいかないと。",
+    "同じ色の羽の鳥は共に集まるものだ。",
+    "何としても海をひと目みたいものだ。"
    ],
-   "hint": ""
+   "h": "b98e7d3c",
+   "oh": [
+    "71531757",
+    "91a2dee7",
+    "83985809",
+    "b98e7d3c"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0122"
   },
   {
-   "id": "S0123",
-   "day": 13,
-   "direction": "zh-ja",
+   "qid": "P-013-02-822ed13aa9ab",
    "prompt": "汤姆把摩托车卖给了玛丽。",
-   "knowledge_ids": [
-    "V0400"
+   "options": [
+    "トムはメアリーにバイクを売った。",
+    "お祭りでロブスターを食べました。",
+    "お尋ねしてもよろしいでしょうか。",
+    "アラビア語は右から左へ書きます。"
    ],
-   "hint": ""
+   "h": "3db0f9d3",
+   "oh": [
+    "3db0f9d3",
+    "6e738748",
+    "1317d3c0",
+    "36918c3"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0123"
   },
   {
-   "id": "S0124",
-   "day": 13,
-   "direction": "zh-ja",
+   "qid": "P-013-03-a498bb7c93cb",
    "prompt": "那孩子真够闹的。",
-   "knowledge_ids": [
-    "V0401"
+   "options": [
+    "その城は１６１０年に建てられた。",
+    "あの子はなんてうるさい子だろう。",
+    "その広間は日本画で飾られていた。",
+    "トラとライオンとどちらが強いか。"
    ],
-   "hint": ""
+   "h": "490bd08c",
+   "oh": [
+    "6b28f1e6",
+    "490bd08c",
+    "6d732f36",
+    "a0452d41"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0124"
   },
   {
-   "id": "S0125",
-   "day": 13,
-   "direction": "zh-ja",
+   "qid": "P-013-04-5c39ae7af650",
    "prompt": "把外套挂在门边的钩子上。",
-   "knowledge_ids": [
-    "V0402"
+   "options": [
+    "あの信号の手前で降ろしてください。",
+    "おじいさんはとてもゆっくりと話す。",
+    "中国の音楽はどうも僕の肌に合わない。",
+    "ドアのそばのかぎに上着をかけなさい。"
    ],
-   "hint": ""
+   "h": "19352d64",
+   "oh": [
+    "4e4f3267",
+    "ade4fb30",
+    "62bcc9c",
+    "19352d64"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0125"
   },
   {
-   "id": "S0126",
-   "day": 13,
-   "direction": "zh-ja",
+   "qid": "P-013-05-1a3c2f388af1",
    "prompt": "画挂在桌子上方。",
-   "knowledge_ids": [
-    "V0403"
+   "options": [
+    "この犬は何でもほとんど食べます。",
+    "パーティーはたのしかったですか。",
+    "絵がテーブルの上にかかっている。",
+    "これは兄です。かっこいいですね。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0127",
-   "day": 13,
+   "h": "2762eaa6",
+   "oh": [
+    "1ebdb937",
+    "4939410a",
+    "2762eaa6",
+    "d769ff77"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0126"
+  },
+  {
+   "qid": "P-013-06-09df50ce373c",
    "prompt": "电影院里挤满了人。",
-   "knowledge_ids": [
-    "V0404"
+   "options": [
+    "息子はハンバーガーにあきています。",
+    "その映画館は人々でいっぱいだった。",
+    "スイッチは時間通りに働かなかった。",
+    "その男は一定の速度で車を運転した。"
    ],
-   "hint": ""
+   "h": "15b363d4",
+   "oh": [
+    "9eefe5a6",
+    "15b363d4",
+    "e8b6d63c",
+    "53997a8d"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0127"
   },
   {
-   "id": "S0128",
-   "day": 13,
-   "direction": "ja-zh",
+   "qid": "P-013-07-f7eea4d63961",
    "prompt": "アメリカでは英語を話します。",
-   "knowledge_ids": [
-    "V0405"
+   "options": [
+    "他们会组织工会吧。",
+    "上学期成绩很好。",
+    "在美国人们说英语。",
+    "大学毕业后就业了。"
    ],
-   "hint": ""
+   "h": "e95a2cb0",
+   "oh": [
+    "4a5d6cc4",
+    "964e19e4",
+    "e95a2cb0",
+    "d01d0bdc"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0128"
   },
   {
-   "id": "S0129",
-   "day": 13,
-   "direction": "ja-zh",
+   "qid": "P-013-08-e8229f0a677f",
    "prompt": "「テニスをしましょうか」「ええ」",
-   "knowledge_ids": [
-    "V0406"
+   "options": [
+    "“我们打网球吧？”“好啊。”",
+    "那只狗是棕色的，又小又瘦。",
+    "史密斯先生说话语气温和。",
+    "德语不是一门容易的语言。"
    ],
-   "hint": ""
+   "h": "768d963e",
+   "oh": [
+    "768d963e",
+    "6be957bc",
+    "9e51d31a",
+    "a69c3150"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0129"
   },
   {
-   "id": "S0130",
-   "day": 13,
-   "direction": "ja-zh",
+   "qid": "P-013-09-d10187cd4281",
    "prompt": "エレベーターはどこですか。",
-   "knowledge_ids": [
-    "V0407"
+   "options": [
+    "请注意脚下。",
+    "电梯在哪儿？",
+    "必须马上写吗？",
+    "给你五美元。"
    ],
-   "hint": ""
+   "h": "6e24e41d",
+   "oh": [
+    "f4e574aa",
+    "6e24e41d",
+    "966cc338",
+    "82b87323"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0130"
   }
  ],
  "quiz": [

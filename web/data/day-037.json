@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0855",
    "front": "来週",
    "back": "下周",
+   "kana": "らいしゅう",
    "stage": "planned"
   },
   {
    "kid": "V0856",
    "front": "来年",
    "back": "明年",
+   "kana": "らいねん",
    "stage": "planned"
   },
   {
    "kid": "V0857",
    "front": "ラジオ",
    "back": "收音机；广播",
+   "kana": "ラジオ",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0196",
    "front": "心",
-   "back": "心；内心｜音 シン",
+   "back": "心；内心",
+   "kana": "シン、こころ、-ごころ",
    "stage": "planned"
   },
   {
    "kid": "K0197",
    "front": "界",
-   "back": "世界；界限｜音 カイ",
+   "back": "世界；界限",
+   "kana": "カイ",
    "stage": "planned"
   },
   {
    "kid": "V0817",
    "front": "みんな",
    "back": "大家；全部",
+   "kana": "みんな",
    "stage": "planned"
   },
   {
    "kid": "V0818",
    "front": "六日",
    "back": "六天；六号",
+   "kana": "むいか",
    "stage": "planned"
   },
   {
    "kid": "V0819",
    "front": "向こう",
    "back": "对面；那边",
+   "kana": "むこう",
    "stage": "planned"
   },
   {
@@ -537,104 +545,204 @@
  ],
  "sentences": [
   {
-   "id": "S0361",
-   "day": 37,
-   "direction": "zh-ja",
+   "qid": "P-037-00-6f021211b81f",
    "prompt": "「她年轻吗？」「是的。」",
-   "knowledge_ids": [
-    "V0868"
+   "options": [
+    "勢いに流されているんですよ。",
+    "小さなことでくよくよするな。",
+    "「彼女は若いですか」「はい」",
+    "カーテンがゆっくり引かれた。"
    ],
-   "hint": ""
+   "h": "6bc44878",
+   "oh": [
+    "75832468",
+    "64e534b3",
+    "6bc44878",
+    "9a704e8a"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0361"
   },
   {
-   "id": "S0362",
-   "day": 37,
-   "direction": "zh-ja",
+   "qid": "P-037-01-30cb93cf4d46",
    "prompt": "我不会游泳。",
-   "knowledge_ids": [
-    "V0869"
+   "options": [
+    "私は泳げません。",
+    "部屋の中にいます。",
+    "今週は忙しいです。",
+    "弟に本を貸します。"
    ],
-   "hint": ""
+   "h": "1319ae82",
+   "oh": [
+    "1319ae82",
+    "3d1f2b43",
+    "3b7539ef",
+    "e1a08215"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0362"
   },
   {
-   "id": "S0363",
-   "day": 37,
-   "direction": "zh-ja",
+   "qid": "P-037-02-2383afe6177c",
    "prompt": "请把我送到河对岸。",
-   "knowledge_ids": [
-    "V0870"
+   "options": [
+    "私が今日あるのは両親のおかげである。",
+    "後ろ足で砂をかけるようなことをした。",
+    "いくつかの点で私は彼女が気に入らない。",
+    "わたしを川のむこうに渡してください。"
    ],
-   "hint": ""
+   "h": "a08d97b1",
+   "oh": [
+    "9d3a4023",
+    "dba7f86",
+    "e6e371c4",
+    "a08d97b1"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0363"
   },
   {
-   "id": "S0364",
-   "day": 37,
-   "direction": "zh-ja",
+   "qid": "P-037-03-becb0c9701d9",
    "prompt": "一行人渡海去了美国。",
-   "knowledge_ids": [
-    "V0871"
+   "options": [
+    "まだ時間はたっぷりある。",
+    "今日歯医者へ行きました。",
+    "この小麦は粉にされる。",
+    "一行はアメリカへ渡った。"
    ],
-   "hint": ""
+   "h": "c3bc3e5",
+   "oh": [
+    "9b3b11e5",
+    "6f22df02",
+    "8fa39b7e",
+    "c3bc3e5"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0364"
   },
   {
-   "id": "S0365",
-   "day": 37,
-   "direction": "zh-ja",
+   "qid": "P-037-04-b1a39dfa16f9",
    "prompt": "这不算什么坏消息吧？",
-   "knowledge_ids": [
-    "V0872"
+   "options": [
+    "その場合には警察を呼びなさい。",
+    "今朝、地面は霜で覆われていた。",
+    "その八百屋は客にとても親切だ。",
+    "これは悪い話ではないでしょう？"
    ],
-   "hint": ""
+   "h": "fdf9de68",
+   "oh": [
+    "dba5375d",
+    "b57ced8f",
+    "4586f317",
+    "fdf9de68"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0365"
   },
   {
-   "id": "S0366",
-   "day": 37,
-   "direction": "zh-ja",
+   "qid": "P-037-05-57a00d2062ef",
    "prompt": "在公园玩。",
-   "knowledge_ids": [
-    "V0046"
+   "options": [
+    "公園で遊びます。",
+    "１０月３日です。",
+    "部屋の中にいます。",
+    "彼は非常に学がある。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0367",
-   "day": 37,
+   "h": "ef3d5680",
+   "oh": [
+    "ef3d5680",
+    "f1c611f2",
+    "3d1f2b43",
+    "e2759f64"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0366"
+  },
+  {
+   "qid": "P-037-06-fd1cb49ad0d0",
    "prompt": "买车票。",
-   "knowledge_ids": [
-    "V0065"
+   "options": [
+    "部屋の中にいます。",
+    "どうぞよろしく。",
+    "切符を買います。",
+    "弟に本を貸します。"
    ],
-   "hint": ""
+   "h": "9ad3920e",
+   "oh": [
+    "3d1f2b43",
+    "2a18460d",
+    "9ad3920e",
+    "e1a08215"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0367"
   },
   {
-   "id": "S0368",
-   "day": 37,
-   "direction": "ja-zh",
+   "qid": "P-037-07-8b6859813a5a",
    "prompt": "新しいパソコンがほしいです。",
-   "knowledge_ids": [
-    "V0088"
+   "options": [
+    "想要新电脑。",
+    "今天天气好。",
+    "正在下雨。",
+    "养这辆车很费钱。"
    ],
-   "hint": ""
+   "h": "bff82649",
+   "oh": [
+    "bff82649",
+    "1b222922",
+    "effe2eb5",
+    "ea0755b5"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0368"
   },
   {
-   "id": "S0369",
-   "day": 37,
-   "direction": "ja-zh",
+   "qid": "P-037-08-1eda3a4fb321",
    "prompt": "メールを送ります。",
-   "knowledge_ids": [
-    "V0090"
+   "options": [
+    "事态非常严重。",
+    "发邮件。",
+    "必须做手术。",
+    "上学期成绩很好。"
    ],
-   "hint": ""
+   "h": "a9103d86",
+   "oh": [
+    "7e196bc1",
+    "a9103d86",
+    "8e4548b3",
+    "964e19e4"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0369"
   },
   {
-   "id": "S0370",
-   "day": 37,
-   "direction": "ja-zh",
+   "qid": "P-037-09-b9497c30314a",
    "prompt": "地図を見ます。",
-   "knowledge_ids": [
-    "V0093"
+   "options": [
+    "看地图。",
+    "吃早饭。",
+    "这是书。",
+    "请注意。"
    ],
-   "hint": ""
+   "h": "d919696",
+   "oh": [
+    "d919696",
+    "c30f1232",
+    "3fc79685",
+    "27444957"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0370"
   }
  ],
  "quiz": [

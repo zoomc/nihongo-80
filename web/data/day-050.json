@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V1048",
    "front": "子",
    "back": "孩子",
+   "kana": "こ",
    "stage": "planned"
   },
   {
    "kid": "V1049",
    "front": "こう",
    "back": "这样",
+   "kana": "こう",
    "stage": "planned"
   },
   {
    "kid": "V1050",
    "front": "郊外",
    "back": "郊外",
+   "kana": "こうがい",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0248",
    "front": "字",
-   "back": "字；文字｜音 ジ",
+   "back": "字；文字",
+   "kana": "ジ、あざ、あざな、-な",
    "stage": "planned"
   },
   {
    "kid": "K0249",
    "front": "答",
-   "back": "回答；答案｜音 トウ",
+   "back": "回答；答案",
+   "kana": "トウ、こた.える、こた.え",
    "stage": "planned"
   },
   {
    "kid": "V1015",
    "front": "厳しい",
    "back": "严厉；严酷",
+   "kana": "きびしい",
    "stage": "planned"
   },
   {
    "kid": "V1016",
    "front": "決まる",
    "back": "决定",
+   "kana": "きまる",
    "stage": "planned"
   },
   {
    "kid": "V1017",
    "front": "君",
    "back": "你",
+   "kana": "きみ",
    "stage": "planned"
   },
   {
@@ -455,104 +463,204 @@
  ],
  "sentences": [
   {
-   "id": "S0491",
-   "day": 50,
-   "direction": "zh-ja",
+   "qid": "P-050-00-99073fd771d6",
    "prompt": "今晚列车非常拥挤。",
-   "knowledge_ids": [
-    "V1073"
+   "options": [
+    "先生から資料をいただきました。",
+    "彼は会社で高い地位にあります。",
+    "その時はシャワーを浴びていた。",
+    "今晩は列車がとても込んでいる。"
    ],
-   "hint": ""
+   "h": "e8f03c43",
+   "oh": [
+    "22261966",
+    "1db91e4",
+    "bc9b8d60",
+    "e8f03c43"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0491"
   },
   {
-   "id": "S0492",
-   "day": 50,
-   "direction": "zh-ja",
+   "qid": "P-050-01-0816b086776a",
    "prompt": "日本人靠吃米生活。",
-   "knowledge_ids": [
-    "V1074"
+   "options": [
+    "彼は今日、お弁当を持って来た。",
+    "日本人は米を食べて生きている。",
+    "この都市の面積はどれくらいか。",
+    "もっと易しい事を聞いて下さい。"
    ],
-   "hint": ""
+   "h": "c8241cef",
+   "oh": [
+    "acc40490",
+    "c8241cef",
+    "b726d24f",
+    "84e4e179"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0492"
   },
   {
-   "id": "S0493",
-   "day": 50,
-   "direction": "zh-ja",
+   "qid": "P-050-02-0875741a42c8",
    "prompt": "您来看看我们的新居怎么样？",
-   "knowledge_ids": [
-    "V1075"
+   "options": [
+    "うちの赤ん坊は口をきくようになってきました。",
+    "私たちの新居をご覧になってはいかがですか。",
+    "このコートいいですね。試着してもいいですか。",
+    "あなたの名前はインクで書かなければならない。"
    ],
-   "hint": ""
+   "h": "2e1239a1",
+   "oh": [
+    "8a4c02b8",
+    "2e1239a1",
+    "b3553c30",
+    "f0361447"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0493"
   },
   {
-   "id": "S0494",
-   "day": 50,
-   "direction": "zh-ja",
+   "qid": "P-050-03-156d83a28c3c",
    "prompt": "今后也请享受人生。",
-   "knowledge_ids": [
-    "V1076"
+   "options": [
+    "スイッチは時間通りに働かなかった。",
+    "これからも人生を楽しんでください。",
+    "掲示には「全席予約済み」とあった。",
+    "さあ、あなたの体温を計りましょう。"
    ],
-   "hint": ""
+   "h": "36b09d73",
+   "oh": [
+    "e8b6d63c",
+    "36b09d73",
+    "ef57930",
+    "f1eef958"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0494"
   },
   {
-   "id": "S0495",
-   "day": 50,
-   "direction": "zh-ja",
+   "qid": "P-050-04-c0a6607c4337",
    "prompt": "我与其说害怕，不如说吓了一跳。",
-   "knowledge_ids": [
-    "V1077"
+   "options": [
+    "この犬は何でもほとんど食べます。",
+    "タバコにかけられている税は高い。",
+    "おぼれかけた人は息を吹き返した。",
+    "私は怖かったよりもびっくりした。"
    ],
-   "hint": ""
+   "h": "bdfb1981",
+   "oh": [
+    "1ebdb937",
+    "37e548c7",
+    "9d54542a",
+    "bdfb1981"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0495"
   },
   {
-   "id": "S0496",
-   "day": 50,
-   "direction": "zh-ja",
+   "qid": "P-050-05-f7fd542c85eb",
    "prompt": "那件事打碎了他所有的梦想。",
-   "knowledge_ids": [
-    "V1078"
+   "options": [
+    "あなたの計画を私に合わせなさい。",
+    "このビルは非常階段を備えている。",
+    "その事が彼のすべての夢を壊した。",
+    "いいクリスマスを過ごしましたか。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0497",
-   "day": 50,
+   "h": "2835eaff",
+   "oh": [
+    "90f4ca7a",
+    "d631b058",
+    "2835eaff",
+    "a01fba18"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0496"
+  },
+  {
+   "qid": "P-050-06-d3161b649c05",
    "prompt": "这副耳机坏了。",
-   "knowledge_ids": [
-    "V1079"
+   "options": [
+    "この手の本はあまり読まない。",
+    "このイヤホンは壊れています。",
+    "彼女は哀れを誘う有様だった。",
+    "その仕事をもう終えましたか。"
    ],
-   "hint": ""
+   "h": "cae4bbd8",
+   "oh": [
+    "771de503",
+    "cae4bbd8",
+    "6bd849e2",
+    "f2fbd2db"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0497"
   },
   {
-   "id": "S0498",
-   "day": 50,
-   "direction": "ja-zh",
+   "qid": "P-050-07-a9ef1e51ec95",
    "prompt": "コンサートはどうだった？",
-   "knowledge_ids": [
-    "V1080"
+   "options": [
+    "他生于19世纪。",
+    "和朋友看电影。",
+    "音乐会怎么样？",
+    "我正在找助手。"
    ],
-   "hint": ""
+   "h": "61036610",
+   "oh": [
+    "122eb4a0",
+    "1d346a36",
+    "61036610",
+    "f7ef99a7"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0498"
   },
   {
-   "id": "S0499",
-   "day": 50,
-   "direction": "ja-zh",
+   "qid": "P-050-08-a05e39e9fa32",
    "prompt": "今度の土曜日、テニスをしませんか。",
-   "knowledge_ids": [
-    "V1081"
+   "options": [
+    "他会的杂技多得让人吃惊。",
+    "体育馆将用于举行仪式。",
+    "物质会随温度改变形态。",
+    "这个星期六去打网球吧？"
    ],
-   "hint": ""
+   "h": "b964d343",
+   "oh": [
+    "c257ae4e",
+    "79c351df",
+    "762f222a",
+    "b964d343"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0499"
   },
   {
-   "id": "S0500",
-   "day": 50,
-   "direction": "ja-zh",
+   "qid": "P-050-09-ade04e07a93a",
    "prompt": "そのコンピューターは新しいです。",
-   "knowledge_ids": [
-    "V1082"
+   "options": [
+    "那台电脑是新的。",
+    "你的蓝笔不见了。",
+    "他生于19世纪。",
+    "他们躺在草坪上。"
    ],
-   "hint": ""
+   "h": "f9f14329",
+   "oh": [
+    "f9f14329",
+    "136317ea",
+    "122eb4a0",
+    "2bb7a3d6"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0500"
   }
  ],
  "quiz": [

@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V2144",
    "front": "瞬間",
    "back": "瞬间",
+   "kana": "しゅんかん",
    "stage": "planned"
   },
   {
    "kid": "V2145",
    "front": "順調",
    "back": "顺利",
+   "kana": "じゅんちょう",
    "stage": "planned"
   },
   {
    "kid": "V2146",
    "front": "順番",
    "back": "顺序；轮次",
+   "kana": "じゅんばん",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0509",
    "front": "冷",
-   "back": "冷；冷淡｜音 レイ",
+   "back": "冷；冷淡",
+   "kana": "レイ、つめ.たい、ひ.える、ひ.や、ひ.ややか、ひ.やす、ひ.やかす、さ.める、さ.ます",
    "stage": "planned"
   },
   {
    "kid": "K0510",
    "front": "適",
-   "back": "适合；适当｜音 テキ",
+   "back": "适合；适当",
+   "kana": "テキ、かな.う",
    "stage": "planned"
   },
   {
    "kid": "V2111",
    "front": "しゃべる",
    "back": "说话；闲聊",
+   "kana": "しゃべる",
    "stage": "planned"
   },
   {
    "kid": "V2112",
    "front": "州",
    "back": "州",
+   "kana": "しゅう",
    "stage": "planned"
   },
   {
    "kid": "V2113",
    "front": "週",
    "back": "周；星期",
+   "kana": "しゅう",
    "stage": "planned"
   },
   {
@@ -456,104 +464,204 @@
  ],
  "sentences": [
   {
-   "id": "S1231",
-   "day": 124,
-   "direction": "zh-ja",
+   "qid": "P-124-00-415e532a57c9",
    "prompt": "科学的进步不会停止。",
-   "knowledge_ids": [
-    "V2211"
+   "options": [
+    "今晩は列車がとても込んでいる。",
+    "少女は立って鏡をのぞきこんだ。",
+    "トムは頭にきつい一発を受けた。",
+    "科学の進歩は止まることがない。"
    ],
-   "hint": ""
+   "h": "d48c4c14",
+   "oh": [
+    "e8f03c43",
+    "b6b02350",
+    "b9186836",
+    "d48c4c14"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1231"
   },
   {
-   "id": "S1232",
-   "day": 124,
-   "direction": "zh-ja",
+   "qid": "P-124-01-738e1a3ae7b8",
    "prompt": "汤姆和弗兰克是好朋友。",
-   "knowledge_ids": [
-    "V2212"
+   "options": [
+    "私はもう彼を信用しない。",
+    "トムとフランクは親友だ。",
+    "この本の著者は誰ですか。",
+    "梅の花は今週が見頃です。"
    ],
-   "hint": ""
+   "h": "75bb8c2d",
+   "oh": [
+    "af48f659",
+    "75bb8c2d",
+    "7d5d25ac",
+    "f9da0047"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1232"
   },
   {
-   "id": "S1233",
-   "day": 124,
-   "direction": "zh-ja",
+   "qid": "P-124-02-6b33f9c6a0e4",
    "prompt": "我再也不相信他了。",
-   "knowledge_ids": [
-    "V2213"
+   "options": [
+    "本を読むことは大切です。",
+    "一人の教授がささやいた。",
+    "人は意識のある生き物だ。",
+    "私はもう彼を信用しない。"
    ],
-   "hint": ""
+   "h": "af48f659",
+   "oh": [
+    "824de756",
+    "44eb1b0d",
+    "5eb9d09f",
+    "af48f659"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1233"
   },
   {
-   "id": "S1234",
-   "day": 124,
-   "direction": "zh-ja",
+   "qid": "P-124-03-e5d8682f0c7f",
    "prompt": "他确实值得信赖。",
-   "knowledge_ids": [
-    "V2214"
+   "options": [
+    "マイクはお酒をやめたの？",
+    "トムとフランクは親友だ。",
+    "最終電車はいつ出ますか。",
+    "確かに彼は信頼できます。"
    ],
-   "hint": ""
+   "h": "817fa5b8",
+   "oh": [
+    "2c017500",
+    "75bb8c2d",
+    "227d7a7",
+    "817fa5b8"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1234"
   },
   {
-   "id": "S1235",
-   "day": 124,
-   "direction": "zh-ja",
+   "qid": "P-124-04-5d9398729fed",
    "prompt": "我不懂青少年的心理。",
-   "knowledge_ids": [
-    "V2215"
+   "options": [
+    "私には青少年の心理がわからない。",
+    "その小説は彼の名声を更に高めた。",
+    "このホールには人が二千人入れる。",
+    "あの子はなんてうるさい子だろう。"
    ],
-   "hint": ""
+   "h": "e4f03a2f",
+   "oh": [
+    "e4f03a2f",
+    "c4f79a06",
+    "cc13a7d1",
+    "490bd08c"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1235"
   },
   {
-   "id": "S1236",
-   "day": 124,
-   "direction": "zh-ja",
+   "qid": "P-124-05-b25483849827",
    "prompt": "只有人类懂得用火。",
-   "knowledge_ids": [
-    "V2216"
+   "options": [
+    "スイッチは時間通りに働かなかった。",
+    "その金は体育館の建設に当てられた。",
+    "あの二人はどうもできているらしい。",
+    "人類だけが火の使い方を知っている。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1237",
-   "day": 124,
+   "h": "802a2f24",
+   "oh": [
+    "e8b6d63c",
+    "6527799c",
+    "3402efb8",
+    "802a2f24"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1236"
+  },
+  {
+   "qid": "P-124-06-a4cd11cb7004",
    "prompt": "也许能看到鸟巢。",
-   "knowledge_ids": [
-    "V2217"
+   "options": [
+    "ご飯とパンどちらがいいですか。",
+    "それは千円以下では買えません。",
+    "いつ旅行においでになりますか。",
+    "鳥の巣が見られるかもしれない。"
    ],
-   "hint": ""
+   "h": "dfd75a8e",
+   "oh": [
+    "4c7a2886",
+    "4179f45f",
+    "a1751ea1",
+    "dfd75a8e"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1237"
   },
   {
-   "id": "S1238",
-   "day": 124,
-   "direction": "ja-zh",
+   "qid": "P-124-07-5defd2f1381f",
    "prompt": "図で説明しましょう。",
-   "knowledge_ids": [
-    "V2218"
+   "options": [
+    "和这件事没关系。",
+    "有哪些支付方式？",
+    "这个金额含税。",
+    "用图来说明吧。"
    ],
-   "hint": ""
+   "h": "efda7619",
+   "oh": [
+    "1abbc7cc",
+    "40f54f95",
+    "bee29f31",
+    "efda7619"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1238"
   },
   {
-   "id": "S1239",
-   "day": 124,
-   "direction": "ja-zh",
+   "qid": "P-124-08-f058fdd1a1fc",
    "prompt": "君の仕事は期待している水準に達していない。",
-   "knowledge_ids": [
-    "V2219"
+   "options": [
+    "汤姆应该马上就要到这里了。",
+    "你的工作没有达到期待的水准。",
+    "因此，与他人的互动就变得重要了。",
+    "地球以外的天体上有生物吗？"
    ],
-   "hint": ""
+   "h": "aa45ad00",
+   "oh": [
+    "61e77abd",
+    "aa45ad00",
+    "ef38d9a1",
+    "26a2ce62"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1239"
   },
   {
-   "id": "S1240",
-   "day": 124,
-   "direction": "ja-zh",
+   "qid": "P-124-09-e6f5b174b384",
    "prompt": "私達は彼を議長に推薦した。",
-   "knowledge_ids": [
-    "V2220"
+   "options": [
+    "我们不能依赖父母。",
+    "从家里能看见那座塔。",
+    "我们推荐他当议长。",
+    "看那个帅气的男孩。"
    ],
-   "hint": ""
+   "h": "7c0cfc66",
+   "oh": [
+    "d8540292",
+    "60c714ba",
+    "7c0cfc66",
+    "e0e337e0"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1240"
   }
  ],
  "quiz": [

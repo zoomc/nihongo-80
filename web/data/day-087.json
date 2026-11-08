@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V1521",
    "front": "一生",
    "back": "一生",
+   "kana": "いっしょう",
    "stage": "planned"
   },
   {
    "kid": "V1522",
    "front": "一層",
    "back": "更加",
+   "kana": "いっそう",
    "stage": "planned"
   },
   {
    "kid": "V1523",
    "front": "一体",
    "back": "到底；究竟",
+   "kana": "いったい",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0361",
    "front": "所",
-   "back": "地方；场所｜音 ショ",
+   "back": "地方；场所",
+   "kana": "ショ、ところ、-ところ、どころ、とこ",
    "stage": "planned"
   },
   {
    "kid": "K0362",
    "front": "次",
-   "back": "下一个；次序｜音 ジ、シ",
+   "back": "下一个；次序",
+   "kana": "ジ、シ、つ.ぐ、つぎ",
    "stage": "planned"
   },
   {
    "kid": "V1488",
    "front": "胃",
    "back": "胃",
+   "kana": "い",
    "stage": "planned"
   },
   {
    "kid": "V1489",
    "front": "委員",
    "back": "委员",
+   "kana": "いいん",
    "stage": "planned"
   },
   {
    "kid": "V1490",
    "front": "いえ",
    "back": "不",
+   "kana": "いえ",
    "stage": "planned"
   },
   {
@@ -476,104 +484,204 @@
  ],
  "sentences": [
   {
-   "id": "S0861",
-   "day": 87,
-   "direction": "zh-ja",
+   "qid": "P-087-00-ab5ec78c7649",
    "prompt": "那条狗冲着小男孩低吼。",
-   "knowledge_ids": [
-    "V1567"
+   "options": [
+    "彼女はデザート用にクリームを泡立てた。",
+    "その犬は小さな男の子に向かって唸った。",
+    "彼は指導されなくても学ぶことができた。",
+    "新トンネルは旧トンネルの２倍の長さだ。"
    ],
-   "hint": ""
+   "h": "c002c086",
+   "oh": [
+    "cd584f41",
+    "c002c086",
+    "3d30d7f1",
+    "ba0c3c84"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0861"
   },
   {
-   "id": "S0862",
-   "day": 87,
-   "direction": "zh-ja",
+   "qid": "P-087-01-35d241d47c83",
    "prompt": "她的包被一个年轻男子抢走了。",
-   "knowledge_ids": [
-    "V1568"
+   "options": [
+    "あなたをケパと呼ぶことにします。",
+    "彼女は若い男にバッグを奪われた。",
+    "その象は動物園に連れてこられた。",
+    "ビルはその罪を犯していなかった。"
    ],
-   "hint": ""
+   "h": "fc2bdd47",
+   "oh": [
+    "27fecd16",
+    "fc2bdd47",
+    "f9632f0f",
+    "8cfed4a4"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0862"
   },
   {
-   "id": "S0863",
-   "day": 87,
-   "direction": "zh-ja",
+   "qid": "P-087-02-5e6eb0e5fb49",
    "prompt": "你会骑马吗？",
-   "knowledge_ids": [
-    "V1569"
+   "options": [
+    "この会社の社長は誰ですか。",
+    "敷金は家賃の一か月分です。",
+    "馬に乗ることができますか？",
+    "あなたはなぜ働いているの。"
    ],
-   "hint": ""
+   "h": "1cd64400",
+   "oh": [
+    "4c5bf5fb",
+    "8a8afc34",
+    "1cd64400",
+    "6298fea3"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0863"
   },
   {
-   "id": "S0864",
-   "day": 87,
-   "direction": "zh-ja",
+   "qid": "P-087-03-3307bf2bc2b8",
    "prompt": "我出生和成长都在东京。",
-   "knowledge_ids": [
-    "V1570"
+   "options": [
+    "喜んで質問に答えましょう。",
+    "馬に乗ることができますか？",
+    "すぐに旅の支度をしなさい。",
+    "私は生まれも育ちも東京だ。"
    ],
-   "hint": ""
+   "h": "a41b78c4",
+   "oh": [
+    "b449f1b9",
+    "1cd64400",
+    "a0bc963b",
+    "a41b78c4"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0864"
   },
   {
-   "id": "S0865",
-   "day": 87,
-   "direction": "zh-ja",
+   "qid": "P-087-04-ed5d5b1ebafc",
    "prompt": "梅花这周开得最好。",
-   "knowledge_ids": [
-    "V1571"
+   "options": [
+    "火曜日に国会が開かれる。",
+    "この券は２週間有効です。",
+    "梅の花は今週が見頃です。",
+    "この靴下はちぐはぐだ。"
    ],
-   "hint": ""
+   "h": "f9da0047",
+   "oh": [
+    "71348ffa",
+    "a263dc87",
+    "f9da0047",
+    "6db284b2"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0865"
   },
   {
-   "id": "S0866",
-   "day": 87,
-   "direction": "zh-ja",
+   "qid": "P-087-05-6c4ca299b2c1",
    "prompt": "我信任的人背叛了我。",
-   "knowledge_ids": [
-    "V1572"
+   "options": [
+    "システムが作動しない場合がある。",
+    "そのニュースは急いで印刷された。",
+    "それはすべて天候に依存している。",
+    "私が信じていた人が私を裏切った。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0867",
-   "day": 87,
+   "h": "1fba9a81",
+   "oh": [
+    "e09812e6",
+    "d5c6649d",
+    "3189be4f",
+    "1fba9a81"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0866"
+  },
+  {
+   "qid": "P-087-06-268026ae76da",
    "prompt": "这本书最近卖得很好。",
-   "knowledge_ids": [
-    "V1573"
+   "options": [
+    "どうか明かりをつけて下さい。",
+    "この本は最近よく売れている。",
+    "その靴は登山には向かないよ。",
+    "オートバイに乗るのは楽しい。"
    ],
-   "hint": ""
+   "h": "4defd2d2",
+   "oh": [
+    "1b979fbd",
+    "4defd2d2",
+    "a799335d",
+    "b48df371"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0867"
   },
   {
-   "id": "S0868",
-   "day": 87,
-   "direction": "ja-zh",
+   "qid": "P-087-07-6015731aac33",
    "prompt": "うわさは四方八方に広がった。",
-   "knowledge_ids": [
-    "V1575"
+   "options": [
+    "父亲去世已经三年了。",
+    "茶叶的质量正在下降。",
+    "和同事一起吃了午饭。",
+    "传闻传到了四面八方。"
    ],
-   "hint": ""
+   "h": "8e2c460f",
+   "oh": [
+    "2fe86ae",
+    "353aa331",
+    "e795c739",
+    "8e2c460f"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0868"
   },
   {
-   "id": "S0869",
-   "day": 87,
-   "direction": "ja-zh",
+   "qid": "P-087-08-b3e72b87a727",
    "prompt": "そうすればやがて運が開けるでしょう。",
-   "knowledge_ids": [
-    "V1576"
+   "options": [
+    "我看见他们挽着手臂走路。",
+    "那样的话，运气迟早会好起来。",
+    "你为什么拒绝了他的提议？",
+    "史密斯先生说话语气温和。"
    ],
-   "hint": ""
+   "h": "416c8035",
+   "oh": [
+    "e24b81f7",
+    "416c8035",
+    "59938dd",
+    "9e51d31a"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0869"
   },
   {
-   "id": "S0870",
-   "day": 87,
-   "direction": "ja-zh",
+   "qid": "P-087-09-762c8710099c",
    "prompt": "その画家は、いわば永遠の少年だ。",
-   "knowledge_ids": [
-    "V1578"
+   "options": [
+    "再婚之后，他现在一定更幸福。",
+    "你是个多么聪明的学生啊。",
+    "这是能发挥我语言能力的好机会。",
+    "那位画家可以说是永远的少年。"
    ],
-   "hint": ""
+   "h": "2a6e090",
+   "oh": [
+    "42a05a2e",
+    "9c468c5f",
+    "38a01c2f",
+    "2a6e090"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0870"
   }
  ],
  "quiz": [

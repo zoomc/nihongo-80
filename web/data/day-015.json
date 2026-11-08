@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0433",
    "front": "お姉さん",
    "back": "姐姐",
+   "kana": "おねえさん",
    "stage": "planned"
   },
   {
    "kid": "V0434",
    "front": "お願いします",
    "back": "请；拜托",
+   "kana": "おねがいします",
    "stage": "planned"
   },
   {
    "kid": "V0435",
    "front": "おばあさん",
    "back": "祖母；老奶奶",
+   "kana": "おばあさん",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0067",
    "front": "小",
-   "back": "小｜音 ショウ",
+   "back": "小",
+   "kana": "ショウ、ちい、こ",
    "stage": "planned"
   },
   {
    "kid": "K0068",
    "front": "高",
-   "back": "高；贵｜音 コウ",
+   "back": "高；贵",
+   "kana": "コウ、たか",
    "stage": "planned"
   },
   {
    "kid": "V0393",
    "front": "いろいろ",
    "back": "各种各样",
+   "kana": "いろいろ",
    "stage": "planned"
   },
   {
    "kid": "V0394",
    "front": "後ろ",
    "back": "后面",
+   "kana": "うしろ",
    "stage": "planned"
   },
   {
    "kid": "V0395",
    "front": "薄い",
    "back": "薄；淡",
+   "kana": "うすい",
    "stage": "planned"
   },
   {
@@ -538,104 +546,204 @@
  ],
  "sentences": [
   {
-   "id": "S0141",
-   "day": 15,
-   "direction": "zh-ja",
+   "qid": "P-015-00-75ed07f15cf3",
    "prompt": "去看姨妈时那顿饭可真丰盛。",
-   "knowledge_ids": [
-    "V0436"
+   "options": [
+    "叔母さんを訪ねた時はすごいごちそうだったね。",
+    "今日の政治状況はそれほど安定していない。",
+    "コピーするページに付箋をつけておいてください。",
+    "日本では、一般的にこの方法が使われます。"
    ],
-   "hint": ""
+   "h": "5ac98c01",
+   "oh": [
+    "5ac98c01",
+    "7a6af499",
+    "4859b34d",
+    "42d7b96"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0141"
   },
   {
-   "id": "S0142",
-   "day": 15,
-   "direction": "zh-ja",
+   "qid": "P-015-01-22204d1d0aa0",
    "prompt": "早啊。要不要我盛饭？",
-   "knowledge_ids": [
-    "V0437"
+   "options": [
+    "「いいえ」とイギリス人は繰り返しました。",
+    "この紙に記入するのを手伝ってください。",
+    "おはよう。ご飯をよそっても良いかしら？",
+    "この音楽はバッハによって作曲された。"
    ],
-   "hint": ""
+   "h": "d3995434",
+   "oh": [
+    "63d86f79",
+    "4f6db21e",
+    "d3995434",
+    "4681d2ed"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0142"
   },
   {
-   "id": "S0143",
-   "day": 15,
-   "direction": "zh-ja",
+   "qid": "P-015-02-6e0a7f0e3bd7",
    "prompt": "我几乎每天都洗澡。",
-   "knowledge_ids": [
-    "V0438"
+   "options": [
+    "アメリカ旅行のよい記念になります。",
+    "住民の半数以上はその計画に反対だ。",
+    "私はほとんど毎日お風呂に入ります。",
+    "彼女はお金をたくさん貯金している。"
    ],
-   "hint": ""
+   "h": "b1a812f6",
+   "oh": [
+    "626a81c1",
+    "7667272d",
+    "b1a812f6",
+    "be911f6a"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0143"
   },
   {
-   "id": "S0144",
-   "day": 15,
-   "direction": "zh-ja",
+   "qid": "P-015-03-3e82e86bc384",
    "prompt": "他今天带了便当来。",
-   "knowledge_ids": [
-    "V0439"
+   "options": [
+    "彼はよく友人をいじめたものだ。",
+    "先生から資料をいただきました。",
+    "それはどの辞書にもでています。",
+    "彼は今日、お弁当を持って来た。"
    ],
-   "hint": ""
+   "h": "acc40490",
+   "oh": [
+    "25027c50",
+    "22261966",
+    "9c46abfd",
+    "acc40490"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0144"
   },
   {
-   "id": "S0145",
-   "day": 15,
-   "direction": "zh-ja",
+   "qid": "P-015-04-e13d53943937",
    "prompt": "劳驾，警察先生，这是哪儿？",
-   "knowledge_ids": [
-    "V0440"
+   "options": [
+    "その大家は以前は暮らし向きがよかったそうだ。",
+    "当時はきれいな水がこの川にも流れていた。",
+    "すみません、おまわりさん。ここはどこですか。",
+    "あなたの名前はインクで書かなければならない。"
    ],
-   "hint": ""
+   "h": "b4cdcb0f",
+   "oh": [
+    "92eb805",
+    "e9cf2459",
+    "b4cdcb0f",
+    "f0361447"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0145"
   },
   {
-   "id": "S0146",
-   "day": 15,
-   "direction": "zh-ja",
+   "qid": "P-015-05-4ed9ef80b4c9",
    "prompt": "汤姆比杰克重十磅。",
-   "knowledge_ids": [
-    "V0441"
+   "options": [
+    "クッキーはケイトによって育てられた。",
+    "トムはジャックよりも１０ポンド重い。",
+    "お年寄りをからかってはいけません。",
+    "キャプテンは静かにするように命じた。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0147",
-   "day": 15,
+   "h": "c1811a4a",
+   "oh": [
+    "a7ad5d1c",
+    "c1811a4a",
+    "a3dd40ad",
+    "59a4d722"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0146"
+  },
+  {
+   "qid": "P-015-06-43f938f0b723",
    "prompt": "滑冰非常有意思。",
-   "knowledge_ids": [
-    "V0442"
+   "options": [
+    "このビルは非常階段を備えている。",
+    "それはすべて天候に依存している。",
+    "スケートはとてもおもしろかった。",
+    "あなたの計画を私に合わせなさい。"
    ],
-   "hint": ""
+   "h": "ebd819a3",
+   "oh": [
+    "d631b058",
+    "3189be4f",
+    "ebd819a3",
+    "90f4ca7a"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0147"
   },
   {
-   "id": "S0148",
-   "day": 15,
-   "direction": "ja-zh",
+   "qid": "P-015-07-c7e0ab1cc64a",
    "prompt": "トムはすぐに泳げるようになるよ。",
-   "knowledge_ids": [
-    "V0443"
+   "options": [
+    "累的话倒不如休息更好。",
+    "汤姆很快就能学会游泳。",
+    "请从B2出口上到地面。",
+    "这条法律适用于所有人。"
    ],
-   "hint": ""
+   "h": "b21ad6c5",
+   "oh": [
+    "97b7981d",
+    "b21ad6c5",
+    "12ff463b",
+    "64724262"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0148"
   },
   {
-   "id": "S0149",
-   "day": 15,
-   "direction": "ja-zh",
+   "qid": "P-015-08-f579efd1e75d",
    "prompt": "ここで降りましょう。",
-   "knowledge_ids": [
-    "V0444"
+   "options": [
+    "最近一直没见到他。",
+    "我心里有个好主意。",
+    "我们在这儿下车吧。",
+    "把工作交给了下属。"
    ],
-   "hint": ""
+   "h": "c38f80c0",
+   "oh": [
+    "382041d4",
+    "1e6c1fa5",
+    "c38f80c0",
+    "3a9bafec"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0149"
   },
   {
-   "id": "S0150",
-   "day": 15,
-   "direction": "ja-zh",
+   "qid": "P-015-09-fee3b5118c5d",
    "prompt": "そのコンサートは十時に終わった。",
-   "knowledge_ids": [
-    "V0445"
+   "options": [
+    "那场音乐会十点结束了。",
+    "账算下来一共五百美元。",
+    "这个星期六去打网球吧？",
+    "请让我看看受伤的胳膊。"
    ],
-   "hint": ""
+   "h": "ee697363",
+   "oh": [
+    "ee697363",
+    "2e1e71de",
+    "b964d343",
+    "95beac58"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0150"
   }
  ],
  "quiz": [

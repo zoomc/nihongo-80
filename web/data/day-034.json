@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0798",
    "front": "また",
    "back": "又；再",
+   "kana": "また",
    "stage": "planned"
   },
   {
    "kid": "V0799",
    "front": "町",
    "back": "城镇；街道",
+   "kana": "まち",
    "stage": "planned"
   },
   {
    "kid": "V0800",
    "front": "まっすぐ",
    "back": "笔直；直接",
+   "kana": "まっすぐ",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0184",
    "front": "体",
-   "back": "身体；形体；大体｜音 タイ、テイ",
+   "back": "身体；形体；大体",
+   "kana": "タイ、テイ、からだ、かたち",
    "stage": "planned"
   },
   {
    "kid": "K0185",
    "front": "田",
-   "back": "稻田；田地｜音 デン",
+   "back": "稻田；田地",
+   "kana": "デン、た",
    "stage": "planned"
   },
   {
    "kid": "V0760",
    "front": "広い",
    "back": "宽；宽广",
+   "kana": "ひろい",
    "stage": "planned"
   },
   {
    "kid": "V0761",
    "front": "フィルム",
    "back": "胶卷；胶片",
+   "kana": "フィルム",
    "stage": "planned"
   },
   {
    "kid": "V0762",
    "front": "封筒",
    "back": "信封",
+   "kana": "ふうとう",
    "stage": "planned"
   },
   {
@@ -540,104 +548,204 @@
  ],
  "sentences": [
   {
-   "id": "S0331",
-   "day": 34,
-   "direction": "zh-ja",
+   "qid": "P-034-00-a5427122c6d8",
    "prompt": "白天渐渐变短了。",
-   "knowledge_ids": [
-    "V0808"
+   "options": [
+    "上部前方で何かが光っている。",
+    "日がだんだん短くなっている。",
+    "昨夜はぐっすり眠れなかった。",
+    "こっちの端を持っててくれる？"
    ],
-   "hint": ""
+   "h": "3758f7bc",
+   "oh": [
+    "2f7340d9",
+    "3758f7bc",
+    "c36eaddd",
+    "cde879f8"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0331"
   },
   {
-   "id": "S0332",
-   "day": 34,
-   "direction": "zh-ja",
+   "qid": "P-034-01-187eeced8798",
    "prompt": "能给我看看护照吗？",
-   "knowledge_ids": [
-    "V0809"
+   "options": [
+    "あなたはどこでテレビを見ますか。",
+    "おひる頃やっと太陽が顔を出した。",
+    "パスポートを見せてくれませんか。",
+    "システムが作動しない場合がある。"
    ],
-   "hint": ""
+   "h": "e4f54f40",
+   "oh": [
+    "c9e3b484",
+    "c5040bc1",
+    "e4f54f40",
+    "e09812e6"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0332"
   },
   {
-   "id": "S0333",
-   "day": 34,
-   "direction": "zh-ja",
+   "qid": "P-034-02-1334a5543391",
    "prompt": "两条路在那里交叉。",
-   "knowledge_ids": [
-    "V0810"
+   "options": [
+    "二本の道はそこでクロスしている。",
+    "その子は何の恐怖も示さなかった。",
+    "その事が彼のすべての夢を壊した。",
+    "トラとライオンとどちらが強いか。"
    ],
-   "hint": ""
+   "h": "8ac27cd3",
+   "oh": [
+    "8ac27cd3",
+    "67d66472",
+    "2835eaff",
+    "a0452d41"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0333"
   },
   {
-   "id": "S0334",
-   "day": 34,
-   "direction": "zh-ja",
+   "qid": "P-034-03-3c025684cece",
    "prompt": "是十月三号。",
-   "knowledge_ids": [
-    "V0811"
+   "options": [
+    "１０月３日です。",
+    "頭が痛いです。",
+    "本を読みます。",
+    "妹は元気です。"
    ],
-   "hint": ""
+   "h": "f1c611f2",
+   "oh": [
+    "f1c611f2",
+    "e7640aa7",
+    "5a4d748c",
+    "7ab839b7"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0334"
   },
   {
-   "id": "S0335",
-   "day": 34,
-   "direction": "zh-ja",
+   "qid": "P-034-04-0561b64762ed",
    "prompt": "请来三杯咖啡。",
-   "knowledge_ids": [
-    "V0812"
+   "options": [
+    "彼は怒って首を左右に振った。",
+    "コーヒー三つおねがいします。",
+    "オートバイに乗るのは楽しい。",
+    "ギターをひくのはおもしろい。"
    ],
-   "hint": ""
+   "h": "b2149d32",
+   "oh": [
+    "332d9f86",
+    "b2149d32",
+    "b48df371",
+    "f7aedaae"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0335"
   },
   {
-   "id": "S0336",
-   "day": 34,
-   "direction": "zh-ja",
+   "qid": "P-034-05-f2d406cbecd3",
    "prompt": "东京中城绿意盎然！",
-   "knowledge_ids": [
-    "V0813"
+   "options": [
+    "おぼれかけた人は息を吹き返した。",
+    "ビールびんはガラスでできている。",
+    "東京ミッドタウンは緑がいっぱい！",
+    "その象は動物園に連れてこられた。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0337",
-   "day": 34,
+   "h": "b3b37bfa",
+   "oh": [
+    "9d54542a",
+    "45e4dbee",
+    "b3b37bfa",
+    "f9632f0f"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0336"
+  },
+  {
+   "qid": "P-034-06-7bbeff99e9c6",
    "prompt": "请大家别动。",
-   "knowledge_ids": [
-    "V0814"
+   "options": [
+    "シャッターを押してくれますか。",
+    "医者は彼の苦痛を除いてやった。",
+    "それは人知の限界を越えている。",
+    "皆さんじっとしていてください。"
    ],
-   "hint": ""
+   "h": "8f056f39",
+   "oh": [
+    "a9a6fa1f",
+    "8a6a13e3",
+    "289d0261",
+    "8f056f39"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0337"
   },
   {
-   "id": "S0338",
-   "day": 34,
-   "direction": "ja-zh",
+   "qid": "P-034-07-8052a2a62162",
    "prompt": "フランスは英国の南にある。",
-   "knowledge_ids": [
-    "V0815"
+   "options": [
+    "从第十课开始吧。",
+    "戏正好准时开演。",
+    "配料请全部加上。",
+    "法国在英国南边。"
    ],
-   "hint": ""
+   "h": "85c3daf",
+   "oh": [
+    "7c4687ec",
+    "998bd8d4",
+    "3f03fd78",
+    "85c3daf"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0338"
   },
   {
-   "id": "S0339",
-   "day": 34,
-   "direction": "ja-zh",
+   "qid": "P-034-08-041caf52ac80",
    "prompt": "なぜ、あなたの耳はそんなに大きいの？",
-   "knowledge_ids": [
-    "V0816"
+   "options": [
+    "他在生死之间徘徊。",
+    "支出必须与收入相称。",
+    "你的耳朵怎么这么大？",
+    "这场考试可以带词典。"
    ],
-   "hint": ""
+   "h": "2f4f9a74",
+   "oh": [
+    "f32c445a",
+    "637fac43",
+    "2f4f9a74",
+    "7cd75105"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0339"
   },
   {
-   "id": "S0340",
-   "day": 34,
-   "direction": "ja-zh",
+   "qid": "P-034-09-940bbd57b58a",
    "prompt": "女の子はほとんどみんなやさしい。",
-   "knowledge_ids": [
-    "V0817"
+   "options": [
+    "我通常骑自行车上学。",
+    "女孩子几乎都很温柔。",
+    "感到危险请立即避难。",
+    "冷气好像开得太足了。"
    ],
-   "hint": ""
+   "h": "5bf5f95d",
+   "oh": [
+    "cf5e8493",
+    "5bf5f95d",
+    "997ca2a4",
+    "d1afd2f0"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0340"
   }
  ],
  "quiz": [

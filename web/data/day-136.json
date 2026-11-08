@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V2365",
    "front": "ただ",
    "back": "只；免费",
+   "kana": "ただ",
    "stage": "planned"
   },
   {
    "kid": "V2366",
    "front": "戦い",
    "back": "战斗；斗争",
+   "kana": "たたかい",
    "stage": "planned"
   },
   {
    "kid": "V2367",
    "front": "戦う",
    "back": "战斗；斗争",
+   "kana": "たたかう",
    "stage": "planned"
   },
   {
@@ -70,31 +73,36 @@
   {
    "kid": "K0557",
    "front": "刻",
-   "back": "雕刻；时刻｜音 コク",
+   "back": "雕刻；时刻",
+   "kana": "コク、きざ.む、きざ.み",
    "stage": "planned"
   },
   {
    "kid": "K0558",
    "front": "賛",
-   "back": "赞成；赞美｜音 サン",
+   "back": "赞成；赞美",
+   "kana": "サン、たす.ける、たた.える",
    "stage": "planned"
   },
   {
    "kid": "V2323",
    "front": "尊敬",
    "back": "尊敬",
+   "kana": "そんけい",
    "stage": "planned"
   },
   {
    "kid": "V2324",
    "front": "存在",
    "back": "存在",
+   "kana": "そんざい",
    "stage": "planned"
   },
   {
    "kid": "V2325",
    "front": "尊重",
    "back": "尊重",
+   "kana": "そんちょう",
    "stage": "planned"
   },
   {
@@ -106,13 +114,15 @@
   {
    "kid": "K0549",
    "front": "勤",
-   "back": "工作；勤勉｜音 キン、ゴン",
+   "back": "工作；勤勉",
+   "kana": "キン、ゴン、つと.める、-づと.め、つと.まる、いそ.しむ",
    "stage": "planned"
   },
   {
    "kid": "K0550",
    "front": "遅",
-   "back": "慢；迟到｜音 チ",
+   "back": "慢；迟到",
+   "kana": "チ、おく.れる、おく.らす、おそ.い",
    "stage": "planned"
   }
  ],
@@ -515,104 +525,204 @@
  ],
  "sentences": [
   {
-   "id": "S1351",
-   "day": 136,
-   "direction": "zh-ja",
+   "qid": "P-136-00-013777e075eb",
    "prompt": "注释在页面下方。",
-   "knowledge_ids": [
-    "V2427"
+   "options": [
+    "注はページの下欄についている。",
+    "この豚肉は１キロいくらですか。",
+    "あの交差点で何が起こったのか。",
+    "あなたの考えを言ってください。"
    ],
-   "hint": ""
+   "h": "44ee7c93",
+   "oh": [
+    "44ee7c93",
+    "24e2e940",
+    "28d0e3e9",
+    "a9413e5c"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1351"
   },
   {
-   "id": "S1352",
-   "day": 136,
-   "direction": "zh-ja",
+   "qid": "P-136-01-94b14c11f6a1",
    "prompt": "我们坐在房间中央。",
-   "knowledge_ids": [
-    "V2428"
+   "options": [
+    "私たちはその部屋の中央に座った。",
+    "この製品は美しく仕上がっている。",
+    "この川はあそこで浅くなっている。",
+    "それはたいへんなショックでした。"
    ],
-   "hint": ""
+   "h": "b9247c16",
+   "oh": [
+    "b9247c16",
+    "a8a8c68",
+    "ec02db03",
+    "4f933c74"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1352"
   },
   {
-   "id": "S1353",
-   "day": 136,
-   "direction": "zh-ja",
+   "qid": "P-136-02-7de6fa1515bf",
    "prompt": "他初中时净读小说。",
-   "knowledge_ids": [
-    "V2429"
+   "options": [
+    "どういっても七時までにいかないと。",
+    "彼は中学時代小説ばかり読んでいた。",
+    "彼は心理学博士の学位を持っている。",
+    "同社は醤油その他の食品を生産する。"
    ],
-   "hint": ""
+   "h": "9db561fe",
+   "oh": [
+    "91a2dee7",
+    "9db561fe",
+    "316eb7ce",
+    "d193ac76"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1353"
   },
   {
-   "id": "S1354",
-   "day": 136,
-   "direction": "zh-ja",
+   "qid": "P-136-03-b36c3b3d972e",
    "prompt": "那台二手冰箱是个糟糕的玩意儿。",
-   "knowledge_ids": [
-    "V2430"
+   "options": [
+    "その中古の冷蔵庫はひどい代物だった。",
+    "キャプテンは静かにするように命じた。",
+    "おはよう。ご飯をよそっても良いかしら？",
+    "だれかがドアをどんどんたたいている。"
    ],
-   "hint": ""
+   "h": "c75f3af4",
+   "oh": [
+    "c75f3af4",
+    "59a4d722",
+    "d3995434",
+    "a5411c72"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1354"
   },
   {
-   "id": "S1355",
-   "day": 136,
-   "direction": "zh-ja",
+   "qid": "P-136-04-c8e836755b5d",
    "prompt": "由于暴风雨，道路施工中止了。",
-   "knowledge_ids": [
-    "V2431"
+   "options": [
+    "あなたの名前と住所を記入しなさい。",
+    "彼は世間でいう音楽の真の愛好者だ。",
+    "このテープレコーダーは新しくない。",
+    "暴風雨のため道路工事が中止された。"
    ],
-   "hint": ""
+   "h": "40104924",
+   "oh": [
+    "52eeffa0",
+    "3e786b72",
+    "37f9d281",
+    "40104924"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1355"
   },
   {
-   "id": "S1356",
-   "day": 136,
-   "direction": "zh-ja",
+   "qid": "P-136-05-c6ab7d43eacd",
    "prompt": "请问他把车停在哪里了。",
-   "knowledge_ids": [
-    "V2432"
+   "options": [
+    "彼にどこに駐車したのか聞いてください。",
+    "ごめんね。明日は朝からパートがあるのよ。",
+    "とにかく、試験が終わってほっとしたよ。",
+    "あなたはうちのクラスで歓迎されています。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1357",
-   "day": 136,
+   "h": "468961a2",
+   "oh": [
+    "468961a2",
+    "9d067c9",
+    "47f611de",
+    "70f8c097"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1356"
+  },
+  {
+   "qid": "P-136-06-78cdb78197de",
    "prompt": "今天没时间吃午饭。",
-   "knowledge_ids": [
-    "V2433"
+   "options": [
+    "今日は昼食をとる時間がない。",
+    "彼女は哀れを誘う有様だった。",
+    "ギターをひくのはおもしろい。",
+    "どうか明かりをつけて下さい。"
    ],
-   "hint": ""
+   "h": "dadf993c",
+   "oh": [
+    "dadf993c",
+    "6bd849e2",
+    "f7aedaae",
+    "1b979fbd"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1357"
   },
   {
-   "id": "S1358",
-   "day": 136,
-   "direction": "ja-zh",
+   "qid": "P-136-07-df75b0d9f32d",
    "prompt": "その町の中心にすてきな公園がある。",
-   "knowledge_ids": [
-    "V2434"
+   "options": [
+    "他们相信地球是平的。",
+    "镇中心有个漂亮的公园。",
+    "物质会随温度改变形态。",
+    "这个星期六去打网球吧？"
    ],
-   "hint": ""
+   "h": "96772a3a",
+   "oh": [
+    "a51300e1",
+    "96772a3a",
+    "762f222a",
+    "b964d343"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1358"
   },
   {
-   "id": "S1359",
-   "day": 136,
-   "direction": "ja-zh",
+   "qid": "P-136-08-1fec2a9db207",
    "prompt": "ご注目下さい。",
-   "knowledge_ids": [
-    "V2435"
+   "options": [
+    "没时间。",
+    "这本书很贵。",
+    "请注意。",
+    "他一生独身。"
    ],
-   "hint": ""
+   "h": "27444957",
+   "oh": [
+    "eaced404",
+    "804e5fb1",
+    "27444957",
+    "d5317579"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1359"
   },
   {
-   "id": "S1360",
-   "day": 136,
-   "direction": "ja-zh",
+   "qid": "P-136-09-e1aeef53e664",
    "prompt": "あなたのためにデザートを注文した。",
-   "knowledge_ids": [
-    "V2436"
+   "options": [
+    "从第十课开始吧。",
+    "他是不是被车撞了？",
+    "任何事物都有极限。",
+    "我给你点了甜点。"
    ],
-   "hint": ""
+   "h": "5fcdf50d",
+   "oh": [
+    "7c4687ec",
+    "7a6b5ce4",
+    "8a1a0d7c",
+    "5fcdf50d"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1360"
   }
  ],
  "quiz": [

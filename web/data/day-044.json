@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0939",
    "front": "オートバイ",
    "back": "摩托车",
+   "kana": "オートバイ",
    "stage": "planned"
   },
   {
    "kid": "V0940",
    "front": "おかげ",
    "back": "多亏；托福",
+   "kana": "おかげ",
    "stage": "planned"
   },
   {
    "kid": "V0941",
    "front": "おかしい",
    "back": "奇怪；可笑",
+   "kana": "おかしい",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0224",
    "front": "少",
-   "back": "少；稍微｜音 ショウ",
+   "back": "少；稍微",
+   "kana": "ショウ、すく.ない、すこ.し",
    "stage": "planned"
   },
   {
    "kid": "K0225",
    "front": "町",
-   "back": "城镇；街区｜音 チョウ",
+   "back": "城镇；街区",
+   "kana": "チョウ、まち",
    "stage": "planned"
   },
   {
    "kid": "V0901",
    "front": "医学",
    "back": "医学",
+   "kana": "いがく",
    "stage": "planned"
   },
   {
    "kid": "V0902",
    "front": "生きる",
    "back": "活；生存",
+   "kana": "いきる",
    "stage": "planned"
   },
   {
    "kid": "V0903",
    "front": "意見",
    "back": "意见；看法",
+   "kana": "いけん",
    "stage": "planned"
   },
   {
@@ -557,104 +565,204 @@
  ],
  "sentences": [
   {
-   "id": "S0431",
-   "day": 44,
-   "direction": "zh-ja",
+   "qid": "P-044-00-f589b3749975",
    "prompt": "为什么没跟他跳舞？",
-   "knowledge_ids": [
-    "V0959"
+   "options": [
+    "なぜ彼と踊らなかったの？",
+    "彼は１０年級に在学中だ。",
+    "トムとフランクは親友だ。",
+    "新聞の記事を読みました。"
    ],
-   "hint": ""
+   "h": "afc9d668",
+   "oh": [
+    "afc9d668",
+    "bf462547",
+    "75bb8c2d",
+    "54f405f6"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0431"
   },
   {
-   "id": "S0432",
-   "day": 44,
-   "direction": "zh-ja",
+   "qid": "P-044-01-d5675c582e3e",
    "prompt": "母亲听到那个消息很吃惊。",
-   "knowledge_ids": [
-    "V0960"
+   "options": [
+    "それは翼の全長が約４インチある。",
+    "スケートはとてもおもしろかった。",
+    "その城は１６１０年に建てられた。",
+    "母はそのニュースを聞いて驚いた。"
    ],
-   "hint": ""
+   "h": "23a363a8",
+   "oh": [
+    "18490b8d",
+    "ebd819a3",
+    "6b28f1e6",
+    "23a363a8"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0432"
   },
   {
-   "id": "S0433",
-   "day": 44,
-   "direction": "zh-ja",
+   "qid": "P-044-02-acbd7ada0064",
    "prompt": "在庙会上吃了龙虾。",
-   "knowledge_ids": [
-    "V0961"
+   "options": [
+    "その町はロンドンのすぐ北にある。",
+    "お祭りでロブスターを食べました。",
+    "ムーリエルは２０歳になりました。",
+    "こ、こら！ナニやっとるかぁぁ！！"
    ],
-   "hint": ""
+   "h": "6e738748",
+   "oh": [
+    "efe3c905",
+    "6e738748",
+    "18597f07",
+    "1b91f40"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0433"
   },
   {
-   "id": "S0434",
-   "day": 44,
-   "direction": "zh-ja",
+   "qid": "P-044-03-f0bb0e9fb0ef",
    "prompt": "我们去探望她吧。",
-   "knowledge_ids": [
-    "V0962"
+   "options": [
+    "あなたは数学が得意ですか。",
+    "彼女のお見舞いに行こうよ。",
+    "その犬は少女の命を救った。",
+    "これはとても大切な会合だ。"
    ],
-   "hint": ""
+   "h": "fc7b4a8b",
+   "oh": [
+    "169afc24",
+    "fc7b4a8b",
+    "d705b481",
+    "b94a6327"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0434"
   },
   {
-   "id": "S0435",
-   "day": 44,
-   "direction": "zh-ja",
+   "qid": "P-044-04-5a34bbca9baa",
    "prompt": "这是从北海道带来的特产。",
-   "knowledge_ids": [
-    "V0963"
+   "options": [
+    "ご飯とパンどちらがいいですか。",
+    "あなたの考えを言ってください。",
+    "彼が間違っているのは確かです。",
+    "これは北海道からのお土産です。"
    ],
-   "hint": ""
+   "h": "7e2c9ed2",
+   "oh": [
+    "4c7a2886",
+    "a9413e5c",
+    "12baed0d",
+    "7e2c9ed2"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0435"
   },
   {
-   "id": "S0436",
-   "day": 44,
-   "direction": "zh-ja",
+   "qid": "P-044-05-e134de94fce5",
    "prompt": "一看到你就想起你哥哥。",
-   "knowledge_ids": [
-    "V0964"
+   "options": [
+    "あなたの言うことは正しいかもしれない。",
+    "私はパンフレットにざっと目をとおした。",
+    "先生は私たちを二つのグループに分けた。",
+    "あなたを見るとお兄さんを思い出します。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0437",
-   "day": 44,
+   "h": "6ab70a5d",
+   "oh": [
+    "cdabcfca",
+    "2d56f04d",
+    "13bdf689",
+    "6ab70a5d"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0436"
+  },
+  {
+   "qid": "P-044-06-ae257428d0ee",
    "prompt": "我觉得会放晴。",
-   "knowledge_ids": [
-    "V0965"
+   "options": [
+    "お茶を飲みます。",
+    "この川の流れは急だ。",
+    "晴れだと思うよ。",
+    "これはいくらですか。"
    ],
-   "hint": ""
+   "h": "802c8fe4",
+   "oh": [
+    "d303d227",
+    "2deea5d0",
+    "802c8fe4",
+    "6506aa3c"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0437"
   },
   {
-   "id": "S0438",
-   "day": 44,
-   "direction": "ja-zh",
+   "qid": "P-044-07-3c567977a0f9",
    "prompt": "あのおもちゃは木で作られている。",
-   "knowledge_ids": [
-    "V0966"
+   "options": [
+    "请寄一份目录供参考。",
+    "这趟公交到美术馆吗？",
+    "我们要求他偿还借款。",
+    "那个玩具是木头做的。"
    ],
-   "hint": ""
+   "h": "709a625b",
+   "oh": [
+    "f28a2368",
+    "f2733930",
+    "18fb5c69",
+    "709a625b"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0438"
   },
   {
-   "id": "S0439",
-   "day": 44,
-   "direction": "ja-zh",
+   "qid": "P-044-08-b91f294e8528",
    "prompt": "この紙はどちらが表だか見分けがつかない。",
-   "knowledge_ids": [
-    "V0967"
+   "options": [
+    "对了，明天安排是什么？",
+    "有些人的球速也非常快。",
+    "啊！糟了！汽油快没了。",
+    "这张纸分不清哪面是正面。"
    ],
-   "hint": ""
+   "h": "c55bd546",
+   "oh": [
+    "f3613f32",
+    "591e3589",
+    "b6724d72",
+    "c55bd546"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0439"
   },
   {
-   "id": "S0440",
-   "day": 44,
-   "direction": "ja-zh",
+   "qid": "P-044-09-b3842630955a",
    "prompt": "私たちは親をあてにしてはいけない。",
-   "knowledge_ids": [
-    "V0968"
+   "options": [
+    "我们不能依赖父母。",
+    "针扎到了我的拇指。",
+    "街上聚集了很多人。",
+    "那个国家气候温和。"
    ],
-   "hint": ""
+   "h": "d8540292",
+   "oh": [
+    "d8540292",
+    "97a1ec94",
+    "96c13ff4",
+    "82295631"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0440"
   }
  ],
  "quiz": [

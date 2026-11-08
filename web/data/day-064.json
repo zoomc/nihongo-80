@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V1284",
    "front": "盗む",
    "back": "偷；盗窃",
+   "kana": "ぬすむ",
    "stage": "planned"
   },
   {
    "kid": "V1285",
    "front": "塗る",
    "back": "涂；抹",
+   "kana": "ぬる",
    "stage": "planned"
   },
   {
    "kid": "V1286",
    "front": "ぬれる",
    "back": "淋湿；湿",
+   "kana": "ぬれる",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0124",
    "front": "操",
-   "back": "操；操作；操弄｜音 ソウ",
+   "back": "操；操作；操弄",
+   "kana": "ソウ、あやつる",
    "stage": "planned"
   },
   {
    "kid": "K0125",
    "front": "作",
-   "back": "作；制作；作品；操作｜音 サク、サ",
+   "back": "作；制作；作品；操作",
+   "kana": "サク、サ、つくる",
    "stage": "planned"
   },
   {
    "kid": "V1251",
    "front": "道具",
    "back": "工具",
+   "kana": "どうぐ",
    "stage": "planned"
   },
   {
    "kid": "V1252",
    "front": "とうとう",
    "back": "终于；到底",
+   "kana": "とうとう",
    "stage": "planned"
   },
   {
    "kid": "V1253",
    "front": "動物園",
    "back": "动物园",
+   "kana": "どうぶつえん",
    "stage": "planned"
   },
   {
@@ -455,104 +463,204 @@
  ],
  "sentences": [
   {
-   "id": "S0631",
-   "day": 64,
-   "direction": "zh-ja",
+   "qid": "P-064-00-c429222b31ac",
    "prompt": "光来到了世上。",
-   "knowledge_ids": [
-    "V1317"
+   "options": [
+    "流れは池に注いでいる。",
+    "朝ご飯を食べます。",
+    "光が世にやって来た。",
+    "天気予報が当たったよ。"
    ],
-   "hint": ""
+   "h": "f14e475a",
+   "oh": [
+    "b649417e",
+    "bde49cfa",
+    "f14e475a",
+    "af55e21c"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0631"
   },
   {
-   "id": "S0632",
-   "day": 64,
-   "direction": "zh-ja",
+   "qid": "P-064-01-528ee068dd1f",
    "prompt": "前方上方有什么东西在发光。",
-   "knowledge_ids": [
-    "V1318"
+   "options": [
+    "「彼女は若いですか」「はい」",
+    "大学で何をするつもりですか。",
+    "上部前方で何かが光っている。",
+    "この地域は雨が続くでしょう。"
    ],
-   "hint": ""
+   "h": "2f7340d9",
+   "oh": [
+    "6bc44878",
+    "5eb6936f",
+    "2f7340d9",
+    "f3e64d08"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0632"
   },
   {
-   "id": "S0633",
-   "day": 64,
-   "direction": "zh-ja",
+   "qid": "P-064-02-eca6c2ba51fc",
    "prompt": "干净的毛巾在抽屉里。",
-   "knowledge_ids": [
-    "V1319"
+   "options": [
+    "お父さんがバスルームでひげを剃っている。",
+    "あの人達は都会の生活にあこがれている。",
+    "きれいなタオルは引き出しにありますよ。",
+    "この世界の教育にはがっかりしてしまう。"
    ],
-   "hint": ""
+   "h": "eaeabc2",
+   "oh": [
+    "4f3c3e45",
+    "f7e43dfe",
+    "eaeabc2",
+    "6b522ac9"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0633"
   },
   {
-   "id": "S0634",
-   "day": 64,
-   "direction": "zh-ja",
+   "qid": "P-064-03-fed379bd5eed",
    "prompt": "要设法把他好的一面引导出来。",
-   "knowledge_ids": [
-    "V1320"
+   "options": [
+    "アーア、絶対うまくいくと思ったのになあ。",
+    "いったい、いつになったらそのケチは直るの？",
+    "彼のいいところを引き出すようにしなさい。",
+    "ジョージは朝にたくさんのチーズを食べた。"
    ],
-   "hint": ""
+   "h": "f8beb9a9",
+   "oh": [
+    "2f237702",
+    "a9085e74",
+    "f8beb9a9",
+    "2f26c123"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0634"
   },
   {
-   "id": "S0635",
-   "day": 64,
-   "direction": "zh-ja",
+   "qid": "P-064-04-caeec161244a",
    "prompt": "爸爸在浴室里刮胡子。",
-   "knowledge_ids": [
-    "V1321"
+   "options": [
+    "この紙に記入するのを手伝ってください。",
+    "お父さんがバスルームでひげを剃っている。",
+    "すぐ返事をしてもらいたいと思っています。",
+    "この世界の教育にはがっかりしてしまう。"
    ],
-   "hint": ""
+   "h": "4f3c3e45",
+   "oh": [
+    "4f6db21e",
+    "4f3c3e45",
+    "ffff8377",
+    "6b522ac9"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0635"
   },
   {
-   "id": "S0636",
-   "day": 64,
-   "direction": "zh-ja",
+   "qid": "P-064-05-28d132257825",
    "prompt": "那个岛上的机场如今杂草丛生。",
-   "knowledge_ids": [
-    "V1322"
+   "options": [
+    "彼女は現代の最も優れた画家の一人である。",
+    "その機関は１９６０年代後半に設立された。",
+    "メアリーは私にアメリカの人形をくれた。",
+    "その島の飛行場は、今では草がぼうぼうだ。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0637",
-   "day": 64,
+   "h": "a52d777a",
+   "oh": [
+    "ee752b0",
+    "504171b4",
+    "9316f6d5",
+    "a52d777a"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0636"
+  },
+  {
+   "qid": "P-064-06-afc57fab8d87",
    "prompt": "好久没联系的她打来了电话。",
-   "knowledge_ids": [
-    "V1323"
+   "options": [
+    "彼女から久しぶりに電話があった。",
+    "いいクリスマスを過ごしましたか。",
+    "ムーリエルは２０歳になりました。",
+    "あなたをケパと呼ぶことにします。"
    ],
-   "hint": ""
+   "h": "d35a36cd",
+   "oh": [
+    "d35a36cd",
+    "a01fba18",
+    "18597f07",
+    "27fecd16"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0637"
   },
   {
-   "id": "S0638",
-   "day": 64,
-   "direction": "ja-zh",
+   "qid": "P-064-07-99bd317b23c9",
    "prompt": "このバスは美術館まで行きますか。",
-   "knowledge_ids": [
-    "V1324"
+   "options": [
+    "对不起，我误会你了。",
+    "你会按能力逐步提高。",
+    "这趟公交到美术馆吗？",
+    "我通常骑自行车上学。"
    ],
-   "hint": ""
+   "h": "f2733930",
+   "oh": [
+    "eeb23946",
+    "d44d0121",
+    "f2733930",
+    "cf5e8493"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0638"
   },
   {
-   "id": "S0639",
-   "day": 64,
-   "direction": "ja-zh",
+   "qid": "P-064-08-32441ecfa504",
    "prompt": "車を運転することは非常に楽しい。",
-   "knowledge_ids": [
-    "V1325"
+   "options": [
+    "下下周四怎么样？",
+    "有哪些支付方式？",
+    "我还不太清楚。",
+    "开车非常愉快。"
    ],
-   "hint": ""
+   "h": "81ac924d",
+   "oh": [
+    "aab0ec66",
+    "40f54f95",
+    "e0e1cf46",
+    "81ac924d"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0639"
   },
   {
-   "id": "S0640",
-   "day": 64,
-   "direction": "ja-zh",
+   "qid": "P-064-09-32c15cc36380",
    "prompt": "彼はびっくりするほどのアクロバットができる。",
-   "knowledge_ids": [
-    "V1326"
+   "options": [
+    "我发现那个问题很简单。",
+    "他的话简单得不能再简单。",
+    "比尔因为考试的事心烦。",
+    "他会的杂技多得让人吃惊。"
    ],
-   "hint": ""
+   "h": "c257ae4e",
+   "oh": [
+    "da696091",
+    "1723f272",
+    "26826a2f",
+    "c257ae4e"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0640"
   }
  ],
  "quiz": [

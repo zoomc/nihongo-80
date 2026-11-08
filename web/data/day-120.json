@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V2078",
    "front": "質",
    "back": "质量；质地",
+   "kana": "しつ",
    "stage": "planned"
   },
   {
    "kid": "V2079",
    "front": "失業",
    "back": "失业",
+   "kana": "しつぎょう",
    "stage": "planned"
   },
   {
    "kid": "V2080",
    "front": "実験",
    "back": "实验",
+   "kana": "じっけん",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0493",
    "front": "降",
-   "back": "下降；下（雨雪）｜音 コウ、ゴ",
+   "back": "下降；下（雨雪）",
+   "kana": "コウ、ゴ、お.りる、お.ろす、ふ.る、ふ.り、くだ.る、くだ.す",
    "stage": "planned"
   },
   {
    "kid": "K0494",
    "front": "責",
-   "back": "责任；责备｜音 セキ",
+   "back": "责任；责备",
+   "kana": "セキ、せ.める",
    "stage": "planned"
   },
   {
    "kid": "V2045",
    "front": "酸素",
    "back": "氧气",
+   "kana": "さんそ",
    "stage": "planned"
   },
   {
    "kid": "V2046",
    "front": "氏",
    "back": "氏；先生",
+   "kana": "し",
    "stage": "planned"
   },
   {
    "kid": "V2047",
    "front": "詩",
    "back": "诗",
+   "kana": "し",
    "stage": "planned"
   },
   {
@@ -454,104 +462,204 @@
  ],
  "sentences": [
   {
-   "id": "S1191",
-   "day": 120,
-   "direction": "zh-ja",
+   "qid": "P-120-00-a248ec47c4b9",
    "prompt": "纸张上依次编了号。",
-   "knowledge_ids": [
-    "V2143"
+   "options": [
+    "なんという馬鹿なことだろう。",
+    "その仕事をもう終えましたか。",
+    "カーテンがゆっくり引かれた。",
+    "用紙は順に番号が打ってある。"
    ],
-   "hint": ""
+   "h": "306593f2",
+   "oh": [
+    "c32a4fad",
+    "f2fbd2db",
+    "9a704e8a",
+    "306593f2"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1191"
   },
   {
-   "id": "S1192",
-   "day": 120,
-   "direction": "zh-ja",
+   "qid": "P-120-01-217bbc1f8d1c",
    "prompt": "她就是在那一刻火了起来。",
-   "knowledge_ids": [
-    "V2144"
+   "options": [
+    "その工場は来月から作業を中止する。",
+    "あの信号の手前で降ろしてください。",
+    "同じ色の羽の鳥は共に集まるものだ。",
+    "彼女その瞬間にカッとなったんだね。"
    ],
-   "hint": ""
+   "h": "b90b4381",
+   "oh": [
+    "82b575bb",
+    "4e4f3267",
+    "83985809",
+    "b90b4381"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1192"
   },
   {
-   "id": "S1193",
-   "day": 120,
-   "direction": "zh-ja",
+   "qid": "P-120-02-9978db2cc6fe",
    "prompt": "一切都很顺利。",
-   "knowledge_ids": [
-    "V2145"
+   "options": [
+    "すべてが順調にいっている。",
+    "この紙はインクを吸わない。",
+    "彼は根はやさしい男だった。",
+    "彼は俳優になるべきだった。"
    ],
-   "hint": ""
+   "h": "262188a1",
+   "oh": [
+    "262188a1",
+    "1efc66f7",
+    "a6673fe9",
+    "578f5017"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1193"
   },
   {
-   "id": "S1194",
-   "day": 120,
-   "direction": "zh-ja",
+   "qid": "P-120-03-c702736f4c62",
    "prompt": "我们故意跳过了他的顺序。",
-   "knowledge_ids": [
-    "V2146"
+   "options": [
+    "みんな、その装置にとても感心した。",
+    "同社は醤油その他の食品を生産する。",
+    "私たちは彼の順番をわざと飛ばした。",
+    "その場所は今は相当建て込んでいる。"
    ],
-   "hint": ""
+   "h": "459a4ad7",
+   "oh": [
+    "a024abe9",
+    "d193ac76",
+    "459a4ad7",
+    "923b8d6a"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1194"
   },
   {
-   "id": "S1195",
-   "day": 120,
-   "direction": "zh-ja",
+   "qid": "P-120-04-6f09e3645d3a",
    "prompt": "大的还是小的？",
-   "knowledge_ids": [
-    "V2147"
+   "options": [
+    "水曜日は休みです。",
+    "大か、小か。",
+    "間違いを直します。",
+    "お互い相性がいい。"
    ],
-   "hint": ""
+   "h": "184abe02",
+   "oh": [
+    "e29e6c91",
+    "184abe02",
+    "f38675d3",
+    "e4d2ac20"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1195"
   },
   {
-   "id": "S1196",
-   "day": 120,
-   "direction": "zh-ja",
+   "qid": "P-120-05-be868b95756c",
    "prompt": "老师把最长的一章分给了我。",
-   "knowledge_ids": [
-    "V2148"
+   "options": [
+    "その女の子は彼女の母親と似ている。",
+    "メアリーにはつい甘くなってしまう。",
+    "彼は高等学校の生徒ではありません。",
+    "先生は私に一番長い章を割り当てた。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1197",
-   "day": 120,
+   "h": "ca7cc11a",
+   "oh": [
+    "133f7fc7",
+    "ab2b0013",
+    "31457fd",
+    "ca7cc11a"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1196"
+  },
+  {
+   "qid": "P-120-06-dcd11437b736",
    "prompt": "不出所料，他得了奖。",
-   "knowledge_ids": [
-    "V2149"
+   "options": [
+    "その音で彼女は眠りから覚めた。",
+    "期待されたとおり彼は賞を得た。",
+    "兄はアパートをさがしています。",
+    "あなたの考えを言ってください。"
    ],
-   "hint": ""
+   "h": "2ce3a646",
+   "oh": [
+    "4bed7830",
+    "2ce3a646",
+    "7f656d90",
+    "a9413e5c"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1197"
   },
   {
-   "id": "S1198",
-   "day": 120,
-   "direction": "ja-zh",
+   "qid": "P-120-07-c3cc18fcd65a",
    "prompt": "体育館は式のために使用されます。",
-   "knowledge_ids": [
-    "V2150"
+   "options": [
+    "他成不了什么大人物啊。",
+    "这里禁止大型车辆通行。",
+    "体育馆将用于举行仪式。",
+    "快点的话能赶上首班车。"
    ],
-   "hint": ""
+   "h": "79c351df",
+   "oh": [
+    "e8602c84",
+    "28478f43",
+    "79c351df",
+    "36293e64"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1198"
   },
   {
-   "id": "S1199",
-   "day": 120,
-   "direction": "ja-zh",
+   "qid": "P-120-08-ec45ed8f840e",
    "prompt": "貧困は幸福への障害とはならない。",
-   "knowledge_ids": [
-    "V2151"
+   "options": [
+    "你能引用《哈姆雷特》里的一行吗？",
+    "贫穷不会成为通往幸福的障碍。",
+    "所有报纸都大篇幅报道了那起事件。",
+    "这道菜是顾及巴黎风味调味的。"
    ],
-   "hint": ""
+   "h": "401119c6",
+   "oh": [
+    "f7c43d9c",
+    "401119c6",
+    "9ef87986",
+    "53e2bb2d"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1199"
   },
   {
-   "id": "S1200",
-   "day": 120,
-   "direction": "ja-zh",
+   "qid": "P-120-09-a19fa0055562",
    "prompt": "奨学金のおかげで彼女は留学した。",
-   "knowledge_ids": [
-    "V2152"
+   "options": [
+    "单词会逐渐增加，请经常查看。",
+    "多亏了奖学金，她得以留学。",
+    "“我们打网球吧？”“好啊。”",
+    "巨型油轮刚刚终于出港了。"
    ],
-   "hint": ""
+   "h": "c69f1267",
+   "oh": [
+    "1749063f",
+    "c69f1267",
+    "768d963e",
+    "b64496b6"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1200"
   }
  ],
  "quiz": [

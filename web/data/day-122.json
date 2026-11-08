@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V2111",
    "front": "しゃべる",
    "back": "说话；闲聊",
+   "kana": "しゃべる",
    "stage": "planned"
   },
   {
    "kid": "V2112",
    "front": "州",
    "back": "州",
+   "kana": "しゅう",
    "stage": "planned"
   },
   {
    "kid": "V2113",
    "front": "週",
    "back": "周；星期",
+   "kana": "しゅう",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0501",
    "front": "因",
-   "back": "原因；因｜音 イン",
+   "back": "原因；因",
+   "kana": "イン、よ.る、ちな.む",
    "stage": "planned"
   },
   {
    "kid": "K0502",
    "front": "馬",
-   "back": "马｜音 バ、メ、マ、ボ、モ",
+   "back": "马",
+   "kana": "バ、メ、マ、ボ、モ、うま、ま",
    "stage": "planned"
   },
   {
    "kid": "V2078",
    "front": "質",
    "back": "质量；质地",
+   "kana": "しつ",
    "stage": "planned"
   },
   {
    "kid": "V2079",
    "front": "失業",
    "back": "失业",
+   "kana": "しつぎょう",
    "stage": "planned"
   },
   {
    "kid": "V2080",
    "front": "実験",
    "back": "实验",
+   "kana": "じっけん",
    "stage": "planned"
   },
   {
@@ -458,104 +466,204 @@
  ],
  "sentences": [
   {
-   "id": "S1211",
-   "day": 122,
-   "direction": "zh-ja",
+   "qid": "P-122-00-8e0e1c2b532d",
    "prompt": "你没有养植物和动物吧？",
-   "knowledge_ids": [
-    "V2177"
+   "options": [
+    "みんなでカブトムシを競争させた。",
+    "あの先生に質問してもいいですよ。",
+    "その広間は日本画で飾られていた。",
+    "植物や生き物は持っていませんね？"
    ],
-   "hint": ""
+   "h": "6c846ec9",
+   "oh": [
+    "fdf064f8",
+    "c64703e1",
+    "6d732f36",
+    "6c846ec9"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1211"
   },
   {
-   "id": "S1212",
-   "day": 122,
-   "direction": "zh-ja",
+   "qid": "P-122-01-04e609bfba58",
    "prompt": "我要带很多食物回去。",
-   "knowledge_ids": [
-    "V2178"
+   "options": [
+    "私はたくさんの食物を持って帰ろう。",
+    "これらの単語を一つずつ覚えなさい。",
+    "みんな、その装置にとても感心した。",
+    "この学校はたくさんの生徒がいます。"
    ],
-   "hint": ""
+   "h": "271ff128",
+   "oh": [
+    "271ff128",
+    "b1de96c0",
+    "a024abe9",
+    "939aa164"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1212"
   },
   {
-   "id": "S1213",
-   "day": 122,
-   "direction": "zh-ja",
+   "qid": "P-122-02-c00ae24f0f7c",
    "prompt": "最近没什么食欲。",
-   "knowledge_ids": [
-    "V2179"
+   "options": [
+    "最近食欲がないんです。",
+    "カエルが鳴いたら帰ろう。",
+    "いつもバス通学です。",
+    "これはいくらですか。"
    ],
-   "hint": ""
+   "h": "f3e36ba6",
+   "oh": [
+    "f3e36ba6",
+    "e5bebda",
+    "52973008",
+    "6506aa3c"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1213"
   },
   {
-   "id": "S1214",
-   "day": 122,
-   "direction": "zh-ja",
+   "qid": "P-122-03-99c38934e898",
    "prompt": "他们没能弄到足够的食物。",
-   "knowledge_ids": [
-    "V2180"
+   "options": [
+    "そのうち一緒に仕事ができるといいなと思っています。",
+    "ドアをそのままにしておいてはいけません。",
+    "彼らはじゅうぶんな食料を手に入れられなかった。",
+    "特定の食べ物を食べた後に、胸やけがするのですか？"
    ],
-   "hint": ""
+   "h": "3969b2c8",
+   "oh": [
+    "37fc99c6",
+    "6fe1fecd",
+    "3969b2c8",
+    "fdca9253"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1214"
   },
   {
-   "id": "S1215",
-   "day": 122,
-   "direction": "zh-ja",
+   "qid": "P-122-04-11162a5af14d",
    "prompt": "粮食短缺。",
-   "knowledge_ids": [
-    "V2181"
+   "options": [
+    "食糧が不足している。",
+    "オランダは狭い国です。",
+    "ありがとうございます。",
+    "この靴下はちぐはぐだ。"
    ],
-   "hint": ""
+   "h": "fdc63dc1",
+   "oh": [
+    "fdc63dc1",
+    "e82faac6",
+    "4ffb347a",
+    "6db284b2"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1215"
   },
   {
-   "id": "S1216",
-   "day": 122,
-   "direction": "zh-ja",
+   "qid": "P-122-05-27d785692c29",
    "prompt": "这扇门通向书房。",
-   "knowledge_ids": [
-    "V2182"
+   "options": [
+    "その光景を見てぎょっとした。",
+    "このドアは書斎に通じている。",
+    "小さなことでくよくよするな。",
+    "彼女は哀れを誘う有様だった。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1217",
-   "day": 122,
+   "h": "ba605a4e",
+   "oh": [
+    "f1930e87",
+    "ba605a4e",
+    "64e534b3",
+    "6bd849e2"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1216"
+  },
+  {
+   "qid": "P-122-06-c65730b2171f",
    "prompt": "这所学校女生比男生多。",
-   "knowledge_ids": [
-    "V2183"
+   "options": [
+    "この犬は何でもほとんど食べます。",
+    "スケートはとてもおもしろかった。",
+    "その黄色いのをいただきましょう。",
+    "この学校は男子よりも女子が多い。"
    ],
-   "hint": ""
+   "h": "53353c8",
+   "oh": [
+    "1ebdb937",
+    "ebd819a3",
+    "725d19ee",
+    "53353c8"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1217"
   },
   {
-   "id": "S1218",
-   "day": 122,
-   "direction": "ja-zh",
+   "qid": "P-122-07-160c70dba9b3",
    "prompt": "私は助手を探している。",
-   "knowledge_ids": [
-    "V2184"
+   "options": [
+    "我正在找助手。",
+    "开会迟到了。",
+    "时间过得太快了。",
+    "必须做手术。"
    ],
-   "hint": ""
+   "h": "f7ef99a7",
+   "oh": [
+    "f7ef99a7",
+    "bb7937e0",
+    "4a9c18da",
+    "8e4548b3"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1218"
   },
   {
-   "id": "S1219",
-   "day": 122,
-   "direction": "ja-zh",
+   "qid": "P-122-08-c449798996cd",
    "prompt": "単語は徐々に増えますので、こまめにチェックしてください。",
-   "knowledge_ids": [
-    "V2185"
+   "options": [
+    "单词会逐渐增加，请经常查看。",
+    "他继承了父亲的一大片土地。",
+    "尼克为了赶上公交加快了脚步。",
+    "少年把自己的名字刻在树上。"
    ],
-   "hint": ""
+   "h": "1749063f",
+   "oh": [
+    "1749063f",
+    "dc656b24",
+    "f2bdf42e",
+    "a859b819"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1219"
   },
   {
-   "id": "S1220",
-   "day": 122,
-   "direction": "ja-zh",
+   "qid": "P-122-09-af0269eb33a2",
    "prompt": "私たちは、書物から楽しみを得ることができる。",
-   "knowledge_ids": [
-    "V2186"
+   "options": [
+    "有问题的人请到3号窗口。",
+    "他的话简单得不能再简单。",
+    "可以问一下您的年龄吗？",
+    "我们能从书籍中获得乐趣。"
    ],
-   "hint": ""
+   "h": "d09b4d0",
+   "oh": [
+    "cea33913",
+    "1723f272",
+    "868eaf76",
+    "d09b4d0"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1220"
   }
  ],
  "quiz": [

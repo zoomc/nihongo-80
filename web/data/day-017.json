@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0473",
    "front": "川",
    "back": "河",
+   "kana": "かわ",
    "stage": "planned"
   },
   {
    "kid": "V0474",
    "front": "かわいい",
    "back": "可爱",
+   "kana": "かわいい",
    "stage": "planned"
   },
   {
    "kid": "V0475",
    "front": "漢字",
    "back": "汉字",
+   "kana": "かんじ",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0147",
    "front": "外",
-   "back": "外面；以外；其他｜音 ガイ、ゲ",
+   "back": "外面；以外；其他",
+   "kana": "ガイ、ゲ、そと、ほか、はず.す、はず.れる、と-",
    "stage": "planned"
   },
   {
    "kid": "K0148",
    "front": "山",
-   "back": "山；山岳｜音 サン、セン",
+   "back": "山；山岳",
+   "kana": "サン、セン、やま",
    "stage": "planned"
   },
   {
    "kid": "V0433",
    "front": "お姉さん",
    "back": "姐姐",
+   "kana": "おねえさん",
    "stage": "planned"
   },
   {
    "kid": "V0434",
    "front": "お願いします",
    "back": "请；拜托",
+   "kana": "おねがいします",
    "stage": "planned"
   },
   {
    "kid": "V0435",
    "front": "おばあさん",
    "back": "祖母；老奶奶",
+   "kana": "おばあさん",
    "stage": "planned"
   },
   {
@@ -559,104 +567,204 @@
  ],
  "sentences": [
   {
-   "id": "S0161",
-   "day": 17,
-   "direction": "zh-ja",
+   "qid": "P-017-00-b924718ca7bb",
    "prompt": "露西是个可爱的小姑娘。",
-   "knowledge_ids": [
-    "V0474"
+   "options": [
+    "小さなことでくよくよするな。",
+    "彼は商売をたたんで引退した。",
+    "コーヒー三つおねがいします。",
+    "ルーシーはかわいい女の子だ。"
    ],
-   "hint": ""
+   "h": "8d514221",
+   "oh": [
+    "64e534b3",
+    "144390d5",
+    "b2149d32",
+    "8d514221"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0161"
   },
   {
-   "id": "S0162",
-   "day": 17,
-   "direction": "zh-ja",
+   "qid": "P-017-01-5b7fd0e0b766",
    "prompt": "这个汉字是什么意思？",
-   "knowledge_ids": [
-    "V0475"
+   "options": [
+    "この漢字はどういう意味ですか。",
+    "いや、当初の考えはそうでした。",
+    "その音で彼女は眠りから覚めた。",
+    "フクロウは昼間は目が見えない。"
    ],
-   "hint": ""
+   "h": "f391f35e",
+   "oh": [
+    "f391f35e",
+    "745cfd56",
+    "4bed7830",
+    "bd30935a"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0162"
   },
   {
-   "id": "S0163",
-   "day": 17,
-   "direction": "zh-ja",
+   "qid": "P-017-02-079912f32128",
    "prompt": "那棵树上结满了果实。",
-   "knowledge_ids": [
-    "V0476"
+   "options": [
+    "その映画館は人々でいっぱいだった。",
+    "住民の半数以上はその計画に反対だ。",
+    "その木には実がたわわになっていた。",
+    "あの信号の手前で降ろしてください。"
    ],
-   "hint": ""
+   "h": "71531757",
+   "oh": [
+    "15b363d4",
+    "7667272d",
+    "71531757",
+    "4e4f3267"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0163"
   },
   {
-   "id": "S0164",
-   "day": 17,
-   "direction": "zh-ja",
+   "qid": "P-017-03-b506fe7c1cdc",
    "prompt": "树叶秋天会变黄。",
-   "knowledge_ids": [
-    "V0477"
+   "options": [
+    "大雨で川の水が急に増えた。",
+    "試合は彼の勝ちに終わった。",
+    "木の葉は秋には黄色になる。",
+    "喜んで質問に答えましょう。"
    ],
-   "hint": ""
+   "h": "c4982aec",
+   "oh": [
+    "fb5b41ca",
+    "e09f8136",
+    "c4982aec",
+    "b449f1b9"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0164"
   },
   {
-   "id": "S0165",
-   "day": 17,
-   "direction": "zh-ja",
+   "qid": "P-017-04-2281f4bcf0fe",
    "prompt": "我要那个黄色的吧。",
-   "knowledge_ids": [
-    "V0478"
+   "options": [
+    "その黄色いのをいただきましょう。",
+    "ニューススタンドで聞いて下さい。",
+    "その話は親から子へと伝えられた。",
+    "みんなでカブトムシを競争させた。"
    ],
-   "hint": ""
+   "h": "725d19ee",
+   "oh": [
+    "725d19ee",
+    "8d525137",
+    "c65bb93d",
+    "fdf064f8"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0165"
   },
   {
-   "id": "S0166",
-   "day": 17,
-   "direction": "zh-ja",
+   "qid": "P-017-05-6ee3f774c5da",
    "prompt": "请别让火灭了。",
-   "knowledge_ids": [
-    "V0479"
+   "options": [
+    "それはたいへんなショックでした。",
+    "どうしてあなたは一人になったの？",
+    "この小包を船便で送ってください。",
+    "火が消えないようにしてください。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0167",
-   "day": 17,
+   "h": "504dd6fa",
+   "oh": [
+    "4f933c74",
+    "23d94b23",
+    "79aca341",
+    "504dd6fa"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0166"
+  },
+  {
+   "qid": "P-017-06-44658f136fcb",
    "prompt": "那座小镇就在伦敦北边。",
-   "knowledge_ids": [
-    "V0480"
+   "options": [
+    "その城は１６１０年に建てられた。",
+    "その事が彼のすべての夢を壊した。",
+    "お尋ねしてもよろしいでしょうか。",
+    "その町はロンドンのすぐ北にある。"
    ],
-   "hint": ""
+   "h": "efe3c905",
+   "oh": [
+    "6b28f1e6",
+    "2835eaff",
+    "1317d3c0",
+    "efe3c905"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0167"
   },
   {
-   "id": "S0168",
-   "day": 17,
-   "direction": "ja-zh",
+   "qid": "P-017-07-25fd93bafbdc",
    "prompt": "どちらがあなたのギターですか。",
-   "knowledge_ids": [
-    "V0481"
+   "options": [
+    "哪一把是你的吉他？",
+    "那个国家气候温和。",
+    "他是不是被车撞了？",
+    "他们会组织工会吧。"
    ],
-   "hint": ""
+   "h": "4a841a74",
+   "oh": [
+    "4a841a74",
+    "82295631",
+    "7a6b5ce4",
+    "4a5d6cc4"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0168"
   },
   {
-   "id": "S0169",
-   "day": 17,
-   "direction": "ja-zh",
+   "qid": "P-017-08-669efb7ee28a",
    "prompt": "ジャックは私に汚いいたずらをした。",
-   "knowledge_ids": [
-    "V0482"
+   "options": [
+    "杰克对我搞了个卑鄙的恶作剧。",
+    "你已经失去了集中注意力的能力。",
+    "要是电话响了，你能接一下吗。",
+    "史密斯先生说话语气温和。"
    ],
-   "hint": ""
+   "h": "1eacb1bd",
+   "oh": [
+    "1eacb1bd",
+    "fd00d321",
+    "c0147fd2",
+    "9e51d31a"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0169"
   },
   {
-   "id": "S0170",
-   "day": 17,
-   "direction": "ja-zh",
+   "qid": "P-017-09-b37fc4ee9474",
    "prompt": "私たちは喫茶店で昼食をとった。",
-   "knowledge_ids": [
-    "V0483"
+   "options": [
+    "生命是什么时候诞生的？",
+    "狗是人类最亲密的朋友。",
+    "语调有时也能传达感情。",
+    "我们在咖啡馆吃了午饭。"
    ],
-   "hint": ""
+   "h": "f4d70353",
+   "oh": [
+    "3df29c45",
+    "312f7b70",
+    "ac5b615a",
+    "f4d70353"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0170"
   }
  ],
  "quiz": [

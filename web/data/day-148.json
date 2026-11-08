@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V2617",
    "front": "熱中",
    "back": "热衷；着迷",
+   "kana": "ねっちゅう",
    "stage": "planned"
   },
   {
    "kid": "V2618",
    "front": "年間",
    "back": "一年间；年度",
+   "kana": "ねんかん",
    "stage": "planned"
   },
   {
    "kid": "V2619",
    "front": "年中",
    "back": "全年；一年到头",
+   "kana": "ねんじゅう",
    "stage": "planned"
   },
   {
@@ -70,31 +73,36 @@
   {
    "kid": "K0605",
    "front": "慣",
-   "back": "习惯；习惯干｜音 カン",
+   "back": "习惯；习惯干",
+   "kana": "カン、な.れる、な.らす",
    "stage": "planned"
   },
   {
    "kid": "K0606",
    "front": "礼",
-   "back": "礼节；谢意｜音 レイ、ライ",
+   "back": "礼节；谢意",
+   "kana": "レイ、ライ",
    "stage": "planned"
   },
   {
    "kid": "V2575",
    "front": "眺める",
    "back": "眺望；凝视",
+   "kana": "ながめる",
    "stage": "planned"
   },
   {
    "kid": "V2576",
    "front": "流れ",
    "back": "水流；潮流",
+   "kana": "ながれ",
    "stage": "planned"
   },
   {
    "kid": "V2577",
    "front": "流れる",
    "back": "流动；漂流",
+   "kana": "ながれる",
    "stage": "planned"
   },
   {
@@ -106,13 +114,15 @@
   {
    "kid": "K0597",
    "front": "歯",
-   "back": "牙齿｜音 シ",
+   "back": "牙齿",
+   "kana": "シ、は",
    "stage": "planned"
   },
   {
    "kid": "K0598",
    "front": "忘",
-   "back": "忘记｜音 ボウ",
+   "back": "忘记",
+   "kana": "ボウ、わす.れる",
    "stage": "planned"
   }
  ],
@@ -515,104 +525,204 @@
  ],
  "sentences": [
   {
-   "id": "S1471",
-   "day": 148,
-   "direction": "zh-ja",
+   "qid": "P-148-00-039b1fe347b9",
    "prompt": "他本来该当演员的。",
-   "knowledge_ids": [
-    "V2651"
+   "options": [
+    "すぐに旅の支度をしなさい。",
+    "彼女には常識が欠けている。",
+    "彼は俳優になるべきだった。",
+    "スミス氏は市長候補である。"
    ],
-   "hint": ""
+   "h": "578f5017",
+   "oh": [
+    "a0bc963b",
+    "53186bea",
+    "578f5017",
+    "d7451ff4"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1471"
   },
   {
-   "id": "S1472",
-   "day": 148,
-   "direction": "zh-ja",
+   "qid": "P-148-01-1396af8f8a78",
    "prompt": "我的梦想是当飞行员。",
-   "knowledge_ids": [
-    "V2652"
+   "options": [
+    "そのかごはリンゴでいっぱいだった。",
+    "私の夢はパイロットになることです。",
+    "一日で５００ドルつかってしまった。",
+    "彼女その瞬間にカッとなったんだね。"
    ],
-   "hint": ""
+   "h": "4fe1c6c5",
+   "oh": [
+    "8ffcbdb4",
+    "4fe1c6c5",
+    "3fe654f9",
+    "b90b4381"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1472"
   },
   {
-   "id": "S1473",
-   "day": 148,
-   "direction": "zh-ja",
+   "qid": "P-148-02-f922b7c62ab9",
    "prompt": "我舍不得离开他的墓。",
-   "knowledge_ids": [
-    "V2653"
+   "options": [
+    "シャッターを押してくれますか。",
+    "もっと易しい事を聞いて下さい。",
+    "オリーブの実から油が取れます。",
+    "私は彼の墓を立ち去り難かった。"
    ],
-   "hint": ""
+   "h": "e1073c0b",
+   "oh": [
+    "a9a6fa1f",
+    "84e4e179",
+    "9ffe72d0",
+    "e1073c0b"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1473"
   },
   {
-   "id": "S1474",
-   "day": 148,
-   "direction": "zh-ja",
+   "qid": "P-148-03-86503db49e9a",
    "prompt": "这是多么荒唐的事啊。",
-   "knowledge_ids": [
-    "V2654"
+   "options": [
+    "ちょっと寄って行きませんか。",
+    "なんという馬鹿なことだろう。",
+    "彼は商売をたたんで引退した。",
+    "彼は怒って首を左右に振った。"
    ],
-   "hint": ""
+   "h": "c32a4fad",
+   "oh": [
+    "187ef6ad",
+    "c32a4fad",
+    "144390d5",
+    "332d9f86"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1474"
   },
   {
-   "id": "S1475",
-   "day": 148,
-   "direction": "zh-ja",
+   "qid": "P-148-04-6e5fd4bd9fad",
    "prompt": "他拥有心理学博士学位。",
-   "knowledge_ids": [
-    "V2655"
+   "options": [
+    "彼は心理学博士の学位を持っている。",
+    "どちらのかばんがあなたの物ですか。",
+    "バリウムをまず一口飲んでください。",
+    "あなたがここに居たのは幸いでした。"
    ],
-   "hint": ""
+   "h": "316eb7ce",
+   "oh": [
+    "316eb7ce",
+    "1da36d41",
+    "50f70cb0",
+    "6aab53b9"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1475"
   },
   {
-   "id": "S1476",
-   "day": 148,
-   "direction": "zh-ja",
+   "qid": "P-148-05-730360a884f4",
    "prompt": "来，给你量一下体温。",
-   "knowledge_ids": [
-    "V2656"
+   "options": [
+    "その金は体育館の建設に当てられた。",
+    "さあ、あなたの体温を計りましょう。",
+    "このチーズはピリッとした味がする。",
+    "そのかごはリンゴでいっぱいだった。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1477",
-   "day": 148,
+   "h": "f1eef958",
+   "oh": [
+    "6527799c",
+    "f1eef958",
+    "14565358",
+    "8ffcbdb4"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1476"
+  },
+  {
+   "qid": "P-148-06-090e97a76456",
    "prompt": "那场演出获得了雷鸣般的掌声。",
-   "knowledge_ids": [
-    "V2658"
+   "options": [
+    "その公演は万雷の拍手を受けた。",
+    "この菓子を自由にお取り下さい。",
+    "彼は今日、お弁当を持って来た。",
+    "それはあなたのナイフではない。"
    ],
-   "hint": ""
+   "h": "4c0102c4",
+   "oh": [
+    "4c0102c4",
+    "ff6eaffd",
+    "acc40490",
+    "89c04ee5"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1477"
   },
   {
-   "id": "S1478",
-   "day": 148,
-   "direction": "ja-zh",
+   "qid": "P-148-07-1337e65cd3ef",
    "prompt": "ジョンは莫大な財産を相続した。",
-   "knowledge_ids": [
-    "V2659"
+   "options": [
+    "因为当时我是报社记者。",
+    "约翰继承了一大笔财产。",
+    "快到十点时工作结束了。",
+    "累的话倒不如休息更好。"
    ],
-   "hint": ""
+   "h": "c5e86987",
+   "oh": [
+    "479e92ec",
+    "c5e86987",
+    "9b28f76d",
+    "97b7981d"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1478"
   },
   {
-   "id": "S1479",
-   "day": 148,
-   "direction": "ja-zh",
+   "qid": "P-148-08-b15331a23995",
    "prompt": "そのニュースは彼の怒りを爆発させた。",
-   "knowledge_ids": [
-    "V2660"
+   "options": [
+    "他们的意见和我的不同。",
+    "生命是什么时候诞生的？",
+    "那条消息让他怒火爆发。",
+    "能让我看看那条裙子吗？"
    ],
-   "hint": ""
+   "h": "af292209",
+   "oh": [
+    "1d38ae3",
+    "3df29c45",
+    "af292209",
+    "372e9993"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1479"
   },
   {
-   "id": "S1480",
-   "day": 148,
-   "direction": "ja-zh",
+   "qid": "P-148-09-1bae3704769b",
    "prompt": "あの博物館はくるに値する。",
-   "knowledge_ids": [
-    "V2661"
+   "options": [
+    "他为什么辞职是个谜。",
+    "海明威的文笔很糟糕。",
+    "你会按能力逐步提高。",
+    "那座博物馆值得一去。"
    ],
-   "hint": ""
+   "h": "c75e0c3a",
+   "oh": [
+    "f91d2778",
+    "9cbca2c",
+    "d44d0121",
+    "c75e0c3a"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1480"
   }
  ],
  "quiz": [

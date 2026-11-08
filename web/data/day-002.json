@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0001",
    "front": "私",
    "back": "我",
+   "kana": "わたし",
    "stage": "planned"
   },
   {
    "kid": "V0002",
    "front": "あなた",
    "back": "你；您",
+   "kana": "あなた",
    "stage": "planned"
   },
   {
    "kid": "V0003",
    "front": "さん",
    "back": "…先生／…小姐（敬称）",
+   "kana": "さん",
    "stage": "planned"
   },
   {
@@ -71,13 +74,15 @@
   {
    "kid": "K0001",
    "front": "日",
-   "back": "太阳；日子；日本｜音 ニチ、ジツ",
+   "back": "太阳；日子；日本",
+   "kana": "ニチ、ジツ、ひ、か",
    "stage": "planned"
   },
   {
    "kid": "K0002",
    "front": "月",
-   "back": "月亮；月份｜音 ゲツ、ガツ",
+   "back": "月亮；月份",
+   "kana": "ゲツ、ガツ、つき",
    "stage": "planned"
   }
  ],
@@ -357,104 +362,204 @@
  ],
  "sentences": [
   {
-   "id": "S0011",
-   "day": 2,
-   "direction": "zh-ja",
+   "qid": "P-002-00-ecc550eb38ac",
    "prompt": "两个人去。",
-   "knowledge_ids": [
-    "V0010"
+   "options": [
+    "私は泳げません。",
+    "友達に電話します。",
+    "彼は重責を解かれた。",
+    "二人で行きます。"
    ],
-   "hint": ""
+   "h": "2889b9fc",
+   "oh": [
+    "1319ae82",
+    "ec5f7b75",
+    "93f07e6c",
+    "2889b9fc"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0011"
   },
   {
-   "id": "S0012",
-   "day": 2,
-   "direction": "zh-ja",
+   "qid": "P-002-01-e6a9dd963037",
    "prompt": "三点见。",
-   "knowledge_ids": [
-    "V0011"
+   "options": [
+    "光が世にやって来た。",
+    "この魚は毒がない。",
+    "七時に起きます。",
+    "三時に会います。"
    ],
-   "hint": ""
+   "h": "56cc7c4e",
+   "oh": [
+    "f14e475a",
+    "14e4bcc7",
+    "d0902946",
+    "56cc7c4e"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0012"
   },
   {
-   "id": "S0013",
-   "day": 2,
-   "direction": "zh-ja",
+   "qid": "P-002-02-5181563a1f5b",
    "prompt": "请给我四个。",
-   "knowledge_ids": [
-    "V0012"
+   "options": [
+    "四つください。",
+    "彼女は元気です。",
+    "鍵を見つけました。",
+    "お茶を飲みます。"
    ],
-   "hint": ""
+   "h": "c8e5fa2",
+   "oh": [
+    "c8e5fa2",
+    "5a2e94c3",
+    "aaec1236",
+    "d303d227"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0013"
   },
   {
-   "id": "S0014",
-   "day": 2,
-   "direction": "zh-ja",
+   "qid": "P-002-03-dace7597e5a9",
    "prompt": "五日元。",
-   "knowledge_ids": [
-    "V0013"
+   "options": [
+    "五円です。",
+    "水曜日は休みです。",
+    "八日から休みます。",
+    "彼女は元気です。"
    ],
-   "hint": ""
+   "h": "8a4fc8b3",
+   "oh": [
+    "8a4fc8b3",
+    "e29e6c91",
+    "4d6dbc76",
+    "5a2e94c3"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0014"
   },
   {
-   "id": "S0015",
-   "day": 2,
-   "direction": "zh-ja",
+   "qid": "P-002-04-9a603d6f6cb8",
    "prompt": "六点。",
-   "knowledge_ids": [
-    "V0014"
+   "options": [
+    "これは何ですか。",
+    "八日から休みます。",
+    "六時です。",
+    "部屋に猫がいます。"
    ],
-   "hint": ""
+   "h": "df5e69fc",
+   "oh": [
+    "c31f804f",
+    "4d6dbc76",
+    "df5e69fc",
+    "dcb9e3b7"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0015"
   },
   {
-   "id": "S0016",
-   "day": 2,
-   "direction": "zh-ja",
+   "qid": "P-002-05-b7610581e8a8",
    "prompt": "七点起床。",
-   "knowledge_ids": [
-    "V0015"
+   "options": [
+    "七時に起きます。",
+    "お互い相性がいい。",
+    "部屋の中にいます。",
+    "間違いを直します。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0017",
-   "day": 2,
+   "h": "d0902946",
+   "oh": [
+    "d0902946",
+    "e4d2ac20",
+    "3d1f2b43",
+    "f38675d3"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0016"
+  },
+  {
+   "qid": "P-002-06-c9ecfcf741f0",
    "prompt": "从八号开始休息。",
-   "knowledge_ids": [
-    "V0016"
+   "options": [
+    "これはいくらですか。",
+    "お茶を飲みます。",
+    "雨が降っています。",
+    "八日から休みます。"
    ],
-   "hint": ""
+   "h": "4d6dbc76",
+   "oh": [
+    "6506aa3c",
+    "d303d227",
+    "db98fcac",
+    "4d6dbc76"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0017"
   },
   {
-   "id": "S0018",
-   "day": 2,
-   "direction": "ja-zh",
+   "qid": "P-002-07-90f5a86109b8",
    "prompt": "九時です。",
-   "knowledge_ids": [
-    "V0017"
+   "options": [
+    "我不是老师。",
+    "我正在找助手。",
+    "这是书。",
+    "九点。"
    ],
-   "hint": ""
+   "h": "c18d51b3",
+   "oh": [
+    "b3476675",
+    "f7ef99a7",
+    "3fc79685",
+    "c18d51b3"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0018"
   },
   {
-   "id": "S0019",
-   "day": 2,
-   "direction": "ja-zh",
+   "qid": "P-002-08-7436b1c3056c",
    "prompt": "十人います。",
-   "knowledge_ids": [
-    "V0018"
+   "options": [
+    "有十个人。",
+    "看看你的周围。",
+    "发邮件。",
+    "周五很忙。"
    ],
-   "hint": ""
+   "h": "90da857",
+   "oh": [
+    "90da857",
+    "dc6d33fb",
+    "a9103d86",
+    "ec14dca4"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0019"
   },
   {
-   "id": "S0020",
-   "day": 2,
-   "direction": "ja-zh",
+   "qid": "P-002-09-68925cea6ef4",
    "prompt": "私は先生ではありません。",
-   "knowledge_ids": [
-    "G0002"
+   "options": [
+    "我不是老师。",
+    "这水真舒服啊。",
+    "有十个人。",
+    "周五很忙。"
    ],
-   "hint": "N は N ではありません / じゃない"
+   "h": "b3476675",
+   "oh": [
+    "b3476675",
+    "98bf654",
+    "90da857",
+    "ec14dca4"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0020"
   }
  ],
  "quiz": [

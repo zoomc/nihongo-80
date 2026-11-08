@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0023",
    "front": "今日",
    "back": "今天",
+   "kana": "きょう",
    "stage": "planned"
   },
   {
    "kid": "V0024",
    "front": "明日",
    "back": "明天",
+   "kana": "あした",
    "stage": "planned"
   },
   {
    "kid": "V0025",
    "front": "昨日",
    "back": "昨天",
+   "kana": "きのう",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0011",
    "front": "四",
-   "back": "四｜音 シ",
+   "back": "四",
+   "kana": "シ、よ、よっつ、よん",
    "stage": "planned"
   },
   {
    "kid": "K0012",
    "front": "五",
-   "back": "五｜音 ゴ",
+   "back": "五",
+   "kana": "ゴ、いつ、いつつ",
    "stage": "planned"
   },
   {
    "kid": "V0001",
    "front": "私",
    "back": "我",
+   "kana": "わたし",
    "stage": "planned"
   },
   {
    "kid": "V0002",
    "front": "あなた",
    "back": "你；您",
+   "kana": "あなた",
    "stage": "planned"
   },
   {
    "kid": "V0003",
    "front": "さん",
    "back": "…先生／…小姐（敬称）",
+   "kana": "さん",
    "stage": "planned"
   },
   {
@@ -554,104 +562,204 @@
  ],
  "sentences": [
   {
-   "id": "S0031",
-   "day": 4,
-   "direction": "zh-ja",
+   "qid": "P-004-00-2bca17a116e9",
    "prompt": "看表。",
-   "knowledge_ids": [
-    "V0028"
+   "options": [
+    "時計を見ます。",
+    "日本語を話します。",
+    "ご協力に感謝します。",
+    "部屋の中にいます。"
    ],
-   "hint": ""
+   "h": "4799fc5d",
+   "oh": [
+    "4799fc5d",
+    "29338a89",
+    "fab0a215",
+    "3d1f2b43"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0031"
   },
   {
-   "id": "S0032",
-   "day": 4,
-   "direction": "zh-ja",
+   "qid": "P-004-01-3d3871145dd2",
    "prompt": "每天去学校。",
-   "knowledge_ids": [
-    "V0029"
+   "options": [
+    "新しい仕事を始めます。",
+    "毎日、学校へ行きます。",
+    "この料理は美味しいです。",
+    "この川の流れは急だ。"
    ],
-   "hint": ""
+   "h": "53ed5616",
+   "oh": [
+    "2ac3d1c7",
+    "53ed5616",
+    "b166969e",
+    "2deea5d0"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0032"
   },
   {
-   "id": "S0033",
-   "day": 4,
-   "direction": "zh-ja",
+   "qid": "P-004-02-ba3d824298e8",
    "prompt": "这周很忙。",
-   "knowledge_ids": [
-    "V0030"
+   "options": [
+    "給料が上がりました。",
+    "食糧が不足している。",
+    "あの山の頂上は平らだ。",
+    "今週は忙しいです。"
    ],
-   "hint": ""
+   "h": "3b7539ef",
+   "oh": [
+    "fcd1ef76",
+    "fdc63dc1",
+    "31771ee1",
+    "3b7539ef"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0033"
   },
   {
-   "id": "S0034",
-   "day": 4,
-   "direction": "zh-ja",
+   "qid": "P-004-03-eba99917c92a",
    "prompt": "周一有考试。",
-   "knowledge_ids": [
-    "V0031"
+   "options": [
+    "この靴下はちぐはぐだ。",
+    "月曜日に試験があります。",
+    "文法なんかくそくらえだ。",
+    "この線の終点はどこですか。"
    ],
-   "hint": ""
+   "h": "3c031ff",
+   "oh": [
+    "6db284b2",
+    "3c031ff",
+    "cc3a97f3",
+    "4b98e1d7"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0034"
   },
   {
-   "id": "S0035",
-   "day": 4,
-   "direction": "zh-ja",
+   "qid": "P-004-04-3d6870ef2077",
    "prompt": "周二有考试。",
-   "knowledge_ids": [
-    "V0032"
+   "options": [
+    "あの長髪の青年は粗野だ。",
+    "月曜日に試験があります。",
+    "なぜ彼と踊らなかったの？",
+    "火曜日に試験があります。"
    ],
-   "hint": ""
+   "h": "8a208808",
+   "oh": [
+    "bc046002",
+    "3c031ff",
+    "afc9d668",
+    "8a208808"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0035"
   },
   {
-   "id": "S0036",
-   "day": 4,
-   "direction": "zh-ja",
+   "qid": "P-004-05-a4d07d462473",
    "prompt": "周三休息。",
-   "knowledge_ids": [
-    "V0033"
+   "options": [
+    "部屋に猫がいます。",
+    "食糧が不足している。",
+    "水曜日は休みです。",
+    "駅で友達を待ちます。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0037",
-   "day": 4,
+   "h": "e29e6c91",
+   "oh": [
+    "dcb9e3b7",
+    "fdc63dc1",
+    "e29e6c91",
+    "2ae190df"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0036"
+  },
+  {
+   "qid": "P-004-06-5093249fffc7",
    "prompt": "周四看电影。",
-   "knowledge_ids": [
-    "V0034"
+   "options": [
+    "木曜日に映画を見ます。",
+    "明日、学校へ行きます。",
+    "人は意識のある生き物だ。",
+    "こんにちは、元気ですか。"
    ],
-   "hint": ""
+   "h": "bd43fb8",
+   "oh": [
+    "bd43fb8",
+    "b7b27cd6",
+    "5eb9d09f",
+    "21e6b5c4"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0037"
   },
   {
-   "id": "S0038",
-   "day": 4,
-   "direction": "ja-zh",
+   "qid": "P-004-07-a22d899b2eff",
    "prompt": "金曜日は忙しいです。",
-   "knowledge_ids": [
-    "V0035"
+   "options": [
+    "这本书很贵。",
+    "上电车。",
+    "周五很忙。",
+    "和朋友看电影。"
    ],
-   "hint": ""
+   "h": "ec14dca4",
+   "oh": [
+    "804e5fb1",
+    "efa44868",
+    "ec14dca4",
+    "1d346a36"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0038"
   },
   {
-   "id": "S0039",
-   "day": 4,
-   "direction": "ja-zh",
+   "qid": "P-004-08-6d437c9521a9",
    "prompt": "土曜日に買い物します。",
-   "knowledge_ids": [
-    "V0036"
+   "options": [
+    "她很精神。",
+    "周六购物。",
+    "从第十课开始吧。",
+    "这本书很贵。"
    ],
-   "hint": ""
+   "h": "2cd26856",
+   "oh": [
+    "cd3f1586",
+    "2cd26856",
+    "7c4687ec",
+    "804e5fb1"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0039"
   },
   {
-   "id": "S0040",
-   "day": 4,
-   "direction": "ja-zh",
+   "qid": "P-004-09-ca53cd5b98e5",
    "prompt": "日曜日は休みです。",
-   "knowledge_ids": [
-    "V0037"
+   "options": [
+    "这本书很贵。",
+    "周日休息。",
+    "喜欢鱼。",
+    "买蔬菜。"
    ],
-   "hint": ""
+   "h": "ba3618f4",
+   "oh": [
+    "804e5fb1",
+    "ba3618f4",
+    "1c49d4c5",
+    "6563b707"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0040"
   }
  ],
  "quiz": [

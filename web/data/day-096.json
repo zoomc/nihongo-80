@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V1672",
    "front": "罹る",
    "back": "患病",
+   "kana": "かかる",
    "stage": "planned"
   },
   {
    "kid": "V1673",
    "front": "限る",
    "back": "限于；限定",
+   "kana": "かぎる",
    "stage": "planned"
   },
   {
    "kid": "V1674",
    "front": "家具",
    "back": "家具",
+   "kana": "かぐ",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0397",
    "front": "身",
-   "back": "身体；身份｜音 シン",
+   "back": "身体；身份",
+   "kana": "シン、み",
    "stage": "planned"
   },
   {
    "kid": "K0398",
    "front": "費",
-   "back": "费用；花费｜音 ヒ",
+   "back": "费用；花费",
+   "kana": "ヒ、つい.やす、つい.える",
    "stage": "planned"
   },
   {
    "kid": "V1639",
    "front": "恩",
    "back": "恩情",
+   "kana": "おん",
    "stage": "planned"
   },
   {
    "kid": "V1640",
    "front": "音",
    "back": "声音",
+   "kana": "おん",
    "stage": "planned"
   },
   {
    "kid": "V1641",
    "front": "温暖",
    "back": "温暖",
+   "kana": "おんだん",
    "stage": "planned"
   },
   {
@@ -454,104 +462,204 @@
  ],
  "sentences": [
   {
-   "id": "S0951",
-   "day": 96,
-   "direction": "zh-ja",
+   "qid": "P-096-00-3bbbb24f2bd7",
    "prompt": "孩子们被雷声吓坏了。",
-   "knowledge_ids": [
-    "V1723"
+   "options": [
+    "くだける波が泡を作った。",
+    "光が世にやって来た。",
+    "駅の前に店があります。",
+    "子供達は雷におびえた。"
    ],
-   "hint": ""
+   "h": "6779ffc1",
+   "oh": [
+    "99b9615f",
+    "f14e475a",
+    "e62e23a2",
+    "6779ffc1"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0951"
   },
   {
-   "id": "S0952",
-   "day": 96,
-   "direction": "zh-ja",
+   "qid": "P-096-01-7df2495e6ad3",
    "prompt": "你在哪儿剪的头发？",
-   "knowledge_ids": [
-    "V1724"
+   "options": [
+    "どこで髪の毛を切ったの。",
+    "この会社の社長は誰ですか。",
+    "収入以上の生活をするな。",
+    "この鞄はとても丈夫です。"
    ],
-   "hint": ""
+   "h": "5a83afa2",
+   "oh": [
+    "5a83afa2",
+    "4c5bf5fb",
+    "10ea5c41",
+    "591995a4"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0952"
   },
   {
-   "id": "S0953",
-   "day": 96,
-   "direction": "zh-ja",
+   "qid": "P-096-02-aa12fc6ee830",
    "prompt": "你最喜欢哪门科目？",
-   "knowledge_ids": [
-    "V1725"
+   "options": [
+    "馬に乗ることができますか？",
+    "汚染が地球を傷つけている。",
+    "どの科目が一番好きですか。",
+    "ごく内輪の集まりなのです。"
    ],
-   "hint": ""
+   "h": "8bb3e7ce",
+   "oh": [
+    "1cd64400",
+    "841a8158",
+    "8bb3e7ce",
+    "13852307"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0953"
   },
   {
-   "id": "S0954",
-   "day": 96,
-   "direction": "zh-ja",
+   "qid": "P-096-03-fd182a47b9e4",
    "prompt": "你说的也许是对的。",
-   "knowledge_ids": [
-    "V1726"
+   "options": [
+    "こういうタイプの人はおもしろくない。",
+    "この程度のお金じゃ長くは持たないだろう。",
+    "あなたの言うことは正しいかもしれない。",
+    "「いいえ」とイギリス人は繰り返しました。"
    ],
-   "hint": ""
+   "h": "cdabcfca",
+   "oh": [
+    "b9ffc63c",
+    "2eab4bd1",
+    "cdabcfca",
+    "63d86f79"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0954"
   },
   {
-   "id": "S0955",
-   "day": 96,
-   "direction": "zh-ja",
+   "qid": "P-096-04-2c2b802c6c5e",
    "prompt": "必须在周二早上之前全部做完。",
-   "knowledge_ids": [
-    "V1727"
+   "options": [
+    "これがいわゆる「天ぷら」というものです。",
+    "いったい、いつになったらそのケチは直るの？",
+    "火曜の朝までにすべて終えなければならないのです。",
+    "食べるのにどうしてそんなに手間がかかるのか。"
    ],
-   "hint": ""
+   "h": "8ea08b4b",
+   "oh": [
+    "b094a64a",
+    "a9085e74",
+    "8ea08b4b",
+    "9eb4e2a8"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0955"
   },
   {
-   "id": "S0956",
-   "day": 96,
-   "direction": "zh-ja",
+   "qid": "P-096-05-f2545c207019",
    "prompt": "油箱几乎是空的，得加油了。",
-   "knowledge_ids": [
-    "V1728"
+   "options": [
+    "不動産会社に部屋を紹介してもらいました。",
+    "１月５日から１月１５日までおねがいします。",
+    "ほとんど空なのでガソリンを入れなくてはなりません。",
+    "わざわざ来てくださってありがとうございます。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0957",
-   "day": 96,
+   "h": "a35826ea",
+   "oh": [
+    "e14ddae8",
+    "cd9e0c0",
+    "a35826ea",
+    "6cf4beee"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0956"
+  },
+  {
+   "qid": "P-096-06-6d3ce68b6ee2",
    "prompt": "他们取笑杰克剪头发的方式。",
-   "knowledge_ids": [
-    "V1729"
+   "options": [
+    "私は本棚の本をすべて読んだわけではない。",
+    "この世界の教育にはがっかりしてしまう。",
+    "いったい、いつになったらそのケチは直るの？",
+    "彼らはジャックの髪の刈り方をひやかした。"
    ],
-   "hint": ""
+   "h": "234d4fca",
+   "oh": [
+    "ef0f61c9",
+    "6b522ac9",
+    "a9085e74",
+    "234d4fca"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0957"
   },
   {
-   "id": "S0958",
-   "day": 96,
-   "direction": "ja-zh",
+   "qid": "P-096-07-d0a80a384b3c",
    "prompt": "この河はニューオリンズまで続いている。",
-   "knowledge_ids": [
-    "V1730"
+   "options": [
+    "这次旅行不是出差，是去玩。",
+    "杰克对我搞了个卑鄙的恶作剧。",
+    "这条河一直延伸到新奥尔良。",
+    "你的工作没有达到期待的水准。"
    ],
-   "hint": ""
+   "h": "52962a3e",
+   "oh": [
+    "f448d16f",
+    "1eacb1bd",
+    "52962a3e",
+    "aa45ad00"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0958"
   },
   {
-   "id": "S0959",
-   "day": 96,
-   "direction": "ja-zh",
+   "qid": "P-096-08-71cc87f1eb43",
    "prompt": "くつは革でつくられている。",
-   "knowledge_ids": [
-    "V1731"
+   "options": [
+    "他生于19世纪。",
+    "他是不是被车撞了？",
+    "鞋是用皮革做的。",
+    "你参加比赛了吗？"
    ],
-   "hint": ""
+   "h": "2c2dd42c",
+   "oh": [
+    "122eb4a0",
+    "7a6b5ce4",
+    "2c2dd42c",
+    "51a648e8"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0959"
   },
   {
-   "id": "S0960",
-   "day": 96,
-   "direction": "ja-zh",
+   "qid": "P-096-09-051c8718f0de",
    "prompt": "動物の皮は毛でおおわれている。",
-   "knowledge_ids": [
-    "V1732"
+   "options": [
+    "感到危险请立即避难。",
+    "动物的皮上覆盖着毛。",
+    "他们会组织工会吧。",
+    "他不知道受了多少苦。"
    ],
-   "hint": ""
+   "h": "122d08f3",
+   "oh": [
+    "997ca2a4",
+    "122d08f3",
+    "4a5d6cc4",
+    "95b0f650"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0960"
   }
  ],
  "quiz": [

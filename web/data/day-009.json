@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0120",
    "front": "借りる",
    "back": "借（入）；向人借",
+   "kana": "かりる",
    "stage": "planned"
   },
   {
    "kid": "V0121",
    "front": "教える",
    "back": "教；告诉",
+   "kana": "おしえる",
    "stage": "planned"
   },
   {
    "kid": "V0122",
    "front": "帰る",
    "back": "回；回家",
+   "kana": "かえる",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0037",
    "front": "友",
-   "back": "友；朋友｜音 ユウ",
+   "back": "友；朋友",
+   "kana": "ユウ、とも",
    "stage": "planned"
   },
   {
    "kid": "K0038",
    "front": "父",
-   "back": "父亲｜音 フ",
+   "back": "父亲",
+   "kana": "フ、ちち",
    "stage": "planned"
   },
   {
    "kid": "V0076",
    "front": "友達",
    "back": "朋友",
+   "kana": "ともだち",
    "stage": "planned"
   },
   {
    "kid": "V0077",
    "front": "人",
    "back": "人",
+   "kana": "ひと",
    "stage": "planned"
   },
   {
    "kid": "V0078",
    "front": "学生",
    "back": "学生",
+   "kana": "がくせい",
    "stage": "planned"
   },
   {
@@ -558,104 +566,204 @@
  ],
  "sentences": [
   {
-   "id": "S0081",
-   "day": 9,
-   "direction": "zh-ja",
+   "qid": "P-009-00-f311d48485f9",
    "prompt": "想要新电脑。",
-   "knowledge_ids": [
-    "V0129"
+   "options": [
+    "この本は最近よく売れている。",
+    "新しいパソコンがほしいです。",
+    "上部前方で何かが光っている。",
+    "その嵐の天候は恐ろしかった。"
    ],
-   "hint": ""
+   "h": "70214d18",
+   "oh": [
+    "4defd2d2",
+    "70214d18",
+    "2f7340d9",
+    "99ad2f6e"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0081"
   },
   {
-   "id": "S0082",
-   "day": 9,
-   "direction": "zh-ja",
+   "qid": "P-009-01-8bab999dc902",
    "prompt": "这道菜好吃。",
-   "knowledge_ids": [
-    "V0130"
+   "options": [
+    "この料理は美味しいです。",
+    "あの山の頂上は平らだ。",
+    "この靴下はちぐはぐだ。",
+    "地下鉄で行きたいのです。"
    ],
-   "hint": ""
+   "h": "b166969e",
+   "oh": [
+    "b166969e",
+    "31771ee1",
+    "6db284b2",
+    "7081a755"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0082"
   },
   {
-   "id": "S0083",
-   "day": 9,
-   "direction": "zh-ja",
+   "qid": "P-009-02-c6abb092a5ee",
    "prompt": "这周很忙。",
-   "knowledge_ids": [
-    "V0131"
+   "options": [
+    "今週は忙しいです。",
+    "政府は倒された。",
+    "給料が上がりました。",
+    "田中さんは先生です。"
    ],
-   "hint": ""
+   "h": "3b7539ef",
+   "oh": [
+    "3b7539ef",
+    "d81a873f",
+    "fcd1ef76",
+    "8e0bbf88"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0083"
   },
   {
-   "id": "S0084",
-   "day": 9,
-   "direction": "zh-ja",
+   "qid": "P-009-03-84ad6fc2bfd7",
    "prompt": "今天没昨天冷。",
-   "knowledge_ids": [
-    "V0133"
+   "options": [
+    "このイヤホンは壊れています。",
+    "スミスさんにつないで下さい。",
+    "このネクタイはいくらですか。",
+    "今日は昨日ほど寒くないです。"
    ],
-   "hint": ""
+   "h": "ec826cff",
+   "oh": [
+    "cae4bbd8",
+    "3dda2614",
+    "1261105",
+    "ec826cff"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0084"
   },
   {
-   "id": "S0085",
-   "day": 9,
-   "direction": "zh-ja",
+   "qid": "P-009-04-bd079c589633",
    "prompt": "喜欢鱼。",
-   "knowledge_ids": [
-    "V0134"
+   "options": [
+    "これはいくらですか。",
+    "切符を買います。",
+    "姉は学生です。",
+    "魚が好きです。"
    ],
-   "hint": ""
+   "h": "988b0efd",
+   "oh": [
+    "6506aa3c",
+    "9ad3920e",
+    "fcea6a6c",
+    "988b0efd"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0085"
   },
   {
-   "id": "S0086",
-   "day": 9,
-   "direction": "zh-ja",
+   "qid": "P-009-05-5878002469f6",
    "prompt": "她很精神。",
-   "knowledge_ids": [
-    "V0135"
+   "options": [
+    "大か、小か。",
+    "この魚は毒がない。",
+    "彼女は元気です。",
+    "晴れだと思うよ。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0087",
-   "day": 9,
+   "h": "5a2e94c3",
+   "oh": [
+    "184abe02",
+    "14e4bcc7",
+    "5a2e94c3",
+    "802c8fe4"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0086"
+  },
+  {
+   "qid": "P-009-06-c0589b6ae5fb",
    "prompt": "这个房间安静。",
-   "knowledge_ids": [
-    "V0136"
+   "options": [
+    "この小麦は粉にされる。",
+    "この部屋は静かです。",
+    "食糧が不足している。",
+    "この川の流れは急だ。"
    ],
-   "hint": ""
+   "h": "ed05be90",
+   "oh": [
+    "8fa39b7e",
+    "ed05be90",
+    "fdc63dc1",
+    "2deea5d0"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0087"
   },
   {
-   "id": "S0088",
-   "day": 9,
-   "direction": "ja-zh",
+   "qid": "P-009-07-0821a189a9d3",
    "prompt": "この地図は便利です。",
-   "knowledge_ids": [
-    "V0137"
+   "options": [
+    "这张地图很方便。",
+    "食物在胃里消化。",
+    "定期做健康检查。",
+    "和这件事没关系。"
    ],
-   "hint": ""
+   "h": "1be23d38",
+   "oh": [
+    "1be23d38",
+    "835e5ce8",
+    "e7de9c23",
+    "1abbc7cc"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0088"
   },
   {
-   "id": "S0089",
-   "day": 9,
-   "direction": "ja-zh",
+   "qid": "P-009-08-60f417b967ac",
    "prompt": "この本はとても高いです。",
-   "knowledge_ids": [
-    "V0139"
+   "options": [
+    "他偷袭了对手。",
+    "买蔬菜。",
+    "给你五美元。",
+    "这本书很贵。"
    ],
-   "hint": ""
+   "h": "804e5fb1",
+   "oh": [
+    "4050f9f9",
+    "6563b707",
+    "82b87323",
+    "804e5fb1"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0089"
   },
   {
-   "id": "S0090",
-   "day": 9,
-   "direction": "ja-zh",
+   "qid": "P-009-09-653a2ab1e5fb",
    "prompt": "少し休みます。",
-   "knowledge_ids": [
-    "V0140"
+   "options": [
+    "他生于19世纪。",
+    "传闻原来是真的。",
+    "稍微休息一下。",
+    "她有表演天赋。"
    ],
-   "hint": ""
+   "h": "f3109a5f",
+   "oh": [
+    "122eb4a0",
+    "6342e7d8",
+    "f3109a5f",
+    "85f35af"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0090"
   }
  ],
  "quiz": [

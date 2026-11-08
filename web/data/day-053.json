@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1100",
    "front": "産業",
    "back": "产业",
+   "kana": "さんぎょう",
    "stage": "planned"
   },
   {
    "kid": "V1101",
    "front": "サンダル",
    "back": "凉鞋",
+   "kana": "サンダル",
    "stage": "planned"
   },
   {
    "kid": "V1102",
    "front": "サンドイッチ",
    "back": "三明治",
+   "kana": "サンドイッチ",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0260",
    "front": "黒",
-   "back": "黑；黑色｜音 コク",
+   "back": "黑；黑色",
+   "kana": "コク、くろ、くろ.ずむ、くろ.い",
    "stage": "planned"
   },
   {
    "kid": "K0261",
    "front": "花",
-   "back": "花；花朵｜音 カ、ケ",
+   "back": "花；花朵",
+   "kana": "カ、ケ、はな",
    "stage": "planned"
   },
   {
    "kid": "V1067",
    "front": "こと",
    "back": "事情",
+   "kana": "こと",
    "stage": "planned"
   },
   {
    "kid": "V1068",
    "front": "小鳥",
    "back": "小鸟",
+   "kana": "ことり",
    "stage": "planned"
   },
   {
    "kid": "V1069",
    "front": "このあいだ",
    "back": "前几天",
+   "kana": "このあいだ",
    "stage": "planned"
   },
   {
@@ -530,104 +538,204 @@
  ],
  "sentences": [
   {
-   "id": "S0521",
-   "day": 53,
-   "direction": "zh-ja",
+   "qid": "P-053-00-55513f70ac4f",
    "prompt": "这家公司的社长是谁？",
-   "knowledge_ids": [
-    "V1121"
+   "options": [
+    "この会社の社長は誰ですか。",
+    "それを言われると弱いなあ。",
+    "私もまた、議員の一人です。",
+    "どの科目が一番好きですか。"
    ],
-   "hint": ""
+   "h": "4c5bf5fb",
+   "oh": [
+    "4c5bf5fb",
+    "84412a13",
+    "71ef590d",
+    "8bb3e7ce"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0521"
   },
   {
-   "id": "S0522",
-   "day": 53,
-   "direction": "zh-ja",
+   "qid": "P-053-01-f1a7ce428fe5",
    "prompt": "那辆车挡路了，请挪开。",
-   "knowledge_ids": [
-    "V1122"
+   "options": [
+    "その車がじゃまです。動かしてください。",
+    "そこの乞食が泥棒である事がわかった。",
+    "こんな余計な機能なんでつけたんだろう。",
+    "あのおいしいワインをなぜ飲まないんだい。"
    ],
-   "hint": ""
+   "h": "4b3d262c",
+   "oh": [
+    "4b3d262c",
+    "cc176d6c",
+    "33aba312",
+    "5ebf955f"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0522"
   },
   {
-   "id": "S0523",
-   "day": 53,
-   "direction": "zh-ja",
+   "qid": "P-053-02-9115f2dcc6ce",
    "prompt": "草莓被做成了果酱。",
-   "knowledge_ids": [
-    "V1123"
+   "options": [
+    "心理学は人間の感情を扱う。",
+    "どの科目が一番好きですか。",
+    "私もまた、議員の一人です。",
+    "イチゴはジャムに作られる。"
    ],
-   "hint": ""
+   "h": "fc94d29",
+   "oh": [
+    "40ba6b43",
+    "8bb3e7ce",
+    "71ef590d",
+    "fc94d29"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0523"
   },
   {
-   "id": "S0524",
-   "day": 53,
-   "direction": "zh-ja",
+   "qid": "P-053-03-89509d893424",
    "prompt": "钱是花是存，随你便。",
-   "knowledge_ids": [
-    "V1124"
+   "options": [
+    "お金を使うも貯めるも自由にしなさい。",
+    "先生は毎日の練習の大切さを強調した。",
+    "ホテルの前で私を車で拾ってください。",
+    "本が部屋のあちこちに散らばっていた。"
    ],
-   "hint": ""
+   "h": "d62fbdda",
+   "oh": [
+    "d62fbdda",
+    "da0a563f",
+    "a75d76f8",
+    "95e7244e"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0524"
   },
   {
-   "id": "S0525",
-   "day": 53,
-   "direction": "zh-ja",
+   "qid": "P-053-04-538a36495489",
    "prompt": "那个习惯起源于中国。",
-   "knowledge_ids": [
-    "V1125"
+   "options": [
+    "今月の売り上げはよくない。",
+    "あなたはなぜ働いているの。",
+    "その習慣は中国で始まった。",
+    "二人は同じ結論に到達した。"
    ],
-   "hint": ""
+   "h": "bd186afc",
+   "oh": [
+    "61acb9a7",
+    "6298fea3",
+    "bd186afc",
+    "1f43ff05"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0525"
   },
   {
-   "id": "S0526",
-   "day": 53,
-   "direction": "zh-ja",
+   "qid": "P-053-05-5cdf4312e5ba",
    "prompt": "请填写你的姓名和住址。",
-   "knowledge_ids": [
-    "V1126"
+   "options": [
+    "あなたの名前と住所を記入しなさい。",
+    "彼は世間でいう音楽の真の愛好者だ。",
+    "彼女は成長して美しい婦人になった。",
+    "アメリカ旅行のよい記念になります。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0527",
-   "day": 53,
+   "h": "52eeffa0",
+   "oh": [
+    "52eeffa0",
+    "3e786b72",
+    "f14714b1",
+    "626a81c1"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0526"
+  },
+  {
+   "qid": "P-053-06-5a7c2e69b14f",
    "prompt": "柔道里技巧比力气更重要。",
-   "knowledge_ids": [
-    "V1127"
+   "options": [
+    "生物学者はその現象の観察に集中した。",
+    "あなたには想像もつかない、でしょ？",
+    "この音楽はバッハによって作曲された。",
+    "柔道では力より技のほうが大切である。"
    ],
-   "hint": ""
+   "h": "dffb12c8",
+   "oh": [
+    "20b3b4dd",
+    "6c1152da",
+    "4681d2ed",
+    "dffb12c8"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0527"
   },
   {
-   "id": "S0528",
-   "day": 53,
-   "direction": "ja-zh",
+   "qid": "P-053-07-6ea07087d988",
    "prompt": "私はこの本を買うのに十分なお金を持っている。",
-   "knowledge_ids": [
-    "V1128"
+   "options": [
+    "语调有时也能传达感情。",
+    "她应该多听听别人的话。",
+    "迟到的人就让鬼吃掉吧。",
+    "我有足够的钱买这本书。"
    ],
-   "hint": ""
+   "h": "c449930f",
+   "oh": [
+    "ac5b615a",
+    "c6d6351d",
+    "3069b7e7",
+    "c449930f"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0528"
   },
   {
-   "id": "S0529",
-   "day": 53,
-   "direction": "ja-zh",
+   "qid": "P-053-08-6f32d3e7fd20",
    "prompt": "出席できないんですか。どうして？",
-   "knowledge_ids": [
-    "V1129"
+   "options": [
+    "物质会随温度改变形状。",
+    "他打橄榄球的时候受了伤。",
+    "你不能出席吗？为什么？",
+    "快点的话能赶上首班车。"
    ],
-   "hint": ""
+   "h": "e0130b6d",
+   "oh": [
+    "13f3f3b1",
+    "45de1693",
+    "e0130b6d",
+    "36293e64"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0529"
   },
   {
-   "id": "S0530",
-   "day": 53,
-   "direction": "ja-zh",
+   "qid": "P-053-09-2440582eed4c",
    "prompt": "趣味については話しましたか？",
-   "knowledge_ids": [
-    "V1130"
+   "options": [
+    "那位画家可以说是永远的少年。",
+    "少年把自己的名字刻在树上。",
+    "谈过兴趣爱好方面的事了吗？",
+    "我看见他们挽着手臂走路。"
    ],
-   "hint": ""
+   "h": "c57f7e73",
+   "oh": [
+    "2a6e090",
+    "a859b819",
+    "c57f7e73",
+    "e24b81f7"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0530"
   }
  ],
  "quiz": [

@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0608",
    "front": "それでは",
    "back": "那么",
+   "kana": "それでは",
    "stage": "planned"
   },
   {
    "kid": "V0609",
    "front": "大学",
    "back": "大学",
+   "kana": "だいがく",
    "stage": "planned"
   },
   {
    "kid": "V0610",
    "front": "大使館",
    "back": "大使馆",
+   "kana": "たいしかん",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0083",
    "front": "気",
-   "back": "气；精神；气息；心情｜音 キ",
+   "back": "气；精神；气息；心情",
+   "kana": "キ",
    "stage": "planned"
   },
   {
    "kid": "K0084",
    "front": "雨",
-   "back": "雨；下雨｜音 ウ",
+   "back": "雨；下雨",
+   "kana": "ウ、あめ",
    "stage": "planned"
   },
   {
    "kid": "V0570",
    "front": "食堂",
    "back": "食堂；餐厅",
+   "kana": "しょくどう",
    "stage": "planned"
   },
   {
    "kid": "V0571",
    "front": "知る",
    "back": "知道",
+   "kana": "しる",
    "stage": "planned"
   },
   {
    "kid": "V0572",
    "front": "白",
    "back": "白色",
+   "kana": "しろ",
    "stage": "planned"
   },
   {
@@ -530,104 +538,204 @@
  ],
  "sentences": [
   {
-   "id": "S0231",
-   "day": 24,
-   "direction": "zh-ja",
+   "qid": "P-024-00-58d526ad9732",
    "prompt": "那么，你是说不来了吗？",
-   "knowledge_ids": [
-    "V0608"
+   "options": [
+    "この程度のお金じゃ長くは持たないだろう。",
+    "グレイ先生は仕事を楽しんでいませんでした。",
+    "私たちの新居をご覧になってはいかがですか。",
+    "それでは、あなたは来ないということですか。"
    ],
-   "hint": ""
+   "h": "5501910",
+   "oh": [
+    "2eab4bd1",
+    "43420de6",
+    "2e1239a1",
+    "5501910"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0231"
   },
   {
-   "id": "S0232",
-   "day": 24,
-   "direction": "zh-ja",
+   "qid": "P-024-01-2b6afb3a9393",
    "prompt": "你打算在大学做什么？",
-   "knowledge_ids": [
-    "V0609"
+   "options": [
+    "朝の電車はとても混雑します。",
+    "その車は修理する価値がない。",
+    "大学で何をするつもりですか。",
+    "なんという馬鹿なことだろう。"
    ],
-   "hint": ""
+   "h": "5eb6936f",
+   "oh": [
+    "14d044ce",
+    "d8740c48",
+    "5eb6936f",
+    "c32a4fad"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0232"
   },
   {
-   "id": "S0233",
-   "day": 24,
-   "direction": "zh-ja",
+   "qid": "P-024-02-2d8130ca5e9b",
    "prompt": "日本大使馆在哪里？",
-   "knowledge_ids": [
-    "V0610"
+   "options": [
+    "せっかくの休みなのに、雨です。",
+    "その時はシャワーを浴びていた。",
+    "グラスは粉々に割れてしまった。",
+    "日本大使館はどこにありますか。"
    ],
-   "hint": ""
+   "h": "a0533334",
+   "oh": [
+    "eab23b6b",
+    "bc9b8d60",
+    "c01abf22",
+    "a0533334"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0233"
   },
   {
-   "id": "S0234",
-   "day": 24,
-   "direction": "zh-ja",
+   "qid": "P-024-03-d5a7d392bd1e",
    "prompt": "罗杰特别喜欢聚会。",
-   "knowledge_ids": [
-    "V0611"
+   "options": [
+    "ぼくは知らないし、気にもしない。",
+    "ロジャーはパーティーが大好きだ。",
+    "コンピューター業界は景気がいい。",
+    "その黄色いのをいただきましょう。"
    ],
-   "hint": ""
+   "h": "e9d09b67",
+   "oh": [
+    "c9b35858",
+    "e9d09b67",
+    "56eaf7bf",
+    "725d19ee"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0234"
   },
   {
-   "id": "S0235",
-   "day": 24,
-   "direction": "zh-ja",
+   "qid": "P-024-04-d77c5d3b1f06",
    "prompt": "读书很重要。",
-   "knowledge_ids": [
-    "V0612"
+   "options": [
+    "彼は１０年級に在学中だ。",
+    "火曜日に試験があります。",
+    "あなたは数学が得意ですか。",
+    "本を読むことは大切です。"
    ],
-   "hint": ""
+   "h": "824de756",
+   "oh": [
+    "bf462547",
+    "8a208808",
+    "169afc24",
+    "824de756"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0235"
   },
   {
-   "id": "S0236",
-   "day": 24,
-   "direction": "zh-ja",
+   "qid": "P-024-05-546fa0aee4cf",
    "prompt": "露西现在应该在厨房吧。",
-   "knowledge_ids": [
-    "V0613"
+   "options": [
+    "おぼれかけた人は息を吹き返した。",
+    "その広間は日本画で飾られていた。",
+    "ルーシーは今台所にいるでしょう。",
+    "あなたをケパと呼ぶことにします。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0237",
-   "day": 24,
+   "h": "c439c603",
+   "oh": [
+    "9d54542a",
+    "6d732f36",
+    "c439c603",
+    "27fecd16"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0236"
+  },
+  {
+   "qid": "P-024-06-37052601b668",
    "prompt": "那真是巨大的打击。",
-   "knowledge_ids": [
-    "V0614"
+   "options": [
+    "それはたいへんなショックでした。",
+    "ぼくは知らないし、気にもしない。",
+    "お礼の申し上げようもありません。",
+    "このソファーは場所を取りすぎる。"
    ],
-   "hint": ""
+   "h": "4f933c74",
+   "oh": [
+    "4f933c74",
+    "c9b35858",
+    "d477e2e9",
+    "fa74e348"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0237"
   },
   {
-   "id": "S0238",
-   "day": 24,
-   "direction": "ja-zh",
+   "qid": "P-024-07-df3cc19881c8",
    "prompt": "なすべきことがまだたくさんある。",
-   "knowledge_ids": [
-    "V0615"
+   "options": [
+    "传闻原来是真的。",
+    "还有很多事该做。",
+    "火车穿过了隧道。",
+    "橄榄果可以榨油。"
    ],
-   "hint": ""
+   "h": "283c5d8c",
+   "oh": [
+    "6342e7d8",
+    "283c5d8c",
+    "443acd9c",
+    "f55d0426"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0238"
   },
   {
-   "id": "S0239",
-   "day": 24,
-   "direction": "ja-zh",
+   "qid": "P-024-08-55271e8c8016",
    "prompt": "そのタクシーはいきなり左に曲がった。",
-   "knowledge_ids": [
-    "V0616"
+   "options": [
+    "史密斯先生说话语气温和。",
+    "有些人的球速也非常快。",
+    "你为什么拒绝了他的提议？",
+    "那辆出租车突然向左拐了。"
    ],
-   "hint": ""
+   "h": "37257189",
+   "oh": [
+    "9e51d31a",
+    "591e3589",
+    "59938dd",
+    "37257189"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0239"
   },
   {
-   "id": "S0240",
-   "day": 24,
-   "direction": "ja-zh",
+   "qid": "P-024-09-eb7db39a1e33",
    "prompt": "ここではおいしい食べ物が出されます。",
-   "knowledge_ids": [
-    "V0617"
+   "options": [
+    "你们国家说什么语言？",
+    "物质会随温度改变形态。",
+    "他们相信地球是平的。",
+    "这里会端出好吃的饭菜。"
    ],
-   "hint": ""
+   "h": "a4d3c252",
+   "oh": [
+    "72ab8ea4",
+    "762f222a",
+    "a51300e1",
+    "a4d3c252"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0240"
   }
  ],
  "quiz": [

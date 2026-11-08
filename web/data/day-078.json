@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V0273",
    "front": "書類",
    "back": "文件；书面材料",
+   "kana": "しょるい",
    "stage": "planned"
   },
   {
    "kid": "V0274",
    "front": "宛先",
    "back": "收件地址；收件人",
+   "kana": "あてさき",
    "stage": "planned"
   },
   {
    "kid": "V0275",
    "front": "件名",
    "back": "（邮件）主题",
+   "kana": "けんめい",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0325",
    "front": "加",
-   "back": "加；增加｜音 カ",
+   "back": "加；增加",
+   "kana": "カ、くわ.える、くわ.わる",
    "stage": "planned"
   },
   {
    "kid": "K0326",
    "front": "受",
-   "back": "接受；受到｜音 ジュ",
+   "back": "接受；受到",
+   "kana": "ジュ、う.ける、-う.け、う.かる",
    "stage": "planned"
   },
   {
    "kid": "V0240",
    "front": "見つける",
    "back": "找到（他动）",
+   "kana": "みつける",
    "stage": "planned"
   },
   {
    "kid": "V0241",
    "front": "見つかる",
    "back": "被找到；（东西）找到了（自动）",
+   "kana": "みつかる",
    "stage": "planned"
   },
   {
    "kid": "V0242",
    "front": "変える",
    "back": "改变（他动）",
+   "kana": "かえる",
    "stage": "planned"
   },
   {
@@ -500,104 +508,204 @@
  ],
  "sentences": [
   {
-   "id": "S0771",
-   "day": 78,
-   "direction": "zh-ja",
+   "qid": "P-078-00-04b69eb36c7d",
    "prompt": "早上的电车非常拥挤。",
-   "knowledge_ids": [
-    "V0314"
+   "options": [
+    "熱はエネルギーの一種である。",
+    "朝の電車はとても混雑します。",
+    "ヘレンはせいぜい４０キロだ。",
+    "その車は修理する価値がない。"
    ],
-   "hint": ""
+   "h": "14d044ce",
+   "oh": [
+    "c698082b",
+    "14d044ce",
+    "4495f400",
+    "d8740c48"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0771"
   },
   {
-   "id": "S0772",
-   "day": 78,
-   "direction": "zh-ja",
+   "qid": "P-078-01-39247c4f8d78",
    "prompt": "这趟公交途经图书馆。",
-   "knowledge_ids": [
-    "V0315"
+   "options": [
+    "それは千円以下では買えません。",
+    "外はだんだん明るくなっていく。",
+    "その公演は万雷の拍手を受けた。",
+    "このバスは図書館を経由します。"
    ],
-   "hint": ""
+   "h": "fca1a48c",
+   "oh": [
+    "4179f45f",
+    "5f3ff076",
+    "4c0102c4",
+    "fca1a48c"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0772"
   },
   {
-   "id": "S0773",
-   "day": 78,
-   "direction": "zh-ja",
+   "qid": "P-078-02-02bb84870ec4",
    "prompt": "车费200日元。",
-   "knowledge_ids": [
-    "V0316"
+   "options": [
+    "昨日は日曜日でした。",
+    "いつもバス通学です。",
+    "合格して嬉しいです。",
+    "運賃は二百円です。"
    ],
-   "hint": ""
+   "h": "bc3a4c76",
+   "oh": [
+    "65a7b1d2",
+    "52973008",
+    "f6598066",
+    "bc3a4c76"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0773"
   },
   {
-   "id": "S0774",
-   "day": 78,
-   "direction": "zh-ja",
+   "qid": "P-078-03-4a98308f954e",
    "prompt": "每天早上看经济新闻。",
-   "knowledge_ids": [
-    "V0317"
+   "options": [
+    "スミスさんにつないで下さい。",
+    "大人はしばしば変化を恐れる。",
+    "上部前方で何かが光っている。",
+    "経済のニュースを毎朝見ます。"
    ],
-   "hint": ""
+   "h": "fce8e3f3",
+   "oh": [
+    "3dda2614",
+    "6a18603d",
+    "2f7340d9",
+    "fce8e3f3"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0774"
   },
   {
-   "id": "S0775",
-   "day": 78,
-   "direction": "zh-ja",
+   "qid": "P-078-04-776ff53c96a8",
    "prompt": "这家企业在做新产品。",
-   "knowledge_ids": [
-    "V0318"
+   "options": [
+    "この企業は新しい製品を作っています。",
+    "ホテルの前で私を車で拾ってください。",
+    "あなたの時計、時間は狂いませんか。",
+    "あの山はこの山の５倍の高さである。"
    ],
-   "hint": ""
+   "h": "82d96402",
+   "oh": [
+    "82d96402",
+    "a75d76f8",
+    "7697026a",
+    "6b0f438a"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0775"
   },
   {
-   "id": "S0776",
-   "day": 78,
-   "direction": "zh-ja",
+   "qid": "P-078-05-ac094cd7808c",
    "prompt": "最近物价在上涨。",
-   "knowledge_ids": [
-    "V0319"
+   "options": [
+    "このドアは書斎に通じている。",
+    "最近、物価が上がっています。",
+    "パスポートを拝見できますか。",
+    "オートバイに乗るのは楽しい。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0777",
-   "day": 78,
+   "h": "bc6a316f",
+   "oh": [
+    "ba605a4e",
+    "bc6a316f",
+    "f4834db0",
+    "b48df371"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0776"
+  },
+  {
+   "qid": "P-078-06-0ba0d2a91806",
    "prompt": "为保护环境减少垃圾。",
-   "knowledge_ids": [
-    "V0320"
+   "options": [
+    "大学時代に私は英字新聞をとっていた。",
+    "あなたの言うことは正しいかもしれない。",
+    "いくつかの点で私は彼女が気に入らない。",
+    "環境を守るために、ごみを減らします。"
    ],
-   "hint": ""
+   "h": "b5f6fbf2",
+   "oh": [
+    "c1950d86",
+    "cdabcfca",
+    "e6e371c4",
+    "b5f6fbf2"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0777"
   },
   {
-   "id": "S0778",
-   "day": 78,
-   "direction": "ja-zh",
+   "qid": "P-078-07-5821567dd8d5",
    "prompt": "台風で学校が休みになりました。",
-   "knowledge_ids": [
-    "V0321"
+   "options": [
+    "台风导致学校停课。",
+    "那座岛是热带气候。",
+    "从第十课开始吧。",
+    "他用无线电发了报。"
    ],
-   "hint": ""
+   "h": "fcde9f0a",
+   "oh": [
+    "fcde9f0a",
+    "ecf17885",
+    "7c4687ec",
+    "3e7102f9"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0778"
   },
   {
-   "id": "S0779",
-   "day": 78,
-   "direction": "ja-zh",
+   "qid": "P-078-08-bfa0bf7490e4",
    "prompt": "地震のときは高い場所へ避難してください。",
-   "knowledge_ids": [
-    "V0322"
+   "options": [
+    "和上司商量后再决定。",
+    "工作过度对身体不好。",
+    "用力一推，门就开了。",
+    "地震时请到高处避难。"
    ],
-   "hint": ""
+   "h": "36ff2a02",
+   "oh": [
+    "7da086a0",
+    "a1b9a686",
+    "a0bec855",
+    "36ff2a02"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0779"
   },
   {
-   "id": "S0780",
-   "day": 78,
-   "direction": "ja-zh",
+   "qid": "P-078-09-577f39a49519",
    "prompt": "週末に京都へ観光に行きます。",
-   "knowledge_ids": [
-    "V0323"
+   "options": [
+    "钻石本来就很硬。",
+    "周末去京都观光。",
+    "上学期成绩很好。",
+    "时间过得太快了。"
    ],
-   "hint": ""
+   "h": "b9d7d0a3",
+   "oh": [
+    "aa75a0ff",
+    "b9d7d0a3",
+    "964e19e4",
+    "4a9c18da"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0780"
   }
  ],
  "quiz": [

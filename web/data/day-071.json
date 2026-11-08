@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V1402",
    "front": "優しい",
    "back": "温柔",
+   "kana": "やさしい",
    "stage": "planned"
   },
   {
    "kid": "V1403",
    "front": "痩せる",
    "back": "变瘦",
+   "kana": "やせる",
    "stage": "planned"
   },
   {
    "kid": "V1404",
    "front": "やっと",
    "back": "终于；好不容易",
+   "kana": "やっと",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0297",
    "front": "実",
-   "back": "果实；实际｜音 ジツ、シツ",
+   "back": "果实；实际",
+   "kana": "ジツ、シツ、み、みの.る、まこと、みの、みち.る",
    "stage": "planned"
   },
   {
    "kid": "K0298",
    "front": "関",
-   "back": "关系；关卡｜音 カン",
+   "back": "关系；关卡",
+   "kana": "カン、せき、-ぜき、かか.わる、からくり、かんぬき",
    "stage": "planned"
   },
   {
    "kid": "V1369",
    "front": "まず",
    "back": "首先",
+   "kana": "まず",
    "stage": "planned"
   },
   {
    "kid": "V1370",
    "front": "または",
    "back": "或者",
+   "kana": "または",
    "stage": "planned"
   },
   {
    "kid": "V1371",
    "front": "間違える",
    "back": "弄错",
+   "kana": "まちがえる",
    "stage": "planned"
   },
   {
@@ -454,104 +462,204 @@
  ],
  "sentences": [
   {
-   "id": "S0701",
-   "day": 71,
-   "direction": "zh-ja",
+   "qid": "P-071-00-e3bfa04f9d9f",
    "prompt": "今天相当冷。",
-   "knowledge_ids": [
-    "V0192"
+   "options": [
+    "これはいくらですか。",
+    "名前を書いてください。",
+    "今日はかなり寒いです。",
+    "話す機会がありません。"
    ],
-   "hint": ""
+   "h": "c2c783e2",
+   "oh": [
+    "6506aa3c",
+    "68ad7811",
+    "c2c783e2",
+    "30d4fb48"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0701"
   },
   {
-   "id": "S0702",
-   "day": 71,
-   "direction": "zh-ja",
+   "qid": "P-071-01-db4be043ff0b",
    "prompt": "病好得差不多了。",
-   "knowledge_ids": [
-    "V0193"
+   "options": [
+    "市が住民に調査を行いました。",
+    "勢いに流されているんですよ。",
+    "あまり人に頼ってはいけない。",
+    "病気はだいぶ良くなりました。"
    ],
-   "hint": ""
+   "h": "dbec274",
+   "oh": [
+    "2b753e0a",
+    "75832468",
+    "7f0112b5",
+    "dbec274"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0702"
   },
   {
-   "id": "S0703",
-   "day": 71,
-   "direction": "zh-ja",
+   "qid": "P-071-02-351c889155c1",
    "prompt": "完全忘了。",
-   "knowledge_ids": [
-    "V0194"
+   "options": [
+    "すっかり忘れていました。",
+    "私は新しい背広を買った。",
+    "日本は貿易に頼っている。",
+    "急行の料金は幾らですか。"
    ],
-   "hint": ""
+   "h": "5ac78734",
+   "oh": [
+    "5ac78734",
+    "7bf6ebb6",
+    "78222732",
+    "991bf9"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0703"
   },
   {
-   "id": "S0704",
-   "day": 71,
-   "direction": "zh-ja",
+   "qid": "P-071-03-815bc04ae3a3",
    "prompt": "请扎扎实实地学。",
-   "knowledge_ids": [
-    "V0195"
+   "options": [
+    "喜んで質問に答えましょう。",
+    "その刀は王子にふさわしい。",
+    "しっかり勉強してください。",
+    "馬に乗ることができますか？"
    ],
-   "hint": ""
+   "h": "f79afcc5",
+   "oh": [
+    "b449f1b9",
+    "6d8b6817",
+    "f79afcc5",
+    "1cd64400"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0704"
   },
   {
-   "id": "S0705",
-   "day": 71,
-   "direction": "zh-ja",
+   "qid": "P-071-04-a7ac43e2b640",
    "prompt": "谢谢您特意前来。",
-   "knowledge_ids": [
-    "V0196"
+   "options": [
+    "すぐれた材料で作られた家具は、売れ行きがよい。",
+    "わざわざ来てくださってありがとうございます。",
+    "彼か私のどちらかが大会に出席しなければならない。",
+    "グレイ先生は仕事を楽しんでいませんでした。"
    ],
-   "hint": ""
+   "h": "6cf4beee",
+   "oh": [
+    "6d44a961",
+    "6cf4beee",
+    "4e3ac675",
+    "43420de6"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0705"
   },
   {
-   "id": "S0706",
-   "day": 71,
-   "direction": "zh-ja",
+   "qid": "P-071-05-93c1c196abbc",
    "prompt": "难得放假却下雨了。",
-   "knowledge_ids": [
-    "V0197"
+   "options": [
+    "フクロウは昼間は目が見えない。",
+    "この菓子を自由にお取り下さい。",
+    "このバスは図書館を経由します。",
+    "せっかくの休みなのに、雨です。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0707",
-   "day": 71,
+   "h": "eab23b6b",
+   "oh": [
+    "bd30935a",
+    "ff6eaffd",
+    "fca1a48c",
+    "eab23b6b"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0706"
+  },
+  {
+   "qid": "P-071-06-dc7eaf12a917",
    "prompt": "买了便宜货反倒更花钱。",
-   "knowledge_ids": [
-    "V0198"
+   "options": [
+    "「ご一緒してもいいですか」「もちろんです」",
+    "安い物を買って、かえって高くつきました。",
+    "メアリーは私にアメリカの人形をくれた。",
+    "ここでお買い上げの品は無料で配達します。"
    ],
-   "hint": ""
+   "h": "9fec41e6",
+   "oh": [
+    "d4b34698",
+    "9fec41e6",
+    "9316f6d5",
+    "108078d3"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0707"
   },
   {
-   "id": "S0708",
-   "day": 71,
-   "direction": "ja-zh",
+   "qid": "P-071-07-ff7ae1344cb7",
    "prompt": "疲れるなら、むしろ休んだほうがいい。",
-   "knowledge_ids": [
-    "V0199"
+   "options": [
+    "世界上有各种各样的人种。",
+    "我听过有人用这句谚语。",
+    "累的话倒不如休息更好。",
+    "游客数量近年大幅增加。"
    ],
-   "hint": ""
+   "h": "97b7981d",
+   "oh": [
+    "1d508341",
+    "e5759169",
+    "97b7981d",
+    "45b99f8d"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0708"
   },
   {
-   "id": "S0709",
-   "day": 71,
-   "direction": "ja-zh",
+   "qid": "P-071-08-3a91f54f51c5",
    "prompt": "ところで、明日の予定は？",
-   "knowledge_ids": [
-    "V0200"
+   "options": [
+    "对了，明天安排是什么？",
+    "那些肉完全不适合食用。",
+    "他注意不去惹别人不高兴。",
+    "你不能出席吗？为什么？"
    ],
-   "hint": ""
+   "h": "f3613f32",
+   "oh": [
+    "f3613f32",
+    "7d804d6e",
+    "16524355",
+    "e0130b6d"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0709"
   },
   {
-   "id": "S0710",
-   "day": 71,
-   "direction": "ja-zh",
+   "qid": "P-071-09-62b84c6402a2",
    "prompt": "コーヒーにしますか、それともお茶にしますか。",
-   "knowledge_ids": [
-    "V0201"
+   "options": [
+    "你为什么想当护士？",
+    "要咖啡，还是茶？",
+    "传闻原来是真的。",
+    "从第十课开始吧。"
    ],
-   "hint": ""
+   "h": "c2d3b991",
+   "oh": [
+    "28ee32c5",
+    "c2d3b991",
+    "6342e7d8",
+    "7c4687ec"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0710"
   }
  ],
  "quiz": [

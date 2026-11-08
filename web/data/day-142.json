@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V2491",
    "front": "手品",
    "back": "魔术；戏法",
+   "kana": "てじな",
    "stage": "planned"
   },
   {
    "kid": "V2492",
    "front": "ですから",
    "back": "所以",
+   "kana": "ですから",
    "stage": "planned"
   },
   {
    "kid": "V2493",
    "front": "鉄",
    "back": "铁",
+   "kana": "てつ",
    "stage": "planned"
   },
   {
@@ -65,31 +68,36 @@
   {
    "kid": "K0581",
    "front": "閉",
-   "back": "关闭；关｜音 ヘイ",
+   "back": "关闭；关",
+   "kana": "ヘイ、と.じる、と.ざす、し.める、し.まる、た.てる",
    "stage": "planned"
   },
   {
    "kid": "K0582",
    "front": "緒",
-   "back": "头绪；开端｜音 ショ、チョ",
+   "back": "头绪；开端",
+   "kana": "ショ、チョ、お、いとぐち",
    "stage": "planned"
   },
   {
    "kid": "V2449",
    "front": "通じる",
    "back": "通；通晓",
+   "kana": "つうじる",
    "stage": "planned"
   },
   {
    "kid": "V2450",
    "front": "通信",
    "back": "通信",
+   "kana": "つうしん",
    "stage": "planned"
   },
   {
    "kid": "V2451",
    "front": "捕まる",
    "back": "被抓；被捉",
+   "kana": "つかまる",
    "stage": "planned"
   },
   {
@@ -101,13 +109,15 @@
   {
    "kid": "K0573",
    "front": "似",
-   "back": "相似；像｜音 ジ",
+   "back": "相似；像",
+   "kana": "ジ、に.る、ひ.る",
    "stage": "planned"
   },
   {
    "kid": "K0574",
    "front": "列",
-   "back": "列；队列｜音 レツ、レ",
+   "back": "列；队列",
+   "kana": "レツ、レ",
    "stage": "planned"
   }
  ],
@@ -508,104 +518,204 @@
  ],
  "sentences": [
   {
-   "id": "S1411",
-   "day": 142,
-   "direction": "zh-ja",
+   "qid": "P-142-00-3593cc3cb81e",
    "prompt": "可实际上，我什么也做不了。",
-   "knowledge_ids": [
-    "V2535"
+   "options": [
+    "ジョージは朝にたくさんのチーズを食べた。",
+    "当時はきれいな水がこの川にも流れていた。",
+    "まるで、沈む船から逃げるネズミみたいね。",
+    "ところが実はどうすることもできないのです。"
    ],
-   "hint": ""
+   "h": "34a8c7a1",
+   "oh": [
+    "2f26c123",
+    "e9cf2459",
+    "b4d0dde4",
+    "34a8c7a1"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1411"
   },
   {
-   "id": "S1412",
-   "day": 142,
-   "direction": "zh-ja",
+   "qid": "P-142-01-8814e88fcd41",
    "prompt": "那双鞋不适合登山。",
-   "knowledge_ids": [
-    "V2536"
+   "options": [
+    "その靴は登山には向かないよ。",
+    "昨夜はぐっすり眠れなかった。",
+    "熱はエネルギーの一種である。",
+    "カーテンがゆっくり引かれた。"
    ],
-   "hint": ""
+   "h": "a799335d",
+   "oh": [
+    "a799335d",
+    "c36eaddd",
+    "c698082b",
+    "9a704e8a"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1412"
   },
   {
-   "id": "S1413",
-   "day": 142,
-   "direction": "zh-ja",
+   "qid": "P-142-02-de8640b55d63",
    "prompt": "这座城市面积有多大？",
-   "knowledge_ids": [
-    "V2537"
+   "options": [
+    "このページをコピーして下さい。",
+    "この都市の面積はどれくらいか。",
+    "この布は値段の割に品質が良い。",
+    "その教師は講堂に学生を集めた。"
    ],
-   "hint": ""
+   "h": "b726d24f",
+   "oh": [
+    "fd6444e6",
+    "b726d24f",
+    "73db6bba",
+    "a8167156"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1413"
   },
   {
-   "id": "S1414",
-   "day": 142,
-   "direction": "zh-ja",
+   "qid": "P-142-03-d2a29427e7d4",
    "prompt": "收集那么多硬币花了多少年月。",
-   "knowledge_ids": [
-    "V2538"
+   "options": [
+    "ドアをそのままにしておいてはいけません。",
+    "ジョージは朝にたくさんのチーズを食べた。",
+    "わざわざ来てくださってありがとうございます。",
+    "あれだけのコインを収集するのにどれだけの年月がかかりましたか。"
    ],
-   "hint": ""
+   "h": "a9bdb64e",
+   "oh": [
+    "6fe1fecd",
+    "2f26c123",
+    "6cf4beee",
+    "a9bdb64e"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1414"
   },
   {
-   "id": "S1415",
-   "day": 142,
-   "direction": "zh-ja",
+   "qid": "P-142-04-9611bb5b8c13",
    "prompt": "我这里的书你可以随便用。",
-   "knowledge_ids": [
-    "V2539"
+   "options": [
+    "カクテルパーティーは退屈なときもある。",
+    "ここの下りも手掛かりがないので危険だ。",
+    "私のところの図書は自由にお使い下さい。",
+    "母親は息子にやかましく言って聞かせた。"
    ],
-   "hint": ""
+   "h": "be2495b9",
+   "oh": [
+    "d3332c71",
+    "966a4e45",
+    "be2495b9",
+    "6cd23f96"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1415"
   },
   {
-   "id": "S1416",
-   "day": 142,
-   "direction": "zh-ja",
+   "qid": "P-142-05-8836db337e9a",
    "prompt": "不可以捉弄老人。",
-   "knowledge_ids": [
-    "V2540"
+   "options": [
+    "夫婦が愛し合うのは全く自然である。",
+    "お年寄りをからかってはいけません。",
+    "スイッチは時間通りに働かなかった。",
+    "どういっても七時までにいかないと。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1417",
-   "day": 142,
+   "h": "a3dd40ad",
+   "oh": [
+    "80962ba6",
+    "a3dd40ad",
+    "e8b6d63c",
+    "91a2dee7"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1416"
+  },
+  {
+   "qid": "P-142-06-20bb6122ae5e",
    "prompt": "他闭着眼睛吻了她。",
-   "knowledge_ids": [
-    "V2541"
+   "options": [
+    "彼は目を閉じて彼女にキスをした。",
+    "システムが作動しない場合がある。",
+    "その黄色いのをいただきましょう。",
+    "トムは今にもここに来るはずです。"
    ],
-   "hint": ""
+   "h": "aa0cd259",
+   "oh": [
+    "aa0cd259",
+    "e09812e6",
+    "725d19ee",
+    "1c43f179"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1417"
   },
   {
-   "id": "S1418",
-   "day": 142,
-   "direction": "ja-zh",
+   "qid": "P-142-07-ea7ef254b66d",
    "prompt": "これをきいたとたん、彼は真っ青になった。",
-   "knowledge_ids": [
-    "V2542"
+   "options": [
+    "那一周和歧视问题没有关系。",
+    "史密斯先生说话语气温和。",
+    "那消息我是从收音机里听到的。",
+    "一听这话，他脸色刷地白了。"
    ],
-   "hint": ""
+   "h": "35126ddb",
+   "oh": [
+    "f623e0cd",
+    "9e51d31a",
+    "329be490",
+    "35126ddb"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1418"
   },
   {
-   "id": "S1419",
-   "day": 142,
-   "direction": "ja-zh",
+   "qid": "P-142-08-97277011e283",
    "prompt": "彼は父親の大きな土地を相続した。",
-   "knowledge_ids": [
-    "V2543"
+   "options": [
+    "德语不是一门容易的语言。",
+    "你为什么拒绝了他的提议？",
+    "天天这么阴雨天，真烦人。",
+    "他继承了父亲的一大片土地。"
    ],
-   "hint": ""
+   "h": "dc656b24",
+   "oh": [
+    "a69c3150",
+    "59938dd",
+    "c4c28d2e",
+    "dc656b24"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1419"
   },
   {
-   "id": "S1420",
-   "day": 142,
-   "direction": "ja-zh",
+   "qid": "P-142-09-33fa965a7be5",
    "prompt": "彼はもう少しの所でトップの部にはいるところだった。",
-   "knowledge_ids": [
-    "V2544"
+   "options": [
+    "语调有时也能传达感情。",
+    "那件事就是这样发生的。",
+    "他差点就进入最高一档。",
+    "有些人的球速也非常快。"
    ],
-   "hint": ""
+   "h": "d69a9cbc",
+   "oh": [
+    "ac5b615a",
+    "c639485f",
+    "d69a9cbc",
+    "591e3589"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1420"
   }
  ],
  "quiz": [

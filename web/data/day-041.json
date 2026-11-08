@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0882",
    "front": "アクセサリー",
    "back": "首饰；配饰",
+   "kana": "アクセサリー",
    "stage": "planned"
   },
   {
    "kid": "V0883",
    "front": "浅い",
    "back": "浅；浅薄",
+   "kana": "あさい",
    "stage": "planned"
   },
   {
    "kid": "V0884",
    "front": "味",
    "back": "味道；口味",
+   "kana": "あじ",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0212",
    "front": "品",
-   "back": "物品；品格｜音 ヒン、ホン",
+   "back": "物品；品格",
+   "kana": "ヒン、ホン、しな",
    "stage": "planned"
   },
   {
    "kid": "K0213",
    "front": "計",
-   "back": "计量；计划；合计｜音 ケイ",
+   "back": "计量；计划；合计",
+   "kana": "ケイ、はか.る、はか.らう",
    "stage": "planned"
   },
   {
    "kid": "V0162",
    "front": "調べる",
    "back": "调查；查阅",
+   "kana": "しらべる",
    "stage": "planned"
   },
   {
    "kid": "V0163",
    "front": "比べる",
    "back": "比较",
+   "kana": "くらべる",
    "stage": "planned"
   },
   {
    "kid": "V0164",
    "front": "慣れる",
    "back": "习惯（自动）",
+   "kana": "なれる",
    "stage": "planned"
   },
   {
@@ -531,104 +539,204 @@
  ],
  "sentences": [
   {
-   "id": "S0401",
-   "day": 41,
-   "direction": "zh-ja",
+   "qid": "P-041-00-439be1f33eb9",
    "prompt": "那个一千日元以下买不到。",
-   "knowledge_ids": [
-    "V0899"
+   "options": [
+    "オリーブの実から油が取れます。",
+    "それは千円以下では買えません。",
+    "それは人知の限界を越えている。",
+    "この布は値段の割に品質が良い。"
    ],
-   "hint": ""
+   "h": "4179f45f",
+   "oh": [
+    "9ffe72d0",
+    "4179f45f",
+    "289d0261",
+    "73db6bba"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0401"
   },
   {
-   "id": "S0402",
-   "day": 41,
-   "direction": "zh-ja",
+   "qid": "P-041-01-e29fcaa48456",
    "prompt": "除了那份工作，什么都行。",
-   "knowledge_ids": [
-    "V0900"
+   "options": [
+    "この制度には改良の余地がない。",
+    "その仕事以外ならなんでもやる。",
+    "その場合には警察を呼びなさい。",
+    "トムは頭にきつい一発を受けた。"
    ],
-   "hint": ""
+   "h": "b9ada927",
+   "oh": [
+    "849b2eb5",
+    "b9ada927",
+    "dba5375d",
+    "b9186836"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0402"
   },
   {
-   "id": "S0403",
-   "day": 41,
-   "direction": "zh-ja",
+   "qid": "P-041-02-44c773494aa1",
    "prompt": "两位医生在聊医学方面的事。",
-   "knowledge_ids": [
-    "V0901"
+   "options": [
+    "テーブルの上に花が一本あります。",
+    "ビルはその罪を犯していなかった。",
+    "ホッチキスを貸してくれませんか。",
+    "二人の医者が医学の話をしていた。"
    ],
-   "hint": ""
+   "h": "238e9b61",
+   "oh": [
+    "9718d6f5",
+    "8cfed4a4",
+    "1b2dc8f1",
+    "238e9b61"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0403"
   },
   {
-   "id": "S0404",
-   "day": 41,
-   "direction": "zh-ja",
+   "qid": "P-041-03-b7eac2c9b22a",
    "prompt": "所有活着的生物终有一死。",
-   "knowledge_ids": [
-    "V0902"
+   "options": [
+    "コンピューター業界は景気がいい。",
+    "ホッチキスを貸してくれませんか。",
+    "あなたの見解は私とは正反対です。",
+    "生きるものはすべていつかは死ぬ。"
    ],
-   "hint": ""
+   "h": "16d26bfa",
+   "oh": [
+    "56eaf7bf",
+    "1b2dc8f1",
+    "65661673",
+    "16d26bfa"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0404"
   },
   {
-   "id": "S0405",
-   "day": 41,
-   "direction": "zh-ja",
+   "qid": "P-041-04-101b2d2068d4",
    "prompt": "在这里可以尽管提意见。",
-   "knowledge_ids": [
-    "V0903"
+   "options": [
+    "それでは、あなたは来ないということですか。",
+    "まるで、沈む船から逃げるネズミみたいね。",
+    "ここではどんどん意見をおっしゃってかまいません。",
+    "あのおいしいワインをなぜ飲まないんだい。"
    ],
-   "hint": ""
+   "h": "6198a2b4",
+   "oh": [
+    "5501910",
+    "b4d0dde4",
+    "6198a2b4",
+    "5ebf955f"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0405"
   },
   {
-   "id": "S0406",
-   "day": 41,
-   "direction": "zh-ja",
+   "qid": "P-041-05-f5cd37e1e228",
    "prompt": "这块石头我举不起来。",
-   "knowledge_ids": [
-    "V0904"
+   "options": [
+    "その公演は万雷の拍手を受けた。",
+    "これは悪い話ではないでしょう？",
+    "私にはこの石は持ち上がらない。",
+    "フクロウは昼間は目が見えない。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0407",
-   "day": 41,
+   "h": "f2e3aa1c",
+   "oh": [
+    "4c0102c4",
+    "fdf9de68",
+    "f2e3aa1c",
+    "bd30935a"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0406"
+  },
+  {
+   "qid": "P-041-06-0529532cf9e5",
    "prompt": "他以前常欺负朋友。",
-   "knowledge_ids": [
-    "V0905"
+   "options": [
+    "やっぱり何とかやってのけたね。",
+    "この布は値段の割に品質が良い。",
+    "彼はよく友人をいじめたものだ。",
+    "これは悪い話ではないでしょう？"
    ],
-   "hint": ""
+   "h": "25027c50",
+   "oh": [
+    "6295853d",
+    "73db6bba",
+    "25027c50",
+    "fdf9de68"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0407"
   },
   {
-   "id": "S0408",
-   "day": 41,
-   "direction": "ja-zh",
+   "qid": "P-041-07-66c01356d7fc",
    "prompt": "以上ですか？",
-   "knowledge_ids": [
-    "V0906"
+   "options": [
+    "音乐会怎么样？",
+    "就这些吗？",
+    "症状好转了。",
+    "今天天气好。"
    ],
-   "hint": ""
+   "h": "fc463eda",
+   "oh": [
+    "61036610",
+    "fc463eda",
+    "ce386345",
+    "1b222922"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0408"
   },
   {
-   "id": "S0409",
-   "day": 41,
-   "direction": "ja-zh",
+   "qid": "P-041-08-4bea37270d85",
    "prompt": "ニックはバスに間に合うように急いだ。",
-   "knowledge_ids": [
-    "V0907"
+   "options": [
+    "你是个多么聪明的学生啊。",
+    "尼克为了赶上公交加快了脚步。",
+    "她不知如何是好，束手无策。",
+    "天天这么阴雨天，真烦人。"
    ],
-   "hint": ""
+   "h": "f2bdf42e",
+   "oh": [
+    "9c468c5f",
+    "f2bdf42e",
+    "b44dcee5",
+    "c4c28d2e"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0409"
   },
   {
-   "id": "S0410",
-   "day": 41,
-   "direction": "ja-zh",
+   "qid": "P-041-09-c659e1eeef1c",
    "prompt": "お取り寄せいたしましょうか。",
-   "knowledge_ids": [
-    "V0908"
+   "options": [
+    "定期做健康检查。",
+    "养这辆车很费钱。",
+    "你的蓝笔不见了。",
+    "要我帮您订购吗？"
    ],
-   "hint": ""
+   "h": "fa555a2",
+   "oh": [
+    "e7de9c23",
+    "ea0755b5",
+    "136317ea",
+    "fa555a2"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0410"
   }
  ],
  "quiz": [

@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0453",
    "front": "かかる",
    "back": "花费；启动",
+   "kana": "かかる",
    "stage": "planned"
   },
   {
    "kid": "V0454",
    "front": "かぎ",
    "back": "钥匙",
+   "kana": "かぎ",
    "stage": "planned"
   },
   {
    "kid": "V0455",
    "front": "かける",
    "back": "打电话；挂",
+   "kana": "かける",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0142",
    "front": "年",
-   "back": "年；年份｜音 ネン",
+   "back": "年；年份",
+   "kana": "ネン、とし",
    "stage": "planned"
   },
   {
    "kid": "K0143",
    "front": "長",
-   "back": "长；首领；年长｜音 チョウ",
+   "back": "长；首领；年长",
+   "kana": "チョウ、なが.い、おさ",
    "stage": "planned"
   },
   {
    "kid": "V0413",
    "front": "お母さん",
    "back": "母亲；妈妈",
+   "kana": "おかあさん",
    "stage": "planned"
   },
   {
    "kid": "V0414",
    "front": "お菓子",
    "back": "点心；零食",
+   "kana": "おかし",
    "stage": "planned"
   },
   {
    "kid": "V0415",
    "front": "お金",
    "back": "钱",
+   "kana": "おかね",
    "stage": "planned"
   },
   {
@@ -541,104 +549,204 @@
  ],
  "sentences": [
   {
-   "id": "S0151",
-   "day": 16,
-   "direction": "zh-ja",
+   "qid": "P-016-00-e6d35338b598",
    "prompt": "十日元能打个电话吗？",
-   "knowledge_ids": [
-    "V0455"
+   "options": [
+    "彼は会社で高い地位にあります。",
+    "１０円で電話がかけられますか。",
+    "その八百屋は客にとても親切だ。",
+    "その時はシャワーを浴びていた。"
    ],
-   "hint": ""
+   "h": "9b5ea710",
+   "oh": [
+    "1db91e4",
+    "9b5ea710",
+    "4586f317",
+    "bc9b8d60"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0151"
   },
   {
-   "id": "S0152",
-   "day": 16,
-   "direction": "zh-ja",
+   "qid": "P-016-01-3638ea9fa517",
    "prompt": "我把伞落在出租车上了。",
-   "knowledge_ids": [
-    "V0456"
+   "options": [
+    "この漢字はどういう意味ですか。",
+    "カタツムリがすっと角を出した。",
+    "彼は市場に出す牛を育てている。",
+    "タクシーに傘を忘れてしまった。"
    ],
-   "hint": ""
+   "h": "6425ef0e",
+   "oh": [
+    "f391f35e",
+    "1141342d",
+    "8c9d754",
+    "6425ef0e"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0152"
   },
   {
-   "id": "S0153",
-   "day": 16,
-   "direction": "zh-ja",
+   "qid": "P-016-02-8bf330889749",
    "prompt": "能借我订书机用一下吗？",
-   "knowledge_ids": [
-    "V0457"
+   "options": [
+    "ホッチキスを貸してくれませんか。",
+    "この案を検討することにしました。",
+    "そのショーで観客は大喜びだった。",
+    "この製品は美しく仕上がっている。"
    ],
-   "hint": ""
+   "h": "1b2dc8f1",
+   "oh": [
+    "1b2dc8f1",
+    "f4913c93",
+    "66f9ebb3",
+    "a8a8c68"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0153"
   },
   {
-   "id": "S0154",
-   "day": 16,
-   "direction": "zh-ja",
+   "qid": "P-016-03-a5b123ec6a55",
    "prompt": "窗帘随风飘动。",
-   "knowledge_ids": [
-    "V0458"
+   "options": [
+    "部屋を片付けてください。",
+    "この小麦は粉にされる。",
+    "私は読書に集中していた。",
+    "カーテンが風になびいた。"
    ],
-   "hint": ""
+   "h": "f01f9c0a",
+   "oh": [
+    "d809e606",
+    "8fa39b7e",
+    "625b4282",
+    "f01f9c0a"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0154"
   },
   {
-   "id": "S0155",
-   "day": 16,
-   "direction": "zh-ja",
+   "qid": "P-016-04-2d0365b974c8",
    "prompt": "大概只是感冒吧。",
-   "knowledge_ids": [
-    "V0459"
+   "options": [
+    "共益費は五千円です。",
+    "道具を粗末に使うな。",
+    "最近食欲がないんです。",
+    "ただの風邪でしょう。"
    ],
-   "hint": ""
+   "h": "8dd6c2d9",
+   "oh": [
+    "76c95f5d",
+    "6f5b9107",
+    "f3e36ba6",
+    "8dd6c2d9"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0155"
   },
   {
-   "id": "S0156",
-   "day": 16,
-   "direction": "zh-ja",
+   "qid": "P-016-05-96002ae15564",
    "prompt": "这位就是您要谈的那位。",
-   "knowledge_ids": [
-    "V0460"
+   "options": [
+    "彼女はデザート用にクリームを泡立てた。",
+    "あなたはうちのクラスで歓迎されています。",
+    "あなたの言うことは正しいかもしれない。",
+    "こちらはあなたがお話しになるお方です。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0157",
-   "day": 16,
+   "h": "aec24c2b",
+   "oh": [
+    "cd584f41",
+    "70f8c097",
+    "cdabcfca",
+    "aec24c2b"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0156"
+  },
+  {
+   "qid": "P-016-06-7a1a414626fc",
    "prompt": "桌上有个杯子。",
-   "knowledge_ids": [
-    "V0461"
+   "options": [
+    "最初の打者はアウトになった。",
+    "日本の歴史に興味があります。",
+    "あなたは夜よく寝れませんか。",
+    "テーブルの上にカップがある。"
    ],
-   "hint": ""
+   "h": "b6c3b73b",
+   "oh": [
+    "812a999a",
+    "2a8caefd",
+    "9b9a05d6",
+    "b6c3b73b"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0157"
   },
   {
-   "id": "S0158",
-   "day": 16,
-   "direction": "ja-zh",
+   "qid": "P-016-07-b1dc925d83d7",
    "prompt": "食事は家庭で食べますか、外食ですか。",
-   "knowledge_ids": [
-    "V0462"
+   "options": [
+    "读这种书有什么用呢。",
+    "动物的皮上覆盖着毛。",
+    "竞争本身无所谓善恶。",
+    "饭在家吃还是在外吃？"
    ],
-   "hint": ""
+   "h": "7a828542",
+   "oh": [
+    "b0bbf127",
+    "122d08f3",
+    "744ac9a2",
+    "7a828542"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0158"
   },
   {
-   "id": "S0159",
-   "day": 16,
-   "direction": "ja-zh",
+   "qid": "P-016-08-7f662b5456ff",
    "prompt": "角のテーブルがいいのですが。",
-   "knowledge_ids": [
-    "V0463"
+   "options": [
+    "有些人的球速也非常快。",
+    "约翰继承了一大笔财产。",
+    "我想要角落的那张桌子。",
+    "他为什么辞职是个谜。"
    ],
-   "hint": ""
+   "h": "230d8172",
+   "oh": [
+    "591e3589",
+    "c5e86987",
+    "230d8172",
+    "f91d2778"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0159"
   },
   {
-   "id": "S0160",
-   "day": 16,
-   "direction": "ja-zh",
+   "qid": "P-016-09-f2904c78cfc8",
    "prompt": "これはジェーンさんのかばんです。",
-   "knowledge_ids": [
-    "V0464"
+   "options": [
+    "传闻原来是真的。",
+    "这是简的包。",
+    "两个当中哪个贵？",
+    "健在三跑得最快。"
    ],
-   "hint": ""
+   "h": "2dd4c636",
+   "oh": [
+    "6342e7d8",
+    "2dd4c636",
+    "fc08db83",
+    "57e1f82c"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0160"
   }
  ],
  "quiz": [

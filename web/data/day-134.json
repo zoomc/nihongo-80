@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V2323",
    "front": "尊敬",
    "back": "尊敬",
+   "kana": "そんけい",
    "stage": "planned"
   },
   {
    "kid": "V2324",
    "front": "存在",
    "back": "存在",
+   "kana": "そんざい",
    "stage": "planned"
   },
   {
    "kid": "V2325",
    "front": "尊重",
    "back": "尊重",
+   "kana": "そんちょう",
    "stage": "planned"
   },
   {
@@ -70,31 +73,36 @@
   {
    "kid": "K0549",
    "front": "勤",
-   "back": "工作；勤勉｜音 キン、ゴン",
+   "back": "工作；勤勉",
+   "kana": "キン、ゴン、つと.める、-づと.め、つと.まる、いそ.しむ",
    "stage": "planned"
   },
   {
    "kid": "K0550",
    "front": "遅",
-   "back": "慢；迟到｜音 チ",
+   "back": "慢；迟到",
+   "kana": "チ、おく.れる、おく.らす、おそ.い",
    "stage": "planned"
   },
   {
    "kid": "V2281",
    "front": "設計",
    "back": "设计",
+   "kana": "せっけい",
    "stage": "planned"
   },
   {
    "kid": "V2282",
    "front": "絶対",
    "back": "绝对",
+   "kana": "ぜったい",
    "stage": "planned"
   },
   {
    "kid": "V2283",
    "front": "セット",
    "back": "一套；设置",
+   "kana": "セット",
    "stage": "planned"
   },
   {
@@ -106,13 +114,15 @@
   {
    "kid": "K0541",
    "front": "押",
-   "back": "推；按；压｜音 オウ",
+   "back": "推；按；压",
+   "kana": "オウ、お.す、お.し-、お.っ-、お.さえる、おさ.える",
    "stage": "planned"
   },
   {
    "kid": "K0542",
    "front": "倒",
-   "back": "倒下；倒闭｜音 トウ",
+   "back": "倒下；倒闭",
+   "kana": "トウ、たお.れる、-だお.れ、たお.す、さかさま、さかさ、さかしま",
    "stage": "planned"
   }
  ],
@@ -514,104 +524,204 @@
  ],
  "sentences": [
   {
-   "id": "S1331",
-   "day": 134,
-   "direction": "zh-ja",
+   "qid": "P-134-00-3eaabe415c29",
    "prompt": "那以后他一直没有音信。",
-   "knowledge_ids": [
-    "V2391"
+   "options": [
+    "あのおいしいワインをなぜ飲まないんだい。",
+    "ケイトはケーキの作り方を知っています。",
+    "ジョージは朝にたくさんのチーズを食べた。",
+    "それ以来、彼からは何の便りもありません。"
    ],
-   "hint": ""
+   "h": "df9b23d2",
+   "oh": [
+    "5ebf955f",
+    "c1f17d29",
+    "2f26c123",
+    "df9b23d2"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1331"
   },
   {
-   "id": "S1332",
-   "day": 134,
-   "direction": "zh-ja",
+   "qid": "P-134-01-434f5626dfc0",
    "prompt": "不要太依赖别人。",
-   "knowledge_ids": [
-    "V2392"
+   "options": [
+    "あまり人に頼ってはいけない。",
+    "彼は仕事の上では私の先輩だ。",
+    "小さなことでくよくよするな。",
+    "水泳が私の楽しみの１つです。"
    ],
-   "hint": ""
+   "h": "7f0112b5",
+   "oh": [
+    "7f0112b5",
+    "4452aac8",
+    "64e534b3",
+    "2f2ba09b"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1332"
   },
   {
-   "id": "S1333",
-   "day": 134,
-   "direction": "zh-ja",
+   "qid": "P-134-02-194e0886f5e4",
    "prompt": "“车里有人吗？”“有汤姆。”",
-   "knowledge_ids": [
-    "V2393"
+   "options": [
+    "ジョージは朝にたくさんのチーズを食べた。",
+    "「誰か車の中にいるのですか」「トムがいます」",
+    "土日月の午前１０時半から午後４時まで開館。",
+    "ところが実はどうすることもできないのです。"
    ],
-   "hint": ""
+   "h": "b07b84f",
+   "oh": [
+    "2f26c123",
+    "b07b84f",
+    "823a3d8f",
+    "34a8c7a1"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1333"
   },
   {
-   "id": "S1334",
-   "day": 134,
-   "direction": "zh-ja",
+   "qid": "P-134-03-50d50b5adbd4",
    "prompt": "他一次三级地跑上了楼梯。",
-   "knowledge_ids": [
-    "V2394"
+   "options": [
+    "その写真は空から写されたものである。",
+    "彼は階段を一度に三段ずつかけあがった。",
+    "お宅の暖房はどのようにしていますか。",
+    "この程度のお金じゃ長くは持たないだろう。"
    ],
-   "hint": ""
+   "h": "65809266",
+   "oh": [
+    "45659cac",
+    "65809266",
+    "754f087f",
+    "2eab4bd1"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1334"
   },
   {
-   "id": "S1335",
-   "day": 134,
-   "direction": "zh-ja",
+   "qid": "P-134-04-90051ba309e0",
    "prompt": "这门课有几个学分？",
-   "knowledge_ids": [
-    "V2395"
+   "options": [
+    "デモに参加しようと思う。",
+    "この科目は何単位ですか。",
+    "この券は２週間有効です。",
+    "午後から会議があります。"
    ],
-   "hint": ""
+   "h": "ae775c39",
+   "oh": [
+    "cd35d93d",
+    "ae775c39",
+    "a263dc87",
+    "f5d6b632"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1335"
   },
   {
-   "id": "S1336",
-   "day": 134,
-   "direction": "zh-ja",
+   "qid": "P-134-05-68442b51ea5d",
    "prompt": "把这些单词一个一个记住。",
-   "knowledge_ids": [
-    "V2396"
+   "options": [
+    "その部屋は居心地の良い感じがした。",
+    "バリウムをまず一口飲んでください。",
+    "その映画館は人々でいっぱいだった。",
+    "これらの単語を一つずつ覚えなさい。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1337",
-   "day": 134,
+   "h": "b1de96c0",
+   "oh": [
+    "52653e66",
+    "50f70cb0",
+    "15b363d4",
+    "b1de96c0"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1336"
+  },
+  {
+   "qid": "P-134-06-dcfba68b021f",
    "prompt": "这个班女生比男生多。",
-   "knowledge_ids": [
-    "V2397"
+   "options": [
+    "トムはジャックよりも１０ポンド重い。",
+    "クッキーはケイトによって育てられた。",
+    "私はパレードが見えるいい位置にいた。",
+    "このクラスは女子が男子より多いです。"
    ],
-   "hint": ""
+   "h": "96d08eb4",
+   "oh": [
+    "c1811a4a",
+    "a7ad5d1c",
+    "3821a6d6",
+    "96d08eb4"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1337"
   },
   {
-   "id": "S1338",
-   "day": 134,
-   "direction": "ja-zh",
+   "qid": "P-134-07-d5cecd55f488",
    "prompt": "彼の話は単純そのものだった。",
-   "knowledge_ids": [
-    "V2398"
+   "options": [
+    "他的话简单得不能再简单。",
+    "地球以外的天体上有生物吗？",
+    "好了，聚会就到此结束吧。",
+    "她不知如何是好，束手无策。"
    ],
-   "hint": ""
+   "h": "1723f272",
+   "oh": [
+    "1723f272",
+    "26a2ce62",
+    "5b171b12",
+    "b44dcee5"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1338"
   },
   {
-   "id": "S1339",
-   "day": 134,
-   "direction": "ja-zh",
+   "qid": "P-134-08-1a9ec9e2be9c",
    "prompt": "生命はいつ誕生したのですか。",
-   "knowledge_ids": [
-    "V2399"
+   "options": [
+    "他们的意见和我的不同。",
+    "生命是什么时候诞生的？",
+    "你居然敢这么跟我说话。",
+    "迟到的人就让鬼吃掉吧。"
    ],
-   "hint": ""
+   "h": "3df29c45",
+   "oh": [
+    "1d38ae3",
+    "3df29c45",
+    "a645f8f6",
+    "3069b7e7"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1339"
   },
   {
-   "id": "S1340",
-   "day": 134,
-   "direction": "ja-zh",
+   "qid": "P-134-09-353a46a8841f",
    "prompt": "ダンスはスタイルをよくするのにいい。",
-   "knowledge_ids": [
-    "V2400"
+   "options": [
+    "请从B2出口上到地面。",
+    "账算下来一共五百美元。",
+    "能让我看看那条裙子吗？",
+    "跳舞对保持身材有好处。"
    ],
-   "hint": ""
+   "h": "ea070baa",
+   "oh": [
+    "12ff463b",
+    "2e1e71de",
+    "372e9993",
+    "ea070baa"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1340"
   }
  ],
  "quiz": [

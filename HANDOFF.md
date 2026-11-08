@@ -1,18 +1,18 @@
-# HANDOFF · Nihongo 150 v7.1
+# HANDOFF · Nihongo 150 v8
 
-2026-11-08 完成并上线。v7 做了三路独立复审（内容库 / 免费听力资源 / 课程与题目质量）并修掉点名问题；
+2026-11-08：当前网页学习方式已更新至v8，验收见 `reports/v8_learning_ui.md`。v7.1历史发布基线：v7 做了三路独立复审（内容库 / 免费听力资源 / 课程与题目质量）并修掉点名问题；
 v7.1 收尾又消掉两条技术边界：Safari 音频兼容、preview 与 production 的 D1 数据隔离，并清理全部临时残留。
 验收与命令输出见 `reports/v7_completion.md`，v6 记录见 `reports/v6_completion.md`，
 数据来源与许可见 `DATA_LICENSES.md`。Git 具体提交以 `git log -1` 为准。
 
-- Production：`https://nihongo80.cmjfire.workers.dev`，Version `86f66f9e-3fda-412d-8650-5f2876d0a4fa`
-- Preview：`https://nihongo80-preview.cmjfire.workers.dev`，Version `0781c3f1-f63e-48da-ad91-7fa314133a77`
+- 当前v8 Production：`https://nihongo80.cmjfire.workers.dev`，Version `9d67c82c-10ff-438f-b2aa-ea392018dfc3`
+- 当前v8 Preview：`https://nihongo80-preview.cmjfire.workers.dev`，Version `3a96fa8f-4467-4922-9ad1-6299b27acfed`
 
 ## 产品决策
 
 中文母语、朝鲜族、韩语母语级，目标高效学习N3。网页提供资源，会话答疑和验收。150天×60分钟，网页42+会话18；常规最多16必学词，听力日最多11。全2700词按天分为2154必学、546拓展；全部资源保留，不强迫每天塞完拓展。
 
-十句中三句必做、七句拓展。完成选择题不足以完成当天，必须有教师录入的真实输出与反馈。默认下一课从SQLite的第一个未完成日计算。平台不会自动传递精确状态，仍须显式读文件。
+十句全部转为选择题，三题必做、七题拓展。网页选择题模式不要求手写或教师输出验收；导入后由CLI自动按完整性和70%正确率计算完成。默认下一课从SQLite的第一个未完成日计算。平台不会自动传递精确状态，仍须显式读文件。
 
 ## 当前交付
 
@@ -59,7 +59,7 @@ v7.1 收尾又消掉两条技术边界：Safari 音频兼容、preview 与 produ
 python3 scripts/nh80.py init
 python3 scripts/nh80.py validate
 python3 scripts/release_guard.py
-python3 -m unittest discover -s tests -p 'test*.py'   # 44 项
+python3 -m unittest discover -s tests -p 'test*.py'   # 45 项
 node tests/test_worker_access.mjs  # 需要deploy/npm install后的esbuild
 python3 -m http.server 8099 -d web
 ```
@@ -74,13 +74,13 @@ bash scripts/deploy_cloudflare.sh preview
 bash scripts/deploy_cloudflare.sh production
 ```
 
-已使用0001/0002/0003迁移；0003为个人同步预算。两Worker复用现有D1，不额外创建服务。生产和preview实际版本及逐字校验记录以本次验收报告为准。
+已使用0001/0002/0003迁移；0003为个人同步预算。两Worker分别使用独立D1，保持预览与生产隔离，本轮不新增服务。生产和preview实际版本及逐字校验记录以本次验收报告为准。
 
 ## 学习闭环
 
 详见docs/STUDY_GUIDE.md。daily --sync读取本机密钥拉取作答，不把密钥放进命令参数或输出；离线导出的JSON用import-file。作答以session+qid幂等，独立会话不合并；最新课程每题的最新成绩用于完成判定。
 
-教师在output-review.json记录三句批改、两句自主语法造句与三词回忆，confirm-output审核结构并记录能力；两句语法未通过不会放行完成。finish-day要求当天题目全有成绩、正确率≥70%且输出验收通过。自评与听力理解不擅自推进不相关卡片掌握。
+choice模式由网页明确上报，D1元数据传回CLI后按完整必做题＋70%正确率计算完成，不需confirm-output或手写批改。日常基础题仍1035道，另将1500句生成1500道四选一，总答案表2535题；拓展7题不进入完成判定分母。旧教师验收接口兼容历史模式，选择题不推进production能力。
 
 旧浏览器失败载荷与新题号分开保留，重载后能恢复本版本答案并重试，原始旧载荷不丢。公开页面只包含课程复习词，不再打包本机FSRS阶段或真实学习记录。
 

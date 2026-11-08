@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0076",
    "front": "友達",
    "back": "朋友",
+   "kana": "ともだち",
    "stage": "planned"
   },
   {
    "kid": "V0077",
    "front": "人",
    "back": "人",
+   "kana": "ひと",
    "stage": "planned"
   },
   {
    "kid": "V0078",
    "front": "学生",
    "back": "学生",
+   "kana": "がくせい",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0027",
    "front": "上",
-   "back": "上；上面｜音 ジョウ、ショウ",
+   "back": "上；上面",
+   "kana": "ジョウ、ショウ、うえ、あ、のぼ",
    "stage": "planned"
   },
   {
    "kid": "K0028",
    "front": "下",
-   "back": "下；下面｜音 カ、ゲ",
+   "back": "下；下面",
+   "kana": "カ、ゲ、した、さ、お",
    "stage": "planned"
   },
   {
    "kid": "V0034",
    "front": "木曜日",
    "back": "星期四",
+   "kana": "もくようび",
    "stage": "planned"
   },
   {
    "kid": "V0035",
    "front": "金曜日",
    "back": "星期五",
+   "kana": "きんようび",
    "stage": "planned"
   },
   {
    "kid": "V0036",
    "front": "土曜日",
    "back": "星期六",
+   "kana": "どようび",
    "stage": "planned"
   },
   {
@@ -534,104 +542,204 @@
  ],
  "sentences": [
   {
-   "id": "S0061",
-   "day": 7,
-   "direction": "zh-ja",
+   "qid": "P-007-00-5cfa74314274",
    "prompt": "想当医生。",
-   "knowledge_ids": [
-    "V0087"
+   "options": [
+    "この小麦は粉にされる。",
+    "医者になりたいです。",
+    "遠くに小屋が見えた。",
+    "ケンとけんかしたのか。"
    ],
-   "hint": ""
+   "h": "22bf2f45",
+   "oh": [
+    "8fa39b7e",
+    "22bf2f45",
+    "6a6c4ab3",
+    "e90453f9"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0061"
   },
   {
-   "id": "S0062",
-   "day": 7,
-   "direction": "zh-ja",
+   "qid": "P-007-01-cd7bd9acf258",
    "prompt": "给朋友打电话。",
-   "knowledge_ids": [
-    "V0089"
+   "options": [
+    "ホテルに泊まります。",
+    "友達に電話します。",
+    "合格して嬉しいです。",
+    "お手洗いはどこですか。"
    ],
-   "hint": ""
+   "h": "ec5f7b75",
+   "oh": [
+    "7f5d8029",
+    "ec5f7b75",
+    "f6598066",
+    "9f20e43f"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0062"
   },
   {
-   "id": "S0063",
-   "day": 7,
-   "direction": "zh-ja",
+   "qid": "P-007-02-e0559caca003",
    "prompt": "和家人旅行。",
-   "knowledge_ids": [
-    "V0091"
+   "options": [
+    "ホテルに泊まります。",
+    "田中さんは先生です。",
+    "家族と旅行します。",
+    "遠くに小屋が見えた。"
    ],
-   "hint": ""
+   "h": "8582dd31",
+   "oh": [
+    "7f5d8029",
+    "8e0bbf88",
+    "8582dd31",
+    "6a6c4ab3"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0063"
   },
   {
-   "id": "S0064",
-   "day": 7,
-   "direction": "zh-ja",
+   "qid": "P-007-03-aaea71f7e286",
    "prompt": "住宾馆。",
-   "knowledge_ids": [
-    "V0092"
+   "options": [
+    "最近食欲がないんです。",
+    "これはいくらですか。",
+    "友達に電話します。",
+    "ホテルに泊まります。"
    ],
-   "hint": ""
+   "h": "7f5d8029",
+   "oh": [
+    "f3e36ba6",
+    "6506aa3c",
+    "ec5f7b75",
+    "7f5d8029"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0064"
   },
   {
-   "id": "S0065",
-   "day": 7,
-   "direction": "zh-ja",
+   "qid": "P-007-04-853e8843f6c6",
    "prompt": "头疼。",
-   "knowledge_ids": [
-    "V0094"
+   "options": [
+    "これはいくらですか。",
+    "間違いを直します。",
+    "政府は倒された。",
+    "頭が痛いです。"
    ],
-   "hint": ""
+   "h": "e7640aa7",
+   "oh": [
+    "6506aa3c",
+    "f38675d3",
+    "d81a873f",
+    "e7640aa7"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0065"
   },
   {
-   "id": "S0066",
-   "day": 7,
-   "direction": "zh-ja",
+   "qid": "P-007-05-815ee4bc40f6",
    "prompt": "吃药。",
-   "knowledge_ids": [
-    "V0095"
+   "options": [
+    "薬を飲みます。",
+    "水を飲みます。",
+    "部屋の中にいます。",
+    "話を聞かせてくれ。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0067",
-   "day": 7,
+   "h": "8936631d",
+   "oh": [
+    "8936631d",
+    "9d2cc3e5",
+    "3d1f2b43",
+    "daa927f"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0066"
+  },
+  {
+   "qid": "P-007-06-3e34ef9b09db",
    "prompt": "正在下雨。",
-   "knowledge_ids": [
-    "V0096"
+   "options": [
+    "二人で行きます。",
+    "雨が降っています。",
+    "彼は重責を解かれた。",
+    "彼は非常に学がある。"
    ],
-   "hint": ""
+   "h": "db98fcac",
+   "oh": [
+    "2889b9fc",
+    "db98fcac",
+    "93f07e6c",
+    "e2759f64"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0067"
   },
   {
-   "id": "S0068",
-   "day": 7,
-   "direction": "ja-zh",
+   "qid": "P-007-07-4da7085d6e0a",
    "prompt": "今日はいい天気です。",
-   "knowledge_ids": [
-    "V0097"
+   "options": [
+    "收银台在哪里。",
+    "我还不太清楚。",
+    "今天天气好。",
+    "开会迟到了。"
    ],
-   "hint": ""
+   "h": "1b222922",
+   "oh": [
+    "55df731b",
+    "e0e1cf46",
+    "1b222922",
+    "bb7937e0"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0068"
   },
   {
-   "id": "S0069",
-   "day": 7,
-   "direction": "ja-zh",
+   "qid": "P-007-08-160ac2c29b03",
    "prompt": "部屋に猫がいます。",
-   "knowledge_ids": [
-    "V0098"
+   "options": [
+    "这种布很吸水。",
+    "房间里有猫。",
+    "他们躺在草坪上。",
+    "症状好转了。"
    ],
-   "hint": ""
+   "h": "44ea4960",
+   "oh": [
+    "5347c362",
+    "44ea4960",
+    "2bb7a3d6",
+    "ce386345"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0069"
   },
   {
-   "id": "S0070",
-   "day": 7,
-   "direction": "ja-zh",
+   "qid": "P-007-09-2c9880025544",
    "prompt": "映画を見ます。",
-   "knowledge_ids": [
-    "V0099"
+   "options": [
+    "下午去看诊。",
+    "没时间。",
+    "看电影。",
+    "他一生独身。"
    ],
-   "hint": ""
+   "h": "9126c622",
+   "oh": [
+    "3d9f1f18",
+    "eaced404",
+    "9126c622",
+    "d5317579"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0070"
   }
  ],
  "quiz": [

@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0353",
    "front": "足",
    "back": "脚；腿",
+   "kana": "あし",
    "stage": "planned"
   },
   {
    "kid": "V0354",
    "front": "あそこ",
    "back": "那里",
+   "kana": "あそこ",
    "stage": "planned"
   },
   {
    "kid": "V0355",
    "front": "遊ぶ",
    "back": "玩；游玩",
+   "kana": "あそぶ",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0047",
    "front": "生",
-   "back": "生；活；学生｜音 セイ、ショウ",
+   "back": "生；活；学生",
+   "kana": "セイ、ショウ、い、う、なま",
    "stage": "planned"
   },
   {
    "kid": "K0048",
    "front": "先",
-   "back": "先；之前；先生｜音 セン",
+   "back": "先；之前；先生",
+   "kana": "セン、さき",
    "stage": "planned"
   },
   {
    "kid": "V0120",
    "front": "借りる",
    "back": "借（入）；向人借",
+   "kana": "かりる",
    "stage": "planned"
   },
   {
    "kid": "V0121",
    "front": "教える",
    "back": "教；告诉",
+   "kana": "おしえる",
    "stage": "planned"
   },
   {
    "kid": "V0122",
    "front": "帰る",
    "back": "回；回家",
+   "kana": "かえる",
    "stage": "planned"
   },
   {
@@ -552,104 +560,204 @@
  ],
  "sentences": [
   {
-   "id": "S0101",
-   "day": 11,
-   "direction": "zh-ja",
+   "qid": "P-011-00-151035ab7332",
    "prompt": "我给你冲杯热咖啡吧。",
-   "knowledge_ids": [
-    "V0360"
+   "options": [
+    "あなたの名前と住所を記入しなさい。",
+    "熱いコーヒーを入れてあげましょう。",
+    "エレベーターから煙の臭いがします。",
+    "この部屋には新しい設備があります。"
    ],
-   "hint": ""
+   "h": "d513f07e",
+   "oh": [
+    "52eeffa0",
+    "d513f07e",
+    "ed7c7a3d",
+    "f4227281"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0101"
   },
   {
-   "id": "S0102",
-   "day": 11,
-   "direction": "zh-ja",
+   "qid": "P-011-01-dbc10490a2b7",
    "prompt": "这边的书比那边的书容易。",
-   "knowledge_ids": [
-    "V0361"
+   "options": [
+    "生物学者はその現象の観察に集中した。",
+    "こっちの本はあっちの本よりやさしい。",
+    "この音楽はバッハによって作曲された。",
+    "わたしを川のむこうに渡してください。"
    ],
-   "hint": ""
+   "h": "d928a8c9",
+   "oh": [
+    "20b3b4dd",
+    "d928a8c9",
+    "4681d2ed",
+    "a08d97b1"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0102"
   },
   {
-   "id": "S0103",
-   "day": 11,
-   "direction": "zh-ja",
+   "qid": "P-011-02-f6bb4f80a79c",
    "prompt": "为什么不喝喝那瓶好酒呢。",
-   "knowledge_ids": [
-    "V0362"
+   "options": [
+    "このお客様は田中さんが担当しています。",
+    "ドアをそのままにしておいてはいけません。",
+    "それでは、あなたは来ないということですか。",
+    "あのおいしいワインをなぜ飲まないんだい。"
    ],
-   "hint": ""
+   "h": "5ebf955f",
+   "oh": [
+    "29b7257a",
+    "6fe1fecd",
+    "5501910",
+    "5ebf955f"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0103"
   },
   {
-   "id": "S0104",
-   "day": 11,
-   "direction": "zh-ja",
+   "qid": "P-011-03-bf3805b3ee58",
    "prompt": "哥哥在找公寓。",
-   "knowledge_ids": [
-    "V0363"
+   "options": [
+    "だんだん日が長くなっています。",
+    "兄はアパートをさがしています。",
+    "タクシーに傘を忘れてしまった。",
+    "レーンコートのボタンがとれた。"
    ],
-   "hint": ""
+   "h": "7f656d90",
+   "oh": [
+    "b1c203f0",
+    "7f656d90",
+    "6425ef0e",
+    "933240ec"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0104"
   },
   {
-   "id": "S0105",
-   "day": 11,
-   "direction": "zh-ja",
+   "qid": "P-011-04-e494ccc85368",
    "prompt": "那时我正在洗淋浴。",
-   "knowledge_ids": [
-    "V0364"
+   "options": [
+    "医者は彼の苦痛を除いてやった。",
+    "その時はシャワーを浴びていた。",
+    "このコップをミルクで満たした。",
+    "彼は大学院に進学しないだろう。"
    ],
-   "hint": ""
+   "h": "bc9b8d60",
+   "oh": [
+    "8a6a13e3",
+    "bc9b8d60",
+    "69585dd2",
+    "f470c15a"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0105"
   },
   {
-   "id": "S0106",
-   "day": 11,
-   "direction": "zh-ja",
+   "qid": "P-011-05-f2cd0566a797",
    "prompt": "对玛丽我总是狠不下心。",
-   "knowledge_ids": [
-    "V0365"
+   "options": [
+    "あなたがここに居たのは幸いでした。",
+    "その時計はスイスで製造されている。",
+    "メアリーにはつい甘くなってしまう。",
+    "あなたの名前と住所を記入しなさい。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0107",
-   "day": 11,
+   "h": "ab2b0013",
+   "oh": [
+    "6aab53b9",
+    "9593021b",
+    "ab2b0013",
+    "52eeffa0"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0106"
+  },
+  {
+   "qid": "P-011-06-36522c9875e7",
    "prompt": "这类书我不太读。",
-   "knowledge_ids": [
-    "V0366"
+   "options": [
+    "日がだんだん短くなっている。",
+    "それ以上はお役に立てません。",
+    "この手の本はあまり読まない。",
+    "昨夜はぐっすり眠れなかった。"
    ],
-   "hint": ""
+   "h": "771de503",
+   "oh": [
+    "3758f7bc",
+    "717e0b55",
+    "771de503",
+    "c36eaddd"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0107"
   },
   {
-   "id": "S0108",
-   "day": 11,
-   "direction": "ja-zh",
+   "qid": "P-011-07-496c6afdb10f",
    "prompt": "いい子にしていたら、あめをあげよう。",
-   "knowledge_ids": [
-    "V0367"
+   "options": [
+    "累的话倒不如休息更好。",
+    "镇中心有个漂亮的公园。",
+    "他穿着西装，很显眼。",
+    "你要是乖，就给你糖吃。"
    ],
-   "hint": ""
+   "h": "98c00a1c",
+   "oh": [
+    "97b7981d",
+    "96772a3a",
+    "6810aa82",
+    "98c00a1c"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0108"
   },
   {
-   "id": "S0109",
-   "day": 11,
-   "direction": "ja-zh",
+   "qid": "P-011-08-57ae1ce3b08b",
    "prompt": "いつこの車は洗われましたか。",
-   "knowledge_ids": [
-    "V0368"
+   "options": [
+    "你为什么拒绝了他的提议？",
+    "这辆车是什么时候洗的？",
+    "他们的意见和我的不同。",
+    "那台发动机靠蒸汽驱动。"
    ],
-   "hint": ""
+   "h": "40b08a5c",
+   "oh": [
+    "59938dd",
+    "40b08a5c",
+    "1d38ae3",
+    "49a6e1e7"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0109"
   },
   {
-   "id": "S0110",
-   "day": 11,
-   "direction": "ja-zh",
+   "qid": "P-011-09-9091664af859",
    "prompt": "はるばる来てくれてありがとう。",
-   "knowledge_ids": [
-    "V0369"
+   "options": [
+    "谢谢你远道而来。",
+    "他用无线电发了报。",
+    "还有很多事该做。",
+    "你参加比赛了吗？"
    ],
-   "hint": ""
+   "h": "ba7a7971",
+   "oh": [
+    "ba7a7971",
+    "3e7102f9",
+    "283c5d8c",
+    "51a648e8"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0110"
   }
  ],
  "quiz": [

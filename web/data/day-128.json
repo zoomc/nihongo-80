@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V2215",
    "front": "心理",
    "back": "心理",
+   "kana": "しんり",
    "stage": "planned"
   },
   {
    "kid": "V2216",
    "front": "人類",
    "back": "人类",
+   "kana": "じんるい",
    "stage": "planned"
   },
   {
    "kid": "V2217",
    "front": "巣",
    "back": "巢；窝",
+   "kana": "す",
    "stage": "planned"
   },
   {
@@ -65,31 +68,36 @@
   {
    "kid": "K0525",
    "front": "船",
-   "back": "船；船只｜音 セン",
+   "back": "船；船只",
+   "kana": "セン、ふね、ふな-",
    "stage": "planned"
   },
   {
    "kid": "K0526",
    "front": "途",
-   "back": "路途；途中｜音 ト",
+   "back": "路途；途中",
+   "kana": "ト、みち",
    "stage": "planned"
   },
   {
    "kid": "V2177",
    "front": "植物",
    "back": "植物",
+   "kana": "しょくぶつ",
    "stage": "planned"
   },
   {
    "kid": "V2178",
    "front": "食物",
    "back": "食物",
+   "kana": "しょくもつ",
    "stage": "planned"
   },
   {
    "kid": "V2179",
    "front": "食欲",
    "back": "食欲",
+   "kana": "しょくよく",
    "stage": "planned"
   },
   {
@@ -107,7 +115,8 @@
   {
    "kid": "K0517",
    "front": "王",
-   "back": "王；国王｜音 オウ、-ノウ",
+   "back": "王；国王",
+   "kana": "オウ、-ノウ",
    "stage": "planned"
   }
  ],
@@ -478,104 +487,204 @@
  ],
  "sentences": [
   {
-   "id": "S1271",
-   "day": 128,
-   "direction": "zh-ja",
+   "qid": "P-128-00-511f2255c279",
    "prompt": "他是世人所说的真正的音乐爱好者。",
-   "knowledge_ids": [
-    "V2279"
+   "options": [
+    "人間は互いに言葉で意思を通じ合う。",
+    "お年寄りをからかってはいけません。",
+    "彼は世間でいう音楽の真の愛好者だ。",
+    "その場所は今は相当建て込んでいる。"
    ],
-   "hint": ""
+   "h": "3e786b72",
+   "oh": [
+    "4eae6f12",
+    "a3dd40ad",
+    "3e786b72",
+    "923b8d6a"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1271"
   },
   {
-   "id": "S1272",
-   "day": 128,
-   "direction": "zh-ja",
+   "qid": "P-128-01-86f3bc9c7890",
    "prompt": "我无法相信这种说法。",
-   "knowledge_ids": [
-    "V2280"
+   "options": [
+    "これを青いのと取り替えてください。",
+    "この夏休みはどこかへ行くのですか。",
+    "ぼくは少々君に腹が立っているんだ。",
+    "私はこの説を信じることは出来ない。"
    ],
-   "hint": ""
+   "h": "88c07ceb",
+   "oh": [
+    "6d5148a5",
+    "8b440dfb",
+    "6ef7715c",
+    "88c07ceb"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1272"
   },
   {
-   "id": "S1273",
-   "day": 128,
-   "direction": "zh-ja",
+   "qid": "P-128-02-2075fdbaa387",
    "prompt": "是照着我的设计做的。",
-   "knowledge_ids": [
-    "V2281"
+   "options": [
+    "私の設計にしたがって、作ってもらいました。",
+    "このメールを営業部に転送してください。",
+    "私のE-mailアドレスが変わりました。",
+    "わからなかったら方々の人に聞いた方がいいよ。"
    ],
-   "hint": ""
+   "h": "48ce3f1c",
+   "oh": [
+    "48ce3f1c",
+    "ad45da64",
+    "6c61f1e5",
+    "e141a543"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1273"
   },
   {
-   "id": "S1274",
-   "day": 128,
-   "direction": "zh-ja",
+   "qid": "P-128-03-7873ffeb3b24",
    "prompt": "唉，我明明觉得一定会成功的。",
-   "knowledge_ids": [
-    "V2282"
+   "options": [
+    "ジョージは朝にたくさんのチーズを食べた。",
+    "私は本棚の本をすべて読んだわけではない。",
+    "お父さんがバスルームでひげを剃っている。",
+    "アーア、絶対うまくいくと思ったのになあ。"
    ],
-   "hint": ""
+   "h": "2f237702",
+   "oh": [
+    "2f26c123",
+    "ef0f61c9",
+    "4f3c3e45",
+    "2f237702"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1274"
   },
   {
-   "id": "S1275",
-   "day": 128,
-   "direction": "zh-ja",
+   "qid": "P-128-04-dca583bc3682",
    "prompt": "把闹钟定到七点吧。",
-   "knowledge_ids": [
-    "V2283"
+   "options": [
+    "兄はアパートをさがしています。",
+    "シャッターを押してくれますか。",
+    "主婦は節約に努めるべきである。",
+    "目覚ましを７時にセットしよう。"
    ],
-   "hint": ""
+   "h": "bd7bcd77",
+   "oh": [
+    "7f656d90",
+    "a9a6fa1f",
+    "ce74be3a",
+    "bd7bcd77"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1275"
   },
   {
-   "id": "S1276",
-   "day": 128,
-   "direction": "zh-ja",
+   "qid": "P-128-05-d66018382115",
    "prompt": "灭绝是进化的一部分。",
-   "knowledge_ids": [
-    "V2284"
+   "options": [
+    "ここに鋭い痛みがあります。",
+    "君の英語は上達している。",
+    "絶滅は進化の一部である。",
+    "ここに手のないナベがある。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1277",
-   "day": 128,
+   "h": "fb243001",
+   "oh": [
+    "be78df4e",
+    "e4ddf50",
+    "fb243001",
+    "4bd0565"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1276"
+  },
+  {
+   "qid": "P-128-06-895b8a49a0f5",
    "prompt": "家庭主妇应当努力节约。",
-   "knowledge_ids": [
-    "V2285"
+   "options": [
+    "いまおじの家に滞在しています。",
+    "主婦は節約に努めるべきである。",
+    "それは千円以下では買えません。",
+    "地球は球のような形をしている。"
    ],
-   "hint": ""
+   "h": "ce74be3a",
+   "oh": [
+    "ee03280",
+    "ce74be3a",
+    "4179f45f",
+    "19b4cf96"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1277"
   },
   {
-   "id": "S1278",
-   "day": 128,
-   "direction": "ja-zh",
+   "qid": "P-128-07-fd827752df43",
    "prompt": "彼はうそをついたと彼女を責めた。",
-   "knowledge_ids": [
-    "V2286"
+   "options": [
+    "他责怪她撒谎。",
+    "你以为我好骗吧。",
+    "和朋友看电影。",
+    "和这件事没关系。"
    ],
-   "hint": ""
+   "h": "6ed649fb",
+   "oh": [
+    "6ed649fb",
+    "dbbf4ad2",
+    "1d346a36",
+    "1abbc7cc"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1278"
   },
   {
-   "id": "S1279",
-   "day": 128,
-   "direction": "ja-zh",
+   "qid": "P-128-08-556dfb274b17",
    "prompt": "競争それ自体は善でも悪でもない。",
-   "knowledge_ids": [
-    "V2287"
+   "options": [
+    "竞争本身无所谓善恶。",
+    "墨西哥人说什么语言？",
+    "他差点就进入最高一档。",
+    "今后必须多加小心。"
    ],
-   "hint": ""
+   "h": "744ac9a2",
+   "oh": [
+    "744ac9a2",
+    "f09cbbd1",
+    "d69a9cbc",
+    "643f25c1"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1279"
   },
   {
-   "id": "S1280",
-   "day": 128,
-   "direction": "ja-zh",
+   "qid": "P-128-09-06e7d4536720",
    "prompt": "全新聞がその事件を大きく取り上げた。",
-   "knowledge_ids": [
-    "V2288"
+   "options": [
+    "所有报纸都大篇幅报道了那起事件。",
+    "地球以外的天体上有生物吗？",
+    "一听这话，他脸色刷地白了。",
+    "自1988年以来就没见过汤姆。"
    ],
-   "hint": ""
+   "h": "9ef87986",
+   "oh": [
+    "9ef87986",
+    "26a2ce62",
+    "35126ddb",
+    "e0ae7873"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1280"
   }
  ],
  "quiz": [

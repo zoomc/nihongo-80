@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V1114",
    "front": "辞典",
    "back": "辞典",
+   "kana": "じてん",
    "stage": "planned"
   },
   {
    "kid": "V1115",
    "front": "品物",
    "back": "物品",
+   "kana": "しなもの",
    "stage": "planned"
   },
   {
    "kid": "V1116",
    "front": "しばらく",
    "back": "暂时",
+   "kana": "しばらく",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0264",
    "front": "青",
-   "back": "青；蓝；绿｜音 セイ、ショウ",
+   "back": "青；蓝；绿",
+   "kana": "セイ、ショウ、あお、あお-、あお.い",
    "stage": "planned"
   },
   {
    "kid": "K0265",
    "front": "色",
-   "back": "颜色；色彩｜音 ショク、シキ",
+   "back": "颜色；色彩",
+   "kana": "ショク、シキ、いろ",
    "stage": "planned"
   },
   {
    "kid": "V1081",
    "front": "今度",
    "back": "这次；下次",
+   "kana": "こんど",
    "stage": "planned"
   },
   {
    "kid": "V1082",
    "front": "コンピュータ",
    "back": "电脑",
+   "kana": "コンピュータ",
    "stage": "planned"
   },
   {
    "kid": "V1083",
    "front": "今夜",
    "back": "今晚",
+   "kana": "こんや",
    "stage": "planned"
   },
   {
@@ -458,104 +466,204 @@
  ],
  "sentences": [
   {
-   "id": "S0531",
-   "day": 54,
-   "direction": "zh-ja",
+   "qid": "P-054-00-91d84137cd3e",
    "prompt": "印度的人口有多少？",
-   "knowledge_ids": [
-    "V1141"
+   "options": [
+    "マイクはバスで学校に通っている。",
+    "これらの語をノートに書きなさい。",
+    "インドの人口はどのくらいですか。",
+    "アリは夏じゅうせっせとはたらく。"
    ],
-   "hint": ""
+   "h": "4c5d8293",
+   "oh": [
+    "1062eb67",
+    "7a4a4062",
+    "4c5d8293",
+    "76c21659"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0531"
   },
   {
-   "id": "S0532",
-   "day": 54,
-   "direction": "zh-ja",
+   "qid": "P-054-01-4b466601d9fa",
    "prompt": "京都有很多神社。",
-   "knowledge_ids": [
-    "V1142"
+   "options": [
+    "私は生まれも育ちも東京だ。",
+    "京都には多くの神社がある。",
+    "私たちは毎年展覧会を開く。",
+    "ここに手のないナベがある。"
    ],
-   "hint": ""
+   "h": "8cc76400",
+   "oh": [
+    "a41b78c4",
+    "8cc76400",
+    "e4b88455",
+    "4bd0565"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0532"
   },
   {
-   "id": "S0533",
-   "day": 54,
-   "direction": "zh-ja",
+   "qid": "P-054-02-9b3e6aea0087",
    "prompt": "你的家人一定很热心吧。",
-   "knowledge_ids": [
-    "V1143"
+   "options": [
+    "先生は私に一番長い章を割り当てた。",
+    "あなたの家族はきっと親切でしょう。",
+    "その部屋は居心地の良い感じがした。",
+    "アメリカ旅行のよい記念になります。"
    ],
-   "hint": ""
+   "h": "4f1d4d0e",
+   "oh": [
+    "ca7cc11a",
+    "4f1d4d0e",
+    "52653e66",
+    "626a81c1"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0533"
   },
   {
-   "id": "S0534",
-   "day": 54,
-   "direction": "zh-ja",
+   "qid": "P-054-03-6fda76c0b5d2",
    "prompt": "您在哪家报社工作？",
-   "knowledge_ids": [
-    "V1144"
+   "options": [
+    "彼は市場に出す牛を育てている。",
+    "あのドレスは彼女によく似合う。",
+    "どちらの新聞社にお勤めですか。",
+    "あいつもアバウトな性格だよな。"
    ],
-   "hint": ""
+   "h": "d5ea31b",
+   "oh": [
+    "8c9d754",
+    "d2b39483",
+    "d5ea31b",
+    "65071076"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0534"
   },
   {
-   "id": "S0535",
-   "day": 54,
-   "direction": "zh-ja",
+   "qid": "P-054-04-32888f14b6c2",
    "prompt": "游泳是我的乐趣之一。",
-   "knowledge_ids": [
-    "V1145"
+   "options": [
+    "水泳が私の楽しみの１つです。",
+    "最初の打者はアウトになった。",
+    "新しいパソコンがほしいです。",
+    "このイヤホンは壊れています。"
    ],
-   "hint": ""
+   "h": "2f2ba09b",
+   "oh": [
+    "2f2ba09b",
+    "812a999a",
+    "70214d18",
+    "cae4bbd8"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0535"
   },
   {
-   "id": "S0536",
-   "day": 54,
-   "direction": "zh-ja",
+   "qid": "P-054-05-9864c7d6d69a",
    "prompt": "昨天自来水被停了。",
-   "knowledge_ids": [
-    "V1146"
+   "options": [
+    "今日歯医者へ行きました。",
+    "昨日水道を止められた。",
+    "この本の著者は誰ですか。",
+    "彼が近所に越してきた。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0537",
-   "day": 54,
+   "h": "4f13646",
+   "oh": [
+    "6f22df02",
+    "4f13646",
+    "7d5d25ac",
+    "ff733aee"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0536"
+  },
+  {
+   "qid": "P-054-06-dd461c312dff",
    "prompt": "我们在这里已经待了很久了。",
-   "knowledge_ids": [
-    "V1147"
+   "options": [
+    "私たちはもうずいぶん長くここにいます。",
+    "トランプでごまかすのはよくないことだ。",
+    "この服にはどんなアクセサリーを付けるの？",
+    "こんな余計な機能なんでつけたんだろう。"
    ],
-   "hint": ""
+   "h": "6c59bc68",
+   "oh": [
+    "6c59bc68",
+    "7ef07a76",
+    "6991196d",
+    "33aba312"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0537"
   },
   {
-   "id": "S0538",
-   "day": 54,
-   "direction": "ja-zh",
+   "qid": "P-054-07-ccb8df2a067d",
    "prompt": "私にはこの数学の問題はわからない。",
-   "knowledge_ids": [
-    "V1148"
+   "options": [
+    "期望过高反而会吃亏。",
+    "鲍勃到底是不是病了？",
+    "吃那么多是不正常的。",
+    "我解不出这道数学题。"
    ],
-   "hint": ""
+   "h": "aeda3c9e",
+   "oh": [
+    "b8b7d26b",
+    "f2ed1fa9",
+    "80ba9814",
+    "aeda3c9e"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0538"
   },
   {
-   "id": "S0539",
-   "day": 54,
-   "direction": "ja-zh",
+   "qid": "P-054-08-02ee2ca92ed4",
    "prompt": "スーツを着て彼は目立っていた。",
-   "knowledge_ids": [
-    "V1149"
+   "options": [
+    "冷气好像开得太足了。",
+    "我们玩了好几种游戏。",
+    "对不起，我误会你了。",
+    "他穿着西装，很显眼。"
    ],
-   "hint": ""
+   "h": "6810aa82",
+   "oh": [
+    "d1afd2f0",
+    "3b0486e",
+    "eeb23946",
+    "6810aa82"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0539"
   },
   {
-   "id": "S0540",
-   "day": 54,
-   "direction": "ja-zh",
+   "qid": "P-054-09-4390ca2f8d10",
    "prompt": "私は彼にスーツケースを運ばせた。",
-   "knowledge_ids": [
-    "V1150"
+   "options": [
+    "鞋底粘上了口香糖。",
+    "我们在这儿下车吧。",
+    "怎么回来得这么晚？",
+    "我让他搬了行李箱。"
    ],
-   "hint": ""
+   "h": "323f3d7c",
+   "oh": [
+    "f923a517",
+    "c38f80c0",
+    "da3dbd3d",
+    "323f3d7c"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0540"
   }
  ],
  "quiz": [

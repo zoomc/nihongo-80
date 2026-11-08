@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V1724",
    "front": "髪の毛",
    "back": "头发",
+   "kana": "かみのけ",
    "stage": "planned"
   },
   {
    "kid": "V1725",
    "front": "科目",
    "back": "科目",
+   "kana": "かもく",
    "stage": "planned"
   },
   {
    "kid": "V1726",
    "front": "かもしれない",
    "back": "也许",
+   "kana": "かもしれない",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0409",
    "front": "神",
-   "back": "神；精神｜音 シン、ジン",
+   "back": "神；精神",
+   "kana": "シン、ジン、かみ、かん-、こう-",
    "stage": "planned"
   },
   {
    "kid": "K0410",
    "front": "番",
-   "back": "号码；轮班｜音 バン",
+   "back": "号码；轮班",
+   "kana": "バン、つが.い",
    "stage": "planned"
   },
   {
    "kid": "V1691",
    "front": "囲む",
    "back": "围住；包围",
+   "kana": "かこむ",
    "stage": "planned"
   },
   {
    "kid": "V1692",
    "front": "火災",
    "back": "火灾",
+   "kana": "かさい",
    "stage": "planned"
   },
   {
    "kid": "V1693",
    "front": "菓子",
    "back": "点心；糕点",
+   "kana": "かし",
    "stage": "planned"
   },
   {
@@ -458,104 +466,204 @@
  ],
  "sentences": [
   {
-   "id": "S0981",
-   "day": 99,
-   "direction": "zh-ja",
+   "qid": "P-099-00-4db77f77dbd7",
    "prompt": "汤姆头上挨了重重一击。",
-   "knowledge_ids": [
-    "V1777"
+   "options": [
+    "トムは頭にきつい一発を受けた。",
+    "いや、当初の考えはそうでした。",
+    "どんぐりからオークが生まれる。",
+    "この漢字はどういう意味ですか。"
    ],
-   "hint": ""
+   "h": "b9186836",
+   "oh": [
+    "b9186836",
+    "745cfd56",
+    "13cc23d0",
+    "f391f35e"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0981"
   },
   {
-   "id": "S0982",
-   "day": 99,
-   "direction": "zh-ja",
+   "qid": "P-099-01-6271d8460d4f",
    "prompt": "他没有察觉到危险。",
-   "knowledge_ids": [
-    "V1778"
+   "options": [
+    "彼は危険に気づいていなかった。",
+    "このスープは塩が少し足りない。",
+    "彼は市場に出す牛を育てている。",
+    "いや、当初の考えはそうでした。"
    ],
-   "hint": ""
+   "h": "29d30393",
+   "oh": [
+    "29d30393",
+    "5e1ae47d",
+    "8c9d754",
+    "745cfd56"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0982"
   },
   {
-   "id": "S0983",
-   "day": 99,
-   "direction": "zh-ja",
+   "qid": "P-099-02-41200f4ceb9d",
    "prompt": "有几点我不喜欢她。",
-   "knowledge_ids": [
-    "V1779"
+   "options": [
+    "こちらはあなたがお話しになるお方です。",
+    "彼は階段を一度に三段ずつかけあがった。",
+    "いくつかの点で私は彼女が気に入らない。",
+    "天候のためレースの開始は遅れるだろう。"
    ],
-   "hint": ""
+   "h": "e6e371c4",
+   "oh": [
+    "aec24c2b",
+    "65809266",
+    "e6e371c4",
+    "3eec5598"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0983"
   },
   {
-   "id": "S0984",
-   "day": 99,
-   "direction": "zh-ja",
+   "qid": "P-099-03-998ab73574a5",
    "prompt": "请帮我填一下这张表。",
-   "knowledge_ids": [
-    "V1780"
+   "options": [
+    "このメールを営業部に転送してください。",
+    "お金を使うも貯めるも自由にしなさい。",
+    "この紙に記入するのを手伝ってください。",
+    "そこの乞食が泥棒である事がわかった。"
    ],
-   "hint": ""
+   "h": "4f6db21e",
+   "oh": [
+    "ad45da64",
+    "d62fbdda",
+    "4f6db21e",
+    "cc176d6c"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0984"
   },
   {
-   "id": "S0985",
-   "day": 99,
-   "direction": "zh-ja",
+   "qid": "P-099-04-7a750c016d54",
    "prompt": "这会成为美国之行的一个好纪念。",
-   "knowledge_ids": [
-    "V1781"
+   "options": [
+    "彼女その瞬間にカッとなったんだね。",
+    "彼は心理学博士の学位を持っている。",
+    "アメリカ旅行のよい記念になります。",
+    "先生は私に一番長い章を割り当てた。"
    ],
-   "hint": ""
+   "h": "626a81c1",
+   "oh": [
+    "b90b4381",
+    "316eb7ce",
+    "626a81c1",
+    "ca7cc11a"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0985"
   },
   {
-   "id": "S0986",
-   "day": 99,
-   "direction": "zh-ja",
+   "qid": "P-099-05-d6b5117f1f20",
    "prompt": "干吗要加这么些多余的功能呢。",
-   "knowledge_ids": [
-    "V1782"
+   "options": [
+    "おはよう。ご飯をよそっても良いかしら？",
+    "このクラスは女子が男子より多いです。",
+    "こんな余計な機能なんでつけたんだろう。",
+    "トランプでごまかすのはよくないことだ。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0987",
-   "day": 99,
+   "h": "33aba312",
+   "oh": [
+    "d3995434",
+    "96d08eb4",
+    "33aba312",
+    "7ef07a76"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0986"
+  },
+  {
+   "qid": "P-099-06-52aa405a11ed",
    "prompt": "我们觉得那对老夫妻很可怜。",
-   "knowledge_ids": [
-    "V1783"
+   "options": [
+    "私たちはその老夫婦を気の毒に思った。",
+    "中国の音楽はどうも僕の肌に合わない。",
+    "件名には会議の名前を書いてください。",
+    "おはよう。ご飯をよそっても良いかしら？"
    ],
-   "hint": ""
+   "h": "93268a2d",
+   "oh": [
+    "93268a2d",
+    "62bcc9c",
+    "6a6d8bac",
+    "d3995434"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0987"
   },
   {
-   "id": "S0988",
-   "day": 99,
-   "direction": "ja-zh",
+   "qid": "P-099-07-f31317ab7c22",
    "prompt": "彼女は赤十字に寄付した。",
-   "knowledge_ids": [
-    "V1784"
+   "options": [
+    "你会按能力逐步提高。",
+    "她向红十字会捐了款。",
+    "他穿着西装，很显眼。",
+    "社长任命了新的部长。"
    ],
-   "hint": ""
+   "h": "924a8cbd",
+   "oh": [
+    "d44d0121",
+    "924a8cbd",
+    "6810aa82",
+    "b9d5235d"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0988"
   },
   {
-   "id": "S0989",
-   "day": 99,
-   "direction": "ja-zh",
+   "qid": "P-099-08-1fc3b9084f49",
    "prompt": "これが彼のたった一つの希望であった。",
-   "knowledge_ids": [
-    "V1785"
+   "options": [
+    "这是他唯一的希望。",
+    "快到睡觉的时间了。",
+    "他用无线电发了报。",
+    "风轻柔地拂过树丛。"
    ],
-   "hint": ""
+   "h": "8aacf9ab",
+   "oh": [
+    "8aacf9ab",
+    "b1e26b52",
+    "3e7102f9",
+    "ce06f34d"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0989"
   },
   {
-   "id": "S0990",
-   "day": 99,
-   "direction": "ja-zh",
+   "qid": "P-099-09-39a21c361f39",
    "prompt": "父は園芸の基本を教えてくれた。",
-   "knowledge_ids": [
-    "V1786"
+   "options": [
+    "流产是非常痛苦的经历。",
+    "父亲教了我园艺的基础。",
+    "累的话倒不如休息更好。",
+    "请让我看看受伤的胳膊。"
    ],
-   "hint": ""
+   "h": "78a06a46",
+   "oh": [
+    "70445b68",
+    "78a06a46",
+    "97b7981d",
+    "95beac58"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0990"
   }
  ],
  "quiz": [

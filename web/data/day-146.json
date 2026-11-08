@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V2575",
    "front": "眺める",
    "back": "眺望；凝视",
+   "kana": "ながめる",
    "stage": "planned"
   },
   {
    "kid": "V2576",
    "front": "流れ",
    "back": "水流；潮流",
+   "kana": "ながれ",
    "stage": "planned"
   },
   {
    "kid": "V2577",
    "front": "流れる",
    "back": "流动；漂流",
+   "kana": "ながれる",
    "stage": "planned"
   },
   {
@@ -65,31 +68,36 @@
   {
    "kid": "K0597",
    "front": "歯",
-   "back": "牙齿｜音 シ",
+   "back": "牙齿",
+   "kana": "シ、は",
    "stage": "planned"
   },
   {
    "kid": "K0598",
    "front": "忘",
-   "back": "忘记｜音 ボウ",
+   "back": "忘记",
+   "kana": "ボウ、わす.れる",
    "stage": "planned"
   },
   {
    "kid": "V2533",
    "front": "解ける",
    "back": "解开；解出",
+   "kana": "とける",
    "stage": "planned"
   },
   {
    "kid": "V2534",
    "front": "どこか",
    "back": "某处；总觉得",
+   "kana": "どこか",
    "stage": "planned"
   },
   {
    "kid": "V2535",
    "front": "ところが",
    "back": "然而；可是",
+   "kana": "ところが",
    "stage": "planned"
   },
   {
@@ -101,13 +109,15 @@
   {
    "kid": "K0589",
    "front": "掛",
-   "back": "挂；花费；架｜音 カイ、ケイ",
+   "back": "挂；花费；架",
+   "kana": "カイ、ケイ、か.ける、-か.ける、か.け、-か.け、-が.け、か.かる、-か.かる、-が.かる、か.かり、-が.かり、かかり、-がかり",
    "stage": "planned"
   },
   {
    "kid": "K0590",
    "front": "到",
-   "back": "到达；达到｜音 トウ",
+   "back": "到达；达到",
+   "kana": "トウ、いた.る",
    "stage": "planned"
   }
  ],
@@ -510,104 +520,204 @@
  ],
  "sentences": [
   {
-   "id": "S1451",
-   "day": 146,
-   "direction": "zh-ja",
+   "qid": "P-146-00-f122db510533",
    "prompt": "他为人很有修养。",
-   "knowledge_ids": [
-    "V2607"
+   "options": [
+    "彼は人間としてよくできた人です。",
+    "ラジオの音を下げてくれませんか。",
+    "このホールには人が二千人入れる。",
+    "コックさんは少しもかけていない。"
    ],
-   "hint": ""
+   "h": "693180e",
+   "oh": [
+    "693180e",
+    "2be3730e",
+    "cc13a7d1",
+    "9948ee99"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1451"
   },
   {
-   "id": "S1452",
-   "day": 146,
-   "direction": "zh-ja",
+   "qid": "P-146-01-ea9453242bfe",
    "prompt": "战斗到最后吧。",
-   "knowledge_ids": [
-    "V2608"
+   "options": [
+    "今日はかなり寒いです。",
+    "最後まで戦い抜こう。",
+    "お手洗いはどこですか。",
+    "あなたは先生ですか。"
    ],
-   "hint": ""
+   "h": "441c844d",
+   "oh": [
+    "c2c783e2",
+    "441c844d",
+    "9f20e43f",
+    "7cbc9d0b"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1452"
   },
   {
-   "id": "S1453",
-   "day": 146,
-   "direction": "zh-ja",
+   "qid": "P-146-02-16fb17e7ff45",
    "prompt": "我掉了一颗牙。",
-   "knowledge_ids": [
-    "V2609"
+   "options": [
+    "今にバチがあたるぞ。",
+    "本を読みます。",
+    "彼は学生です。",
+    "歯が１本抜けた。"
    ],
-   "hint": ""
+   "h": "9199f471",
+   "oh": [
+    "4c536899",
+    "5a4d748c",
+    "b1b71837",
+    "9199f471"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1453"
   },
   {
-   "id": "S1454",
-   "day": 146,
-   "direction": "zh-ja",
+   "qid": "P-146-03-7ac424cac44f",
    "prompt": "这块布价格虽低，质量却好。",
-   "knowledge_ids": [
-    "V2610"
+   "options": [
+    "この制度には改良の余地がない。",
+    "この布は値段の割に品質が良い。",
+    "先生から資料をいただきました。",
+    "ほかに痛いところはありますか。"
    ],
-   "hint": ""
+   "h": "73db6bba",
+   "oh": [
+    "849b2eb5",
+    "73db6bba",
+    "22261966",
+    "f06f274a"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1454"
   },
   {
-   "id": "S1455",
-   "day": 146,
-   "direction": "zh-ja",
+   "qid": "P-146-04-f97d4aa22809",
    "prompt": "他给那幅画定了很高的价。",
-   "knowledge_ids": [
-    "V2611"
+   "options": [
+    "彼はその絵にたいへん高い値をつけた。",
+    "あなたは毎年何回スキーに行きますか。",
+    "クッキーはケイトによって育てられた。",
+    "お宅の暖房はどのようにしていますか。"
    ],
-   "hint": ""
+   "h": "1ea5febd",
+   "oh": [
+    "1ea5febd",
+    "5789b87a",
+    "a7ad5d1c",
+    "754f087f"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1455"
   },
   {
-   "id": "S1456",
-   "day": 146,
-   "direction": "zh-ja",
+   "qid": "P-146-05-057403c458d1",
    "prompt": "他骨子里是个善良的人。",
-   "knowledge_ids": [
-    "V2612"
+   "options": [
+    "彼女には常識が欠けている。",
+    "その知らせにはがっかりだ。",
+    "彼は根はやさしい男だった。",
+    "船は今夜赤道を越すだろう。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1457",
-   "day": 146,
+   "h": "a6673fe9",
+   "oh": [
+    "53186bea",
+    "d49d10e5",
+    "a6673fe9",
+    "e22b650a"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1456"
+  },
+  {
+   "qid": "P-146-06-09b7eefffe7f",
    "prompt": "市长接受了我们的请求。",
-   "knowledge_ids": [
-    "V2613"
+   "options": [
+    "私はあの店で新しいステレオを買った。",
+    "この企業は新しい製品を作っています。",
+    "市長は私達の願いを聞き入れてくれた。",
+    "「大丈夫ですか」「はい、大丈夫です」"
    ],
-   "hint": ""
+   "h": "12d22336",
+   "oh": [
+    "cb357e2c",
+    "82d96402",
+    "12d22336",
+    "c3fb9c88"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1457"
   },
   {
-   "id": "S1458",
-   "day": 146,
-   "direction": "ja-zh",
+   "qid": "P-146-07-b426d463dad4",
    "prompt": "足元に御用心願います。",
-   "knowledge_ids": [
-    "V2614"
+   "options": [
+    "那座山有多高？",
+    "请注意脚下。",
+    "房间里有猫。",
+    "她有表演天赋。"
    ],
-   "hint": ""
+   "h": "f4e574aa",
+   "oh": [
+    "f66afa54",
+    "f4e574aa",
+    "44ea4960",
+    "85f35af"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1458"
   },
   {
-   "id": "S1459",
-   "day": 146,
-   "direction": "ja-zh",
+   "qid": "P-146-08-a01681c05d02",
    "prompt": "猫がいなくなるとネズミたちが遊びだす。",
-   "knowledge_ids": [
-    "V2615"
+   "options": [
+    "希望让我们六个人住下。",
+    "可以问一下您的年龄吗？",
+    "猫一走，老鼠就闹起来了。",
+    "那位歌手是年轻人的偶像。"
    ],
-   "hint": ""
+   "h": "f618225d",
+   "oh": [
+    "d10da833",
+    "868eaf76",
+    "f618225d",
+    "a61776d"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1459"
   },
   {
-   "id": "S1460",
-   "day": 146,
-   "direction": "ja-zh",
+   "qid": "P-146-09-83c307cb9920",
    "prompt": "あの島は熱帯性気候です。",
-   "knowledge_ids": [
-    "V2616"
+   "options": [
+    "大学毕业后就业了。",
+    "那个计划正在推进。",
+    "那座岛是热带气候。",
+    "威士忌和红茶很搭。"
    ],
-   "hint": ""
+   "h": "ecf17885",
+   "oh": [
+    "d01d0bdc",
+    "9b6c1a61",
+    "ecf17885",
+    "4d423da8"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1460"
   }
  ],
  "quiz": [

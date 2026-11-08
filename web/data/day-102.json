@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1776",
    "front": "きちんと",
    "back": "好好地；端正",
+   "kana": "きちんと",
    "stage": "planned"
   },
   {
    "kid": "V1777",
    "front": "きつい",
    "back": "紧；够呛",
+   "kana": "きつい",
    "stage": "planned"
   },
   {
    "kid": "V1778",
    "front": "気付く",
    "back": "察觉",
+   "kana": "きづく",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0421",
    "front": "想",
-   "back": "想；思想；想象｜音 ソウ、ソ",
+   "back": "想；思想；想象",
+   "kana": "ソウ、ソ、おも.う",
    "stage": "planned"
   },
   {
    "kid": "K0422",
    "front": "声",
-   "back": "声音；嗓音｜音 セイ、ショウ",
+   "back": "声音；嗓音",
+   "kana": "セイ、ショウ、こえ、こわ-",
    "stage": "planned"
   },
   {
    "kid": "V1743",
    "front": "感謝",
    "back": "感谢",
+   "kana": "かんしゃ",
    "stage": "planned"
   },
   {
    "kid": "V1744",
    "front": "患者",
    "back": "患者；病人",
+   "kana": "かんじゃ",
    "stage": "planned"
   },
   {
    "kid": "V1745",
    "front": "勘定",
    "back": "结账；计算",
+   "kana": "かんじょう",
    "stage": "planned"
   },
   {
@@ -532,104 +540,204 @@
  ],
  "sentences": [
   {
-   "id": "S1011",
-   "day": 102,
-   "direction": "zh-ja",
+   "qid": "P-102-00-7ff14d491bb9",
    "prompt": "他们决定停止争论。",
-   "knowledge_ids": [
-    "V1825"
+   "options": [
+    "ジョンは門のところまで出てきた。",
+    "それは私が見たことのない景色だ。",
+    "パスポートを見せてくれませんか。",
+    "彼らは議論をやめることに決めた。"
    ],
-   "hint": ""
+   "h": "a0a02b39",
+   "oh": [
+    "7aac2a83",
+    "af5a2328",
+    "e4f54f40",
+    "a0a02b39"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1011"
   },
   {
-   "id": "S1012",
-   "day": 102,
-   "direction": "zh-ja",
+   "qid": "P-102-01-2c01d546b351",
    "prompt": "比起金戒指，我更喜欢银的。",
-   "knowledge_ids": [
-    "V1826"
+   "options": [
+    "トムは頭にきつい一発を受けた。",
+    "それはあなたのナイフではない。",
+    "金より銀の指輪の方が好きです。",
+    "彼は今日、お弁当を持って来た。"
    ],
-   "hint": ""
+   "h": "8d3fda08",
+   "oh": [
+    "b9186836",
+    "89c04ee5",
+    "8d3fda08",
+    "acc40490"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1012"
   },
   {
-   "id": "S1013",
-   "day": 102,
-   "direction": "zh-ja",
+   "qid": "P-102-02-5b596b799c2e",
    "prompt": "不知什么时候才会把禁烟的牌子撤掉呢。",
-   "knowledge_ids": [
-    "V1827"
+   "options": [
+    "いつ禁煙のサインを消すのでしょうね。",
+    "どちらかといえば木造住宅に住みたい。",
+    "マリーゴールドは太陽とともに起きる。",
+    "こちらには大きなハスの葉があります。"
    ],
-   "hint": ""
+   "h": "755332b2",
+   "oh": [
+    "755332b2",
+    "595610d9",
+    "f5e5e2a3",
+    "4d3fb34c"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1013"
   },
   {
-   "id": "S1014",
-   "day": 102,
-   "direction": "zh-ja",
+   "qid": "P-102-03-83d294df6998",
    "prompt": "他给了她一大笔钱。",
-   "knowledge_ids": [
-    "V1828"
+   "options": [
+    "いいクリスマスを過ごしましたか。",
+    "その広間は日本画で飾られていた。",
+    "ビルはその罪を犯していなかった。",
+    "彼は彼女にかなりの金額を与えた。"
    ],
-   "hint": ""
+   "h": "aa006396",
+   "oh": [
+    "a01fba18",
+    "6d732f36",
+    "8cfed4a4",
+    "aa006396"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1014"
   },
   {
-   "id": "S1015",
-   "day": 102,
-   "direction": "zh-ja",
+   "qid": "P-102-04-9aa719f577ca",
    "prompt": "贵重物品要收进保险箱。",
-   "knowledge_ids": [
-    "V1829"
+   "options": [
+    "貴重品は金庫にしまっておきなさい。",
+    "あなたがここに居たのは幸いでした。",
+    "彼は高等学校の生徒ではありません。",
+    "応募の締め切りは今週の金曜日です。"
    ],
-   "hint": ""
+   "h": "8bacba65",
+   "oh": [
+    "8bacba65",
+    "6aab53b9",
+    "31457fd",
+    "31dbb338"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1015"
   },
   {
-   "id": "S1016",
-   "day": 102,
-   "direction": "zh-ja",
+   "qid": "P-102-05-06d7ae4552fe",
    "prompt": "这里禁止吸烟。",
-   "knowledge_ids": [
-    "V1830"
+   "options": [
+    "トムはメアリーにバイクを売った。",
+    "どうしてあなたは一人になったの？",
+    "ここでは煙草は禁止されています。",
+    "ビールびんはガラスでできている。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1017",
-   "day": 102,
+   "h": "ecc80e4d",
+   "oh": [
+    "3db0f9d3",
+    "23d94b23",
+    "ecc80e4d",
+    "45e4dbee"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1016"
+  },
+  {
+   "qid": "P-102-06-1e84dcbfc75e",
    "prompt": "因为钱的事跟他起了争执。",
-   "knowledge_ids": [
-    "V1831"
+   "options": [
+    "この布は値段の割に品質が良い。",
+    "金銭のことで彼と争いになった。",
+    "今朝、地面は霜で覆われていた。",
+    "主婦は節約に努めるべきである。"
    ],
-   "hint": ""
+   "h": "428bc273",
+   "oh": [
+    "73db6bba",
+    "428bc273",
+    "b57ced8f",
+    "ce74be3a"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1017"
   },
   {
-   "id": "S1018",
-   "day": 102,
-   "direction": "ja-zh",
+   "qid": "P-102-07-af23a768a6ac",
    "prompt": "鉄は最も有用な金属です。",
-   "knowledge_ids": [
-    "V1832"
+   "options": [
+    "铁是最有用的金属。",
+    "我让他搬了行李箱。",
+    "你为什么想当护士？",
+    "他们会组织工会吧。"
    ],
-   "hint": ""
+   "h": "eb5e2c2d",
+   "oh": [
+    "eb5e2c2d",
+    "323f3d7c",
+    "28ee32c5",
+    "4a5d6cc4"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1018"
   },
   {
-   "id": "S1019",
-   "day": 102,
-   "direction": "ja-zh",
+   "qid": "P-102-08-55a3017e9292",
    "prompt": "近代医学の進歩は長い道程を歩んだ。",
-   "knowledge_ids": [
-    "V1833"
+   "options": [
+    "这道菜是顾及巴黎风味调味的。",
+    "因此，与他人的互动就变得重要了。",
+    "近代医学的进步走过了漫长的历程。",
+    "她和服与腰带的搭配很有品味。"
    ],
-   "hint": ""
+   "h": "9d7f9118",
+   "oh": [
+    "53e2bb2d",
+    "ef38d9a1",
+    "9d7f9118",
+    "4e2adfe4"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1019"
   },
   {
-   "id": "S1020",
-   "day": 102,
-   "direction": "ja-zh",
+   "qid": "P-102-09-94a9bcd3653e",
    "prompt": "冷戦の緊張が高まった。",
-   "knowledge_ids": [
-    "V1834"
+   "options": [
+    "竞争本身无所谓善恶。",
+    "你赞成我们的计划吗？",
+    "冷战紧张局势加剧了。",
+    "她向红十字会捐了款。"
    ],
-   "hint": ""
+   "h": "1aa3fb11",
+   "oh": [
+    "744ac9a2",
+    "4a12bcc1",
+    "1aa3fb11",
+    "924a8cbd"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1020"
   }
  ],
  "quiz": [

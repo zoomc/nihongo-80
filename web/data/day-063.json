@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1265",
    "front": "どんどん",
    "back": "不断；一个劲",
+   "kana": "どんどん",
    "stage": "planned"
   },
   {
    "kid": "V1266",
    "front": "治る",
    "back": "痊愈；治好",
+   "kana": "なおる",
    "stage": "planned"
   },
   {
    "kid": "V1267",
    "front": "直る",
    "back": "修好；改正",
+   "kana": "なおる",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0120",
    "front": "技",
-   "back": "技；技能；技术｜音 ギ",
+   "back": "技；技能；技术",
+   "kana": "ギ、わざ",
    "stage": "planned"
   },
   {
    "kid": "K0121",
    "front": "術",
-   "back": "术；技术；手术；算术｜音 ジュツ",
+   "back": "术；技术；手术；算术",
+   "kana": "ジュツ",
    "stage": "planned"
   },
   {
    "kid": "V1232",
    "front": "包む",
    "back": "包；包裹",
+   "kana": "つつむ",
    "stage": "planned"
   },
   {
    "kid": "V1233",
    "front": "妻",
    "back": "妻子",
+   "kana": "つま",
    "stage": "planned"
   },
   {
    "kid": "V1234",
    "front": "つもり",
    "back": "打算",
+   "kana": "つもり",
    "stage": "planned"
   },
   {
@@ -531,104 +539,204 @@
  ],
  "sentences": [
   {
-   "id": "S0621",
-   "day": 63,
-   "direction": "zh-ja",
+   "qid": "P-063-00-8132aceefa6e",
    "prompt": "这里有巨大的荷叶。",
-   "knowledge_ids": [
-    "V1297"
+   "options": [
+    "どうして帰りがこんなに遅くなったの。",
+    "こちらには大きなハスの葉があります。",
+    "生物学者はその現象の観察に集中した。",
+    "これらのクッキーは星の形をしている。"
    ],
-   "hint": ""
+   "h": "4d3fb34c",
+   "oh": [
+    "a0491ca2",
+    "4d3fb34c",
+    "20b3b4dd",
+    "97cc4678"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0621"
   },
   {
-   "id": "S0622",
-   "day": 63,
-   "direction": "zh-ja",
+   "qid": "P-063-01-8f617c9a84b2",
    "prompt": "有时系统会不工作。",
-   "knowledge_ids": [
-    "V1298"
+   "options": [
+    "その作家は会話を書くのがうまい。",
+    "アラビア語は右から左へ書きます。",
+    "その話は親から子へと伝えられた。",
+    "システムが作動しない場合がある。"
    ],
-   "hint": ""
+   "h": "e09812e6",
+   "oh": [
+    "34f482bb",
+    "36918c3",
+    "c65bb93d",
+    "e09812e6"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0622"
   },
   {
-   "id": "S0623",
-   "day": 63,
-   "direction": "zh-ja",
+   "qid": "P-063-02-b64c3529bff3",
    "prompt": "抱歉，明天一早我有兼职。",
-   "knowledge_ids": [
-    "V1299"
+   "options": [
+    "ごめんね。明日は朝からパートがあるのよ。",
+    "先生は私たちを二つのグループに分けた。",
+    "この紙に記入するのを手伝ってください。",
+    "あなたを見るとお兄さんを思い出します。"
    ],
-   "hint": ""
+   "h": "9d067c9",
+   "oh": [
+    "9d067c9",
+    "13bdf689",
+    "4f6db21e",
+    "6ab70a5d"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0623"
   },
   {
-   "id": "S0624",
-   "day": 63,
-   "direction": "zh-ja",
+   "qid": "P-063-03-25f06f151f21",
    "prompt": "那座山的高度是这座山的五倍。",
-   "knowledge_ids": [
-    "V1300"
+   "options": [
+    "大使はその任務に対して責任がある。",
+    "あなたの家族はきっと親切でしょう。",
+    "この犬は言わばうちの家族の一員だ。",
+    "あの山はこの山の５倍の高さである。"
    ],
-   "hint": ""
+   "h": "6b0f438a",
+   "oh": [
+    "1f9886e5",
+    "4f1d4d0e",
+    "734cdf35",
+    "6b0f438a"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0624"
   },
   {
-   "id": "S0625",
-   "day": 63,
-   "direction": "zh-ja",
+   "qid": "P-063-04-5efd3c961f66",
    "prompt": "能让我看一下您的护照吗？",
-   "knowledge_ids": [
-    "V1301"
+   "options": [
+    "その火事はおととい発生した。",
+    "水泳が私の楽しみの１つです。",
+    "パスポートを拝見できますか。",
+    "ギターをひくのはおもしろい。"
    ],
-   "hint": ""
+   "h": "f4834db0",
+   "oh": [
+    "d0498af0",
+    "2f2ba09b",
+    "f4834db0",
+    "f7aedaae"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0625"
   },
   {
-   "id": "S0626",
-   "day": 63,
-   "direction": "zh-ja",
+   "qid": "P-063-05-3d58dedf624e",
    "prompt": "今天去看了牙医。",
-   "knowledge_ids": [
-    "V1302"
+   "options": [
+    "今日歯医者へ行きました。",
+    "この小麦は粉にされる。",
+    "マイクはお酒をやめたの？",
+    "この川の幅が１マイルある。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0627",
-   "day": 63,
+   "h": "6f22df02",
+   "oh": [
+    "6f22df02",
+    "8fa39b7e",
+    "2c017500",
+    "ee0a3e53"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0626"
+  },
+  {
+   "qid": "P-063-06-b17bc5df7235",
    "prompt": "这沙发太占地方了。",
-   "knowledge_ids": [
-    "V1303"
+   "options": [
+    "ここでは煙草は禁止されています。",
+    "このソファーは場所を取りすぎる。",
+    "どうしてあなたは一人になったの？",
+    "この犬は何でもほとんど食べます。"
    ],
-   "hint": ""
+   "h": "fa74e348",
+   "oh": [
+    "ecc80e4d",
+    "fa74e348",
+    "23d94b23",
+    "1ebdb937"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0627"
   },
   {
-   "id": "S0628",
-   "day": 63,
-   "direction": "ja-zh",
+   "qid": "P-063-07-f5417f72d0a1",
    "prompt": "トムは今にもここに来るはずです。",
-   "knowledge_ids": [
-    "V1304"
+   "options": [
+    "他继承了父亲的一大片土地。",
+    "她和服与腰带的搭配很有品味。",
+    "他的话简单得不能再简单。",
+    "汤姆应该马上就要到这里了。"
    ],
-   "hint": ""
+   "h": "61e77abd",
+   "oh": [
+    "dc656b24",
+    "4e2adfe4",
+    "1723f272",
+    "61e77abd"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0628"
   },
   {
-   "id": "S0629",
-   "day": 63,
-   "direction": "ja-zh",
+   "qid": "P-063-08-e7e2342ea60b",
    "prompt": "あなたのお名前はどのように発音するのですか。",
-   "knowledge_ids": [
-    "V1305"
+   "options": [
+    "他在生死之间徘徊。",
+    "您的名字怎么念？",
+    "向上司汇报结果。",
+    "门被吉姆打开了。"
    ],
-   "hint": ""
+   "h": "cedc5143",
+   "oh": [
+    "f32c445a",
+    "cedc5143",
+    "5d580bc5",
+    "ef27b550"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0629"
   },
   {
-   "id": "S0630",
-   "day": 63,
-   "direction": "ja-zh",
+   "qid": "P-063-09-86b0a675709f",
    "prompt": "私はまだはっきりとは知らない。",
-   "knowledge_ids": [
-    "V1306"
+   "options": [
+    "你以为我好骗吧。",
+    "他和朋友握了手。",
+    "下午去看诊。",
+    "我还不太清楚。"
    ],
-   "hint": ""
+   "h": "e0e1cf46",
+   "oh": [
+    "dbbf4ad2",
+    "9f02e227",
+    "3d9f1f18",
+    "e0e1cf46"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0630"
   }
  ],
  "quiz": [

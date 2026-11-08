@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0901",
    "front": "医学",
    "back": "医学",
+   "kana": "いがく",
    "stage": "planned"
   },
   {
    "kid": "V0902",
    "front": "生きる",
    "back": "活；生存",
+   "kana": "いきる",
    "stage": "planned"
   },
   {
    "kid": "V0903",
    "front": "意見",
    "back": "意见；看法",
+   "kana": "いけん",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0216",
    "front": "始",
-   "back": "开始；起始｜音 シ",
+   "back": "开始；起始",
+   "kana": "シ、はじ.める、-はじ.める、はじ.まる",
    "stage": "planned"
   },
   {
    "kid": "K0217",
    "front": "終",
-   "back": "结束；终了｜音 シュウ",
+   "back": "结束；终了",
+   "kana": "シュウ、お.わる、-お.わる、おわ.る、お.える、つい、つい.に",
    "stage": "planned"
   },
   {
    "kid": "V0181",
    "front": "丈夫",
    "back": "结实；健壮",
+   "kana": "じょうぶ",
    "stage": "planned"
   },
   {
    "kid": "V0182",
    "front": "大丈夫",
    "back": "没问题；不要紧；不用了",
+   "kana": "だいじょうぶ",
    "stage": "planned"
   },
   {
    "kid": "V0183",
    "front": "簡単",
    "back": "简单；容易",
+   "kana": "かんたん",
    "stage": "planned"
   },
   {
@@ -538,104 +546,204 @@
  ],
  "sentences": [
   {
-   "id": "S0411",
-   "day": 42,
-   "direction": "zh-ja",
+   "qid": "P-042-00-cd64cc214a7c",
    "prompt": "得趁它还能动赶紧卖掉。",
-   "knowledge_ids": [
-    "V0919"
+   "options": [
+    "あの山はこの山の５倍の高さである。",
+    "その時計はスイスで製造されている。",
+    "彼女は自動式の洗濯機をもっている。",
+    "まだ動くうちに売ってしまわなきゃ。"
    ],
-   "hint": ""
+   "h": "49f6cdcc",
+   "oh": [
+    "6b0f438a",
+    "9593021b",
+    "d2c6d572",
+    "49f6cdcc"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0411"
   },
   {
-   "id": "S0412",
-   "day": 42,
-   "direction": "zh-ja",
+   "qid": "P-042-01-0a68c77a0061",
    "prompt": "咦，骗人的吧。",
-   "knowledge_ids": [
-    "V0920"
+   "options": [
+    "薬を飲みます。",
+    "音楽を聞きます。",
+    "歯が１本抜けた。",
+    "えっ嘘でしょ。"
    ],
-   "hint": ""
+   "h": "cceb1ad7",
+   "oh": [
+    "8936631d",
+    "ae738ead",
+    "9199f471",
+    "cceb1ad7"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0412"
   },
   {
-   "id": "S0413",
-   "day": 42,
-   "direction": "zh-ja",
+   "qid": "P-042-02-b74f21741aef",
    "prompt": "教堂在我家和你家之间。",
-   "knowledge_ids": [
-    "V0921"
+   "options": [
+    "土日月の午前１０時半から午後４時まで開館。",
+    "教会は私の家とあなたの家の中にあります。",
+    "カクテルパーティーは退屈なときもある。",
+    "その機関は１９６０年代後半に設立された。"
    ],
-   "hint": ""
+   "h": "4733003c",
+   "oh": [
+    "823a3d8f",
+    "4733003c",
+    "d3332c71",
+    "504171b4"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0413"
   },
   {
-   "id": "S0414",
-   "day": 42,
-   "direction": "zh-ja",
+   "qid": "P-042-03-43777d6bd577",
    "prompt": "钟刚敲过八点。",
-   "knowledge_ids": [
-    "V0922"
+   "options": [
+    "熱はエネルギーの一種である。",
+    "このネクタイはいくらですか。",
+    "８時をちょうど打ちましたね。",
+    "この地域は雨が続くでしょう。"
    ],
-   "hint": ""
+   "h": "ec4829b5",
+   "oh": [
+    "c698082b",
+    "1261105",
+    "ec4829b5",
+    "f3e64d08"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0414"
   },
   {
-   "id": "S0415",
-   "day": 42,
-   "direction": "zh-ja",
+   "qid": "P-042-04-e2c6ec52437d",
    "prompt": "我们看美丽的夕阳看得入迷。",
-   "knowledge_ids": [
-    "V0923"
+   "options": [
+    "お尋ねしてもよろしいでしょうか。",
+    "おまえはオレを殺そうとしている。",
+    "私たちは美しい入り日に見とれた。",
+    "その事が彼のすべての夢を壊した。"
    ],
-   "hint": ""
+   "h": "f4c9f72f",
+   "oh": [
+    "1317d3c0",
+    "aac242c3",
+    "f4c9f72f",
+    "2835eaff"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0415"
   },
   {
-   "id": "S0416",
-   "day": 42,
-   "direction": "zh-ja",
+   "qid": "P-042-05-6c229e13b650",
    "prompt": "那张照片是从空中拍的。",
-   "knowledge_ids": [
-    "V0924"
+   "options": [
+    "この企業は新しい製品を作っています。",
+    "いつでも私のオフィスを訪ねなさい。",
+    "その写真は空から写されたものである。",
+    "どうして帰りがこんなに遅くなったの。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0417",
-   "day": 42,
+   "h": "45659cac",
+   "oh": [
+    "82d96402",
+    "17a853f2",
+    "45659cac",
+    "a0491ca2"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0416"
+  },
+  {
+   "qid": "P-042-06-84d32ef0e8dd",
    "prompt": "要是有更多钱，就能搬到更大的房子了。",
-   "knowledge_ids": [
-    "V0925"
+   "options": [
+    "教会は私の家とあなたの家の中にあります。",
+    "それ以来、彼からは何の便りもありません。",
+    "もっとお金があれば大きな家に移れるのにな。",
+    "日本では、一般的にこの方法が使われます。"
    ],
-   "hint": ""
+   "h": "5b7c3dcd",
+   "oh": [
+    "4733003c",
+    "df9b23d2",
+    "5b7c3dcd",
+    "42d7b96"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0417"
   },
   {
-   "id": "S0418",
-   "day": 42,
-   "direction": "ja-zh",
+   "qid": "P-042-07-236b857211ed",
    "prompt": "けがをした腕を見せて下さい。",
-   "knowledge_ids": [
-    "V0926"
+   "options": [
+    "账算下来一共五百美元。",
+    "这个地区能收到三个台。",
+    "镇中心有个漂亮的公园。",
+    "请让我看看受伤的胳膊。"
    ],
-   "hint": ""
+   "h": "95beac58",
+   "oh": [
+    "2e1e71de",
+    "9216258c",
+    "96772a3a",
+    "95beac58"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0418"
   },
   {
-   "id": "S0419",
-   "day": 42,
-   "direction": "ja-zh",
+   "qid": "P-042-08-fe30d6c8dc48",
    "prompt": "それはあまりにもうますぎる話だ。",
-   "knowledge_ids": [
-    "V0927"
+   "options": [
+    "汤姆应该马上就要到这里了。",
+    "猫一走，老鼠就闹起来了。",
+    "这话也太美了，不像是真的。",
+    "再婚之后，他现在一定更幸福。"
    ],
-   "hint": ""
+   "h": "6038c12",
+   "oh": [
+    "61e77abd",
+    "f618225d",
+    "6038c12",
+    "42a05a2e"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0419"
   },
   {
-   "id": "S0420",
-   "day": 42,
-   "direction": "ja-zh",
+   "qid": "P-042-09-211e188c77a8",
    "prompt": "靴の裏にガムがこびりついちゃった。",
-   "knowledge_ids": [
-    "V0928"
+   "options": [
+    "我们不能依赖父母。",
+    "鞋底粘上了口香糖。",
+    "她讨厌在人前讲话。",
+    "大学毕业后就业了。"
    ],
-   "hint": ""
+   "h": "f923a517",
+   "oh": [
+    "d8540292",
+    "f923a517",
+    "46712732",
+    "d01d0bdc"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0420"
   }
  ],
  "quiz": [

@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V1757",
    "front": "議員",
    "back": "议员",
+   "kana": "ぎいん",
    "stage": "planned"
   },
   {
    "kid": "V1758",
    "front": "記憶",
    "back": "记忆",
+   "kana": "きおく",
    "stage": "planned"
   },
   {
    "kid": "V1759",
    "front": "気温",
    "back": "气温",
+   "kana": "きおん",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0417",
    "front": "育",
-   "back": "养育；教育｜音 イク",
+   "back": "养育；教育",
+   "kana": "イク、そだ.つ、そだ.ち、そだ.てる、はぐく.む",
    "stage": "planned"
   },
   {
    "kid": "K0418",
    "front": "席",
-   "back": "座位；席｜音 セキ",
+   "back": "座位；席",
+   "kana": "セキ、むしろ",
    "stage": "planned"
   },
   {
    "kid": "V1724",
    "front": "髪の毛",
    "back": "头发",
+   "kana": "かみのけ",
    "stage": "planned"
   },
   {
    "kid": "V1725",
    "front": "科目",
    "back": "科目",
+   "kana": "かもく",
    "stage": "planned"
   },
   {
    "kid": "V1726",
    "front": "かもしれない",
    "back": "也许",
+   "kana": "かもしれない",
    "stage": "planned"
   },
   {
@@ -456,104 +464,204 @@
  ],
  "sentences": [
   {
-   "id": "S1001",
-   "day": 101,
-   "direction": "zh-ja",
+   "qid": "P-101-00-f55add2eb97e",
    "prompt": "一位教授低声说。",
-   "knowledge_ids": [
-    "V1811"
+   "options": [
+    "一人の教授がささやいた。",
+    "この紙はインクを吸わない。",
+    "この科目は何単位ですか。",
+    "君には音楽の才能がある。"
    ],
-   "hint": ""
+   "h": "44eb1b0d",
+   "oh": [
+    "44eb1b0d",
+    "1efc66f7",
+    "ae775c39",
+    "89f7d9b"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1001"
   },
   {
-   "id": "S1002",
-   "day": 101,
-   "direction": "zh-ja",
+   "qid": "P-101-01-0a74550846a7",
    "prompt": "老师强调了每天练习的重要性。",
-   "knowledge_ids": [
-    "V1812"
+   "options": [
+    "春先だから客もあまりいませんでした。",
+    "生物学者はその現象の観察に集中した。",
+    "あんな恐ろしい男のために流す涙はない。",
+    "先生は毎日の練習の大切さを強調した。"
    ],
-   "hint": ""
+   "h": "da0a563f",
+   "oh": [
+    "6134ce3d",
+    "20b3b4dd",
+    "cfc08b10",
+    "da0a563f"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1002"
   },
   {
-   "id": "S1003",
-   "day": 101,
-   "direction": "zh-ja",
+   "qid": "P-101-02-f475c07cf791",
    "prompt": "我和他有很多共同点。",
-   "knowledge_ids": [
-    "V1813"
+   "options": [
+    "コーヒー三つおねがいします。",
+    "日本語の勉強を続けています。",
+    "私と彼は共通することが多い。",
+    "この手の本はあまり読まない。"
    ],
-   "hint": ""
+   "h": "efbb85e5",
+   "oh": [
+    "b2149d32",
+    "3c17b352",
+    "efbb85e5",
+    "771de503"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1003"
   },
   {
-   "id": "S1004",
-   "day": 101,
-   "direction": "zh-ja",
+   "qid": "P-101-03-279bfc7d11a9",
    "prompt": "我和妹妹合用一间房。",
-   "knowledge_ids": [
-    "V1814"
+   "options": [
+    "ビールびんはガラスでできている。",
+    "あなたに頼んでもよろしいですか。",
+    "この犬は何でもほとんど食べます。",
+    "私は妹と共同で部屋を使っている。"
    ],
-   "hint": ""
+   "h": "f093c432",
+   "oh": [
+    "45e4dbee",
+    "e84dbeb6",
+    "1ebdb937",
+    "f093c432"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1004"
   },
   {
-   "id": "S1005",
-   "day": 101,
-   "direction": "zh-ja",
+   "qid": "P-101-04-40d21444a6b3",
    "prompt": "我吓得几乎要发疯。",
-   "knowledge_ids": [
-    "V1815"
+   "options": [
+    "あなたには想像もつかない、でしょ？",
+    "私は恐怖で気も狂わんばかりだった。",
+    "メアリーにはつい甘くなってしまう。",
+    "人間は互いに言葉で意思を通じ合う。"
    ],
-   "hint": ""
+   "h": "15d45020",
+   "oh": [
+    "6c1152da",
+    "15d45020",
+    "ab2b0013",
+    "4eae6f12"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1005"
   },
   {
-   "id": "S1006",
-   "day": 101,
-   "direction": "zh-ja",
+   "qid": "P-101-05-1f4de80ef14c",
    "prompt": "他们合作完成了那幅画。",
-   "knowledge_ids": [
-    "V1816"
+   "options": [
+    "トムは今にもここに来るはずです。",
+    "彼らは協力してその絵を仕上げた。",
+    "ジャックは８月１０日に生まれた。",
+    "その城は１６１０年に建てられた。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1007",
-   "day": 101,
+   "h": "1a5fab3",
+   "oh": [
+    "1c43f179",
+    "1a5fab3",
+    "6df6eadc",
+    "6b28f1e6"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1006"
+  },
+  {
+   "qid": "P-101-06-dc53fb1bca4c",
    "prompt": "日本军队当时非常强大。",
-   "knowledge_ids": [
-    "V1817"
+   "options": [
+    "このスープは塩が少し足りない。",
+    "この豚肉は１キロいくらですか。",
+    "日本の軍隊は非常に強力だった。",
+    "主婦は節約に努めるべきである。"
    ],
-   "hint": ""
+   "h": "7cff62f7",
+   "oh": [
+    "5e1ae47d",
+    "24e2e940",
+    "7cff62f7",
+    "ce74be3a"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1007"
   },
   {
-   "id": "S1008",
-   "day": 101,
-   "direction": "ja-zh",
+   "qid": "P-101-07-181a60861426",
    "prompt": "この地区では三局受信できます。",
-   "knowledge_ids": [
-    "V1818"
+   "options": [
+    "你为什么拒绝了他的提议？",
+    "他注意不去惹别人不高兴。",
+    "他的话简单得不能再简单。",
+    "这个地区能收到三个台。"
    ],
-   "hint": ""
+   "h": "9216258c",
+   "oh": [
+    "59938dd",
+    "16524355",
+    "1723f272",
+    "9216258c"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1008"
   },
   {
-   "id": "S1009",
-   "day": 101,
-   "direction": "ja-zh",
+   "qid": "P-101-08-3d779e133d2c",
    "prompt": "巨大なタンカーがついに今し方出港した。",
-   "knowledge_ids": [
-    "V1819"
+   "options": [
+    "他打橄榄球的时候受了伤。",
+    "巨型油轮刚刚终于出港了。",
+    "比尔因为考试的事心烦。",
+    "我们在咖啡馆吃了午饭。"
    ],
-   "hint": ""
+   "h": "b64496b6",
+   "oh": [
+    "45de1693",
+    "b64496b6",
+    "26826a2f",
+    "f4d70353"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1009"
   },
   {
-   "id": "S1010",
-   "day": 101,
-   "direction": "ja-zh",
+   "qid": "P-101-09-7d940ece3cd9",
    "prompt": "彼女は人前で話をするのを嫌う。",
-   "knowledge_ids": [
-    "V1820"
+   "options": [
+    "你为什么想当护士？",
+    "从第十课开始吧。",
+    "她讨厌在人前讲话。",
+    "我们绕到车后面推。"
    ],
-   "hint": ""
+   "h": "46712732",
+   "oh": [
+    "28ee32c5",
+    "7c4687ec",
+    "46712732",
+    "f9ef5dc7"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1010"
   }
  ],
  "quiz": [

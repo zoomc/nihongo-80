@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0722",
    "front": "橋",
    "back": "桥",
+   "kana": "はし",
    "stage": "planned"
   },
   {
    "kid": "V0723",
    "front": "始まる",
    "back": "开始",
+   "kana": "はじまる",
    "stage": "planned"
   },
   {
    "kid": "V0724",
    "front": "初め",
    "back": "开始；起初",
+   "kana": "はじめ",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0168",
    "front": "自",
-   "back": "自己；自｜音 ジ、シ",
+   "back": "自己；自",
+   "kana": "ジ、シ、みずか.ら、おの.ずから、おの.ずと",
    "stage": "planned"
   },
   {
    "kid": "K0169",
    "front": "発",
-   "back": "出发；发出；发表｜音 ハツ、ホツ",
+   "back": "出发；发出；发表",
+   "kana": "ハツ、ホツ、た.つ、あば.く、おこ.る、つか.わす、はな.つ",
    "stage": "planned"
   },
   {
    "kid": "V0684",
    "front": "鳥",
    "back": "鸟",
+   "kana": "とり",
    "stage": "planned"
   },
   {
    "kid": "V0685",
    "front": "鶏肉",
    "back": "鸡肉",
+   "kana": "とりにく",
    "stage": "planned"
   },
   {
    "kid": "V0686",
    "front": "撮る",
    "back": "拍摄",
+   "kana": "とる",
    "stage": "planned"
   },
   {
@@ -531,104 +539,204 @@
  ],
  "sentences": [
   {
-   "id": "S0291",
-   "day": 30,
-   "direction": "zh-ja",
+   "qid": "P-030-00-690656369954",
    "prompt": "黄油是用牛奶做的。",
-   "knowledge_ids": [
-    "V0728"
+   "options": [
+    "バターはミルクから出来る。",
+    "その刀は王子にふさわしい。",
+    "イチゴはジャムに作られる。",
+    "細かい所は省いて構わない。"
    ],
-   "hint": ""
+   "h": "271a6e18",
+   "oh": [
+    "271a6e18",
+    "6d8b6817",
+    "fc94d29",
+    "6a76b4d8"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0291"
   },
   {
-   "id": "S0292",
-   "day": 30,
-   "direction": "zh-ja",
+   "qid": "P-030-01-0cb4049891ce",
    "prompt": "缪里尔二十岁了。",
-   "knowledge_ids": [
-    "V0729"
+   "options": [
+    "ムーリエルは２０歳になりました。",
+    "そのニュースは急いで印刷された。",
+    "あなたに頼んでもよろしいですか。",
+    "そのコーヒーはいいにおいがする。"
    ],
-   "hint": ""
+   "h": "18597f07",
+   "oh": [
+    "18597f07",
+    "d5c6649d",
+    "e84dbeb6",
+    "eff509fd"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0292"
   },
   {
-   "id": "S0293",
-   "day": 30,
-   "direction": "zh-ja",
+   "qid": "P-030-02-ff319853145d",
    "prompt": "开关没有按时起作用。",
-   "knowledge_ids": [
-    "V0730"
+   "options": [
+    "バリウムをまず一口飲んでください。",
+    "スイッチは時間通りに働かなかった。",
+    "この夏はこんがり焼こうと思います。",
+    "彼女は成長して美しい婦人になった。"
    ],
-   "hint": ""
+   "h": "e8b6d63c",
+   "oh": [
+    "50f70cb0",
+    "e8b6d63c",
+    "21ead46d",
+    "f14714b1"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0293"
   },
   {
-   "id": "S0294",
-   "day": 30,
-   "direction": "zh-ja",
+   "qid": "P-030-03-eb36506def3e",
    "prompt": "我打算二十号之前回去。",
-   "knowledge_ids": [
-    "V0731"
+   "options": [
+    "その日は実にすばらしい日だった。",
+    "私は二十日までに帰るつもりです。",
+    "あなたの計画を私に合わせなさい。",
+    "インドの人口はどのくらいですか。"
    ],
-   "hint": ""
+   "h": "65ebff40",
+   "oh": [
+    "5734bd46",
+    "65ebff40",
+    "90f4ca7a",
+    "4c5d8293"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0294"
   },
   {
-   "id": "S0295",
-   "day": 30,
-   "direction": "zh-ja",
+   "qid": "P-030-04-229d237a3310",
    "prompt": "桌上有一枝花。",
-   "knowledge_ids": [
-    "V0732"
+   "options": [
+    "テーブルの上に花が一本あります。",
+    "おひる頃やっと太陽が顔を出した。",
+    "それはたいへんなショックでした。",
+    "マイクはバスで学校に通っている。"
    ],
-   "hint": ""
+   "h": "9718d6f5",
+   "oh": [
+    "9718d6f5",
+    "c5040bc1",
+    "4f933c74",
+    "1062eb67"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0295"
   },
   {
-   "id": "S0296",
-   "day": 30,
-   "direction": "zh-ja",
+   "qid": "P-030-05-db65aa600bde",
    "prompt": "流鼻涕了，擤一擤。",
-   "knowledge_ids": [
-    "V0733"
+   "options": [
+    "鼻が出ているよ。かみなさい。",
+    "あまり人に頼ってはいけない。",
+    "こっちの端を持っててくれる？",
+    "それ以上はお役に立てません。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0297",
-   "day": 30,
+   "h": "b9892ee0",
+   "oh": [
+    "b9892ee0",
+    "7f0112b5",
+    "cde879f8",
+    "717e0b55"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0296"
+  },
+  {
+   "qid": "P-030-06-7739a59dc1c8",
    "prompt": "说给我听听。",
-   "knowledge_ids": [
-    "V0734"
+   "options": [
+    "この問題は簡単です。",
+    "話を聞かせてくれ。",
+    "部屋には家具がない。",
+    "今、何時ですか。"
    ],
-   "hint": ""
+   "h": "daa927f",
+   "oh": [
+    "18fa881",
+    "daa927f",
+    "7d411b95",
+    "ed26deaa"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0297"
   },
   {
-   "id": "S0298",
-   "day": 30,
-   "direction": "ja-zh",
+   "qid": "P-030-07-d8cc3463ddb6",
    "prompt": "時のたつのは早いものだ。",
-   "knowledge_ids": [
-    "V0735"
+   "options": [
+    "你应该还清债务。",
+    "配料请全部加上。",
+    "这类书我不太读。",
+    "时间过得太快了。"
    ],
-   "hint": ""
+   "h": "4a9c18da",
+   "oh": [
+    "f960fd6c",
+    "3f03fd78",
+    "bde26ff2",
+    "4a9c18da"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0298"
   },
   {
-   "id": "S0299",
-   "day": 30,
-   "direction": "ja-zh",
+   "qid": "P-030-08-2999baf26865",
    "prompt": "ショットはとても速いものもある。",
-   "knowledge_ids": [
-    "V0736"
+   "options": [
+    "希望让我们六个人住下。",
+    "他的话简单得不能再简单。",
+    "有些人的球速也非常快。",
+    "他正处在男人的壮年。"
    ],
-   "hint": ""
+   "h": "591e3589",
+   "oh": [
+    "d10da833",
+    "1723f272",
+    "591e3589",
+    "cfa9128b"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0299"
   },
   {
-   "id": "S0300",
-   "day": 30,
-   "direction": "ja-zh",
+   "qid": "P-030-09-2246877d187e",
    "prompt": "カッコウは春にここにやってくる。",
-   "knowledge_ids": [
-    "V0737"
+   "options": [
+    "和同事一起吃了午饭。",
+    "今后必须多加小心。",
+    "布谷鸟春天会来这里。",
+    "用力一推，门就开了。"
    ],
-   "hint": ""
+   "h": "29d516f0",
+   "oh": [
+    "e795c739",
+    "643f25c1",
+    "29d516f0",
+    "a0bec855"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0300"
   }
  ],
  "quiz": [

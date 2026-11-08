@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V2302",
    "front": "相続",
    "back": "继承",
+   "kana": "そうぞく",
    "stage": "planned"
   },
   {
    "kid": "V2303",
    "front": "装置",
    "back": "装置；设备",
+   "kana": "そうち",
    "stage": "planned"
   },
   {
    "kid": "V2304",
    "front": "相当",
    "back": "相当；合适",
+   "kana": "そうとう",
    "stage": "planned"
   },
   {
@@ -65,31 +68,36 @@
   {
    "kid": "K0545",
    "front": "曲",
-   "back": "弯曲；曲子｜音 キョク",
+   "back": "弯曲；曲子",
+   "kana": "キョク、ま.がる、ま.げる、くま",
    "stage": "planned"
   },
   {
    "kid": "K0546",
    "front": "払",
-   "back": "支付；拂去｜音 フツ、ヒツ、ホツ",
+   "back": "支付；拂去",
+   "kana": "フツ、ヒツ、ホツ、はら.う、-はら.い、-ばら.い",
    "stage": "planned"
   },
   {
    "kid": "V2262",
    "front": "成人",
    "back": "成年人",
+   "kana": "せいじん",
    "stage": "planned"
   },
   {
    "kid": "V2263",
    "front": "精々",
    "back": "充其量；尽量",
+   "kana": "せいぜい",
    "stage": "planned"
   },
   {
    "kid": "V2264",
    "front": "成績",
    "back": "成绩",
+   "kana": "せいせき",
    "stage": "planned"
   },
   {
@@ -101,13 +109,15 @@
   {
    "kid": "K0537",
    "front": "喜",
-   "back": "喜悦；高兴｜音 キ",
+   "back": "喜悦；高兴",
+   "kana": "キ、よろこ.ぶ、よろこ.ばす",
    "stage": "planned"
   },
   {
    "kid": "K0538",
    "front": "浮",
-   "back": "漂浮；浮现｜音 フ",
+   "back": "漂浮；浮现",
+   "kana": "フ、う.く、う.かれる、う.かぶ、う.かべる",
    "stage": "planned"
   }
  ],
@@ -510,104 +520,204 @@
  ],
  "sentences": [
   {
-   "id": "S1321",
-   "day": 133,
-   "direction": "zh-ja",
+   "qid": "P-133-00-f4ffee87001e",
    "prompt": "一位年轻女子突然站了起来。",
-   "knowledge_ids": [
-    "V2369"
+   "options": [
+    "その火事はおととい発生した。",
+    "突然若い女性が立ち上がった。",
+    "だいぶ痛みがなくなりました。",
+    "今日は昼食をとる時間がない。"
    ],
-   "hint": ""
+   "h": "7f8ca6db",
+   "oh": [
+    "d0498af0",
+    "7f8ca6db",
+    "3eba8d1c",
+    "dadf993c"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1321"
   },
   {
-   "id": "S1322",
-   "day": 133,
-   "direction": "zh-ja",
+   "qid": "P-133-01-214dd9d6be5d",
    "prompt": "我不便回答。",
-   "knowledge_ids": [
-    "V2370"
+   "options": [
+    "お答えできる立場にありません。",
+    "このリンゴがいちばんおいしい。",
+    "今朝、地面は霜で覆われていた。",
+    "フクロウは昼間は目が見えない。"
    ],
-   "hint": ""
+   "h": "3c490fe4",
+   "oh": [
+    "3c490fe4",
+    "c8943c06",
+    "b57ced8f",
+    "bd30935a"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1322"
   },
   {
-   "id": "S1323",
-   "day": 133,
-   "direction": "zh-ja",
+   "qid": "P-133-02-41a0fca5b8a3",
    "prompt": "随着时间流逝，他变了心。",
-   "knowledge_ids": [
-    "V2371"
+   "options": [
+    "時が経つうちに彼は心変わりした。",
+    "トムは今にもここに来るはずです。",
+    "その象は動物園に連れてこられた。",
+    "このビルは非常階段を備えている。"
    ],
-   "hint": ""
+   "h": "7bedbefd",
+   "oh": [
+    "7bedbefd",
+    "1c43f179",
+    "f9632f0f",
+    "d631b058"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1323"
   },
   {
-   "id": "S1324",
-   "day": 133,
-   "direction": "zh-ja",
+   "qid": "P-133-03-c352c20cbf65",
    "prompt": "他们会就此达成协议吧。",
-   "knowledge_ids": [
-    "V2372"
+   "options": [
+    "その作家は会話を書くのがうまい。",
+    "彼らはそれで合意に達するだろう。",
+    "みんなでカブトムシを競争させた。",
+    "それは翼の全長が約４インチある。"
    ],
-   "hint": ""
+   "h": "78347c62",
+   "oh": [
+    "34f482bb",
+    "78347c62",
+    "fdf064f8",
+    "18490b8d"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1324"
   },
   {
-   "id": "S1325",
-   "day": 133,
-   "direction": "zh-ja",
+   "qid": "P-133-04-fc4a2f7a7a08",
    "prompt": "那种事连小孩都懂。",
-   "knowledge_ids": [
-    "V2373"
+   "options": [
+    "あなたの見解は私とは正反対です。",
+    "子供にだってそんな事は分かるよ。",
+    "ルーシーは今台所にいるでしょう。",
+    "ジャックは８月１０日に生まれた。"
    ],
-   "hint": ""
+   "h": "da85abd0",
+   "oh": [
+    "65661673",
+    "da85abd0",
+    "c439c603",
+    "6df6eadc"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1325"
   },
   {
-   "id": "S1326",
-   "day": 133,
-   "direction": "zh-ja",
+   "qid": "P-133-05-598bdc43f9fe",
    "prompt": "时间还很充裕。",
-   "knowledge_ids": [
-    "V2374"
+   "options": [
+    "彼は旗を上下に動かした。",
+    "まだ時間はたっぷりある。",
+    "これは珍しい種類の魚です。",
+    "この靴下はちぐはぐだ。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1327",
-   "day": 133,
+   "h": "9b3b11e5",
+   "oh": [
+    "9fda0a9d",
+    "9b3b11e5",
+    "7979a1c1",
+    "6db284b2"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1326"
+  },
+  {
+   "qid": "P-133-06-80c61b9d0ca1",
    "prompt": "无论发生什么，我都不会放弃。",
-   "knowledge_ids": [
-    "V2375"
+   "options": [
+    "たとえどんなことがあってもあきらめません。",
+    "こちらはあなたがお話しになるお方です。",
+    "土日月の午前１０時半から午後４時まで開館。",
+    "私たちは会合を延期しなければならなかった。"
    ],
-   "hint": ""
+   "h": "282967bb",
+   "oh": [
+    "282967bb",
+    "aec24c2b",
+    "823a3d8f",
+    "3628636"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1327"
   },
   {
-   "id": "S1328",
-   "day": 133,
-   "direction": "ja-zh",
+   "qid": "P-133-07-46a336657076",
    "prompt": "谷は彼の呼び声でこだました。",
-   "knowledge_ids": [
-    "V2376"
+   "options": [
+    "上个月几乎没下雨。",
+    "鲍勃到底是不是病了？",
+    "山谷回荡着他的喊声。",
+    "明天我一整天都有空。"
    ],
-   "hint": ""
+   "h": "d01f3a62",
+   "oh": [
+    "42b374eb",
+    "f2ed1fa9",
+    "d01f3a62",
+    "bfabc530"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1328"
   },
   {
-   "id": "S1329",
-   "day": 133,
-   "direction": "ja-zh",
+   "qid": "P-133-08-3c9779d228a1",
    "prompt": "彼女はもっと他人の言うことを聞くべきだ。",
-   "knowledge_ids": [
-    "V2377"
+   "options": [
+    "他们的意见和我的不同。",
+    "世界上有各种各样的人种。",
+    "我发现那个问题很简单。",
+    "她应该多听听别人的话。"
    ],
-   "hint": ""
+   "h": "c6d6351d",
+   "oh": [
+    "1d38ae3",
+    "1d508341",
+    "da696091",
+    "c6d6351d"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1329"
   },
   {
-   "id": "S1330",
-   "day": 133,
-   "direction": "ja-zh",
+   "qid": "P-133-09-128897bfbec3",
    "prompt": "そんなことをすれば笑いものの種なるよ。",
-   "knowledge_ids": [
-    "V2378"
+   "options": [
+    "据天气预报，马上就要入梅了。",
+    "单词会逐渐增加，请经常查看。",
+    "做那种事会被人当成笑柄的。",
+    "那场暴风雨带来了巨大损失。"
    ],
-   "hint": ""
+   "h": "40186f01",
+   "oh": [
+    "d468a87f",
+    "1749063f",
+    "40186f01",
+    "5f9247ec"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1330"
   }
  ],
  "quiz": [

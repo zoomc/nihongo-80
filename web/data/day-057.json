@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V1166",
    "front": "すると",
    "back": "于是；那么",
+   "kana": "すると",
    "stage": "planned"
   },
   {
    "kid": "V1167",
    "front": "生活",
    "back": "生活",
+   "kana": "せいかつ",
    "stage": "planned"
   },
   {
    "kid": "V1168",
    "front": "生産",
    "back": "生产",
+   "kana": "せいさん",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0276",
    "front": "堂",
-   "back": "厅堂；会堂｜音 ドウ",
+   "back": "厅堂；会堂",
+   "kana": "ドウ",
    "stage": "planned"
   },
   {
    "kid": "K0277",
    "front": "鳥",
-   "back": "鸟；鸡｜音 チョウ",
+   "back": "鸟；鸡",
+   "kana": "チョウ、とり",
    "stage": "planned"
   },
   {
    "kid": "V1133",
    "front": "小説",
    "back": "小说",
+   "kana": "しょうせつ",
    "stage": "planned"
   },
   {
    "kid": "V1134",
    "front": "招待",
    "back": "邀请；招待",
+   "kana": "しょうたい",
    "stage": "planned"
   },
   {
    "kid": "V1135",
    "front": "承知",
    "back": "知道；同意",
+   "kana": "しょうち",
    "stage": "planned"
   },
   {
@@ -457,104 +465,204 @@
  ],
  "sentences": [
   {
-   "id": "S0561",
-   "day": 57,
-   "direction": "zh-ja",
+   "qid": "P-057-00-ea3259a65a95",
    "prompt": "这种类型的人很无趣。",
-   "knowledge_ids": [
-    "V1195"
+   "options": [
+    "あんな恐ろしい男のために流す涙はない。",
+    "私はパレードが見えるいい位置にいた。",
+    "こういうタイプの人はおもしろくない。",
+    "イングランドはその試合に勝つだろう。"
    ],
-   "hint": ""
+   "h": "b9ffc63c",
+   "oh": [
+    "cfc08b10",
+    "3821a6d6",
+    "b9ffc63c",
+    "91c655e0"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0561"
   },
   {
-   "id": "S0562",
-   "day": 57,
-   "direction": "zh-ja",
+   "qid": "P-057-01-9374b02808ae",
    "prompt": "疼痛已经减轻了不少。",
-   "knowledge_ids": [
-    "V1196"
+   "options": [
+    "新しいパソコンがほしいです。",
+    "彼女は非常に会社に貢献した。",
+    "その車は修理する価値がない。",
+    "だいぶ痛みがなくなりました。"
    ],
-   "hint": ""
+   "h": "3eba8d1c",
+   "oh": [
+    "70214d18",
+    "c6d55b",
+    "d8740c48",
+    "3eba8d1c"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0562"
   },
   {
-   "id": "S0563",
-   "day": 57,
-   "direction": "zh-ja",
+   "qid": "P-057-02-c62a911f4087",
    "prompt": "他一下子倒在了地上。",
-   "knowledge_ids": [
-    "V1197"
+   "options": [
+    "こんにちは、元気ですか。",
+    "カーテンが風になびいた。",
+    "月曜日に試験があります。",
+    "彼は横にばったり倒れた。"
    ],
-   "hint": ""
+   "h": "7482c62c",
+   "oh": [
+    "21e6b5c4",
+    "f01f9c0a",
+    "3c031ff",
+    "7482c62c"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0563"
   },
   {
-   "id": "S0564",
-   "day": 57,
-   "direction": "zh-ja",
+   "qid": "P-057-03-2c5a2442acc5",
    "prompt": "他错了，这是确实的。",
-   "knowledge_ids": [
-    "V1198"
+   "options": [
+    "サムは仕事に関してまじめです。",
+    "彼が間違っているのは確かです。",
+    "このリンゴがいちばんおいしい。",
+    "その教師は講堂に学生を集めた。"
    ],
-   "hint": ""
+   "h": "12baed0d",
+   "oh": [
+    "b939740c",
+    "12baed0d",
+    "c8943c06",
+    "a8167156"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0564"
   },
   {
-   "id": "S0565",
-   "day": 57,
-   "direction": "zh-ja",
+   "qid": "P-057-04-2ae35e6529ec",
    "prompt": "要凑成60，17还得加上多少？",
-   "knowledge_ids": [
-    "V1199"
+   "options": [
+    "当時はきれいな水がこの川にも流れていた。",
+    "「誰か車の中にいるのですか」「トムがいます」",
+    "あなたの名前はインクで書かなければならない。",
+    "６０にするためには１７に何を足せばよいの。"
    ],
-   "hint": ""
+   "h": "8555cf3a",
+   "oh": [
+    "e9cf2459",
+    "b07b84f",
+    "f0361447",
+    "8555cf3a"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0565"
   },
   {
-   "id": "S0566",
-   "day": 57,
-   "direction": "zh-ja",
+   "qid": "P-057-05-174a9276add6",
    "prompt": "可以请教您一下吗？",
-   "knowledge_ids": [
-    "V1200"
+   "options": [
+    "タバコにかけられている税は高い。",
+    "ジャックは８月１０日に生まれた。",
+    "お尋ねしてもよろしいでしょうか。",
+    "その町はロンドンのすぐ北にある。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0567",
-   "day": 57,
+   "h": "1317d3c0",
+   "oh": [
+    "37e548c7",
+    "6df6eadc",
+    "1317d3c0",
+    "efe3c905"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0566"
+  },
+  {
+   "qid": "P-057-06-d6950a8a9b4c",
    "prompt": "随时来我的办公室找我。",
-   "knowledge_ids": [
-    "V1201"
+   "options": [
+    "この学校はたくさんの生徒がいます。",
+    "いつでも私のオフィスを訪ねなさい。",
+    "この車はあまりガソリンを食わない。",
+    "応募の締め切りは今週の金曜日です。"
    ],
-   "hint": ""
+   "h": "17a853f2",
+   "oh": [
+    "939aa164",
+    "17a853f2",
+    "2c22ee53",
+    "31dbb338"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0567"
   },
   {
-   "id": "S0568",
-   "day": 57,
-   "direction": "ja-zh",
+   "qid": "P-057-07-f363be17d2d3",
    "prompt": "これが正しいかどうか自信がないんだ。",
-   "knowledge_ids": [
-    "V1202"
+   "options": [
+    "问题是在哪里搭帐篷。",
+    "墨西哥人说什么语言？",
+    "我不确定这是否正确。",
+    "她是个地道的咖啡派。"
    ],
-   "hint": ""
+   "h": "22be0b90",
+   "oh": [
+    "8ad9c1ae",
+    "f09cbbd1",
+    "22be0b90",
+    "2dd373c1"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0568"
   },
   {
-   "id": "S0569",
-   "day": 57,
-   "direction": "ja-zh",
+   "qid": "P-057-08-77ce61530761",
    "prompt": "彼は畳の上に大の字になった。",
-   "knowledge_ids": [
-    "V1203"
+   "options": [
+    "她不知如何是好，束手无策。",
+    "比起地理我更喜欢历史。",
+    "希望能过上更好的生活。",
+    "他四肢摊开躺在榻榻米上。"
    ],
-   "hint": ""
+   "h": "7e58bdbb",
+   "oh": [
+    "b44dcee5",
+    "10c41b81",
+    "f98eda1",
+    "7e58bdbb"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0569"
   },
   {
-   "id": "S0570",
-   "day": 57,
-   "direction": "ja-zh",
+   "qid": "P-057-09-f74c3e5ff9bc",
    "prompt": "この寺院は７８０年に建てられた。",
-   "knowledge_ids": [
-    "V1204"
+   "options": [
+    "这座寺院建于780年。",
+    "他不知道受了多少苦。",
+    "你要是乖，就给你糖吃。",
+    "汤姆很快就能学会游泳。"
    ],
-   "hint": ""
+   "h": "ea718c6c",
+   "oh": [
+    "ea718c6c",
+    "95b0f650",
+    "98c00a1c",
+    "b21ad6c5"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0570"
   }
  ],
  "quiz": [

@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0065",
    "front": "切符",
    "back": "车票；票",
+   "kana": "きっぷ",
    "stage": "planned"
   },
   {
    "kid": "V0088",
    "front": "パソコン",
    "back": "个人电脑",
+   "kana": "パソコン",
    "stage": "planned"
   },
   {
    "kid": "V0090",
    "front": "メール",
    "back": "邮件；短信",
+   "kana": "メール",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0200",
    "front": "元",
-   "back": "原来；根源；元气｜音 ゲン、ガン",
+   "back": "原来；根源；元气",
+   "kana": "ゲン、ガン、もと",
    "stage": "planned"
   },
   {
    "kid": "K0201",
    "front": "重",
-   "back": "重；重要；重叠｜音 ジュウ、チョウ",
+   "back": "重；重要；重叠",
+   "kana": "ジュウ、チョウ、え、おも.い、おも.り、おも.なう、かさ.ねる、かさ.なる、おも",
    "stage": "planned"
   },
   {
    "kid": "V0836",
    "front": "やる",
    "back": "做；给",
+   "kana": "やる",
    "stage": "planned"
   },
   {
    "kid": "V0837",
    "front": "夕方",
    "back": "傍晚",
+   "kana": "ゆうがた",
    "stage": "planned"
   },
   {
    "kid": "V0838",
    "front": "夕飯",
    "back": "晚饭",
+   "kana": "ゆうはん",
    "stage": "planned"
   },
   {
@@ -516,104 +524,204 @@
  ],
  "sentences": [
   {
-   "id": "S0371",
-   "day": 38,
-   "direction": "zh-ja",
+   "qid": "P-038-00-c4fa4d7b7730",
    "prompt": "请把房间收拾好。",
-   "knowledge_ids": [
-    "V0157"
+   "options": [
+    "これはとても大切な会合だ。",
+    "結果は明日発表されます。",
+    "私は指に感覚が無かった。",
+    "部屋を片付けてください。"
    ],
-   "hint": ""
+   "h": "d809e606",
+   "oh": [
+    "b94a6327",
+    "7ba95219",
+    "43eea6c6",
+    "d809e606"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0371"
   },
   {
-   "id": "S0372",
-   "day": 38,
-   "direction": "zh-ja",
+   "qid": "P-038-01-666081c8b07e",
    "prompt": "我把错误改过来。",
-   "knowledge_ids": [
-    "V0158"
+   "options": [
+    "お手洗いはどこですか。",
+    "お前はまだ「青い」な。",
+    "間違いを直します。",
+    "子供が公園にいます。"
    ],
-   "hint": ""
+   "h": "f38675d3",
+   "oh": [
+    "9f20e43f",
+    "ad3fba26",
+    "f38675d3",
+    "c0591056"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0372"
   },
   {
-   "id": "S0373",
-   "day": 38,
-   "direction": "zh-ja",
+   "qid": "P-038-02-118db7f3c39f",
    "prompt": "我一直在继续学日语。",
-   "knowledge_ids": [
-    "V0159"
+   "options": [
+    "日本語の勉強を続けています。",
+    "彼女は４０代半ばで再婚した。",
+    "あなたの頭痛は過労のせいだ。",
+    "バスの停留所まで競争しよう。"
    ],
-   "hint": ""
+   "h": "3c17b352",
+   "oh": [
+    "3c17b352",
+    "7f05d656",
+    "e6f00666",
+    "878a19ec"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0373"
   },
   {
-   "id": "S0374",
-   "day": 38,
-   "direction": "zh-ja",
+   "qid": "P-038-03-11d6b3e4a5ae",
    "prompt": "我开始新工作。",
-   "knowledge_ids": [
-    "V0160"
+   "options": [
+    "まもなく雨が降りそうだ。",
+    "新しい仕事を始めます。",
+    "この靴下はちぐはぐだ。",
+    "話す機会がありません。"
    ],
-   "hint": ""
+   "h": "2ac3d1c7",
+   "oh": [
+    "ff08c000",
+    "2ac3d1c7",
+    "6db284b2",
+    "30d4fb48"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0374"
   },
   {
-   "id": "S0375",
-   "day": 38,
-   "direction": "zh-ja",
+   "qid": "P-038-04-861fb1d8a85b",
    "prompt": "定好了旅行的日子。",
-   "knowledge_ids": [
-    "V0161"
+   "options": [
+    "ご協力に感謝します。",
+    "旅行の日を決めました。",
+    "まだ時間はたっぷりある。",
+    "トムとフランクは親友だ。"
    ],
-   "hint": ""
+   "h": "a06ca4c6",
+   "oh": [
+    "fab0a215",
+    "a06ca4c6",
+    "9b3b11e5",
+    "75bb8c2d"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0375"
   },
   {
-   "id": "S0376",
-   "day": 38,
-   "direction": "zh-ja",
+   "qid": "P-038-05-e3cf1745ae02",
    "prompt": "在图书馆查词。",
-   "knowledge_ids": [
-    "V0162"
+   "options": [
+    "図書館で言葉を調べます。",
+    "まもなく雨が降りそうだ。",
+    "その丘は見晴らしがよい。",
+    "進路の悩みを相談します。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0377",
-   "day": 38,
+   "h": "f3f4482f",
+   "oh": [
+    "f3f4482f",
+    "ff08c000",
+    "c2951546",
+    "67e807d"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0376"
+  },
+  {
+   "qid": "P-038-06-b7b4f0adbfcd",
    "prompt": "比较两家店的价格。",
-   "knowledge_ids": [
-    "V0163"
+   "options": [
+    "二つの店の値段を比べます。",
+    "ここに鋭い痛みがあります。",
+    "これは珍しい種類の魚です。",
+    "これはとても大切な会合だ。"
    ],
-   "hint": ""
+   "h": "b027db99",
+   "oh": [
+    "b027db99",
+    "be78df4e",
+    "7979a1c1",
+    "b94a6327"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0377"
   },
   {
-   "id": "S0378",
-   "day": 38,
-   "direction": "ja-zh",
+   "qid": "P-038-07-a32e9f591b53",
    "prompt": "日本の生活に慣れました。",
-   "knowledge_ids": [
-    "V0164"
+   "options": [
+    "我习惯了日本的生活。",
+    "找老师商量升学去向。",
+    "竞争本身无所谓善恶。",
+    "你赞成我们的计划吗？"
    ],
-   "hint": ""
+   "h": "98a531c0",
+   "oh": [
+    "98a531c0",
+    "57d2ad4c",
+    "744ac9a2",
+    "4a12bcc1"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0378"
   },
   {
-   "id": "S0379",
-   "day": 38,
-   "direction": "ja-zh",
+   "qid": "P-038-08-e905e04ffb13",
    "prompt": "会議に遅れてしまいました。",
-   "knowledge_ids": [
-    "V0165"
+   "options": [
+    "传闻原来是真的。",
+    "开会迟到了。",
+    "用图来说明吧。",
+    "他们躺在草坪上。"
    ],
-   "hint": ""
+   "h": "bb7937e0",
+   "oh": [
+    "6342e7d8",
+    "bb7937e0",
+    "efda7619",
+    "2bb7a3d6"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0379"
   },
   {
-   "id": "S0380",
-   "day": 38,
-   "direction": "ja-zh",
+   "qid": "P-038-09-c859aae1fe3e",
    "prompt": "急げば、始発に間に合います。",
-   "knowledge_ids": [
-    "V0166"
+   "options": [
+    "镇中心有个漂亮的公园。",
+    "我发现那个问题很简单。",
+    "快点的话能赶上首班车。",
+    "我听过有人用这句谚语。"
    ],
-   "hint": ""
+   "h": "36293e64",
+   "oh": [
+    "96772a3a",
+    "da696091",
+    "36293e64",
+    "e5759169"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0380"
   }
  ],
  "quiz": [

@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1455",
    "front": "預ける",
    "back": "寄存；托付",
+   "kana": "あずける",
    "stage": "planned"
   },
   {
    "kid": "V1456",
    "front": "汗",
    "back": "汗",
+   "kana": "あせ",
    "stage": "planned"
   },
   {
    "kid": "V1457",
    "front": "与える",
    "back": "给予",
+   "kana": "あたえる",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0345",
    "front": "際",
-   "back": "时候；边际｜音 サイ",
+   "back": "时候；边际",
+   "kana": "サイ、きわ、-ぎわ",
    "stage": "planned"
   },
   {
    "kid": "K0346",
    "front": "勝",
-   "back": "胜；赢｜音 ショウ",
+   "back": "胜；赢",
+   "kana": "ショウ、か.つ、-が.ち、まさ.る、すぐ.れる、かつ",
    "stage": "planned"
   },
   {
    "kid": "V0325",
    "front": "増加",
    "back": "增加",
+   "kana": "ぞうか",
    "stage": "planned"
   },
   {
    "kid": "V0326",
    "front": "減少",
    "back": "减少",
+   "kana": "げんしょう",
    "stage": "planned"
   },
   {
    "kid": "V0327",
    "front": "傾向",
    "back": "倾向",
+   "kana": "けいこう",
    "stage": "planned"
   },
   {
@@ -564,104 +572,204 @@
  ],
  "sentences": [
   {
-   "id": "S0821",
-   "day": 83,
-   "direction": "zh-ja",
+   "qid": "P-083-00-fdcd3f34e682",
    "prompt": "快淹死的人缓过气来了。",
-   "knowledge_ids": [
-    "V1493"
+   "options": [
+    "この手袋は両方がそろっていない。",
+    "それはたいへんなショックでした。",
+    "いいクリスマスを過ごしましたか。",
+    "おぼれかけた人は息を吹き返した。"
    ],
-   "hint": ""
+   "h": "9d54542a",
+   "oh": [
+    "9ed978b8",
+    "4f933c74",
+    "a01fba18",
+    "9d54542a"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0821"
   },
   {
-   "id": "S0822",
-   "day": 83,
-   "direction": "zh-ja",
+   "qid": "P-083-01-211771c426f5",
    "prompt": "你是被势头推着走。",
-   "knowledge_ids": [
-    "V1494"
+   "options": [
+    "この手の本はあまり読まない。",
+    "メールの返信を待っています。",
+    "勢いに流されているんですよ。",
+    "あまり人に頼ってはいけない。"
    ],
-   "hint": ""
+   "h": "75832468",
+   "oh": [
+    "771de503",
+    "95cf6c7f",
+    "75832468",
+    "7f0112b5"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0822"
   },
   {
-   "id": "S0823",
-   "day": 83,
-   "direction": "zh-ja",
+   "qid": "P-083-02-6d6029b9f12b",
    "prompt": "人是有意识的生物。",
-   "knowledge_ids": [
-    "V1495"
+   "options": [
+    "人は意識のある生き物だ。",
+    "すっかり忘れていました。",
+    "この券は２週間有効です。",
+    "デモに参加しようと思う。"
    ],
-   "hint": ""
+   "h": "5eb9d09f",
+   "oh": [
+    "5eb9d09f",
+    "5ac78734",
+    "a263dc87",
+    "cd35d93d"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0823"
   },
   {
-   "id": "S0824",
-   "day": 83,
-   "direction": "zh-ja",
+   "qid": "P-083-03-8aaf0e529da7",
    "prompt": "朋友之间必须互相帮助。",
-   "knowledge_ids": [
-    "V1496"
+   "options": [
+    "スケートはとてもおもしろかった。",
+    "あの子はなんてうるさい子だろう。",
+    "友人は助け合わなければいけない。",
+    "その町はロンドンのすぐ北にある。"
    ],
-   "hint": ""
+   "h": "43591068",
+   "oh": [
+    "ebd819a3",
+    "490bd08c",
+    "43591068",
+    "efe3c905"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0824"
   },
   {
-   "id": "S0825",
-   "day": 83,
-   "direction": "zh-ja",
+   "qid": "P-083-04-9c68c54a52e5",
    "prompt": "我完全没有辞职的意思。",
-   "knowledge_ids": [
-    "V1497"
+   "options": [
+    "インドの人口はどのくらいですか。",
+    "私は辞職する意志はまったくない。",
+    "その広間は日本画で飾られていた。",
+    "このテーブルを頼んだのではない。"
    ],
-   "hint": ""
+   "h": "bdfc4d98",
+   "oh": [
+    "4c5d8293",
+    "bdfc4d98",
+    "6d732f36",
+    "e76e4b0"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0825"
   },
   {
-   "id": "S0826",
-   "day": 83,
-   "direction": "zh-ja",
+   "qid": "P-083-05-b60eeba87173",
    "prompt": "人通过语言互相沟通意思。",
-   "knowledge_ids": [
-    "V1498"
+   "options": [
+    "先生は私に一番長い章を割り当てた。",
+    "また別のときにチェスをしましょう。",
+    "これからも人生を楽しんでください。",
+    "人間は互いに言葉で意思を通じ合う。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0827",
-   "day": 83,
+   "h": "4eae6f12",
+   "oh": [
+    "ca7cc11a",
+    "a177b2a7",
+    "36b09d73",
+    "4eae6f12"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0826"
+  },
+  {
+   "qid": "P-083-06-9f9c18a5e9ba",
    "prompt": "他为了当医生在学习。",
-   "knowledge_ids": [
-    "V1499"
+   "options": [
+    "その男は一定の速度で車を運転した。",
+    "彼は医師になるために勉強している。",
+    "住民の半数以上はその計画に反対だ。",
+    "彼は高等学校の生徒ではありません。"
    ],
-   "hint": ""
+   "h": "225171f1",
+   "oh": [
+    "53997a8d",
+    "225171f1",
+    "7667272d",
+    "31457fd"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0827"
   },
   {
-   "id": "S0828",
-   "day": 83,
-   "direction": "ja-zh",
+   "qid": "P-083-07-66de02f2153e",
    "prompt": "この車の維持は高くつく。",
-   "knowledge_ids": [
-    "V1500"
+   "options": [
+    "那台电脑是新的。",
+    "养这辆车很费钱。",
+    "那违背我的原则。",
+    "任何事物都有极限。"
    ],
-   "hint": ""
+   "h": "ea0755b5",
+   "oh": [
+    "f9f14329",
+    "ea0755b5",
+    "80ad1d1c",
+    "8a1a0d7c"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0828"
   },
   {
-   "id": "S0829",
-   "day": 83,
-   "direction": "ja-zh",
+   "qid": "P-083-08-19819f8e55b8",
    "prompt": "このお料理は、パリのエスプリを意識して、味付けしてみました。",
-   "knowledge_ids": [
-    "V1501"
+   "options": [
+    "「我可以一起去吗？」「当然。」。",
+    "那个男人开始和妻子交往了。",
+    "这道菜是顾及巴黎风味调味的。",
+    "多萝西送了他一份很好的礼物。"
    ],
-   "hint": ""
+   "h": "53e2bb2d",
+   "oh": [
+    "4a7630ab",
+    "b8529c9b",
+    "53e2bb2d",
+    "4d4aa95b"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0829"
   },
   {
-   "id": "S0830",
-   "day": 83,
-   "direction": "ja-zh",
+   "qid": "P-083-09-dbcdaa324f79",
    "prompt": "そんなにたくさん食べるのは異常だ。",
-   "knowledge_ids": [
-    "V1502"
+   "options": [
+    "商人是买卖商品的人。",
+    "吃那么多是不正常的。",
+    "雨正好停了，出发吧。",
+    "她在数学方面不如他。"
    ],
-   "hint": ""
+   "h": "80ba9814",
+   "oh": [
+    "493bd5af",
+    "80ba9814",
+    "65ac9c57",
+    "e3e22cfe"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0830"
   }
  ],
  "quiz": [

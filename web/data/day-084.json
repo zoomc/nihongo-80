@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1469",
    "front": "粗",
    "back": "瑕疵",
+   "kana": "あら",
    "stage": "planned"
   },
   {
    "kid": "V1470",
    "front": "嵐",
    "back": "暴风雨",
+   "kana": "あらし",
    "stage": "planned"
   },
   {
    "kid": "V1471",
    "front": "新た",
    "back": "新的",
+   "kana": "あらた",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0349",
    "front": "判",
-   "back": "判断；印章｜音 ハン、バン",
+   "back": "判断；印章",
+   "kana": "ハン、バン、わか.る",
    "stage": "planned"
   },
   {
    "kid": "K0350",
    "front": "認",
-   "back": "承认；认可｜音 ニン",
+   "back": "承认；认可",
+   "kana": "ニン、みと.める、したた.める",
    "stage": "planned"
   },
   {
    "kid": "V0339",
    "front": "翌日",
    "back": "次日；第二天",
+   "kana": "よくじつ",
    "stage": "planned"
   },
   {
    "kid": "V0340",
    "front": "途中",
    "back": "途中；中途",
+   "kana": "とちゅう",
    "stage": "planned"
   },
   {
    "kid": "V1438",
    "front": "愛",
    "back": "爱",
+   "kana": "あい",
    "stage": "planned"
   },
   {
@@ -579,104 +587,204 @@
  ],
  "sentences": [
   {
-   "id": "S0831",
-   "day": 84,
-   "direction": "zh-ja",
+   "qid": "P-084-00-0373492b6039",
    "prompt": "我站在能看清游行的好位置。",
-   "knowledge_ids": [
-    "V1513"
+   "options": [
+    "私はパレードが見えるいい位置にいた。",
+    "若い男の人がドアの前で歌っています。",
+    "ドアのそばのかぎに上着をかけなさい。",
+    "お年寄りをからかってはいけません。"
    ],
-   "hint": ""
+   "h": "3821a6d6",
+   "oh": [
+    "3821a6d6",
+    "29df4592",
+    "19352d64",
+    "a3dd40ad"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0831"
   },
   {
-   "id": "S0832",
-   "day": 84,
-   "direction": "zh-ja",
+   "qid": "P-084-01-5df120d0952f",
    "prompt": "他曾在这里住过一阵。",
-   "knowledge_ids": [
-    "V1514"
+   "options": [
+    "彼は一時ここに住んでいた。",
+    "静けさが森を支配していた。",
+    "それを言われると弱いなあ。",
+    "二人は同じ結論に到達した。"
    ],
-   "hint": ""
+   "h": "3732accd",
+   "oh": [
+    "3732accd",
+    "b7f58f24",
+    "84412a13",
+    "1f43ff05"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0832"
   },
   {
-   "id": "S0833",
-   "day": 84,
-   "direction": "zh-ja",
+   "qid": "P-084-02-bb4bec4e4fde",
    "prompt": "请一次只做一件事。",
-   "knowledge_ids": [
-    "V1515"
+   "options": [
+    "こちらはあなたがお話しになるお方です。",
+    "不動産会社に部屋を紹介してもらいました。",
+    "その少年は死んだものとしてあきらめられた。",
+    "一度にひとつのことをするようにしなさい。"
    ],
-   "hint": ""
+   "h": "d5063bcc",
+   "oh": [
+    "aec24c2b",
+    "e14ddae8",
+    "ab3a94b8",
+    "d5063bcc"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0833"
   },
   {
-   "id": "S0834",
-   "day": 84,
-   "direction": "zh-ja",
+   "qid": "P-084-03-bcbce9273c15",
    "prompt": "他养牛用来上市。",
-   "knowledge_ids": [
-    "V1516"
+   "options": [
+    "今朝、地面は霜で覆われていた。",
+    "彼は市場に出す牛を育てている。",
+    "あの交差点で何が起こったのか。",
+    "兄はアパートをさがしています。"
    ],
-   "hint": ""
+   "h": "8c9d754",
+   "oh": [
+    "b57ced8f",
+    "8c9d754",
+    "28d0e3e9",
+    "7f656d90"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0834"
   },
   {
-   "id": "S0835",
-   "day": 84,
-   "direction": "zh-ja",
+   "qid": "P-084-04-dbb3fa44b389",
    "prompt": "约翰逊一家很喜欢办聚会。",
-   "knowledge_ids": [
-    "V1517"
+   "options": [
+    "それは１週間前、すなわち４月２日に行われた。",
+    "その島の飛行場は、今では草がぼうぼうだ。",
+    "たとえどんなことがあってもあきらめません。",
+    "ジョンソン一家はパーティーをするのが大好きだ。"
    ],
-   "hint": ""
+   "h": "e8da4913",
+   "oh": [
+    "c6fa71d9",
+    "a52d777a",
+    "282967bb",
+    "e8da4913"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0835"
   },
   {
-   "id": "S0836",
-   "day": 84,
-   "direction": "zh-ja",
+   "qid": "P-084-05-95766009f18b",
    "prompt": "她总有一天会爬上那座山。",
-   "knowledge_ids": [
-    "V1518"
+   "options": [
+    "パスポートを見せてくれませんか。",
+    "ここでは煙草は禁止されています。",
+    "彼女はいつかあの山に登るだろう。",
+    "この小包を船便で送ってください。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0837",
-   "day": 84,
+   "h": "b0205057",
+   "oh": [
+    "e4f54f40",
+    "ecc80e4d",
+    "b0205057",
+    "79aca341"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0836"
+  },
+  {
+   "qid": "P-084-06-142d6e560a5d",
    "prompt": "文章的论调是一种悲观论。",
-   "knowledge_ids": [
-    "V1519"
+   "options": [
+    "このビルは非常階段を備えている。",
+    "いいクリスマスを過ごしましたか。",
+    "記事の論調は一種の悲観論だった。",
+    "この学校は男子よりも女子が多い。"
    ],
-   "hint": ""
+   "h": "c055034d",
+   "oh": [
+    "d631b058",
+    "a01fba18",
+    "c055034d",
+    "53353c8"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0837"
   },
   {
-   "id": "S0838",
-   "day": 84,
-   "direction": "ja-zh",
+   "qid": "P-084-07-462a1ed11b14",
    "prompt": "それは私にとってはらはらする一瞬だった。",
-   "knowledge_ids": [
-    "V1520"
+   "options": [
+    "那对我来说是提心吊胆的一瞬间。",
+    "一听这话，他脸色刷地白了。",
+    "好了，聚会就到此结束吧。",
+    "那消息我是从收音机里听到的。"
    ],
-   "hint": ""
+   "h": "85a4061f",
+   "oh": [
+    "85a4061f",
+    "35126ddb",
+    "5b171b12",
+    "329be490"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0838"
   },
   {
-   "id": "S0839",
-   "day": 84,
-   "direction": "ja-zh",
+   "qid": "P-084-08-67a82b4ae4db",
    "prompt": "あなたは、一生勉強しなければならない。",
-   "knowledge_ids": [
-    "V1521"
+   "options": [
+    "我让他搬了行李箱。",
+    "街上聚集了很多人。",
+    "你必须学习一辈子。",
+    "那么生气可不像他。"
    ],
-   "hint": ""
+   "h": "9f5ce3c3",
+   "oh": [
+    "323f3d7c",
+    "96c13ff4",
+    "9f5ce3c3",
+    "d57e1d5a"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0839"
   },
   {
-   "id": "S0840",
-   "day": 84,
-   "direction": "ja-zh",
+   "qid": "P-084-09-98c1a847852f",
    "prompt": "君が一緒だったおかげで休日がいっそう楽しめた。",
-   "knowledge_ids": [
-    "V1522"
+   "options": [
+    "多亏有你一起，假期过得更开心了。",
+    "杰克对我搞了个卑鄙的恶作剧。",
+    "生病的孩子在床上坐了起来。",
+    "这本教材是为初学者编写的。"
    ],
-   "hint": ""
+   "h": "2279ec9b",
+   "oh": [
+    "2279ec9b",
+    "1eacb1bd",
+    "cc940c92",
+    "450f0f81"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0840"
   }
  ],
  "quiz": [

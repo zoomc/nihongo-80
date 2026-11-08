@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0703",
    "front": "荷物",
    "back": "行李",
+   "kana": "にもつ",
    "stage": "planned"
   },
   {
    "kid": "V0704",
    "front": "ニュース",
    "back": "新闻",
+   "kana": "ニュース",
    "stage": "planned"
   },
   {
    "kid": "V0705",
    "front": "庭",
    "back": "院子",
+   "kana": "にわ",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0103",
    "front": "部",
-   "back": "部；部门；部分｜音 ブ",
+   "back": "部；部门；部分",
+   "kana": "ブ",
    "stage": "planned"
   },
   {
    "kid": "K0104",
    "front": "屋",
-   "back": "屋；房屋；…店｜音 オク",
+   "back": "屋；房屋；…店",
+   "kana": "オク、や",
    "stage": "planned"
   },
   {
    "kid": "V0665",
    "front": "トイレ",
    "back": "厕所",
+   "kana": "トイレ",
    "stage": "planned"
   },
   {
    "kid": "V0666",
    "front": "どう",
    "back": "怎样",
+   "kana": "どう",
    "stage": "planned"
   },
   {
    "kid": "V0667",
    "front": "どうして",
    "back": "为什么",
+   "kana": "どうして",
    "stage": "planned"
   },
   {
@@ -530,104 +538,204 @@
  ],
  "sentences": [
   {
-   "id": "S0281",
-   "day": 29,
-   "direction": "zh-ja",
+   "qid": "P-029-00-f571451930e6",
    "prompt": "这条领带多少钱？",
-   "knowledge_ids": [
-    "V0708"
+   "options": [
+    "このネクタイはいくらですか。",
+    "「彼女は若いですか」「はい」",
+    "どうか明かりをつけて下さい。",
+    "ちょっと寄って行きませんか。"
    ],
-   "hint": ""
+   "h": "1261105",
+   "oh": [
+    "1261105",
+    "6bc44878",
+    "1b979fbd",
+    "187ef6ad"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0281"
   },
   {
-   "id": "S0282",
-   "day": 29,
-   "direction": "zh-ja",
+   "qid": "P-029-01-c235db3bc2f1",
    "prompt": "看着书就睡着了。",
-   "knowledge_ids": [
-    "V0709"
+   "options": [
+    "本を読んでるうちに寝てしまった。",
+    "あなたをケパと呼ぶことにします。",
+    "そのニュースは急いで印刷された。",
+    "このテーブルを頼んだのではない。"
    ],
-   "hint": ""
+   "h": "41172e59",
+   "oh": [
+    "41172e59",
+    "27fecd16",
+    "d5c6649d",
+    "e76e4b0"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0282"
   },
   {
-   "id": "S0283",
-   "day": 29,
-   "direction": "zh-ja",
+   "qid": "P-029-02-6398a36c086f",
    "prompt": "把这些词写在笔记本上。",
-   "knowledge_ids": [
-    "V0710"
+   "options": [
+    "この学校は男子よりも女子が多い。",
+    "そのコーヒーはいいにおいがする。",
+    "これらの語をノートに書きなさい。",
+    "ニューススタンドで聞いて下さい。"
    ],
-   "hint": ""
+   "h": "7a4a4062",
+   "oh": [
+    "53353c8",
+    "eff509fd",
+    "7a4a4062",
+    "8d525137"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0283"
   },
   {
-   "id": "S0284",
-   "day": 29,
-   "direction": "zh-ja",
+   "qid": "P-029-03-8f354e2091d8",
    "prompt": "树越高越难爬。",
-   "knowledge_ids": [
-    "V0711"
+   "options": [
+    "ムーリエルは２０歳になりました。",
+    "その話は親から子へと伝えられた。",
+    "木は高ければ高いほど登りにくい。",
+    "この案を検討することにしました。"
    ],
-   "hint": ""
+   "h": "a076036a",
+   "oh": [
+    "18597f07",
+    "c65bb93d",
+    "a076036a",
+    "f4913c93"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0284"
   },
   {
-   "id": "S0285",
-   "day": 29,
-   "direction": "zh-ja",
+   "qid": "P-029-04-4174e89861c3",
    "prompt": "能给我点喝的吗？",
-   "knowledge_ids": [
-    "V0712"
+   "options": [
+    "この手の本はあまり読まない。",
+    "何か飲み物をいただけますか。",
+    "その紙を四つ折りにしなさい。",
+    "彼女は４０代半ばで再婚した。"
    ],
-   "hint": ""
+   "h": "b5363a4b",
+   "oh": [
+    "771de503",
+    "b5363a4b",
+    "6860baf1",
+    "7f05d656"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0285"
   },
   {
-   "id": "S0286",
-   "day": 29,
-   "direction": "zh-ja",
+   "qid": "P-029-05-a1b3c140b968",
    "prompt": "那个婴儿开始长牙了。",
-   "knowledge_ids": [
-    "V0713"
+   "options": [
+    "どちらかといえば木造住宅に住みたい。",
+    "その泥棒は刑事を見ると走って逃げた。",
+    "その赤ちゃんは歯が生えはじめている。",
+    "あなたがここに居たのは幸いでした。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0287",
-   "day": 29,
+   "h": "2a005dd5",
+   "oh": [
+    "595610d9",
+    "ea10fb03",
+    "2a005dd5",
+    "6aab53b9"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0286"
+  },
+  {
+   "qid": "P-029-06-14aba43be93d",
    "prompt": "聚会玩得开心吗？",
-   "knowledge_ids": [
-    "V0714"
+   "options": [
+    "そのショーで観客は大喜びだった。",
+    "パーティーはたのしかったですか。",
+    "その広間は日本画で飾られていた。",
+    "ビールびんはガラスでできている。"
    ],
-   "hint": ""
+   "h": "4939410a",
+   "oh": [
+    "66f9ebb3",
+    "4939410a",
+    "6d732f36",
+    "45e4dbee"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0287"
   },
   {
-   "id": "S0288",
-   "day": 29,
-   "direction": "ja-zh",
+   "qid": "P-029-07-51c1ba99b0cb",
    "prompt": "「もしもし、ブラウンさんですか」「はい、そうです」",
-   "knowledge_ids": [
-    "V0715"
+   "options": [
+    "“喂，是布朗先生吗？”“是的。”",
+    "那对我来说是提心吊胆的一瞬间。",
+    "那只狗是棕色的，又小又瘦。",
+    "所有报纸都大篇幅报道了那起事件。"
    ],
-   "hint": ""
+   "h": "195f981c",
+   "oh": [
+    "195f981c",
+    "85a4061f",
+    "6be957bc",
+    "9ef87986"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0288"
   },
   {
-   "id": "S0289",
-   "day": 29,
-   "direction": "ja-zh",
+   "qid": "P-029-08-c2cdebf28965",
    "prompt": "灰皿を下さい。",
-   "knowledge_ids": [
-    "V0716"
+   "options": [
+    "请给我一个烟灰缸。",
+    "他用无线电发了报。",
+    "我们推荐他当议长。",
+    "请报告目前的情况。"
    ],
-   "hint": ""
+   "h": "c873af5f",
+   "oh": [
+    "c873af5f",
+    "3e7102f9",
+    "7c0cfc66",
+    "aabf3a50"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0289"
   },
   {
-   "id": "S0290",
-   "day": 29,
-   "direction": "ja-zh",
+   "qid": "P-029-09-63b00ed04128",
    "prompt": "入る前にドアをノックして下さい。",
-   "knowledge_ids": [
-    "V0717"
+   "options": [
+    "下午几点去拜访您？",
+    "进来之前请先敲门。",
+    "今晚是有聚会吗？",
+    "那个国家气候温和。"
    ],
-   "hint": ""
+   "h": "cc9d7b6e",
+   "oh": [
+    "a05c8382",
+    "cc9d7b6e",
+    "6ed5872b",
+    "82295631"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0290"
   }
  ],
  "quiz": [

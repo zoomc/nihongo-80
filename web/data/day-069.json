@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1369",
    "front": "まず",
    "back": "首先",
+   "kana": "まず",
    "stage": "planned"
   },
   {
    "kid": "V1370",
    "front": "または",
    "back": "或者",
+   "kana": "または",
    "stage": "planned"
   },
   {
    "kid": "V1371",
    "front": "間違える",
    "back": "弄错",
+   "kana": "まちがえる",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0289",
    "front": "対",
-   "back": "对；相对；对抗｜音 タイ、ツイ",
+   "back": "对；相对；对抗",
+   "kana": "タイ、ツイ、あいて、こた.える、そろ.い、つれあ.い、なら.ぶ、むか.う",
    "stage": "planned"
   },
   {
    "kid": "K0290",
    "front": "合",
-   "back": "合适；合起来；合计｜音 ゴウ、ガッ、カッ",
+   "back": "合适；合起来；合计",
+   "kana": "ゴウ、ガッ、カッ、あ.う、-あ.う、あ.い、あい-、-あ.い、-あい、あ.わす、あ.わせる、-あ.わせる",
    "stage": "planned"
   },
   {
    "kid": "V1336",
    "front": "増える",
    "back": "增加",
+   "kana": "ふえる",
    "stage": "planned"
   },
   {
    "kid": "V1337",
    "front": "深い",
    "back": "深的",
+   "kana": "ふかい",
    "stage": "planned"
   },
   {
    "kid": "V1338",
    "front": "複雑",
    "back": "复杂",
+   "kana": "ふくざつ",
    "stage": "planned"
   },
   {
@@ -531,104 +539,204 @@
  ],
  "sentences": [
   {
-   "id": "S0681",
-   "day": 69,
-   "direction": "zh-ja",
+   "qid": "P-069-00-d253f4975d82",
    "prompt": "今年夏天我想晒黑一点。",
-   "knowledge_ids": [
-    "V1399"
+   "options": [
+    "この夏はこんがり焼こうと思います。",
+    "あなたの時計、時間は狂いませんか。",
+    "彼女は成長して美しい婦人になった。",
+    "その部屋は居心地の良い感じがした。"
    ],
-   "hint": ""
+   "h": "21ead46d",
+   "oh": [
+    "21ead46d",
+    "7697026a",
+    "f14714b1",
+    "52653e66"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0681"
   },
   {
-   "id": "S0682",
-   "day": 69,
-   "direction": "zh-ja",
+   "qid": "P-069-01-66d3cce506d5",
    "prompt": "再多的我就帮不上忙了。",
-   "knowledge_ids": [
-    "V1400"
+   "options": [
+    "それ以上はお役に立てません。",
+    "このネクタイはいくらですか。",
+    "きのう旧友の一人に出会った。",
+    "勢いに流されているんですよ。"
    ],
-   "hint": ""
+   "h": "717e0b55",
+   "oh": [
+    "717e0b55",
+    "1261105",
+    "bacc7be9",
+    "75832468"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0682"
   },
   {
-   "id": "S0683",
-   "day": 69,
-   "direction": "zh-ja",
+   "qid": "P-069-02-8d4a6a850b6b",
    "prompt": "这片吐司没烤透。",
-   "knowledge_ids": [
-    "V1401"
+   "options": [
+    "このトーストはよく焼けていません。",
+    "彼は医師になるために勉強している。",
+    "お年寄りをからかってはいけません。",
+    "掲示には「全席予約済み」とあった。"
    ],
-   "hint": ""
+   "h": "fe788abc",
+   "oh": [
+    "fe788abc",
+    "225171f1",
+    "a3dd40ad",
+    "ef57930"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0683"
   },
   {
-   "id": "S0684",
-   "day": 69,
-   "direction": "zh-ja",
+   "qid": "P-069-03-4daf4c2a353e",
    "prompt": "请对大家说话温柔些。",
-   "knowledge_ids": [
-    "V1402"
+   "options": [
+    "パーティーはたのしかったですか。",
+    "ジャックは８月１０日に生まれた。",
+    "どうしてあなたは一人になったの？",
+    "みんなには優しく話してください。"
    ],
-   "hint": ""
+   "h": "125e9885",
+   "oh": [
+    "4939410a",
+    "6df6eadc",
+    "23d94b23",
+    "125e9885"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0684"
   },
   {
-   "id": "S0685",
-   "day": 69,
-   "direction": "zh-ja",
+   "qid": "P-069-04-00e35a46ab28",
    "prompt": "她瘦得像根栏杆。",
-   "knowledge_ids": [
-    "V1403"
+   "options": [
+    "このソファーは場所を取りすぎる。",
+    "彼女はレールのように痩せていた。",
+    "それはすべて天候に依存している。",
+    "そのコーヒーはいいにおいがする。"
    ],
-   "hint": ""
+   "h": "baf273a0",
+   "oh": [
+    "fa74e348",
+    "baf273a0",
+    "3189be4f",
+    "eff509fd"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0685"
   },
   {
-   "id": "S0686",
-   "day": 69,
-   "direction": "zh-ja",
+   "qid": "P-069-05-df8342809b55",
    "prompt": "喂喂！你在搞什么啊。",
-   "knowledge_ids": [
-    "V1404"
+   "options": [
+    "ビルはその罪を犯していなかった。",
+    "このビルは非常階段を備えている。",
+    "こ、こら！ナニやっとるかぁぁ！！",
+    "その小説は彼の名声を更に高めた。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0687",
-   "day": 69,
+   "h": "1b91f40",
+   "oh": [
+    "8cfed4a4",
+    "d631b058",
+    "1b91f40",
+    "c4f79a06"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0686"
+  },
+  {
+   "qid": "P-069-06-0d4a80e4f28b",
    "prompt": "你果然还是想办法办成了。",
-   "knowledge_ids": [
-    "V1405"
+   "options": [
+    "医者は彼の苦痛を除いてやった。",
+    "その仕事以外ならなんでもやる。",
+    "主婦は節約に努めるべきである。",
+    "やっぱり何とかやってのけたね。"
    ],
-   "hint": ""
+   "h": "6295853d",
+   "oh": [
+    "8a6a13e3",
+    "b9ada927",
+    "ce74be3a",
+    "6295853d"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0687"
   },
   {
-   "id": "S0688",
-   "day": 69,
-   "direction": "ja-zh",
+   "qid": "P-069-07-f27930fd557a",
    "prompt": "雨がちょうど止んだ、出発しよう。",
-   "knowledge_ids": [
-    "V1406"
+   "options": [
+    "用力一推，门就开了。",
+    "雨正好停了，出发吧。",
+    "她向红十字会捐了款。",
+    "一百年后大家都一样了。"
    ],
-   "hint": ""
+   "h": "65ac9c57",
+   "oh": [
+    "a0bec855",
+    "65ac9c57",
+    "924a8cbd",
+    "486441a2"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0688"
   },
   {
-   "id": "S0689",
-   "day": 69,
-   "direction": "ja-zh",
+   "qid": "P-069-08-490724d6d07a",
    "prompt": "風が柔らかく木立に触れた。",
-   "knowledge_ids": [
-    "V1407"
+   "options": [
+    "从第十课开始吧。",
+    "我们在这儿下车吧。",
+    "街上聚集了很多人。",
+    "风轻柔地拂过树丛。"
    ],
-   "hint": ""
+   "h": "ce06f34d",
+   "oh": [
+    "7c4687ec",
+    "c38f80c0",
+    "96c13ff4",
+    "ce06f34d"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0689"
   },
   {
-   "id": "S0690",
-   "day": 69,
-   "direction": "ja-zh",
+   "qid": "P-069-09-7539eb1577ba",
    "prompt": "いい湯だなあ。",
-   "knowledge_ids": [
-    "V1408"
+   "options": [
+    "手表出了毛病。",
+    "她有表演天赋。",
+    "这水真舒服啊。",
+    "他偷袭了对手。"
    ],
-   "hint": ""
+   "h": "98bf654",
+   "oh": [
+    "e999283c",
+    "85f35af",
+    "98bf654",
+    "4050f9f9"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0690"
   }
  ],
  "quiz": [

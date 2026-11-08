@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V2229",
    "front": "スケート",
    "back": "滑冰",
+   "kana": "スケート",
    "stage": "planned"
   },
   {
    "kid": "V2230",
    "front": "少しも",
    "back": "一点也不",
+   "kana": "すこしも",
    "stage": "planned"
   },
   {
    "kid": "V2231",
    "front": "過ごす",
    "back": "度过",
+   "kana": "すごす",
    "stage": "planned"
   },
   {
@@ -70,31 +73,36 @@
   {
    "kid": "K0529",
    "front": "便",
-   "back": "方便；信件｜音 ベン、ビン",
+   "back": "方便；信件",
+   "kana": "ベン、ビン、たよ.り",
    "stage": "planned"
   },
   {
    "kid": "K0530",
    "front": "留",
-   "back": "停留；留｜音 リュウ、ル",
+   "back": "停留；留",
+   "kana": "リュウ、ル、と.める、と.まる、とど.める、とど.まる、るうぶる",
    "stage": "planned"
   },
   {
    "kid": "V2196",
    "front": "信仰",
    "back": "信仰",
+   "kana": "しんこう",
    "stage": "planned"
   },
   {
    "kid": "V2197",
    "front": "信号",
    "back": "信号；红绿灯",
+   "kana": "しんごう",
    "stage": "planned"
   },
   {
    "kid": "V2198",
    "front": "人工",
    "back": "人工",
+   "kana": "じんこう",
    "stage": "planned"
   },
   {
@@ -112,7 +120,8 @@
   {
    "kid": "K0521",
    "front": "熱",
-   "back": "热；发烧｜音 ネツ",
+   "back": "热；发烧",
+   "kana": "ネツ、あつ.い",
    "stage": "planned"
   }
  ],
@@ -403,104 +412,204 @@
  ],
  "sentences": [
   {
-   "id": "S1281",
-   "day": 129,
-   "direction": "zh-ja",
+   "qid": "P-129-00-ae032f863974",
    "prompt": "那头大象被带到了动物园。",
-   "knowledge_ids": [
-    "V2299"
+   "options": [
+    "その広間は日本画で飾られていた。",
+    "こ、こら！ナニやっとるかぁぁ！！",
+    "これらの語をノートに書きなさい。",
+    "その象は動物園に連れてこられた。"
    ],
-   "hint": ""
+   "h": "f9632f0f",
+   "oh": [
+    "6d732f36",
+    "1b91f40",
+    "7a4a4062",
+    "f9632f0f"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1281"
   },
   {
-   "id": "S1282",
-   "day": 129,
-   "direction": "zh-ja",
+   "qid": "P-129-01-63a6579f00fc",
    "prompt": "她不顾噪音继续说下去。",
-   "knowledge_ids": [
-    "V2300"
+   "options": [
+    "彼女は騒音にかまわず話しつづけた。",
+    "あなたの名前と住所を記入しなさい。",
+    "彼は心理学博士の学位を持っている。",
+    "その金は体育館の建設に当てられた。"
    ],
-   "hint": ""
+   "h": "9e21196",
+   "oh": [
+    "9e21196",
+    "52eeffa0",
+    "316eb7ce",
+    "6527799c"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1282"
   },
   {
-   "id": "S1283",
-   "day": 129,
-   "direction": "zh-ja",
+   "qid": "P-129-02-0bf1fcf05593",
    "prompt": "你根本想象不到吧？",
-   "knowledge_ids": [
-    "V2301"
+   "options": [
+    "あなたがここに居たのは幸いでした。",
+    "このトーストはよく焼けていません。",
+    "さっきなぜかマイクが入らなかった。",
+    "あなたには想像もつかない、でしょ？"
    ],
-   "hint": ""
+   "h": "6c1152da",
+   "oh": [
+    "6aab53b9",
+    "fe788abc",
+    "f6bd6b75",
+    "6c1152da"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1283"
   },
   {
-   "id": "S1284",
-   "day": 129,
-   "direction": "zh-ja",
+   "qid": "P-129-03-056585c35ee9",
    "prompt": "他继承了父亲的大片土地。",
-   "knowledge_ids": [
-    "V2302"
+   "options": [
+    "コンピューター業界は景気がいい。",
+    "ジャックは８月１０日に生まれた。",
+    "彼は父親の大きな土地を相続した。",
+    "この小包を船便で送ってください。"
    ],
-   "hint": ""
+   "h": "918f20e3",
+   "oh": [
+    "56eaf7bf",
+    "6df6eadc",
+    "918f20e3",
+    "79aca341"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1284"
   },
   {
-   "id": "S1285",
-   "day": 129,
-   "direction": "zh-ja",
+   "qid": "P-129-04-6b96319fdf22",
    "prompt": "大家都对那个装置很佩服。",
-   "knowledge_ids": [
-    "V2303"
+   "options": [
+    "彼は心理学博士の学位を持っている。",
+    "この部屋には新しい設備があります。",
+    "まだ動くうちに売ってしまわなきゃ。",
+    "みんな、その装置にとても感心した。"
    ],
-   "hint": ""
+   "h": "a024abe9",
+   "oh": [
+    "316eb7ce",
+    "f4227281",
+    "49f6cdcc",
+    "a024abe9"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1285"
   },
   {
-   "id": "S1286",
-   "day": 129,
-   "direction": "zh-ja",
+   "qid": "P-129-05-fc37e18f4d4e",
    "prompt": "那个地方现在建得相当密集。",
-   "knowledge_ids": [
-    "V2304"
+   "options": [
+    "おじいさんはとてもゆっくりと話す。",
+    "この学校はたくさんの生徒がいます。",
+    "その場所は今は相当建て込んでいる。",
+    "彼女はお金をたくさん貯金している。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1287",
-   "day": 129,
+   "h": "923b8d6a",
+   "oh": [
+    "ade4fb30",
+    "939aa164",
+    "923b8d6a",
+    "be911f6a"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1286"
+  },
+  {
+   "qid": "P-129-06-ec6de9a4d953",
    "prompt": "那个男人以稳定的速度开车。",
-   "knowledge_ids": [
-    "V2305"
+   "options": [
+    "この夏はこんがり焼こうと思います。",
+    "その男は一定の速度で車を運転した。",
+    "バリウムをまず一口飲んでください。",
+    "息子はハンバーガーにあきています。"
    ],
-   "hint": ""
+   "h": "53997a8d",
+   "oh": [
+    "21ead46d",
+    "53997a8d",
+    "50f70cb0",
+    "9eefe5a6"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1287"
   },
   {
-   "id": "S1288",
-   "day": 129,
-   "direction": "ja-zh",
+   "qid": "P-129-07-aa015dd4ff98",
    "prompt": "靴の底がすり減ってしまった。",
-   "knowledge_ids": [
-    "V2306"
+   "options": [
+    "正在下雨。",
+    "稍微休息一下。",
+    "下下周四怎么样？",
+    "鞋底磨薄了。"
    ],
-   "hint": ""
+   "h": "97060625",
+   "oh": [
+    "effe2eb5",
+    "f3109a5f",
+    "aab0ec66",
+    "97060625"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1288"
   },
   {
-   "id": "S1289",
-   "day": 129,
-   "direction": "ja-zh",
+   "qid": "P-129-08-227d82491dba",
    "prompt": "そこで他人との相互作用が大切になる。",
-   "knowledge_ids": [
-    "V2307"
+   "options": [
+    "因此，与他人的互动就变得重要了。",
+    "地球以外的天体上有生物吗？",
+    "做那种事会被人当成笑柄的。",
+    "杰克对我搞了个卑鄙的恶作剧。"
    ],
-   "hint": ""
+   "h": "ef38d9a1",
+   "oh": [
+    "ef38d9a1",
+    "26a2ce62",
+    "40186f01",
+    "1eacb1bd"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1289"
   },
   {
-   "id": "S1290",
-   "day": 129,
-   "direction": "ja-zh",
+   "qid": "P-129-09-de41f6020aea",
    "prompt": "彼らは労働組合を組織するだろう。",
-   "knowledge_ids": [
-    "V2308"
+   "options": [
+    "日元贬值影响物价。",
+    "他们会组织工会吧。",
+    "我有一封信必须写。",
+    "上个月几乎没下雨。"
    ],
-   "hint": ""
+   "h": "4a5d6cc4",
+   "oh": [
+    "f43a7c97",
+    "4a5d6cc4",
+    "9e93be90",
+    "42b374eb"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1290"
   }
  ],
  "quiz": [

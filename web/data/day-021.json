@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0551",
    "front": "四",
    "back": "四",
+   "kana": "し",
    "stage": "planned"
   },
   {
    "kid": "V0552",
    "front": "塩",
    "back": "盐",
+   "kana": "しお",
    "stage": "planned"
   },
   {
    "kid": "V0553",
    "front": "辞書",
    "back": "词典",
+   "kana": "じしょ",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0019",
    "front": "千",
-   "back": "千｜音 セン",
+   "back": "千",
+   "kana": "セン",
    "stage": "planned"
   },
   {
    "kid": "K0071",
    "front": "勉",
-   "back": "努力；学习｜音 ベン",
+   "back": "努力；学习",
+   "kana": "ベン",
    "stage": "planned"
   },
   {
    "kid": "V0513",
    "front": "交差点",
    "back": "十字路口",
+   "kana": "こうさてん",
    "stage": "planned"
   },
   {
    "kid": "V0514",
    "front": "紅茶",
    "back": "红茶",
+   "kana": "こうちゃ",
    "stage": "planned"
   },
   {
    "kid": "V0515",
    "front": "交番",
    "back": "派出所",
+   "kana": "こうばん",
    "stage": "planned"
   },
   {
@@ -529,104 +537,204 @@
  ],
  "sentences": [
   {
-   "id": "S0201",
-   "day": 21,
-   "direction": "zh-ja",
+   "qid": "P-021-00-d7621622115a",
    "prompt": "我可以出去散散步吗？",
-   "knowledge_ids": [
-    "V0550"
+   "options": [
+    "いいクリスマスを過ごしましたか。",
+    "この小包を船便で送ってください。",
+    "その子は何の恐怖も示さなかった。",
+    "散歩に出かけてもよろしいですか。"
    ],
-   "hint": ""
+   "h": "98fb3d8d",
+   "oh": [
+    "a01fba18",
+    "79aca341",
+    "67d66472",
+    "98fb3d8d"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0201"
   },
   {
-   "id": "S0202",
-   "day": 21,
-   "direction": "zh-ja",
+   "qid": "P-021-01-4f33bfa71dbe",
    "prompt": "坐电车的话，从这里只要四分钟。",
-   "knowledge_ids": [
-    "V0551"
+   "options": [
+    "列車でならここからたった四分だ。",
+    "トムは今にもここに来るはずです。",
+    "ここでは煙草は禁止されています。",
+    "それはたいへんなショックでした。"
    ],
-   "hint": ""
+   "h": "386b9d66",
+   "oh": [
+    "386b9d66",
+    "1c43f179",
+    "ecc80e4d",
+    "4f933c74"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0202"
   },
   {
-   "id": "S0203",
-   "day": 21,
-   "direction": "zh-ja",
+   "qid": "P-021-02-34d9bc0a79a2",
    "prompt": "这汤盐放得有点少。",
-   "knowledge_ids": [
-    "V0552"
+   "options": [
+    "ヒーターをつけたまま外出した。",
+    "このスープは塩が少し足りない。",
+    "これは悪い話ではないでしょう？",
+    "この布は値段の割に品質が良い。"
    ],
-   "hint": ""
+   "h": "5e1ae47d",
+   "oh": [
+    "be83661e",
+    "5e1ae47d",
+    "fdf9de68",
+    "73db6bba"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0203"
   },
   {
-   "id": "S0204",
-   "day": 21,
-   "direction": "zh-ja",
+   "qid": "P-021-03-3e1792e6d06d",
    "prompt": "那在任何词典里都有。",
-   "knowledge_ids": [
-    "V0553"
+   "options": [
+    "このスープは塩が少し足りない。",
+    "外はだんだん明るくなっていく。",
+    "それはどの辞書にもでています。",
+    "いや、当初の考えはそうでした。"
    ],
-   "hint": ""
+   "h": "9c46abfd",
+   "oh": [
+    "5e1ae47d",
+    "5f3ff076",
+    "9c46abfd",
+    "745cfd56"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0204"
   },
   {
-   "id": "S0205",
-   "day": 21,
-   "direction": "zh-ja",
+   "qid": "P-021-04-2924ab9f864b",
    "prompt": "饼干在桌子底下。",
-   "knowledge_ids": [
-    "V0554"
+   "options": [
+    "これは北海道からのお土産です。",
+    "だんだん日が長くなっています。",
+    "クッキーはテーブルの下にいる。",
+    "その公演は万雷の拍手を受けた。"
    ],
-   "hint": ""
+   "h": "876e5f43",
+   "oh": [
+    "7e2c9ed2",
+    "b1c203f0",
+    "876e5f43",
+    "4c0102c4"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0205"
   },
   {
-   "id": "S0206",
-   "day": 21,
-   "direction": "zh-ja",
+   "qid": "P-021-05-9a300f77745e",
    "prompt": "不管怎样，七点前都得过去。",
-   "knowledge_ids": [
-    "V0555"
+   "options": [
+    "先生は私に一番長い章を割り当てた。",
+    "一日で５００ドルつかってしまった。",
+    "どういっても七時までにいかないと。",
+    "さっきなぜかマイクが入らなかった。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0207",
-   "day": 21,
+   "h": "91a2dee7",
+   "oh": [
+    "ca7cc11a",
+    "3fe654f9",
+    "91a2dee7",
+    "f6bd6b75"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0206"
+  },
+  {
+   "qid": "P-021-06-ca86d42004d6",
    "prompt": "可以向那位老师提问。",
-   "knowledge_ids": [
-    "V0556"
+   "options": [
+    "それはたいへんなショックでした。",
+    "アリは夏じゅうせっせとはたらく。",
+    "その日は実にすばらしい日だった。",
+    "あの先生に質問してもいいですよ。"
    ],
-   "hint": ""
+   "h": "c64703e1",
+   "oh": [
+    "4f933c74",
+    "76c21659",
+    "5734bd46",
+    "c64703e1"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0207"
   },
   {
-   "id": "S0208",
-   "day": 21,
-   "direction": "ja-zh",
+   "qid": "P-021-07-6299629740e3",
    "prompt": "自動車にひかれたのではないですか。",
-   "knowledge_ids": [
-    "V0557"
+   "options": [
+    "他是不是被车撞了？",
+    "你为什么想当护士？",
+    "我有一封信必须写。",
+    "新闻每小时播一次。"
    ],
-   "hint": ""
+   "h": "7a6b5ce4",
+   "oh": [
+    "7a6b5ce4",
+    "28ee32c5",
+    "9e93be90",
+    "f70f14e"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0208"
   },
   {
-   "id": "S0209",
-   "day": 21,
-   "direction": "ja-zh",
+   "qid": "P-021-08-d5dd8a5b1c35",
    "prompt": "その少年は死んだものとしてあきらめられた。",
-   "knowledge_ids": [
-    "V0558"
+   "options": [
+    "人们认定那个少年已死，放弃了寻找。",
+    "多亏有你一起，假期过得更开心了。",
+    "去银行就能把那张五十美元支票换成现金。",
+    "贫穷不会成为通往幸福的障碍。"
    ],
-   "hint": ""
+   "h": "66fbc1fe",
+   "oh": [
+    "66fbc1fe",
+    "2279ec9b",
+    "af2a60dd",
+    "401119c6"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0209"
   },
   {
-   "id": "S0210",
-   "day": 21,
-   "direction": "ja-zh",
+   "qid": "P-021-09-7e376d0d862c",
    "prompt": "ジョンソンさんはまるで生き字引です。",
-   "knowledge_ids": [
-    "V0559"
+   "options": [
+    "电话一接通，她就说了起来。",
+    "约翰逊先生简直是一部活词典。",
+    "因此，与他人的互动就变得重要了。",
+    "谈过兴趣爱好方面的事了吗？"
    ],
-   "hint": ""
+   "h": "a187ea35",
+   "oh": [
+    "46a079b4",
+    "a187ea35",
+    "ef38d9a1",
+    "c57f7e73"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0210"
   }
  ],
  "quiz": [

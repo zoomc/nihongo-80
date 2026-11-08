@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1823",
    "front": "切れる",
    "back": "断；用完",
+   "kana": "きれる",
    "stage": "planned"
   },
   {
    "kid": "V1824",
    "front": "記録",
    "back": "记录",
+   "kana": "きろく",
    "stage": "planned"
   },
   {
    "kid": "V1825",
    "front": "議論",
    "back": "讨论；争论",
+   "kana": "ぎろん",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0433",
    "front": "働",
-   "back": "工作；劳动｜音 ドウ",
+   "back": "工作；劳动",
+   "kana": "ドウ、はたら.く",
    "stage": "planned"
   },
   {
    "kid": "K0434",
    "front": "形",
-   "back": "形状；形式｜音 ケイ、ギョウ",
+   "back": "形状；形式",
+   "kana": "ケイ、ギョウ、かた、-がた、かたち、なり",
    "stage": "planned"
   },
   {
    "kid": "V1790",
    "front": "義務",
    "back": "义务",
+   "kana": "ぎむ",
    "stage": "planned"
   },
   {
    "kid": "V1791",
    "front": "疑問",
    "back": "疑问",
+   "kana": "ぎもん",
    "stage": "planned"
   },
   {
    "kid": "V1792",
    "front": "逆",
    "back": "相反；反过来",
+   "kana": "ぎゃく",
    "stage": "planned"
   },
   {
@@ -528,104 +536,204 @@
  ],
  "sentences": [
   {
-   "id": "S1041",
-   "day": 105,
-   "direction": "zh-ja",
+   "qid": "P-105-00-e3c6f4c52ad0",
    "prompt": "他在镇上经营一家超市。",
-   "knowledge_ids": [
-    "V1879"
+   "options": [
+    "お祭りでロブスターを食べました。",
+    "この犬は何でもほとんど食べます。",
+    "彼は町でスーパーを経営している。",
+    "これは兄です。かっこいいですね。"
    ],
-   "hint": ""
+   "h": "2e05c1d",
+   "oh": [
+    "6e738748",
+    "1ebdb937",
+    "2e05c1d",
+    "d769ff77"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1041"
   },
   {
-   "id": "S1042",
-   "day": 105,
-   "direction": "zh-ja",
+   "qid": "P-105-01-81874782e2ca",
    "prompt": "电脑行业行情很好。",
-   "knowledge_ids": [
-    "V1880"
+   "options": [
+    "コンピューター業界は景気がいい。",
+    "スケートはとてもおもしろかった。",
+    "これらの語をノートに書きなさい。",
+    "そんな計画は捨ててしまいなさい。"
    ],
-   "hint": ""
+   "h": "56eaf7bf",
+   "oh": [
+    "56eaf7bf",
+    "ebd819a3",
+    "7a4a4062",
+    "f1570dd9"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1042"
   },
   {
-   "id": "S1043",
-   "day": 105,
-   "direction": "zh-ja",
+   "qid": "P-105-02-7816b82d9742",
    "prompt": "他完全没把我的警告当回事。",
-   "knowledge_ids": [
-    "V1881"
+   "options": [
+    "彼は私の警告に全く注意を払わなかった。",
+    "トランプでごまかすのはよくないことだ。",
+    "ここでお買い上げの品は無料で配達します。",
+    "私たちはもうずいぶん長くここにいます。"
    ],
-   "hint": ""
+   "h": "c5b749e7",
+   "oh": [
+    "c5b749e7",
+    "7ef07a76",
+    "108078d3",
+    "6c59bc68"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1043"
   },
   {
-   "id": "S1044",
-   "day": 105,
-   "direction": "zh-ja",
+   "qid": "P-105-03-18b0b5634ab0",
    "prompt": "能帮我算一下旅行的总费用吗？",
-   "knowledge_ids": [
-    "V1882"
+   "options": [
+    "どういっても七時までにいかないと。",
+    "彼は医師になるために勉強している。",
+    "旅行の総費用を計算してくれますか。",
+    "あなたは家族の事を考えるべきです。"
    ],
-   "hint": ""
+   "h": "7bb3c0e5",
+   "oh": [
+    "91a2dee7",
+    "225171f1",
+    "7bb3c0e5",
+    "13384023"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1044"
   },
   {
-   "id": "S1045",
-   "day": 105,
-   "direction": "zh-ja",
+   "qid": "P-105-04-c833f1613721",
    "prompt": "那个小偷一看见刑警就跑了。",
-   "knowledge_ids": [
-    "V1883"
+   "options": [
+    "だれかがドアをどんどんたたいている。",
+    "ドアのそばのかぎに上着をかけなさい。",
+    "その泥棒は刑事を見ると走って逃げた。",
+    "そのぬれたシャツはすぐに乾くだろう。"
    ],
-   "hint": ""
+   "h": "ea10fb03",
+   "oh": [
+    "a5411c72",
+    "19352d64",
+    "ea10fb03",
+    "a042cc96"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1045"
   },
   {
-   "id": "S1046",
-   "day": 105,
-   "direction": "zh-ja",
+   "qid": "P-105-05-8de02233b55d",
    "prompt": "公告上写着「所有座位已预订」。",
-   "knowledge_ids": [
-    "V1884"
+   "options": [
+    "その映画館は人々でいっぱいだった。",
+    "掲示には「全席予約済み」とあった。",
+    "あなたの時計、時間は狂いませんか。",
+    "このトーストはよく焼けていません。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1047",
-   "day": 105,
+   "h": "ef57930",
+   "oh": [
+    "15b363d4",
+    "ef57930",
+    "7697026a",
+    "fe788abc"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1046"
+  },
+  {
+   "qid": "P-105-06-b59500fa58ce",
    "prompt": "他为艺术捐了一大笔钱。",
-   "knowledge_ids": [
-    "V1885"
+   "options": [
+    "この手袋は両方がそろっていない。",
+    "こ、こら！ナニやっとるかぁぁ！！",
+    "トムはメアリーにバイクを売った。",
+    "彼は芸術のために大金を寄付した。"
    ],
-   "hint": ""
+   "h": "cc8f74c4",
+   "oh": [
+    "9ed978b8",
+    "1b91f40",
+    "3db0f9d3",
+    "cc8f74c4"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1047"
   },
   {
-   "id": "S1048",
-   "day": 105,
-   "direction": "ja-zh",
+   "qid": "P-105-07-d60d0cf19a80",
    "prompt": "私達はいろいろなゲームをした。",
-   "knowledge_ids": [
-    "V1887"
+   "options": [
+    "我们玩了好几种游戏。",
+    "海明威的文笔很糟糕。",
+    "他们的意见和我的不同。",
+    "我解不出这道数学题。"
    ],
-   "hint": ""
+   "h": "3b0486e",
+   "oh": [
+    "3b0486e",
+    "9cbca2c",
+    "1d38ae3",
+    "aeda3c9e"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1048"
   },
   {
-   "id": "S1049",
-   "day": 105,
-   "direction": "ja-zh",
+   "qid": "P-105-08-eb3e0a8aeb67",
    "prompt": "ラグビーをしているとき、彼はけがをした。",
-   "knowledge_ids": [
-    "V1888"
+   "options": [
+    "对了，明天安排是什么？",
+    "有些人的球速也非常快。",
+    "她应该多听听别人的话。",
+    "他打橄榄球的时候受了伤。"
    ],
-   "hint": ""
+   "h": "45de1693",
+   "oh": [
+    "f3613f32",
+    "591e3589",
+    "c6d6351d",
+    "45de1693"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1049"
   },
   {
-   "id": "S1050",
-   "day": 105,
-   "direction": "ja-zh",
+   "qid": "P-105-09-2e3893b4b906",
    "prompt": "劇はちょうど定刻に始まった。",
-   "knowledge_ids": [
-    "V1889"
+   "options": [
+    "您的名字怎么念？",
+    "钻石本来就很硬。",
+    "戏正好准时开演。",
+    "他用无线电发了报。"
    ],
-   "hint": ""
+   "h": "998bd8d4",
+   "oh": [
+    "cedc5143",
+    "aa75a0ff",
+    "998bd8d4",
+    "3e7102f9"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1050"
   }
  ],
  "quiz": [

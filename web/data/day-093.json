@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1625",
    "front": "お昼",
    "back": "中午；午饭",
+   "kana": "おひる",
    "stage": "planned"
   },
   {
    "kid": "V1626",
    "front": "オフィス",
    "back": "办公室",
+   "kana": "オフィス",
    "stage": "planned"
   },
   {
    "kid": "V1627",
    "front": "溺れる",
    "back": "溺水；沉溺",
+   "kana": "おぼれる",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0385",
    "front": "格",
-   "back": "资格；品格；规格｜音 カク、コウ、キャク、ゴウ",
+   "back": "资格；品格；规格",
+   "kana": "カク、コウ、キャク、ゴウ",
    "stage": "planned"
   },
   {
    "kid": "K0386",
    "front": "疑",
-   "back": "怀疑；疑问｜音 ギ",
+   "back": "怀疑；疑问",
+   "kana": "ギ、うたが.う",
    "stage": "planned"
   },
   {
    "kid": "V1587",
    "front": "延期",
    "back": "延期",
+   "kana": "えんき",
    "stage": "planned"
   },
   {
    "kid": "V1588",
    "front": "演技",
    "back": "演技；表演",
+   "kana": "えんぎ",
    "stage": "planned"
   },
   {
    "kid": "V1589",
    "front": "援助",
    "back": "援助",
+   "kana": "えんじょ",
    "stage": "planned"
   },
   {
@@ -533,104 +541,204 @@
  ],
  "sentences": [
   {
-   "id": "S0921",
-   "day": 93,
-   "direction": "zh-ja",
+   "qid": "P-093-00-221c10ab0456",
    "prompt": "你学化学吗？",
-   "knowledge_ids": [
-    "V1669"
+   "options": [
+    "貴方は、化学を勉強しますか。",
+    "海外で働いた経験があります。",
+    "ルーシーはかわいい女の子だ。",
+    "その靴は登山には向かないよ。"
    ],
-   "hint": ""
+   "h": "269c191d",
+   "oh": [
+    "269c191d",
+    "e098f265",
+    "8d514221",
+    "a799335d"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0921"
   },
   {
-   "id": "S0922",
-   "day": 93,
-   "direction": "zh-ja",
+   "qid": "P-093-01-1cdd7f433e58",
    "prompt": "太阳在天空中闪耀。",
-   "knowledge_ids": [
-    "V1670"
+   "options": [
+    "しっかり勉強してください。",
+    "スミス氏は市長候補である。",
+    "たまには会いに来て下さい。",
+    "空には太陽が輝いています。"
    ],
-   "hint": ""
+   "h": "3ed5e986",
+   "oh": [
+    "f79afcc5",
+    "d7451ff4",
+    "1c8b4048",
+    "3ed5e986"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0922"
   },
   {
-   "id": "S0923",
-   "day": 93,
-   "direction": "zh-ja",
+   "qid": "P-093-02-6e93af3602c3",
    "prompt": "现在派个负责人过去。",
-   "knowledge_ids": [
-    "V1671"
+   "options": [
+    "あの子はなんてうるさい子だろう。",
+    "ジョンは門のところまで出てきた。",
+    "その代わりにトランプをしようよ。",
+    "今、誰か係りの者を差し向けます。"
    ],
-   "hint": ""
+   "h": "1b4582b0",
+   "oh": [
+    "490bd08c",
+    "7aac2a83",
+    "420672f9",
+    "1b4582b0"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0923"
   },
   {
-   "id": "S0924",
-   "day": 93,
-   "direction": "zh-ja",
+   "qid": "P-093-03-df9891bba88d",
    "prompt": "我曾经得过一场大病。",
-   "knowledge_ids": [
-    "V1672"
+   "options": [
+    "お金を使うも貯めるも自由にしなさい。",
+    "あの人達は都会の生活にあこがれている。",
+    "せっけんだらけの手で私にさわらないで。",
+    "私はかつて大病にかかったことがあった。"
    ],
-   "hint": ""
+   "h": "58b7a9f0",
+   "oh": [
+    "d62fbdda",
+    "f7e43dfe",
+    "41d0d85f",
+    "58b7a9f0"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0924"
   },
   {
-   "id": "S0925",
-   "day": 93,
-   "direction": "zh-ja",
+   "qid": "P-093-04-d826231c53b2",
    "prompt": "有钱人未必幸福。",
-   "knowledge_ids": [
-    "V1673"
+   "options": [
+    "バリウムをまず一口飲んでください。",
+    "金持ちが必ずしも幸福とは限らない。",
+    "あなたがここに居たのは幸いでした。",
+    "彼は高等学校の生徒ではありません。"
    ],
-   "hint": ""
+   "h": "b584ae09",
+   "oh": [
+    "50f70cb0",
+    "b584ae09",
+    "6aab53b9",
+    "31457fd"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0925"
   },
   {
-   "id": "S0926",
-   "day": 93,
-   "direction": "zh-ja",
+   "qid": "P-093-05-f7ce82111a7b",
    "prompt": "房间里没有家具。",
-   "knowledge_ids": [
-    "V1674"
+   "options": [
+    "彼は知恵のある人だ。",
+    "新しい仕事を始めます。",
+    "給料が上がりました。",
+    "部屋には家具がない。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0927",
-   "day": 93,
+   "h": "7d411b95",
+   "oh": [
+    "f4551fc9",
+    "2ac3d1c7",
+    "fcd1ef76",
+    "7d411b95"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0926"
+  },
+  {
+   "qid": "P-093-06-1f545a198b09",
    "prompt": "他非常有学问。",
-   "knowledge_ids": [
-    "V1675"
+   "options": [
+    "彼は知恵のある人だ。",
+    "何時間も海を眺めた。",
+    "彼は非常に学がある。",
+    "名前を書いてください。"
    ],
-   "hint": ""
+   "h": "e2759f64",
+   "oh": [
+    "f4551fc9",
+    "aead5bf6",
+    "e2759f64",
+    "68ad7811"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0927"
   },
   {
-   "id": "S0928",
-   "day": 93,
-   "direction": "ja-zh",
+   "qid": "P-093-07-c1f7a174a990",
    "prompt": "この額は税込みです。",
-   "knowledge_ids": [
-    "V1676"
+   "options": [
+    "恶魔也许会来哦。",
+    "手表出了毛病。",
+    "你以为我好骗吧。",
+    "这个金额含税。"
    ],
-   "hint": ""
+   "h": "bee29f31",
+   "oh": [
+    "e02eee05",
+    "e999283c",
+    "dbbf4ad2",
+    "bee29f31"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0928"
   },
   {
-   "id": "S0929",
-   "day": 93,
-   "direction": "ja-zh",
+   "qid": "P-093-08-fda20bdd82a3",
    "prompt": "私はすでに覚悟はできています。",
-   "knowledge_ids": [
-    "V1677"
+   "options": [
+    "那个计划正在推进。",
+    "从哪个机场出发？",
+    "我已经做好准备了。",
+    "威士忌和红茶很搭。"
    ],
-   "hint": ""
+   "h": "8f596921",
+   "oh": [
+    "9b6c1a61",
+    "df477bcd",
+    "8f596921",
+    "4d423da8"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0929"
   },
   {
-   "id": "S0930",
-   "day": 93,
-   "direction": "ja-zh",
+   "qid": "P-093-09-4b52b8c42cd6",
    "prompt": "これは遅いけど確実な方法だ。",
-   "knowledge_ids": [
-    "V1678"
+   "options": [
+    "我们不能依赖父母。",
+    "这方法虽慢但可靠。",
+    "他不知道受了多少苦。",
+    "我们学校有九个班。"
    ],
-   "hint": ""
+   "h": "1119a5f0",
+   "oh": [
+    "d8540292",
+    "1119a5f0",
+    "95b0f650",
+    "daa16234"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0930"
   }
  ],
  "quiz": [

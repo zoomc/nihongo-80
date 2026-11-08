@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V2554",
    "front": "ドライブ",
    "back": "开车游玩",
+   "kana": "ドライブ",
    "stage": "planned"
   },
   {
    "kid": "V2555",
    "front": "トラック",
    "back": "卡车",
+   "kana": "トラック",
    "stage": "planned"
   },
   {
    "kid": "V2556",
    "front": "ドラマ",
    "back": "电视剧；戏剧",
+   "kana": "ドラマ",
    "stage": "planned"
   },
   {
@@ -70,31 +73,36 @@
   {
    "kid": "K0593",
    "front": "盗",
-   "back": "偷；盗｜音 トウ",
+   "back": "偷；盗",
+   "kana": "トウ、ぬす.む、ぬす.み",
    "stage": "planned"
   },
   {
    "kid": "K0594",
    "front": "吸",
-   "back": "吸；吸入｜音 キュウ",
+   "back": "吸；吸入",
+   "kana": "キュウ、す.う",
    "stage": "planned"
   },
   {
    "kid": "V2512",
    "front": "当時",
    "back": "当时；那时",
+   "kana": "とうじ",
    "stage": "planned"
   },
   {
    "kid": "V2513",
    "front": "動詞",
    "back": "动词",
+   "kana": "どうし",
    "stage": "planned"
   },
   {
    "kid": "V2514",
    "front": "同時",
    "back": "同时",
+   "kana": "どうじ",
    "stage": "planned"
   },
   {
@@ -106,13 +114,15 @@
   {
    "kid": "K0585",
    "front": "暮",
-   "back": "傍晚；生活｜音 ボ",
+   "back": "傍晚；生活",
+   "kana": "ボ、く.れる、く.らす",
    "stage": "planned"
   },
   {
    "kid": "K0586",
    "front": "酒",
-   "back": "酒｜音 シュ",
+   "back": "酒",
+   "kana": "シュ、さけ、さか-",
    "stage": "planned"
   }
  ],
@@ -513,104 +523,204 @@
  ],
  "sentences": [
   {
-   "id": "S1441",
-   "day": 145,
-   "direction": "zh-ja",
+   "qid": "P-145-00-228ef33b5bf4",
    "prompt": "这条狗几乎什么都吃。",
-   "knowledge_ids": [
-    "V2593"
+   "options": [
+    "このホールには人が二千人入れる。",
+    "お尋ねしてもよろしいでしょうか。",
+    "この犬は何でもほとんど食べます。",
+    "システムが作動しない場合がある。"
    ],
-   "hint": ""
+   "h": "1ebdb937",
+   "oh": [
+    "cc13a7d1",
+    "1317d3c0",
+    "1ebdb937",
+    "e09812e6"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1441"
   },
   {
-   "id": "S1442",
-   "day": 145,
-   "direction": "zh-ja",
+   "qid": "P-145-01-5cbda7f41549",
    "prompt": "快一点的话，我想总能赶上。",
-   "knowledge_ids": [
-    "V2594"
+   "options": [
+    "この学校は男子よりも女子が多い。",
+    "トムは今にもここに来るはずです。",
+    "ニューススタンドで聞いて下さい。",
+    "急げば何とか間に合うと思います。"
    ],
-   "hint": ""
+   "h": "b6f3947a",
+   "oh": [
+    "53353c8",
+    "1c43f179",
+    "8d525137",
+    "b6f3947a"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1442"
   },
   {
-   "id": "S1443",
-   "day": 145,
-   "direction": "zh-ja",
+   "qid": "P-145-02-95b66da795a5",
    "prompt": "那条连衣裙很适合她。",
-   "knowledge_ids": [
-    "V2595"
+   "options": [
+    "あのドレスは彼女によく似合う。",
+    "主婦は節約に努めるべきである。",
+    "ジョンのことが新聞に出ていた。",
+    "彼は危険に気づいていなかった。"
    ],
-   "hint": ""
+   "h": "d2b39483",
+   "oh": [
+    "d2b39483",
+    "ce74be3a",
+    "83ca759e",
+    "29d30393"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1443"
   },
   {
-   "id": "S1444",
-   "day": 145,
-   "direction": "zh-ja",
+   "qid": "P-145-03-572b3d5da0fa",
    "prompt": "我不擅长数学。",
-   "knowledge_ids": [
-    "V2596"
+   "options": [
+    "予定を変えました。",
+    "彼は知恵のある人だ。",
+    "田中さんは先生です。",
+    "私は数学は苦手だ。"
    ],
-   "hint": ""
+   "h": "1dae0651",
+   "oh": [
+    "a0ad83b4",
+    "f4551fc9",
+    "8e0bbf88",
+    "1dae0651"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1444"
   },
   {
-   "id": "S1445",
-   "day": 145,
-   "direction": "zh-ja",
+   "qid": "P-145-04-0cc3d5c53f20",
    "prompt": "他们睡觉时由我握着方向盘。",
-   "knowledge_ids": [
-    "V2597"
+   "options": [
+    "この世界の教育にはがっかりしてしまう。",
+    "彼らが眠っている間私がハンドルを握った。",
+    "すぐ返事をしてもらいたいと思っています。",
+    "ここでお買い上げの品は無料で配達します。"
    ],
-   "hint": ""
+   "h": "de5b0b5b",
+   "oh": [
+    "6b522ac9",
+    "de5b0b5b",
+    "ffff8377",
+    "108078d3"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1445"
   },
   {
-   "id": "S1446",
-   "day": 145,
-   "direction": "zh-ja",
+   "qid": "P-145-05-6ae2327ce574",
    "prompt": "周六、周日、周一上午10点半到下午4点开放。",
-   "knowledge_ids": [
-    "V2598"
+   "options": [
+    "このお客様は田中さんが担当しています。",
+    "日本では、一般的にこの方法が使われます。",
+    "あのおいしいワインをなぜ飲まないんだい。",
+    "土日月の午前１０時半から午後４時まで開館。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1447",
-   "day": 145,
+   "h": "823a3d8f",
+   "oh": [
+    "29b7257a",
+    "42d7b96",
+    "5ebf955f",
+    "823a3d8f"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1446"
+  },
+  {
+   "qid": "P-145-06-61f5b0174724",
    "prompt": "日常运动对你有好处。",
-   "knowledge_ids": [
-    "V2599"
+   "options": [
+    "このホールには人が二千人入れる。",
+    "その小説は彼の名声を更に高めた。",
+    "その城は１６１０年に建てられた。",
+    "日常の運動はあなたのためになる。"
    ],
-   "hint": ""
+   "h": "c0a4136e",
+   "oh": [
+    "cc13a7d1",
+    "c4f79a06",
+    "6b28f1e6",
+    "c0a4136e"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1447"
   },
   {
-   "id": "S1448",
-   "day": 145,
-   "direction": "ja-zh",
+   "qid": "P-145-07-8eb360713b4c",
    "prompt": "銀行は日曜にはやってません。",
-   "knowledge_ids": [
-    "V2600"
+   "options": [
+    "银行星期天不营业。",
+    "那条狗不会咬人的。",
+    "新闻每小时播一次。",
+    "在美国人们说英语。"
    ],
-   "hint": ""
+   "h": "9bf804de",
+   "oh": [
+    "9bf804de",
+    "2603e65d",
+    "f70f14e",
+    "e95a2cb0"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1448"
   },
   {
-   "id": "S1449",
-   "day": 145,
-   "direction": "ja-zh",
+   "qid": "P-145-08-08b5deff3b79",
    "prompt": "この部屋はあまり日光が当たらない。",
-   "knowledge_ids": [
-    "V2601"
+   "options": [
+    "这个房间晒不到多少太阳。",
+    "他们的意见和我的不同。",
+    "游客数量近年大幅增加。",
+    "他继承了父亲的一大片土地。"
    ],
-   "hint": ""
+   "h": "ba8e059c",
+   "oh": [
+    "ba8e059c",
+    "1d38ae3",
+    "45b99f8d",
+    "dc656b24"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1449"
   },
   {
-   "id": "S1450",
-   "day": 145,
-   "direction": "ja-zh",
+   "qid": "P-145-09-8ea0a77c1a0a",
    "prompt": "彼女はにっこり笑ってそういった。",
-   "knowledge_ids": [
-    "V2602"
+   "options": [
+    "我和大臣本人谈过了。",
+    "感到危险请立即避难。",
+    "上个月几乎没下雨。",
+    "她笑眯眯地这样说了。"
    ],
-   "hint": ""
+   "h": "f4b6ae3d",
+   "oh": [
+    "e4acb359",
+    "997ca2a4",
+    "42b374eb",
+    "f4b6ae3d"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1450"
   }
  ],
  "quiz": [

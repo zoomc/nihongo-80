@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V1606",
    "front": "大家",
    "back": "房东",
+   "kana": "おおや",
    "stage": "planned"
   },
   {
    "kid": "V1607",
    "front": "丘",
    "back": "小山；丘陵",
+   "kana": "おか",
    "stage": "planned"
   },
   {
    "kid": "V1608",
    "front": "沖",
    "back": "海上；洋面",
+   "kana": "おき",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0381",
    "front": "争",
-   "back": "争夺；争吵｜音 ソウ",
+   "back": "争夺；争吵",
+   "kana": "ソウ、あらそ.う、いか.でか",
    "stage": "planned"
   },
   {
    "kid": "K0382",
    "front": "位",
-   "back": "位置；地位；大约｜音 イ",
+   "back": "位置；地位；大约",
+   "kana": "イ、くらい、ぐらい",
    "stage": "planned"
   },
   {
    "kid": "V1573",
    "front": "売れる",
    "back": "畅销；卖出",
+   "kana": "うれる",
    "stage": "planned"
   },
   {
    "kid": "V1574",
    "front": "上",
    "back": "上面；表面",
+   "kana": "うわ",
    "stage": "planned"
   },
   {
    "kid": "V1575",
    "front": "噂",
    "back": "传闻；谣言",
+   "kana": "うわさ",
    "stage": "planned"
   },
   {
@@ -472,104 +480,204 @@
  ],
  "sentences": [
   {
-   "id": "S0911",
-   "day": 92,
-   "direction": "zh-ja",
+   "qid": "P-092-00-4ed0100fe92d",
    "prompt": "这是一次非常重要的聚会。",
-   "knowledge_ids": [
-    "V1655"
+   "options": [
+    "これはとても大切な会合だ。",
+    "全国民が平和を望んでいる。",
+    "イチゴはジャムに作られる。",
+    "喜んで質問に答えましょう。"
    ],
-   "hint": ""
+   "h": "b94a6327",
+   "oh": [
+    "b94a6327",
+    "ad056ed6",
+    "fc94d29",
+    "b449f1b9"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0911"
   },
   {
-   "id": "S0912",
-   "day": 92,
-   "direction": "zh-ja",
+   "qid": "P-092-01-ebc9c2dab5be",
    "prompt": "英语在外交和旅游业中很有用。",
-   "knowledge_ids": [
-    "V1656"
+   "options": [
+    "その時計はスイスで製造されている。",
+    "一日で５００ドルつかってしまった。",
+    "大使はその任務に対して責任がある。",
+    "英語は外交や観光事業に有効である。"
    ],
-   "hint": ""
+   "h": "647402b6",
+   "oh": [
+    "9593021b",
+    "3fe654f9",
+    "1f9886e5",
+    "647402b6"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0912"
   },
   {
-   "id": "S0913",
-   "day": 92,
-   "direction": "zh-ja",
+   "qid": "P-092-02-9a238f696f71",
    "prompt": "因天气原因，比赛可能推迟开始。",
-   "knowledge_ids": [
-    "V1657"
+   "options": [
+    "天候のためレースの開始は遅れるだろう。",
+    "彼は階段を一度に三段ずつかけあがった。",
+    "メアリーは私にアメリカの人形をくれた。",
+    "私はアメリカの高校生と文通をしている。"
    ],
-   "hint": ""
+   "h": "3eec5598",
+   "oh": [
+    "3eec5598",
+    "65809266",
+    "9316f6d5",
+    "48cfd48e"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0913"
   },
   {
-   "id": "S0914",
-   "day": 92,
-   "direction": "zh-ja",
+   "qid": "P-092-03-5f41ff2a2d39",
    "prompt": "那可以有两种理解。",
-   "knowledge_ids": [
-    "V1658"
+   "options": [
+    "子供たちは裸で泳いでいた。",
+    "女性の割合は半分以上です。",
+    "それは２通りに解釈できる。",
+    "その習慣は中国で始まった。"
    ],
-   "hint": ""
+   "h": "46bbbffc",
+   "oh": [
+    "b9146d41",
+    "d31fa855",
+    "46bbbffc",
+    "bd186afc"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0914"
   },
   {
-   "id": "S0915",
-   "day": 92,
-   "direction": "zh-ja",
+   "qid": "P-092-04-3a1ac28e006c",
    "prompt": "我开着暖气就出门了。",
-   "knowledge_ids": [
-    "V1659"
+   "options": [
+    "このページをコピーして下さい。",
+    "その八百屋は客にとても親切だ。",
+    "いつ旅行においでになりますか。",
+    "ヒーターをつけたまま外出した。"
    ],
-   "hint": ""
+   "h": "be83661e",
+   "oh": [
+    "fd6444e6",
+    "4586f317",
+    "a1751ea1",
+    "be83661e"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0915"
   },
   {
-   "id": "S0916",
-   "day": 92,
-   "direction": "zh-ja",
+   "qid": "P-092-05-fcdb7804e34b",
    "prompt": "还有很大的改善余地。",
-   "knowledge_ids": [
-    "V1660"
+   "options": [
+    "改善の余地は大いに残されている。",
+    "おひる頃やっと太陽が顔を出した。",
+    "アリは夏じゅうせっせとはたらく。",
+    "そのコーヒーはいいにおいがする。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0917",
-   "day": 92,
+   "h": "ffc10e3f",
+   "oh": [
+    "ffc10e3f",
+    "c5040bc1",
+    "76c21659",
+    "eff509fd"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0916"
+  },
+  {
+   "qid": "P-092-06-2b8f09f8615e",
    "prompt": "这房子住起来很舒适。",
-   "knowledge_ids": [
-    "V1661"
+   "options": [
+    "この家は住むのにとても快適だ。",
+    "彼には思想の理想がかけている。",
+    "先生から資料をいただきました。",
+    "この事件に手を貸してください。"
    ],
-   "hint": ""
+   "h": "be849b07",
+   "oh": [
+    "be849b07",
+    "74403c81",
+    "22261966",
+    "3a859cc4"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0917"
   },
   {
-   "id": "S0918",
-   "day": 92,
-   "direction": "ja-zh",
+   "qid": "P-092-07-e84a654ebe3c",
    "prompt": "ナンシーは犬を飼いたがっていますか。",
-   "knowledge_ids": [
-    "V1662"
+   "options": [
+    "把左手举起来。",
+    "南希想养狗吗？",
+    "他责怪她撒谎。",
+    "七大洋是什么？"
    ],
-   "hint": ""
+   "h": "a8401a0f",
+   "oh": [
+    "1efc45f6",
+    "a8401a0f",
+    "6ed649fb",
+    "e2628862"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0918"
   },
   {
-   "id": "S0919",
-   "day": 92,
-   "direction": "ja-zh",
+   "qid": "P-092-08-39fa1593d8a9",
    "prompt": "銀行に行けばその５０ドルの小切手を現金に換えてくれる。",
-   "knowledge_ids": [
-    "V1663"
+   "options": [
+    "杰克对我搞了个卑鄙的恶作剧。",
+    "去银行就能把那张五十美元支票换成现金。",
+    "那个男人开始和妻子交往了。",
+    "少年把自己的名字刻在树上。"
    ],
-   "hint": ""
+   "h": "af2a60dd",
+   "oh": [
+    "1eacb1bd",
+    "af2a60dd",
+    "b8529c9b",
+    "a859b819"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0919"
   },
   {
-   "id": "S0920",
-   "day": 92,
-   "direction": "ja-zh",
+   "qid": "P-092-09-deb9bafd0906",
    "prompt": "お花の水を替えましょう。",
-   "knowledge_ids": [
-    "V1664"
+   "options": [
+    "我来给花换水吧。",
+    "不必用现金支付。",
+    "恶魔也许会来哦。",
+    "你以为我好骗吧。"
    ],
-   "hint": ""
+   "h": "c570507a",
+   "oh": [
+    "c570507a",
+    "8eb5edfd",
+    "e02eee05",
+    "dbbf4ad2"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0920"
   }
  ],
  "quiz": [

@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1587",
    "front": "延期",
    "back": "延期",
+   "kana": "えんき",
    "stage": "planned"
   },
   {
    "kid": "V1588",
    "front": "演技",
    "back": "演技；表演",
+   "kana": "えんぎ",
    "stage": "planned"
   },
   {
    "kid": "V1589",
    "front": "援助",
    "back": "援助",
+   "kana": "えんじょ",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0377",
    "front": "容",
-   "back": "容纳；内容；容貌｜音 ヨウ",
+   "back": "容纳；内容；容貌",
+   "kana": "ヨウ、い.れる",
    "stage": "planned"
   },
   {
    "kid": "K0378",
    "front": "必",
-   "back": "必定；一定｜音 ヒツ",
+   "back": "必定；一定",
+   "kana": "ヒツ、かなら.ず",
    "stage": "planned"
   },
   {
    "kid": "V1554",
    "front": "引用",
    "back": "引用",
+   "kana": "いんよう",
    "stage": "planned"
   },
   {
    "kid": "V1555",
    "front": "ウイスキー",
    "back": "威士忌",
+   "kana": "ウイスキー",
    "stage": "planned"
   },
   {
    "kid": "V1556",
    "front": "うがい",
    "back": "漱口",
+   "kana": "うがい",
    "stage": "planned"
   },
   {
@@ -548,104 +556,204 @@
  ],
  "sentences": [
   {
-   "id": "S0901",
-   "day": 91,
-   "direction": "zh-ja",
+   "qid": "P-091-00-9f45bea84d5c",
    "prompt": "大约值多少钱？",
-   "knowledge_ids": [
-    "V1635"
+   "options": [
+    "あなたの家族はきっと親切でしょう。",
+    "およそどれくらいの価値がありますか。",
+    "大学時代に私は英字新聞をとっていた。",
+    "トムはジャックよりも１０ポンド重い。"
    ],
-   "hint": ""
+   "h": "a31880dc",
+   "oh": [
+    "4f1d4d0e",
+    "a31880dc",
+    "c1950d86",
+    "c1811a4a"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0901"
   },
   {
-   "id": "S0902",
-   "day": 91,
-   "direction": "zh-ja",
+   "qid": "P-091-01-9a9f2a4b7084",
    "prompt": "我做梦也没想过要加害于你。",
-   "knowledge_ids": [
-    "V1636"
+   "options": [
+    "私たちは暗くならないうちにテントを張った。",
+    "ところが実はどうすることもできないのです。",
+    "あのおいしいワインをなぜ飲まないんだい。",
+    "あなたに被害を及ぼそうなどとは夢にも思いませんでした。"
    ],
-   "hint": ""
+   "h": "c8c2914d",
+   "oh": [
+    "f085ee9a",
+    "34a8c7a1",
+    "5ebf955f",
+    "c8c2914d"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0902"
   },
   {
-   "id": "S0903",
-   "day": 91,
-   "direction": "zh-ja",
+   "qid": "P-091-02-138d4cbadc02",
    "prompt": "托您的福，我过得很好。",
-   "knowledge_ids": [
-    "V1637"
+   "options": [
+    "このイヤホンは壊れています。",
+    "おかげで元気にしております。",
+    "ギターをひくのはおもしろい。",
+    "なんという馬鹿なことだろう。"
    ],
-   "hint": ""
+   "h": "7590c08e",
+   "oh": [
+    "cae4bbd8",
+    "7590c08e",
+    "f7aedaae",
+    "c32a4fad"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0903"
   },
   {
-   "id": "S0904",
-   "day": 91,
-   "direction": "zh-ja",
+   "qid": "P-091-03-964a264a28ee",
    "prompt": "请在那个红绿灯前让我下车。",
-   "knowledge_ids": [
-    "V1638"
+   "options": [
+    "あの信号の手前で降ろしてください。",
+    "ぼくは少々君に腹が立っているんだ。",
+    "あなたの家族はきっと親切でしょう。",
+    "メアリーにはつい甘くなってしまう。"
    ],
-   "hint": ""
+   "h": "4e4f3267",
+   "oh": [
+    "4e4f3267",
+    "6ef7715c",
+    "4f1d4d0e",
+    "ab2b0013"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0904"
   },
   {
-   "id": "S0905",
-   "day": 91,
-   "direction": "zh-ja",
+   "qid": "P-091-04-e445ab2d82c5",
    "prompt": "你这是恩将仇报啊。",
-   "knowledge_ids": [
-    "V1639"
+   "options": [
+    "この本の著者は誰ですか。",
+    "まだ時間はたっぷりある。",
+    "お前は恩を仇で返したな。",
+    "まもなく雨が降りそうだ。"
    ],
-   "hint": ""
+   "h": "975e3da6",
+   "oh": [
+    "7d5d25ac",
+    "9b3b11e5",
+    "975e3da6",
+    "ff08c000"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0905"
   },
   {
-   "id": "S0906",
-   "day": 91,
-   "direction": "zh-ja",
+   "qid": "P-091-05-a3e1612a3ac1",
    "prompt": "会发声的词典已不再是梦想。",
-   "knowledge_ids": [
-    "V1640"
+   "options": [
+    "兄はアパートをさがしています。",
+    "彼はよく友人をいじめたものだ。",
+    "これは北海道からのお土産です。",
+    "音の出る辞書はもはや夢でない。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0907",
-   "day": 91,
+   "h": "ef3d470c",
+   "oh": [
+    "7f656d90",
+    "25027c50",
+    "7e2c9ed2",
+    "ef3d470c"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0906"
+  },
+  {
+   "qid": "P-091-06-c639259565c8",
    "prompt": "岛上的气候非常温暖。",
-   "knowledge_ids": [
-    "V1641"
+   "options": [
+    "食事の後に、薬を飲みます。",
+    "島の天候はとても温暖です。",
+    "私は最低２マイルは歩ける。",
+    "船は今夜赤道を越すだろう。"
    ],
-   "hint": ""
+   "h": "5dc2523b",
+   "oh": [
+    "eabdaa51",
+    "5dc2523b",
+    "133a9034",
+    "e22b650a"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0907"
   },
   {
-   "id": "S0908",
-   "day": 91,
-   "direction": "ja-zh",
+   "qid": "P-091-07-7948cb8c2a5d",
    "prompt": "物質は温度によって形を変える。",
-   "knowledge_ids": [
-    "V1642"
+   "options": [
+    "物质会随温度改变形态。",
+    "这条法律适用于所有人。",
+    "委员会由八名成员组成。",
+    "约翰继承了一大笔财产。"
    ],
-   "hint": ""
+   "h": "762f222a",
+   "oh": [
+    "762f222a",
+    "64724262",
+    "27f8744e",
+    "c5e86987"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0908"
   },
   {
-   "id": "S0909",
-   "day": 91,
-   "direction": "ja-zh",
+   "qid": "P-091-08-197b01d475e3",
    "prompt": "この試験は辞書持ち込み可です。",
-   "knowledge_ids": [
-    "V1643"
+   "options": [
+    "这场考试可以带词典。",
+    "工作过度对身体不好。",
+    "他们相信地球是平的。",
+    "那座博物馆值得一去。"
    ],
-   "hint": ""
+   "h": "7cd75105",
+   "oh": [
+    "7cd75105",
+    "a1b9a686",
+    "a51300e1",
+    "c75e0c3a"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0909"
   },
   {
-   "id": "S0910",
-   "day": 91,
-   "direction": "ja-zh",
+   "qid": "P-091-09-d2504be6fe06",
    "prompt": "１０課から始めましょう。",
-   "knowledge_ids": [
-    "V1644"
+   "options": [
+    "鞋是用皮革做的。",
+    "你以为我好骗吧。",
+    "任何事物都有极限。",
+    "从第十课开始吧。"
    ],
-   "hint": ""
+   "h": "7c4687ec",
+   "oh": [
+    "2c2dd42c",
+    "dbbf4ad2",
+    "8a1a0d7c",
+    "7c4687ec"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0910"
   }
  ],
  "quiz": [

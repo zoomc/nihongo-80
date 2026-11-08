@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1861",
    "front": "クリーム",
    "back": "奶油",
+   "kana": "クリーム",
    "stage": "planned"
   },
   {
    "kid": "V1862",
    "front": "繰り返す",
    "back": "重复",
+   "kana": "くりかえす",
    "stage": "planned"
   },
   {
    "kid": "V1863",
    "front": "クリスマス",
    "back": "圣诞节",
+   "kana": "クリスマス",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0441",
    "front": "渡",
-   "back": "渡过；交付｜音 ト",
+   "back": "渡过；交付",
+   "kana": "ト、わた.る、-わた.る、わた.す",
    "stage": "planned"
   },
   {
    "kid": "K0442",
    "front": "失",
-   "back": "失去；过失｜音 シツ",
+   "back": "失去；过失",
+   "kana": "シツ、うしな.う、う.せる",
    "stage": "planned"
   },
   {
    "kid": "V1823",
    "front": "切れる",
    "back": "断；用完",
+   "kana": "きれる",
    "stage": "planned"
   },
   {
    "kid": "V1824",
    "front": "記録",
    "back": "记录",
+   "kana": "きろく",
    "stage": "planned"
   },
   {
    "kid": "V1825",
    "front": "議論",
    "back": "讨论；争论",
+   "kana": "ぎろん",
    "stage": "planned"
   },
   {
@@ -532,104 +540,204 @@
  ],
  "sentences": [
   {
-   "id": "S1061",
-   "day": 107,
-   "direction": "zh-ja",
+   "qid": "P-107-00-97fb0e401f99",
    "prompt": "生物学家集中观察那个现象。",
-   "knowledge_ids": [
-    "V1913"
+   "options": [
+    "この企業は新しい製品を作っています。",
+    "お金を使うも貯めるも自由にしなさい。",
+    "生物学者はその現象の観察に集中した。",
+    "ドアのそばのかぎに上着をかけなさい。"
    ],
-   "hint": ""
+   "h": "20b3b4dd",
+   "oh": [
+    "82d96402",
+    "d62fbdda",
+    "20b3b4dd",
+    "19352d64"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1061"
   },
   {
-   "id": "S1062",
-   "day": 107,
-   "direction": "zh-ja",
+   "qid": "P-107-01-b870d3e75d13",
    "prompt": "他对现状大为感叹。",
-   "knowledge_ids": [
-    "V1914"
+   "options": [
+    "私はもう彼を信用しない。",
+    "ありがとうございます。",
+    "彼は現状を大いに嘆いた。",
+    "あの山の頂上は平らだ。"
    ],
-   "hint": ""
+   "h": "e568ca6d",
+   "oh": [
+    "af48f659",
+    "4ffb347a",
+    "e568ca6d",
+    "31771ee1"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1062"
   },
   {
-   "id": "S1063",
-   "day": 107,
-   "direction": "zh-ja",
+   "qid": "P-107-02-802d2f032616",
    "prompt": "那笔钱被用于体育馆的建设。",
-   "knowledge_ids": [
-    "V1915"
+   "options": [
+    "これからも人生を楽しんでください。",
+    "その金は体育館の建設に当てられた。",
+    "あの二人はどうもできているらしい。",
+    "これを青いのと取り替えてください。"
    ],
-   "hint": ""
+   "h": "6527799c",
+   "oh": [
+    "36b09d73",
+    "6527799c",
+    "3402efb8",
+    "6d5148a5"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1063"
   },
   {
-   "id": "S1064",
-   "day": 107,
-   "direction": "zh-ja",
+   "qid": "P-107-03-0d099d2ec375",
    "prompt": "我承认我不太喜欢现代音乐。",
-   "knowledge_ids": [
-    "V1916"
+   "options": [
+    "スープを入れるくぼんだお皿がありますか。",
+    "古き良き時代は去って、二度ともどってこない。",
+    "奥さんがどこかに出かけているらしいから。",
+    "私は現代の音楽はあまり好きではない事を認めます。"
    ],
-   "hint": ""
+   "h": "6ca4aead",
+   "oh": [
+    "610e3422",
+    "45662e4e",
+    "b6522b85",
+    "6ca4aead"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1064"
   },
   {
-   "id": "S1065",
-   "day": 107,
-   "direction": "zh-ja",
+   "qid": "P-107-04-b8b37d2010dd",
    "prompt": "他们开始盖房子了。",
-   "knowledge_ids": [
-    "V1917"
+   "options": [
+    "彼らは家の建築にとりかかった。",
+    "どちらの新聞社にお勤めですか。",
+    "その公演は万雷の拍手を受けた。",
+    "その仕事以外ならなんでもやる。"
    ],
-   "hint": ""
+   "h": "9605c7d5",
+   "oh": [
+    "9605c7d5",
+    "d5ea31b",
+    "4c0102c4",
+    "b9ada927"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1065"
   },
   {
-   "id": "S1066",
-   "day": 107,
-   "direction": "zh-ja",
+   "qid": "P-107-05-eb9d692d1d46",
    "prompt": "它大概在哪儿，我心里有点数。",
-   "knowledge_ids": [
-    "V1918"
+   "options": [
+    "あなたはオーバーなしですますつもりですか。",
+    "ギャンブルで味を占めるとなかなか止められない。",
+    "これは父が私に残してくれたものの一つです。",
+    "それがどこにあるのか、およその見当はついている。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1067",
-   "day": 107,
+   "h": "6aeaf843",
+   "oh": [
+    "c6ed9754",
+    "b52357c0",
+    "67d2fba1",
+    "6aeaf843"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1066"
+  },
+  {
+   "qid": "P-107-06-826b9799d621",
    "prompt": "警察很快就会到现场。",
-   "knowledge_ids": [
-    "V1919"
+   "options": [
+    "これは兄です。かっこいいですね。",
+    "みんなには優しく話してください。",
+    "あなたの見解は私とは正反対です。",
+    "警察はまもなく現場に着くだろう。"
    ],
-   "hint": ""
+   "h": "ea9ab69",
+   "oh": [
+    "d769ff77",
+    "125e9885",
+    "65661673",
+    "ea9ab69"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1067"
   },
   {
-   "id": "S1068",
-   "day": 107,
-   "direction": "ja-zh",
+   "qid": "P-107-07-ef03ec4ae09a",
    "prompt": "平等は憲法で守られている。",
-   "knowledge_ids": [
-    "V1920"
+   "options": [
+    "我们玩了好几种游戏。",
+    "你们国家说什么语言？",
+    "平等受到宪法的保障。",
+    "他们相信地球是平的。"
    ],
-   "hint": ""
+   "h": "7a8f657a",
+   "oh": [
+    "3b0486e",
+    "72ab8ea4",
+    "7a8f657a",
+    "a51300e1"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1068"
   },
   {
-   "id": "S1069",
-   "day": 107,
-   "direction": "ja-zh",
+   "qid": "P-107-08-58e40a7c22dd",
    "prompt": "あなたにはそこに行く権利がない。",
-   "knowledge_ids": [
-    "V1921"
+   "options": [
+    "我心里有个好主意。",
+    "下下个月是十二月。",
+    "上班时不要看漫画。",
+    "你没有权利去那里。"
    ],
-   "hint": ""
+   "h": "2e3620c5",
+   "oh": [
+    "1e6c1fa5",
+    "3d2240f5",
+    "e4763edb",
+    "2e3620c5"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1069"
   },
   {
-   "id": "S1070",
-   "day": 107,
-   "direction": "ja-zh",
+   "qid": "P-107-09-9842a7bd9cf4",
    "prompt": "メキシコではなに語を話すのですか。",
-   "knowledge_ids": [
-    "V1922"
+   "options": [
+    "墨西哥人说什么语言？",
+    "饭在家吃还是在外吃？",
+    "明天我一整天都有空。",
+    "父亲去世已经三年了。"
    ],
-   "hint": ""
+   "h": "f09cbbd1",
+   "oh": [
+    "f09cbbd1",
+    "7a828542",
+    "bfabc530",
+    "2fe86ae"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1070"
   }
  ],
  "quiz": [

@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0012",
    "front": "四",
    "back": "四（し／よん）",
+   "kana": "よん",
    "stage": "planned"
   },
   {
    "kid": "V0013",
    "front": "五",
    "back": "五",
+   "kana": "ご",
    "stage": "planned"
   },
   {
    "kid": "V0014",
    "front": "六",
    "back": "六",
+   "kana": "ろく",
    "stage": "planned"
   },
   {
@@ -71,13 +74,15 @@
   {
    "kid": "K0006",
    "front": "金",
-   "back": "金；钱；星期五｜音 キン、コン",
+   "back": "金；钱；星期五",
+   "kana": "キン、コン、かね",
    "stage": "planned"
   },
   {
    "kid": "K0007",
    "front": "土",
-   "back": "土；星期六｜音 ド、ト",
+   "back": "土；星期六",
+   "kana": "ド、ト、つち",
    "stage": "planned"
   }
  ],
@@ -362,104 +367,204 @@
  ],
  "sentences": [
   {
-   "id": "S0021",
-   "day": 3,
-   "direction": "zh-ja",
+   "qid": "P-003-00-eb25916c2f26",
    "prompt": "这是什么？",
-   "knowledge_ids": [
-    "V0019"
+   "options": [
+    "火災の理由は何か。",
+    "これはいくらですか。",
+    "これは何ですか。",
+    "三時に会います。"
    ],
-   "hint": ""
+   "h": "c31f804f",
+   "oh": [
+    "bba4dfdd",
+    "6506aa3c",
+    "c31f804f",
+    "56cc7c4e"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0021"
   },
   {
-   "id": "S0022",
-   "day": 3,
-   "direction": "zh-ja",
+   "qid": "P-003-01-addbf5a87713",
    "prompt": "这个多少钱？",
-   "knowledge_ids": [
-    "V0020"
+   "options": [
+    "天気予報が当たったよ。",
+    "この魚は毒がない。",
+    "ただの風邪でしょう。",
+    "これはいくらですか。"
    ],
-   "hint": ""
+   "h": "6506aa3c",
+   "oh": [
+    "af55e21c",
+    "14e4bcc7",
+    "8dd6c2d9",
+    "6506aa3c"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0022"
   },
   {
-   "id": "S0023",
-   "day": 3,
-   "direction": "zh-ja",
+   "qid": "P-003-02-5877be00cb34",
    "prompt": "一百日元。",
-   "knowledge_ids": [
-    "V0021"
+   "options": [
+    "百円です。",
+    "それは無理な注文だ。",
+    "頭が痛いです。",
+    "今、何時ですか。"
    ],
-   "hint": ""
+   "h": "98582afd",
+   "oh": [
+    "98582afd",
+    "3097222f",
+    "e7640aa7",
+    "ed26deaa"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0023"
   },
   {
-   "id": "S0024",
-   "day": 3,
-   "direction": "zh-ja",
+   "qid": "P-003-03-25f948bef1e4",
    "prompt": "现在几点？",
-   "knowledge_ids": [
-    "V0022"
+   "options": [
+    "彼は知恵のある人だ。",
+    "雨が降っています。",
+    "今、何時ですか。",
+    "まもなく冬だ。"
    ],
-   "hint": ""
+   "h": "ed26deaa",
+   "oh": [
+    "f4551fc9",
+    "db98fcac",
+    "ed26deaa",
+    "6dfcdc84"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0024"
   },
   {
-   "id": "S0025",
-   "day": 3,
-   "direction": "zh-ja",
+   "qid": "P-003-04-cf93ba2cdba1",
    "prompt": "今天是周一。",
-   "knowledge_ids": [
-    "V0023"
+   "options": [
+    "部屋の中にいます。",
+    "弟に本を貸します。",
+    "駅で友達を待ちます。",
+    "今日は月曜日です。"
    ],
-   "hint": ""
+   "h": "6a0156fe",
+   "oh": [
+    "3d1f2b43",
+    "e1a08215",
+    "2ae190df",
+    "6a0156fe"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0025"
   },
   {
-   "id": "S0026",
-   "day": 3,
-   "direction": "zh-ja",
+   "qid": "P-003-05-7c7dfa1ebc95",
    "prompt": "明天去学校。",
-   "knowledge_ids": [
-    "V0024"
+   "options": [
+    "明日、学校へ行きます。",
+    "職場の人と相談します。",
+    "こんにちは、元気ですか。",
+    "この本の著者は誰ですか。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0027",
-   "day": 3,
+   "h": "b7b27cd6",
+   "oh": [
+    "b7b27cd6",
+    "30a5fa3d",
+    "21e6b5c4",
+    "7d5d25ac"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0026"
+  },
+  {
+   "qid": "P-003-06-718d25db5007",
    "prompt": "昨天是周日。",
-   "knowledge_ids": [
-    "V0025"
+   "options": [
+    "天気予報が当たったよ。",
+    "昨日は日曜日でした。",
+    "この靴下はちぐはぐだ。",
+    "それはルール違反です。"
    ],
-   "hint": ""
+   "h": "65a7b1d2",
+   "oh": [
+    "af55e21c",
+    "65a7b1d2",
+    "6db284b2",
+    "7ca8dfa1"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0027"
   },
   {
-   "id": "S0028",
-   "day": 3,
-   "direction": "ja-zh",
+   "qid": "P-003-07-4e20e25c66a5",
    "prompt": "朝ご飯を食べます。",
-   "knowledge_ids": [
-    "V0026"
+   "options": [
+    "看电影。",
+    "吃早饭。",
+    "她很精神。",
+    "没时间。"
    ],
-   "hint": ""
+   "h": "c30f1232",
+   "oh": [
+    "9126c622",
+    "c30f1232",
+    "cd3f1586",
+    "eaced404"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0028"
   },
   {
-   "id": "S0029",
-   "day": 3,
-   "direction": "ja-zh",
+   "qid": "P-003-08-669953229340",
    "prompt": "時間がありません。",
-   "knowledge_ids": [
-    "V0027"
+   "options": [
+    "没时间。",
+    "和朋友看电影。",
+    "包放在哪里好？",
+    "一周有七天。"
    ],
-   "hint": ""
+   "h": "eaced404",
+   "oh": [
+    "eaced404",
+    "1d346a36",
+    "4a4df5b0",
+    "a77b16e2"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0029"
   },
   {
-   "id": "S0030",
-   "day": 3,
-   "direction": "ja-zh",
+   "qid": "P-003-09-fc21051de35e",
    "prompt": "私も学生です。",
-   "knowledge_ids": [
-    "G0004"
+   "options": [
+    "七点起床。",
+    "这水真舒服啊。",
+    "我也是学生。",
+    "他生于19世纪。"
    ],
-   "hint": "N も"
+   "h": "4b7daa11",
+   "oh": [
+    "2fdab03e",
+    "98bf654",
+    "4b7daa11",
+    "122eb4a0"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0030"
   }
  ],
  "quiz": [

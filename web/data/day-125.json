@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V2163",
    "front": "上等",
    "back": "上等；高档",
+   "kana": "じょうとう",
    "stage": "planned"
   },
   {
    "kid": "V2164",
    "front": "衝突",
    "back": "冲突；碰撞",
+   "kana": "しょうとつ",
    "stage": "planned"
   },
   {
    "kid": "V2165",
    "front": "商人",
    "back": "商人",
+   "kana": "しょうにん",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0513",
    "front": "込",
-   "back": "进入；拥挤｜音 无",
+   "back": "进入；拥挤",
+   "kana": "-こ.む、こ.む、こ.み、-こ.み、こ.める",
    "stage": "planned"
   },
   {
    "kid": "K0514",
    "front": "顔",
-   "back": "脸；面容｜音 ガン",
+   "back": "脸；面容",
+   "kana": "ガン、かお",
    "stage": "planned"
   },
   {
    "kid": "V2130",
    "front": "主義",
    "back": "主义；原则",
+   "kana": "しゅぎ",
    "stage": "planned"
   },
   {
    "kid": "V2131",
    "front": "宿泊",
    "back": "住宿",
+   "kana": "しゅくはく",
    "stage": "planned"
   },
   {
    "kid": "V2132",
    "front": "手術",
    "back": "手术",
+   "kana": "しゅじゅつ",
    "stage": "planned"
   },
   {
@@ -531,104 +539,204 @@
  ],
  "sentences": [
   {
-   "id": "S1241",
-   "day": 125,
-   "direction": "zh-ja",
+   "qid": "P-125-00-78ca5c6a6b04",
    "prompt": "在东京已经很少见到穿和服的男性了。",
-   "knowledge_ids": [
-    "V2225"
+   "options": [
+    "和服姿の男性は東京ではもうあまり見かけない。",
+    "アーア、絶対うまくいくと思ったのになあ。",
+    "私のE-mailアドレスが変わりました。",
+    "私たちは会合を延期しなければならなかった。"
    ],
-   "hint": ""
+   "h": "cfe5b446",
+   "oh": [
+    "cfe5b446",
+    "2f237702",
+    "6c61f1e5",
+    "3628636"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1241"
   },
   {
-   "id": "S1242",
-   "day": 125,
-   "direction": "zh-ja",
+   "qid": "P-125-01-788cca7bca6f",
    "prompt": "你每年去滑雪几次？",
-   "knowledge_ids": [
-    "V2226"
+   "options": [
+    "その教会は１１７３年までさかのぼる。",
+    "中国の音楽はどうも僕の肌に合わない。",
+    "あなたは家族の事を考えるべきです。",
+    "あなたは毎年何回スキーに行きますか。"
    ],
-   "hint": ""
+   "h": "5789b87a",
+   "oh": [
+    "77ff2e4a",
+    "62bcc9c",
+    "13384023",
+    "5789b87a"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1242"
   },
   {
-   "id": "S1243",
-   "day": 125,
-   "direction": "zh-ja",
+   "qid": "P-125-02-95864a6cc168",
    "prompt": "那只狗救了少女的命。",
-   "knowledge_ids": [
-    "V2227"
+   "options": [
+    "どの科目が一番好きですか。",
+    "喜んで質問に答えましょう。",
+    "汚染が地球を傷つけている。",
+    "その犬は少女の命を救った。"
    ],
-   "hint": ""
+   "h": "d705b481",
+   "oh": [
+    "8bb3e7ce",
+    "b449f1b9",
+    "841a8158",
+    "d705b481"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1243"
   },
   {
-   "id": "S1244",
-   "day": 125,
-   "direction": "zh-ja",
+   "qid": "P-125-03-7ed8ed79078d",
    "prompt": "她是当代最优秀的画家之一。",
-   "knowledge_ids": [
-    "V2228"
+   "options": [
+    "すぐ返事をしてもらいたいと思っています。",
+    "あなたはオーバーなしですますつもりですか。",
+    "このメールを営業部に転送してください。",
+    "彼女は現代の最も優れた画家の一人である。"
    ],
-   "hint": ""
+   "h": "ee752b0",
+   "oh": [
+    "ffff8377",
+    "c6ed9754",
+    "ad45da64",
+    "ee752b0"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1244"
   },
   {
-   "id": "S1245",
-   "day": 125,
-   "direction": "zh-ja",
+   "qid": "P-125-04-b2b44f9d25c8",
    "prompt": "天很冷，可以滑冰了。",
-   "knowledge_ids": [
-    "V2229"
+   "options": [
+    "とても寒いからスケートが出来るよ。",
+    "さあ、あなたの体温を計りましょう。",
+    "コーヒーは舌が焼けるほど熱かった。",
+    "どちらのかばんがあなたの物ですか。"
    ],
-   "hint": ""
+   "h": "9a3d2a27",
+   "oh": [
+    "9a3d2a27",
+    "f1eef958",
+    "80f2f031",
+    "1da36d41"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1245"
   },
   {
-   "id": "S1246",
-   "day": 125,
-   "direction": "zh-ja",
+   "qid": "P-125-05-cd90f26ad8fe",
    "prompt": "厨师一点也没有偷工减料。",
-   "knowledge_ids": [
-    "V2230"
+   "options": [
+    "それは翼の全長が約４インチある。",
+    "このソファーは場所を取りすぎる。",
+    "コックさんは少しもかけていない。",
+    "ビルはその罪を犯していなかった。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1247",
-   "day": 125,
+   "h": "9948ee99",
+   "oh": [
+    "18490b8d",
+    "fa74e348",
+    "9948ee99",
+    "8cfed4a4"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1246"
+  },
+  {
+   "qid": "P-125-06-292ea46021d3",
    "prompt": "圣诞节过得好吗？",
-   "knowledge_ids": [
-    "V2231"
+   "options": [
+    "このビルは非常階段を備えている。",
+    "もうスミスさんに会われましたね。",
+    "いいクリスマスを過ごしましたか。",
+    "ジャックは８月１０日に生まれた。"
    ],
-   "hint": ""
+   "h": "a01fba18",
+   "oh": [
+    "d631b058",
+    "3c781f85",
+    "a01fba18",
+    "6df6eadc"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1247"
   },
   {
-   "id": "S1248",
-   "day": 125,
-   "direction": "ja-zh",
+   "qid": "P-125-07-943d8c9c15fe",
    "prompt": "その小説の筋はわからない。",
-   "knowledge_ids": [
-    "V2232"
+   "options": [
+    "我想要角落的那张桌子。",
+    "委员会由八名成员组成。",
+    "他四肢摊开躺在榻榻米上。",
+    "我不明白那本小说的情节。"
    ],
-   "hint": ""
+   "h": "4ea6453d",
+   "oh": [
+    "230d8172",
+    "27f8744e",
+    "7e58bdbb",
+    "4ea6453d"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1248"
   },
   {
-   "id": "S1249",
-   "day": 125,
-   "direction": "ja-zh",
+   "qid": "P-125-08-80c8f7706263",
    "prompt": "父は私にピアノを習うように勧めた。",
-   "knowledge_ids": [
-    "V2233"
+   "options": [
+    "父亲劝我去学钢琴。",
+    "最近没有她的消息。",
+    "针扎到了我的拇指。",
+    "哪一把是你的吉他？"
    ],
-   "hint": ""
+   "h": "20580166",
+   "oh": [
+    "20580166",
+    "31ae203e",
+    "97a1ec94",
+    "4a841a74"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1249"
   },
   {
-   "id": "S1250",
-   "day": 125,
-   "direction": "ja-zh",
+   "qid": "P-125-09-1d5ad20d617d",
    "prompt": "その計画は進められている。",
-   "knowledge_ids": [
-    "V2234"
+   "options": [
+    "从家里能看见那座塔。",
+    "请在接待处写名字。",
+    "你为什么想当护士？",
+    "那个计划正在推进。"
    ],
-   "hint": ""
+   "h": "9b6c1a61",
+   "oh": [
+    "60c714ba",
+    "bb7ed81b",
+    "28ee32c5",
+    "9b6c1a61"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1250"
   }
  ],
  "quiz": [

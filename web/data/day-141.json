@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V2470",
    "front": "積もる",
    "back": "积；堆积",
+   "kana": "つもる",
    "stage": "planned"
   },
   {
    "kid": "V2471",
    "front": "梅雨",
    "back": "梅雨",
+   "kana": "つゆ",
    "stage": "planned"
   },
   {
    "kid": "V2472",
    "front": "辛い",
    "back": "难受；痛苦",
+   "kana": "つらい",
    "stage": "planned"
   },
   {
@@ -70,31 +73,36 @@
   {
    "kid": "K0577",
    "front": "遊",
-   "back": "玩；游玩｜音 ユウ、ユ",
+   "back": "玩；游玩",
+   "kana": "ユウ、ユ、あそ.ぶ、あそ.ばす",
    "stage": "planned"
   },
   {
    "kid": "K0578",
    "front": "迷",
-   "back": "迷路；迷惑｜音 メイ",
+   "back": "迷路；迷惑",
+   "kana": "メイ、まよ.う",
    "stage": "planned"
   },
   {
    "kid": "V2428",
    "front": "中央",
    "back": "中央；中间",
+   "kana": "ちゅうおう",
    "stage": "planned"
   },
   {
    "kid": "V2429",
    "front": "中学",
    "back": "初中",
+   "kana": "ちゅうがく",
    "stage": "planned"
   },
   {
    "kid": "V2430",
    "front": "中古",
    "back": "二手的",
+   "kana": "ちゅうこ",
    "stage": "planned"
   },
   {
@@ -106,13 +114,15 @@
   {
    "kid": "K0569",
    "front": "痛",
-   "back": "痛；疼痛｜音 ツウ",
+   "back": "痛；疼痛",
+   "kana": "ツウ、いた.い、いた.む、いた.ましい、いた.める",
    "stage": "planned"
   },
   {
    "kid": "K0570",
    "front": "笑",
-   "back": "笑；笑容｜音 ショウ",
+   "back": "笑；笑容",
+   "kana": "ショウ、わら.う、え.む",
    "stage": "planned"
   }
  ],
@@ -515,104 +525,204 @@
  ],
  "sentences": [
   {
-   "id": "S1401",
-   "day": 141,
-   "direction": "zh-ja",
+   "qid": "P-141-00-a4f9e0062362",
    "prompt": "这个烟囱的排烟变差了。",
-   "knowledge_ids": [
-    "V2521"
+   "options": [
+    "ちょっと寄って行きませんか。",
+    "彼は怒って首を左右に振った。",
+    "この煙突は通りが悪くなった。",
+    "今日は昼食をとる時間がない。"
    ],
-   "hint": ""
+   "h": "9dbab80",
+   "oh": [
+    "187ef6ad",
+    "332d9f86",
+    "9dbab80",
+    "dadf993c"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1401"
   },
   {
-   "id": "S1402",
-   "day": 141,
-   "direction": "zh-ja",
+   "qid": "P-141-01-a964622075ca",
    "prompt": "我走过了那条昏暗的路。",
-   "knowledge_ids": [
-    "V2522"
+   "options": [
+    "彼女は哀れを誘う有様だった。",
+    "大学で何をするつもりですか。",
+    "私はその暗い道を通り過ぎた。",
+    "この数字の列を合計しなさい。"
    ],
-   "hint": ""
+   "h": "60c4f95",
+   "oh": [
+    "6bd849e2",
+    "5eb6936f",
+    "60c4f95",
+    "3eebc836"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1402"
   },
   {
-   "id": "S1403",
-   "day": 141,
-   "direction": "zh-ja",
+   "qid": "P-141-02-68883429f48f",
    "prompt": "那些人向往城市生活。",
-   "knowledge_ids": [
-    "V2523"
+   "options": [
+    "君はそのコンサートをテープにとったか。",
+    "あの人達は都会の生活にあこがれている。",
+    "あんな恐ろしい男のために流す涙はない。",
+    "それは、おまえの声をよく聞くためだよ。"
    ],
-   "hint": ""
+   "h": "f7e43dfe",
+   "oh": [
+    "843b69e0",
+    "f7e43dfe",
+    "cfc08b10",
+    "19802e2c"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1403"
   },
   {
-   "id": "S1404",
-   "day": 141,
-   "direction": "zh-ja",
+   "qid": "P-141-03-2b0d9b31762c",
    "prompt": "他十二岁时变了声。",
-   "knowledge_ids": [
-    "V2524"
+   "options": [
+    "この手の本はあまり読まない。",
+    "１２才の時彼は声変わりした。",
+    "スミスさんにつないで下さい。",
+    "今日は昨日ほど寒くないです。"
    ],
-   "hint": ""
+   "h": "e7743c96",
+   "oh": [
+    "771de503",
+    "e7743c96",
+    "3dda2614",
+    "ec826cff"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1404"
   },
   {
-   "id": "S1405",
-   "day": 141,
-   "direction": "zh-ja",
+   "qid": "P-141-04-fd78c32afb5a",
    "prompt": "他被免去了重任。",
-   "knowledge_ids": [
-    "V2525"
+   "options": [
+    "彼は重責を解かれた。",
+    "放課後は空いてますか？",
+    "彼は仕事に積極的です。",
+    "子供達は雷におびえた。"
    ],
-   "hint": ""
+   "h": "93f07e6c",
+   "oh": [
+    "93f07e6c",
+    "6d4ccf23",
+    "b62eb94d",
+    "6779ffc1"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1405"
   },
   {
-   "id": "S1406",
-   "day": 141,
-   "direction": "zh-ja",
+   "qid": "P-141-05-583e78a99ca2",
    "prompt": "这种鱼没有毒。",
-   "knowledge_ids": [
-    "V2526"
+   "options": [
+    "この魚は毒がない。",
+    "いつもバス通学です。",
+    "光が世にやって来た。",
+    "遠くに小屋が見えた。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1407",
-   "day": 141,
+   "h": "14e4bcc7",
+   "oh": [
+    "14e4bcc7",
+    "52973008",
+    "f14e475a",
+    "6a6c4ab3"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1406"
+  },
+  {
+   "qid": "P-141-06-76f41b19ee7d",
    "prompt": "你擅长数学吗？",
-   "knowledge_ids": [
-    "V2527"
+   "options": [
+    "心理学は人間の感情を扱う。",
+    "光が刺激となって花が咲く。",
+    "あなたは数学が得意ですか。",
+    "苦痛で彼の顔が歪んでいる。"
    ],
-   "hint": ""
+   "h": "169afc24",
+   "oh": [
+    "40ba6b43",
+    "fc414b9f",
+    "169afc24",
+    "15706b98"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1407"
   },
   {
-   "id": "S1408",
-   "day": 141,
-   "direction": "ja-zh",
+   "qid": "P-141-07-1b916a7a5b9b",
    "prompt": "母はメガネなしでは読書できない。",
-   "knowledge_ids": [
-    "V2528"
+   "options": [
+    "母亲不戴眼镜就没法看书。",
+    "最近完全没见到伊丽莎白。",
+    "猫一走，老鼠就闹起来了。",
+    "地球以外的天体上有生物吗？"
    ],
-   "hint": ""
+   "h": "62947b19",
+   "oh": [
+    "62947b19",
+    "27053c3a",
+    "f618225d",
+    "26a2ce62"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1408"
   },
   {
-   "id": "S1409",
-   "day": 141,
-   "direction": "ja-zh",
+   "qid": "P-141-08-28dbdda97c55",
    "prompt": "彼は一生独身で過ごした。",
-   "knowledge_ids": [
-    "V2529"
+   "options": [
+    "那位是老师。",
+    "劳驾，车站在哪？",
+    "他一生独身。",
+    "她有表演天赋。"
    ],
-   "hint": ""
+   "h": "d5317579",
+   "oh": [
+    "a04fdaaf",
+    "ccf599ec",
+    "d5317579",
+    "85f35af"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1409"
   },
   {
-   "id": "S1410",
-   "day": 141,
-   "direction": "ja-zh",
+   "qid": "P-141-09-84d3d184f43c",
    "prompt": "スクラムはラグビーの特徴だ。",
-   "knowledge_ids": [
-    "V2530"
+   "options": [
+    "自1988年以来就没见过汤姆。",
+    "你的工作没有达到期待的水准。",
+    "史密斯先生说话语气温和。",
+    "并列争球是橄榄球的一大特色。"
    ],
-   "hint": ""
+   "h": "1d0867cc",
+   "oh": [
+    "e0ae7873",
+    "aa45ad00",
+    "9e51d31a",
+    "1d0867cc"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1410"
   }
  ],
  "quiz": [

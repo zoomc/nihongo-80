@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1927",
    "front": "講演",
    "back": "演讲；报告",
+   "kana": "こうえん",
    "stage": "planned"
   },
   {
    "kid": "V1928",
    "front": "効果",
    "back": "效果",
+   "kana": "こうか",
    "stage": "planned"
   },
   {
    "kid": "V1929",
    "front": "硬貨",
    "back": "硬币",
+   "kana": "こうか",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0457",
    "front": "深",
-   "back": "深；深刻｜音 シン",
+   "back": "深；深刻",
+   "kana": "シン、ふか.い、-ぶか.い、ふか.まる、ふか.める、み-",
    "stage": "planned"
   },
   {
    "kid": "K0458",
    "front": "様",
-   "back": "样子；敬称｜音 ヨウ、ショウ",
+   "back": "样子；敬称",
+   "kana": "ヨウ、ショウ、さま、さん",
    "stage": "planned"
   },
   {
    "kid": "V1894",
    "front": "結局",
    "back": "结果；终究",
+   "kana": "けっきょく",
    "stage": "planned"
   },
   {
    "kid": "V1895",
    "front": "決心",
    "back": "决心",
+   "kana": "けっしん",
    "stage": "planned"
   },
   {
    "kid": "V1896",
    "front": "欠席",
    "back": "缺席",
+   "kana": "けっせき",
    "stage": "planned"
   },
   {
@@ -531,104 +539,204 @@
  ],
  "sentences": [
   {
-   "id": "S1101",
-   "day": 111,
-   "direction": "zh-ja",
+   "qid": "P-111-00-3e75f6c3cac5",
    "prompt": "请把这一页复印一下。",
-   "knowledge_ids": [
-    "V1981"
+   "options": [
+    "兄はアパートをさがしています。",
+    "このページをコピーして下さい。",
+    "これは北海道からのお土産です。",
+    "お答えできる立場にありません。"
    ],
-   "hint": ""
+   "h": "fd6444e6",
+   "oh": [
+    "7f656d90",
+    "fd6444e6",
+    "7e2c9ed2",
+    "3c490fe4"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1101"
   },
   {
-   "id": "S1102",
-   "day": 111,
-   "direction": "zh-ja",
+   "qid": "P-111-01-54925c136ea2",
    "prompt": "这些小麦被磨成面粉。",
-   "knowledge_ids": [
-    "V1982"
+   "options": [
+    "信号が青に変わったわよ。",
+    "この靴下はちぐはぐだ。",
+    "カエルが鳴いたら帰ろう。",
+    "この小麦は粉にされる。"
    ],
-   "hint": ""
+   "h": "8fa39b7e",
+   "oh": [
+    "a3da3ad",
+    "6db284b2",
+    "e5bebda",
+    "8fa39b7e"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1102"
   },
   {
-   "id": "S1103",
-   "day": 111,
-   "direction": "zh-ja",
+   "qid": "P-111-02-dd21af58f0eb",
    "prompt": "远处能看到一间小屋。",
-   "knowledge_ids": [
-    "V1983"
+   "options": [
+    "遠くに小屋が見えた。",
+    "冗談はもうたくさんだ。",
+    "予定を変えました。",
+    "この部屋は静かです。"
    ],
-   "hint": ""
+   "h": "6a6c4ab3",
+   "oh": [
+    "6a6c4ab3",
+    "6808b25c",
+    "a0ad83b4",
+    "ed05be90"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1103"
   },
   {
-   "id": "S1104",
-   "day": 111,
-   "direction": "zh-ja",
+   "qid": "P-111-03-68cb334e6994",
    "prompt": "这些饼干是星星形状的。",
-   "knowledge_ids": [
-    "V1984"
+   "options": [
+    "これらのクッキーは星の形をしている。",
+    "中国の音楽はどうも僕の肌に合わない。",
+    "その泥棒は刑事を見ると走って逃げた。",
+    "私はあの店で新しいステレオを買った。"
    ],
-   "hint": ""
+   "h": "97cc4678",
+   "oh": [
+    "97cc4678",
+    "62bcc9c",
+    "ea10fb03",
+    "cb357e2c"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1104"
   },
   {
-   "id": "S1105",
-   "day": 111,
-   "direction": "zh-ja",
+   "qid": "P-111-04-3c8a6af35b8b",
    "prompt": "快到中午时太阳才露出来。",
-   "knowledge_ids": [
-    "V1985"
+   "options": [
+    "おひる頃やっと太陽が顔を出した。",
+    "その小説は彼の名声を更に高めた。",
+    "ホッチキスを貸してくれませんか。",
+    "トムは今にもここに来るはずです。"
    ],
-   "hint": ""
+   "h": "c5040bc1",
+   "oh": [
+    "c5040bc1",
+    "c4f79a06",
+    "1b2dc8f1",
+    "1c43f179"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1105"
   },
   {
-   "id": "S1106",
-   "day": 111,
-   "direction": "zh-ja",
+   "qid": "P-111-05-ffa3edf2c792",
    "prompt": "你想杀了我。",
-   "knowledge_ids": [
-    "V1986"
+   "options": [
+    "おまえはオレを殺そうとしている。",
+    "あの先生に質問してもいいですよ。",
+    "インドの人口はどのくらいですか。",
+    "お礼の申し上げようもありません。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1107",
-   "day": 111,
+   "h": "aac242c3",
+   "oh": [
+    "aac242c3",
+    "c64703e1",
+    "4c5d8293",
+    "d477e2e9"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1106"
+  },
+  {
+   "qid": "P-111-06-3ce1aef14b3a",
    "prompt": "我摔倒伤了手腕。",
-   "knowledge_ids": [
-    "V1987"
+   "options": [
+    "転んで手首を痛めました。",
+    "新聞の記事を読みました。",
+    "火曜日に国会が開かれる。",
+    "ありがとうございます。"
    ],
-   "hint": ""
+   "h": "6fd786a",
+   "oh": [
+    "6fd786a",
+    "54f405f6",
+    "71348ffa",
+    "4ffb347a"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1107"
   },
   {
-   "id": "S1108",
-   "day": 111,
-   "direction": "ja-zh",
+   "qid": "P-111-07-444a151d348e",
    "prompt": "今回はしくじれないぞ。",
-   "knowledge_ids": [
-    "V1988"
+   "options": [
+    "健在三跑得最快。",
+    "这次可不能失手。",
+    "部长已经到了吗？",
+    "雪积得满地都是。"
    ],
-   "hint": ""
+   "h": "2fe4f620",
+   "oh": [
+    "57e1f82c",
+    "2fe4f620",
+    "542308b3",
+    "8aeb8cdc"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1108"
   },
   {
-   "id": "S1109",
-   "day": 111,
-   "direction": "ja-zh",
+   "qid": "P-111-08-019f591d044a",
    "prompt": "今後気をつけなくてはなりません。",
-   "knowledge_ids": [
-    "V1989"
+   "options": [
+    "今后必须多加小心。",
+    "你没有权利去那里。",
+    "下下周四怎么样？",
+    "能借我一下橡皮吗？"
    ],
-   "hint": ""
+   "h": "643f25c1",
+   "oh": [
+    "643f25c1",
+    "2e3620c5",
+    "aab0ec66",
+    "7f225cac"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1109"
   },
   {
-   "id": "S1110",
-   "day": 111,
-   "direction": "ja-zh",
+   "qid": "P-111-09-5b4c7c625dba",
    "prompt": "どうして帰りがこんなに遅くなったの。",
-   "knowledge_ids": [
-    "V1990"
+   "options": [
+    "怎么回来得这么晚？",
+    "两个当中哪个贵？",
+    "我们绕到车后面推。",
+    "铁是最有用的金属。"
    ],
-   "hint": ""
+   "h": "da3dbd3d",
+   "oh": [
+    "da3dbd3d",
+    "fc08db83",
+    "f9ef5dc7",
+    "eb5e2c2d"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1110"
   }
  ],
  "quiz": [

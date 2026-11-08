@@ -193,6 +193,7 @@ def build_payload(session_events: list[dict]) -> dict:
         except (ValueError, TypeError):
             continue
     return {
+        "practice_mode": metadata.get("practice_mode", "teacher"),
         "review_ratings": metadata.get("review_ratings", []),
         "sentences": metadata.get("sentences", []),
         "v": 1,

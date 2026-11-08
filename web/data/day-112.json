@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1941",
    "front": "後者",
    "back": "后者",
+   "kana": "こうしゃ",
    "stage": "planned"
   },
   {
    "kid": "V1942",
    "front": "構成",
    "back": "构成",
+   "kana": "こうせい",
    "stage": "planned"
   },
   {
    "kid": "V1943",
    "front": "高速",
    "back": "高速",
+   "kana": "こうそく",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0461",
    "front": "識",
-   "back": "识别；知识｜音 シキ",
+   "back": "识别；知识",
+   "kana": "シキ、し.る、しる.す",
    "stage": "planned"
   },
   {
    "kid": "K0462",
    "front": "呼",
-   "back": "呼叫；呼唤｜音 コ",
+   "back": "呼叫；呼唤",
+   "kana": "コ、よ.ぶ",
    "stage": "planned"
   },
   {
    "kid": "V1908",
    "front": "言語",
    "back": "语言",
+   "kana": "げんご",
    "stage": "planned"
   },
   {
    "kid": "V1909",
    "front": "健康",
    "back": "健康",
+   "kana": "けんこう",
    "stage": "planned"
   },
   {
    "kid": "V1910",
    "front": "検査",
    "back": "检查",
+   "kana": "けんさ",
    "stage": "planned"
   },
   {
@@ -530,104 +538,204 @@
  ],
  "sentences": [
   {
-   "id": "S1111",
-   "day": 112,
-   "direction": "zh-ja",
+   "qid": "P-112-00-c6acad7c59ea",
    "prompt": "末班电车几点开？",
-   "knowledge_ids": [
-    "V2001"
+   "options": [
+    "お昼休みは、１時間です。",
+    "最終電車はいつ出ますか。",
+    "図書館で言葉を調べます。",
+    "お前は恩を仇で返したな。"
    ],
-   "hint": ""
+   "h": "227d7a7",
+   "oh": [
+    "9ff958f1",
+    "227d7a7",
+    "f3f4482f",
+    "975e3da6"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1111"
   },
   {
-   "id": "S1112",
-   "day": 112,
-   "direction": "zh-ja",
+   "qid": "P-112-01-b0d6e40c8386",
    "prompt": "他在演讲当中昏了过去。",
-   "knowledge_ids": [
-    "V2002"
+   "options": [
+    "彼はスピーチの最中に気を失った。",
+    "あなたの計画を私に合わせなさい。",
+    "トムは今にもここに来るはずです。",
+    "この手袋は両方がそろっていない。"
    ],
-   "hint": ""
+   "h": "44250734",
+   "oh": [
+    "44250734",
+    "90f4ca7a",
+    "1c43f179",
+    "9ed978b8"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1112"
   },
   {
-   "id": "S1113",
-   "day": 112,
-   "direction": "zh-ja",
+   "qid": "P-112-02-ca589c222080",
    "prompt": "我至少能走两英里。",
-   "knowledge_ids": [
-    "V2003"
+   "options": [
+    "試合は彼の勝ちに終わった。",
+    "私たちは制服を支給された。",
+    "私は最低２マイルは歩ける。",
+    "この線の終点はどこですか。"
    ],
-   "hint": ""
+   "h": "133a9034",
+   "oh": [
+    "e09f8136",
+    "9edbefef",
+    "133a9034",
+    "4b98e1d7"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1113"
   },
   {
-   "id": "S1114",
-   "day": 112,
-   "direction": "zh-ja",
+   "qid": "P-112-03-b02992e44f3f",
    "prompt": "你有音乐才能。",
-   "knowledge_ids": [
-    "V2004"
+   "options": [
+    "すっかり忘れていました。",
+    "事故は不注意から生じる。",
+    "君には音楽の才能がある。",
+    "この靴下はちぐはぐだ。"
    ],
-   "hint": ""
+   "h": "89f7d9b",
+   "oh": [
+    "5ac78734",
+    "d8aad1b6",
+    "89f7d9b",
+    "6db284b2"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1114"
   },
   {
-   "id": "S1115",
-   "day": 112,
-   "direction": "zh-ja",
+   "qid": "P-112-04-209fdd9b2275",
    "prompt": "审判要求公正无私。",
-   "knowledge_ids": [
-    "V2005"
+   "options": [
+    "これらのクッキーは星の形をしている。",
+    "とにかく、試験が終わってほっとしたよ。",
+    "この服にはどんなアクセサリーを付けるの？",
+    "裁判は公明正大であることが要求される。"
    ],
-   "hint": ""
+   "h": "fdeee881",
+   "oh": [
+    "97cc4678",
+    "47f611de",
+    "6991196d",
+    "fdeee881"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1115"
   },
   {
-   "id": "S1116",
-   "day": 112,
-   "direction": "zh-ja",
+   "qid": "P-112-05-635a5b06e52c",
    "prompt": "用好材料做的家具很畅销。",
-   "knowledge_ids": [
-    "V2006"
+   "options": [
+    "それは１週間前、すなわち４月２日に行われた。",
+    "あのおいしいワインをなぜ飲まないんだい。",
+    "私は現代の音楽はあまり好きではない事を認めます。",
+    "すぐれた材料で作られた家具は、売れ行きがよい。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1117",
-   "day": 112,
+   "h": "6d44a961",
+   "oh": [
+    "c6fa71d9",
+    "5ebf955f",
+    "6ca4aead",
+    "6d44a961"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1116"
+  },
+  {
+   "qid": "P-112-06-40dd2c2b15b3",
    "prompt": "幸好你当时在这儿。",
-   "knowledge_ids": [
-    "V2007"
+   "options": [
+    "彼女その瞬間にカッとなったんだね。",
+    "バリウムをまず一口飲んでください。",
+    "あなたがここに居たのは幸いでした。",
+    "その男性はスパイとして逮捕された。"
    ],
-   "hint": ""
+   "h": "6aab53b9",
+   "oh": [
+    "b90b4381",
+    "50f70cb0",
+    "6aab53b9",
+    "ae66d5b3"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1117"
   },
   {
-   "id": "S1118",
-   "day": 112,
-   "direction": "ja-zh",
+   "qid": "P-112-07-02b64af1f5c9",
    "prompt": "彼は生死の境をさ迷った。",
-   "knowledge_ids": [
-    "V2009"
+   "options": [
+    "能在什么地方打工？",
+    "最近一直没见到他。",
+    "山里空气非常清新。",
+    "他在生死之间徘徊。"
    ],
-   "hint": ""
+   "h": "f32c445a",
+   "oh": [
+    "7929d740",
+    "382041d4",
+    "47258165",
+    "f32c445a"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1118"
   },
   {
-   "id": "S1119",
-   "day": 112,
-   "direction": "ja-zh",
+   "qid": "P-112-08-b65c60f18214",
    "prompt": "彼は世の風潮に逆らう。",
-   "knowledge_ids": [
-    "V2010"
+   "options": [
+    "他逆时代潮流而行。",
+    "今晚是有聚会吗？",
+    "我每天晚上都在家。",
+    "新闻每小时播一次。"
    ],
-   "hint": ""
+   "h": "3ea4412b",
+   "oh": [
+    "3ea4412b",
+    "6ed5872b",
+    "e5967fa5",
+    "f70f14e"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1119"
   },
   {
-   "id": "S1120",
-   "day": 112,
-   "direction": "ja-zh",
+   "qid": "P-112-09-e3b9fb412ca5",
    "prompt": "彼は今男盛りだ。",
-   "knowledge_ids": [
-    "V2011"
+   "options": [
+    "我们要求他偿还借款。",
+    "她委托他去筹集资金。",
+    "平等受到宪法的保障。",
+    "他正处在男人的壮年。"
    ],
-   "hint": ""
+   "h": "cfa9128b",
+   "oh": [
+    "18fb5c69",
+    "a2dbaa37",
+    "7a8f657a",
+    "cfa9128b"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1120"
   }
  ],
  "quiz": [

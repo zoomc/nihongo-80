@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V1790",
    "front": "義務",
    "back": "义务",
+   "kana": "ぎむ",
    "stage": "planned"
   },
   {
    "kid": "V1791",
    "front": "疑問",
    "back": "疑问",
+   "kana": "ぎもん",
    "stage": "planned"
   },
   {
    "kid": "V1792",
    "front": "逆",
    "back": "相反；反过来",
+   "kana": "ぎゃく",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0425",
    "front": "労",
-   "back": "劳动；辛苦｜音 ロウ",
+   "back": "劳动；辛苦",
+   "kana": "ロウ、ろう.する、いたわ.る、いた.ずき、ねぎら、つか.れる、ねぎら.う",
    "stage": "planned"
   },
   {
    "kid": "K0426",
    "front": "例",
-   "back": "例子；惯例｜音 レイ",
+   "back": "例子；惯例",
+   "kana": "レイ、たと.える",
    "stage": "planned"
   },
   {
    "kid": "V1757",
    "front": "議員",
    "back": "议员",
+   "kana": "ぎいん",
    "stage": "planned"
   },
   {
    "kid": "V1758",
    "front": "記憶",
    "back": "记忆",
+   "kana": "きおく",
    "stage": "planned"
   },
   {
    "kid": "V1759",
    "front": "気温",
    "back": "气温",
+   "kana": "きおん",
    "stage": "planned"
   },
   {
@@ -454,104 +462,204 @@
  ],
  "sentences": [
   {
-   "id": "S1021",
-   "day": 103,
-   "direction": "zh-ja",
+   "qid": "P-103-00-21047e1c320e",
    "prompt": "问题是谁来做出决定。",
-   "knowledge_ids": [
-    "V1847"
+   "options": [
+    "あなたの名前と住所を記入しなさい。",
+    "問題は誰が決定を下すかということだ。",
+    "知らぬ間に日はとっぷりと暮れていた。",
+    "あなたがここに居たのは幸いでした。"
    ],
-   "hint": ""
+   "h": "e44d6dbb",
+   "oh": [
+    "52eeffa0",
+    "e44d6dbb",
+    "85baee84",
+    "6aab53b9"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1021"
   },
   {
-   "id": "S1022",
-   "day": 103,
-   "direction": "zh-ja",
+   "qid": "P-103-01-e01d279179eb",
    "prompt": "这里的下坡也没有可抓的地方，很危险。",
-   "knowledge_ids": [
-    "V1848"
+   "options": [
+    "チューリップは、私たちの県の県花です。",
+    "ここの下りも手掛かりがないので危険だ。",
+    "ＦＡＸで地図を送っていただけませんか。",
+    "この程度のお金じゃ長くは持たないだろう。"
    ],
-   "hint": ""
+   "h": "966a4e45",
+   "oh": [
+    "9f1b20e5",
+    "966a4e45",
+    "4a77dbf7",
+    "2eab4bd1"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1022"
   },
   {
-   "id": "S1023",
-   "day": 103,
-   "direction": "zh-ja",
+   "qid": "P-103-02-83c4109e814d",
    "prompt": "他痛苦得脸都歪了。",
-   "knowledge_ids": [
-    "V1849"
+   "options": [
+    "二つの店の値段を比べます。",
+    "この紙はインクを吸わない。",
+    "苦痛で彼の顔が歪んでいる。",
+    "われわれは体力を自慢した。"
    ],
-   "hint": ""
+   "h": "15706b98",
+   "oh": [
+    "b027db99",
+    "1efc66f7",
+    "15706b98",
+    "3ab0055a"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1023"
   },
   {
-   "id": "S1024",
-   "day": 103,
-   "direction": "zh-ja",
+   "qid": "P-103-03-8e55b7b657e9",
    "prompt": "昨晚没能睡个好觉。",
-   "knowledge_ids": [
-    "V1850"
+   "options": [
+    "パスポートを拝見できますか。",
+    "昨夜はぐっすり眠れなかった。",
+    "ジョージは勉強に真剣でない。",
+    "今日は昨日ほど寒くないです。"
    ],
-   "hint": ""
+   "h": "c36eaddd",
+   "oh": [
+    "f4834db0",
+    "c36eaddd",
+    "112da97",
+    "ec826cff"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1024"
   },
   {
-   "id": "S1025",
-   "day": 103,
-   "direction": "zh-ja",
+   "qid": "P-103-04-f832e575899d",
    "prompt": "我分不清她和她妹妹。",
-   "knowledge_ids": [
-    "V1851"
+   "options": [
+    "マイクはバスで学校に通っている。",
+    "そのニュースは急いで印刷された。",
+    "私は彼女と妹を区別できなかった。",
+    "アラビア語は右から左へ書きます。"
    ],
-   "hint": ""
+   "h": "39dca1c3",
+   "oh": [
+    "1062eb67",
+    "d5c6649d",
+    "39dca1c3",
+    "36918c3"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1025"
   },
   {
-   "id": "S1026",
-   "day": 103,
-   "direction": "zh-ja",
+   "qid": "P-103-05-edc1bdd3bfd1",
    "prompt": "又一批游客到了。",
-   "knowledge_ids": [
-    "V1852"
+   "options": [
+    "彼はヨットで太平洋を横断した。",
+    "彼は大学院に進学しないだろう。",
+    "せっかくの休みなのに、雨です。",
+    "もうひと組の観光客が到着した。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1027",
-   "day": 103,
+   "h": "16be5fe1",
+   "oh": [
+    "dac6bb6d",
+    "f470c15a",
+    "eab23b6b",
+    "16be5fe1"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1026"
+  },
+  {
+   "qid": "P-103-06-e6ab3996a759",
    "prompt": "工会参加游行了吗？",
-   "knowledge_ids": [
-    "V1853"
+   "options": [
+    "このドアは書斎に通じている。",
+    "このセーターは気に入らない。",
+    "つまり彼女は下手な踊り子だ。",
+    "組合はデモに参加しましたか。"
    ],
-   "hint": ""
+   "h": "7609a288",
+   "oh": [
+    "ba605a4e",
+    "468b4643",
+    "c49e2f71",
+    "7609a288"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1027"
   },
   {
-   "id": "S1028",
-   "day": 103,
-   "direction": "ja-zh",
+   "qid": "P-103-07-99ab0ddc68cb",
    "prompt": "私は彼らが腕を組んで歩いているのを見た。",
-   "knowledge_ids": [
-    "V1854"
+   "options": [
+    "说的和做的完全是两回事。",
+    "你是个多么聪明的学生啊。",
+    "史密斯先生说话语气温和。",
+    "我看见他们挽着手臂走路。"
    ],
-   "hint": ""
+   "h": "e24b81f7",
+   "oh": [
+    "853b040d",
+    "9c468c5f",
+    "9e51d31a",
+    "e24b81f7"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1028"
   },
   {
-   "id": "S1029",
-   "day": 103,
-   "direction": "ja-zh",
+   "qid": "P-103-08-e34954afea77",
    "prompt": "５８１４を千の位に四捨五入すれば何になりますか。",
-   "knowledge_ids": [
-    "V1855"
+   "options": [
+    "那一周和歧视问题没有关系。",
+    "你是个多么聪明的学生啊。",
+    "5814四舍五入到千位是多少？",
+    "要是电话响了，你能接一下吗。"
    ],
-   "hint": ""
+   "h": "3dbabf63",
+   "oh": [
+    "f623e0cd",
+    "9c468c5f",
+    "3dbabf63",
+    "c0147fd2"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1029"
   },
   {
-   "id": "S1030",
-   "day": 103,
-   "direction": "ja-zh",
+   "qid": "P-103-09-6644b145053b",
    "prompt": "もっと良い暮らしができますように。",
-   "knowledge_ids": [
-    "V1856"
+   "options": [
+    "你不知道我有多担心。",
+    "希望能过上更好的生活。",
+    "快到十点时工作结束了。",
+    "累的话倒不如休息更好。"
    ],
-   "hint": ""
+   "h": "f98eda1",
+   "oh": [
+    "80b938b0",
+    "f98eda1",
+    "9b28f76d",
+    "97b7981d"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1030"
   }
  ],
  "quiz": [

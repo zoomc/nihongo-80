@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1218",
    "front": "ちっとも",
    "back": "一点也不",
+   "kana": "ちっとも",
    "stage": "planned"
   },
   {
    "kid": "V1219",
    "front": "ちゃん",
    "back": "小…（昵称）",
+   "kana": "ちゃん",
    "stage": "planned"
   },
   {
    "kid": "V1220",
    "front": "注意",
    "back": "注意；提醒",
+   "kana": "ちゅうい",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0108",
    "front": "議",
-   "back": "议；议论；会议｜音 ギ",
+   "back": "议；议论；会议",
+   "kana": "ギ",
    "stage": "planned"
   },
   {
    "kid": "K0109",
    "front": "残",
-   "back": "残；剩下；残留｜音 ザン",
+   "back": "残；剩下；残留",
+   "kana": "ザン、のこる",
    "stage": "planned"
   },
   {
    "kid": "V1185",
    "front": "それで",
    "back": "因此；所以",
+   "kana": "それで",
    "stage": "planned"
   },
   {
    "kid": "V1186",
    "front": "それに",
    "back": "而且；加上",
+   "kana": "それに",
    "stage": "planned"
   },
   {
    "kid": "V1187",
    "front": "それほど",
    "back": "那么；那种程度",
+   "kana": "それほど",
    "stage": "planned"
   },
   {
@@ -533,104 +541,204 @@
  ],
  "sentences": [
   {
-   "id": "S0591",
-   "day": 60,
-   "direction": "zh-ja",
+   "qid": "P-060-00-b5f9d49b9742",
    "prompt": "以前这里正好有一座寺庙。",
-   "knowledge_ids": [
-    "V1243"
+   "options": [
+    "あなたは家族の事を考えるべきです。",
+    "以前はちょうどここにお寺があった。",
+    "この犬は言わばうちの家族の一員だ。",
+    "あなたの家族はきっと親切でしょう。"
    ],
-   "hint": ""
+   "h": "78701156",
+   "oh": [
+    "13384023",
+    "78701156",
+    "734cdf35",
+    "4f1d4d0e"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0591"
   },
   {
-   "id": "S0592",
-   "day": 60,
-   "direction": "zh-ja",
+   "qid": "P-060-01-7e6f1b291296",
    "prompt": "再小的点也能看见。",
-   "knowledge_ids": [
-    "V1244"
+   "options": [
+    "後ろ足で砂をかけるようなことをした。",
+    "こういうタイプの人はおもしろくない。",
+    "どんな小さな点でも見ることができる。",
+    "私が今日あるのは両親のおかげである。"
    ],
-   "hint": ""
+   "h": "3370740d",
+   "oh": [
+    "dba7f86",
+    "b9ffc63c",
+    "3370740d",
+    "9d3a4023"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0592"
   },
   {
-   "id": "S0593",
-   "day": 60,
-   "direction": "zh-ja",
+   "qid": "P-060-02-47ae8825115d",
    "prompt": "店员给那件行李贴上了标签。",
-   "knowledge_ids": [
-    "V1245"
+   "options": [
+    "その黄色いのをいただきましょう。",
+    "パスポートを見せてくれませんか。",
+    "その小説は彼の名声を更に高めた。",
+    "店員はその荷物にラベルをつけた。"
    ],
-   "hint": ""
+   "h": "910ba507",
+   "oh": [
+    "725d19ee",
+    "e4f54f40",
+    "c4f79a06",
+    "910ba507"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0593"
   },
   {
-   "id": "S0594",
-   "day": 60,
-   "direction": "zh-ja",
+   "qid": "P-060-03-caa172cd0466",
    "prompt": "天气预报说准了。",
-   "knowledge_ids": [
-    "V1246"
+   "options": [
+    "明日、学校へ行きます。",
+    "彼は仕事に積極的です。",
+    "あなたは先生ですか。",
+    "天気予報が当たったよ。"
    ],
-   "hint": ""
+   "h": "af55e21c",
+   "oh": [
+    "b7b27cd6",
+    "b62eb94d",
+    "7cbc9d0b",
+    "af55e21c"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0594"
   },
   {
-   "id": "S0595",
-   "day": 60,
-   "direction": "zh-ja",
+   "qid": "P-060-04-8c0747c6f0a7",
    "prompt": "露西打开了电灯的开关。",
-   "knowledge_ids": [
-    "V1247"
+   "options": [
+    "このトーストはよく焼けていません。",
+    "あなたの時計、時間は狂いませんか。",
+    "ルーシーは電灯のスイッチをつけた。",
+    "あなたには想像もつかない、でしょ？"
    ],
-   "hint": ""
+   "h": "28480d99",
+   "oh": [
+    "fe788abc",
+    "7697026a",
+    "28480d99",
+    "6c1152da"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0595"
   },
   {
-   "id": "S0596",
-   "day": 60,
-   "direction": "zh-ja",
+   "qid": "P-060-05-ebb617954621",
    "prompt": "我收到了她发来的电报。",
-   "knowledge_ids": [
-    "V1248"
+   "options": [
+    "おひる頃やっと太陽が顔を出した。",
+    "その黄色いのをいただきましょう。",
+    "私は、彼女から電報を受け取った。",
+    "この製品は美しく仕上がっている。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0597",
-   "day": 60,
+   "h": "b7fcc0ab",
+   "oh": [
+    "c5040bc1",
+    "725d19ee",
+    "b7fcc0ab",
+    "a8a8c68"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0596"
+  },
+  {
+   "qid": "P-060-06-edc9087e37c5",
    "prompt": "我们每年都举办展览会。",
-   "knowledge_ids": [
-    "V1249"
+   "options": [
+    "科学は観察に基づいている。",
+    "私たちは毎年展覧会を開く。",
+    "それを言われると弱いなあ。",
+    "彼女には常識が欠けている。"
    ],
-   "hint": ""
+   "h": "e4b88455",
+   "oh": [
+    "d541c6",
+    "e4b88455",
+    "84412a13",
+    "53186bea"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0597"
   },
   {
-   "id": "S0598",
-   "day": 60,
-   "direction": "ja-zh",
+   "qid": "P-060-07-ec849dd2e531",
    "prompt": "「都庁舎でもらえますよ」と係員が付け加えた。",
-   "knowledge_ids": [
-    "V1250"
+   "options": [
+    "“可以在都政府大楼领取。”工作人员补充道。",
+    "那一周和歧视问题没有关系。",
+    "电话一接通，她就说了起来。",
+    "明年你应该就能滑得很好吧。"
    ],
-   "hint": ""
+   "h": "573b35a9",
+   "oh": [
+    "573b35a9",
+    "f623e0cd",
+    "46a079b4",
+    "3d2b24e6"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0598"
   },
   {
-   "id": "S0599",
-   "day": 60,
-   "direction": "ja-zh",
+   "qid": "P-060-08-b90c997ad1eb",
    "prompt": "この道具はなんの役にもたたない。",
-   "knowledge_ids": [
-    "V1251"
+   "options": [
+    "你不能出席吗？为什么？",
+    "传闻传到了四面八方。",
+    "这个工具一点用都没有。",
+    "他正处在男人的壮年。"
    ],
-   "hint": ""
+   "h": "5a4381fe",
+   "oh": [
+    "e0130b6d",
+    "8e2c460f",
+    "5a4381fe",
+    "cfa9128b"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0599"
   },
   {
-   "id": "S0600",
-   "day": 60,
-   "direction": "ja-zh",
+   "qid": "P-060-09-08e39631fddd",
    "prompt": "トムはとうとうタバコをやめた。",
-   "knowledge_ids": [
-    "V1252"
+   "options": [
+    "定期做健康检查。",
+    "汤姆终于戒烟了。",
+    "我来给花换水吧。",
+    "突然开始下雨了。"
    ],
-   "hint": ""
+   "h": "9c580eba",
+   "oh": [
+    "e7de9c23",
+    "9c580eba",
+    "c570507a",
+    "4c4b05b0"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0600"
   }
  ],
  "quiz": [

@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1336",
    "front": "増える",
    "back": "增加",
+   "kana": "ふえる",
    "stage": "planned"
   },
   {
    "kid": "V1337",
    "front": "深い",
    "back": "深的",
+   "kana": "ふかい",
    "stage": "planned"
   },
   {
    "kid": "V1338",
    "front": "複雑",
    "back": "复杂",
+   "kana": "ふくざつ",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0136",
    "front": "果",
-   "back": "果；结果；果实；达成｜音 カ",
+   "back": "果；结果；果实；达成",
+   "kana": "カ、はたす",
    "stage": "planned"
   },
   {
    "kid": "K0137",
    "front": "可",
-   "back": "可；可能；许可｜音 カ",
+   "back": "可；可能；许可",
+   "kana": "カ",
    "stage": "planned"
   },
   {
    "kid": "V1303",
    "front": "場所",
    "back": "地点；场所",
+   "kana": "ばしょ",
    "stage": "planned"
   },
   {
    "kid": "V1304",
    "front": "はず",
    "back": "应该；理应",
+   "kana": "はず",
    "stage": "planned"
   },
   {
    "kid": "V1305",
    "front": "発音",
    "back": "发音",
+   "kana": "はつおん",
    "stage": "planned"
   },
   {
@@ -530,104 +538,204 @@
  ],
  "sentences": [
   {
-   "id": "S0661",
-   "day": 67,
-   "direction": "zh-ja",
+   "qid": "P-067-00-d83c766cf6bd",
    "prompt": "她把它逐词翻译了一遍。",
-   "knowledge_ids": [
-    "V1365"
+   "options": [
+    "あなたの声が聞けてうれしいわ。",
+    "ヒーターをつけたまま外出した。",
+    "彼女はそれを一語一語翻訳した。",
+    "もっと易しい事を聞いて下さい。"
    ],
-   "hint": ""
+   "h": "d3164334",
+   "oh": [
+    "aa196585",
+    "be83661e",
+    "d3164334",
+    "84e4e179"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0661"
   },
   {
-   "id": "S0662",
-   "day": 67,
-   "direction": "zh-ja",
+   "qid": "P-067-01-d8d35b90e747",
    "prompt": "乔完全被那个女孩迷住了。",
-   "knowledge_ids": [
-    "V1366"
+   "options": [
+    "アーア、絶対うまくいくと思ったのになあ。",
+    "その少年は死んだものとしてあきらめられた。",
+    "安い物を買って、かえって高くつきました。",
+    "ジョーはその女の子にすっかり参っている。"
    ],
-   "hint": ""
+   "h": "fef77d1b",
+   "oh": [
+    "2f237702",
+    "ab3a94b8",
+    "9fec41e6",
+    "fef77d1b"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0662"
   },
   {
-   "id": "S0663",
-   "day": 67,
-   "direction": "zh-ja",
+   "qid": "P-067-02-0e0e311ce022",
    "prompt": "我以零比三输给了他。",
-   "knowledge_ids": [
-    "V1367"
+   "options": [
+    "彼は怒って首を左右に振った。",
+    "ロープから下がっていなさい。",
+    "最初の打者はアウトになった。",
+    "３対０で彼には負けています。"
    ],
-   "hint": ""
+   "h": "4584c2ed",
+   "oh": [
+    "332d9f86",
+    "6e524cfe",
+    "812a999a",
+    "4584c2ed"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0663"
   },
   {
-   "id": "S0664",
-   "day": 67,
-   "direction": "zh-ja",
+   "qid": "P-067-03-60746e201c85",
    "prompt": "山姆对工作很认真。",
-   "knowledge_ids": [
-    "V1368"
+   "options": [
+    "サムは仕事に関してまじめです。",
+    "キリスト教を信仰していますか。",
+    "彼はヨットで太平洋を横断した。",
+    "彼はよく友人をいじめたものだ。"
    ],
-   "hint": ""
+   "h": "b939740c",
+   "oh": [
+    "b939740c",
+    "bd6a6e0c",
+    "dac6bb6d",
+    "25027c50"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0664"
   },
   {
-   "id": "S0665",
-   "day": 67,
-   "direction": "zh-ja",
+   "qid": "P-067-04-9794006ee31e",
    "prompt": "请先喝一口钡餐。",
-   "knowledge_ids": [
-    "V1369"
+   "options": [
+    "この夏はこんがり焼こうと思います。",
+    "あの二人はどうもできているらしい。",
+    "コーヒーは舌が焼けるほど熱かった。",
+    "バリウムをまず一口飲んでください。"
    ],
-   "hint": ""
+   "h": "50f70cb0",
+   "oh": [
+    "21ead46d",
+    "3402efb8",
+    "80f2f031",
+    "50f70cb0"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0665"
   },
   {
-   "id": "S0666",
-   "day": 67,
-   "direction": "zh-ja",
+   "qid": "P-067-05-dd6f8f97b36b",
    "prompt": "红茶或者咖啡，您要哪个。",
-   "knowledge_ids": [
-    "V1370"
+   "options": [
+    "メールの返信を待っています。",
+    "その火事はおととい発生した。",
+    "この煙突は通りが悪くなった。",
+    "紅茶またはコーヒーはいかが？"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0667",
-   "day": 67,
+   "h": "5915e9f0",
+   "oh": [
+    "95cf6c7f",
+    "d0498af0",
+    "9dbab80",
+    "5915e9f0"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0666"
+  },
+  {
+   "qid": "P-067-06-6ae7c5aececd",
    "prompt": "做事太急就会出错。",
-   "knowledge_ids": [
-    "V1371"
+   "options": [
+    "急いで物事をすると間違えますよ。",
+    "タバコにかけられている税は高い。",
+    "ラジオの音を下げてくれませんか。",
+    "この犬は何でもほとんど食べます。"
    ],
-   "hint": ""
+   "h": "b47e6886",
+   "oh": [
+    "b47e6886",
+    "37e548c7",
+    "2be3730e",
+    "1ebdb937"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0667"
   },
   {
-   "id": "S0668",
-   "day": 67,
-   "direction": "ja-zh",
+   "qid": "P-067-07-0073972d5d68",
    "prompt": "周りを見渡しなさい。",
-   "knowledge_ids": [
-    "V1372"
+   "options": [
+    "看看你的周围。",
+    "把左手举起来。",
+    "和朋友看电影。",
+    "有哪些支付方式？"
    ],
-   "hint": ""
+   "h": "dc6d33fb",
+   "oh": [
+    "dc6d33fb",
+    "1efc45f6",
+    "1d346a36",
+    "40f54f95"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0668"
   },
   {
-   "id": "S0669",
-   "day": 67,
-   "direction": "ja-zh",
+   "qid": "P-067-08-c89e36864c50",
    "prompt": "私たちは車の後ろに回って押した。",
-   "knowledge_ids": [
-    "V1373"
+   "options": [
+    "任何事物都有极限。",
+    "我们绕到车后面推。",
+    "我心里有个好主意。",
+    "快到睡觉的时间了。"
    ],
-   "hint": ""
+   "h": "f9ef5dc7",
+   "oh": [
+    "8a1a0d7c",
+    "f9ef5dc7",
+    "1e6c1fa5",
+    "b1e26b52"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0669"
   },
   {
-   "id": "S0670",
-   "day": 67,
-   "direction": "ja-zh",
+   "qid": "P-067-09-1c54539946ce",
    "prompt": "仕事中に漫画の本を読むのはやめること。",
-   "knowledge_ids": [
-    "V1374"
+   "options": [
+    "最近一直没见到他。",
+    "威士忌和红茶很搭。",
+    "新闻每小时播一次。",
+    "上班时不要看漫画。"
    ],
-   "hint": ""
+   "h": "e4763edb",
+   "oh": [
+    "382041d4",
+    "4d423da8",
+    "f70f14e",
+    "e4763edb"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0670"
   }
  ],
  "quiz": [

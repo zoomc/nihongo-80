@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1979",
    "front": "好み",
    "back": "喜好",
+   "kana": "このみ",
    "stage": "planned"
   },
   {
    "kid": "V1980",
    "front": "好む",
    "back": "喜好",
+   "kana": "このむ",
    "stage": "planned"
   },
   {
    "kid": "V1981",
    "front": "コピー",
    "back": "复印；副本",
+   "kana": "コピー",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0469",
    "front": "値",
-   "back": "价值；价格｜音 チ",
+   "back": "价值；价格",
+   "kana": "チ、ね、あたい",
    "stage": "planned"
   },
   {
    "kid": "K0470",
    "front": "突",
-   "back": "突然；刺；撞｜音 トツ、カ",
+   "back": "突然；刺；撞",
+   "kana": "トツ、カ、つ.く",
    "stage": "planned"
   },
   {
    "kid": "V1941",
    "front": "後者",
    "back": "后者",
+   "kana": "こうしゃ",
    "stage": "planned"
   },
   {
    "kid": "V1942",
    "front": "構成",
    "back": "构成",
+   "kana": "こうせい",
    "stage": "planned"
   },
   {
    "kid": "V1943",
    "front": "高速",
    "back": "高速",
+   "kana": "こうそく",
    "stage": "planned"
   },
   {
@@ -528,104 +536,204 @@
  ],
  "sentences": [
   {
-   "id": "S1131",
-   "day": 114,
-   "direction": "zh-ja",
+   "qid": "P-114-00-2f4e4cbb99b7",
    "prompt": "那声音把她从睡梦中吵醒了。",
-   "knowledge_ids": [
-    "V2035"
+   "options": [
+    "その音で彼女は眠りから覚めた。",
+    "タクシーに傘を忘れてしまった。",
+    "この布は値段の割に品質が良い。",
+    "お答えできる立場にありません。"
    ],
-   "hint": ""
+   "h": "4bed7830",
+   "oh": [
+    "4bed7830",
+    "6425ef0e",
+    "73db6bba",
+    "3c490fe4"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1131"
   },
   {
-   "id": "S1132",
-   "day": 114,
-   "direction": "zh-ja",
+   "qid": "P-114-01-231173663d49",
    "prompt": "他生气地左右摇头。",
-   "knowledge_ids": [
-    "V2036"
+   "options": [
+    "なんという馬鹿なことだろう。",
+    "毎月のガス代はいくらですか。",
+    "大学で何をするつもりですか。",
+    "彼は怒って首を左右に振った。"
    ],
-   "hint": ""
+   "h": "332d9f86",
+   "oh": [
+    "c32a4fad",
+    "a5257803",
+    "5eb6936f",
+    "332d9f86"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1132"
   },
   {
-   "id": "S1133",
-   "day": 114,
-   "direction": "zh-ja",
+   "qid": "P-114-02-e3fff515ac69",
    "prompt": "她把盘子放在桌上。",
-   "knowledge_ids": [
-    "V2037"
+   "options": [
+    "ここでは煙草は禁止されています。",
+    "彼女はテーブルの上に皿を置いた。",
+    "コックさんは少しもかけていない。",
+    "ジョンは門のところまで出てきた。"
    ],
-   "hint": ""
+   "h": "d154e3cf",
+   "oh": [
+    "ecc80e4d",
+    "d154e3cf",
+    "9948ee99",
+    "7aac2a83"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1133"
   },
   {
-   "id": "S1134",
-   "day": 114,
-   "direction": "zh-ja",
+   "qid": "P-114-03-61a7815643f3",
    "prompt": "那部小说使他的名声更高了。",
-   "knowledge_ids": [
-    "V2038"
+   "options": [
+    "ロジャーはパーティーが大好きだ。",
+    "その小説は彼の名声を更に高めた。",
+    "コックさんは少しもかけていない。",
+    "お尋ねしてもよろしいでしょうか。"
    ],
-   "hint": ""
+   "h": "c4f79a06",
+   "oh": [
+    "e9d09b67",
+    "c4f79a06",
+    "9948ee99",
+    "1317d3c0"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1134"
   },
   {
-   "id": "S1135",
-   "day": 114,
-   "direction": "zh-ja",
+   "qid": "P-114-04-7f8796310646",
    "prompt": "他像猴子一样爬上了树。",
-   "knowledge_ids": [
-    "V2039"
+   "options": [
+    "このコップをミルクで満たした。",
+    "彼は猿のように木によじ登った。",
+    "彼は大学院に進学しないだろう。",
+    "この事件に手を貸してください。"
    ],
-   "hint": ""
+   "h": "9ae558c6",
+   "oh": [
+    "69585dd2",
+    "9ae558c6",
+    "f470c15a",
+    "3a859cc4"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1135"
   },
   {
-   "id": "S1136",
-   "day": 114,
-   "direction": "zh-ja",
+   "qid": "P-114-05-237a466b6bc5",
    "prompt": "美好的旧时光已经逝去，再也不会回来。",
-   "knowledge_ids": [
-    "V2040"
+   "options": [
+    "デパートの屋上にアドバルーンが上がっている。",
+    "これがいわゆる「天ぷら」というものです。",
+    "当時はきれいな水がこの川にも流れていた。",
+    "古き良き時代は去って、二度ともどってこない。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1137",
-   "day": 114,
+   "h": "45662e4e",
+   "oh": [
+    "9bc9f740",
+    "b094a64a",
+    "e9cf2459",
+    "45662e4e"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1136"
+  },
+  {
+   "qid": "P-114-06-7c34e38d5d78",
    "prompt": "这么吵是怎么回事？",
-   "knowledge_ids": [
-    "V2041"
+   "options": [
+    "この騒ぎはどうしたの。",
+    "すっかり忘れていました。",
+    "この小麦は粉にされる。",
+    "あの長髪の青年は粗野だ。"
    ],
-   "hint": ""
+   "h": "b0895bb0",
+   "oh": [
+    "b0895bb0",
+    "5ac78734",
+    "8fa39b7e",
+    "bc046002"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1137"
   },
   {
-   "id": "S1138",
-   "day": 114,
-   "direction": "ja-zh",
+   "qid": "P-114-07-6b6ca2b8c2a0",
    "prompt": "あなたは競技に参加しましたか。",
-   "knowledge_ids": [
-    "V2042"
+   "options": [
+    "部长已经到了吗？",
+    "下下周四怎么样？",
+    "你参加比赛了吗？",
+    "恶魔也许会来哦。"
    ],
-   "hint": ""
+   "h": "51a648e8",
+   "oh": [
+    "542308b3",
+    "aab0ec66",
+    "51a648e8",
+    "e02eee05"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1138"
   },
   {
-   "id": "S1139",
-   "day": 114,
-   "direction": "ja-zh",
+   "qid": "P-114-08-2078b5d565eb",
    "prompt": "参考のためにカタログをお送りください。",
-   "knowledge_ids": [
-    "V2043"
+   "options": [
+    "地震时请到高处避难。",
+    "你会按能力逐步提高。",
+    "那个孩子朝狗扔石头。",
+    "请寄一份目录供参考。"
    ],
-   "hint": ""
+   "h": "f28a2368",
+   "oh": [
+    "36ff2a02",
+    "d44d0121",
+    "b8585706",
+    "f28a2368"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1139"
   },
   {
-   "id": "S1140",
-   "day": 114,
-   "direction": "ja-zh",
+   "qid": "P-114-09-8b009df863fc",
    "prompt": "私たちの計画に賛成してくれますか。",
-   "knowledge_ids": [
-    "V2044"
+   "options": [
+    "她委托他去筹集资金。",
+    "读书的时间越来越少。",
+    "你赞成我们的计划吗？",
+    "对不起，我误会你了。"
    ],
-   "hint": ""
+   "h": "4a12bcc1",
+   "oh": [
+    "a2dbaa37",
+    "fdc800c0",
+    "4a12bcc1",
+    "eeb23946"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1140"
   }
  ],
  "quiz": [

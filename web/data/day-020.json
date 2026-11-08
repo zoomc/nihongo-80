@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0532",
    "front": "御飯",
    "back": "米饭；饭",
+   "kana": "ごはん",
    "stage": "planned"
   },
   {
    "kid": "V0533",
    "front": "コピーする",
    "back": "复印",
+   "kana": "コピーする",
    "stage": "planned"
   },
   {
    "kid": "V0534",
    "front": "困る",
    "back": "为难；困扰",
+   "kana": "こまる",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0162",
    "front": "左",
-   "back": "左；左边｜音 サ、シャ",
+   "back": "左；左边",
+   "kana": "サ、シャ、ひだり",
    "stage": "planned"
   },
   {
    "kid": "K0163",
    "front": "休",
-   "back": "休息；休假｜音 キュウ",
+   "back": "休息；休假",
+   "kana": "キュウ、やす.む、やす.まる、やす.める",
    "stage": "planned"
   },
   {
    "kid": "V0493",
    "front": "キロ",
    "back": "公里；公斤",
+   "kana": "キロ",
    "stage": "planned"
   },
   {
    "kid": "V0494",
    "front": "銀行",
    "back": "银行",
+   "kana": "ぎんこう",
    "stage": "planned"
   },
   {
    "kid": "V0495",
    "front": "ください",
    "back": "请给我",
+   "kana": "ください",
    "stage": "planned"
   },
   {
@@ -530,104 +538,204 @@
  ],
  "sentences": [
   {
-   "id": "S0191",
-   "day": 20,
-   "direction": "zh-ja",
+   "qid": "P-020-00-5d7a7de5756b",
    "prompt": "我把这个杯子倒满了牛奶。",
-   "knowledge_ids": [
-    "V0531"
+   "options": [
+    "この漢字はどういう意味ですか。",
+    "このリンゴがいちばんおいしい。",
+    "このコップをミルクで満たした。",
+    "レーンコートのボタンがとれた。"
    ],
-   "hint": ""
+   "h": "69585dd2",
+   "oh": [
+    "f391f35e",
+    "c8943c06",
+    "69585dd2",
+    "933240ec"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0191"
   },
   {
-   "id": "S0192",
-   "day": 20,
-   "direction": "zh-ja",
+   "qid": "P-020-01-72f503af878a",
    "prompt": "米饭和面包你要哪个？",
-   "knowledge_ids": [
-    "V0532"
+   "options": [
+    "その時はシャワーを浴びていた。",
+    "フクロウは昼間は目が見えない。",
+    "この制度には改良の余地がない。",
+    "ご飯とパンどちらがいいですか。"
    ],
-   "hint": ""
+   "h": "4c7a2886",
+   "oh": [
+    "bc9b8d60",
+    "bd30935a",
+    "849b2eb5",
+    "4c7a2886"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0192"
   },
   {
-   "id": "S0193",
-   "day": 20,
-   "direction": "zh-ja",
+   "qid": "P-020-02-2904e6dacec1",
    "prompt": "请在要复印的那几页贴上标签。",
-   "knowledge_ids": [
-    "V0533"
+   "options": [
+    "これがいわゆる「天ぷら」というものです。",
+    "コピーするページに付箋をつけておいてください。",
+    "彼か私のどちらかが大会に出席しなければならない。",
+    "ほとんど空なのでガソリンを入れなくてはなりません。"
    ],
-   "hint": ""
+   "h": "4859b34d",
+   "oh": [
+    "b094a64a",
+    "4859b34d",
+    "4e3ac675",
+    "a35826ea"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0193"
   },
   {
-   "id": "S0194",
-   "day": 20,
-   "direction": "zh-ja",
+   "qid": "P-020-03-10451d3e61ae",
    "prompt": "时间不够，我很为难。",
-   "knowledge_ids": [
-    "V0534"
+   "options": [
+    "その黄色いのをいただきましょう。",
+    "ニューススタンドで聞いて下さい。",
+    "時間がなくてたいへん困っている。",
+    "インドの人口はどのくらいですか。"
    ],
-   "hint": ""
+   "h": "474eb7c9",
+   "oh": [
+    "725d19ee",
+    "8d525137",
+    "474eb7c9",
+    "4c5d8293"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0194"
   },
   {
-   "id": "S0195",
-   "day": 20,
-   "direction": "zh-ja",
+   "qid": "P-020-04-c370a8a921cf",
    "prompt": "打扰您说话了，对不起。",
-   "knowledge_ids": [
-    "V0535"
+   "options": [
+    "お話し中、ごめんなさい。",
+    "あなたは数学が得意ですか。",
+    "あなたと席を交換しよう。",
+    "私は新しい背広を買った。"
    ],
-   "hint": ""
+   "h": "18f2084e",
+   "oh": [
+    "18f2084e",
+    "169afc24",
+    "4b92c51b",
+    "7bf6ebb6"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0195"
   },
   {
-   "id": "S0196",
-   "day": 20,
-   "direction": "zh-ja",
+   "qid": "P-020-05-ecce746679d5",
    "prompt": "这是我哥哥。很帅吧。",
-   "knowledge_ids": [
-    "V0536"
+   "options": [
+    "その日は実にすばらしい日だった。",
+    "これは兄です。かっこいいですね。",
+    "ムーリエルは２０歳になりました。",
+    "その黄色いのをいただきましょう。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0197",
-   "day": 20,
+   "h": "d769ff77",
+   "oh": [
+    "5734bd46",
+    "d769ff77",
+    "18597f07",
+    "725d19ee"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0196"
+  },
+  {
+   "qid": "P-020-06-fcf1db57aabb",
    "prompt": "这个月销售额不好。",
-   "knowledge_ids": [
-    "V0537"
+   "options": [
+    "こんばんは、お元気ですか。",
+    "彼女のお見舞いに行こうよ。",
+    "私は最低２マイルは歩ける。",
+    "今月の売り上げはよくない。"
    ],
-   "hint": ""
+   "h": "61acb9a7",
+   "oh": [
+    "81d2ed7",
+    "fc7b4a8b",
+    "133a9034",
+    "61acb9a7"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0197"
   },
   {
-   "id": "S0198",
-   "day": 20,
-   "direction": "ja-zh",
+   "qid": "P-020-07-f527a2f7ddc2",
    "prompt": "こんな本を読んで何になるのか。",
-   "knowledge_ids": [
-    "V0538"
+   "options": [
+    "读这种书有什么用呢。",
+    "她是个地道的咖啡派。",
+    "地震时请到高处避难。",
+    "他们坐在餐厅里面。"
    ],
-   "hint": ""
+   "h": "b0bbf127",
+   "oh": [
+    "b0bbf127",
+    "2dd373c1",
+    "36ff2a02",
+    "7c1ef408"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0198"
   },
   {
-   "id": "S0199",
-   "day": 20,
-   "direction": "ja-zh",
+   "qid": "P-020-08-c26eeaf5506f",
    "prompt": "今晩はパーティーがあるのかなあ。",
-   "knowledge_ids": [
-    "V0539"
+   "options": [
+    "今晚是有聚会吗？",
+    "进去前请先敲门。",
+    "英语是国际语言。",
+    "我很乐意帮助你。"
    ],
-   "hint": ""
+   "h": "6ed5872b",
+   "oh": [
+    "6ed5872b",
+    "d6861e47",
+    "c39153d7",
+    "e9f699d2"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0199"
   },
   {
-   "id": "S0200",
-   "day": 20,
-   "direction": "ja-zh",
+   "qid": "P-020-09-cb4461c2adfc",
    "prompt": "さあ、パーティーをおしまいにしよう。",
-   "knowledge_ids": [
-    "V0540"
+   "options": [
+    "他打橄榄球的时候受了伤。",
+    "好了，聚会就到此结束吧。",
+    "我不小心说漏了他生病的事。",
+    "汤姆应该马上就要到这里了。"
    ],
-   "hint": ""
+   "h": "5b171b12",
+   "oh": [
+    "45de1693",
+    "5b171b12",
+    "2844a1ed",
+    "61e77abd"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0200"
   }
  ],
  "quiz": [

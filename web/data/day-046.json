@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0977",
    "front": "会議室",
    "back": "会议室",
+   "kana": "かいぎしつ",
    "stage": "planned"
   },
   {
    "kid": "V0978",
    "front": "会場",
    "back": "会场",
+   "kana": "かいじょう",
    "stage": "planned"
   },
   {
    "kid": "V0979",
    "front": "会話",
    "back": "会话",
+   "kana": "かいわ",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0232",
    "front": "研",
-   "back": "磨；钻研｜音 ケン",
+   "back": "磨；钻研",
+   "kana": "ケン、と.ぐ",
    "stage": "planned"
   },
   {
    "kid": "K0233",
    "front": "足",
-   "back": "脚；足够；加上｜音 ソク",
+   "back": "脚；足够；加上",
+   "kana": "ソク、あし、た.りる、た.る、た.す",
    "stage": "planned"
   },
   {
    "kid": "V0939",
    "front": "オートバイ",
    "back": "摩托车",
+   "kana": "オートバイ",
    "stage": "planned"
   },
   {
    "kid": "V0940",
    "front": "おかげ",
    "back": "多亏；托福",
+   "kana": "おかげ",
    "stage": "planned"
   },
   {
    "kid": "V0941",
    "front": "おかしい",
    "back": "奇怪；可笑",
+   "kana": "おかしい",
    "stage": "planned"
   },
   {
@@ -544,104 +552,204 @@
  ],
  "sentences": [
   {
-   "id": "S0451",
-   "day": 46,
-   "direction": "zh-ja",
+   "qid": "P-046-00-47b436d87ae8",
    "prompt": "迈克坐公交上学。",
-   "knowledge_ids": [
-    "V0999"
+   "options": [
+    "それは私が見たことのない景色だ。",
+    "マイクはバスで学校に通っている。",
+    "その黄色いのをいただきましょう。",
+    "これらの語をノートに書きなさい。"
    ],
-   "hint": ""
+   "h": "1062eb67",
+   "oh": [
+    "af5a2328",
+    "1062eb67",
+    "725d19ee",
+    "7a4a4062"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0451"
   },
   {
-   "id": "S0452",
-   "day": 46,
-   "direction": "zh-ja",
+   "qid": "P-046-01-0222d0bd6ce7",
    "prompt": "啤酒瓶是玻璃做的。",
-   "knowledge_ids": [
-    "V1000"
+   "options": [
+    "いいクリスマスを過ごしましたか。",
+    "このソファーは場所を取りすぎる。",
+    "パスポートを見せてくれませんか。",
+    "ビールびんはガラスでできている。"
    ],
-   "hint": ""
+   "h": "45e4dbee",
+   "oh": [
+    "a01fba18",
+    "fa74e348",
+    "e4f54f40",
+    "45e4dbee"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0452"
   },
   {
-   "id": "S0453",
-   "day": 46,
-   "direction": "zh-ja",
+   "qid": "P-046-02-9c224c2c8725",
    "prompt": "他们再也没见过面。",
-   "knowledge_ids": [
-    "V1001"
+   "options": [
+    "あなたをケパと呼ぶことにします。",
+    "彼らは二度と会うことはなかった。",
+    "ここでは煙草は禁止されています。",
+    "ホッチキスを貸してくれませんか。"
    ],
-   "hint": ""
+   "h": "5f483306",
+   "oh": [
+    "27fecd16",
+    "5f483306",
+    "ecc80e4d",
+    "1b2dc8f1"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0453"
   },
   {
-   "id": "S0454",
-   "day": 46,
-   "direction": "zh-ja",
+   "qid": "P-046-03-15fdc2fc96a6",
    "prompt": "那件湿衬衫很快就会干。",
-   "knowledge_ids": [
-    "V1002"
+   "options": [
+    "そのぬれたシャツはすぐに乾くだろう。",
+    "だれかがドアをどんどんたたいている。",
+    "その泥棒は刑事を見ると走って逃げた。",
+    "彼はそのことで神経をとがらせている。"
    ],
-   "hint": ""
+   "h": "a042cc96",
+   "oh": [
+    "a042cc96",
+    "a5411c72",
+    "ea10fb03",
+    "db5e9ca4"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0454"
   },
   {
-   "id": "S0455",
-   "day": 46,
-   "direction": "zh-ja",
+   "qid": "P-046-04-2e8f3a8a49c5",
    "prompt": "那就改打牌吧。",
-   "knowledge_ids": [
-    "V1003"
+   "options": [
+    "ラジオの音を下げてくれませんか。",
+    "その象は動物園に連れてこられた。",
+    "その代わりにトランプをしようよ。",
+    "この犬は何でもほとんど食べます。"
    ],
-   "hint": ""
+   "h": "420672f9",
+   "oh": [
+    "2be3730e",
+    "f9632f0f",
+    "420672f9",
+    "1ebdb937"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0455"
   },
   {
-   "id": "S0456",
-   "day": 46,
-   "direction": "zh-ja",
+   "qid": "P-046-05-495d373a8121",
    "prompt": "我的邮箱地址变了。",
-   "knowledge_ids": [
-    "V1004"
+   "options": [
+    "先生は私たちを二つのグループに分けた。",
+    "私のE-mailアドレスが変わりました。",
+    "こんな余計な機能なんでつけたんだろう。",
+    "このお客様は田中さんが担当しています。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0457",
-   "day": 46,
+   "h": "6c61f1e5",
+   "oh": [
+    "13bdf689",
+    "6c61f1e5",
+    "33aba312",
+    "29b7257a"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0456"
+  },
+  {
+   "qid": "P-046-06-48ee2a7dfed5",
    "prompt": "你应该为家人着想。",
-   "knowledge_ids": [
-    "V1005"
+   "options": [
+    "また別のときにチェスをしましょう。",
+    "その木には実がたわわになっていた。",
+    "ライオンとヒョウの違いは何ですか。",
+    "あなたは家族の事を考えるべきです。"
    ],
-   "hint": ""
+   "h": "13384023",
+   "oh": [
+    "a177b2a7",
+    "71531757",
+    "b866895a",
+    "13384023"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0457"
   },
   {
-   "id": "S0458",
-   "day": 46,
-   "direction": "ja-zh",
+   "qid": "P-046-07-83409b51e16b",
    "prompt": "なぜ看護婦になりたいのですか。",
-   "knowledge_ids": [
-    "V1006"
+   "options": [
+    "父亲劝我去学钢琴。",
+    "你为什么想当护士？",
+    "风轻柔地拂过树丛。",
+    "鞋底粘上了口香糖。"
    ],
-   "hint": ""
+   "h": "28ee32c5",
+   "oh": [
+    "20580166",
+    "28ee32c5",
+    "ce06f34d",
+    "f923a517"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0458"
   },
   {
-   "id": "S0459",
-   "day": 46,
-   "direction": "ja-zh",
+   "qid": "P-046-08-03b643295e7a",
    "prompt": "彼は親切というよりむしろ気がやさしい。",
-   "knowledge_ids": [
-    "V1007"
+   "options": [
+    "与其说他热心，不如说心地温柔。",
+    "你为什么拒绝了他的提议？",
+    "好了，聚会就到此结束吧。",
+    "你已经失去了集中注意力的能力。"
    ],
-   "hint": ""
+   "h": "70a95be2",
+   "oh": [
+    "70a95be2",
+    "59938dd",
+    "5b171b12",
+    "fd00d321"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0459"
   },
   {
-   "id": "S0460",
-   "day": 46,
-   "direction": "ja-zh",
+   "qid": "P-046-09-09f5b3daf1d1",
    "prompt": "危険は見くびるとすぐやってくる。",
-   "knowledge_ids": [
-    "V1008"
+   "options": [
+    "我就当你的第一个病人吧。",
+    "一轻视危险，危险马上就来。",
+    "明年你应该就能滑得很好吧。",
+    "母亲不戴眼镜就没法看书。"
    ],
-   "hint": ""
+   "h": "fc180e94",
+   "oh": [
+    "40e562c4",
+    "fc180e94",
+    "3d2b24e6",
+    "62947b19"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0460"
   }
  ],
  "quiz": [

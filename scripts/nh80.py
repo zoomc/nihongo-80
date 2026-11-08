@@ -245,14 +245,17 @@ def _build_v5(root, conn):
     import curriculum_v5 as c5
     data = c5.build()
     from quiz_v5 import day_questions
+    from sentence_choices import build_for_day as sentence_questions
+    sentence_rows = core.read_jsonl(root / "knowledge/seeds/sentences.jsonl")
     tables = {name: {x["id"]: x for x in core.read_jsonl(root / "knowledge/seeds" / (name + ".jsonl"))}
               for name in ("vocabulary", "grammar", "kanji", "materials")}
     keys = {}
     with conn:
         for day in data["days"]:
             qs = day_questions(day, tables["vocabulary"], tables["grammar"], tables["kanji"], tables["materials"])
-            day["question_ids"] = [q["qid"] for q in qs]
-            for q in qs:
+            sqs = sentence_questions(day, sentence_rows)
+            day["question_ids"] = [q["qid"] for q in qs] + [q["qid"] for q in sqs if not q["optional"]]
+            for q in qs + sqs:
                 q["prompt_ja"] = q["prompt"]
                 q["source"] = "v5-generated"
                 q["review_status"] = "ai_draft"
@@ -552,6 +555,12 @@ def cmd_import_web(args):
                 (review_dup if res.get("duplicate") else review_applied).append(kid)
             except (ValueError, KeyError, TypeError) as e:
                 review_bad.append("%s(%s)" % (kid, e))
+        if data.get("practice_mode") == "choice":
+            # Explicit v8 web choice mode; never label this evidence as independent production.
+            prior = conn.execute("SELECT payload FROM sessions WHERE day=?", (data["day"],)).fetchone()
+            session_payload = json.loads(prior["payload"] or "{}")
+            session_payload["practice_mode"] = "choice"
+            conn.execute("UPDATE sessions SET payload=? WHERE day=?", (jdump(session_payload), data["day"]))
         conn.execute("UPDATE sessions SET minutes=? WHERE day=?", (data["minutes"], data["day"]))
         audit(conn, "import_web_result", {"day": data["day"], "session": data["session"],
                                           "n": len(data["results"]), "applied": len(applied),
@@ -561,7 +570,15 @@ def cmd_import_web(args):
         if disagreements:
             audit(conn, "import_web_disagreement", {"day": data["day"], "items": disagreements})
         conn.commit()
+        choice_completion = None
+        if data.get("practice_mode") == "choice":
+            import io
+            from contextlib import redirect_stdout
+            with redirect_stdout(io.StringIO()) as completion_buffer:
+                cmd_finish_day(argparse.Namespace(root=str(r),day=data["day"],minutes=data["minutes"]))
+            choice_completion = json.loads(completion_buffer.getvalue())
         out({"ok": True, "day": data["day"], "session_id": sid,
+             "choice_completion": choice_completion,
              "applied": applied, "duplicate_skipped": dup,
              "open_pending_need_ai_grade": pending,
              "regraded": regraded,
@@ -652,8 +669,10 @@ def cmd_finish_day(args):
         acc = round(sum(x["correct"] for x in scored) / len(scored), 4) if scored else None
         output_review = conn.execute("SELECT payload FROM output_reviews WHERE day=?", (day,)).fetchone()
         output_confirmed = bool(output_review and json.loads(output_review["payload"]).get("accepted"))
+        daily_payload = json.loads(conn.execute("SELECT payload FROM sessions WHERE day=?", (day,)).fetchone()["payload"] or "{}")
+        choice_mode = daily_payload.get("practice_mode") == "choice"
         passed = (acc is not None and acc >= 0.70 and bool(expected) and expected <= {x["qid"] for x in scored}
-                  and output_confirmed)
+                  and (choice_mode or output_confirmed))
         status = "finished" if passed else "incomplete"
         summary = ("Day %d 完成：作答 %d（已判分 %d），正确率 %s，错误 %s。"
                    "完成条件 %s。%s") % (
@@ -679,7 +698,7 @@ def cmd_finish_day(args):
         out({"ok": True, "day": day, "session_id": sid, "attempts": len(rows),
              "accuracy": acc, "passed": passed, "status": status,
              "completed_days": completed, "incomplete_days": incomplete,
-             "pending_open": pending, "output_confirmed": output_confirmed,
+             "pending_open": pending, "output_confirmed": output_confirmed, "practice_mode": "choice" if choice_mode else "teacher",
              "summary": summary, "backup": bk["backup"] if bk else None,
              "next": ("python3 scripts/nh80.py start-day %d" % (day + 1)) if day < 150 else "打开 resources.html 进行 N3 官方自测与薄弱项复习"})
     finally:

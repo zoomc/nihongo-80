@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0646",
    "front": "勤める",
    "back": "任职",
+   "kana": "つとめる",
    "stage": "planned"
   },
   {
    "kid": "V0647",
    "front": "つまらない",
    "back": "无聊",
+   "kana": "つまらない",
    "stage": "planned"
   },
   {
    "kid": "V0648",
    "front": "冷たい",
    "back": "冷；冷淡",
+   "kana": "つめたい",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0091",
    "front": "野",
-   "back": "野；原野；野菜｜音 ヤ",
+   "back": "野；原野；野菜",
+   "kana": "ヤ、の",
    "stage": "planned"
   },
   {
    "kid": "K0092",
    "front": "菜",
-   "back": "菜；蔬菜｜音 サイ",
+   "back": "菜；蔬菜",
+   "kana": "サイ、な",
    "stage": "planned"
   },
   {
    "kid": "V0608",
    "front": "それでは",
    "back": "那么",
+   "kana": "それでは",
    "stage": "planned"
   },
   {
    "kid": "V0609",
    "front": "大学",
    "back": "大学",
+   "kana": "だいがく",
    "stage": "planned"
   },
   {
    "kid": "V0610",
    "front": "大使館",
    "back": "大使馆",
+   "kana": "たいしかん",
    "stage": "planned"
   },
   {
@@ -531,104 +539,204 @@
  ],
  "sentences": [
   {
-   "id": "S0251",
-   "day": 26,
-   "direction": "zh-ja",
+   "qid": "P-026-00-b3ed62ffb9e8",
    "prompt": "我的手都冻僵了。",
-   "knowledge_ids": [
-    "V0648"
+   "options": [
+    "八日から休みます。",
+    "彼は重責を解かれた。",
+    "それは無理な注文だ。",
+    "もう手が冷たくって。"
    ],
-   "hint": ""
+   "h": "36fdb0e",
+   "oh": [
+    "4d6dbc76",
+    "93f07e6c",
+    "3097222f",
+    "36fdb0e"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0251"
   },
   {
-   "id": "S0252",
-   "day": 26,
-   "direction": "zh-ja",
+   "qid": "P-026-01-94d98c78356c",
    "prompt": "老虎和狮子哪个更强？",
-   "knowledge_ids": [
-    "V0649"
+   "options": [
+    "タバコにかけられている税は高い。",
+    "ルーシーは今台所にいるでしょう。",
+    "トラとライオンとどちらが強いか。",
+    "おぼれかけた人は息を吹き返した。"
    ],
-   "hint": ""
+   "h": "a0452d41",
+   "oh": [
+    "37e548c7",
+    "c439c603",
+    "a0452d41",
+    "9d54542a"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0252"
   },
   {
-   "id": "S0253",
-   "day": 26,
-   "direction": "zh-ja",
+   "qid": "P-026-02-1afe9d425836",
    "prompt": "这里有一口没把手的锅。",
-   "knowledge_ids": [
-    "V0650"
+   "options": [
+    "ここに手のないナベがある。",
+    "彼女には常識が欠けている。",
+    "写真をどうぞ見せて下さい。",
+    "全国民が平和を望んでいる。"
    ],
-   "hint": ""
+   "h": "4bd0565",
+   "oh": [
+    "4bd0565",
+    "53186bea",
+    "4a68c9ba",
+    "ad056ed6"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0253"
   },
   {
-   "id": "S0254",
-   "day": 26,
-   "direction": "zh-ja",
+   "qid": "P-026-03-1319b18bb3c0",
    "prompt": "你把那场音乐会录下来了吗？",
-   "knowledge_ids": [
-    "V0651"
+   "options": [
+    "君はそのコンサートをテープにとったか。",
+    "こんな余計な機能なんでつけたんだろう。",
+    "その写真は空から写されたものである。",
+    "彼は私の警告に全く注意を払わなかった。"
    ],
-   "hint": ""
+   "h": "843b69e0",
+   "oh": [
+    "843b69e0",
+    "33aba312",
+    "45659cac",
+    "c5b749e7"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0254"
   },
   {
-   "id": "S0255",
-   "day": 26,
-   "direction": "zh-ja",
+   "qid": "P-026-04-a129216ff98d",
    "prompt": "我点的不是这张桌子。",
-   "knowledge_ids": [
-    "V0652"
+   "options": [
+    "それはすべて天候に依存している。",
+    "ジョンは門のところまで出てきた。",
+    "このテーブルを頼んだのではない。",
+    "スケートはとてもおもしろかった。"
    ],
-   "hint": ""
+   "h": "e76e4b0",
+   "oh": [
+    "3189be4f",
+    "7aac2a83",
+    "e76e4b0",
+    "ebd819a3"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0255"
   },
   {
-   "id": "S0256",
-   "day": 26,
-   "direction": "zh-ja",
+   "qid": "P-026-05-176e5fe2accc",
    "prompt": "这台录音机不是新的。",
-   "knowledge_ids": [
-    "V0653"
+   "options": [
+    "彼女は成長して美しい婦人になった。",
+    "これらの単語を一つずつ覚えなさい。",
+    "このテープレコーダーは新しくない。",
+    "掲示には「全席予約済み」とあった。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0257",
-   "day": 26,
+   "h": "37f9d281",
+   "oh": [
+    "f14714b1",
+    "b1de96c0",
+    "37f9d281",
+    "ef57930"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0256"
+  },
+  {
+   "qid": "P-026-06-60ece92459b7",
    "prompt": "与其出门，我更想待着不动。",
-   "knowledge_ids": [
-    "V0654"
+   "options": [
+    "パーティーはたのしかったですか。",
+    "出かけるよりもじっとしていたい。",
+    "あの先生に質問してもいいですよ。",
+    "マイクはバスで学校に通っている。"
    ],
-   "hint": ""
+   "h": "49b5e16b",
+   "oh": [
+    "4939410a",
+    "49b5e16b",
+    "c64703e1",
+    "1062eb67"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0257"
   },
   {
-   "id": "S0258",
-   "day": 26,
-   "direction": "ja-zh",
+   "qid": "P-026-07-6dc5d7b56950",
    "prompt": "書かねばならない手紙があります。",
-   "knowledge_ids": [
-    "V0655"
+   "options": [
+    "你为什么想当护士？",
+    "其中重要的是后者。",
+    "我有一封信必须写。",
+    "台风导致学校停课。"
    ],
-   "hint": ""
+   "h": "9e93be90",
+   "oh": [
+    "28ee32c5",
+    "6cc1f774",
+    "9e93be90",
+    "fcde9f0a"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0258"
   },
   {
-   "id": "S0259",
-   "day": 26,
-   "direction": "ja-zh",
+   "qid": "P-026-08-f51b8c6e78f4",
    "prompt": "B2出口から地上に出てください。",
-   "knowledge_ids": [
-    "V0656"
+   "options": [
+    "委员会由八名成员组成。",
+    "他正处在男人的壮年。",
+    "我手边总放着三本辞典。",
+    "请从B2出口上到地面。"
    ],
-   "hint": ""
+   "h": "12ff463b",
+   "oh": [
+    "27f8744e",
+    "cfa9128b",
+    "84b99cfe",
+    "12ff463b"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0259"
   },
   {
-   "id": "S0260",
-   "day": 26,
-   "direction": "ja-zh",
+   "qid": "P-026-09-b11f669a0f60",
    "prompt": "そのテストはむずかしかった。",
-   "knowledge_ids": [
-    "V0657"
+   "options": [
+    "事态非常严重。",
+    "戏正好准时开演。",
+    "那场考试很难。",
+    "用图来说明吧。"
    ],
-   "hint": ""
+   "h": "b3de9e6c",
+   "oh": [
+    "7e196bc1",
+    "998bd8d4",
+    "b3de9e6c",
+    "efda7619"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0260"
   }
  ],
  "quiz": [

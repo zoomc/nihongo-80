@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0292",
    "front": "代理",
    "back": "代理；代理人",
+   "kana": "だいり",
    "stage": "planned"
   },
   {
    "kid": "V0293",
    "front": "家賃",
    "back": "房租",
+   "kana": "やちん",
    "stage": "planned"
   },
   {
    "kid": "V0294",
    "front": "契約",
    "back": "合同；签约",
+   "kana": "けいやく",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0329",
    "front": "初",
-   "back": "最初；初次｜音 ショ",
+   "back": "最初；初次",
+   "kana": "ショ、はじ.め、はじ.めて、はつ、はつ-、うい-、-そ.める、-ぞ.め",
    "stage": "planned"
   },
   {
    "kid": "K0330",
    "front": "指",
-   "back": "手指；指｜音 シ",
+   "back": "手指；指",
+   "kana": "シ、ゆび、さ.す、-さ.し",
    "stage": "planned"
   },
   {
    "kid": "V0254",
    "front": "操作",
    "back": "操作（机器/界面）",
+   "kana": "そうさ",
    "stage": "planned"
   },
   {
    "kid": "V0255",
    "front": "渋滞",
    "back": "堵车；拥堵",
+   "kana": "じゅうたい",
    "stage": "planned"
   },
   {
    "kid": "V0256",
    "front": "事故",
    "back": "事故；意外事件",
+   "kana": "じこ",
    "stage": "planned"
   },
   {
@@ -556,104 +564,204 @@
  ],
  "sentences": [
   {
-   "id": "S0781",
-   "day": 79,
-   "direction": "zh-ja",
+   "qid": "P-079-00-c4050ff5a427",
    "prompt": "女性比例超过一半。",
-   "knowledge_ids": [
-    "V0328"
+   "options": [
+    "事故の原因を調べています。",
+    "女性の割合は半分以上です。",
+    "でも、これで１つ貸しだね。",
+    "彼は一時ここに住んでいた。"
    ],
-   "hint": ""
+   "h": "d31fa855",
+   "oh": [
+    "820e254f",
+    "d31fa855",
+    "8347f85c",
+    "3732accd"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0781"
   },
   {
-   "id": "S0782",
-   "day": 79,
-   "direction": "zh-ja",
+   "qid": "P-079-01-45aab78ca1eb",
    "prompt": "市里对居民进行了调查。",
-   "knowledge_ids": [
-    "V0329"
+   "options": [
+    "昨夜はぐっすり眠れなかった。",
+    "彼は仕事の上では私の先輩だ。",
+    "最近、物価が上がっています。",
+    "市が住民に調査を行いました。"
    ],
-   "hint": ""
+   "h": "2b753e0a",
+   "oh": [
+    "c36eaddd",
+    "4452aac8",
+    "bc6a316f",
+    "2b753e0a"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0782"
   },
   {
-   "id": "S0783",
-   "day": 79,
-   "direction": "zh-ja",
+   "qid": "P-079-02-a704d59f157a",
    "prompt": "结果明天公布。",
-   "knowledge_ids": [
-    "V0330"
+   "options": [
+    "彼は旗を上下に動かした。",
+    "結果は明日発表されます。",
+    "人は意識のある生き物だ。",
+    "私は読書に集中していた。"
    ],
-   "hint": ""
+   "h": "7ba95219",
+   "oh": [
+    "9fda0a9d",
+    "7ba95219",
+    "5eb9d09f",
+    "625b4282"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0783"
   },
   {
-   "id": "S0784",
-   "day": 79,
-   "direction": "zh-ja",
+   "qid": "P-079-03-ebaa0db8dc38",
    "prompt": "预计雨夜里会停。",
-   "knowledge_ids": [
-    "V0331"
+   "options": [
+    "「彼女は若いですか」「はい」",
+    "この紙はインクを吸わない。",
+    "この線の終点はどこですか。",
+    "雨は夜には止む見込みです。"
    ],
-   "hint": ""
+   "h": "e54102ce",
+   "oh": [
+    "6bc44878",
+    "1efc66f7",
+    "4b98e1d7",
+    "e54102ce"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0784"
   },
   {
-   "id": "S0785",
-   "day": 79,
-   "direction": "zh-ja",
+   "qid": "P-079-04-2ad69fe56a08",
    "prompt": "请举具体例子。",
-   "knowledge_ids": [
-    "V0332"
+   "options": [
+    "勢いに流されているんですよ。",
+    "市が住民に調査を行いました。",
+    "ギターをひくのはおもしろい。",
+    "具体的な例を教えてください。"
    ],
-   "hint": ""
+   "h": "f3391367",
+   "oh": [
+    "75832468",
+    "2b753e0a",
+    "f7aedaae",
+    "f3391367"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0785"
   },
   {
-   "id": "S0786",
-   "day": 79,
-   "direction": "zh-ja",
+   "qid": "P-079-05-361d5e48e3de",
    "prompt": "他对工作很积极。",
-   "knowledge_ids": [
-    "V0333"
+   "options": [
+    "彼は仕事に積極的です。",
+    "マイクはお酒をやめたの？",
+    "彼女は料理が上手です。",
+    "この部屋は静かです。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0787",
-   "day": 79,
+   "h": "b62eb94d",
+   "oh": [
+    "b62eb94d",
+    "2c017500",
+    "bd50740d",
+    "ed05be90"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0786"
+  },
+  {
+   "qid": "P-079-06-dbc55dab5012",
    "prompt": "在日本，通常使用这种方法。",
-   "knowledge_ids": [
-    "V0334"
+   "options": [
+    "教会は私の家とあなたの家の中にあります。",
+    "日本では、一般的にこの方法が使われます。",
+    "あのおいしいワインをなぜ飲まないんだい。",
+    "これがいわゆる「天ぷら」というものです。"
    ],
-   "hint": ""
+   "h": "42d7b96",
+   "oh": [
+    "4733003c",
+    "42d7b96",
+    "5ebf955f",
+    "b094a64a"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0787"
   },
   {
-   "id": "S0788",
-   "day": 79,
-   "direction": "ja-zh",
+   "qid": "P-079-07-cd817b24adce",
    "prompt": "定期的に健康診断を受けています。",
-   "knowledge_ids": [
-    "V0335"
+   "options": [
+    "他在生死之间徘徊。",
+    "你以为我好骗吧。",
+    "恶魔也许会来哦。",
+    "定期做健康检查。"
    ],
-   "hint": ""
+   "h": "e7de9c23",
+   "oh": [
+    "f32c445a",
+    "dbbf4ad2",
+    "e02eee05",
+    "e7de9c23"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0788"
   },
   {
-   "id": "S0789",
-   "day": 79,
-   "direction": "ja-zh",
+   "qid": "P-079-08-9038661ae9ee",
    "prompt": "突然、雨が降り始めました。",
-   "knowledge_ids": [
-    "V0336"
+   "options": [
+    "突然开始下雨了。",
+    "雪积得满地都是。",
+    "我很乐意帮助你。",
+    "那条街充满活力。"
    ],
-   "hint": ""
+   "h": "4c4b05b0",
+   "oh": [
+    "4c4b05b0",
+    "8aeb8cdc",
+    "e9f699d2",
+    "d3ea8b20"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0789"
   },
   {
-   "id": "S0790",
-   "day": 79,
-   "direction": "ja-zh",
+   "qid": "P-079-09-8a56adc49fdd",
    "prompt": "危険を感じたら、直ちに避難してください。",
-   "knowledge_ids": [
-    "V0337"
+   "options": [
+    "他不知道受了多少苦。",
+    "感到危险请立即避难。",
+    "商人是买卖商品的人。",
+    "她向红十字会捐了款。"
    ],
-   "hint": ""
+   "h": "997ca2a4",
+   "oh": [
+    "95b0f650",
+    "997ca2a4",
+    "493bd5af",
+    "924a8cbd"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0790"
   }
  ],
  "quiz": [

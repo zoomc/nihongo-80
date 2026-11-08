@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V1488",
    "front": "胃",
    "back": "胃",
+   "kana": "い",
    "stage": "planned"
   },
   {
    "kid": "V1489",
    "front": "委員",
    "back": "委员",
+   "kana": "いいん",
    "stage": "planned"
   },
   {
    "kid": "V1490",
    "front": "いえ",
    "back": "不",
+   "kana": "いえ",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0353",
    "front": "組",
-   "back": "组合；组；班级｜音 ソ",
+   "back": "组合；组；班级",
+   "kana": "ソ、く.む、くみ、-ぐみ",
    "stage": "planned"
   },
   {
    "kid": "K0354",
    "front": "信",
-   "back": "相信；信任｜音 シン",
+   "back": "相信；信任",
+   "kana": "シン",
    "stage": "planned"
   },
   {
    "kid": "V1455",
    "front": "預ける",
    "back": "寄存；托付",
+   "kana": "あずける",
    "stage": "planned"
   },
   {
    "kid": "V1456",
    "front": "汗",
    "back": "汗",
+   "kana": "あせ",
    "stage": "planned"
   },
   {
    "kid": "V1457",
    "front": "与える",
    "back": "给予",
+   "kana": "あたえる",
    "stage": "planned"
   },
   {
@@ -492,104 +500,204 @@
  ],
  "sentences": [
   {
-   "id": "S0841",
-   "day": 85,
-   "direction": "zh-ja",
+   "qid": "P-085-00-44292da8de71",
    "prompt": "那条狗救了女孩的命。",
-   "knowledge_ids": [
-    "V1533"
+   "options": [
+    "その犬は少女の命を救った。",
+    "すぐに旅の支度をしなさい。",
+    "ここに手のないナベがある。",
+    "彼女はじきよくなるだろう。"
    ],
-   "hint": ""
+   "h": "d705b481",
+   "oh": [
+    "d705b481",
+    "a0bc963b",
+    "4bd0565",
+    "7dc02167"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0841"
   },
   {
-   "id": "S0842",
-   "day": 85,
-   "direction": "zh-ja",
+   "qid": "P-085-01-c36d69f1e1b0",
    "prompt": "那是违反规则的。",
-   "knowledge_ids": [
-    "V1534"
+   "options": [
+    "光が世にやって来た。",
+    "この問題は簡単です。",
+    "それはルール違反です。",
+    "オランダは狭い国です。"
    ],
-   "hint": ""
+   "h": "7ca8dfa1",
+   "oh": [
+    "f14e475a",
+    "18fa881",
+    "7ca8dfa1",
+    "e82faac6"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0842"
   },
   {
-   "id": "S0843",
-   "day": 85,
-   "direction": "zh-ja",
+   "qid": "P-085-02-12d8569edb65",
    "prompt": "他们几乎不穿衣服。",
-   "knowledge_ids": [
-    "V1535"
+   "options": [
+    "それはたいへんなショックでした。",
+    "この手袋は両方がそろっていない。",
+    "彼らは衣服をほとんど着用しない。",
+    "ここでは煙草は禁止されています。"
    ],
-   "hint": ""
+   "h": "b4774ea7",
+   "oh": [
+    "4f933c74",
+    "9ed978b8",
+    "b4774ea7",
+    "ecc80e4d"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0843"
   },
   {
-   "id": "S0844",
-   "day": 85,
-   "direction": "zh-ja",
+   "qid": "P-085-03-a942b8eb7b81",
    "prompt": "他们在客厅喝茶。",
-   "knowledge_ids": [
-    "V1536"
+   "options": [
+    "スケートはとてもおもしろかった。",
+    "パーティーはたのしかったですか。",
+    "彼らは居間でお茶を飲んでいます。",
+    "あなたに頼んでもよろしいですか。"
    ],
-   "hint": ""
+   "h": "5025e107",
+   "oh": [
+    "ebd819a3",
+    "4939410a",
+    "5025e107",
+    "e84dbeb6"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0844"
   },
   {
-   "id": "S0845",
-   "day": 85,
-   "direction": "zh-ja",
+   "qid": "P-085-04-80c6ef17b7c0",
    "prompt": "早晚会遭报应的。",
-   "knowledge_ids": [
-    "V1537"
+   "options": [
+    "この部屋は静かです。",
+    "今にバチがあたるぞ。",
+    "木曜日に映画を見ます。",
+    "あの山の頂上は平らだ。"
    ],
-   "hint": ""
+   "h": "4c536899",
+   "oh": [
+    "ed05be90",
+    "4c536899",
+    "bd43fb8",
+    "31771ee1"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0845"
   },
   {
-   "id": "S0846",
-   "day": 85,
-   "direction": "zh-ja",
+   "qid": "P-085-05-5561d319ab76",
    "prompt": "汤姆应该马上就要来了。",
-   "knowledge_ids": [
-    "V1538"
+   "options": [
+    "そんな計画は捨ててしまいなさい。",
+    "ニューススタンドで聞いて下さい。",
+    "それは私が見たことのない景色だ。",
+    "トムは今にもここに来るはずです。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0847",
-   "day": 85,
+   "h": "1c43f179",
+   "oh": [
+    "f1570dd9",
+    "8d525137",
+    "af5a2328",
+    "1c43f179"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0846"
+  },
+  {
+   "qid": "P-085-06-a11c75ad22de",
    "prompt": "不，最初的想法是这样的。",
-   "knowledge_ids": [
-    "V1539"
+   "options": [
+    "少女は立って鏡をのぞきこんだ。",
+    "いや、当初の考えはそうでした。",
+    "これは悪い話ではないでしょう？",
+    "その仕事以外ならなんでもやる。"
    ],
-   "hint": ""
+   "h": "745cfd56",
+   "oh": [
+    "b6b02350",
+    "745cfd56",
+    "fdf9de68",
+    "b9ada927"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0847"
   },
   {
-   "id": "S0848",
-   "day": 85,
-   "direction": "ja-zh",
+   "qid": "P-085-07-8c121d3cc221",
    "prompt": "１９８８年以来トムに会っていません。",
-   "knowledge_ids": [
-    "V1540"
+   "options": [
+    "自1988年以来就没见过汤姆。",
+    "德语不是一门容易的语言。",
+    "只要你觉得合适的书，什么都可以读。",
+    "明年你应该就能滑得很好吧。"
    ],
-   "hint": ""
+   "h": "e0ae7873",
+   "oh": [
+    "e0ae7873",
+    "a69c3150",
+    "e07bbd8e",
+    "3d2b24e6"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0848"
   },
   {
-   "id": "S0849",
-   "day": 85,
-   "direction": "ja-zh",
+   "qid": "P-085-08-a16e6cf46517",
    "prompt": "彼女は彼に資金を集めるように依頼した。",
-   "knowledge_ids": [
-    "V1541"
+   "options": [
+    "他正处在男人的壮年。",
+    "他们会组织工会吧。",
+    "她委托他去筹集资金。",
+    "请寄一份目录供参考。"
    ],
-   "hint": ""
+   "h": "a2dbaa37",
+   "oh": [
+    "cfa9128b",
+    "4a5d6cc4",
+    "a2dbaa37",
+    "f28a2368"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0849"
   },
   {
-   "id": "S0850",
-   "day": 85,
-   "direction": "ja-zh",
+   "qid": "P-085-09-93f235e479da",
    "prompt": "ビルは試験のことでいらいらしている。",
-   "knowledge_ids": [
-    "V1542"
+   "options": [
+    "因为当时我是报社记者。",
+    "啊！糟了！汽油快没了。",
+    "比尔因为考试的事心烦。",
+    "快点的话能赶上首班车。"
    ],
-   "hint": ""
+   "h": "26826a2f",
+   "oh": [
+    "479e92ec",
+    "b6724d72",
+    "26826a2f",
+    "36293e64"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0850"
   }
  ],
  "quiz": [

@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1743",
    "front": "感謝",
    "back": "感谢",
+   "kana": "かんしゃ",
    "stage": "planned"
   },
   {
    "kid": "V1744",
    "front": "患者",
    "back": "患者；病人",
+   "kana": "かんじゃ",
    "stage": "planned"
   },
   {
    "kid": "V1745",
    "front": "勘定",
    "back": "结账；计算",
+   "kana": "かんじょう",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0413",
    "front": "宅",
-   "back": "住宅；家｜音 タク",
+   "back": "住宅；家",
+   "kana": "タク",
    "stage": "planned"
   },
   {
    "kid": "K0414",
    "front": "害",
-   "back": "害处；损害｜音 ガイ",
+   "back": "害处；损害",
+   "kana": "ガイ",
    "stage": "planned"
   },
   {
    "kid": "V1705",
    "front": "刀",
    "back": "刀",
+   "kana": "かたな",
    "stage": "planned"
   },
   {
    "kid": "V1706",
    "front": "語る",
    "back": "讲述；谈论",
+   "kana": "かたる",
    "stage": "planned"
   },
   {
    "kid": "V1707",
    "front": "価値",
    "back": "价值",
+   "kana": "かち",
    "stage": "planned"
   },
   {
@@ -532,104 +540,204 @@
  ],
  "sentences": [
   {
-   "id": "S0991",
-   "day": 100,
-   "direction": "zh-ja",
+   "qid": "P-100-00-42e02a65c7bd",
    "prompt": "孩子心里有很多疑问。",
-   "knowledge_ids": [
-    "V1791"
+   "options": [
+    "あの先生に質問してもいいですよ。",
+    "そのショーで観客は大喜びだった。",
+    "子供には疑問がたくさんあります。",
+    "ビールびんはガラスでできている。"
    ],
-   "hint": ""
+   "h": "34fdd2b5",
+   "oh": [
+    "c64703e1",
+    "66f9ebb3",
+    "34fdd2b5",
+    "45e4dbee"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0991"
   },
   {
-   "id": "S0992",
-   "day": 100,
-   "direction": "zh-ja",
+   "qid": "P-100-01-59c8517077a1",
    "prompt": "队长命令大家安静。",
-   "knowledge_ids": [
-    "V1793"
+   "options": [
+    "キャプテンは静かにするように命じた。",
+    "クッキーはケイトによって育てられた。",
+    "いつでも私のオフィスを訪ねなさい。",
+    "いくつかの点で私は彼女が気に入らない。"
    ],
-   "hint": ""
+   "h": "59a4d722",
+   "oh": [
+    "59a4d722",
+    "a7ad5d1c",
+    "17a853f2",
+    "e6e371c4"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0992"
   },
   {
-   "id": "S0993",
-   "day": 100,
-   "direction": "zh-ja",
+   "qid": "P-100-02-42704dcf87e4",
    "prompt": "我和家人一起去露营了。",
-   "knowledge_ids": [
-    "V1794"
+   "options": [
+    "その工場は来月から作業を中止する。",
+    "私は家族と一緒にキャンプに行った。",
+    "このチーズはピリッとした味がする。",
+    "あなたの名前と住所を記入しなさい。"
    ],
-   "hint": ""
+   "h": "9e656e04",
+   "oh": [
+    "82b575bb",
+    "9e656e04",
+    "14565358",
+    "52eeffa0"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0993"
   },
   {
-   "id": "S0994",
-   "day": 100,
-   "direction": "zh-ja",
+   "qid": "P-100-03-35b2ecca489d",
    "prompt": "地球呈球体形状。",
-   "knowledge_ids": [
-    "V1795"
+   "options": [
+    "もうひと組の観光客が到着した。",
+    "地球は球のような形をしている。",
+    "これは悪い話ではないでしょう？",
+    "あなたの考えを言ってください。"
    ],
-   "hint": ""
+   "h": "19b4cf96",
+   "oh": [
+    "16be5fe1",
+    "19b4cf96",
+    "fdf9de68",
+    "a9413e5c"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0994"
   },
   {
-   "id": "S0995",
-   "day": 100,
-   "direction": "zh-ja",
+   "qid": "P-100-04-5196b009e1bb",
    "prompt": "他在读十年级。",
-   "knowledge_ids": [
-    "V1796"
+   "options": [
+    "梅の花は今週が見頃です。",
+    "彼は１０年級に在学中だ。",
+    "お話し中、ごめんなさい。",
+    "この靴下はちぐはぐだ。"
    ],
-   "hint": ""
+   "h": "bf462547",
+   "oh": [
+    "f9da0047",
+    "bf462547",
+    "18f2084e",
+    "6db284b2"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0995"
   },
   {
-   "id": "S0996",
-   "day": 100,
-   "direction": "zh-ja",
+   "qid": "P-100-05-d2c94630b634",
    "prompt": "新隧道的长度是旧隧道的两倍。",
-   "knowledge_ids": [
-    "V1797"
+   "options": [
+    "このクラスは女子が男子より多いです。",
+    "ＦＡＸで地図を送っていただけませんか。",
+    "新トンネルは旧トンネルの２倍の長さだ。",
+    "いつ禁煙のサインを消すのでしょうね。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0997",
-   "day": 100,
+   "h": "ba0c3c84",
+   "oh": [
+    "96d08eb4",
+    "4a77dbf7",
+    "ba0c3c84",
+    "755332b2"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0996"
+  },
+  {
+   "qid": "P-100-06-9b88fa975006",
    "prompt": "我休假出去了。",
-   "knowledge_ids": [
-    "V1798"
+   "options": [
+    "この手の本はあまり読まない。",
+    "ジョージは勉強に真剣でない。",
+    "湖の深さはどのくらいですか。",
+    "私は休暇で出かけていました。"
    ],
-   "hint": ""
+   "h": "56bf45d4",
+   "oh": [
+    "771de503",
+    "112da97",
+    "15a7848c",
+    "56bf45d4"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0997"
   },
   {
-   "id": "S0998",
-   "day": 100,
-   "direction": "ja-zh",
+   "qid": "P-100-07-f79e65859ba5",
    "prompt": "休憩してコーヒーを飲もう。",
-   "knowledge_ids": [
-    "V1799"
+   "options": [
+    "找老师商量升学去向。",
+    "传闻传到了四面八方。",
+    "休息一下喝杯咖啡吧。",
+    "我习惯了日本的生活。"
    ],
-   "hint": ""
+   "h": "c32a32e0",
+   "oh": [
+    "57d2ad4c",
+    "8e2c460f",
+    "c32a32e0",
+    "98a531c0"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0998"
   },
   {
-   "id": "S0999",
-   "day": 100,
-   "direction": "ja-zh",
+   "qid": "P-100-08-f21cd2be2840",
    "prompt": "その党は急激にのびた。",
-   "knowledge_ids": [
-    "V1800"
+   "options": [
+    "比尔因为考试的事心烦。",
+    "猫一走，老鼠就闹起来了。",
+    "我们在咖啡馆吃了午饭。",
+    "那个政党迅速壮大了起来。"
    ],
-   "hint": ""
+   "h": "5912041a",
+   "oh": [
+    "26826a2f",
+    "f618225d",
+    "f4d70353",
+    "5912041a"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0999"
   },
   {
-   "id": "S1000",
-   "day": 100,
-   "direction": "ja-zh",
+   "qid": "P-100-09-0daa519b41c3",
    "prompt": "この布は水をよく吸収する。",
-   "knowledge_ids": [
-    "V1801"
+   "options": [
+    "医生开了药。",
+    "定期做健康检查。",
+    "这种布很吸水。",
+    "她有表演天赋。"
    ],
-   "hint": ""
+   "h": "5347c362",
+   "oh": [
+    "f53e8688",
+    "e7de9c23",
+    "5347c362",
+    "85f35af"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1000"
   }
  ],
  "quiz": [

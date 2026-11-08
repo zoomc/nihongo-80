@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1540",
    "front": "以来",
    "back": "以来",
+   "kana": "いらい",
    "stage": "planned"
   },
   {
    "kid": "V1541",
    "front": "依頼",
    "back": "委托；请求",
+   "kana": "いらい",
    "stage": "planned"
   },
   {
    "kid": "V1542",
    "front": "いらいら",
    "back": "焦躁；烦躁",
+   "kana": "いらいら",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0365",
    "front": "官",
-   "back": "官员；官府｜音 カン",
+   "back": "官员；官府",
+   "kana": "カン",
    "stage": "planned"
   },
   {
    "kid": "K0366",
    "front": "増",
-   "back": "增加；增多｜音 ゾウ",
+   "back": "增加；增多",
+   "kana": "ゾウ、ま.す、ま.し、ふ.える、ふ.やす",
    "stage": "planned"
   },
   {
    "kid": "V1507",
    "front": "偉大",
    "back": "伟大",
+   "kana": "いだい",
    "stage": "planned"
   },
   {
    "kid": "V1508",
    "front": "抱く",
    "back": "怀抱；怀有",
+   "kana": "いだく",
    "stage": "planned"
   },
   {
    "kid": "V1509",
    "front": "いたずら",
    "back": "恶作剧；淘气",
+   "kana": "いたずら",
    "stage": "planned"
   },
   {
@@ -549,104 +557,204 @@
  ],
  "sentences": [
   {
-   "id": "S0871",
-   "day": 88,
-   "direction": "zh-ja",
+   "qid": "P-088-00-3a2370818980",
    "prompt": "卫星现在已进入轨道。",
-   "knowledge_ids": [
-    "V1581"
+   "options": [
+    "彼は俳優になるべきだった。",
+    "しっかり勉強してください。",
+    "衛星は今軌道に乗っている。",
+    "この線の終点はどこですか。"
    ],
-   "hint": ""
+   "h": "e1c39865",
+   "oh": [
+    "578f5017",
+    "f79afcc5",
+    "e1c39865",
+    "4b98e1d7"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0871"
   },
   {
-   "id": "S0872",
-   "day": 88,
-   "direction": "zh-ja",
+   "qid": "P-088-01-aaea827bcd3a",
    "prompt": "他们笑着迎接我。",
-   "knowledge_ids": [
-    "V1582"
+   "options": [
+    "やっぱり何とかやってのけたね。",
+    "このスープは塩が少し足りない。",
+    "彼らは私を笑顔で迎えてくれた。",
+    "もうひと組の観光客が到着した。"
    ],
-   "hint": ""
+   "h": "97a1a704",
+   "oh": [
+    "6295853d",
+    "5e1ae47d",
+    "97a1a704",
+    "16be5fe1"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0872"
   },
   {
-   "id": "S0873",
-   "day": 88,
-   "direction": "zh-ja",
+   "qid": "P-088-02-26eb87823c89",
    "prompt": "终于把画画完了。",
-   "knowledge_ids": [
-    "V1583"
+   "options": [
+    "一行はアメリカへ渡った。",
+    "昨日水道を止められた。",
+    "やっと絵を描き終えた。",
+    "何時間も海を眺めた。"
    ],
-   "hint": ""
+   "h": "7e9ede04",
+   "oh": [
+    "c3bc3e5",
+    "4f13646",
+    "7e9ede04",
+    "aead5bf6"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0873"
   },
   {
-   "id": "S0874",
-   "day": 88,
-   "direction": "zh-ja",
+   "qid": "P-088-03-d30288530505",
    "prompt": "请每天喂狗。",
-   "knowledge_ids": [
-    "V1584"
+   "options": [
+    "彼は会社で高い地位にあります。",
+    "そのオレンジは後味が変だった。",
+    "このページをコピーして下さい。",
+    "犬に毎日えさをあげてください。"
    ],
-   "hint": ""
+   "h": "2d891fca",
+   "oh": [
+    "1db91e4",
+    "d6185ff2",
+    "fd6444e6",
+    "2d891fca"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0874"
   },
   {
-   "id": "S0875",
-   "day": 88,
-   "direction": "zh-ja",
+   "qid": "P-088-04-5aea33dde5e1",
    "prompt": "热是能量的一种。",
-   "knowledge_ids": [
-    "V1585"
+   "options": [
+    "上部前方で何かが光っている。",
+    "熱はエネルギーの一種である。",
+    "その光景を見てぎょっとした。",
+    "このドアは書斎に通じている。"
    ],
-   "hint": ""
+   "h": "c698082b",
+   "oh": [
+    "2f7340d9",
+    "c698082b",
+    "f1930e87",
+    "ba605a4e"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0875"
   },
   {
-   "id": "S0876",
-   "day": 88,
-   "direction": "zh-ja",
+   "qid": "P-088-05-799062e74728",
    "prompt": "十支队伍为得奖而竞争。",
-   "knowledge_ids": [
-    "V1586"
+   "options": [
+    "この学校は男子よりも女子が多い。",
+    "１０チームが賞を得ようと争った。",
+    "それはすべて天候に依存している。",
+    "こ、こら！ナニやっとるかぁぁ！！"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0877",
-   "day": 88,
+   "h": "c243655d",
+   "oh": [
+    "53353c8",
+    "c243655d",
+    "3189be4f",
+    "1b91f40"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0876"
+  },
+  {
+   "qid": "P-088-06-c7778a31e1c6",
    "prompt": "我们不得不把会议延期。",
-   "knowledge_ids": [
-    "V1587"
+   "options": [
+    "ジョージは朝にたくさんのチーズを食べた。",
+    "私のE-mailアドレスが変わりました。",
+    "今日の政治状況はそれほど安定していない。",
+    "私たちは会合を延期しなければならなかった。"
    ],
-   "hint": ""
+   "h": "3628636",
+   "oh": [
+    "2f26c123",
+    "6c61f1e5",
+    "7a6af499",
+    "3628636"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0877"
   },
   {
-   "id": "S0878",
-   "day": 88,
-   "direction": "ja-zh",
+   "qid": "P-088-07-e8b40c15281f",
    "prompt": "彼女は演技の才能がある。",
-   "knowledge_ids": [
-    "V1588"
+   "options": [
+    "汤姆终于戒烟了。",
+    "我正在找助手。",
+    "从第十课开始吧。",
+    "她有表演天赋。"
    ],
-   "hint": ""
+   "h": "85f35af",
+   "oh": [
+    "9c580eba",
+    "f7ef99a7",
+    "7c4687ec",
+    "85f35af"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0878"
   },
   {
-   "id": "S0879",
-   "day": 88,
-   "direction": "ja-zh",
+   "qid": "P-088-08-cce1b8e63c96",
    "prompt": "私は喜んであなたの援助をします。",
-   "knowledge_ids": [
-    "V1589"
+   "options": [
+    "我很乐意帮助你。",
+    "请给我一个苹果。",
+    "我的右臂伸不直。",
+    "七大洋是什么？"
    ],
-   "hint": ""
+   "h": "e9f699d2",
+   "oh": [
+    "e9f699d2",
+    "dd58fecf",
+    "d463fc58",
+    "e2628862"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0879"
   },
   {
-   "id": "S0880",
-   "day": 88,
-   "direction": "ja-zh",
+   "qid": "P-088-09-8e7719ae7e9c",
    "prompt": "そのエンジンは蒸気で動く。",
-   "knowledge_ids": [
-    "V1590"
+   "options": [
+    "他的话简单得不能再简单。",
+    "汤姆很快就能学会游泳。",
+    "那台发动机靠蒸汽驱动。",
+    "我为那本书付了三美元。"
    ],
-   "hint": ""
+   "h": "49a6e1e7",
+   "oh": [
+    "1723f272",
+    "b21ad6c5",
+    "49a6e1e7",
+    "30a5faed"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0880"
   }
  ],
  "quiz": [

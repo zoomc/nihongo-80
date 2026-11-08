@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V1908",
    "front": "言語",
    "back": "语言",
+   "kana": "げんご",
    "stage": "planned"
   },
   {
    "kid": "V1909",
    "front": "健康",
    "back": "健康",
+   "kana": "けんこう",
    "stage": "planned"
   },
   {
    "kid": "V1910",
    "front": "検査",
    "back": "检查",
+   "kana": "けんさ",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0453",
    "front": "観",
-   "back": "观看；观念；外观｜音 カン",
+   "back": "观看；观念；外观",
+   "kana": "カン、み.る、しめ.す",
    "stage": "planned"
   },
   {
    "kid": "K0454",
    "front": "察",
-   "back": "察知；推测｜音 サツ",
+   "back": "察知；推测",
+   "kana": "サツ",
    "stage": "planned"
   },
   {
    "kid": "V1875",
    "front": "軍隊",
    "back": "军队",
+   "kana": "ぐんたい",
    "stage": "planned"
   },
   {
    "kid": "V1876",
    "front": "訓練",
    "back": "训练",
+   "kana": "くんれん",
    "stage": "planned"
   },
   {
    "kid": "V1877",
    "front": "計",
    "back": "计划；计算",
+   "kana": "けい",
    "stage": "planned"
   },
   {
@@ -454,104 +462,204 @@
  ],
  "sentences": [
   {
-   "id": "S1091",
-   "day": 110,
-   "direction": "zh-ja",
+   "qid": "P-110-00-3fa075747d41",
    "prompt": "社会由个人组成。",
-   "knowledge_ids": [
-    "V1968"
+   "options": [
+    "トムは頭にきつい一発を受けた。",
+    "この事件に手を貸してください。",
+    "もっと易しい事を聞いて下さい。",
+    "社会は個人からなりたっている。"
    ],
-   "hint": ""
+   "h": "eb49c2da",
+   "oh": [
+    "b9186836",
+    "3a859cc4",
+    "84e4e179",
+    "eb49c2da"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1091"
   },
   {
-   "id": "S1092",
-   "day": 110,
-   "direction": "zh-ja",
+   "qid": "P-110-01-2059dc20d835",
    "prompt": "船今晚会越过赤道。",
-   "knowledge_ids": [
-    "V1969"
+   "options": [
+    "そこに八つの小石があった。",
+    "この川の幅が１マイルある。",
+    "船は今夜赤道を越すだろう。",
+    "雨は夜には止む見込みです。"
    ],
-   "hint": ""
+   "h": "e22b650a",
+   "oh": [
+    "9818201b",
+    "ee0a3e53",
+    "e22b650a",
+    "e54102ce"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1092"
   },
   {
-   "id": "S1093",
-   "day": 110,
-   "direction": "zh-ja",
+   "qid": "P-110-02-eac6f1fa1529",
    "prompt": "同样的事对国家也适用。",
-   "knowledge_ids": [
-    "V1970"
+   "options": [
+    "同じ事が国家についても当てはまる。",
+    "さあ、あなたの体温を計りましょう。",
+    "さっきなぜかマイクが入らなかった。",
+    "あなたの時計、時間は狂いませんか。"
    ],
-   "hint": ""
+   "h": "1bbb6c5b",
+   "oh": [
+    "1bbb6c5b",
+    "f1eef958",
+    "f6bd6b75",
+    "7697026a"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1093"
   },
   {
-   "id": "S1094",
-   "day": 110,
-   "direction": "zh-ja",
+   "qid": "P-110-03-132fd67b71db",
    "prompt": "国会将在周二召开。",
-   "knowledge_ids": [
-    "V1971"
+   "options": [
+    "火曜日に国会が開かれる。",
+    "お手洗いはどこですか。",
+    "急行の料金は幾らですか。",
+    "なぜ彼と踊らなかったの？"
    ],
-   "hint": ""
+   "h": "71348ffa",
+   "oh": [
+    "71348ffa",
+    "9f20e43f",
+    "991bf9",
+    "afc9d668"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1094"
   },
   {
-   "id": "S1095",
-   "day": 110,
-   "direction": "zh-ja",
+   "qid": "P-110-04-ab880edadf27",
    "prompt": "明天之内就会越过国境。",
-   "knowledge_ids": [
-    "V1972"
+   "options": [
+    "明日中には国境を越えます。",
+    "私は生まれも育ちも東京だ。",
+    "全国民が平和を望んでいる。",
+    "私たちは制服を支給された。"
    ],
-   "hint": ""
+   "h": "8f82e408",
+   "oh": [
+    "8f82e408",
+    "a41b78c4",
+    "ad056ed6",
+    "9edbefef"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1095"
   },
   {
-   "id": "S1096",
-   "day": 110,
-   "direction": "zh-ja",
+   "qid": "P-110-05-f5ae96a4b70f",
    "prompt": "我的右臂好像骨折了。",
-   "knowledge_ids": [
-    "V1973"
+   "options": [
+    "この線の終点はどこですか。",
+    "収入以上の生活をするな。",
+    "右腕を骨折したようです。",
+    "この川の幅が１マイルある。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1097",
-   "day": 110,
+   "h": "31cf7c9d",
+   "oh": [
+    "4b98e1d7",
+    "10ea5c41",
+    "31cf7c9d",
+    "ee0a3e53"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1096"
+  },
+  {
+   "qid": "P-110-06-046c6c238abd",
    "prompt": "请把这个包裹寄海运。",
-   "knowledge_ids": [
-    "V1974"
+   "options": [
+    "パーティーはたのしかったですか。",
+    "それはすべて天候に依存している。",
+    "その事が彼のすべての夢を壊した。",
+    "この小包を船便で送ってください。"
    ],
-   "hint": ""
+   "h": "79aca341",
+   "oh": [
+    "4939410a",
+    "3189be4f",
+    "2835eaff",
+    "79aca341"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1097"
   },
   {
-   "id": "S1098",
-   "day": 110,
-   "direction": "ja-zh",
+   "qid": "P-110-07-818c648f8a37",
    "prompt": "彼らの意見は私のとは異なっている。",
-   "knowledge_ids": [
-    "V1975"
+   "options": [
+    "他们的意见和我的不同。",
+    "你不能出席吗？为什么？",
+    "我反对任何形式的战争。",
+    "一到春天就翻地播种。"
    ],
-   "hint": ""
+   "h": "1d38ae3",
+   "oh": [
+    "1d38ae3",
+    "e0130b6d",
+    "57c62162",
+    "24c05567"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1098"
   },
   {
-   "id": "S1099",
-   "day": 110,
-   "direction": "ja-zh",
+   "qid": "P-110-08-a2ae3ab61c03",
    "prompt": "このことわざが使われるのを聞いた事があります。",
-   "knowledge_ids": [
-    "V1976"
+   "options": [
+    "他会的杂技多得让人吃惊。",
+    "我听过有人用这句谚语。",
+    "你不知道我有多担心。",
+    "你为什么拒绝了他的提议？"
    ],
-   "hint": ""
+   "h": "e5759169",
+   "oh": [
+    "c257ae4e",
+    "e5759169",
+    "80b938b0",
+    "59938dd"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1099"
   },
   {
-   "id": "S1100",
-   "day": 110,
-   "direction": "ja-zh",
+   "qid": "P-110-09-0ccaa3cc1994",
    "prompt": "なぜ彼の申し出を断ったのですか。",
-   "knowledge_ids": [
-    "V1977"
+   "options": [
+    "你为什么拒绝了他的提议？",
+    "我终于和那个男人两清了。",
+    "做那种事会被人当成笑柄的。",
+    "德语不是一门容易的语言。"
    ],
-   "hint": ""
+   "h": "59938dd",
+   "oh": [
+    "59938dd",
+    "a6a93bb5",
+    "40186f01",
+    "a69c3150"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1100"
   }
  ],
  "quiz": [

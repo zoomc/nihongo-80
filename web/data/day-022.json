@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0570",
    "front": "食堂",
    "back": "食堂；餐厅",
+   "kana": "しょくどう",
    "stage": "planned"
   },
   {
    "kid": "V0571",
    "front": "知る",
    "back": "知道",
+   "kana": "しる",
    "stage": "planned"
   },
   {
    "kid": "V0572",
    "front": "白",
    "back": "白色",
+   "kana": "しろ",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0075",
    "front": "仕",
-   "back": "做事；任职；侍奉｜音 シ",
+   "back": "做事；任职；侍奉",
+   "kana": "シ、つかえる",
    "stage": "planned"
   },
   {
    "kid": "K0076",
    "front": "事",
-   "back": "事；事情｜音 ジ",
+   "back": "事；事情",
+   "kana": "ジ、こと",
    "stage": "planned"
   },
   {
    "kid": "V0532",
    "front": "御飯",
    "back": "米饭；饭",
+   "kana": "ごはん",
    "stage": "planned"
   },
   {
    "kid": "V0533",
    "front": "コピーする",
    "back": "复印",
+   "kana": "コピーする",
    "stage": "planned"
   },
   {
    "kid": "V0534",
    "front": "困る",
    "back": "为难；困扰",
+   "kana": "こまる",
    "stage": "planned"
   },
   {
@@ -530,104 +538,204 @@
  ],
  "sentences": [
   {
-   "id": "S0211",
-   "day": 22,
-   "direction": "zh-ja",
+   "qid": "P-022-00-e0537a2c98be",
    "prompt": "该公司生产酱油等食品。",
-   "knowledge_ids": [
-    "V0569"
+   "options": [
+    "ぼくは少々君に腹が立っているんだ。",
+    "一日で５００ドルつかってしまった。",
+    "人類だけが火の使い方を知っている。",
+    "同社は醤油その他の食品を生産する。"
    ],
-   "hint": ""
+   "h": "d193ac76",
+   "oh": [
+    "6ef7715c",
+    "3fe654f9",
+    "802a2f24",
+    "d193ac76"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0211"
   },
   {
-   "id": "S0212",
-   "day": 22,
-   "direction": "zh-ja",
+   "qid": "P-022-01-4834258d03b0",
    "prompt": "食堂是自助式的。",
-   "knowledge_ids": [
-    "V0570"
+   "options": [
+    "大人はしばしば変化を恐れる。",
+    "食堂はセルフサービスでした。",
+    "つまり彼女は下手な踊り子だ。",
+    "このセーターは気に入らない。"
    ],
-   "hint": ""
+   "h": "bc3c731c",
+   "oh": [
+    "6a18603d",
+    "bc3c731c",
+    "c49e2f71",
+    "468b4643"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0212"
   },
   {
-   "id": "S0213",
-   "day": 22,
-   "direction": "zh-ja",
+   "qid": "P-022-02-c60de1b4fa3b",
    "prompt": "我不知道，也不在意。",
-   "knowledge_ids": [
-    "V0571"
+   "options": [
+    "アリは夏じゅうせっせとはたらく。",
+    "コックさんは少しもかけていない。",
+    "ぼくは知らないし、気にもしない。",
+    "システムが作動しない場合がある。"
    ],
-   "hint": ""
+   "h": "c9b35858",
+   "oh": [
+    "76c21659",
+    "9948ee99",
+    "c9b35858",
+    "e09812e6"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0213"
   },
   {
-   "id": "S0214",
-   "day": 22,
-   "direction": "zh-ja",
+   "qid": "P-022-03-2995128ccad2",
    "prompt": "黑上加黑也变不成白。",
-   "knowledge_ids": [
-    "V0572"
+   "options": [
+    "黒に黒をたしても白にはならぬ。",
+    "あのドレスは彼女によく似合う。",
+    "少女は立って鏡をのぞきこんだ。",
+    "カタツムリがすっと角を出した。"
    ],
-   "hint": ""
+   "h": "e6a5d95e",
+   "oh": [
+    "e6a5d95e",
+    "d2b39483",
+    "b6b02350",
+    "1141342d"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0214"
   },
   {
-   "id": "S0215",
-   "day": 22,
-   "direction": "zh-ja",
+   "qid": "P-022-04-9b1a9a0c65af",
    "prompt": "我想要那条带白色腰带的。",
-   "knowledge_ids": [
-    "V0573"
+   "options": [
+    "白いベルトがついてるのがいいな。",
+    "おぼれかけた人は息を吹き返した。",
+    "ニューススタンドで聞いて下さい。",
+    "トムはメアリーにバイクを売った。"
    ],
-   "hint": ""
+   "h": "ced8e021",
+   "oh": [
+    "ced8e021",
+    "9d54542a",
+    "8d525137",
+    "3db0f9d3"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0215"
   },
   {
-   "id": "S0216",
-   "day": 22,
-   "direction": "zh-ja",
+   "qid": "P-022-05-0e2e8e6f71a8",
    "prompt": "报纸上登了约翰的事。",
-   "knowledge_ids": [
-    "V0574"
+   "options": [
+    "キリスト教を信仰していますか。",
+    "いつ旅行においでになりますか。",
+    "ジョンのことが新聞に出ていた。",
+    "この制度には改良の余地がない。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0217",
-   "day": 22,
+   "h": "83ca759e",
+   "oh": [
+    "bd6a6e0c",
+    "a1751ea1",
+    "83ca759e",
+    "849b2eb5"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0216"
+  },
+  {
+   "qid": "P-022-06-50c74af94dc5",
    "prompt": "这种纸不吸墨。",
-   "knowledge_ids": [
-    "V0575"
+   "options": [
+    "この紙はインクを吸わない。",
+    "科学は観察に基づいている。",
+    "喜んで質問に答えましょう。",
+    "この会社の社長は誰ですか。"
    ],
-   "hint": ""
+   "h": "1efc66f7",
+   "oh": [
+    "1efc66f7",
+    "d541c6",
+    "b449f1b9",
+    "4c5bf5fb"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0217"
   },
   {
-   "id": "S0218",
-   "day": 22,
-   "direction": "ja-zh",
+   "qid": "P-022-07-4f863962dca5",
    "prompt": "スカートを見せていただけませんか。",
-   "knowledge_ids": [
-    "V0576"
+   "options": [
+    "能让我看看那条裙子吗？",
+    "你们国家说什么语言？",
+    "比起地理我更喜欢历史。",
+    "快到十点时工作结束了。"
    ],
-   "hint": ""
+   "h": "372e9993",
+   "oh": [
+    "372e9993",
+    "72ab8ea4",
+    "10c41b81",
+    "9b28f76d"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0218"
   },
   {
-   "id": "S0219",
-   "day": 22,
-   "direction": "ja-zh",
+   "qid": "P-022-08-a7c37dee5ff7",
    "prompt": "読書の時間がますます少なくなっている。",
-   "knowledge_ids": [
-    "V0577"
+   "options": [
+    "明天我一整天都有空。",
+    "读书的时间越来越少。",
+    "传闻传到了四面八方。",
+    "她笑眯眯地这样说了。"
    ],
-   "hint": ""
+   "h": "fdc800c0",
+   "oh": [
+    "bfabc530",
+    "fdc800c0",
+    "8e2c460f",
+    "f4b6ae3d"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0219"
   },
   {
-   "id": "S0220",
-   "day": 22,
-   "direction": "ja-zh",
+   "qid": "P-022-09-bc385333418a",
    "prompt": "すぐに書かなければなりませんか。",
-   "knowledge_ids": [
-    "V0578"
+   "options": [
+    "我不是老师。",
+    "电梯在哪儿？",
+    "必须马上写吗？",
+    "这绝不是小事。"
    ],
-   "hint": ""
+   "h": "966cc338",
+   "oh": [
+    "b3476675",
+    "6e24e41d",
+    "966cc338",
+    "3cf7c71"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0220"
   }
  ],
  "quiz": [

@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1507",
    "front": "偉大",
    "back": "伟大",
+   "kana": "いだい",
    "stage": "planned"
   },
   {
    "kid": "V1508",
    "front": "抱く",
    "back": "怀抱；怀有",
+   "kana": "いだく",
    "stage": "planned"
   },
   {
    "kid": "V1509",
    "front": "いたずら",
    "back": "恶作剧；淘气",
+   "kana": "いたずら",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0357",
    "front": "側",
-   "back": "侧；旁边｜音 ソク",
+   "back": "侧；旁边",
+   "kana": "ソク、かわ、がわ、そば",
    "stage": "planned"
   },
   {
    "kid": "K0358",
    "front": "任",
-   "back": "责任；委托｜音 ニン",
+   "back": "责任；委托",
+   "kana": "ニン、まか.せる、まか.す",
    "stage": "planned"
   },
   {
    "kid": "V1469",
    "front": "粗",
    "back": "瑕疵",
+   "kana": "あら",
    "stage": "planned"
   },
   {
    "kid": "V1470",
    "front": "嵐",
    "back": "暴风雨",
+   "kana": "あらし",
    "stage": "planned"
   },
   {
    "kid": "V1471",
    "front": "新た",
    "back": "新的",
+   "kana": "あらた",
    "stage": "planned"
   },
   {
@@ -560,104 +568,204 @@
  ],
  "sentences": [
   {
-   "id": "S0851",
-   "day": 86,
-   "direction": "zh-ja",
+   "qid": "P-086-00-9985b9cf96ef",
    "prompt": "我们庆祝他考试及格。",
-   "knowledge_ids": [
-    "V1547"
+   "options": [
+    "この都市の面積はどれくらいか。",
+    "このコップをミルクで満たした。",
+    "キリスト教を信仰していますか。",
+    "私たちは彼の試験合格を祝った。"
    ],
-   "hint": ""
+   "h": "a4f490d7",
+   "oh": [
+    "b726d24f",
+    "69585dd2",
+    "bd6a6e0c",
+    "a4f490d7"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0851"
   },
   {
-   "id": "S0852",
-   "day": 86,
-   "direction": "zh-ja",
+   "qid": "P-086-01-47ade31a1239",
    "prompt": "这条狗可以说是我们家的一员。",
-   "knowledge_ids": [
-    "V1548"
+   "options": [
+    "この犬は言わばうちの家族の一員だ。",
+    "人類だけが火の使い方を知っている。",
+    "あなたの名前と住所を記入しなさい。",
+    "かろうじて車に当てられずにすんだ。"
    ],
-   "hint": ""
+   "h": "734cdf35",
+   "oh": [
+    "734cdf35",
+    "802a2f24",
+    "52eeffa0",
+    "83c3f44d"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0852"
   },
   {
-   "id": "S0853",
-   "day": 86,
-   "direction": "zh-ja",
+   "qid": "P-086-02-91c4c6dea405",
    "prompt": "这就是所谓的「天妇罗」。",
-   "knowledge_ids": [
-    "V1549"
+   "options": [
+    "彼らはジャックの髪の刈り方をひやかした。",
+    "あなたはオーバーなしですますつもりですか。",
+    "これがいわゆる「天ぷら」というものです。",
+    "このお客様は田中さんが担当しています。"
    ],
-   "hint": ""
+   "h": "b094a64a",
+   "oh": [
+    "234d4fca",
+    "c6ed9754",
+    "b094a64a",
+    "29b7257a"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0853"
   },
   {
-   "id": "S0854",
-   "day": 86,
-   "direction": "zh-ja",
+   "qid": "P-086-03-3893f4de2291",
    "prompt": "你的名字必须用墨水写。",
-   "knowledge_ids": [
-    "V1550"
+   "options": [
+    "あなたの名前はインクで書かなければならない。",
+    "もっとお金があれば大きな家に移れるのにな。",
+    "私たちの新居をご覧になってはいかがですか。",
+    "アーア、絶対うまくいくと思ったのになあ。"
    ],
-   "hint": ""
+   "h": "f0361447",
+   "oh": [
+    "f0361447",
+    "5b7c3dcd",
+    "2e1239a1",
+    "2f237702"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0854"
   },
   {
-   "id": "S0855",
-   "day": 86,
-   "direction": "zh-ja",
+   "qid": "P-086-04-0a60d710a1ca",
    "prompt": "那条新闻被匆忙印了出来。",
-   "knowledge_ids": [
-    "V1551"
+   "options": [
+    "この学校は男子よりも女子が多い。",
+    "その作家は会話を書くのがうまい。",
+    "そのニュースは急いで印刷された。",
+    "このソファーは場所を取りすぎる。"
    ],
-   "hint": ""
+   "h": "d5c6649d",
+   "oh": [
+    "53353c8",
+    "34f482bb",
+    "d5c6649d",
+    "fa74e348"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0855"
   },
   {
-   "id": "S0856",
-   "day": 86,
-   "direction": "zh-ja",
+   "qid": "P-086-05-43d916db8fa1",
    "prompt": "她给我留下了机灵女孩的强烈印象。",
-   "knowledge_ids": [
-    "V1552"
+   "options": [
+    "彼女は気の利く女の子である印象を強く受けた。",
+    "それでは、あなたは来ないということですか。",
+    "古き良き時代は去って、二度ともどってこない。",
+    "私の設計にしたがって、作ってもらいました。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0857",
-   "day": 86,
+   "h": "9bd47d9d",
+   "oh": [
+    "9bd47d9d",
+    "5501910",
+    "45662e4e",
+    "48ce3f1c"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0856"
+  },
+  {
+   "qid": "P-086-06-ff0a2a992b06",
    "prompt": "他结束了生意，退了下来。",
-   "knowledge_ids": [
-    "V1553"
+   "options": [
+    "この煙突は通りが悪くなった。",
+    "コーヒー三つおねがいします。",
+    "この手の本はあまり読まない。",
+    "彼は商売をたたんで引退した。"
    ],
-   "hint": ""
+   "h": "144390d5",
+   "oh": [
+    "9dbab80",
+    "b2149d32",
+    "771de503",
+    "144390d5"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0857"
   },
   {
-   "id": "S0858",
-   "day": 86,
-   "direction": "ja-zh",
+   "qid": "P-086-07-70b9533b70e7",
    "prompt": "ハムレットから１行引用できますか。",
-   "knowledge_ids": [
-    "V1554"
+   "options": [
+    "日美两国的利益在这一点上发生了冲突。",
+    "杰克对我搞了个卑鄙的恶作剧。",
+    "你能引用《哈姆雷特》里的一行吗？",
+    "约翰急得连说话的空都没有。"
    ],
-   "hint": ""
+   "h": "f7c43d9c",
+   "oh": [
+    "5012a8b9",
+    "1eacb1bd",
+    "f7c43d9c",
+    "e5d6bf6f"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0858"
   },
   {
-   "id": "S0859",
-   "day": 86,
-   "direction": "ja-zh",
+   "qid": "P-086-08-1d16d159e52e",
    "prompt": "ウイスキーは紅茶とよく合う。",
-   "knowledge_ids": [
-    "V1555"
+   "options": [
+    "今晚是有聚会吗？",
+    "台风导致学校停课。",
+    "铁是最有用的金属。",
+    "威士忌和红茶很搭。"
    ],
-   "hint": ""
+   "h": "4d423da8",
+   "oh": [
+    "6ed5872b",
+    "fcde9f0a",
+    "eb5e2c2d",
+    "4d423da8"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0859"
   },
   {
-   "id": "S0860",
-   "day": 86,
-   "direction": "ja-zh",
+   "qid": "P-086-09-e3cc81f6b40b",
    "prompt": "熱があるので家にいたほうがいい。",
-   "knowledge_ids": [
-    "V1556"
+   "options": [
+    "发烧了，最好待在家里。",
+    "你不能出席吗？为什么？",
+    "流产是非常痛苦的经历。",
+    "比起地理我更喜欢历史。"
    ],
-   "hint": ""
+   "h": "e4b77a7b",
+   "oh": [
+    "e4b77a7b",
+    "e0130b6d",
+    "70445b68",
+    "10c41b81"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0860"
   }
  ],
  "quiz": [

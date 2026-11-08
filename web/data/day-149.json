@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V2638",
    "front": "伸ばす",
    "back": "伸展；拉长",
+   "kana": "のばす",
    "stage": "planned"
   },
   {
    "kid": "V2639",
    "front": "伸びる",
    "back": "伸长；增长",
+   "kana": "のびる",
    "stage": "planned"
   },
   {
    "kid": "V2640",
    "front": "述べる",
    "back": "陈述；叙述",
+   "kana": "のべる",
    "stage": "planned"
   },
   {
@@ -65,31 +68,36 @@
   {
    "kid": "K0609",
    "front": "貧",
-   "back": "贫穷；贫乏｜音 ヒン、ビン",
+   "back": "贫穷；贫乏",
+   "kana": "ヒン、ビン、まず.しい",
    "stage": "planned"
   },
   {
    "kid": "K0610",
    "front": "怒",
-   "back": "生气；发怒｜音 ド、ヌ",
+   "back": "生气；发怒",
+   "kana": "ド、ヌ、いか.る、おこ.る",
    "stage": "planned"
   },
   {
    "kid": "V2596",
    "front": "苦手",
    "back": "不擅长；怕",
+   "kana": "にがて",
    "stage": "planned"
   },
   {
    "kid": "V2597",
    "front": "握る",
    "back": "握；掌握",
+   "kana": "にぎる",
    "stage": "planned"
   },
   {
    "kid": "V2598",
    "front": "日",
    "back": "日；号",
+   "kana": "にち",
    "stage": "planned"
   },
   {
@@ -101,13 +109,15 @@
   {
    "kid": "K0601",
    "front": "娘",
-   "back": "女儿；姑娘｜音 ジョウ",
+   "back": "女儿；姑娘",
+   "kana": "ジョウ、むすめ、こ",
    "stage": "planned"
   },
   {
    "kid": "K0602",
    "front": "誤",
-   "back": "错误；弄错｜音 ゴ",
+   "back": "错误；弄错",
+   "kana": "ゴ、あやま.る、-あやま.る",
    "stage": "planned"
   }
  ],
@@ -509,104 +519,204 @@
  ],
  "sentences": [
   {
-   "id": "S1481",
-   "day": 149,
-   "direction": "zh-ja",
+   "qid": "P-149-00-b1c03b86f154",
    "prompt": "你能帮我拿着这一头吗？",
-   "knowledge_ids": [
-    "V2665"
+   "options": [
+    "海外で働いた経験があります。",
+    "彼女は非常に会社に貢献した。",
+    "大学で何をするつもりですか。",
+    "こっちの端を持っててくれる？"
    ],
-   "hint": ""
+   "h": "cde879f8",
+   "oh": [
+    "e098f265",
+    "c6d55b",
+    "5eb6936f",
+    "cde879f8"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1481"
   },
   {
-   "id": "S1482",
-   "day": 149,
-   "direction": "zh-ja",
+   "qid": "P-149-01-794cc3bb186c",
    "prompt": "开头好就等于成功了一半。",
-   "knowledge_ids": [
-    "V2666"
+   "options": [
+    "一度にひとつのことをするようにしなさい。",
+    "６０にするためには１７に何を足せばよいの。",
+    "彼らはジャックの髪の刈り方をひやかした。",
+    "始まりがうまければ半ばうまくいったもおなじ。"
    ],
-   "hint": ""
+   "h": "4f8d2b72",
+   "oh": [
+    "d5063bcc",
+    "8555cf3a",
+    "234d4fca",
+    "4f8d2b72"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1482"
   },
   {
-   "id": "S1483",
-   "day": 149,
-   "direction": "zh-ja",
+   "qid": "P-149-02-f1ecddc3436c",
    "prompt": "我被棒球队除名了。",
-   "knowledge_ids": [
-    "V2668"
+   "options": [
+    "このコーヒーは苦い味がする。",
+    "湖の深さはどのくらいですか。",
+    "私は野球チームから外された。",
+    "その火事はおととい発生した。"
    ],
-   "hint": ""
+   "h": "814a33f9",
+   "oh": [
+    "6c7fed0f",
+    "15a7848c",
+    "814a33f9",
+    "d0498af0"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1483"
   },
   {
-   "id": "S1484",
-   "day": 149,
-   "direction": "zh-ja",
+   "qid": "P-149-03-0e3deb5d9a7e",
    "prompt": "可以看一下您的护照吗？",
-   "knowledge_ids": [
-    "V2669"
+   "options": [
+    "日がだんだん短くなっている。",
+    "パスポートを拝見できますか。",
+    "その船が沈んだのは明らかだ。",
+    "この本は最近よく売れている。"
    ],
-   "hint": ""
+   "h": "f4834db0",
+   "oh": [
+    "3758f7bc",
+    "f4834db0",
+    "c794b5c3",
+    "4defd2d2"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1484"
   },
   {
-   "id": "S1485",
-   "day": 149,
-   "direction": "zh-ja",
+   "qid": "P-149-04-7d71ff8d9335",
    "prompt": "他把旗子上下挥动。",
-   "knowledge_ids": [
-    "V2670"
+   "options": [
+    "すっかり忘れていました。",
+    "この川の幅が１マイルある。",
+    "彼は旗を上下に動かした。",
+    "あなたは数学が得意ですか。"
    ],
-   "hint": ""
+   "h": "9fda0a9d",
+   "oh": [
+    "5ac78734",
+    "ee0a3e53",
+    "9fda0a9d",
+    "169afc24"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1485"
   },
   {
-   "id": "S1486",
-   "day": 149,
-   "direction": "zh-ja",
+   "qid": "P-149-05-0f511d8873c2",
    "prompt": "中国音乐总不合我的口味。",
-   "knowledge_ids": [
-    "V2671"
+   "options": [
+    "この音楽はバッハによって作曲された。",
+    "その赤ちゃんは歯が生えはじめている。",
+    "彼はその絵にたいへん高い値をつけた。",
+    "中国の音楽はどうも僕の肌に合わない。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1487",
-   "day": 149,
+   "h": "62bcc9c",
+   "oh": [
+    "4681d2ed",
+    "2a005dd5",
+    "1ea5febd",
+    "62bcc9c"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1486"
+  },
+  {
+   "qid": "P-149-06-9b91f3b8009c",
    "prompt": "孩子们光着身子游泳。",
-   "knowledge_ids": [
-    "V2672"
+   "options": [
+    "食事の後に、薬を飲みます。",
+    "われわれは体力を自慢した。",
+    "この川の幅が１マイルある。",
+    "子供たちは裸で泳いでいた。"
    ],
-   "hint": ""
+   "h": "b9146d41",
+   "oh": [
+    "eabdaa51",
+    "3ab0055a",
+    "ee0a3e53",
+    "b9146d41"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1487"
   },
   {
-   "id": "S1488",
-   "day": 149,
-   "direction": "ja-zh",
+   "qid": "P-149-07-926e10b885f8",
    "prompt": "春になると畑をほりかえして種をまきます。",
-   "knowledge_ids": [
-    "V2673"
+   "options": [
+    "我们玩了好几种游戏。",
+    "他不知道受了多少苦。",
+    "读书的时间越来越少。",
+    "一到春天就翻地播种。"
    ],
-   "hint": ""
+   "h": "24c05567",
+   "oh": [
+    "3b0486e",
+    "95b0f650",
+    "fdc800c0",
+    "24c05567"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1488"
   },
   {
-   "id": "S1489",
-   "day": 149,
-   "direction": "ja-zh",
+   "qid": "P-149-08-77bd0d242556",
    "prompt": "働きすぎると体によくないだろう。",
-   "knowledge_ids": [
-    "V2674"
+   "options": [
+    "下下个月是十二月。",
+    "问题是在哪里搭帐篷。",
+    "工作过度对身体不好。",
+    "她笑眯眯地这样说了。"
    ],
-   "hint": ""
+   "h": "a1b9a686",
+   "oh": [
+    "3d2240f5",
+    "8ad9c1ae",
+    "a1b9a686",
+    "f4b6ae3d"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1489"
   },
   {
-   "id": "S1490",
-   "day": 149,
-   "direction": "ja-zh",
+   "qid": "P-149-09-5f5d11cbf636",
    "prompt": "バッグはどこに置けばいいですか。",
-   "knowledge_ids": [
-    "V2675"
+   "options": [
+    "包放在哪里好？",
+    "下午去看诊。",
+    "今天天气好。",
+    "他生于19世纪。"
    ],
-   "hint": ""
+   "h": "4a4df5b0",
+   "oh": [
+    "4a4df5b0",
+    "3d9f1f18",
+    "1b222922",
+    "122eb4a0"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1490"
   }
  ],
  "quiz": [

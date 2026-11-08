@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V1350",
    "front": "文化",
    "back": "文化",
+   "kana": "ぶんか",
    "stage": "planned"
   },
   {
    "kid": "V1351",
    "front": "文学",
    "back": "文学",
+   "kana": "ぶんがく",
    "stage": "planned"
   },
   {
    "kid": "V1352",
    "front": "文法",
    "back": "语法",
+   "kana": "ぶんぽう",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0140",
    "front": "状",
-   "back": "状；状态；状况；症状｜音 ジョウ",
+   "back": "状；状态；状况；症状",
+   "kana": "ジョウ",
    "stage": "planned"
   },
   {
    "kid": "K0286",
    "front": "政",
-   "back": "政治；政务｜音 セイ、ショウ",
+   "back": "政治；政务",
+   "kana": "セイ、ショウ、まつりごと、まん",
    "stage": "planned"
   },
   {
    "kid": "V1317",
    "front": "光",
    "back": "光；光线",
+   "kana": "ひかり",
    "stage": "planned"
   },
   {
    "kid": "V1318",
    "front": "光る",
    "back": "发光；闪耀",
+   "kana": "ひかる",
    "stage": "planned"
   },
   {
    "kid": "V1319",
    "front": "引き出し",
    "back": "抽屉",
+   "kana": "ひきだし",
    "stage": "planned"
   },
   {
@@ -457,104 +465,204 @@
  ],
  "sentences": [
   {
-   "id": "S0671",
-   "day": 68,
-   "direction": "zh-ja",
+   "qid": "P-068-00-6ba459fdd432",
    "prompt": "母亲狠狠训了儿子一顿。",
-   "knowledge_ids": [
-    "V1385"
+   "options": [
+    "トランプでごまかすのはよくないことだ。",
+    "この程度のお金じゃ長くは持たないだろう。",
+    "カクテルパーティーは退屈なときもある。",
+    "母親は息子にやかましく言って聞かせた。"
    ],
-   "hint": ""
+   "h": "6cd23f96",
+   "oh": [
+    "7ef07a76",
+    "2eab4bd1",
+    "d3332c71",
+    "6cd23f96"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0671"
   },
   {
-   "id": "S0672",
-   "day": 68,
-   "direction": "zh-ja",
+   "qid": "P-068-01-9fccfa41c5a2",
    "prompt": "我是海伦·卡特赖特的女儿。",
-   "knowledge_ids": [
-    "V1386"
+   "options": [
+    "ビルはその罪を犯していなかった。",
+    "私はヘレンカートライトの娘です。",
+    "この学校は男子よりも女子が多い。",
+    "それはホテルから遠くありません。"
    ],
-   "hint": ""
+   "h": "dd58f4ca",
+   "oh": [
+    "8cfed4a4",
+    "dd58f4ca",
+    "53353c8",
+    "2d083832"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0672"
   },
   {
-   "id": "S0673",
-   "day": 68,
-   "direction": "zh-ja",
+   "qid": "P-068-02-5283606bdb90",
    "prompt": "这个要求太过分了。",
-   "knowledge_ids": [
-    "V1387"
+   "options": [
+    "予定を変えました。",
+    "それは無理な注文だ。",
+    "この小麦は粉にされる。",
+    "日本語を話します。"
    ],
-   "hint": ""
+   "h": "3097222f",
+   "oh": [
+    "a0ad83b4",
+    "3097222f",
+    "8fa39b7e",
+    "29338a89"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0673"
   },
   {
-   "id": "S0674",
-   "day": 68,
-   "direction": "zh-ja",
+   "qid": "P-068-03-305480fe011d",
    "prompt": "您在这儿吃还是带走。",
-   "knowledge_ids": [
-    "V1388"
+   "options": [
+    "６０にするためには１７に何を足せばよいの。",
+    "ここで召し上がりますか、それともお持ち帰りですか。",
+    "あなたに被害を及ぼそうなどとは夢にも思いませんでした。",
+    "その機関は１９６０年代後半に設立された。"
    ],
-   "hint": ""
+   "h": "d4c958e0",
+   "oh": [
+    "8555cf3a",
+    "d4c958e0",
+    "c8c2914d",
+    "504171b4"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0674"
   },
   {
-   "id": "S0675",
-   "day": 68,
-   "direction": "zh-ja",
+   "qid": "P-068-04-1fed6f20f20e",
    "prompt": "这是很稀奇的一种鱼。",
-   "knowledge_ids": [
-    "V1389"
+   "options": [
+    "それは２通りに解釈できる。",
+    "京都には多くの神社がある。",
+    "私は最低２マイルは歩ける。",
+    "これは珍しい種類の魚です。"
    ],
-   "hint": ""
+   "h": "7979a1c1",
+   "oh": [
+    "46bbbffc",
+    "8cc76400",
+    "133a9034",
+    "7979a1c1"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0675"
   },
   {
-   "id": "S0676",
-   "day": 68,
-   "direction": "zh-ja",
+   "qid": "P-068-05-b405c97c2736",
    "prompt": "实在不知怎么感谢您才好。",
-   "knowledge_ids": [
-    "V1390"
+   "options": [
+    "ビールびんはガラスでできている。",
+    "お礼の申し上げようもありません。",
+    "ムーリエルは２０歳になりました。",
+    "マイクはバスで学校に通っている。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0677",
-   "day": 68,
+   "h": "d477e2e9",
+   "oh": [
+    "45e4dbee",
+    "d477e2e9",
+    "18597f07",
+    "1062eb67"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0676"
+  },
+  {
+   "qid": "P-068-06-dd96f4ec477a",
    "prompt": "天亮了，马上就要早晨了。",
-   "knowledge_ids": [
-    "V1391"
+   "options": [
+    "その象は動物園に連れてこられた。",
+    "お祭りでロブスターを食べました。",
+    "おまえはオレを殺そうとしている。",
+    "明るくなってきた。もうすぐ朝だ。"
    ],
-   "hint": ""
+   "h": "149a746",
+   "oh": [
+    "f9632f0f",
+    "6e738748",
+    "aac242c3",
+    "149a746"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0677"
   },
   {
-   "id": "S0678",
-   "day": 68,
-   "direction": "ja-zh",
+   "qid": "P-068-07-acdf93d9758d",
    "prompt": "もし電話がなったら出てくれますか。",
-   "knowledge_ids": [
-    "V1392"
+   "options": [
+    "我们能从书籍中获得乐趣。",
+    "要是电话响了，你能接一下吗。",
+    "那场暴风雨带来了巨大损失。",
+    "据天气预报，马上就要入梅了。"
    ],
-   "hint": ""
+   "h": "c0147fd2",
+   "oh": [
+    "d09b4d0",
+    "c0147fd2",
+    "5f9247ec",
+    "d468a87f"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0678"
   },
   {
-   "id": "S0679",
-   "day": 68,
-   "direction": "ja-zh",
+   "qid": "P-068-08-0e8c73f7bca4",
    "prompt": "「ご一緒してもいいですか」「もちろんです」",
-   "knowledge_ids": [
-    "V1393"
+   "options": [
+    "杰克对我搞了个卑鄙的恶作剧。",
+    "好了，聚会就到此结束吧。",
+    "「我可以一起去吗？」「当然。」。",
+    "这庭院的美更多归功于人工而非自然。"
    ],
-   "hint": ""
+   "h": "4a7630ab",
+   "oh": [
+    "1eacb1bd",
+    "5b171b12",
+    "4a7630ab",
+    "e6b6efe9"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0679"
   },
   {
-   "id": "S0680",
-   "day": 68,
-   "direction": "ja-zh",
+   "qid": "P-068-09-e5c4aac55556",
    "prompt": "ケンは三人のなかでもっとも速く走ります。",
-   "knowledge_ids": [
-    "V1394"
+   "options": [
+    "你为什么想当护士？",
+    "定期做健康检查。",
+    "健在三跑得最快。",
+    "突然开始下雨了。"
    ],
-   "hint": ""
+   "h": "57e1f82c",
+   "oh": [
+    "28ee32c5",
+    "e7de9c23",
+    "57e1f82c",
+    "4c4b05b0"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0680"
   }
  ],
  "quiz": [

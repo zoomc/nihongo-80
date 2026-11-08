@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0665",
    "front": "トイレ",
    "back": "厕所",
+   "kana": "トイレ",
    "stage": "planned"
   },
   {
    "kid": "V0666",
    "front": "どう",
    "back": "怎样",
+   "kana": "どう",
    "stage": "planned"
   },
   {
    "kid": "V0667",
    "front": "どうして",
    "back": "为什么",
+   "kana": "どうして",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0095",
    "front": "茶",
-   "back": "茶；茶道｜音 チャ、サ",
+   "back": "茶；茶道",
+   "kana": "チャ、サ",
    "stage": "planned"
   },
   {
    "kid": "K0096",
    "front": "朝",
-   "back": "早晨；朝代｜音 チョウ",
+   "back": "早晨；朝代",
+   "kana": "チョウ、あさ",
    "stage": "planned"
   },
   {
    "kid": "V0627",
    "front": "誰",
    "back": "谁",
+   "kana": "だれ",
    "stage": "planned"
   },
   {
    "kid": "V0628",
    "front": "誕生日",
    "back": "生日",
+   "kana": "たんじょうび",
    "stage": "planned"
   },
   {
    "kid": "V0629",
    "front": "だんだん",
    "back": "逐渐",
+   "kana": "だんだん",
    "stage": "planned"
   },
   {
@@ -530,104 +538,204 @@
  ],
  "sentences": [
   {
-   "id": "S0261",
-   "day": 27,
-   "direction": "zh-ja",
+   "qid": "P-027-00-d6820d132d6d",
    "prompt": "请把照片给我看看。",
-   "knowledge_ids": [
-    "V0668"
+   "options": [
+    "船は今夜赤道を越すだろう。",
+    "写真をどうぞ見せて下さい。",
+    "こんばんは、お元気ですか。",
+    "ここに手のないナベがある。"
    ],
-   "hint": ""
+   "h": "4a68c9ba",
+   "oh": [
+    "e22b650a",
+    "4a68c9ba",
+    "81d2ed7",
+    "4bd0565"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0261"
   },
   {
-   "id": "S0262",
-   "day": 27,
-   "direction": "zh-ja",
+   "qid": "P-027-01-43cfc9c83bb5",
    "prompt": "请多关照。",
-   "knowledge_ids": [
-    "V0669"
+   "options": [
+    "ただの風邪でしょう。",
+    "音楽を聞きます。",
+    "日本語を話します。",
+    "どうぞよろしく。"
    ],
-   "hint": ""
+   "h": "2a18460d",
+   "oh": [
+    "8dd6c2d9",
+    "ae738ead",
+    "29338a89",
+    "2a18460d"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0262"
   },
   {
-   "id": "S0263",
-   "day": 27,
-   "direction": "zh-ja",
+   "qid": "P-027-02-b764337afdbb",
    "prompt": "我知道那种动物的名字。",
-   "knowledge_ids": [
-    "V0670"
+   "options": [
+    "お礼の申し上げようもありません。",
+    "ここでは煙草は禁止されています。",
+    "私はその動物の名前を知っている。",
+    "その町はロンドンのすぐ北にある。"
    ],
-   "hint": ""
+   "h": "56cc8ac5",
+   "oh": [
+    "d477e2e9",
+    "ecc80e4d",
+    "56cc8ac5",
+    "efe3c905"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0263"
   },
   {
-   "id": "S0264",
-   "day": 27,
-   "direction": "zh-ja",
+   "qid": "P-027-03-7fd9a8e22ff6",
    "prompt": "那两个人好像在一起了。",
-   "knowledge_ids": [
-    "V0671"
+   "options": [
+    "この夏はこんがり焼こうと思います。",
+    "彼は心理学博士の学位を持っている。",
+    "さっきなぜかマイクが入らなかった。",
+    "あの二人はどうもできているらしい。"
    ],
-   "hint": ""
+   "h": "3402efb8",
+   "oh": [
+    "21ead46d",
+    "316eb7ce",
+    "f6bd6b75",
+    "3402efb8"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0264"
   },
   {
-   "id": "S0265",
-   "day": 27,
-   "direction": "zh-ja",
+   "qid": "P-027-04-dd1fe3bccc3a",
    "prompt": "那里离酒店不远。",
-   "knowledge_ids": [
-    "V0672"
+   "options": [
+    "それはホテルから遠くありません。",
+    "このホールには人が二千人入れる。",
+    "ホッチキスを貸してくれませんか。",
+    "アラビア語は右から左へ書きます。"
    ],
-   "hint": ""
+   "h": "2d083832",
+   "oh": [
+    "2d083832",
+    "cc13a7d1",
+    "1b2dc8f1",
+    "36918c3"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0265"
   },
   {
-   "id": "S0266",
-   "day": 27,
-   "direction": "zh-ja",
+   "qid": "P-027-05-8549f93302ef",
    "prompt": "杰克出生在八月十号。",
-   "knowledge_ids": [
-    "V0673"
+   "options": [
+    "それはたいへんなショックでした。",
+    "これらの語をノートに書きなさい。",
+    "ジャックは８月１０日に生まれた。",
+    "コックさんは少しもかけていない。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0267",
-   "day": 27,
+   "h": "6df6eadc",
+   "oh": [
+    "4f933c74",
+    "7a4a4062",
+    "6df6eadc",
+    "9948ee99"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0266"
+  },
+  {
+   "qid": "P-027-06-34286a59716e",
    "prompt": "你在哪里看电视？",
-   "knowledge_ids": [
-    "V0674"
+   "options": [
+    "あなたはどこでテレビを見ますか。",
+    "ムーリエルは２０歳になりました。",
+    "その子は何の恐怖も示さなかった。",
+    "ラジオの音を下げてくれませんか。"
    ],
-   "hint": ""
+   "h": "c9e3b484",
+   "oh": [
+    "c9e3b484",
+    "18597f07",
+    "67d66472",
+    "2be3730e"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0267"
   },
   {
-   "id": "S0268",
-   "day": 27,
-   "direction": "ja-zh",
+   "qid": "P-027-07-8900cddc6452",
    "prompt": "どんな所でアルバイトできるの。",
-   "knowledge_ids": [
-    "V0675"
+   "options": [
+    "我让他搬了行李箱。",
+    "我打算下周去欧洲。",
+    "能在什么地方打工？",
+    "你没有权利去那里。"
    ],
-   "hint": ""
+   "h": "7929d740",
+   "oh": [
+    "323f3d7c",
+    "221cdbf7",
+    "7929d740",
+    "2e3620c5"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0268"
   },
   {
-   "id": "S0269",
-   "day": 27,
-   "direction": "ja-zh",
+   "qid": "P-027-08-b9d735ef1369",
    "prompt": "お年をお聞きしてよろしいでしょうか。",
-   "knowledge_ids": [
-    "V0676"
+   "options": [
+    "休息一下喝杯咖啡吧。",
+    "可以问一下您的年龄吗？",
+    "啊！糟了！汽油快没了。",
+    "那场音乐会十点结束了。"
    ],
-   "hint": ""
+   "h": "868eaf76",
+   "oh": [
+    "c32a32e0",
+    "868eaf76",
+    "b6724d72",
+    "ee697363"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0269"
   },
   {
-   "id": "S0270",
-   "day": 27,
-   "direction": "ja-zh",
+   "qid": "P-027-09-ddd0f3c59e15",
    "prompt": "二つのうちでどちらが高いですか。",
-   "knowledge_ids": [
-    "V0677"
+   "options": [
+    "他和朋友握了手。",
+    "我的右臂伸不直。",
+    "两个当中哪个贵？",
+    "那条街充满活力。"
    ],
-   "hint": ""
+   "h": "fc08db83",
+   "oh": [
+    "9f02e227",
+    "d463fc58",
+    "fc08db83",
+    "d3ea8b20"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0270"
   }
  ],
  "quiz": [

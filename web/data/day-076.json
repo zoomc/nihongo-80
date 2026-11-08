@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0240",
    "front": "見つける",
    "back": "找到（他动）",
+   "kana": "みつける",
    "stage": "planned"
   },
   {
    "kid": "V0241",
    "front": "見つかる",
    "back": "被找到；（东西）找到了（自动）",
+   "kana": "みつかる",
    "stage": "planned"
   },
   {
    "kid": "V0242",
    "front": "変える",
    "back": "改变（他动）",
+   "kana": "かえる",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0317",
    "front": "務",
-   "back": "任务；职务｜音 ム",
+   "back": "任务；职务",
+   "kana": "ム、つと.める",
    "stage": "planned"
   },
   {
    "kid": "K0318",
    "front": "成",
-   "back": "成为；完成｜音 セイ、ジョウ",
+   "back": "成为；完成",
+   "kana": "セイ、ジョウ、な.る、な.す、-な.す",
    "stage": "planned"
   },
   {
    "kid": "V0207",
    "front": "原因",
    "back": "原因（客观）",
+   "kana": "げんいん",
    "stage": "planned"
   },
   {
    "kid": "V0208",
    "front": "結果",
    "back": "结果",
+   "kana": "けっか",
    "stage": "planned"
   },
   {
    "kid": "V0209",
    "front": "目的",
    "back": "目的",
+   "kana": "もくてき",
    "stage": "planned"
   },
   {
@@ -563,104 +571,204 @@
  ],
  "sentences": [
   {
-   "id": "S0751",
-   "day": 76,
-   "direction": "zh-ja",
+   "qid": "P-076-00-89348f081c84",
    "prompt": "把邮件收件人弄错了。",
-   "knowledge_ids": [
-    "V0274"
+   "options": [
+    "メールの宛先を間違えました。",
+    "ちょっと寄って行きませんか。",
+    "父は袖に長い裂け目を作った。",
+    "新しいパソコンがほしいです。"
    ],
-   "hint": ""
+   "h": "293851f6",
+   "oh": [
+    "293851f6",
+    "187ef6ad",
+    "822d769f",
+    "70214d18"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0751"
   },
   {
-   "id": "S0752",
-   "day": 76,
-   "direction": "zh-ja",
+   "qid": "P-076-01-a6cf888cef6a",
    "prompt": "主题栏请写会议名称。",
-   "knowledge_ids": [
-    "V0275"
+   "options": [
+    "柔道では力より技のほうが大切である。",
+    "私が今日あるのは両親のおかげである。",
+    "件名には会議の名前を書いてください。",
+    "そこの乞食が泥棒である事がわかった。"
    ],
-   "hint": ""
+   "h": "6a6d8bac",
+   "oh": [
+    "dffb12c8",
+    "9d3a4023",
+    "6a6d8bac",
+    "cc176d6c"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0752"
   },
   {
-   "id": "S0753",
-   "day": 76,
-   "direction": "zh-ja",
+   "qid": "P-076-02-f2000a6e2a30",
    "prompt": "把报价单附在邮件里了。",
-   "knowledge_ids": [
-    "V0276"
+   "options": [
+    "見積書をメールに添付しました。",
+    "医者は彼の苦痛を除いてやった。",
+    "ほかに痛いところはありますか。",
+    "その場合には警察を呼びなさい。"
    ],
-   "hint": ""
+   "h": "78348f4a",
+   "oh": [
+    "78348f4a",
+    "8a6a13e3",
+    "f06f274a",
+    "dba5375d"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0753"
   },
   {
-   "id": "S0754",
-   "day": 76,
-   "direction": "zh-ja",
+   "qid": "P-076-03-5341ede29dfe",
    "prompt": "在等邮件回复。",
-   "knowledge_ids": [
-    "V0277"
+   "options": [
+    "メールの返信を待っています。",
+    "朝の電車はとても混雑します。",
+    "勢いに流されているんですよ。",
+    "彼女は非常に会社に貢献した。"
    ],
-   "hint": ""
+   "h": "95cf6c7f",
+   "oh": [
+    "95cf6c7f",
+    "14d044ce",
+    "75832468",
+    "c6d55b"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0754"
   },
   {
-   "id": "S0755",
-   "day": 76,
-   "direction": "zh-ja",
+   "qid": "P-076-04-765dd407e82a",
    "prompt": "请把这封邮件转发给营业部。",
-   "knowledge_ids": [
-    "V0278"
+   "options": [
+    "あなたの言うことは正しいかもしれない。",
+    "私たちはもうずいぶん長くここにいます。",
+    "彼は指導されなくても学ぶことができた。",
+    "このメールを営業部に転送してください。"
    ],
-   "hint": ""
+   "h": "ad45da64",
+   "oh": [
+    "cdabcfca",
+    "6c59bc68",
+    "3d30d7f1",
+    "ad45da64"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0755"
   },
   {
-   "id": "S0756",
-   "day": 76,
-   "direction": "zh-ja",
+   "qid": "P-076-05-5ca99248e3bc",
    "prompt": "下周去大阪出差。",
-   "knowledge_ids": [
-    "V0279"
+   "options": [
+    "事故は不注意から生じる。",
+    "月曜日に試験があります。",
+    "一行はアメリカへ渡った。",
+    "来週、大阪へ出張します。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0757",
-   "day": 76,
+   "h": "64af9452",
+   "oh": [
+    "d8aad1b6",
+    "3c031ff",
+    "c3bc3e5",
+    "64af9452"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0756"
+  },
+  {
+   "qid": "P-076-06-ae40c3e0ca16",
    "prompt": "我在站前分公司工作。",
-   "knowledge_ids": [
-    "V0280"
+   "options": [
+    "あの先生に質問してもいいですよ。",
+    "ビルはその罪を犯していなかった。",
+    "私は駅前の支社で勤務しています。",
+    "あなたはどこでテレビを見ますか。"
    ],
-   "hint": ""
+   "h": "92147a7c",
+   "oh": [
+    "c64703e1",
+    "8cfed4a4",
+    "92147a7c",
+    "c9e3b484"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0757"
   },
   {
-   "id": "S0758",
-   "day": 76,
-   "direction": "ja-zh",
+   "qid": "P-076-07-80c2a94ab240",
    "prompt": "提出の期限は明日の午後五時です。",
-   "knowledge_ids": [
-    "V0281"
+   "options": [
+    "你是个多么聪明的学生啊。",
+    "比尔因为考试的事心烦。",
+    "他们的意见和我的不同。",
+    "提交期限是明天下午五点。"
    ],
-   "hint": ""
+   "h": "23e6f0a0",
+   "oh": [
+    "9c468c5f",
+    "26826a2f",
+    "1d38ae3",
+    "23e6f0a0"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0758"
   },
   {
-   "id": "S0759",
-   "day": 76,
-   "direction": "ja-zh",
+   "qid": "P-076-08-fb7fe872ff3a",
    "prompt": "質問がある方は、三番の窓口へ来てください。",
-   "knowledge_ids": [
-    "V0282"
+   "options": [
+    "有问题的人请到3号窗口。",
+    "那个人是上周在这里的人。",
+    "祖父没有拐杖就走不了路。",
+    "他的话简单得不能再简单。"
    ],
-   "hint": ""
+   "h": "cea33913",
+   "oh": [
+    "cea33913",
+    "71c7037a",
+    "e511983a",
+    "1723f272"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0759"
   },
   {
-   "id": "S0760",
-   "day": 76,
-   "direction": "ja-zh",
+   "qid": "P-076-09-b1a3f42088ef",
    "prompt": "受付で名前を書いてください。",
-   "knowledge_ids": [
-    "V0283"
+   "options": [
+    "请在接待处写名字。",
+    "今晚是有聚会吗？",
+    "我让他搬了行李箱。",
+    "她讨厌在人前讲话。"
    ],
-   "hint": ""
+   "h": "bb7ed81b",
+   "oh": [
+    "bb7ed81b",
+    "6ed5872b",
+    "323f3d7c",
+    "46712732"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0760"
   }
  ],
  "quiz": [

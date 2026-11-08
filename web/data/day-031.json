@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0741",
    "front": "半",
    "back": "半；一半",
+   "kana": "はん",
    "stage": "planned"
   },
   {
    "kid": "V0742",
    "front": "晩",
    "back": "晚上；晚间",
+   "kana": "ばん",
    "stage": "planned"
   },
   {
    "kid": "V0743",
    "front": "ハンカチ",
    "back": "手帕",
+   "kana": "ハンカチ",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0172",
    "front": "立",
-   "back": "站立；建立；设立｜音 リツ、リュウ",
+   "back": "站立；建立；设立",
+   "kana": "リツ、リュウ、た.つ、-た.つ、た.ち-、た.てる、-た.てる、た.て-、たて-、-た.て、-だ.て、-だ.てる",
    "stage": "planned"
   },
   {
    "kid": "K0173",
    "front": "開",
-   "back": "开；打开；开始｜音 カイ",
+   "back": "开；打开；开始",
+   "kana": "カイ、ひら.く、ひら.き、-びら.き、ひら.ける、あ.く、あ.ける",
    "stage": "planned"
   },
   {
    "kid": "V0703",
    "front": "荷物",
    "back": "行李",
+   "kana": "にもつ",
    "stage": "planned"
   },
   {
    "kid": "V0704",
    "front": "ニュース",
    "back": "新闻",
+   "kana": "ニュース",
    "stage": "planned"
   },
   {
    "kid": "V0705",
    "front": "庭",
    "back": "院子",
+   "kana": "にわ",
    "stage": "planned"
   },
   {
@@ -531,104 +539,204 @@
  ],
  "sentences": [
   {
-   "id": "S0301",
-   "day": 31,
-   "direction": "zh-ja",
+   "qid": "P-031-00-287ed7fd2ae9",
    "prompt": "窗帘被慢慢地拉上了。",
-   "knowledge_ids": [
-    "V0748"
+   "options": [
+    "この数字の列を合計しなさい。",
+    "その船が沈んだのは明らかだ。",
+    "カーテンがゆっくり引かれた。",
+    "この地域は雨が続くでしょう。"
    ],
-   "hint": ""
+   "h": "9a704e8a",
+   "oh": [
+    "3eebc836",
+    "c794b5c3",
+    "9a704e8a",
+    "f3e64d08"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0301"
   },
   {
-   "id": "S0302",
-   "day": 31,
-   "direction": "zh-ja",
+   "qid": "P-031-01-bfaf0d9b60f8",
    "prompt": "弹吉他很有意思。",
-   "knowledge_ids": [
-    "V0749"
+   "options": [
+    "日本語の勉強を続けています。",
+    "きのう旧友の一人に出会った。",
+    "ギターをひくのはおもしろい。",
+    "その紙を四つ折りにしなさい。"
    ],
-   "hint": ""
+   "h": "f7aedaae",
+   "oh": [
+    "3c17b352",
+    "bacc7be9",
+    "f7aedaae",
+    "6860baf1"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0302"
   },
   {
-   "id": "S0303",
-   "day": 31,
-   "direction": "zh-ja",
+   "qid": "P-031-02-5557444687d8",
    "prompt": "请把收音机的声音调小。",
-   "knowledge_ids": [
-    "V0750"
+   "options": [
+    "ラジオの音を低くして下さい。",
+    "それ以上はお役に立てません。",
+    "コーヒー三つおねがいします。",
+    "このセーターは気に入らない。"
    ],
-   "hint": ""
+   "h": "847c7179",
+   "oh": [
+    "847c7179",
+    "717e0b55",
+    "b2149d32",
+    "468b4643"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0303"
   },
   {
-   "id": "S0304",
-   "day": 31,
-   "direction": "zh-ja",
+   "qid": "P-031-03-ade0a19da3dc",
    "prompt": "阿拉伯语是从右往左写的。",
-   "knowledge_ids": [
-    "V0751"
+   "options": [
+    "あなたに頼んでもよろしいですか。",
+    "アラビア語は右から左へ書きます。",
+    "あなたの見解は私とは正反対です。",
+    "ビールびんはガラスでできている。"
    ],
-   "hint": ""
+   "h": "36918c3",
+   "oh": [
+    "e84dbeb6",
+    "36918c3",
+    "65661673",
+    "45e4dbee"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0304"
   },
   {
-   "id": "S0305",
-   "day": 31,
-   "direction": "zh-ja",
+   "qid": "P-031-04-6726e29270b2",
    "prompt": "汽车有一个方向盘。",
-   "knowledge_ids": [
-    "V0752"
+   "options": [
+    "車にはハンドルが一つある。",
+    "これはとても大切な会合だ。",
+    "イチゴはジャムに作られる。",
+    "私もまた、議員の一人です。"
    ],
-   "hint": ""
+   "h": "b2498326",
+   "oh": [
+    "b2498326",
+    "b94a6327",
+    "fc94d29",
+    "71ef590d"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0305"
   },
   {
-   "id": "S0306",
-   "day": 31,
-   "direction": "zh-ja",
+   "qid": "P-031-05-7ba4e7eba586",
    "prompt": "到钱花完的时候还有一个月。",
-   "knowledge_ids": [
-    "V0753"
+   "options": [
+    "とても寒いからスケートが出来るよ。",
+    "お年寄りをからかってはいけません。",
+    "この学校はたくさんの生徒がいます。",
+    "金がなくなる頃にはもうひと月ある。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0307",
-   "day": 31,
+   "h": "992fa3ba",
+   "oh": [
+    "9a3d2a27",
+    "a3dd40ad",
+    "939aa164",
+    "992fa3ba"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0306"
+  },
+  {
+   "qid": "P-031-06-c15022b971e7",
    "prompt": "你怎么变成一个人了？",
-   "knowledge_ids": [
-    "V0754"
+   "options": [
+    "どうしてあなたは一人になったの？",
+    "みんなには優しく話してください。",
+    "ルーシーは今台所にいるでしょう。",
+    "ニューススタンドで聞いて下さい。"
    ],
-   "hint": ""
+   "h": "23d94b23",
+   "oh": [
+    "23d94b23",
+    "125e9885",
+    "c439c603",
+    "8d525137"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0307"
   },
   {
-   "id": "S0308",
-   "day": 31,
-   "direction": "ja-zh",
+   "qid": "P-031-07-707fd190ed01",
    "prompt": "ジョンはひどく急いでいたので話をする暇もなかった。",
-   "knowledge_ids": [
-    "V0755"
+   "options": [
+    "约翰急得连说话的空都没有。",
+    "再婚之后，他现在一定更幸福。",
+    "我终于和那个男人两清了。",
+    "他打橄榄球的时候受了伤。"
    ],
-   "hint": ""
+   "h": "e5d6bf6f",
+   "oh": [
+    "e5d6bf6f",
+    "42a05a2e",
+    "a6a93bb5",
+    "45de1693"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0308"
   },
   {
-   "id": "S0309",
-   "day": 31,
-   "direction": "ja-zh",
+   "qid": "P-031-08-b6818db02147",
    "prompt": "百年後にはみな同じになる。",
-   "knowledge_ids": [
-    "V0756"
+   "options": [
+    "一百年后大家都一样了。",
+    "一到春天就翻地播种。",
+    "你要是乖，就给你糖吃。",
+    "账算下来一共五百美元。"
    ],
-   "hint": ""
+   "h": "486441a2",
+   "oh": [
+    "486441a2",
+    "24c05567",
+    "98c00a1c",
+    "2e1e71de"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0309"
   },
   {
-   "id": "S0310",
-   "day": 31,
-   "direction": "ja-zh",
+   "qid": "P-031-09-65c1823ccbec",
    "prompt": "ボブはいったい病気なのだろうか。",
-   "knowledge_ids": [
-    "V0757"
+   "options": [
+    "传闻传到了四面八方。",
+    "你的耳朵怎么这么大？",
+    "鲍勃到底是不是病了？",
+    "下下个月是十二月。"
    ],
-   "hint": ""
+   "h": "f2ed1fa9",
+   "oh": [
+    "8e2c460f",
+    "2f4f9a74",
+    "f2ed1fa9",
+    "3d2240f5"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0310"
   }
  ],
  "quiz": [

@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0034",
    "front": "木曜日",
    "back": "星期四",
+   "kana": "もくようび",
    "stage": "planned"
   },
   {
    "kid": "V0035",
    "front": "金曜日",
    "back": "星期五",
+   "kana": "きんようび",
    "stage": "planned"
   },
   {
    "kid": "V0036",
    "front": "土曜日",
    "back": "星期六",
+   "kana": "どようび",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0016",
    "front": "九",
-   "back": "九｜音 キュウ、ク",
+   "back": "九",
+   "kana": "キュウ、ク、ここの、ここのつ",
    "stage": "planned"
   },
   {
    "kid": "K0017",
    "front": "十",
-   "back": "十｜音 ジュウ、ジッ",
+   "back": "十",
+   "kana": "ジュウ、ジッ、とお",
    "stage": "planned"
   },
   {
    "kid": "V0012",
    "front": "四",
    "back": "四（し／よん）",
+   "kana": "よん",
    "stage": "planned"
   },
   {
    "kid": "V0013",
    "front": "五",
    "back": "五",
+   "kana": "ご",
    "stage": "planned"
   },
   {
    "kid": "V0014",
    "front": "六",
    "back": "六",
+   "kana": "ろく",
    "stage": "planned"
   },
   {
@@ -553,104 +561,204 @@
  ],
  "sentences": [
   {
-   "id": "S0041",
-   "day": 5,
-   "direction": "zh-ja",
+   "qid": "P-005-00-23a656437caa",
    "prompt": "在房间里。",
-   "knowledge_ids": [
-    "V0048"
+   "options": [
+    "切符を買います。",
+    "ご協力に感謝します。",
+    "それは無理な注文だ。",
+    "部屋の中にいます。"
    ],
-   "hint": ""
+   "h": "3d1f2b43",
+   "oh": [
+    "9ad3920e",
+    "fab0a215",
+    "3097222f",
+    "3d1f2b43"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0041"
   },
   {
-   "id": "S0042",
-   "day": 5,
-   "direction": "zh-ja",
+   "qid": "P-005-01-17aaee874ccd",
    "prompt": "车站前有店。",
-   "knowledge_ids": [
-    "V0049"
+   "options": [
+    "旅行の日を決めました。",
+    "冗談はもうたくさんだ。",
+    "天気予報が当たったよ。",
+    "駅の前に店があります。"
    ],
-   "hint": ""
+   "h": "e62e23a2",
+   "oh": [
+    "a06ca4c6",
+    "6808b25c",
+    "af55e21c",
+    "e62e23a2"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0042"
   },
   {
-   "id": "S0043",
-   "day": 5,
-   "direction": "zh-ja",
+   "qid": "P-005-02-679389d5e5ab",
    "prompt": "饭后吃药。",
-   "knowledge_ids": [
-    "V0050"
+   "options": [
+    "食事の後に、薬を飲みます。",
+    "私たちは制服を支給された。",
+    "苦痛で彼の顔が歪んでいる。",
+    "でも、これで１つ貸しだね。"
    ],
-   "hint": ""
+   "h": "eabdaa51",
+   "oh": [
+    "eabdaa51",
+    "9edbefef",
+    "15706b98",
+    "8347f85c"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0043"
   },
   {
-   "id": "S0044",
-   "day": 5,
-   "direction": "zh-ja",
+   "qid": "P-005-03-a057a632a2b8",
    "prompt": "吃饭。",
-   "knowledge_ids": [
-    "V0051"
+   "options": [
+    "ご飯を食べます。",
+    "部屋の中にいます。",
+    "私は数学は苦手だ。",
+    "子供が公園にいます。"
    ],
-   "hint": ""
+   "h": "26896ad7",
+   "oh": [
+    "26896ad7",
+    "3d1f2b43",
+    "1dae0651",
+    "c0591056"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0044"
   },
   {
-   "id": "S0045",
-   "day": 5,
-   "direction": "zh-ja",
+   "qid": "P-005-04-55e2ceb26061",
    "prompt": "吃早饭。",
-   "knowledge_ids": [
-    "V0052"
+   "options": [
+    "話を聞かせてくれ。",
+    "部屋には家具がない。",
+    "朝ご飯を食べます。",
+    "それは無理な注文だ。"
    ],
-   "hint": ""
+   "h": "bde49cfa",
+   "oh": [
+    "daa927f",
+    "7d411b95",
+    "bde49cfa",
+    "3097222f"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0045"
   },
   {
-   "id": "S0046",
-   "day": 5,
-   "direction": "zh-ja",
+   "qid": "P-005-05-b88b209f1559",
    "prompt": "喝水。",
-   "knowledge_ids": [
-    "V0053"
+   "options": [
+    "水を飲みます。",
+    "私は学生です。",
+    "お茶を飲みます。",
+    "医者になりたいです。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0047",
-   "day": 5,
+   "h": "9d2cc3e5",
+   "oh": [
+    "9d2cc3e5",
+    "749e1f84",
+    "d303d227",
+    "22bf2f45"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0046"
+  },
+  {
+   "qid": "P-005-06-f4ba2cf28354",
    "prompt": "喝茶。",
-   "knowledge_ids": [
-    "V0054"
+   "options": [
+    "ホテルに泊まります。",
+    "いつもバス通学です。",
+    "お茶を飲みます。",
+    "運賃は二百円です。"
    ],
-   "hint": ""
+   "h": "d303d227",
+   "oh": [
+    "7f5d8029",
+    "52973008",
+    "d303d227",
+    "bc3a4c76"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0047"
   },
   {
-   "id": "S0048",
-   "day": 5,
-   "direction": "ja-zh",
+   "qid": "P-005-07-545794a3752e",
    "prompt": "肉を買います。",
-   "knowledge_ids": [
-    "V0055"
+   "options": [
+    "上电车。",
+    "买肉。",
+    "她有表演天赋。",
+    "还剩三页。"
    ],
-   "hint": ""
+   "h": "e9acffb0",
+   "oh": [
+    "efa44868",
+    "e9acffb0",
+    "85f35af",
+    "7c2b1c12"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0048"
   },
   {
-   "id": "S0049",
-   "day": 5,
-   "direction": "ja-zh",
+   "qid": "P-005-08-cd43616a1758",
    "prompt": "魚が好きです。",
-   "knowledge_ids": [
-    "V0056"
+   "options": [
+    "吃早饭。",
+    "正在下雨。",
+    "今天天阴。",
+    "喜欢鱼。"
    ],
-   "hint": ""
+   "h": "1c49d4c5",
+   "oh": [
+    "c30f1232",
+    "effe2eb5",
+    "5fbcd739",
+    "1c49d4c5"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0049"
   },
   {
-   "id": "S0050",
-   "day": 5,
-   "direction": "ja-zh",
+   "qid": "P-005-09-2e7261da8c34",
    "prompt": "野菜を買います。",
-   "knowledge_ids": [
-    "V0057"
+   "options": [
+    "买蔬菜。",
+    "那场考试很难。",
+    "开车非常愉快。",
+    "那座山有多高？"
    ],
-   "hint": ""
+   "h": "6563b707",
+   "oh": [
+    "6563b707",
+    "b3de9e6c",
+    "81ac924d",
+    "f66afa54"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0050"
   }
  ],
  "quiz": [

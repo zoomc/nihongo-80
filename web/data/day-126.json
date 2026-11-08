@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V2177",
    "front": "植物",
    "back": "植物",
+   "kana": "しょくぶつ",
    "stage": "planned"
   },
   {
    "kid": "V2178",
    "front": "食物",
    "back": "食物",
+   "kana": "しょくもつ",
    "stage": "planned"
   },
   {
    "kid": "V2179",
    "front": "食欲",
    "back": "食欲",
+   "kana": "しょくよく",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0517",
    "front": "王",
-   "back": "王；国王｜音 オウ、-ノウ",
+   "back": "王；国王",
+   "kana": "オウ、-ノウ",
    "stage": "planned"
   },
   {
    "kid": "K0518",
    "front": "返",
-   "back": "返回；归还｜音 ヘン",
+   "back": "返回；归还",
+   "kana": "ヘン、かえ.す、-かえ.す、かえ.る、-かえ.る",
    "stage": "planned"
   },
   {
    "kid": "V2144",
    "front": "瞬間",
    "back": "瞬间",
+   "kana": "しゅんかん",
    "stage": "planned"
   },
   {
    "kid": "V2145",
    "front": "順調",
    "back": "顺利",
+   "kana": "じゅんちょう",
    "stage": "planned"
   },
   {
    "kid": "V2146",
    "front": "順番",
    "back": "顺序；轮次",
+   "kana": "じゅんばん",
    "stage": "planned"
   },
   {
@@ -533,104 +541,204 @@
  ],
  "sentences": [
   {
-   "id": "S1251",
-   "day": 126,
-   "direction": "zh-ja",
+   "qid": "P-126-00-166f52b26296",
    "prompt": "我还没吃完早饭。",
-   "knowledge_ids": [
-    "V2245"
+   "options": [
+    "この手袋は両方がそろっていない。",
+    "私はまだ朝食を済ませていません。",
+    "それは私が見たことのない景色だ。",
+    "おまえはオレを殺そうとしている。"
    ],
-   "hint": ""
+   "h": "9de7ce36",
+   "oh": [
+    "9ed978b8",
+    "9de7ce36",
+    "af5a2328",
+    "aac242c3"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1251"
   },
   {
-   "id": "S1252",
-   "day": 126,
-   "direction": "zh-ja",
+   "qid": "P-126-01-d53bb826708c",
    "prompt": "这里有一阵刺痛。",
-   "knowledge_ids": [
-    "V2246"
+   "options": [
+    "イチゴはジャムに作られる。",
+    "雨は夜には止む見込みです。",
+    "これは珍しい種類の魚です。",
+    "ここに鋭い痛みがあります。"
    ],
-   "hint": ""
+   "h": "be78df4e",
+   "oh": [
+    "fc94d29",
+    "e54102ce",
+    "7979a1c1",
+    "be78df4e"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1252"
   },
   {
-   "id": "S1253",
-   "day": 126,
-   "direction": "zh-ja",
+   "qid": "P-126-02-8eb2266a8483",
    "prompt": "你的头痛是过劳造成的。",
-   "knowledge_ids": [
-    "V2247"
+   "options": [
+    "無事だと聞いて安心しました。",
+    "バスの停留所まで競争しよう。",
+    "今日は昨日ほど寒くないです。",
+    "あなたの頭痛は過労のせいだ。"
    ],
-   "hint": ""
+   "h": "e6f00666",
+   "oh": [
+    "a16b8d46",
+    "878a19ec",
+    "ec826cff",
+    "e6f00666"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1253"
   },
   {
-   "id": "S1254",
-   "day": 126,
-   "direction": "zh-ja",
+   "qid": "P-126-03-064ebccb4177",
    "prompt": "习惯成自然。",
-   "knowledge_ids": [
-    "V2248"
+   "options": [
+    "この川の流れは急だ。",
+    "いつもバス通学です。",
+    "習い性となる。",
+    "晴れだと思うよ。"
    ],
-   "hint": ""
+   "h": "32da4d7b",
+   "oh": [
+    "2deea5d0",
+    "52973008",
+    "32da4d7b",
+    "802c8fe4"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1254"
   },
   {
-   "id": "S1255",
-   "day": 126,
-   "direction": "zh-ja",
+   "qid": "P-126-04-c143122bfdf0",
    "prompt": "他说的一切都是对的。",
-   "knowledge_ids": [
-    "V2249"
+   "options": [
+    "この学校は男子よりも女子が多い。",
+    "その事が彼のすべての夢を壊した。",
+    "彼の言ったことは全て正しかった。",
+    "それはホテルから遠くありません。"
    ],
-   "hint": ""
+   "h": "fad3299e",
+   "oh": [
+    "53353c8",
+    "2835eaff",
+    "fad3299e",
+    "2d083832"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1255"
   },
   {
-   "id": "S1256",
-   "day": 126,
-   "direction": "zh-ja",
+   "qid": "P-126-05-acfed5b6316a",
    "prompt": "香烟被征的税很高。",
-   "knowledge_ids": [
-    "V2251"
+   "options": [
+    "その城は１６１０年に建てられた。",
+    "テーブルの上に花が一本あります。",
+    "マイクはバスで学校に通っている。",
+    "タバコにかけられている税は高い。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1257",
-   "day": 126,
+   "h": "37e548c7",
+   "oh": [
+    "6b28f1e6",
+    "9718d6f5",
+    "1062eb67",
+    "37e548c7"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1256"
+  },
+  {
+   "qid": "P-126-06-ede3f0307ecb",
    "prompt": "那家伙性格也挺马虎的。",
-   "knowledge_ids": [
-    "V2252"
+   "options": [
+    "医者は彼の苦痛を除いてやった。",
+    "交通に注意しなければいけない。",
+    "あいつもアバウトな性格だよな。",
+    "兄はアパートをさがしています。"
    ],
-   "hint": ""
+   "h": "65071076",
+   "oh": [
+    "8a6a13e3",
+    "208febf8",
+    "65071076",
+    "7f656d90"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1257"
   },
   {
-   "id": "S1258",
-   "day": 126,
-   "direction": "ja-zh",
+   "qid": "P-126-07-6fbd125e8a91",
    "prompt": "この時計の時間は正確だ。",
-   "knowledge_ids": [
-    "V2253"
+   "options": [
+    "我很乐意帮助你。",
+    "要我帮您订购吗？",
+    "这张地图很方便。",
+    "这块表走时准确。"
    ],
-   "hint": ""
+   "h": "5111725d",
+   "oh": [
+    "e9f699d2",
+    "fa555a2",
+    "1be23d38",
+    "5111725d"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1258"
   },
   {
-   "id": "S1259",
-   "day": 126,
-   "direction": "ja-zh",
+   "qid": "P-126-08-a34b0891e5cc",
    "prompt": "彼は１９世紀に生まれた。",
-   "knowledge_ids": [
-    "V2254"
+   "options": [
+    "他偷袭了对手。",
+    "钻石本来就很硬。",
+    "他生于19世纪。",
+    "事态非常严重。"
    ],
-   "hint": ""
+   "h": "122eb4a0",
+   "oh": [
+    "4050f9f9",
+    "aa75a0ff",
+    "122eb4a0",
+    "7e196bc1"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1259"
   },
   {
-   "id": "S1260",
-   "day": 126,
-   "direction": "ja-zh",
+   "qid": "P-126-09-d8f82a0ef3d0",
    "prompt": "われわれは彼の借金の支払いを請求した。",
-   "knowledge_ids": [
-    "V2255"
+   "options": [
+    "我们要求他偿还借款。",
+    "找老师商量升学去向。",
+    "她参加很多学校活动。",
+    "下下个月是十二月。"
    ],
-   "hint": ""
+   "h": "18fb5c69",
+   "oh": [
+    "18fb5c69",
+    "57d2ad4c",
+    "46a2a758",
+    "3d2240f5"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1260"
   }
  ],
  "quiz": [

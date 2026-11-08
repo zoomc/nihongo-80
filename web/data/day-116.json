@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V2012",
    "front": "作業",
    "back": "作业；工作",
+   "kana": "さぎょう",
    "stage": "planned"
   },
   {
    "kid": "V2013",
    "front": "昨",
    "back": "昨",
+   "kana": "さく",
    "stage": "planned"
   },
   {
    "kid": "V2014",
    "front": "作品",
    "back": "作品",
+   "kana": "さくひん",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0477",
    "front": "太",
-   "back": "粗；胖｜音 タイ、タ",
+   "back": "粗；胖",
+   "kana": "タイ、タ、ふと.い、ふと.る",
    "stage": "planned"
   },
   {
    "kid": "K0478",
    "front": "客",
-   "back": "客人；顾客｜音 キャク、カク",
+   "back": "客人；顾客",
+   "kana": "キャク、カク",
    "stage": "planned"
   },
   {
    "kid": "V1979",
    "front": "好み",
    "back": "喜好",
+   "kana": "このみ",
    "stage": "planned"
   },
   {
    "kid": "V1980",
    "front": "好む",
    "back": "喜好",
+   "kana": "このむ",
    "stage": "planned"
   },
   {
    "kid": "V1981",
    "front": "コピー",
    "back": "复印；副本",
+   "kana": "コピー",
    "stage": "planned"
   },
   {
@@ -530,104 +538,204 @@
  ],
  "sentences": [
   {
-   "id": "S1151",
-   "day": 116,
-   "direction": "zh-ja",
+   "qid": "P-116-00-e8d9432a0ee5",
    "prompt": "简直就像从沉船上逃走的老鼠。",
-   "knowledge_ids": [
-    "V2069"
+   "options": [
+    "彼は指導されなくても学ぶことができた。",
+    "まるで、沈む船から逃げるネズミみたいね。",
+    "これは父が私に残してくれたものの一つです。",
+    "その島の飛行場は、今では草がぼうぼうだ。"
    ],
-   "hint": ""
+   "h": "b4d0dde4",
+   "oh": [
+    "3d30d7f1",
+    "b4d0dde4",
+    "67d2fba1",
+    "a52d777a"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1151"
   },
   {
-   "id": "S1152",
-   "day": 116,
-   "direction": "zh-ja",
+   "qid": "P-116-01-b15ab4083018",
    "prompt": "夫妻相爱是很自然的。",
-   "knowledge_ids": [
-    "V2070"
+   "options": [
+    "さっきなぜかマイクが入らなかった。",
+    "夫婦が愛し合うのは全く自然である。",
+    "これらの単語を一つずつ覚えなさい。",
+    "あなたには想像もつかない、でしょ？"
    ],
-   "hint": ""
+   "h": "80962ba6",
+   "oh": [
+    "f6bd6b75",
+    "80962ba6",
+    "b1de96c0",
+    "6c1152da"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1152"
   },
   {
-   "id": "S1153",
-   "day": 116,
-   "direction": "zh-ja",
+   "qid": "P-116-02-09fbf2ddd3f9",
    "prompt": "他缺少思想上的追求。",
-   "knowledge_ids": [
-    "V2071"
+   "options": [
+    "向こうの交番で聞いてください。",
+    "あのドレスは彼女によく似合う。",
+    "彼には思想の理想がかけている。",
+    "この都市の面積はどれくらいか。"
    ],
-   "hint": ""
+   "h": "74403c81",
+   "oh": [
+    "266f52ac",
+    "d2b39483",
+    "74403c81",
+    "b726d24f"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1153"
   },
   {
-   "id": "S1154",
-   "day": 116,
-   "direction": "zh-ja",
+   "qid": "P-116-03-2103f7b26c2c",
    "prompt": "咖啡烫得几乎烫伤舌头。",
-   "knowledge_ids": [
-    "V2072"
+   "options": [
+    "その工場は来月から作業を中止する。",
+    "彼女はお金をたくさん貯金している。",
+    "その男性はスパイとして逮捕された。",
+    "コーヒーは舌が焼けるほど熱かった。"
    ],
-   "hint": ""
+   "h": "80f2f031",
+   "oh": [
+    "82b575bb",
+    "be911f6a",
+    "ae66d5b3",
+    "80f2f031"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1154"
   },
   {
-   "id": "S1155",
-   "day": 116,
-   "direction": "zh-ja",
+   "qid": "P-116-04-03450e113425",
    "prompt": "我一到机场就给你打电话。",
-   "knowledge_ids": [
-    "V2073"
+   "options": [
+    "だいぶ痛みがなくなりました。",
+    "ギターをひくのはおもしろい。",
+    "空港に着き次第、電話します。",
+    "その靴は登山には向かないよ。"
    ],
-   "hint": ""
+   "h": "51a548fa",
+   "oh": [
+    "3eba8d1c",
+    "f7aedaae",
+    "51a548fa",
+    "a799335d"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1155"
   },
   {
-   "id": "S1156",
-   "day": 116,
-   "direction": "zh-ja",
+   "qid": "P-116-05-807c6d9321f0",
    "prompt": "事态相当紧迫。",
-   "knowledge_ids": [
-    "V2074"
+   "options": [
+    "ごく内輪の集まりなのです。",
+    "その習慣は中国で始まった。",
+    "事態はかなり切迫している。",
+    "汚染が地球を傷つけている。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1157",
-   "day": 116,
+   "h": "23d029f3",
+   "oh": [
+    "13852307",
+    "bd186afc",
+    "23d029f3",
+    "841a8158"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1156"
+  },
+  {
+   "qid": "P-116-06-ddc10c21159c",
    "prompt": "依本能行事往往会走错路。",
-   "knowledge_ids": [
-    "V2075"
+   "options": [
+    "ジョンは門のところまで出てきた。",
+    "タバコにかけられている税は高い。",
+    "本能に従うと道を誤ることが多い。",
+    "システムが作動しない場合がある。"
    ],
-   "hint": ""
+   "h": "17ae7135",
+   "oh": [
+    "7aac2a83",
+    "37e548c7",
+    "17ae7135",
+    "e09812e6"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1157"
   },
   {
-   "id": "S1158",
-   "day": 116,
-   "direction": "ja-zh",
+   "qid": "P-116-07-7b4f521430a6",
    "prompt": "君は能力にしたがって上達する。",
-   "knowledge_ids": [
-    "V2076"
+   "options": [
+    "我们玩了好几种游戏。",
+    "一百年后大家都一样了。",
+    "你会按能力逐步提高。",
+    "上班时不要看漫画。"
    ],
-   "hint": ""
+   "h": "d44d0121",
+   "oh": [
+    "3b0486e",
+    "486441a2",
+    "d44d0121",
+    "e4763edb"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1158"
   },
   {
-   "id": "S1159",
-   "day": 116,
-   "direction": "ja-zh",
+   "qid": "P-116-08-bc700aaf74bd",
    "prompt": "犬は人間の最も親しい友達である。",
-   "knowledge_ids": [
-    "V2077"
+   "options": [
+    "我有足够的钱买这本书。",
+    "我想要角落的那张桌子。",
+    "狗是人类最亲密的朋友。",
+    "他们相信地球是平的。"
    ],
-   "hint": ""
+   "h": "312f7b70",
+   "oh": [
+    "c449930f",
+    "230d8172",
+    "312f7b70",
+    "a51300e1"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1159"
   },
   {
-   "id": "S1160",
-   "day": 116,
-   "direction": "ja-zh",
+   "qid": "P-116-09-22e7b38c6c7c",
    "prompt": "お茶の質は下がりつつある。",
-   "knowledge_ids": [
-    "V2078"
+   "options": [
+    "今后必须多加小心。",
+    "茶叶的质量正在下降。",
+    "哎呀，请叫我安杰拉。",
+    "动物的皮上覆盖着毛。"
    ],
-   "hint": ""
+   "h": "353aa331",
+   "oh": [
+    "643f25c1",
+    "353aa331",
+    "5929f31c",
+    "122d08f3"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1160"
   }
  ],
  "quiz": [

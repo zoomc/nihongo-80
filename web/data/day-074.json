@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0207",
    "front": "原因",
    "back": "原因（客观）",
+   "kana": "げんいん",
    "stage": "planned"
   },
   {
    "kid": "V0208",
    "front": "結果",
    "back": "结果",
+   "kana": "けっか",
    "stage": "planned"
   },
   {
    "kid": "V0209",
    "front": "目的",
    "back": "目的",
+   "kana": "もくてき",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0309",
    "front": "約",
-   "back": "大约；约定｜音 ヤク",
+   "back": "大约；约定",
+   "kana": "ヤク、つづ.まる、つづ.める、つづま.やか",
    "stage": "planned"
   },
   {
    "kid": "K0310",
    "front": "首",
-   "back": "脖子；首领｜音 シュ",
+   "back": "脖子；首领",
+   "kana": "シュ、くび",
    "stage": "planned"
   },
   {
    "kid": "V1421",
    "front": "よろしい",
    "back": "可以；好",
+   "kana": "よろしい",
    "stage": "planned"
   },
   {
    "kid": "V1422",
    "front": "利用",
    "back": "利用；使用",
+   "kana": "りよう",
    "stage": "planned"
   },
   {
    "kid": "V1423",
    "front": "両方",
    "back": "两边；都",
+   "kana": "りょうほう",
    "stage": "planned"
   },
   {
@@ -534,104 +542,204 @@
  ],
  "sentences": [
   {
-   "id": "S0731",
-   "day": 74,
-   "direction": "zh-ja",
+   "qid": "P-074-00-f76a966b9eb1",
    "prompt": "找到钥匙了。",
-   "knowledge_ids": [
-    "V0240"
+   "options": [
+    "鍵を見つけました。",
+    "おはようございます。",
+    "部屋に猫がいます。",
+    "この魚は毒がない。"
    ],
-   "hint": ""
+   "h": "aaec1236",
+   "oh": [
+    "aaec1236",
+    "f17175ff",
+    "dcb9e3b7",
+    "14e4bcc7"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0731"
   },
   {
-   "id": "S0732",
-   "day": 74,
-   "direction": "zh-ja",
+   "qid": "P-074-01-5d76d516feec",
    "prompt": "丢的表找到了。",
-   "knowledge_ids": [
-    "V0241"
+   "options": [
+    "アイロンで手をやけどしました。",
+    "無くした時計が見つかりました。",
+    "この布は値段の割に品質が良い。",
+    "その時はシャワーを浴びていた。"
    ],
-   "hint": ""
+   "h": "a04ab4af",
+   "oh": [
+    "8afa85c",
+    "a04ab4af",
+    "73db6bba",
+    "bc9b8d60"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0732"
   },
   {
-   "id": "S0733",
-   "day": 74,
-   "direction": "zh-ja",
+   "qid": "P-074-02-e7edc574d41b",
    "prompt": "改了计划。",
-   "knowledge_ids": [
-    "V0242"
+   "options": [
+    "切符を買います。",
+    "それは無理な注文だ。",
+    "予定を変えました。",
+    "歯が１本抜けた。"
    ],
-   "hint": ""
+   "h": "a0ad83b4",
+   "oh": [
+    "9ad3920e",
+    "3097222f",
+    "a0ad83b4",
+    "9199f471"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0733"
   },
   {
-   "id": "S0734",
-   "day": 74,
-   "direction": "zh-ja",
+   "qid": "P-074-03-fedb5aea8684",
    "prompt": "和同事（职场的人）商量。",
-   "knowledge_ids": [
-    "V0243"
+   "options": [
+    "こんにちは、元気ですか。",
+    "あなたと席を交換しよう。",
+    "職場の人と相談します。",
+    "トムとフランクは親友だ。"
    ],
-   "hint": ""
+   "h": "30a5fa3d",
+   "oh": [
+    "21e6b5c4",
+    "4b92c51b",
+    "30a5fa3d",
+    "75bb8c2d"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0734"
   },
   {
-   "id": "S0735",
-   "day": 74,
-   "direction": "zh-ja",
+   "qid": "P-074-04-9257912c95e0",
    "prompt": "下午开始有会议。",
-   "knowledge_ids": [
-    "V0244"
+   "options": [
+    "月曜日に試験があります。",
+    "この車は天然ガスで動く。",
+    "午後から会議があります。",
+    "この靴下はちぐはぐだ。"
    ],
-   "hint": ""
+   "h": "f5d6b632",
+   "oh": [
+    "3c031ff",
+    "d90ef112",
+    "f5d6b632",
+    "6db284b2"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0735"
   },
   {
-   "id": "S0736",
-   "day": 74,
-   "direction": "zh-ja",
+   "qid": "P-074-05-b24a3946b233",
    "prompt": "今天不得不加班。",
-   "knowledge_ids": [
-    "V0245"
+   "options": [
+    "おぼれかけた人は息を吹き返した。",
+    "ここでは煙草は禁止されています。",
+    "このテーブルを頼んだのではない。",
+    "今日は残業しなければなりません。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0737",
-   "day": 74,
+   "h": "677009cd",
+   "oh": [
+    "9d54542a",
+    "ecc80e4d",
+    "e76e4b0",
+    "677009cd"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0736"
+  },
+  {
+   "qid": "P-074-06-b0a0012baf58",
    "prompt": "工资涨了。",
-   "knowledge_ids": [
-    "V0246"
+   "options": [
+    "今にバチがあたるぞ。",
+    "それはルール違反です。",
+    "給料が上がりました。",
+    "朝ご飯を食べます。"
    ],
-   "hint": ""
+   "h": "fcd1ef76",
+   "oh": [
+    "4c536899",
+    "7ca8dfa1",
+    "fcd1ef76",
+    "bde49cfa"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0737"
   },
   {
-   "id": "S0738",
-   "day": 74,
-   "direction": "ja-zh",
+   "qid": "P-074-07-dcc2773e019c",
    "prompt": "上司に結果を報告します。",
-   "knowledge_ids": [
-    "V0247"
+   "options": [
+    "要咖啡，还是茶？",
+    "向上司汇报结果。",
+    "他们会组织工会吧。",
+    "从哪个机场出发？"
    ],
-   "hint": ""
+   "h": "5d580bc5",
+   "oh": [
+    "c2d3b991",
+    "5d580bc5",
+    "4a5d6cc4",
+    "df477bcd"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0738"
   },
   {
-   "id": "S0739",
-   "day": 74,
-   "direction": "ja-zh",
+   "qid": "P-074-08-8080bde8d33b",
    "prompt": "先生に進路を相談します。",
-   "knowledge_ids": [
-    "V0248"
+   "options": [
+    "我和大臣本人谈过了。",
+    "找老师商量升学去向。",
+    "她是个地道的咖啡派。",
+    "你赞成我们的计划吗？"
    ],
-   "hint": ""
+   "h": "57d2ad4c",
+   "oh": [
+    "e4acb359",
+    "57d2ad4c",
+    "2dd373c1",
+    "4a12bcc1"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0739"
   },
   {
-   "id": "S0740",
-   "day": 74,
-   "direction": "ja-zh",
+   "qid": "P-074-09-90c3578fa3a3",
    "prompt": "大学を卒業して、就職しました。",
-   "knowledge_ids": [
-    "V0249"
+   "options": [
+    "大学毕业后就业了。",
+    "针扎到了我的拇指。",
+    "请给我一个烟灰缸。",
+    "你父亲托我带个话。"
    ],
-   "hint": ""
+   "h": "d01d0bdc",
+   "oh": [
+    "d01d0bdc",
+    "97a1ec94",
+    "c873af5f",
+    "96804bcf"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0740"
   }
  ],
  "quiz": [

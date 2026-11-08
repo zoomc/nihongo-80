@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0627",
    "front": "誰",
    "back": "谁",
+   "kana": "だれ",
    "stage": "planned"
   },
   {
    "kid": "V0628",
    "front": "誕生日",
    "back": "生日",
+   "kana": "たんじょうび",
    "stage": "planned"
   },
   {
    "kid": "V0629",
    "front": "だんだん",
    "back": "逐渐",
+   "kana": "だんだん",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0087",
    "front": "音",
-   "back": "音；声音；音乐｜音 オン",
+   "back": "音；声音；音乐",
+   "kana": "オン、おと",
    "stage": "planned"
   },
   {
    "kid": "K0088",
    "front": "楽",
-   "back": "音乐；快乐；轻松｜音 ガク、ラク",
+   "back": "音乐；快乐；轻松",
+   "kana": "ガク、ラク、たのしい",
    "stage": "planned"
   },
   {
    "kid": "V0589",
    "front": "セーター",
    "back": "毛衣",
+   "kana": "セーター",
    "stage": "planned"
   },
   {
    "kid": "V0590",
    "front": "せっけん",
    "back": "肥皂",
+   "kana": "せっけん",
    "stage": "planned"
   },
   {
    "kid": "V0591",
    "front": "背広",
    "back": "西装",
+   "kana": "せびろ",
    "stage": "planned"
   },
   {
@@ -527,104 +535,204 @@
  ],
  "sentences": [
   {
-   "id": "S0241",
-   "day": 25,
-   "direction": "zh-ja",
+   "qid": "P-025-00-621c7cf7a13e",
    "prompt": "生日就是人出生的那一天。",
-   "knowledge_ids": [
-    "V0628"
+   "options": [
+    "この夏はこんがり焼こうと思います。",
+    "エレベーターから煙の臭いがします。",
+    "この犬は言わばうちの家族の一員だ。",
+    "誕生日とは人が生まれた日のことだ。"
    ],
-   "hint": ""
+   "h": "e55db085",
+   "oh": [
+    "21ead46d",
+    "ed7c7a3d",
+    "734cdf35",
+    "e55db085"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0241"
   },
   {
-   "id": "S0242",
-   "day": 25,
-   "direction": "zh-ja",
+   "qid": "P-025-01-36c6cda443d6",
    "prompt": "白天渐渐变长了。",
-   "knowledge_ids": [
-    "V0629"
+   "options": [
+    "お年寄りをからかってはいけません。",
+    "あなたの名前と住所を記入しなさい。",
+    "これらの単語を一つずつ覚えなさい。",
+    "日がだんだん長くなってきています。"
    ],
-   "hint": ""
+   "h": "96c2d16f",
+   "oh": [
+    "a3dd40ad",
+    "52eeffa0",
+    "b1de96c0",
+    "96c2d16f"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0242"
   },
   {
-   "id": "S0243",
-   "day": 25,
-   "direction": "zh-ja",
+   "qid": "P-025-02-9cd66b716489",
    "prompt": "别为小事闷闷不乐。",
-   "knowledge_ids": [
-    "V0630"
+   "options": [
+    "日本語の勉強を続けています。",
+    "小さなことでくよくよするな。",
+    "「彼女は若いですか」「はい」",
+    "おかげで元気にしております。"
    ],
-   "hint": ""
+   "h": "64e534b3",
+   "oh": [
+    "3c17b352",
+    "64e534b3",
+    "6bc44878",
+    "7590c08e"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0243"
   },
   {
-   "id": "S0244",
-   "day": 25,
-   "direction": "zh-ja",
+   "qid": "P-025-03-bc4a95180f09",
    "prompt": "圣诞节快到了。",
-   "knowledge_ids": [
-    "V0631"
+   "options": [
+    "朝の電車はとても混雑します。",
+    "クリスマスが近くなってきた。",
+    "ルーシーはかわいい女の子だ。",
+    "市が住民に調査を行いました。"
    ],
-   "hint": ""
+   "h": "173e2429",
+   "oh": [
+    "14d044ce",
+    "173e2429",
+    "8d514221",
+    "2b753e0a"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0244"
   },
   {
-   "id": "S0245",
-   "day": 25,
-   "direction": "zh-ja",
+   "qid": "P-025-04-98c6f17fd7fb",
    "prompt": "狮子和豹有什么不同？",
-   "knowledge_ids": [
-    "V0632"
+   "options": [
+    "おじいさんはとてもゆっくりと話す。",
+    "アメリカ旅行のよい記念になります。",
+    "これらの単語を一つずつ覚えなさい。",
+    "ライオンとヒョウの違いは何ですか。"
    ],
-   "hint": ""
+   "h": "b866895a",
+   "oh": [
+    "ade4fb30",
+    "626a81c1",
+    "b1de96c0",
+    "b866895a"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0245"
   },
   {
-   "id": "S0246",
-   "day": 25,
-   "direction": "zh-ja",
+   "qid": "P-025-05-5a39738a79a0",
    "prompt": "快七点了，得去学校了。",
-   "knowledge_ids": [
-    "V0633"
+   "options": [
+    "お礼の申し上げようもありません。",
+    "この犬は何でもほとんど食べます。",
+    "７時近くだ。学校へ行かなくては。",
+    "パーティーはたのしかったですか。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0247",
-   "day": 25,
+   "h": "987890e2",
+   "oh": [
+    "d477e2e9",
+    "1ebdb937",
+    "987890e2",
+    "4939410a"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0246"
+  },
+  {
+   "qid": "P-025-06-228dc4774253",
    "prompt": "我想坐地铁去。",
-   "knowledge_ids": [
-    "V0634"
+   "options": [
+    "卵は硬くゆでてください。",
+    "梅の花は今週が見頃です。",
+    "地下鉄で行きたいのです。",
+    "カエルが鳴いたら帰ろう。"
    ],
-   "hint": ""
+   "h": "7081a755",
+   "oh": [
+    "de5ecf19",
+    "f9da0047",
+    "7081a755",
+    "e5bebda"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0247"
   },
   {
-   "id": "S0248",
-   "day": 25,
-   "direction": "ja-zh",
+   "qid": "P-025-07-e7da341864fd",
    "prompt": "その犬は茶色で小さくて、やせています。",
-   "knowledge_ids": [
-    "V0635"
+   "options": [
+    "据天气预报，马上就要入梅了。",
+    "那消息我是从收音机里听到的。",
+    "那只狗是棕色的，又小又瘦。",
+    "世界上有各种各样的人种。"
    ],
-   "hint": ""
+   "h": "6be957bc",
+   "oh": [
+    "d468a87f",
+    "329be490",
+    "6be957bc",
+    "1d508341"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0248"
   },
   {
-   "id": "S0249",
-   "day": 25,
-   "direction": "ja-zh",
+   "qid": "P-025-08-fa894569fb59",
    "prompt": "この茶わんはなんとすばらしいのでしょう。",
-   "knowledge_ids": [
-    "V0636"
+   "options": [
+    "他们躺在草坪上。",
+    "我来给花换水吧。",
+    "这个碗真不错啊。",
+    "上班时不要看漫画。"
    ],
-   "hint": ""
+   "h": "987d26e",
+   "oh": [
+    "2bb7a3d6",
+    "c570507a",
+    "987d26e",
+    "e4763edb"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0249"
   },
   {
-   "id": "S0250",
-   "day": 25,
-   "direction": "ja-zh",
+   "qid": "P-025-09-19a2c8823098",
    "prompt": "ちょうど食べたかったものでした。",
-   "knowledge_ids": [
-    "V0637"
+   "options": [
+    "和这件事没关系。",
+    "还有很多事该做。",
+    "这块表走时准确。",
+    "那正是我想吃的。"
    ],
-   "hint": ""
+   "h": "247cb573",
+   "oh": [
+    "1abbc7cc",
+    "283c5d8c",
+    "5111725d",
+    "247cb573"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0250"
   }
  ],
  "quiz": [

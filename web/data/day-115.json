@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V1993",
    "front": "コンピューター",
    "back": "电脑",
+   "kana": "コンピューター",
    "stage": "planned"
   },
   {
    "kid": "V1994",
    "front": "婚約",
    "back": "婚约；订婚",
+   "kana": "こんやく",
    "stage": "planned"
   },
   {
    "kid": "V1995",
    "front": "混乱",
    "back": "混乱",
+   "kana": "こんらん",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0473",
    "front": "科",
-   "back": "科目；学科｜音 カ",
+   "back": "科目；学科",
+   "kana": "カ",
    "stage": "planned"
   },
   {
    "kid": "K0474",
    "front": "積",
-   "back": "积累；面积｜音 セキ",
+   "back": "积累；面积",
+   "kana": "セキ、つ.む、-づ.み、つ.もる、つ.もり",
    "stage": "planned"
   },
   {
    "kid": "V1960",
    "front": "故郷",
    "back": "故乡",
+   "kana": "こきょう",
    "stage": "planned"
   },
   {
    "kid": "V1961",
    "front": "極",
    "back": "极其",
+   "kana": "ごく",
    "stage": "planned"
   },
   {
    "kid": "V1962",
    "front": "国語",
    "back": "国语；语文",
+   "kana": "こくご",
    "stage": "planned"
   },
   {
@@ -455,104 +463,204 @@
  ],
  "sentences": [
   {
-   "id": "S1141",
-   "day": 115,
-   "direction": "zh-ja",
+   "qid": "P-115-00-1b6273f45991",
    "prompt": "每年这个时期天气变化很大。",
-   "knowledge_ids": [
-    "V2055"
+   "options": [
+    "１年のこの時期は天候がよく変わる。",
+    "彼女その瞬間にカッとなったんだね。",
+    "その部屋は居心地の良い感じがした。",
+    "同じ色の羽の鳥は共に集まるものだ。"
    ],
-   "hint": ""
+   "h": "137a0701",
+   "oh": [
+    "137a0701",
+    "b90b4381",
+    "52653e66",
+    "83985809"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1141"
   },
   {
-   "id": "S1142",
-   "day": 115,
-   "direction": "zh-ja",
+   "qid": "P-115-01-25da7f070d8c",
    "prompt": "她很快就会好起来。",
-   "knowledge_ids": [
-    "V2056"
+   "options": [
+    "彼女はじきよくなるだろう。",
+    "先生が本をくださいました。",
+    "この線の終点はどこですか。",
+    "来週、部屋の契約をします。"
    ],
-   "hint": ""
+   "h": "7dc02167",
+   "oh": [
+    "7dc02167",
+    "6a45a506",
+    "4b98e1d7",
+    "998461ae"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1142"
   },
   {
-   "id": "S1143",
-   "day": 115,
-   "direction": "zh-ja",
+   "qid": "P-115-02-01b691d26d21",
    "prompt": "我们被发放了制服。",
-   "knowledge_ids": [
-    "V2057"
+   "options": [
+    "彼は根はやさしい男だった。",
+    "バターはミルクから出来る。",
+    "事態はかなり切迫している。",
+    "私たちは制服を支給された。"
    ],
-   "hint": ""
+   "h": "9edbefef",
+   "oh": [
+    "a6673fe9",
+    "271a6e18",
+    "23d029f3",
+    "9edbefef"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1143"
   },
   {
-   "id": "S1144",
-   "day": 115,
-   "direction": "zh-ja",
+   "qid": "P-115-03-eba6cc160d35",
    "prompt": "汤姆一个劲儿地想买新车。",
-   "knowledge_ids": [
-    "V2058"
+   "options": [
+    "母親は息子にやかましく言って聞かせた。",
+    "トムはしきりに新車を買いたがっている。",
+    "これらのクッキーは星の形をしている。",
+    "きれいなタオルは引き出しにありますよ。"
    ],
-   "hint": ""
+   "h": "c09bc483",
+   "oh": [
+    "6cd23f96",
+    "c09bc483",
+    "97cc4678",
+    "eaeabc2"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1144"
   },
   {
-   "id": "S1145",
-   "day": 115,
-   "direction": "zh-ja",
+   "qid": "P-115-04-c19adfe6939f",
    "prompt": "光是刺激，促使花开放。",
-   "knowledge_ids": [
-    "V2059"
+   "options": [
+    "光が刺激となって花が咲く。",
+    "イチゴはジャムに作られる。",
+    "それは２通りに解釈できる。",
+    "子供たちは裸で泳いでいた。"
    ],
-   "hint": ""
+   "h": "fc414b9f",
+   "oh": [
+    "fc414b9f",
+    "fc94d29",
+    "46bbbffc",
+    "b9146d41"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1145"
   },
   {
-   "id": "S1146",
-   "day": 115,
-   "direction": "zh-ja",
+   "qid": "P-115-05-edc10f8b40f3",
    "prompt": "大海给予我们各种资源。",
-   "knowledge_ids": [
-    "V2060"
+   "options": [
+    "タクシーに傘を忘れてしまった。",
+    "いつ旅行においでになりますか。",
+    "レーンコートのボタンがとれた。",
+    "海は各種の資源を与えてくれる。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1147",
-   "day": 115,
+   "h": "b1516d8e",
+   "oh": [
+    "6425ef0e",
+    "a1751ea1",
+    "933240ec",
+    "b1516d8e"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1146"
+  },
+  {
+   "qid": "P-115-06-1aaa0c9a06b7",
    "prompt": "请帮帮这个案子。",
-   "knowledge_ids": [
-    "V2061"
+   "options": [
+    "彼はよく友人をいじめたものだ。",
+    "この事件に手を貸してください。",
+    "その音で彼女は眠りから覚めた。",
+    "カタツムリがすっと角を出した。"
    ],
-   "hint": ""
+   "h": "3a859cc4",
+   "oh": [
+    "25027c50",
+    "3a859cc4",
+    "4bed7830",
+    "1141342d"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1147"
   },
   {
-   "id": "S1148",
-   "day": 115,
-   "direction": "ja-zh",
+   "qid": "P-115-07-8e50d08c08ea",
    "prompt": "そろそろ寝る時刻だ。",
-   "knowledge_ids": [
-    "V2062"
+   "options": [
+    "被偷的钱我放不下。",
+    "快到睡觉的时间了。",
+    "那个计划正在推进。",
+    "你父亲托我带个话。"
    ],
-   "hint": ""
+   "h": "b1e26b52",
+   "oh": [
+    "220f5cef",
+    "b1e26b52",
+    "9b6c1a61",
+    "96804bcf"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1148"
   },
   {
-   "id": "S1149",
-   "day": 115,
-   "direction": "ja-zh",
+   "qid": "P-115-08-08a341623a30",
    "prompt": "うわさは事実だとわかった。",
-   "knowledge_ids": [
-    "V2064"
+   "options": [
+    "传闻原来是真的。",
+    "要我帮您订购吗？",
+    "钻石本来就很硬。",
+    "他和朋友握了手。"
    ],
-   "hint": ""
+   "h": "6342e7d8",
+   "oh": [
+    "6342e7d8",
+    "fa555a2",
+    "aa75a0ff",
+    "9f02e227"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1149"
   },
   {
-   "id": "S1150",
-   "day": 115,
-   "direction": "ja-zh",
+   "qid": "P-115-09-32cdfde2dac7",
    "prompt": "収入につりあった支出をしなければなりません。",
-   "knowledge_ids": [
-    "V2065"
+   "options": [
+    "今后必须多加小心。",
+    "请寄一份目录供参考。",
+    "我通常骑自行车上学。",
+    "支出必须与收入相称。"
    ],
-   "hint": ""
+   "h": "637fac43",
+   "oh": [
+    "643f25c1",
+    "f28a2368",
+    "cf5e8493",
+    "637fac43"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1150"
   }
  ],
  "quiz": [

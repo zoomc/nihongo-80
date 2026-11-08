@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0325",
    "front": "増加",
    "back": "增加",
+   "kana": "ぞうか",
    "stage": "planned"
   },
   {
    "kid": "V0326",
    "front": "減少",
    "back": "减少",
+   "kana": "げんしょう",
    "stage": "planned"
   },
   {
    "kid": "V0327",
    "front": "傾向",
    "back": "倾向",
+   "kana": "けいこう",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0337",
    "front": "原",
-   "back": "原野；原来｜音 ゲン",
+   "back": "原野；原来",
+   "kana": "ゲン、はら",
    "stage": "planned"
   },
   {
    "kid": "K0338",
    "front": "共",
-   "back": "共同；一起｜音 キョウ",
+   "back": "共同；一起",
+   "kana": "キョウ、とも、とも.に、-ども",
    "stage": "planned"
   },
   {
    "kid": "V0292",
    "front": "代理",
    "back": "代理；代理人",
+   "kana": "だいり",
    "stage": "planned"
   },
   {
    "kid": "V0293",
    "front": "家賃",
    "back": "房租",
+   "kana": "やちん",
    "stage": "planned"
   },
   {
    "kid": "V0294",
    "front": "契約",
    "back": "合同；签约",
+   "kana": "けいやく",
    "stage": "planned"
   },
   {
@@ -562,104 +570,204 @@
  ],
  "sentences": [
   {
-   "id": "S0801",
-   "day": 81,
-   "direction": "zh-ja",
+   "qid": "P-081-00-f58e0d83353a",
    "prompt": "我感到冷风吹在脸上。",
-   "knowledge_ids": [
-    "V1459"
+   "options": [
+    "これらのクッキーは星の形をしている。",
+    "そのぬれたシャツはすぐに乾くだろう。",
+    "私は顔に冷たい風が当たるのを感じた。",
+    "あなたの望みが実現するといいですね。"
    ],
-   "hint": ""
+   "h": "d696f97",
+   "oh": [
+    "97cc4678",
+    "a042cc96",
+    "d696f97",
+    "f5226256"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0801"
   },
   {
-   "id": "S0802",
-   "day": 81,
-   "direction": "zh-ja",
+   "qid": "P-081-01-28cad1e27751",
    "prompt": "书散落在房间各处。",
-   "knowledge_ids": [
-    "V1460"
+   "options": [
+    "ドアのそばのかぎに上着をかけなさい。",
+    "イングランドはその試合に勝つだろう。",
+    "その写真は空から写されたものである。",
+    "本が部屋のあちこちに散らばっていた。"
    ],
-   "hint": ""
+   "h": "95e7244e",
+   "oh": [
+    "19352d64",
+    "91c655e0",
+    "45659cac",
+    "95e7244e"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0802"
   },
   {
-   "id": "S0803",
-   "day": 81,
-   "direction": "zh-ja",
+   "qid": "P-081-02-c7410f8a5b6e",
    "prompt": "心理学研究人的情感。",
-   "knowledge_ids": [
-    "V1462"
+   "options": [
+    "心理学は人間の感情を扱う。",
+    "京都には多くの神社がある。",
+    "静けさが森を支配していた。",
+    "写真をどうぞ見せて下さい。"
    ],
-   "hint": ""
+   "h": "40ba6b43",
+   "oh": [
+    "40ba6b43",
+    "8cc76400",
+    "b7f58f24",
+    "4a68c9ba"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0803"
   },
   {
-   "id": "S0804",
-   "day": 81,
-   "direction": "zh-ja",
+   "qid": "P-081-03-2f45676d0351",
    "prompt": "是个很小的内部聚会。",
-   "knowledge_ids": [
-    "V1463"
+   "options": [
+    "二つの店の値段を比べます。",
+    "ごく内輪の集まりなのです。",
+    "科学は観察に基づいている。",
+    "これは珍しい種類の魚です。"
    ],
-   "hint": ""
+   "h": "13852307",
+   "oh": [
+    "b027db99",
+    "13852307",
+    "d541c6",
+    "7979a1c1"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0804"
   },
   {
-   "id": "S0805",
-   "day": 81,
-   "direction": "zh-ja",
+   "qid": "P-081-04-8c95e8d9c5cc",
    "prompt": "好不容易才没被车撞到。",
-   "knowledge_ids": [
-    "V1464"
+   "options": [
+    "この学校はたくさんの生徒がいます。",
+    "かろうじて車に当てられずにすんだ。",
+    "一日で５００ドルつかってしまった。",
+    "同社は醤油その他の食品を生産する。"
    ],
-   "hint": ""
+   "h": "83c3f44d",
+   "oh": [
+    "939aa164",
+    "83c3f44d",
+    "3fe654f9",
+    "d193ac76"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0805"
   },
   {
-   "id": "S0806",
-   "day": 81,
-   "direction": "zh-ja",
+   "qid": "P-081-05-4bb341061710",
    "prompt": "那位女士脸上带着悲伤的痕迹。",
-   "knowledge_ids": [
-    "V1465"
+   "options": [
+    "その女性の顔には悲しみの跡があった。",
+    "そこの乞食が泥棒である事がわかった。",
+    "いくつかの点で私は彼女が気に入らない。",
+    "このクラスは女子が男子より多いです。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0807",
-   "day": 81,
+   "h": "bbedf725",
+   "oh": [
+    "bbedf725",
+    "cc176d6c",
+    "e6e371c4",
+    "96d08eb4"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0806"
+  },
+  {
+   "qid": "P-081-06-bfbf68d02ce3",
    "prompt": "小心！路上有个洞。",
-   "knowledge_ids": [
-    "V1466"
+   "options": [
+    "パスポートを見せてくれませんか。",
+    "ジョンは門のところまで出てきた。",
+    "注意して！道路に穴があいてるよ。",
+    "このビルは非常階段を備えている。"
    ],
-   "hint": ""
+   "h": "742ab108",
+   "oh": [
+    "e4f54f40",
+    "7aac2a83",
+    "742ab108",
+    "d631b058"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0807"
   },
   {
-   "id": "S0808",
-   "day": 81,
-   "direction": "ja-zh",
+   "qid": "P-081-07-b8152b3f6601",
    "prompt": "オリーブの実から油が取れます。",
-   "knowledge_ids": [
-    "V1467"
+   "options": [
+    "橄榄果可以榨油。",
+    "雪积得满地都是。",
+    "你为什么想当护士？",
+    "这个碗真不错啊。"
    ],
-   "hint": ""
+   "h": "f55d0426",
+   "oh": [
+    "f55d0426",
+    "8aeb8cdc",
+    "28ee32c5",
+    "987d26e"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0808"
   },
   {
-   "id": "S0809",
-   "day": 81,
-   "direction": "ja-zh",
+   "qid": "P-081-08-6c8b7effd927",
    "prompt": "私の誤りは彼の怒りを招いた。",
-   "knowledge_ids": [
-    "V1468"
+   "options": [
+    "我的错误招来了他的怒气。",
+    "他继承了父亲的一大片土地。",
+    "他注意不去惹别人不高兴。",
+    "猫一走，老鼠就闹起来了。"
    ],
-   "hint": ""
+   "h": "3604d3ec",
+   "oh": [
+    "3604d3ec",
+    "dc656b24",
+    "16524355",
+    "f618225d"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0809"
   },
   {
-   "id": "S0810",
-   "day": 81,
-   "direction": "ja-zh",
+   "qid": "P-081-09-823bae260ec4",
    "prompt": "あら、アンジェラと呼んでください。",
-   "knowledge_ids": [
-    "V1469"
+   "options": [
+    "哎呀，请叫我安杰拉。",
+    "请寄一份目录供参考。",
+    "那个孩子朝狗扔石头。",
+    "上个月几乎没下雨。"
    ],
-   "hint": ""
+   "h": "5929f31c",
+   "oh": [
+    "5929f31c",
+    "f28a2368",
+    "b8585706",
+    "42b374eb"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0810"
   }
  ],
  "quiz": [

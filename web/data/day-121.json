@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V2097",
    "front": "支払",
    "back": "支付",
+   "kana": "しはらい",
    "stage": "planned"
   },
   {
    "kid": "V2098",
    "front": "支払う",
    "back": "支付",
+   "kana": "しはらう",
    "stage": "planned"
   },
   {
    "kid": "V2099",
    "front": "死亡",
    "back": "死亡",
+   "kana": "しぼう",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0497",
    "front": "苦",
-   "back": "苦；辛苦｜音 ク",
+   "back": "苦；辛苦",
+   "kana": "ク、くる.しい、-ぐる.しい、くる.しむ、くる.しめる、にが.い、にが.る",
    "stage": "planned"
   },
   {
    "kid": "K0498",
    "front": "迎",
-   "back": "迎接｜音 ゲイ",
+   "back": "迎接",
+   "kana": "ゲイ、むか.える",
    "stage": "planned"
   },
   {
    "kid": "V2059",
    "front": "刺激",
    "back": "刺激",
+   "kana": "しげき",
    "stage": "planned"
   },
   {
    "kid": "V2060",
    "front": "資源",
    "back": "资源",
+   "kana": "しげん",
    "stage": "planned"
   },
   {
    "kid": "V2061",
    "front": "事件",
    "back": "事件；案件",
+   "kana": "じけん",
    "stage": "planned"
   },
   {
@@ -532,104 +540,204 @@
  ],
  "sentences": [
   {
-   "id": "S1201",
-   "day": 121,
-   "direction": "zh-ja",
+   "qid": "P-121-00-6595f0982d23",
    "prompt": "她缺乏常识。",
-   "knowledge_ids": [
-    "V2157"
+   "options": [
+    "この川の幅が１マイルある。",
+    "「彼女は若いですか」「はい」",
+    "二人は同じ結論に到達した。",
+    "彼女には常識が欠けている。"
    ],
-   "hint": ""
+   "h": "53186bea",
+   "oh": [
+    "ee0a3e53",
+    "6bc44878",
+    "1f43ff05",
+    "53186bea"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1201"
   },
   {
-   "id": "S1202",
-   "day": 121,
-   "direction": "zh-ja",
+   "qid": "P-121-01-e7dc921a9df6",
    "prompt": "那个可爱的小姑娘是我妹妹。",
-   "knowledge_ids": [
-    "V2158"
+   "options": [
+    "あのかわいい少女は私の妹です。",
+    "キリスト教を信仰していますか。",
+    "今晩は列車がとても込んでいる。",
+    "その商品はテレビで広告された。"
    ],
-   "hint": ""
+   "h": "d8a40238",
+   "oh": [
+    "d8a40238",
+    "bd6a6e0c",
+    "e8f03c43",
+    "5295e0d9"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1202"
   },
   {
-   "id": "S1203",
-   "day": 121,
-   "direction": "zh-ja",
+   "qid": "P-121-02-3b9465f15384",
    "prompt": "我有点生你的气。",
-   "knowledge_ids": [
-    "V2159"
+   "options": [
+    "あなたの家族はきっと親切でしょう。",
+    "その工場は来月から作業を中止する。",
+    "彼は心理学博士の学位を持っている。",
+    "ぼくは少々君に腹が立っているんだ。"
    ],
-   "hint": ""
+   "h": "6ef7715c",
+   "oh": [
+    "4f1d4d0e",
+    "82b575bb",
+    "316eb7ce",
+    "6ef7715c"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1203"
   },
   {
-   "id": "S1204",
-   "day": 121,
-   "direction": "zh-ja",
+   "qid": "P-121-03-7bba0e143fde",
    "prompt": "事故源于疏忽。",
-   "knowledge_ids": [
-    "V2160"
+   "options": [
+    "私は新しい背広を買った。",
+    "事故は不注意から生じる。",
+    "ありがとうございます。",
+    "大気が汚染されつつある。"
    ],
-   "hint": ""
+   "h": "d8aad1b6",
+   "oh": [
+    "7bf6ebb6",
+    "d8aad1b6",
+    "4ffb347a",
+    "c8a57526"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1204"
   },
   {
-   "id": "S1205",
-   "day": 121,
-   "direction": "zh-ja",
+   "qid": "P-121-04-0f1e5efe5e54",
    "prompt": "你的英语在进步。",
-   "knowledge_ids": [
-    "V2161"
+   "options": [
+    "君の英語は上達している。",
+    "この小麦は粉にされる。",
+    "絶滅は進化の一部である。",
+    "お手洗いはどこですか。"
    ],
-   "hint": ""
+   "h": "e4ddf50",
+   "oh": [
+    "e4ddf50",
+    "8fa39b7e",
+    "fb243001",
+    "9f20e43f"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1205"
   },
   {
-   "id": "S1206",
-   "day": 121,
-   "direction": "zh-ja",
+   "qid": "P-121-05-a62e3b67d7f1",
    "prompt": "玩笑开够了吧。",
-   "knowledge_ids": [
-    "V2162"
+   "options": [
+    "この料理は美味しいです。",
+    "あの長髪の青年は粗野だ。",
+    "冗談はもうたくさんだ。",
+    "それは無理な注文だ。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1207",
-   "day": 121,
+   "h": "6808b25c",
+   "oh": [
+    "b166969e",
+    "bc046002",
+    "6808b25c",
+    "3097222f"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1206"
+  },
+  {
+   "qid": "P-121-06-a13a73e21d22",
    "prompt": "为什么把这么好的葡萄酒留到现在？",
-   "knowledge_ids": [
-    "V2163"
+   "options": [
+    "どうしてこんな上等のぶどう酒を今まで取って置いたのか。",
+    "私達がよく野球をして遊んだ原は今すっかり家が建て込んでしまった。",
+    "「いいえ」とイギリス人は繰り返しました。",
+    "まるで、沈む船から逃げるネズミみたいね。"
    ],
-   "hint": ""
+   "h": "d7cbf66d",
+   "oh": [
+    "d7cbf66d",
+    "4dff08f8",
+    "63d86f79",
+    "b4d0dde4"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1207"
   },
   {
-   "id": "S1208",
-   "day": 121,
-   "direction": "ja-zh",
+   "qid": "P-121-07-2fde107d4f20",
    "prompt": "日米の利害がこの点で衝突した。",
-   "knowledge_ids": [
-    "V2164"
+   "options": [
+    "我们正为应对核事故竭尽全力。",
+    "电话一接通，她就说了起来。",
+    "我每完成一项工作，就在清单上打勾。",
+    "日美两国的利益在这一点上发生了冲突。"
    ],
-   "hint": ""
+   "h": "5012a8b9",
+   "oh": [
+    "bdbdd9cd",
+    "46a079b4",
+    "386125bd",
+    "5012a8b9"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1208"
   },
   {
-   "id": "S1209",
-   "day": 121,
-   "direction": "ja-zh",
+   "qid": "P-121-08-d503c630af1c",
    "prompt": "商人は商品を売り買いする人だ。",
-   "knowledge_ids": [
-    "V2165"
+   "options": [
+    "女孩子几乎都很温柔。",
+    "商人是买卖商品的人。",
+    "一到春天就翻地播种。",
+    "读书的时间越来越少。"
    ],
-   "hint": ""
+   "h": "493bd5af",
+   "oh": [
+    "5bf5f95d",
+    "493bd5af",
+    "24c05567",
+    "fdc800c0"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1209"
   },
   {
-   "id": "S1210",
-   "day": 121,
-   "direction": "ja-zh",
+   "qid": "P-121-09-2db02bd858fa",
    "prompt": "少年は木に自分の名前を刻んだ。",
-   "knowledge_ids": [
-    "V2166"
+   "options": [
+    "我终于和那个男人两清了。",
+    "一轻视危险，危险马上就来。",
+    "少年把自己的名字刻在树上。",
+    "祖父没有拐杖就走不了路。"
    ],
-   "hint": ""
+   "h": "a859b819",
+   "oh": [
+    "a6a93bb5",
+    "fc180e94",
+    "a859b819",
+    "e511983a"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1210"
   }
  ],
  "quiz": [

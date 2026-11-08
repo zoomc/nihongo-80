@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V2449",
    "front": "通じる",
    "back": "通；通晓",
+   "kana": "つうじる",
    "stage": "planned"
   },
   {
    "kid": "V2450",
    "front": "通信",
    "back": "通信",
+   "kana": "つうしん",
    "stage": "planned"
   },
   {
    "kid": "V2451",
    "front": "捕まる",
    "back": "被抓；被捉",
+   "kana": "つかまる",
    "stage": "planned"
   },
   {
@@ -65,31 +68,36 @@
   {
    "kid": "K0573",
    "front": "似",
-   "back": "相似；像｜音 ジ",
+   "back": "相似；像",
+   "kana": "ジ、に.る、ひ.る",
    "stage": "planned"
   },
   {
    "kid": "K0574",
    "front": "列",
-   "back": "列；队列｜音 レツ、レ",
+   "back": "列；队列",
+   "kana": "レツ、レ",
    "stage": "planned"
   },
   {
    "kid": "V2407",
    "front": "チーズ",
    "back": "奶酪",
+   "kana": "チーズ",
    "stage": "planned"
   },
   {
    "kid": "V2408",
    "front": "チーム",
    "back": "团队；队",
+   "kana": "チーム",
    "stage": "planned"
   },
   {
    "kid": "V2409",
    "front": "知恵",
    "back": "智慧",
+   "kana": "ちえ",
    "stage": "planned"
   },
   {
@@ -101,13 +109,15 @@
   {
    "kid": "K0565",
    "front": "願",
-   "back": "愿望；请求｜音 ガン",
+   "back": "愿望；请求",
+   "kana": "ガン、ねが.う、-ねがい",
    "stage": "planned"
   },
   {
    "kid": "K0566",
    "front": "絵",
-   "back": "画；图画｜音 カイ、エ",
+   "back": "画；图画",
+   "kana": "カイ、エ",
    "stage": "planned"
   }
  ],
@@ -507,104 +517,204 @@
  ],
  "sentences": [
   {
-   "id": "S1391",
-   "day": 140,
-   "direction": "zh-ja",
+   "qid": "P-140-00-60d535f09f35",
    "prompt": "吃个饭怎么这么费事？",
-   "knowledge_ids": [
-    "V2499"
+   "options": [
+    "一度にひとつのことをするようにしなさい。",
+    "食べるのにどうしてそんなに手間がかかるのか。",
+    "この程度のお金じゃ長くは持たないだろう。",
+    "それでは、あなたは来ないということですか。"
    ],
-   "hint": ""
+   "h": "9eb4e2a8",
+   "oh": [
+    "d5063bcc",
+    "9eb4e2a8",
+    "2eab4bd1",
+    "5501910"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1391"
   },
   {
-   "id": "S1392",
-   "day": 140,
-   "direction": "zh-ja",
+   "qid": "P-140-01-11dac147c639",
    "prompt": "我想参加游行。",
-   "knowledge_ids": [
-    "V2500"
+   "options": [
+    "あの長髪の青年は粗野だ。",
+    "日本は貿易に頼っている。",
+    "デモに参加しようと思う。",
+    "まもなく雨が降りそうだ。"
    ],
-   "hint": ""
+   "h": "cd35d93d",
+   "oh": [
+    "bc046002",
+    "78222732",
+    "cd35d93d",
+    "ff08c000"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1392"
   },
   {
-   "id": "S1393",
-   "day": 140,
-   "direction": "zh-ja",
+   "qid": "P-140-02-aa126217c855",
    "prompt": "她是一切妇德的典范。",
-   "knowledge_ids": [
-    "V2501"
+   "options": [
+    "この川はあそこで浅くなっている。",
+    "ビールびんはガラスでできている。",
+    "彼女はあらゆる婦徳の典型である。",
+    "そのコーヒーはいいにおいがする。"
    ],
-   "hint": ""
+   "h": "165d9c4f",
+   "oh": [
+    "ec02db03",
+    "45e4dbee",
+    "165d9c4f",
+    "eff509fd"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1393"
   },
   {
-   "id": "S1394",
-   "day": 140,
-   "direction": "zh-ja",
+   "qid": "P-140-03-8de343d977a8",
    "prompt": "那一切都取决于天气。",
-   "knowledge_ids": [
-    "V2502"
+   "options": [
+    "この小包を船便で送ってください。",
+    "それはすべて天候に依存している。",
+    "その話は親から子へと伝えられた。",
+    "そのショーで観客は大喜びだった。"
    ],
-   "hint": ""
+   "h": "3189be4f",
+   "oh": [
+    "79aca341",
+    "3189be4f",
+    "c65bb93d",
+    "66f9ebb3"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1394"
   },
   {
-   "id": "S1395",
-   "day": 140,
-   "direction": "zh-ja",
+   "qid": "P-140-04-950617816fa8",
    "prompt": "有电子打字机吗？",
-   "knowledge_ids": [
-    "V2503"
+   "options": [
+    "ラジオの音を下げてくれませんか。",
+    "その城は１６１０年に建てられた。",
+    "このソファーは場所を取りすぎる。",
+    "電子タイプライターはありますか。"
    ],
-   "hint": ""
+   "h": "ea0afe11",
+   "oh": [
+    "2be3730e",
+    "6b28f1e6",
+    "fa74e348",
+    "ea0afe11"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1395"
   },
   {
-   "id": "S1396",
-   "day": 140,
-   "direction": "zh-ja",
+   "qid": "P-140-05-cc989f99413e",
    "prompt": "我们趁天还没黑搭起了帐篷。",
-   "knowledge_ids": [
-    "V2504"
+   "options": [
+    "きれいなタオルは引き出しにありますよ。",
+    "その島の飛行場は、今では草がぼうぼうだ。",
+    "私たちは暗くならないうちにテントを張った。",
+    "あなたの名前はインクで書かなければならない。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1397",
-   "day": 140,
+   "h": "f085ee9a",
+   "oh": [
+    "eaeabc2",
+    "a52d777a",
+    "f085ee9a",
+    "f0361447"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1396"
+  },
+  {
+   "qid": "P-140-06-e1056b90481c",
    "prompt": "这辆车烧天然气。",
-   "knowledge_ids": [
-    "V2505"
+   "options": [
+    "この車は天然ガスで動く。",
+    "これは珍しい種類の魚です。",
+    "この本の著者は誰ですか。",
+    "お前はまだ「青い」な。"
    ],
-   "hint": ""
+   "h": "d90ef112",
+   "oh": [
+    "d90ef112",
+    "7979a1c1",
+    "7d5d25ac",
+    "ad3fba26"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1397"
   },
   {
-   "id": "S1398",
-   "day": 140,
-   "direction": "ja-zh",
+   "qid": "P-140-07-deb97ab0da6f",
    "prompt": "私はその問がたいへんやさしいことを発見した。",
-   "knowledge_ids": [
-    "V2506"
+   "options": [
+    "我发现那个问题很简单。",
+    "啊！糟了！汽油快没了。",
+    "游客数量近年大幅增加。",
+    "他四肢摊开躺在榻榻米上。"
    ],
-   "hint": ""
+   "h": "da696091",
+   "oh": [
+    "da696091",
+    "b6724d72",
+    "45b99f8d",
+    "7e58bdbb"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1398"
   },
   {
-   "id": "S1399",
-   "day": 140,
-   "direction": "ja-zh",
+   "qid": "P-140-08-f0b2d391d89f",
    "prompt": "彼女は根っからのコーヒー党です。",
-   "knowledge_ids": [
-    "V2507"
+   "options": [
+    "商人是买卖商品的人。",
+    "我解不出这道数学题。",
+    "她是个地道的咖啡派。",
+    "我通常骑自行车上学。"
    ],
-   "hint": ""
+   "h": "2dd373c1",
+   "oh": [
+    "493bd5af",
+    "aeda3c9e",
+    "2dd373c1",
+    "cf5e8493"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1399"
   },
   {
-   "id": "S1400",
-   "day": 140,
-   "direction": "ja-zh",
+   "qid": "P-140-09-48473b21b22d",
    "prompt": "家からその塔が見える。",
-   "knowledge_ids": [
-    "V2508"
+   "options": [
+    "他差点就进入最高一档。",
+    "从家里能看见那座塔。",
+    "冷气好像开得太足了。",
+    "墨西哥人说什么语言？"
    ],
-   "hint": ""
+   "h": "60c714ba",
+   "oh": [
+    "d69a9cbc",
+    "60c714ba",
+    "d1afd2f0",
+    "f09cbbd1"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1400"
   }
  ],
  "quiz": [

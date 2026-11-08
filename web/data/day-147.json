@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V2596",
    "front": "苦手",
    "back": "不擅长；怕",
+   "kana": "にがて",
    "stage": "planned"
   },
   {
    "kid": "V2597",
    "front": "握る",
    "back": "握；掌握",
+   "kana": "にぎる",
    "stage": "planned"
   },
   {
    "kid": "V2598",
    "front": "日",
    "back": "日；号",
+   "kana": "にち",
    "stage": "planned"
   },
   {
@@ -65,31 +68,36 @@
   {
    "kid": "K0601",
    "front": "娘",
-   "back": "女儿；姑娘｜音 ジョウ",
+   "back": "女儿；姑娘",
+   "kana": "ジョウ、むすめ、こ",
    "stage": "planned"
   },
   {
    "kid": "K0602",
    "front": "誤",
-   "back": "错误；弄错｜音 ゴ",
+   "back": "错误；弄错",
+   "kana": "ゴ、あやま.る、-あやま.る",
    "stage": "planned"
   },
   {
    "kid": "V2554",
    "front": "ドライブ",
    "back": "开车游玩",
+   "kana": "ドライブ",
    "stage": "planned"
   },
   {
    "kid": "V2555",
    "front": "トラック",
    "back": "卡车",
+   "kana": "トラック",
    "stage": "planned"
   },
   {
    "kid": "V2556",
    "front": "ドラマ",
    "back": "电视剧；戏剧",
+   "kana": "ドラマ",
    "stage": "planned"
   },
   {
@@ -101,13 +109,15 @@
   {
    "kid": "K0593",
    "front": "盗",
-   "back": "偷；盗｜音 トウ",
+   "back": "偷；盗",
+   "kana": "トウ、ぬす.む、ぬす.み",
    "stage": "planned"
   },
   {
    "kid": "K0594",
    "front": "吸",
-   "back": "吸；吸入｜音 キュウ",
+   "back": "吸；吸入",
+   "kana": "キュウ、す.う",
    "stage": "planned"
   }
  ],
@@ -510,104 +520,204 @@
  ],
  "sentences": [
   {
-   "id": "S1461",
-   "day": 147,
-   "direction": "zh-ja",
+   "qid": "P-147-00-09f69a340300",
    "prompt": "她把鸟笼挂在屋檐下。",
-   "knowledge_ids": [
-    "V2629"
+   "options": [
+    "あいつもアバウトな性格だよな。",
+    "彼女は鳥かごを軒からつるした。",
+    "彼には思想の理想がかけている。",
+    "フクロウは昼間は目が見えない。"
    ],
-   "hint": ""
+   "h": "1da4459a",
+   "oh": [
+    "65071076",
+    "1da4459a",
+    "74403c81",
+    "bd30935a"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1461"
   },
   {
-   "id": "S1462",
-   "day": 147,
-   "direction": "zh-ja",
+   "qid": "P-147-01-4fd706cb3004",
    "prompt": "这是父亲留给我的一件东西。",
-   "knowledge_ids": [
-    "V2630"
+   "options": [
+    "いくつかの点で私は彼女が気に入らない。",
+    "お父さんがバスルームでひげを剃っている。",
+    "すみません、おまわりさん。ここはどこですか。",
+    "これは父が私に残してくれたものの一つです。"
    ],
-   "hint": ""
+   "h": "67d2fba1",
+   "oh": [
+    "e6e371c4",
+    "4f3c3e45",
+    "b4cdcb0f",
+    "67d2fba1"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1462"
   },
   {
-   "id": "S1463",
-   "day": 147,
-   "direction": "zh-ja",
+   "qid": "P-147-02-f5b0e94e0761",
    "prompt": "我们其余的人要留下来。",
-   "knowledge_ids": [
-    "V2631"
+   "options": [
+    "私たちの内残りの者はあとに残ることになっている。",
+    "特定の食べ物を食べた後に、胸やけがするのですか？",
+    "彼らはじゅうぶんな食料を手に入れられなかった。",
+    "「安いですね。じゃあ10ヤードください」小娘が答えた。"
    ],
-   "hint": ""
+   "h": "37d1284d",
+   "oh": [
+    "37d1284d",
+    "fdca9253",
+    "3969b2c8",
+    "d7534139"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1463"
   },
   {
-   "id": "S1464",
-   "day": 147,
-   "direction": "zh-ja",
+   "qid": "P-147-03-cb6e1385128a",
    "prompt": "请让我搭一下车。",
-   "knowledge_ids": [
-    "V2632"
+   "options": [
+    "それは無理な注文だ。",
+    "車に乗せてください。",
+    "遠くに小屋が見えた。",
+    "おはようございます。"
    ],
-   "hint": ""
+   "h": "881c5c96",
+   "oh": [
+    "3097222f",
+    "881c5c96",
+    "6a6c4ab3",
+    "f17175ff"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1464"
   },
   {
-   "id": "S1465",
-   "day": 147,
-   "direction": "zh-ja",
+   "qid": "P-147-04-cb67c1af3295",
    "prompt": "医生解除了他的痛苦。",
-   "knowledge_ids": [
-    "V2633"
+   "options": [
+    "このリンゴがいちばんおいしい。",
+    "キリスト教を信仰していますか。",
+    "医者は彼の苦痛を除いてやった。",
+    "その教師は講堂に学生を集めた。"
    ],
-   "hint": ""
+   "h": "8a6a13e3",
+   "oh": [
+    "c8943c06",
+    "bd6a6e0c",
+    "8a6a13e3",
+    "a8167156"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1465"
   },
   {
-   "id": "S1466",
-   "day": 147,
-   "direction": "zh-ja",
+   "qid": "P-147-05-6d0217c0e5a1",
    "prompt": "希望你的愿望能实现。",
-   "knowledge_ids": [
-    "V2634"
+   "options": [
+    "その女性の顔には悲しみの跡があった。",
+    "私はパレードが見えるいい位置にいた。",
+    "あなたの望みが実現するといいですね。",
+    "その写真は空から写されたものである。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1467",
-   "day": 147,
+   "h": "f5226256",
+   "oh": [
+    "bbedf725",
+    "3821a6d6",
+    "f5226256",
+    "45659cac"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1466"
+  },
+  {
+   "qid": "P-147-06-ad911f006d8c",
    "prompt": "全国人民都希望和平。",
-   "knowledge_ids": [
-    "V2635"
+   "options": [
+    "「彼女は若いですか」「はい」",
+    "全国民が平和を望んでいる。",
+    "光が刺激となって花が咲く。",
+    "空には太陽が輝いています。"
    ],
-   "hint": ""
+   "h": "ad056ed6",
+   "oh": [
+    "6bc44878",
+    "ad056ed6",
+    "fc414b9f",
+    "3ed5e986"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1467"
   },
   {
-   "id": "S1468",
-   "day": 147,
-   "direction": "ja-zh",
+   "qid": "P-147-07-f1ff3fe30024",
    "prompt": "晴れ後曇りでした。",
-   "knowledge_ids": [
-    "V2636"
+   "options": [
+    "房间里有猫。",
+    "晴转多云。",
+    "把左手举起来。",
+    "周六购物。"
    ],
-   "hint": ""
+   "h": "3222c51a",
+   "oh": [
+    "44ea4960",
+    "3222c51a",
+    "1efc45f6",
+    "2cd26856"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1468"
   },
   {
-   "id": "S1469",
-   "day": 147,
-   "direction": "ja-zh",
+   "qid": "P-147-08-844da0ac9dd4",
    "prompt": "入る前にドアをノックして下さい。",
-   "knowledge_ids": [
-    "V2637"
+   "options": [
+    "我来给花换水吧。",
+    "进去前请先敲门。",
+    "从哪个机场出发？",
+    "你为什么想当护士？"
    ],
-   "hint": ""
+   "h": "d6861e47",
+   "oh": [
+    "c570507a",
+    "d6861e47",
+    "df477bcd",
+    "28ee32c5"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1469"
   },
   {
-   "id": "S1470",
-   "day": 147,
-   "direction": "ja-zh",
+   "qid": "P-147-09-d4ff88c552eb",
    "prompt": "右腕を伸ばせません。",
-   "knowledge_ids": [
-    "V2638"
+   "options": [
+    "这张地图很方便。",
+    "你为什么想当护士？",
+    "我的右臂伸不直。",
+    "这类书我不太读。"
    ],
-   "hint": ""
+   "h": "d463fc58",
+   "oh": [
+    "1be23d38",
+    "28ee32c5",
+    "d463fc58",
+    "bde26ff2"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1470"
   }
  ],
  "quiz": [

@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0589",
    "front": "セーター",
    "back": "毛衣",
+   "kana": "セーター",
    "stage": "planned"
   },
   {
    "kid": "V0590",
    "front": "せっけん",
    "back": "肥皂",
+   "kana": "せっけん",
    "stage": "planned"
   },
   {
    "kid": "V0591",
    "front": "背広",
    "back": "西装",
+   "kana": "せびろ",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0079",
    "front": "病",
-   "back": "病；生病｜音 ビョウ",
+   "back": "病；生病",
+   "kana": "ビョウ、やむ",
    "stage": "planned"
   },
   {
    "kid": "K0080",
    "front": "院",
-   "back": "院；医院；学院｜音 イン",
+   "back": "院；医院；学院",
+   "kana": "イン",
    "stage": "planned"
   },
   {
    "kid": "V0551",
    "front": "四",
    "back": "四",
+   "kana": "し",
    "stage": "planned"
   },
   {
    "kid": "V0552",
    "front": "塩",
    "back": "盐",
+   "kana": "しお",
    "stage": "planned"
   },
   {
    "kid": "V0553",
    "front": "辞書",
    "back": "词典",
+   "kana": "じしょ",
    "stage": "planned"
   },
   {
@@ -530,104 +538,204 @@
  ],
  "sentences": [
   {
-   "id": "S0221",
-   "day": 23,
-   "direction": "zh-ja",
+   "qid": "P-023-00-1474ca3e9e1a",
    "prompt": "这所学校有很多学生。",
-   "knowledge_ids": [
-    "V0588"
+   "options": [
+    "息子はハンバーガーにあきています。",
+    "この学校はたくさんの生徒がいます。",
+    "あなたは家族の事を考えるべきです。",
+    "このトーストはよく焼けていません。"
    ],
-   "hint": ""
+   "h": "939aa164",
+   "oh": [
+    "9eefe5a6",
+    "939aa164",
+    "13384023",
+    "fe788abc"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0221"
   },
   {
-   "id": "S0222",
-   "day": 23,
-   "direction": "zh-ja",
+   "qid": "P-023-01-f7b2ae969c58",
    "prompt": "我不喜欢这件毛衣。",
-   "knowledge_ids": [
-    "V0589"
+   "options": [
+    "その仕事をもう終えましたか。",
+    "その火事はおととい発生した。",
+    "このセーターは気に入らない。",
+    "熱はエネルギーの一種である。"
    ],
-   "hint": ""
+   "h": "468b4643",
+   "oh": [
+    "f2fbd2db",
+    "d0498af0",
+    "468b4643",
+    "c698082b"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0222"
   },
   {
-   "id": "S0223",
-   "day": 23,
-   "direction": "zh-ja",
+   "qid": "P-023-02-6b99b15fab40",
    "prompt": "别用沾满肥皂的手碰我。",
-   "knowledge_ids": [
-    "V0590"
+   "options": [
+    "こういうタイプの人はおもしろくない。",
+    "チューリップは、私たちの県の県花です。",
+    "せっけんだらけの手で私にさわらないで。",
+    "この企業は新しい製品を作っています。"
    ],
-   "hint": ""
+   "h": "41d0d85f",
+   "oh": [
+    "b9ffc63c",
+    "9f1b20e5",
+    "41d0d85f",
+    "82d96402"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0223"
   },
   {
-   "id": "S0224",
-   "day": 23,
-   "direction": "zh-ja",
+   "qid": "P-023-03-df5de7e5f133",
    "prompt": "我买了一套新西装。",
-   "knowledge_ids": [
-    "V0591"
+   "options": [
+    "この小麦は粉にされる。",
+    "カーテンが風になびいた。",
+    "あなたと席を交換しよう。",
+    "私は新しい背広を買った。"
    ],
-   "hint": ""
+   "h": "7bf6ebb6",
+   "oh": [
+    "8fa39b7e",
+    "f01f9c0a",
+    "4b92c51b",
+    "7bf6ebb6"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0224"
   },
   {
-   "id": "S0225",
-   "day": 23,
-   "direction": "zh-ja",
+   "qid": "P-023-04-c5e088391953",
    "prompt": "荷兰是个狭小的国家。",
-   "knowledge_ids": [
-    "V0592"
+   "options": [
+    "まもなく雨が降りそうだ。",
+    "流れは池に注いでいる。",
+    "一人の教授がささやいた。",
+    "オランダは狭い国です。"
    ],
-   "hint": ""
+   "h": "e82faac6",
+   "oh": [
+    "ff08c000",
+    "b649417e",
+    "44eb1b0d",
+    "e82faac6"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0225"
   },
   {
-   "id": "S0226",
-   "day": 23,
-   "direction": "zh-ja",
+   "qid": "P-023-05-5d5f200ecae3",
    "prompt": "我们的生意不得不从零开始。",
-   "knowledge_ids": [
-    "V0593"
+   "options": [
+    "でもさ、母を連れて行かなくてはいけないんだ。",
+    "私たちは商売をゼロから始めなければならなかった。",
+    "ドアをそのままにしておいてはいけません。",
+    "「ご一緒してもいいですか」「もちろんです」"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0227",
-   "day": 23,
+   "h": "9a13da4f",
+   "oh": [
+    "82bd42a3",
+    "9a13da4f",
+    "6fe1fecd",
+    "d4b34698"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0226"
+  },
+  {
+   "qid": "P-023-06-d100cb19e17d",
    "prompt": "这个大厅能容纳两千人。",
-   "knowledge_ids": [
-    "V0594"
+   "options": [
+    "それはすべて天候に依存している。",
+    "それはたいへんなショックでした。",
+    "その子は何の恐怖も示さなかった。",
+    "このホールには人が二千人入れる。"
    ],
-   "hint": ""
+   "h": "cc13a7d1",
+   "oh": [
+    "3189be4f",
+    "4f933c74",
+    "67d66472",
+    "cc13a7d1"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0227"
   },
   {
-   "id": "S0228",
-   "day": 23,
-   "direction": "ja-zh",
+   "qid": "P-023-07-31c9a57f290f",
    "prompt": "先月は、ほとんど雨が降らなかった。",
-   "knowledge_ids": [
-    "V0595"
+   "options": [
+    "上个月几乎没下雨。",
+    "他用无线电发了报。",
+    "这些物品是非卖品。",
+    "新闻每小时播一次。"
    ],
-   "hint": ""
+   "h": "42b374eb",
+   "oh": [
+    "42b374eb",
+    "3e7102f9",
+    "715c8a8f",
+    "f70f14e"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0228"
   },
   {
-   "id": "S0229",
-   "day": 23,
-   "direction": "ja-zh",
+   "qid": "P-023-08-f96af449b7c5",
    "prompt": "あの人は先週ここにいた人です。",
-   "knowledge_ids": [
-    "V0596"
+   "options": [
+    "我有足够的钱买这本书。",
+    "你要是乖，就给你糖吃。",
+    "那个人是上周在这里的人。",
+    "一听这话，他脸色刷地白了。"
    ],
-   "hint": ""
+   "h": "71c7037a",
+   "oh": [
+    "c449930f",
+    "98c00a1c",
+    "71c7037a",
+    "35126ddb"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0229"
   },
   {
-   "id": "S0230",
-   "day": 23,
-   "direction": "ja-zh",
+   "qid": "P-023-09-b14c6dffd17e",
    "prompt": "トッピングは全部のせて下さい。",
-   "knowledge_ids": [
-    "V0597"
+   "options": [
+    "这块表走时准确。",
+    "配料请全部加上。",
+    "在这里玩很危险。",
+    "突然开始下雨了。"
    ],
-   "hint": ""
+   "h": "3f03fd78",
+   "oh": [
+    "5111725d",
+    "3f03fd78",
+    "aa06e185",
+    "4c4b05b0"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0230"
   }
  ],
  "quiz": [

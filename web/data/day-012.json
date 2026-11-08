@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0373",
    "front": "いいえ",
    "back": "不；不是",
+   "kana": "いいえ",
    "stage": "planned"
   },
   {
    "kid": "V0374",
    "front": "言う",
    "back": "说",
+   "kana": "いう",
    "stage": "planned"
   },
   {
    "kid": "V0375",
    "front": "いかが",
    "back": "怎么样",
+   "kana": "いかが",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0052",
    "front": "駅",
-   "back": "车站｜音 エキ",
+   "back": "车站",
+   "kana": "エキ",
    "stage": "planned"
   },
   {
    "kid": "K0053",
    "front": "電",
-   "back": "电｜音 デン",
+   "back": "电",
+   "kana": "デン",
    "stage": "planned"
   },
   {
    "kid": "V0142",
    "front": "時々",
    "back": "有时；时常",
+   "kana": "ときどき",
    "stage": "planned"
   },
   {
    "kid": "V0143",
    "front": "まだ",
    "back": "还；尚未",
+   "kana": "まだ",
    "stage": "planned"
   },
   {
    "kid": "V0144",
    "front": "もう",
    "back": "已经；再（一次）",
+   "kana": "もう",
    "stage": "planned"
   },
   {
@@ -557,104 +565,204 @@
  ],
  "sentences": [
   {
-   "id": "S0111",
-   "day": 12,
-   "direction": "zh-ja",
+   "qid": "P-012-00-1ba200e230af",
    "prompt": "还有别的哪儿疼吗？",
-   "knowledge_ids": [
-    "V0379"
+   "options": [
+    "あなたの声が聞けてうれしいわ。",
+    "この菓子を自由にお取り下さい。",
+    "主婦は節約に努めるべきである。",
+    "ほかに痛いところはありますか。"
    ],
-   "hint": ""
+   "h": "f06f274a",
+   "oh": [
+    "aa196585",
+    "ff6eaffd",
+    "ce74be3a",
+    "f06f274a"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0111"
   },
   {
-   "id": "S0112",
-   "day": 12,
-   "direction": "zh-ja",
+   "qid": "P-012-01-f0d4fa23000d",
    "prompt": "一共8美元50美分。",
-   "knowledge_ids": [
-    "V0380"
+   "options": [
+    "８ドル５０セントいただきます。",
+    "クッキーはテーブルの下にいる。",
+    "だんだん日が長くなっています。",
+    "あいつもアバウトな性格だよな。"
    ],
-   "hint": ""
+   "h": "62324493",
+   "oh": [
+    "62324493",
+    "876e5f43",
+    "b1c203f0",
+    "65071076"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0112"
   },
   {
-   "id": "S0113",
-   "day": 12,
-   "direction": "zh-ja",
+   "qid": "P-012-02-d596efc538d6",
    "prompt": "一天就花掉了500美元。",
-   "knowledge_ids": [
-    "V0381"
+   "options": [
+    "その場所は今は相当建て込んでいる。",
+    "あなたの時計、時間は狂いませんか。",
+    "その映画館は人々でいっぱいだった。",
+    "一日で５００ドルつかってしまった。"
    ],
-   "hint": ""
+   "h": "3fe654f9",
+   "oh": [
+    "923b8d6a",
+    "7697026a",
+    "15b363d4",
+    "3fe654f9"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0113"
   },
   {
-   "id": "S0114",
-   "day": 12,
-   "direction": "zh-ja",
+   "qid": "P-012-03-1ccb565767f8",
    "prompt": "这个苹果最好吃。",
-   "knowledge_ids": [
-    "V0382"
+   "options": [
+    "それはどの辞書にもでています。",
+    "あのドレスは彼女によく似合う。",
+    "この布は値段の割に品質が良い。",
+    "このリンゴがいちばんおいしい。"
    ],
-   "hint": ""
+   "h": "c8943c06",
+   "oh": [
+    "9c46abfd",
+    "d2b39483",
+    "73db6bba",
+    "c8943c06"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0114"
   },
   {
-   "id": "S0115",
-   "day": 12,
-   "direction": "zh-ja",
+   "qid": "P-012-04-f1713c1a01d7",
    "prompt": "您什么时候去旅行？",
-   "knowledge_ids": [
-    "V0383"
+   "options": [
+    "いつ旅行においでになりますか。",
+    "外はだんだん明るくなっていく。",
+    "クッキーはテーブルの下にいる。",
+    "あのかわいい少女は私の妹です。"
    ],
-   "hint": ""
+   "h": "a1751ea1",
+   "oh": [
+    "a1751ea1",
+    "5f3ff076",
+    "876e5f43",
+    "d8a40238"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0115"
   },
   {
-   "id": "S0116",
-   "day": 12,
-   "direction": "zh-ja",
+   "qid": "P-012-05-39ae8b8da5b2",
    "prompt": "请订1月5日到1月15日。",
-   "knowledge_ids": [
-    "V0384"
+   "options": [
+    "お父さんがバスルームでひげを剃っている。",
+    "「ご一緒してもいいですか」「もちろんです」",
+    "このコートいいですね。試着してもいいですか。",
+    "１月５日から１月１５日までおねがいします。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0117",
-   "day": 12,
+   "h": "cd9e0c0",
+   "oh": [
+    "4f3c3e45",
+    "d4b34698",
+    "b3553c30",
+    "cd9e0c0"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0116"
+  },
+  {
+   "qid": "P-012-06-0d7770f6a10a",
    "prompt": "“我可以跟您一起去吗？”“当然。”",
-   "knowledge_ids": [
-    "V0385"
+   "options": [
+    "食べるのにどうしてそんなに手間がかかるのか。",
+    "ところが実はどうすることもできないのです。",
+    "「ご一緒してもいいですか」「もちろんです」",
+    "その少年は死んだものとしてあきらめられた。"
    ],
-   "hint": ""
+   "h": "d4b34698",
+   "oh": [
+    "9eb4e2a8",
+    "34a8c7a1",
+    "d4b34698",
+    "ab3a94b8"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0117"
   },
   {
-   "id": "S0118",
-   "day": 12,
-   "direction": "ja-zh",
+   "qid": "P-012-07-08e829a45639",
    "prompt": "この箱にはリンゴが五つ入っている。",
-   "knowledge_ids": [
-    "V0386"
+   "options": [
+    "我不明白那本小说的情节。",
+    "你不能出席吗？为什么？",
+    "这个箱子里装着五个苹果。",
+    "地球以外的天体上有生物吗？"
    ],
-   "hint": ""
+   "h": "7ee91c87",
+   "oh": [
+    "4ea6453d",
+    "e0130b6d",
+    "7ee91c87",
+    "26a2ce62"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0118"
   },
   {
-   "id": "S0119",
-   "day": 12,
-   "direction": "ja-zh",
+   "qid": "P-012-08-0c4470276d28",
    "prompt": "その犬はかみついたりしませんよ。",
-   "knowledge_ids": [
-    "V0387"
+   "options": [
+    "我让他搬了行李箱。",
+    "今后必须多加小心。",
+    "在美国人们说英语。",
+    "那条狗不会咬人的。"
    ],
-   "hint": ""
+   "h": "2603e65d",
+   "oh": [
+    "323f3d7c",
+    "643f25c1",
+    "e95a2cb0",
+    "2603e65d"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0119"
   },
   {
-   "id": "S0120",
-   "day": 12,
-   "direction": "ja-zh",
+   "qid": "P-012-09-f38b2a1b56a0",
    "prompt": "毎日うっとうしくていやですね。",
-   "knowledge_ids": [
-    "V0388"
+   "options": [
+    "我们能从书籍中获得乐趣。",
+    "天天这么阴雨天，真烦人。",
+    "做那种事会被人当成笑柄的。",
+    "我手边总放着三本辞典。"
    ],
-   "hint": ""
+   "h": "c4c28d2e",
+   "oh": [
+    "d09b4d0",
+    "c4c28d2e",
+    "40186f01",
+    "84b99cfe"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0120"
   }
  ],
  "quiz": [

@@ -297,7 +297,7 @@ async function handlePostEvents(request: Request, env: Env, url: URL): Promise<R
     return { r, entry, correct };
   });
 
-  const metadata = JSON.stringify({review_ratings:body.review_ratings ?? [],sentences:body.sentences ?? []});
+  const metadata = JSON.stringify({review_ratings:body.review_ratings ?? [],sentences:body.sentences ?? [],practice_mode:body.practice_mode === "choice" ? "choice" : "teacher"});
   if (metadata.length > 16384) return jsonResponse({ok:false,reason:"drafts_too_large"},413,origin);
   const dayKey = new Date().toISOString().slice(0,10);
   try {

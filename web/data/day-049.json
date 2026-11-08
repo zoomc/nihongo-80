@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1029",
    "front": "草",
    "back": "草",
+   "kana": "くさ",
    "stage": "planned"
   },
   {
    "kid": "V1030",
    "front": "首",
    "back": "脖子",
+   "kana": "くび",
    "stage": "planned"
   },
   {
    "kid": "V1031",
    "front": "雲",
    "back": "云",
+   "kana": "くも",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0244",
    "front": "験",
-   "back": "经验；效验；考试｜音 ケン、ゲン",
+   "back": "经验；效验；考试",
+   "kana": "ケン、ゲン、あかし、しるし、ため.す、ためし",
    "stage": "planned"
   },
   {
    "kid": "K0245",
    "front": "英",
-   "back": "英；英国；英才｜音 エイ",
+   "back": "英；英国；英才",
+   "kana": "エイ、はなぶさ",
    "stage": "planned"
   },
   {
    "kid": "V0996",
    "front": "かまう",
    "back": "介意；理会",
+   "kana": "かまう",
    "stage": "planned"
   },
   {
    "kid": "V0997",
    "front": "髪",
    "back": "头发",
+   "kana": "かみ",
    "stage": "planned"
   },
   {
    "kid": "V0998",
    "front": "噛む",
    "back": "咬；嚼",
+   "kana": "かむ",
    "stage": "planned"
   },
   {
@@ -532,104 +540,204 @@
  ],
  "sentences": [
   {
-   "id": "S0481",
-   "day": 49,
-   "direction": "zh-ja",
+   "qid": "P-049-00-0ee1bc1793a9",
    "prompt": "我儿子上了高中。",
-   "knowledge_ids": [
-    "V1053"
+   "options": [
+    "クリスマスが近くなってきた。",
+    "私の息子は、高校に入学した。",
+    "市が住民に調査を行いました。",
+    "勢いに流されているんですよ。"
    ],
-   "hint": ""
+   "h": "c79bbb7c",
+   "oh": [
+    "173e2429",
+    "c79bbb7c",
+    "2b753e0a",
+    "75832468"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0481"
   },
   {
-   "id": "S0482",
-   "day": 49,
-   "direction": "zh-ja",
+   "qid": "P-049-01-f8033d0637e6",
    "prompt": "我在和美国的高中生通信。",
-   "knowledge_ids": [
-    "V1054"
+   "options": [
+    "「大丈夫ですか」「はい、大丈夫です」",
+    "私はアメリカの高校生と文通をしている。",
+    "ここでお買い上げの品は無料で配達します。",
+    "それは、おまえの声をよく聞くためだよ。"
    ],
-   "hint": ""
+   "h": "48cfd48e",
+   "oh": [
+    "c3fb9c88",
+    "48cfd48e",
+    "108078d3",
+    "19802e2c"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0482"
   },
   {
-   "id": "S0483",
-   "day": 49,
-   "direction": "zh-ja",
+   "qid": "P-049-02-c46b2d99994b",
    "prompt": "那家工厂下个月起停工。",
-   "knowledge_ids": [
-    "V1055"
+   "options": [
+    "彼女その瞬間にカッとなったんだね。",
+    "その工場は来月から作業を中止する。",
+    "ルーシーは電灯のスイッチをつけた。",
+    "人類だけが火の使い方を知っている。"
    ],
-   "hint": ""
+   "h": "82b575bb",
+   "oh": [
+    "b90b4381",
+    "82b575bb",
+    "28480d99",
+    "802a2f24"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0483"
   },
   {
-   "id": "S0484",
-   "day": 49,
-   "direction": "zh-ja",
+   "qid": "P-049-03-c189da8a49cc",
    "prompt": "校长从老师身后走了进来。",
-   "knowledge_ids": [
-    "V1056"
+   "options": [
+    "その広間は日本画で飾られていた。",
+    "校長が先生の後ろから入ってきた。",
+    "そのニュースは急いで印刷された。",
+    "この犬は何でもほとんど食べます。"
    ],
-   "hint": ""
+   "h": "c370dfbb",
+   "oh": [
+    "6d732f36",
+    "c370dfbb",
+    "d5c6649d",
+    "1ebdb937"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0484"
   },
   {
-   "id": "S0485",
-   "day": 49,
-   "direction": "zh-ja",
+   "qid": "P-049-04-52ccc3b4340f",
    "prompt": "必须注意交通安全。",
-   "knowledge_ids": [
-    "V1057"
+   "options": [
+    "交通に注意しなければいけない。",
+    "あのドレスは彼女によく似合う。",
+    "主婦は節約に努めるべきである。",
+    "彼は今日、お弁当を持って来た。"
    ],
-   "hint": ""
+   "h": "208febf8",
+   "oh": [
+    "208febf8",
+    "d2b39483",
+    "ce74be3a",
+    "acc40490"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0485"
   },
   {
-   "id": "S0486",
-   "day": 49,
-   "direction": "zh-ja",
+   "qid": "P-049-05-a48f256e25ba",
    "prompt": "那位老师把学生集合到礼堂。",
-   "knowledge_ids": [
-    "V1058"
+   "options": [
+    "彼は会社で高い地位にあります。",
+    "その八百屋は客にとても親切だ。",
+    "このリンゴがいちばんおいしい。",
+    "その教師は講堂に学生を集めた。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0487",
-   "day": 49,
+   "h": "a8167156",
+   "oh": [
+    "1db91e4",
+    "4586f317",
+    "c8943c06",
+    "a8167156"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0486"
+  },
+  {
+   "qid": "P-049-06-fd53a1a9a08b",
    "prompt": "他不是高中的学生。",
-   "knowledge_ids": [
-    "V1059"
+   "options": [
+    "彼は医師になるために勉強している。",
+    "プレゼント用に包んでもらえますか。",
+    "彼は高等学校の生徒ではありません。",
+    "同じ色の羽の鳥は共に集まるものだ。"
    ],
-   "hint": ""
+   "h": "31457fd",
+   "oh": [
+    "225171f1",
+    "c660d6c8",
+    "31457fd",
+    "83985809"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0487"
   },
   {
-   "id": "S0488",
-   "day": 49,
-   "direction": "ja-zh",
+   "qid": "P-049-07-ecc97a99e23e",
    "prompt": "私は公務員です。",
-   "knowledge_ids": [
-    "V1060"
+   "options": [
+    "他生于19世纪。",
+    "必须做手术。",
+    "我是公务员。",
+    "房间里有猫。"
    ],
-   "hint": ""
+   "h": "cd8b68ac",
+   "oh": [
+    "122eb4a0",
+    "8e4548b3",
+    "cd8b68ac",
+    "44ea4960"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0488"
   },
   {
-   "id": "S0489",
-   "day": 49,
-   "direction": "ja-zh",
+   "qid": "P-049-08-a377f1f7778a",
    "prompt": "英語は国際言語である。",
-   "knowledge_ids": [
-    "V1061"
+   "options": [
+    "从哪个机场出发？",
+    "英语是国际语言。",
+    "您的名字怎么念？",
+    "他在生死之间徘徊。"
    ],
-   "hint": ""
+   "h": "c39153d7",
+   "oh": [
+    "df477bcd",
+    "c39153d7",
+    "cedc5143",
+    "f32c445a"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0489"
   },
   {
-   "id": "S0490",
-   "day": 49,
-   "direction": "ja-zh",
+   "qid": "P-049-09-5fe7e43be46d",
    "prompt": "私は心によい考えを持っている。",
-   "knowledge_ids": [
-    "V1062"
+   "options": [
+    "你没有权利去那里。",
+    "那么生气可不像他。",
+    "上个月几乎没下雨。",
+    "我心里有个好主意。"
    ],
-   "hint": ""
+   "h": "1e6c1fa5",
+   "oh": [
+    "2e3620c5",
+    "d57e1d5a",
+    "42b374eb",
+    "1e6c1fa5"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0490"
   }
  ],
  "quiz": [

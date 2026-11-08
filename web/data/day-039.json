@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0162",
    "front": "調べる",
    "back": "调查；查阅",
+   "kana": "しらべる",
    "stage": "planned"
   },
   {
    "kid": "V0163",
    "front": "比べる",
    "back": "比较",
+   "kana": "くらべる",
    "stage": "planned"
   },
   {
    "kid": "V0164",
    "front": "慣れる",
    "back": "习惯（自动）",
+   "kana": "なれる",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0204",
    "front": "海",
-   "back": "海；海洋｜音 カイ",
+   "back": "海；海洋",
+   "kana": "カイ、うみ",
    "stage": "planned"
   },
   {
    "kid": "K0205",
    "front": "売",
-   "back": "卖；出售｜音 バイ",
+   "back": "卖；出售",
+   "kana": "バイ、う.る、う.れる",
    "stage": "planned"
   },
   {
    "kid": "V0855",
    "front": "来週",
    "back": "下周",
+   "kana": "らいしゅう",
    "stage": "planned"
   },
   {
    "kid": "V0856",
    "front": "来年",
    "back": "明年",
+   "kana": "らいねん",
    "stage": "planned"
   },
   {
    "kid": "V0857",
    "front": "ラジオ",
    "back": "收音机；广播",
+   "kana": "ラジオ",
    "stage": "planned"
   },
   {
@@ -517,104 +525,204 @@
  ],
  "sentences": [
   {
-   "id": "S0381",
-   "day": 39,
-   "direction": "zh-ja",
+   "qid": "P-039-00-92fb782ab0eb",
    "prompt": "听说平安就放心了。",
-   "knowledge_ids": [
-    "V0177"
+   "options": [
+    "彼は商売をたたんで引退した。",
+    "その嵐の天候は恐ろしかった。",
+    "どのぐらい複雑なのだろうか。",
+    "無事だと聞いて安心しました。"
    ],
-   "hint": ""
+   "h": "a16b8d46",
+   "oh": [
+    "144390d5",
+    "99ad2f6e",
+    "c4bbd0fb",
+    "a16b8d46"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0381"
   },
   {
-   "id": "S0382",
-   "day": 39,
-   "direction": "zh-ja",
+   "qid": "P-039-01-871ad023c7dd",
    "prompt": "我对日本历史感兴趣。",
-   "knowledge_ids": [
-    "V0178"
+   "options": [
+    "その仕事をもう終えましたか。",
+    "どうか明かりをつけて下さい。",
+    "日本の歴史に興味があります。",
+    "あなたは夜よく寝れませんか。"
    ],
-   "hint": ""
+   "h": "2a8caefd",
+   "oh": [
+    "f2fbd2db",
+    "1b979fbd",
+    "2a8caefd",
+    "9b9a05d6"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0382"
   },
   {
-   "id": "S0383",
-   "day": 39,
-   "direction": "zh-ja",
+   "qid": "P-039-02-8c5f4997ba21",
    "prompt": "她做饭很拿手。",
-   "knowledge_ids": [
-    "V0179"
+   "options": [
+    "冗談はもうたくさんだ。",
+    "この部屋は静かです。",
+    "職場の人と相談します。",
+    "彼女は料理が上手です。"
    ],
-   "hint": ""
+   "h": "bd50740d",
+   "oh": [
+    "6808b25c",
+    "ed05be90",
+    "30a5fa3d",
+    "bd50740d"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0383"
   },
   {
-   "id": "S0384",
-   "day": 39,
-   "direction": "zh-ja",
+   "qid": "P-039-03-5963caa3104d",
    "prompt": "我唱歌不行。",
-   "knowledge_ids": [
-    "V0180"
+   "options": [
+    "子供が公園にいます。",
+    "私は歌が下手です。",
+    "あの旅館は家庭的だ。",
+    "ご協力に感謝します。"
    ],
-   "hint": ""
+   "h": "b80ea13b",
+   "oh": [
+    "c0591056",
+    "b80ea13b",
+    "92fca1b2",
+    "fab0a215"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0384"
   },
   {
-   "id": "S0385",
-   "day": 39,
-   "direction": "zh-ja",
+   "qid": "P-039-04-1f89fda1864f",
    "prompt": "这个包很结实。",
-   "knowledge_ids": [
-    "V0181"
+   "options": [
+    "この鞄はとても丈夫です。",
+    "お話し中、ごめんなさい。",
+    "収入以上の生活をするな。",
+    "日本は貿易に頼っている。"
    ],
-   "hint": ""
+   "h": "591995a4",
+   "oh": [
+    "591995a4",
+    "18f2084e",
+    "10ea5c41",
+    "78222732"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0385"
   },
   {
-   "id": "S0386",
-   "day": 39,
-   "direction": "zh-ja",
+   "qid": "P-039-05-3fa53c327299",
    "prompt": "「没事吧」「嗯，没事」",
-   "knowledge_ids": [
-    "V0182"
+   "options": [
+    "あなたの時計、時間は狂いませんか。",
+    "「大丈夫ですか」「はい、大丈夫です」",
+    "知らぬ間に日はとっぷりと暮れていた。",
+    "あの山はこの山の５倍の高さである。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0387",
-   "day": 39,
+   "h": "c3fb9c88",
+   "oh": [
+    "7697026a",
+    "c3fb9c88",
+    "85baee84",
+    "6b0f438a"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0386"
+  },
+  {
+   "qid": "P-039-06-390e5afc4065",
    "prompt": "这道题很简单。",
-   "knowledge_ids": [
-    "V0183"
+   "options": [
+    "それはルール違反です。",
+    "この魚は毒がない。",
+    "友達に電話します。",
+    "この問題は簡単です。"
    ],
-   "hint": ""
+   "h": "18fa881",
+   "oh": [
+    "7ca8dfa1",
+    "14e4bcc7",
+    "ec5f7b75",
+    "18fa881"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0387"
   },
   {
-   "id": "S0388",
-   "day": 39,
-   "direction": "ja-zh",
+   "qid": "P-039-07-6fe696da9c18",
    "prompt": "ここで遊ぶのは危ないです。",
-   "knowledge_ids": [
-    "V0184"
+   "options": [
+    "戏正好准时开演。",
+    "请给我一个苹果。",
+    "您的名字怎么念？",
+    "在这里玩很危险。"
    ],
-   "hint": ""
+   "h": "aa06e185",
+   "oh": [
+    "998bd8d4",
+    "dd58fecf",
+    "cedc5143",
+    "aa06e185"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0388"
   },
   {
-   "id": "S0389",
-   "day": 39,
-   "direction": "ja-zh",
+   "qid": "P-039-08-7bd2e54cde82",
    "prompt": "先生に連絡してください。",
-   "knowledge_ids": [
-    "V0185"
+   "options": [
+    "这绝不是小事。",
+    "稍微休息一下。",
+    "开车非常愉快。",
+    "请联系老师。"
    ],
-   "hint": ""
+   "h": "973060e4",
+   "oh": [
+    "3cf7c71",
+    "f3109a5f",
+    "81ac924d",
+    "973060e4"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0389"
   },
   {
-   "id": "S0390",
-   "day": 39,
-   "direction": "ja-zh",
+   "qid": "P-039-09-f732c13cea50",
    "prompt": "明日は出張の予定です。",
-   "knowledge_ids": [
-    "V0186"
+   "options": [
+    "我在学开车。",
+    "上学期成绩很好。",
+    "明天预定出差。",
+    "必须马上写吗？"
    ],
-   "hint": ""
+   "h": "50d96ff8",
+   "oh": [
+    "a8d3152",
+    "964e19e4",
+    "50d96ff8",
+    "966cc338"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0390"
   }
  ],
  "quiz": [

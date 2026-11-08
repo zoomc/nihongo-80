@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0684",
    "front": "鳥",
    "back": "鸟",
+   "kana": "とり",
    "stage": "planned"
   },
   {
    "kid": "V0685",
    "front": "鶏肉",
    "back": "鸡肉",
+   "kana": "とりにく",
    "stage": "planned"
   },
   {
    "kid": "V0686",
    "front": "撮る",
    "back": "拍摄",
+   "kana": "とる",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0099",
    "front": "図",
-   "back": "图；地图；图谋｜音 ズ、ト",
+   "back": "图；地图；图谋",
+   "kana": "ズ、ト、はかる",
    "stage": "planned"
   },
   {
    "kid": "K0100",
    "front": "地",
-   "back": "地；地面；土地｜音 チ、ジ",
+   "back": "地；地面；土地",
+   "kana": "チ、ジ",
    "stage": "planned"
   },
   {
    "kid": "V0646",
    "front": "勤める",
    "back": "任职",
+   "kana": "つとめる",
    "stage": "planned"
   },
   {
    "kid": "V0647",
    "front": "つまらない",
    "back": "无聊",
+   "kana": "つまらない",
    "stage": "planned"
   },
   {
    "kid": "V0648",
    "front": "冷たい",
    "back": "冷；冷淡",
+   "kana": "つめたい",
    "stage": "planned"
   },
   {
@@ -526,104 +534,204 @@
  ],
  "sentences": [
   {
-   "id": "S0271",
-   "day": 28,
-   "direction": "zh-ja",
+   "qid": "P-028-00-3ab4394f5ced",
    "prompt": "那不是你的刀。",
-   "knowledge_ids": [
-    "V0689"
+   "options": [
+    "それは人知の限界を越えている。",
+    "それはあなたのナイフではない。",
+    "彼は危険に気づいていなかった。",
+    "その八百屋は客にとても親切だ。"
    ],
-   "hint": ""
+   "h": "89c04ee5",
+   "oh": [
+    "289d0261",
+    "89c04ee5",
+    "29d30393",
+    "4586f317"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0271"
   },
   {
-   "id": "S0272",
-   "day": 28,
-   "direction": "zh-ja",
+   "qid": "P-028-01-ecdaf720fdc8",
    "prompt": "白天渐渐变长了。",
-   "knowledge_ids": [
-    "V0690"
+   "options": [
+    "オリーブの実から油が取れます。",
+    "だんだん日が長くなっています。",
+    "ほかに痛いところはありますか。",
+    "ご飯とパンどちらがいいですか。"
    ],
-   "hint": ""
+   "h": "b1c203f0",
+   "oh": [
+    "9ffe72d0",
+    "b1c203f0",
+    "f06f274a",
+    "4c7a2886"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0272"
   },
   {
-   "id": "S0273",
-   "day": 28,
-   "direction": "zh-ja",
+   "qid": "P-028-02-98f8c197fc2e",
    "prompt": "青蛙叫了就回去吧。",
-   "knowledge_ids": [
-    "V0691"
+   "options": [
+    "人は意識のある生き物だ。",
+    "カエルが鳴いたら帰ろう。",
+    "あの長髪の青年は粗野だ。",
+    "彼は現状を大いに嘆いた。"
    ],
-   "hint": ""
+   "h": "e5bebda",
+   "oh": [
+    "5eb9d09f",
+    "e5bebda",
+    "bc046002",
+    "e568ca6d"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0273"
   },
   {
-   "id": "S0274",
-   "day": 28,
-   "direction": "zh-ja",
+   "qid": "P-028-03-292a2a119f53",
    "prompt": "你为什么在工作？",
-   "knowledge_ids": [
-    "V0692"
+   "options": [
+    "あなたはなぜ働いているの。",
+    "細かい所は省いて構わない。",
+    "バターはミルクから出来る。",
+    "机はほこりで覆われている。"
    ],
-   "hint": ""
+   "h": "6298fea3",
+   "oh": [
+    "6298fea3",
+    "6a76b4d8",
+    "271a6e18",
+    "be98a1bb"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0274"
   },
   {
-   "id": "S0275",
-   "day": 28,
-   "direction": "zh-ja",
+   "qid": "P-028-04-882980161a0c",
    "prompt": "蚂蚁整个夏天都勤快地干活。",
-   "knowledge_ids": [
-    "V0693"
+   "options": [
+    "そのショーで観客は大喜びだった。",
+    "この学校は男子よりも女子が多い。",
+    "アリは夏じゅうせっせとはたらく。",
+    "ぼくは知らないし、気にもしない。"
    ],
-   "hint": ""
+   "h": "76c21659",
+   "oh": [
+    "66f9ebb3",
+    "53353c8",
+    "76c21659",
+    "c9b35858"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0275"
   },
   {
-   "id": "S0276",
-   "day": 28,
-   "direction": "zh-ja",
+   "qid": "P-028-05-36c758cb572e",
    "prompt": "这个暑假你要去哪里吗？",
-   "knowledge_ids": [
-    "V0694"
+   "options": [
+    "この夏休みはどこかへ行くのですか。",
+    "どういっても七時までにいかないと。",
+    "同じ事が国家についても当てはまる。",
+    "彼は高等学校の生徒ではありません。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0277",
-   "day": 28,
+   "h": "8b440dfb",
+   "oh": [
+    "8b440dfb",
+    "91a2dee7",
+    "1bbb6c5b",
+    "31457fd"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0276"
+  },
+  {
+   "qid": "P-028-06-e0096d3eb2cb",
    "prompt": "哪里都找不到温暖。",
-   "knowledge_ids": [
-    "V0695"
+   "options": [
+    "この部屋には新しい設備があります。",
+    "その男は一定の速度で車を運転した。",
+    "かろうじて車に当てられずにすんだ。",
+    "ぬくもりなどどこにも見つからない。"
    ],
-   "hint": ""
+   "h": "b8708731",
+   "oh": [
+    "f4227281",
+    "53997a8d",
+    "83c3f44d",
+    "b8708731"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0277"
   },
   {
-   "id": "S0278",
-   "day": 28,
-   "direction": "ja-zh",
+   "qid": "P-028-07-c1262a6cc1e2",
    "prompt": "７つの海って何ですか。",
-   "knowledge_ids": [
-    "V0696"
+   "options": [
+    "一周有七天。",
+    "和朋友看电影。",
+    "七大洋是什么？",
+    "那场考试很难。"
    ],
-   "hint": ""
+   "h": "e2628862",
+   "oh": [
+    "a77b16e2",
+    "1d346a36",
+    "e2628862",
+    "b3de9e6c"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0278"
   },
   {
-   "id": "S0279",
-   "day": 28,
-   "direction": "ja-zh",
+   "qid": "P-028-08-eab9dce0c5af",
    "prompt": "一週間は七日です。",
-   "knowledge_ids": [
-    "V0697"
+   "options": [
+    "周五很忙。",
+    "这本书很贵。",
+    "下午去看诊。",
+    "一周有七天。"
    ],
-   "hint": ""
+   "h": "a77b16e2",
+   "oh": [
+    "ec14dca4",
+    "804e5fb1",
+    "3d9f1f18",
+    "a77b16e2"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0279"
   },
   {
-   "id": "S0280",
-   "day": 28,
-   "direction": "ja-zh",
+   "qid": "P-028-09-587d392d3b2b",
    "prompt": "車の運転を習っています。",
-   "knowledge_ids": [
-    "V0698"
+   "options": [
+    "音乐会怎么样？",
+    "开车非常愉快。",
+    "我在学开车。",
+    "下下周四怎么样？"
    ],
-   "hint": ""
+   "h": "a8d3152",
+   "oh": [
+    "61036610",
+    "81ac924d",
+    "a8d3152",
+    "aab0ec66"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0280"
   }
  ],
  "quiz": [

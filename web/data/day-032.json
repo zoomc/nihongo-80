@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0760",
    "front": "広い",
    "back": "宽；宽广",
+   "kana": "ひろい",
    "stage": "planned"
   },
   {
    "kid": "V0761",
    "front": "フィルム",
    "back": "胶卷；胶片",
+   "kana": "フィルム",
    "stage": "planned"
   },
   {
    "kid": "V0762",
    "front": "封筒",
    "back": "信封",
+   "kana": "ふうとう",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0176",
    "front": "問",
-   "back": "问；问题｜音 モン",
+   "back": "问；问题",
+   "kana": "モン、と.う、と.い、とん",
    "stage": "planned"
   },
   {
    "kid": "K0177",
    "front": "代",
-   "back": "代替；时代；费用｜音 ダイ、タイ",
+   "back": "代替；时代；费用",
+   "kana": "ダイ、タイ、か.わる、かわ.る、かわ.り、か.わり、-がわ.り、-が.わり、か.える、よ、しろ",
    "stage": "planned"
   },
   {
    "kid": "V0722",
    "front": "橋",
    "back": "桥",
+   "kana": "はし",
    "stage": "planned"
   },
   {
    "kid": "V0723",
    "front": "始まる",
    "back": "开始",
+   "kana": "はじまる",
    "stage": "planned"
   },
   {
    "kid": "V0724",
    "front": "初め",
    "back": "开始；起初",
+   "kana": "はじめ",
    "stage": "planned"
   },
   {
@@ -532,104 +540,204 @@
  ],
  "sentences": [
   {
-   "id": "S0311",
-   "day": 32,
-   "direction": "zh-ja",
+   "qid": "P-032-00-f12a77dc69d3",
    "prompt": "这种猪肉一公斤多少钱？",
-   "knowledge_ids": [
-    "V0768"
+   "options": [
+    "この豚肉は１キロいくらですか。",
+    "お答えできる立場にありません。",
+    "この布は値段の割に品質が良い。",
+    "その教師は講堂に学生を集めた。"
    ],
-   "hint": ""
+   "h": "24e2e940",
+   "oh": [
+    "24e2e940",
+    "3c490fe4",
+    "73db6bba",
+    "a8167156"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0311"
   },
   {
-   "id": "S0312",
-   "day": 32,
-   "direction": "zh-ja",
+   "qid": "P-032-01-cffd1c97481c",
    "prompt": "你们俩在做什么呢？",
-   "knowledge_ids": [
-    "V0769"
+   "options": [
+    "この製品は美しく仕上がっている。",
+    "お祭りでロブスターを食べました。",
+    "ジョンは門のところまで出てきた。",
+    "二人は何をしているところですか。"
    ],
-   "hint": ""
+   "h": "ca1f8288",
+   "oh": [
+    "a8a8c68",
+    "6e738748",
+    "7aac2a83",
+    "ca1f8288"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0312"
   },
   {
-   "id": "S0313",
-   "day": 32,
-   "direction": "zh-ja",
+   "qid": "P-032-02-cd5c1ac4a6fd",
    "prompt": "那是上周、也就是四月二号举行的。",
-   "knowledge_ids": [
-    "V0770"
+   "options": [
+    "私たちの内残りの者はあとに残ることになっている。",
+    "すぐ返事をしてもらいたいと思っています。",
+    "それ以来、彼からは何の便りもありません。",
+    "それは１週間前、すなわち４月２日に行われた。"
    ],
-   "hint": ""
+   "h": "c6fa71d9",
+   "oh": [
+    "37d1284d",
+    "ffff8377",
+    "df9b23d2",
+    "c6fa71d9"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0313"
   },
   {
-   "id": "S0314",
-   "day": 32,
-   "direction": "zh-ja",
+   "qid": "P-032-03-3b9d79e76ef9",
    "prompt": "他脖子很粗。",
-   "knowledge_ids": [
-    "V0771"
+   "options": [
+    "お前はまだ「青い」な。",
+    "今日歯医者へ行きました。",
+    "この券は２週間有効です。",
+    "彼は太い首をしている。"
    ],
-   "hint": ""
+   "h": "ec596638",
+   "oh": [
+    "ad3fba26",
+    "6f22df02",
+    "a263dc87",
+    "ec596638"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0314"
   },
   {
-   "id": "S0315",
-   "day": 32,
-   "direction": "zh-ja",
+   "qid": "P-032-04-e2a59223c431",
    "prompt": "冬天快到了。",
-   "knowledge_ids": [
-    "V0772"
+   "options": [
+    "まもなく冬だ。",
+    "日本語を話します。",
+    "私は数学は苦手だ。",
+    "共益費は五千円です。"
    ],
-   "hint": ""
+   "h": "6dfcdc84",
+   "oh": [
+    "6dfcdc84",
+    "29338a89",
+    "1dae0651",
+    "76c95f5d"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0315"
   },
   {
-   "id": "S0316",
-   "day": 32,
-   "direction": "zh-ja",
+   "qid": "P-032-05-0a1752ab2f99",
    "prompt": "老话说得好，时间就是金钱。",
-   "knowledge_ids": [
-    "V0773"
+   "options": [
+    "このチーズはピリッとした味がする。",
+    "あなたの家族はきっと親切でしょう。",
+    "彼は世間でいう音楽の真の愛好者だ。",
+    "時は金なりと古いことわざにもある。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0317",
-   "day": 32,
+   "h": "83f4ea47",
+   "oh": [
+    "14565358",
+    "4f1d4d0e",
+    "3e786b72",
+    "83f4ea47"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0316"
+  },
+  {
+   "qid": "P-032-06-d3b0fb14ed1c",
    "prompt": "我每隔一天洗一次澡。",
-   "knowledge_ids": [
-    "V0774"
+   "options": [
+    "私は一日おきにふろに入ります。",
+    "彼には思想の理想がかけている。",
+    "ジョンのことが新聞に出ていた。",
+    "この豚肉は１キロいくらですか。"
    ],
-   "hint": ""
+   "h": "c03795e9",
+   "oh": [
+    "c03795e9",
+    "74403c81",
+    "83ca759e",
+    "24e2e940"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0317"
   },
   {
-   "id": "S0318",
-   "day": 32,
-   "direction": "ja-zh",
+   "qid": "P-032-07-f537544a6281",
    "prompt": "ヘミングウェイの文章は悪文だった。",
-   "knowledge_ids": [
-    "V0775"
+   "options": [
+    "海明威的文笔很糟糕。",
+    "我通常骑自行车上学。",
+    "上班时不要看漫画。",
+    "他穿着西装，很显眼。"
    ],
-   "hint": ""
+   "h": "9cbca2c",
+   "oh": [
+    "9cbca2c",
+    "cf5e8493",
+    "e4763edb",
+    "6810aa82"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0318"
   },
   {
-   "id": "S0319",
-   "day": 32,
-   "direction": "ja-zh",
+   "qid": "P-032-08-50b53c6ed967",
    "prompt": "もう３ページ残っている。",
-   "knowledge_ids": [
-    "V0776"
+   "options": [
+    "吃早饭。",
+    "两个当中哪个贵？",
+    "周日休息。",
+    "还剩三页。"
    ],
-   "hint": ""
+   "h": "7c2b1c12",
+   "oh": [
+    "c30f1232",
+    "fc08db83",
+    "ba3618f4",
+    "7c2b1c12"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0319"
   },
   {
-   "id": "S0320",
-   "day": 32,
-   "direction": "ja-zh",
+   "qid": "P-032-09-4418d7edaa29",
    "prompt": "どんなベッドでもないよりはよい。",
-   "knowledge_ids": [
-    "V0777"
+   "options": [
+    "和同事一起吃了午饭。",
+    "再差的床也比没床强。",
+    "你不知道我有多担心。",
+    "鲍勃到底是不是病了？"
    ],
-   "hint": ""
+   "h": "d5dc0098",
+   "oh": [
+    "e795c739",
+    "d5dc0098",
+    "80b938b0",
+    "f2ed1fa9"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0320"
   }
  ],
  "quiz": [

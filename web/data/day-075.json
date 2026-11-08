@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V0221",
    "front": "満足",
    "back": "满足；满意",
+   "kana": "まんぞく",
    "stage": "planned"
   },
   {
    "kid": "V0222",
    "front": "不満",
    "back": "不满；不满意",
+   "kana": "ふまん",
    "stage": "planned"
   },
   {
    "kid": "V0223",
    "front": "不安",
    "back": "不安；担心",
+   "kana": "ふあん",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0313",
    "front": "的",
-   "back": "的；目标｜音 テキ",
+   "back": "的；目标",
+   "kana": "テキ、まと",
    "stage": "planned"
   },
   {
    "kid": "K0314",
    "front": "要",
-   "back": "需要；要点｜音 ヨウ",
+   "back": "需要；要点",
+   "kana": "ヨウ、い.る、かなめ",
    "stage": "planned"
   },
   {
    "kid": "V1435",
    "front": "忘れ物",
    "back": "落下的东西",
+   "kana": "わすれもの",
    "stage": "planned"
   },
   {
    "kid": "V1436",
    "front": "笑う",
    "back": "笑",
+   "kana": "わらう",
    "stage": "planned"
   },
   {
    "kid": "V1437",
    "front": "割れる",
    "back": "碎；裂",
+   "kana": "われる",
    "stage": "planned"
   },
   {
@@ -465,104 +473,204 @@
  ],
  "sentences": [
   {
-   "id": "S0741",
-   "day": 75,
-   "direction": "zh-ja",
+   "qid": "P-075-00-6bff323616e8",
    "prompt": "读了报上的报道。",
-   "knowledge_ids": [
-    "V0260"
+   "options": [
+    "人は意識のある生き物だ。",
+    "この会社の社長は誰ですか。",
+    "急行の料金は幾らですか。",
+    "新聞の記事を読みました。"
    ],
-   "hint": ""
+   "h": "54f405f6",
+   "oh": [
+    "5eb9d09f",
+    "4c5bf5fb",
+    "991bf9",
+    "54f405f6"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0741"
   },
   {
-   "id": "S0742",
-   "day": 75,
-   "direction": "zh-ja",
+   "qid": "P-075-01-f4a3f595d82c",
    "prompt": "请确认资料内容。",
-   "knowledge_ids": [
-    "V0261"
+   "options": [
+    "資料の内容を確認してください。",
+    "この都市の面積はどれくらいか。",
+    "トムは頭にきつい一発を受けた。",
+    "この制度には改良の余地がない。"
    ],
-   "hint": ""
+   "h": "c36783e9",
+   "oh": [
+    "c36783e9",
+    "b726d24f",
+    "b9186836",
+    "849b2eb5"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0742"
   },
   {
-   "id": "S0743",
-   "day": 75,
-   "direction": "zh-ja",
+   "qid": "P-075-02-c459fe755267",
    "prompt": "决定研究这个方案。",
-   "knowledge_ids": [
-    "V0262"
+   "options": [
+    "ジョンは門のところまで出てきた。",
+    "ルーシーは今台所にいるでしょう。",
+    "あなたの見解は私とは正反対です。",
+    "この案を検討することにしました。"
    ],
-   "hint": ""
+   "h": "f4913c93",
+   "oh": [
+    "7aac2a83",
+    "c439c603",
+    "65661673",
+    "f4913c93"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0743"
   },
   {
-   "id": "S0744",
-   "day": 75,
-   "direction": "zh-ja",
+   "qid": "P-075-03-22d5d8635ae4",
    "prompt": "部长批准了申请。",
-   "knowledge_ids": [
-    "V0263"
+   "options": [
+    "部長が申請を承認しました。",
+    "馬に乗ることができますか？",
+    "そこに八つの小石があった。",
+    "すべてが順調にいっている。"
    ],
-   "hint": ""
+   "h": "ea397af7",
+   "oh": [
+    "ea397af7",
+    "1cd64400",
+    "9818201b",
+    "262188a1"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0744"
   },
   {
-   "id": "S0745",
-   "day": 75,
-   "direction": "zh-ja",
+   "qid": "P-075-04-c7871ae721b6",
    "prompt": "请在明天之前提交报告。",
-   "knowledge_ids": [
-    "V0264"
+   "options": [
+    "このクラスは女子が男子より多いです。",
+    "明日までに報告書を提出してください。",
+    "トムはジャックよりも１０ポンド重い。",
+    "イングランドはその試合に勝つだろう。"
    ],
-   "hint": ""
+   "h": "86002186",
+   "oh": [
+    "96d08eb4",
+    "86002186",
+    "c1811a4a",
+    "91c655e0"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0745"
   },
   {
-   "id": "S0746",
-   "day": 75,
-   "direction": "zh-ja",
+   "qid": "P-075-05-49aecee09fc1",
    "prompt": "报名截止日期是本周五。",
-   "knowledge_ids": [
-    "V0265"
+   "options": [
+    "彼は中学時代小説ばかり読んでいた。",
+    "応募の締め切りは今週の金曜日です。",
+    "バリウムをまず一口飲んでください。",
+    "この学校はたくさんの生徒がいます。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0747",
-   "day": 75,
+   "h": "31dbb338",
+   "oh": [
+    "9db561fe",
+    "31dbb338",
+    "50f70cb0",
+    "939aa164"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0746"
+  },
+  {
+   "qid": "P-075-06-175d64b76f0f",
    "prompt": "这位客户由田中负责。",
-   "knowledge_ids": [
-    "V0266"
+   "options": [
+    "この世界の教育にはがっかりしてしまう。",
+    "その島の飛行場は、今では草がぼうぼうだ。",
+    "このお客様は田中さんが担当しています。",
+    "この本にはある程度の価値はあります。"
    ],
-   "hint": ""
+   "h": "29b7257a",
+   "oh": [
+    "6b522ac9",
+    "a52d777a",
+    "29b7257a",
+    "44221dd"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0747"
   },
   {
-   "id": "S0748",
-   "day": 75,
-   "direction": "ja-zh",
+   "qid": "P-075-07-e39d8f741875",
    "prompt": "上司に相談してから決めます。",
-   "knowledge_ids": [
-    "V0267"
+   "options": [
+    "我们玩了好几种游戏。",
+    "她向红十字会捐了款。",
+    "说不定傍晚前会下雨。",
+    "和上司商量后再决定。"
    ],
-   "hint": ""
+   "h": "7da086a0",
+   "oh": [
+    "3b0486e",
+    "924a8cbd",
+    "2fddc9ef",
+    "7da086a0"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0748"
   },
   {
-   "id": "S0749",
-   "day": 75,
-   "direction": "ja-zh",
+   "qid": "P-075-08-638c66e5e595",
    "prompt": "部下に仕事を頼みました。",
-   "knowledge_ids": [
-    "V0268"
+   "options": [
+    "所以她觉得很寂寞。",
+    "把工作交给了下属。",
+    "上个月几乎没下雨。",
+    "这些物品是非卖品。"
    ],
-   "hint": ""
+   "h": "3a9bafec",
+   "oh": [
+    "47d7574f",
+    "3a9bafec",
+    "42b374eb",
+    "715c8a8f"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0749"
   },
   {
-   "id": "S0750",
-   "day": 75,
-   "direction": "ja-zh",
+   "qid": "P-075-09-7d6f6b463b00",
    "prompt": "同僚と昼ご飯を食べました。",
-   "knowledge_ids": [
-    "V0269"
+   "options": [
+    "读这种书有什么用呢。",
+    "说不定傍晚前会下雨。",
+    "和同事一起吃了午饭。",
+    "那个玩具是木头做的。"
    ],
-   "hint": ""
+   "h": "e795c739",
+   "oh": [
+    "b0bbf127",
+    "2fddc9ef",
+    "e795c739",
+    "709a625b"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0750"
   }
  ],
  "quiz": [

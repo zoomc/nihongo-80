@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V1842",
    "front": "鎖",
    "back": "锁链",
+   "kana": "くさり",
    "stage": "planned"
   },
   {
    "kid": "V1843",
    "front": "腐る",
    "back": "腐烂",
+   "kana": "くさる",
    "stage": "planned"
   },
   {
    "kid": "V1844",
    "front": "癖",
    "back": "习惯；癖好",
+   "kana": "くせ",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0437",
    "front": "好",
-   "back": "爱好；喜欢｜音 コウ",
+   "back": "爱好；喜欢",
+   "kana": "コウ、この.む、す.く、よ.い、い.い",
    "stage": "planned"
   },
   {
    "kid": "K0438",
    "front": "退",
-   "back": "退；退休；后退｜音 タイ",
+   "back": "退；退休；后退",
+   "kana": "タイ、しりぞ.く、しりぞ.ける、ひ.く、の.く、の.ける、ど.く",
    "stage": "planned"
   },
   {
    "kid": "V1809",
    "front": "供給",
    "back": "供给",
+   "kana": "きょうきゅう",
    "stage": "planned"
   },
   {
    "kid": "V1810",
    "front": "教師",
    "back": "教师",
+   "kana": "きょうし",
    "stage": "planned"
   },
   {
    "kid": "V1811",
    "front": "教授",
    "back": "教授",
+   "kana": "きょうじゅ",
    "stage": "planned"
   },
   {
@@ -457,104 +465,204 @@
  ],
  "sentences": [
   {
-   "id": "S1051",
-   "day": 106,
-   "direction": "zh-ja",
+   "qid": "P-106-00-6a0f05b5002d",
    "prompt": "国会下周一召开。",
-   "knowledge_ids": [
-    "V1899"
+   "options": [
+    "私もまた、議員の一人です。",
+    "来週、部屋の契約をします。",
+    "彼は一時ここに住んでいた。",
+    "国会は来週月曜に開かれる。"
    ],
-   "hint": ""
+   "h": "cbf2efc5",
+   "oh": [
+    "71ef590d",
+    "998461ae",
+    "3732accd",
+    "cbf2efc5"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1051"
   },
   {
-   "id": "S1052",
-   "day": 106,
-   "direction": "zh-ja",
+   "qid": "P-106-01-0366b0c1fd82",
    "prompt": "两人得出了同样的结论。",
-   "knowledge_ids": [
-    "V1900"
+   "options": [
+    "ビルは何時間も泣き続けた。",
+    "スミス氏は市長候補である。",
+    "今月の売り上げはよくない。",
+    "二人は同じ結論に到達した。"
    ],
-   "hint": ""
+   "h": "1f43ff05",
+   "oh": [
+    "df9f7ee",
+    "d7451ff4",
+    "61acb9a7",
+    "1f43ff05"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1052"
   },
   {
-   "id": "S1053",
-   "day": 106,
-   "direction": "zh-ja",
+   "qid": "P-106-02-6fab26473ff7",
    "prompt": "电梯里有一股烟味。",
-   "knowledge_ids": [
-    "V1901"
+   "options": [
+    "以前はちょうどここにお寺があった。",
+    "エレベーターから煙の臭いがします。",
+    "また別のときにチェスをしましょう。",
+    "さあ、あなたの体温を計りましょう。"
    ],
-   "hint": ""
+   "h": "ed7c7a3d",
+   "oh": [
+    "78701156",
+    "ed7c7a3d",
+    "a177b2a7",
+    "f1eef958"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1053"
   },
   {
-   "id": "S1054",
-   "day": 106,
-   "direction": "zh-ja",
+   "qid": "P-106-03-3cb4ce3f2330",
    "prompt": "这张券两周内有效。",
-   "knowledge_ids": [
-    "V1902"
+   "options": [
+    "この券は２週間有効です。",
+    "お前はまだ「青い」な。",
+    "進路の悩みを相談します。",
+    "最終電車はいつ出ますか。"
    ],
-   "hint": ""
+   "h": "a263dc87",
+   "oh": [
+    "a263dc87",
+    "ad3fba26",
+    "67e807d",
+    "227d7a7"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1054"
   },
   {
-   "id": "S1055",
-   "day": 106,
-   "direction": "zh-ja",
+   "qid": "P-106-04-19c2ed45f15e",
    "prompt": "郁金香是我们县的县花。",
-   "knowledge_ids": [
-    "V1903"
+   "options": [
+    "ジェニーは贈り物をありがとうと言った。",
+    "ここの下りも手掛かりがないので危険だ。",
+    "あなたを見るとお兄さんを思い出します。",
+    "チューリップは、私たちの県の県花です。"
    ],
-   "hint": ""
+   "h": "9f1b20e5",
+   "oh": [
+    "4982840f",
+    "966a4e45",
+    "6ab70a5d",
+    "9f1b20e5"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1055"
   },
   {
-   "id": "S1056",
-   "day": 106,
-   "direction": "zh-ja",
+   "qid": "P-106-05-2487db1b0d19",
    "prompt": "你跟健吵架了？",
-   "knowledge_ids": [
-    "V1904"
+   "options": [
+    "トムとフランクは親友だ。",
+    "ケンとけんかしたのか。",
+    "カーテンが風になびいた。",
+    "お昼休みは、１時間です。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1057",
-   "day": 106,
+   "h": "e90453f9",
+   "oh": [
+    "75bb8c2d",
+    "e90453f9",
+    "f01f9c0a",
+    "9ff958f1"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1056"
+  },
+  {
+   "qid": "P-106-06-7b34af32237f",
    "prompt": "你的看法和我的正相反。",
-   "knowledge_ids": [
-    "V1905"
+   "options": [
+    "この川はあそこで浅くなっている。",
+    "みんなには優しく話してください。",
+    "あなたの見解は私とは正反対です。",
+    "このテーブルを頼んだのではない。"
    ],
-   "hint": ""
+   "h": "65661673",
+   "oh": [
+    "ec02db03",
+    "125e9885",
+    "65661673",
+    "e76e4b0"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1057"
   },
   {
-   "id": "S1058",
-   "day": 106,
-   "direction": "ja-zh",
+   "qid": "P-106-07-2ce88e80332e",
    "prompt": "あらゆるものに限界がある。",
-   "knowledge_ids": [
-    "V1906"
+   "options": [
+    "我们绕到车后面推。",
+    "任何事物都有极限。",
+    "我们学校有九个班。",
+    "下午几点去拜访您？"
    ],
-   "hint": ""
+   "h": "8a1a0d7c",
+   "oh": [
+    "f9ef5dc7",
+    "8a1a0d7c",
+    "daa16234",
+    "a05c8382"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1058"
   },
   {
-   "id": "S1059",
-   "day": 106,
-   "direction": "ja-zh",
+   "qid": "P-106-08-98c2952402fb",
    "prompt": "現金で払う必要はありません。",
-   "knowledge_ids": [
-    "V1907"
+   "options": [
+    "食物在胃里消化。",
+    "汤姆终于戒烟了。",
+    "不必用现金支付。",
+    "他偷袭了对手。"
    ],
-   "hint": ""
+   "h": "8eb5edfd",
+   "oh": [
+    "835e5ce8",
+    "9c580eba",
+    "8eb5edfd",
+    "4050f9f9"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1059"
   },
   {
-   "id": "S1060",
-   "day": 106,
-   "direction": "ja-zh",
+   "qid": "P-106-09-c1c4d4b267e5",
    "prompt": "ドイツ語はやさしい言語ではありません。",
-   "knowledge_ids": [
-    "V1908"
+   "options": [
+    "少年把自己的名字刻在树上。",
+    "你明年应该就能读这本书了。",
+    "德语不是一门容易的语言。",
+    "你是个多么聪明的学生啊。"
    ],
-   "hint": ""
+   "h": "a69c3150",
+   "oh": [
+    "a859b819",
+    "7c2a0552",
+    "a69c3150",
+    "9c468c5f"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1060"
   }
  ],
  "quiz": [

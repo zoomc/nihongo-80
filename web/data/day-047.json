@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V0996",
    "front": "かまう",
    "back": "介意；理会",
+   "kana": "かまう",
    "stage": "planned"
   },
   {
    "kid": "V0997",
    "front": "髪",
    "back": "头发",
+   "kana": "かみ",
    "stage": "planned"
   },
   {
    "kid": "V0998",
    "front": "噛む",
    "back": "咬；嚼",
+   "kana": "かむ",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0236",
    "front": "着",
-   "back": "穿；到达；附着｜音 チャク、ジャク",
+   "back": "穿；到达；附着",
+   "kana": "チャク、ジャク、き.る、き.せる、つ.く、つ.ける",
    "stage": "planned"
   },
   {
    "kid": "K0237",
    "front": "質",
-   "back": "质量；质地；本质｜音 シツ、シチ、チ",
+   "back": "质量；质地；本质",
+   "kana": "シツ、シチ、チ、たち、ただ.す、もと、わりふ",
    "stage": "planned"
   },
   {
    "kid": "V0958",
    "front": "踊り",
    "back": "舞蹈",
+   "kana": "おどり",
    "stage": "planned"
   },
   {
    "kid": "V0959",
    "front": "踊る",
    "back": "跳舞",
+   "kana": "おどる",
    "stage": "planned"
   },
   {
    "kid": "V0960",
    "front": "驚く",
    "back": "吃惊",
+   "kana": "おどろく",
    "stage": "planned"
   },
   {
@@ -455,104 +463,204 @@
  ],
  "sentences": [
   {
-   "id": "S0461",
-   "day": 47,
-   "direction": "zh-ja",
+   "qid": "P-047-00-6bbab2d6cd04",
    "prompt": "因为刚开春，客人也不太多。",
-   "knowledge_ids": [
-    "V1019"
+   "options": [
+    "あなたを見るとお兄さんを思い出します。",
+    "そのぬれたシャツはすぐに乾くだろう。",
+    "春先だから客もあまりいませんでした。",
+    "本が部屋のあちこちに散らばっていた。"
    ],
-   "hint": ""
+   "h": "6134ce3d",
+   "oh": [
+    "6ab70a5d",
+    "a042cc96",
+    "6134ce3d",
+    "95e7244e"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0461"
   },
   {
-   "id": "S0462",
-   "day": 47,
-   "direction": "zh-ja",
+   "qid": "P-047-01-5f19d465bfc1",
    "prompt": "这条河的水流很急。",
-   "knowledge_ids": [
-    "V1020"
+   "options": [
+    "八日から休みます。",
+    "彼女は料理が上手です。",
+    "この川の流れは急だ。",
+    "おはようございます。"
    ],
-   "hint": ""
+   "h": "2deea5d0",
+   "oh": [
+    "4d6dbc76",
+    "bd50740d",
+    "2deea5d0",
+    "f17175ff"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0462"
   },
   {
-   "id": "S0463",
-   "day": 47,
-   "direction": "zh-ja",
+   "qid": "P-047-02-7776700434c1",
    "prompt": "快车票价多少钱？",
-   "knowledge_ids": [
-    "V1021"
+   "options": [
+    "私は新しい背広を買った。",
+    "事故は不注意から生じる。",
+    "急行の料金は幾らですか。",
+    "これは珍しい種類の魚です。"
    ],
-   "hint": ""
+   "h": "991bf9",
+   "oh": [
+    "7bf6ebb6",
+    "d8aad1b6",
+    "991bf9",
+    "7979a1c1"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0463"
   },
   {
-   "id": "S0464",
-   "day": 47,
-   "direction": "zh-ja",
+   "qid": "P-047-03-120ad4f66435",
    "prompt": "这个世界的教育让人失望。",
-   "knowledge_ids": [
-    "V1022"
+   "options": [
+    "この世界の教育にはがっかりしてしまう。",
+    "あなたの言うことは正しいかもしれない。",
+    "この音楽はバッハによって作曲された。",
+    "新トンネルは旧トンネルの２倍の長さだ。"
    ],
-   "hint": ""
+   "h": "6b522ac9",
+   "oh": [
+    "6b522ac9",
+    "cdabcfca",
+    "4681d2ed",
+    "ba0c3c84"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0464"
   },
   {
-   "id": "S0465",
-   "day": 47,
-   "direction": "zh-ja",
+   "qid": "P-047-04-12d76d457c0a",
    "prompt": "那座教堂的历史可追溯到1173年。",
-   "knowledge_ids": [
-    "V1023"
+   "options": [
+    "このブラウスをつめていただけますか。",
+    "市長は私達の願いを聞き入れてくれた。",
+    "この本にはある程度の価値はあります。",
+    "その教会は１１７３年までさかのぼる。"
    ],
-   "hint": ""
+   "h": "77ff2e4a",
+   "oh": [
+    "92c2a853",
+    "12d22336",
+    "44221dd",
+    "77ff2e4a"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0465"
   },
   {
-   "id": "S0466",
-   "day": 47,
-   "direction": "zh-ja",
+   "qid": "P-047-05-21c607b553f8",
    "prompt": "大家让独角仙比了一场。",
-   "knowledge_ids": [
-    "V1024"
+   "options": [
+    "テーブルの上に花が一本あります。",
+    "その城は１６１０年に建てられた。",
+    "みんなでカブトムシを競争させた。",
+    "あの先生に質問してもいいですよ。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0467",
-   "day": 47,
+   "h": "fdf064f8",
+   "oh": [
+    "9718d6f5",
+    "6b28f1e6",
+    "fdf064f8",
+    "c64703e1"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0466"
+  },
+  {
+   "qid": "P-047-06-0e05e5b74c22",
    "prompt": "他搬到了附近。",
-   "knowledge_ids": [
-    "V1025"
+   "options": [
+    "彼が近所に越してきた。",
+    "この料理は美味しいです。",
+    "人は意識のある生き物だ。",
+    "ケンとけんかしたのか。"
    ],
-   "hint": ""
+   "h": "ff733aee",
+   "oh": [
+    "ff733aee",
+    "b166969e",
+    "5eb9d09f",
+    "e90453f9"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0467"
   },
   {
-   "id": "S0468",
-   "day": 47,
-   "direction": "ja-zh",
+   "qid": "P-047-07-149caede8f56",
    "prompt": "時計の具合が悪い。",
-   "knowledge_ids": [
-    "V1026"
+   "options": [
+    "今天天气好。",
+    "手表出了毛病。",
+    "把左手举起来。",
+    "你以为我好骗吧。"
    ],
-   "hint": ""
+   "h": "e999283c",
+   "oh": [
+    "1b222922",
+    "e999283c",
+    "1efc45f6",
+    "dbbf4ad2"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0468"
   },
   {
-   "id": "S0469",
-   "day": 47,
-   "direction": "ja-zh",
+   "qid": "P-047-08-e7ea2bc6360a",
    "prompt": "山の中では空気がとてもきれいだ。",
-   "knowledge_ids": [
-    "V1027"
+   "options": [
+    "任何事物都有极限。",
+    "山里空气非常清新。",
+    "从第十课开始吧。",
+    "其中重要的是后者。"
    ],
-   "hint": ""
+   "h": "47258165",
+   "oh": [
+    "8a1a0d7c",
+    "47258165",
+    "7c4687ec",
+    "6cc1f774"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0469"
   },
   {
-   "id": "S0470",
-   "day": 47,
-   "direction": "ja-zh",
+   "qid": "P-047-09-f14441bbc65f",
    "prompt": "どの空港から出発しますか。",
-   "knowledge_ids": [
-    "V1028"
+   "options": [
+    "七大洋是什么？",
+    "从哪个机场出发？",
+    "上班时不要看漫画。",
+    "我的右臂伸不直。"
    ],
-   "hint": ""
+   "h": "df477bcd",
+   "oh": [
+    "e2628862",
+    "df477bcd",
+    "e4763edb",
+    "d463fc58"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0470"
   }
  ],
  "quiz": [

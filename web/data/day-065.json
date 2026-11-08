@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1303",
    "front": "場所",
    "back": "地点；场所",
+   "kana": "ばしょ",
    "stage": "planned"
   },
   {
    "kid": "V1304",
    "front": "はず",
    "back": "应该；理应",
+   "kana": "はず",
    "stage": "planned"
   },
   {
    "kid": "V1305",
    "front": "発音",
    "back": "发音",
+   "kana": "はつおん",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0128",
    "front": "運",
-   "back": "运；搬运；运气；驾驶｜音 ウン",
+   "back": "运；搬运；运气；驾驶",
+   "kana": "ウン、はこぶ",
    "stage": "planned"
   },
   {
    "kid": "K0129",
    "front": "転",
-   "back": "转；转动；摔倒；调职｜音 テン",
+   "back": "转；转动；摔倒；调职",
+   "kana": "テン、ころぶ",
    "stage": "planned"
   },
   {
    "kid": "V1265",
    "front": "どんどん",
    "back": "不断；一个劲",
+   "kana": "どんどん",
    "stage": "planned"
   },
   {
    "kid": "V1266",
    "front": "治る",
    "back": "痊愈；治好",
+   "kana": "なおる",
    "stage": "planned"
   },
   {
    "kid": "V1267",
    "front": "直る",
    "back": "修好；改正",
+   "kana": "なおる",
    "stage": "planned"
   },
   {
@@ -532,104 +540,204 @@
  ],
  "sentences": [
   {
-   "id": "S0641",
-   "day": 65,
-   "direction": "zh-ja",
+   "qid": "P-065-00-e9fb0ddf0a47",
    "prompt": "猫头鹰白天看不见东西。",
-   "knowledge_ids": [
-    "V1332"
+   "options": [
+    "ほかに痛いところはありますか。",
+    "グラスは粉々に割れてしまった。",
+    "医者は彼の苦痛を除いてやった。",
+    "フクロウは昼間は目が見えない。"
    ],
-   "hint": ""
+   "h": "bd30935a",
+   "oh": [
+    "f06f274a",
+    "c01abf22",
+    "8a6a13e3",
+    "bd30935a"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0641"
   },
   {
-   "id": "S0642",
-   "day": 65,
-   "direction": "zh-ja",
+   "qid": "P-065-01-7324ff45fadc",
    "prompt": "午休是一个小时。",
-   "knowledge_ids": [
-    "V1333"
+   "options": [
+    "お昼休みは、１時間です。",
+    "くだける波が泡を作った。",
+    "この科目は何単位ですか。",
+    "ここに鋭い痛みがあります。"
    ],
-   "hint": ""
+   "h": "9ff958f1",
+   "oh": [
+    "9ff958f1",
+    "99b9615f",
+    "ae775c39",
+    "be78df4e"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0642"
   },
   {
-   "id": "S0643",
-   "day": 65,
-   "direction": "zh-ja",
+   "qid": "P-065-02-ccda93f02227",
    "prompt": "请在酒店门口开车接我。",
-   "knowledge_ids": [
-    "V1334"
+   "options": [
+    "お宅の暖房はどのようにしていますか。",
+    "ホテルの前で私を車で拾ってください。",
+    "いつでも私のオフィスを訪ねなさい。",
+    "私はあの店で新しいステレオを買った。"
    ],
-   "hint": ""
+   "h": "a75d76f8",
+   "oh": [
+    "754f087f",
+    "a75d76f8",
+    "17a853f2",
+    "cb357e2c"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0643"
   },
   {
-   "id": "S0644",
-   "day": 65,
-   "direction": "zh-ja",
+   "qid": "P-065-03-2912c3811994",
    "prompt": "能麻烦您把地图传真给我吗。",
-   "knowledge_ids": [
-    "V1335"
+   "options": [
+    "カクテルパーティーは退屈なときもある。",
+    "おはよう。ご飯をよそっても良いかしら？",
+    "ここの下りも手掛かりがないので危険だ。",
+    "ＦＡＸで地図を送っていただけませんか。"
    ],
-   "hint": ""
+   "h": "4a77dbf7",
+   "oh": [
+    "d3332c71",
+    "d3995434",
+    "966a4e45",
+    "4a77dbf7"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0644"
   },
   {
-   "id": "S0645",
-   "day": 65,
-   "direction": "zh-ja",
+   "qid": "P-065-04-11d2d7f4c803",
    "prompt": "大雨让河水一下子涨了起来。",
-   "knowledge_ids": [
-    "V1336"
+   "options": [
+    "船は今夜赤道を越すだろう。",
+    "でも、これで１つ貸しだね。",
+    "木の葉は秋には黄色になる。",
+    "大雨で川の水が急に増えた。"
    ],
-   "hint": ""
+   "h": "fb5b41ca",
+   "oh": [
+    "e22b650a",
+    "8347f85c",
+    "c4982aec",
+    "fb5b41ca"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0645"
   },
   {
-   "id": "S0646",
-   "day": 65,
-   "direction": "zh-ja",
+   "qid": "P-065-05-72bd2b231000",
    "prompt": "湖水有多深。",
-   "knowledge_ids": [
-    "V1337"
+   "options": [
+    "湖の深さはどのくらいですか。",
+    "ちょっと寄って行きませんか。",
+    "彼は商売をたたんで引退した。",
+    "無事だと聞いて安心しました。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0647",
-   "day": 65,
+   "h": "15a7848c",
+   "oh": [
+    "15a7848c",
+    "187ef6ad",
+    "144390d5",
+    "a16b8d46"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0646"
+  },
+  {
+   "qid": "P-065-06-88fcaaf303f9",
    "prompt": "到底有多复杂呢。",
-   "knowledge_ids": [
-    "V1338"
+   "options": [
+    "クリスマスが近くなってきた。",
+    "オートバイに乗るのは楽しい。",
+    "どのぐらい複雑なのだろうか。",
+    "父は袖に長い裂け目を作った。"
    ],
-   "hint": ""
+   "h": "c4bbd0fb",
+   "oh": [
+    "173e2429",
+    "b48df371",
+    "c4bbd0fb",
+    "822d769f"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0647"
   },
   {
-   "id": "S0648",
-   "day": 65,
-   "direction": "ja-zh",
+   "qid": "P-065-07-760a7bad0535",
    "prompt": "その課の復習をしましたか。",
-   "knowledge_ids": [
-    "V1339"
+   "options": [
+    "那条街充满活力。",
+    "那一课复习了吗。",
+    "您的名字怎么念？",
+    "他们会组织工会吧。"
    ],
-   "hint": ""
+   "h": "2eb34520",
+   "oh": [
+    "d3ea8b20",
+    "2eb34520",
+    "cedc5143",
+    "4a5d6cc4"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0648"
   },
   {
-   "id": "S0649",
-   "day": 65,
-   "direction": "ja-zh",
+   "qid": "P-065-08-5497b66aa8d0",
    "prompt": "社長は新しい部長を任命した。",
-   "knowledge_ids": [
-    "V1340"
+   "options": [
+    "他们的意见和我的不同。",
+    "她是个地道的咖啡派。",
+    "社长任命了新的部长。",
+    "那个玩具是木头做的。"
    ],
-   "hint": ""
+   "h": "b9d5235d",
+   "oh": [
+    "1d38ae3",
+    "2dd373c1",
+    "b9d5235d",
+    "709a625b"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0649"
   },
   {
-   "id": "S0650",
-   "day": 65,
-   "direction": "ja-zh",
+   "qid": "P-065-09-23ba5ac578e5",
    "prompt": "私はふつう自転車で通学します。",
-   "knowledge_ids": [
-    "V1341"
+   "options": [
+    "女孩子几乎都很温柔。",
+    "我通常骑自行车上学。",
+    "饭在家吃还是在外吃？",
+    "他为什么辞职是个谜。"
    ],
-   "hint": ""
+   "h": "cf5e8493",
+   "oh": [
+    "5bf5f95d",
+    "cf5e8493",
+    "7a828542",
+    "f91d2778"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0650"
   }
  ],
  "quiz": [

@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0958",
    "front": "踊り",
    "back": "舞蹈",
+   "kana": "おどり",
    "stage": "planned"
   },
   {
    "kid": "V0959",
    "front": "踊る",
    "back": "跳舞",
+   "kana": "おどる",
    "stage": "planned"
   },
   {
    "kid": "V0960",
    "front": "驚く",
    "back": "吃惊",
+   "kana": "おどろく",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0228",
    "front": "空",
-   "back": "天空；空的；空闲｜音 クウ",
+   "back": "天空；空的；空闲",
+   "kana": "クウ、そら、あ.く、あ.き、あ.ける、から、す.く、す.かす、むな.しい",
    "stage": "planned"
   },
   {
    "kid": "K0229",
    "front": "急",
-   "back": "急；匆忙；陡｜音 キュウ",
+   "back": "急；匆忙；陡",
+   "kana": "キュウ、いそ.ぐ、いそ.ぎ、せ.く",
    "stage": "planned"
   },
   {
    "kid": "V0920",
    "front": "うそ",
    "back": "谎话；假的",
+   "kana": "うそ",
    "stage": "planned"
   },
   {
    "kid": "V0921",
    "front": "うち",
    "back": "里面；家里",
+   "kana": "うち",
    "stage": "planned"
   },
   {
    "kid": "V0922",
    "front": "打つ",
    "back": "打；敲",
+   "kana": "うつ",
    "stage": "planned"
   },
   {
@@ -561,104 +569,204 @@
  ],
  "sentences": [
   {
-   "id": "S0441",
-   "day": 45,
-   "direction": "zh-ja",
+   "qid": "P-045-00-827e9b13b7b3",
    "prompt": "那位作家很会写对话。",
-   "knowledge_ids": [
-    "V0979"
+   "options": [
+    "その作家は会話を書くのがうまい。",
+    "こ、こら！ナニやっとるかぁぁ！！",
+    "ロジャーはパーティーが大好きだ。",
+    "いいクリスマスを過ごしましたか。"
    ],
-   "hint": ""
+   "h": "34f482bb",
+   "oh": [
+    "34f482bb",
+    "1b91f40",
+    "e9d09b67",
+    "a01fba18"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0441"
   },
   {
-   "id": "S0442",
-   "day": 45,
-   "direction": "zh-ja",
+   "qid": "P-045-01-f0db54fda254",
    "prompt": "怎么回来得这么晚？",
-   "knowledge_ids": [
-    "V0980"
+   "options": [
+    "私はパレードが見えるいい位置にいた。",
+    "キャプテンは静かにするように命じた。",
+    "イングランドはその試合に勝つだろう。",
+    "どうして帰りがこんなに遅くなったの。"
    ],
-   "hint": ""
+   "h": "a0491ca2",
+   "oh": [
+    "3821a6d6",
+    "59a4d722",
+    "91c655e0",
+    "a0491ca2"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0442"
   },
   {
-   "id": "S0443",
-   "day": 45,
-   "direction": "zh-ja",
+   "qid": "P-045-02-3dc29e6efb30",
    "prompt": "我一直在学科学。",
-   "knowledge_ids": [
-    "V0981"
+   "options": [
+    "この制度には改良の余地がない。",
+    "このページをコピーして下さい。",
+    "私は、ずっと科学を習っている。",
+    "その商品はテレビで広告された。"
    ],
-   "hint": ""
+   "h": "f2cd0234",
+   "oh": [
+    "849b2eb5",
+    "fd6444e6",
+    "f2cd0234",
+    "5295e0d9"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0443"
   },
   {
-   "id": "S0444",
-   "day": 45,
-   "direction": "zh-ja",
+   "qid": "P-045-03-04abac7d285b",
    "prompt": "少女站着照镜子。",
-   "knowledge_ids": [
-    "V0982"
+   "options": [
+    "これは悪い話ではないでしょう？",
+    "この制度には改良の余地がない。",
+    "その公演は万雷の拍手を受けた。",
+    "少女は立って鏡をのぞきこんだ。"
    ],
-   "hint": ""
+   "h": "b6b02350",
+   "oh": [
+    "fdf9de68",
+    "849b2eb5",
+    "4c0102c4",
+    "b6b02350"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0444"
   },
   {
-   "id": "S0445",
-   "day": 45,
-   "direction": "zh-ja",
+   "qid": "P-045-04-eaff9fb23afe",
    "prompt": "那个大厅用日本画装饰着。",
-   "knowledge_ids": [
-    "V0983"
+   "options": [
+    "このソファーは場所を取りすぎる。",
+    "あなたの計画を私に合わせなさい。",
+    "それは翼の全長が約４インチある。",
+    "その広間は日本画で飾られていた。"
    ],
-   "hint": ""
+   "h": "6d732f36",
+   "oh": [
+    "fa74e348",
+    "90f4ca7a",
+    "18490b8d",
+    "6d732f36"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0445"
   },
   {
-   "id": "S0446",
-   "day": 45,
-   "direction": "zh-ja",
+   "qid": "P-045-05-c3450bdb9f12",
    "prompt": "那场火灾发生在前天。",
-   "knowledge_ids": [
-    "V0984"
+   "options": [
+    "コーヒー三つおねがいします。",
+    "その火事はおととい発生した。",
+    "なんという馬鹿なことだろう。",
+    "その車は修理する価値がない。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0447",
-   "day": 45,
+   "h": "d0498af0",
+   "oh": [
+    "b2149d32",
+    "d0498af0",
+    "c32a4fad",
+    "d8740c48"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0446"
+  },
+  {
+   "qid": "P-045-06-1418a80a2787",
    "prompt": "这辆车不太费油。",
-   "knowledge_ids": [
-    "V0986"
+   "options": [
+    "どういっても七時までにいかないと。",
+    "このチーズはピリッとした味がする。",
+    "この車はあまりガソリンを食わない。",
+    "住民の半数以上はその計画に反対だ。"
    ],
-   "hint": ""
+   "h": "2c22ee53",
+   "oh": [
+    "91a2dee7",
+    "14565358",
+    "2c22ee53",
+    "7667272d"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0447"
   },
   {
-   "id": "S0448",
-   "day": 45,
-   "direction": "ja-zh",
+   "qid": "P-045-07-e9f9f08b37c1",
    "prompt": "この辺にガソリンスタンドはありますか。",
-   "knowledge_ids": [
-    "V0987"
+   "options": [
+    "这附近有加油站吗？",
+    "上学期成绩很好。",
+    "今晚是有聚会吗？",
+    "我打算下周去欧洲。"
    ],
-   "hint": ""
+   "h": "8c1b8d0e",
+   "oh": [
+    "8c1b8d0e",
+    "964e19e4",
+    "6ed5872b",
+    "221cdbf7"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0448"
   },
   {
-   "id": "S0449",
-   "day": 45,
-   "direction": "ja-zh",
+   "qid": "P-045-08-5ac56a29cd49",
    "prompt": "ダイヤモンドは本来堅いものだ。",
-   "knowledge_ids": [
-    "V0988"
+   "options": [
+    "钻石本来就很硬。",
+    "约翰在给门刷漆。",
+    "向上司汇报结果。",
+    "那个人口是心非。"
    ],
-   "hint": ""
+   "h": "aa75a0ff",
+   "oh": [
+    "aa75a0ff",
+    "5a2d87f9",
+    "5d580bc5",
+    "4f662265"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0449"
   },
   {
-   "id": "S0450",
-   "day": 45,
-   "direction": "ja-zh",
+   "qid": "P-045-09-59bc1ea3cb42",
    "prompt": "物質は温度によって形を変える。",
-   "knowledge_ids": [
-    "V0989"
+   "options": [
+    "物质会随温度改变形状。",
+    "那条消息让他怒火爆发。",
+    "生命是什么时候诞生的？",
+    "你们国家说什么语言？"
    ],
-   "hint": ""
+   "h": "13f3f3b1",
+   "oh": [
+    "13f3f3b1",
+    "af292209",
+    "3df29c45",
+    "72ab8ea4"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0450"
   }
  ],
  "quiz": [

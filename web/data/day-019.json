@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0513",
    "front": "交差点",
    "back": "十字路口",
+   "kana": "こうさてん",
    "stage": "planned"
   },
   {
    "kid": "V0514",
    "front": "紅茶",
    "back": "红茶",
+   "kana": "こうちゃ",
    "stage": "planned"
   },
   {
    "kid": "V0515",
    "front": "交番",
    "back": "派出所",
+   "kana": "こうばん",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0157",
    "front": "何",
-   "back": "什么；何｜音 カ",
+   "back": "什么；何",
+   "kana": "カ、なに、なん、なに-、なん-",
    "stage": "planned"
   },
   {
    "kid": "K0158",
    "front": "南",
-   "back": "南；南方｜音 ナン、ナ",
+   "back": "南；南方",
+   "kana": "ナン、ナ、みなみ",
    "stage": "planned"
   },
   {
    "kid": "V0473",
    "front": "川",
    "back": "河",
+   "kana": "かわ",
    "stage": "planned"
   },
   {
    "kid": "V0474",
    "front": "かわいい",
    "back": "可爱",
+   "kana": "かわいい",
    "stage": "planned"
   },
   {
    "kid": "V0475",
    "front": "漢字",
    "back": "汉字",
+   "kana": "かんじ",
    "stage": "planned"
   },
   {
@@ -529,104 +537,204 @@
  ],
  "sentences": [
   {
-   "id": "S0181",
-   "day": 19,
-   "direction": "zh-ja",
+   "qid": "P-019-00-dd5772abc1cc",
    "prompt": "大门的锁是怎么回事？",
-   "knowledge_ids": [
-    "V0512"
+   "options": [
+    "みんなでカブトムシを競争させた。",
+    "その事が彼のすべての夢を壊した。",
+    "この案を検討することにしました。",
+    "玄関のカギはどうなっていますか。"
    ],
-   "hint": ""
+   "h": "942b9289",
+   "oh": [
+    "fdf064f8",
+    "2835eaff",
+    "f4913c93",
+    "942b9289"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0181"
   },
   {
-   "id": "S0182",
-   "day": 19,
-   "direction": "zh-ja",
+   "qid": "P-019-01-b2998b7b790d",
    "prompt": "那个十字路口发生了什么？",
-   "knowledge_ids": [
-    "V0513"
+   "options": [
+    "この家は住むのにとても快適だ。",
+    "彼が間違っているのは確かです。",
+    "あの交差点で何が起こったのか。",
+    "医者は彼の苦痛を除いてやった。"
    ],
-   "hint": ""
+   "h": "28d0e3e9",
+   "oh": [
+    "be849b07",
+    "12baed0d",
+    "28d0e3e9",
+    "8a6a13e3"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0182"
   },
   {
-   "id": "S0183",
-   "day": 19,
-   "direction": "zh-ja",
+   "qid": "P-019-02-6d07bae9d176",
    "prompt": "您要红茶还是咖啡？",
-   "knowledge_ids": [
-    "V0514"
+   "options": [
+    "交通に注意しなければいけない。",
+    "紅茶かコーヒーはいかがですか。",
+    "この布は値段の割に品質が良い。",
+    "グラスは粉々に割れてしまった。"
    ],
-   "hint": ""
+   "h": "f47e650f",
+   "oh": [
+    "208febf8",
+    "f47e650f",
+    "73db6bba",
+    "c01abf22"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0183"
   },
   {
-   "id": "S0184",
-   "day": 19,
-   "direction": "zh-ja",
+   "qid": "P-019-03-2d3d95f693f4",
    "prompt": "请到对面的派出所问一下。",
-   "knowledge_ids": [
-    "V0515"
+   "options": [
+    "先生から資料をいただきました。",
+    "その公演は万雷の拍手を受けた。",
+    "向こうの交番で聞いてください。",
+    "せっかくの休みなのに、雨です。"
    ],
-   "hint": ""
+   "h": "266f52ac",
+   "oh": [
+    "22261966",
+    "4c0102c4",
+    "266f52ac",
+    "eab23b6b"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0184"
   },
   {
-   "id": "S0185",
-   "day": 19,
-   "direction": "zh-ja",
+   "qid": "P-019-04-3d9f7e352c9e",
    "prompt": "能听到你的声音真高兴。",
-   "knowledge_ids": [
-    "V0516"
+   "options": [
+    "この事件に手を貸してください。",
+    "彼はよく友人をいじめたものだ。",
+    "それはあなたのナイフではない。",
+    "あなたの声が聞けてうれしいわ。"
    ],
-   "hint": ""
+   "h": "aa196585",
+   "oh": [
+    "3a859cc4",
+    "25027c50",
+    "89c04ee5",
+    "aa196585"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0185"
   },
   {
-   "id": "S0186",
-   "day": 19,
-   "direction": "zh-ja",
+   "qid": "P-019-05-c891f4610f46",
    "prompt": "这件大衣不错。可以试穿吗？",
-   "knowledge_ids": [
-    "V0517"
+   "options": [
+    "このコートいいですね。試着してもいいですか。",
+    "たとえどんなことがあってもあきらめません。",
+    "その大家は以前は暮らし向きがよかったそうだ。",
+    "「ご一緒してもいいですか」「もちろんです」"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0187",
-   "day": 19,
+   "h": "b3553c30",
+   "oh": [
+    "b3553c30",
+    "282967bb",
+    "92eb805",
+    "d4b34698"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0186"
+  },
+  {
+   "qid": "P-019-06-69af1d71d5e2",
    "prompt": "那咖啡闻着真香。",
-   "knowledge_ids": [
-    "V0518"
+   "options": [
+    "そのコーヒーはいいにおいがする。",
+    "これらの語をノートに書きなさい。",
+    "この学校は男子よりも女子が多い。",
+    "みんなには優しく話してください。"
    ],
-   "hint": ""
+   "h": "eff509fd",
+   "oh": [
+    "eff509fd",
+    "7a4a4062",
+    "53353c8",
+    "125e9885"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0187"
   },
   {
-   "id": "S0188",
-   "day": 19,
-   "direction": "ja-zh",
+   "qid": "P-019-07-620b2abe77c7",
    "prompt": "午後何時ごろうかがいましょうか。",
-   "knowledge_ids": [
-    "V0520"
+   "options": [
+    "我们不能依赖父母。",
+    "其中重要的是后者。",
+    "快到睡觉的时间了。",
+    "下午几点去拜访您？"
    ],
-   "hint": ""
+   "h": "a05c8382",
+   "oh": [
+    "d8540292",
+    "6cc1f774",
+    "b1e26b52",
+    "a05c8382"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0188"
   },
   {
-   "id": "S0189",
-   "day": 19,
-   "direction": "ja-zh",
+   "qid": "P-019-08-b21f4c6ffd32",
    "prompt": "スピーチコンテストは１１月９日に行われた。",
-   "knowledge_ids": [
-    "V0521"
+   "options": [
+    "往前走两个街区，然后向左拐。",
+    "演讲比赛在11月9日举行。",
+    "这个房间晒不到多少太阳。",
+    "我们能从书籍中获得乐趣。"
    ],
-   "hint": ""
+   "h": "d0a4ec72",
+   "oh": [
+    "b81afcce",
+    "d0a4ec72",
+    "ba8e059c",
+    "d09b4d0"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0189"
   },
   {
-   "id": "S0190",
-   "day": 19,
-   "direction": "ja-zh",
+   "qid": "P-019-09-de28412d4cee",
    "prompt": "私たちの学校にはクラスが９つある。",
-   "knowledge_ids": [
-    "V0522"
+   "options": [
+    "他在生死之间徘徊。",
+    "那座岛是热带气候。",
+    "我们学校有九个班。",
+    "被偷的钱我放不下。"
    ],
-   "hint": ""
+   "h": "daa16234",
+   "oh": [
+    "f32c445a",
+    "ecf17885",
+    "daa16234",
+    "220f5cef"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0190"
   }
  ],
  "quiz": [

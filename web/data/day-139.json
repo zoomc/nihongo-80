@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V2428",
    "front": "中央",
    "back": "中央；中间",
+   "kana": "ちゅうおう",
    "stage": "planned"
   },
   {
    "kid": "V2429",
    "front": "中学",
    "back": "初中",
+   "kana": "ちゅうがく",
    "stage": "planned"
   },
   {
    "kid": "V2430",
    "front": "中古",
    "back": "二手的",
+   "kana": "ちゅうこ",
    "stage": "planned"
   },
   {
@@ -65,31 +68,36 @@
   {
    "kid": "K0569",
    "front": "痛",
-   "back": "痛；疼痛｜音 ツウ",
+   "back": "痛；疼痛",
+   "kana": "ツウ、いた.い、いた.む、いた.ましい、いた.める",
    "stage": "planned"
   },
   {
    "kid": "K0570",
    "front": "笑",
-   "back": "笑；笑容｜音 ショウ",
+   "back": "笑；笑容",
+   "kana": "ショウ、わら.う、え.む",
    "stage": "planned"
   },
   {
    "kid": "V2386",
    "front": "たまたま",
    "back": "偶然；碰巧",
+   "kana": "たまたま",
    "stage": "planned"
   },
   {
    "kid": "V2387",
    "front": "たまらない",
    "back": "受不了；极其",
+   "kana": "たまらない",
    "stage": "planned"
   },
   {
    "kid": "V2388",
    "front": "黙る",
    "back": "沉默；不说话",
+   "kana": "だまる",
    "stage": "planned"
   },
   {
@@ -101,13 +109,15 @@
   {
    "kid": "K0561",
    "front": "恐",
-   "back": "恐惧；害怕｜音 キョウ",
+   "back": "恐惧；害怕",
+   "kana": "キョウ、おそ.れる、おそ.る、おそ.ろしい、こわ.い、こわ.がる",
    "stage": "planned"
   },
   {
    "kid": "K0562",
    "front": "息",
-   "back": "呼吸；儿子｜音 ソク",
+   "back": "呼吸；儿子",
+   "kana": "ソク、いき",
    "stage": "planned"
   }
  ],
@@ -511,104 +521,204 @@
  ],
  "sentences": [
   {
-   "id": "S1381",
-   "day": 139,
-   "direction": "zh-ja",
+   "qid": "P-139-00-8b38b69e8c99",
    "prompt": "昨天遇见了一位老朋友。",
-   "knowledge_ids": [
-    "V2477"
+   "options": [
+    "あまり人に頼ってはいけない。",
+    "オートバイに乗るのは楽しい。",
+    "きのう旧友の一人に出会った。",
+    "つまり彼女は下手な踊り子だ。"
    ],
-   "hint": ""
+   "h": "bacc7be9",
+   "oh": [
+    "7f0112b5",
+    "b48df371",
+    "bacc7be9",
+    "c49e2f71"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1381"
   },
   {
-   "id": "S1382",
-   "day": 139,
-   "direction": "zh-ja",
+   "qid": "P-139-01-9edc4d0f19cc",
    "prompt": "能批准我的提案吗？",
-   "knowledge_ids": [
-    "V2478"
+   "options": [
+    "私の提案を承認していただけますか。",
+    "あなたの名前と住所を記入しなさい。",
+    "あの信号の手前で降ろしてください。",
+    "あなたには想像もつかない、でしょ？"
    ],
-   "hint": ""
+   "h": "a25c2107",
+   "oh": [
+    "a25c2107",
+    "52eeffa0",
+    "4e4f3267",
+    "6c1152da"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1382"
   },
   {
-   "id": "S1383",
-   "day": 139,
-   "direction": "zh-ja",
+   "qid": "P-139-02-434bd6976b60",
    "prompt": "他们登上了定期客轮。",
-   "knowledge_ids": [
-    "V2479"
+   "options": [
+    "トムは頭にきつい一発を受けた。",
+    "彼には思想の理想がかけている。",
+    "シャッターを押してくれますか。",
+    "彼らは定期旅客船に乗り込んだ。"
    ],
-   "hint": ""
+   "h": "33f2d9b5",
+   "oh": [
+    "b9186836",
+    "74403c81",
+    "a9a6fa1f",
+    "33f2d9b5"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1383"
   },
   {
-   "id": "S1384",
-   "day": 139,
-   "direction": "zh-ja",
+   "qid": "P-139-03-50fa77248cde",
    "prompt": "面对困难始终抵抗到底。",
-   "knowledge_ids": [
-    "V2480"
+   "options": [
+    "これらの語をノートに書きなさい。",
+    "困難に対してあくまでも抵抗した。",
+    "その黄色いのをいただきましょう。",
+    "こ、こら！ナニやっとるかぁぁ！！"
    ],
-   "hint": ""
+   "h": "d1cd0022",
+   "oh": [
+    "7a4a4062",
+    "d1cd0022",
+    "725d19ee",
+    "1b91f40"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1384"
   },
   {
-   "id": "S1385",
-   "day": 139,
-   "direction": "zh-ja",
+   "qid": "P-139-04-648619b0327d",
    "prompt": "这点钱撑不了多久吧。",
-   "knowledge_ids": [
-    "V2481"
+   "options": [
+    "あなたはうちのクラスで歓迎されています。",
+    "彼らはジャックの髪の刈り方をひやかした。",
+    "ところが実はどうすることもできないのです。",
+    "この程度のお金じゃ長くは持たないだろう。"
    ],
-   "hint": ""
+   "h": "2eab4bd1",
+   "oh": [
+    "70f8c097",
+    "234d4fca",
+    "34a8c7a1",
+    "2eab4bd1"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1385"
   },
   {
-   "id": "S1386",
-   "day": 139,
-   "direction": "zh-ja",
+   "qid": "P-139-05-fd64fff4dad0",
    "prompt": "我们比赛跑到公交站吧。",
-   "knowledge_ids": [
-    "V2482"
+   "options": [
+    "メールの宛先を間違えました。",
+    "ヘレンはせいぜい４０キロだ。",
+    "湖の深さはどのくらいですか。",
+    "バスの停留所まで競争しよう。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1387",
-   "day": 139,
+   "h": "878a19ec",
+   "oh": [
+    "293851f6",
+    "4495f400",
+    "15a7848c",
+    "878a19ec"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1386"
+  },
+  {
+   "qid": "P-139-06-a636e253e0ce",
    "prompt": "安迪约会从不迟到。",
-   "knowledge_ids": [
-    "V2483"
+   "options": [
+    "これは父が私に残してくれたものの一つです。",
+    "でもさ、母を連れて行かなくてはいけないんだ。",
+    "ここではどんどん意見をおっしゃってかまいません。",
+    "アンディはけっしてデートにおくれたことはない。"
    ],
-   "hint": ""
+   "h": "36bc76c",
+   "oh": [
+    "67d2fba1",
+    "82bd42a3",
+    "6198a2b4",
+    "36bc76c"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1387"
   },
   {
-   "id": "S1388",
-   "day": 139,
-   "direction": "ja-zh",
+   "qid": "P-139-07-d2db1490e580",
    "prompt": "彼は敵に不意打ちを食わせた。",
-   "knowledge_ids": [
-    "V2484"
+   "options": [
+    "我给你点了甜点。",
+    "我正在找助手。",
+    "两个当中哪个贵？",
+    "他偷袭了对手。"
    ],
-   "hint": ""
+   "h": "4050f9f9",
+   "oh": [
+    "5fcdf50d",
+    "f7ef99a7",
+    "fc08db83",
+    "4050f9f9"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1388"
   },
   {
-   "id": "S1389",
-   "day": 139,
-   "direction": "ja-zh",
+   "qid": "P-139-08-9ba5e7143e4d",
    "prompt": "このようのしてその出来事は起こった。",
-   "knowledge_ids": [
-    "V2485"
+   "options": [
+    "这座寺院建于780年。",
+    "那件事就是这样发生的。",
+    "游客数量近年大幅增加。",
+    "他的话简单得不能再简单。"
    ],
-   "hint": ""
+   "h": "c639485f",
+   "oh": [
+    "ea718c6c",
+    "c639485f",
+    "45b99f8d",
+    "1723f272"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1389"
   },
   {
-   "id": "S1390",
-   "day": 139,
-   "direction": "ja-zh",
+   "qid": "P-139-09-b973799e0e8e",
    "prompt": "その肉は全く食用に適さなかった。",
-   "knowledge_ids": [
-    "V2486"
+   "options": [
+    "我有足够的钱买这本书。",
+    "他们相信地球是平的。",
+    "那些肉完全不适合食用。",
+    "她应该多听听别人的话。"
    ],
-   "hint": ""
+   "h": "7d804d6e",
+   "oh": [
+    "c449930f",
+    "a51300e1",
+    "7d804d6e",
+    "c6d6351d"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1390"
   }
  ],
  "quiz": [

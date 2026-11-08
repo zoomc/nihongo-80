@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1421",
    "front": "よろしい",
    "back": "可以；好",
+   "kana": "よろしい",
    "stage": "planned"
   },
   {
    "kid": "V1422",
    "front": "利用",
    "back": "利用；使用",
+   "kana": "りよう",
    "stage": "planned"
   },
   {
    "kid": "V1423",
    "front": "両方",
    "back": "两边；都",
+   "kana": "りょうほう",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0301",
    "front": "表",
-   "back": "表面；表格；表达｜音 ヒョウ",
+   "back": "表面；表格；表达",
+   "kana": "ヒョウ、おもて、-おもて、あらわ.す、あらわ.れる、あら.わす",
    "stage": "planned"
   },
   {
    "kid": "K0302",
    "front": "戦",
-   "back": "战；战斗｜音 セン",
+   "back": "战；战斗",
+   "kana": "セン、いくさ、たたか.う、おのの.く、そよ.ぐ、わなな.く",
    "stage": "planned"
   },
   {
    "kid": "V1383",
    "front": "昔",
    "back": "从前",
+   "kana": "むかし",
    "stage": "planned"
   },
   {
    "kid": "V1384",
    "front": "虫",
    "back": "虫子",
+   "kana": "むし",
    "stage": "planned"
   },
   {
    "kid": "V1385",
    "front": "息子",
    "back": "儿子",
+   "kana": "むすこ",
    "stage": "planned"
   },
   {
@@ -530,104 +538,204 @@
  ],
  "sentences": [
   {
-   "id": "S0711",
-   "day": 72,
-   "direction": "zh-ja",
+   "qid": "P-072-00-743f4b4fba0a",
    "prompt": "请说明迟到的理由。",
-   "knowledge_ids": [
-    "V0206"
+   "options": [
+    "遅刻した理由を説明してください。",
+    "この手袋は両方がそろっていない。",
+    "その代わりにトランプをしようよ。",
+    "みんなには優しく話してください。"
    ],
-   "hint": ""
+   "h": "4714e8bd",
+   "oh": [
+    "4714e8bd",
+    "9ed978b8",
+    "420672f9",
+    "125e9885"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0711"
   },
   {
-   "id": "S0712",
-   "day": 72,
-   "direction": "zh-ja",
+   "qid": "P-072-01-6c08ae75b1ff",
    "prompt": "正在调查事故原因。",
-   "knowledge_ids": [
-    "V0207"
+   "options": [
+    "事態はかなり切迫している。",
+    "事故の原因を調べています。",
+    "二つの店の値段を比べます。",
+    "イチゴはジャムに作られる。"
    ],
-   "hint": ""
+   "h": "820e254f",
+   "oh": [
+    "23d029f3",
+    "820e254f",
+    "b027db99",
+    "fc94d29"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0712"
   },
   {
-   "id": "S0713",
-   "day": 72,
-   "direction": "zh-ja",
+   "qid": "P-072-02-d6cc0141e391",
    "prompt": "调查的结果，弄清了原因。",
-   "knowledge_ids": [
-    "V0208"
+   "options": [
+    "コックさんは少しもかけていない。",
+    "調査の結果、原因が分かりました。",
+    "ジャックは８月１０日に生まれた。",
+    "あの子はなんてうるさい子だろう。"
    ],
-   "hint": ""
+   "h": "d38e1400",
+   "oh": [
+    "9948ee99",
+    "d38e1400",
+    "6df6eadc",
+    "490bd08c"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0713"
   },
   {
-   "id": "S0714",
-   "day": 72,
-   "direction": "zh-ja",
+   "qid": "P-072-03-34d015f5a777",
    "prompt": "留学目的是学日语。",
-   "knowledge_ids": [
-    "V0209"
+   "options": [
+    "いつでも私のオフィスを訪ねなさい。",
+    "さっきなぜかマイクが入らなかった。",
+    "お年寄りをからかってはいけません。",
+    "留学の目的は日本語を学ぶことです。"
    ],
-   "hint": ""
+   "h": "5e2d8d39",
+   "oh": [
+    "17a853f2",
+    "f6bd6b75",
+    "a3dd40ad",
+    "5e2d8d39"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0714"
   },
   {
-   "id": "S0715",
-   "day": 72,
-   "direction": "zh-ja",
+   "qid": "P-072-04-88b6ea8195bf",
    "prompt": "没有说话的机会。",
-   "knowledge_ids": [
-    "V0210"
+   "options": [
+    "くだける波が泡を作った。",
+    "一行はアメリカへ渡った。",
+    "今日歯医者へ行きました。",
+    "話す機会がありません。"
    ],
-   "hint": ""
+   "h": "30d4fb48",
+   "oh": [
+    "99b9615f",
+    "c3bc3e5",
+    "6f22df02",
+    "30d4fb48"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0715"
   },
   {
-   "id": "S0716",
-   "day": 72,
-   "direction": "zh-ja",
+   "qid": "P-072-05-3ab11574500b",
    "prompt": "有在海外工作过的经历。",
-   "knowledge_ids": [
-    "V0211"
+   "options": [
+    "海外で働いた経験があります。",
+    "パスポートを拝見できますか。",
+    "メールの返信を待っています。",
+    "どのぐらい複雑なのだろうか。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0717",
-   "day": 72,
+   "h": "e098f265",
+   "oh": [
+    "e098f265",
+    "f4834db0",
+    "95cf6c7f",
+    "c4bbd0fb"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0716"
+  },
+  {
+   "qid": "P-072-06-b3e0e5363bdd",
    "prompt": "下雨的可能性很高。",
-   "knowledge_ids": [
-    "V0212"
+   "options": [
+    "雨の可能性が高いです。",
+    "木曜日に映画を見ます。",
+    "彼は太い首をしている。",
+    "これはいくらですか。"
    ],
-   "hint": ""
+   "h": "4c6d3b56",
+   "oh": [
+    "4c6d3b56",
+    "bd43fb8",
+    "ec596638",
+    "6506aa3c"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0717"
   },
   {
-   "id": "S0718",
-   "day": 72,
-   "direction": "ja-zh",
+   "qid": "P-072-07-a8b721b2dd52",
    "prompt": "円安が物価に影響を与えます。",
-   "knowledge_ids": [
-    "V0213"
+   "options": [
+    "我们学校有九个班。",
+    "被偷的钱我放不下。",
+    "他们坐在餐厅里面。",
+    "日元贬值影响物价。"
    ],
-   "hint": ""
+   "h": "f43a7c97",
+   "oh": [
+    "daa16234",
+    "220f5cef",
+    "7c1ef408",
+    "f43a7c97"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0718"
   },
   {
-   "id": "S0719",
-   "day": 72,
-   "direction": "ja-zh",
+   "qid": "P-072-08-14a978f3c8de",
    "prompt": "この件には関係ありません。",
-   "knowledge_ids": [
-    "V0214"
+   "options": [
+    "养这辆车很费钱。",
+    "他们坐在餐厅里面。",
+    "他们会组织工会吧。",
+    "和这件事没关系。"
    ],
-   "hint": ""
+   "h": "1abbc7cc",
+   "oh": [
+    "ea0755b5",
+    "7c1ef408",
+    "4a5d6cc4",
+    "1abbc7cc"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0719"
   },
   {
-   "id": "S0720",
-   "day": 72,
-   "direction": "ja-zh",
+   "qid": "P-072-09-c252f6cf4945",
    "prompt": "今の状況を報告してください。",
-   "knowledge_ids": [
-    "V0215"
+   "options": [
+    "请在接待处写名字。",
+    "他用无线电发了报。",
+    "日元贬值影响物价。",
+    "请报告目前的情况。"
    ],
-   "hint": ""
+   "h": "aabf3a50",
+   "oh": [
+    "bb7ed81b",
+    "3e7102f9",
+    "f43a7c97",
+    "aabf3a50"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0720"
   }
  ],
  "quiz": [

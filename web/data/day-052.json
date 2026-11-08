@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V1081",
    "front": "今度",
    "back": "这次；下次",
+   "kana": "こんど",
    "stage": "planned"
   },
   {
    "kid": "V1082",
    "front": "コンピュータ",
    "back": "电脑",
+   "kana": "コンピュータ",
    "stage": "planned"
   },
   {
    "kid": "V1083",
    "front": "今夜",
    "back": "今晚",
+   "kana": "こんや",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0256",
    "front": "室",
-   "back": "房间；室｜音 シツ",
+   "back": "房间；室",
+   "kana": "シツ、むろ",
    "stage": "planned"
   },
   {
    "kid": "K0257",
    "front": "歩",
-   "back": "走；步行｜音 ホ、ブ、フ",
+   "back": "走；步行",
+   "kana": "ホ、ブ、フ、ある.く、あゆ.む",
    "stage": "planned"
   },
   {
    "kid": "V1048",
    "front": "子",
    "back": "孩子",
+   "kana": "こ",
    "stage": "planned"
   },
   {
    "kid": "V1049",
    "front": "こう",
    "back": "这样",
+   "kana": "こう",
    "stage": "planned"
   },
   {
    "kid": "V1050",
    "front": "郊外",
    "back": "郊外",
+   "kana": "こうがい",
    "stage": "planned"
   },
   {
@@ -455,104 +463,204 @@
  ],
  "sentences": [
   {
-   "id": "S0511",
-   "day": 52,
-   "direction": "zh-ja",
+   "qid": "P-052-00-9e8cc2228984",
    "prompt": "孩子做坏事父母会责备。",
-   "knowledge_ids": [
-    "V1107"
+   "options": [
+    "それは翼の全長が約４インチある。",
+    "トムはメアリーにバイクを売った。",
+    "いいクリスマスを過ごしましたか。",
+    "親は子供が悪さをするのをしかる。"
    ],
-   "hint": ""
+   "h": "ac08787d",
+   "oh": [
+    "18490b8d",
+    "3db0f9d3",
+    "a01fba18",
+    "ac08787d"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0511"
   },
   {
-   "id": "S0512",
-   "day": 52,
-   "direction": "zh-ja",
+   "qid": "P-052-01-c9cc5f090c6d",
    "prompt": "总之，考完试松了口气。",
-   "knowledge_ids": [
-    "V1108"
+   "options": [
+    "いつ禁煙のサインを消すのでしょうね。",
+    "このブラウスをつめていただけますか。",
+    "とにかく、試験が終わってほっとしたよ。",
+    "その作家は私たちによく知られています。"
    ],
-   "hint": ""
+   "h": "47f611de",
+   "oh": [
+    "755332b2",
+    "92c2a853",
+    "47f611de",
+    "44206ac1"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0512"
   },
   {
-   "id": "S0513",
-   "day": 52,
-   "direction": "zh-ja",
+   "qid": "P-052-02-cde59af18f42",
    "prompt": "地震时要关掉煤气。",
-   "knowledge_ids": [
-    "V1109"
+   "options": [
+    "ぼくは知らないし、気にもしない。",
+    "地震のときにはガスを止めなさい。",
+    "おひる頃やっと太陽が顔を出した。",
+    "コックさんは少しもかけていない。"
    ],
-   "hint": ""
+   "h": "649d7968",
+   "oh": [
+    "c9b35858",
+    "649d7968",
+    "c5040bc1",
+    "9948ee99"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0513"
   },
   {
-   "id": "S0514",
-   "day": 52,
-   "direction": "zh-ja",
+   "qid": "P-052-03-9d55e74494da",
    "prompt": "大学时我订过英文报纸。",
-   "knowledge_ids": [
-    "V1110"
+   "options": [
+    "大学時代に私は英字新聞をとっていた。",
+    "こちらには大きなハスの葉があります。",
+    "私はあの店で新しいステレオを買った。",
+    "ホテルの前で私を車で拾ってください。"
    ],
-   "hint": ""
+   "h": "c1950d86",
+   "oh": [
+    "c1950d86",
+    "4d3fb34c",
+    "cb357e2c",
+    "a75d76f8"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0514"
   },
   {
-   "id": "S0515",
-   "day": 52,
-   "direction": "zh-ja",
+   "qid": "P-052-04-80454c14d87d",
    "prompt": "我很喜欢新买的内衣。",
-   "knowledge_ids": [
-    "V1111"
+   "options": [
+    "タバコにかけられている税は高い。",
+    "ビルはその罪を犯していなかった。",
+    "私は新しい下着が気に入っている。",
+    "その計画では彼に同調できました。"
    ],
-   "hint": ""
+   "h": "e97ebb58",
+   "oh": [
+    "37e548c7",
+    "8cfed4a4",
+    "e97ebb58",
+    "9c573687"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0515"
   },
   {
-   "id": "S0516",
-   "day": 52,
-   "direction": "zh-ja",
+   "qid": "P-052-05-1e8656c0c4d0",
    "prompt": "赶紧准备旅行的东西。",
-   "knowledge_ids": [
-    "V1112"
+   "options": [
+    "私たちは制服を支給された。",
+    "でも、これで１つ貸しだね。",
+    "すぐに旅の支度をしなさい。",
+    "彼女のお見舞いに行こうよ。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0517",
-   "day": 52,
+   "h": "a0bc963b",
+   "oh": [
+    "9edbefef",
+    "8347f85c",
+    "a0bc963b",
+    "fc7b4a8b"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0516"
+  },
+  {
+   "qid": "P-052-06-1b1f0dd38ca7",
    "prompt": "一两次失败谁都会有。",
-   "knowledge_ids": [
-    "V1113"
+   "options": [
+    "彼は高等学校の生徒ではありません。",
+    "その部屋は居心地の良い感じがした。",
+    "アメリカ旅行のよい記念になります。",
+    "１度や２度の失敗はだれにでもある。"
    ],
-   "hint": ""
+   "h": "529f2e4a",
+   "oh": [
+    "31457fd",
+    "52653e66",
+    "626a81c1",
+    "529f2e4a"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0517"
   },
   {
-   "id": "S0518",
-   "day": 52,
-   "direction": "ja-zh",
+   "qid": "P-052-07-9a9c8113fe4b",
    "prompt": "私はいつも辞典を３冊手元に置いています。",
-   "knowledge_ids": [
-    "V1114"
+   "options": [
+    "我手边总放着三本辞典。",
+    "对了，明天安排是什么？",
+    "他穿着西装，很显眼。",
+    "账算下来一共五百美元。"
    ],
-   "hint": ""
+   "h": "84b99cfe",
+   "oh": [
+    "84b99cfe",
+    "f3613f32",
+    "6810aa82",
+    "2e1e71de"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0518"
   },
   {
-   "id": "S0519",
-   "day": 52,
-   "direction": "ja-zh",
+   "qid": "P-052-08-8865c2d170ad",
    "prompt": "これらの品物は非売品です。",
-   "knowledge_ids": [
-    "V1115"
+   "options": [
+    "那个国家气候温和。",
+    "这些物品是非卖品。",
+    "你没有权利去那里。",
+    "从哪个机场出发？"
    ],
-   "hint": ""
+   "h": "715c8a8f",
+   "oh": [
+    "82295631",
+    "715c8a8f",
+    "2e3620c5",
+    "df477bcd"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0519"
   },
   {
-   "id": "S0520",
-   "day": 52,
-   "direction": "ja-zh",
+   "qid": "P-052-09-43873d426a98",
    "prompt": "ここしばらく彼にまるで会わない。",
-   "knowledge_ids": [
-    "V1116"
+   "options": [
+    "大学毕业后就业了。",
+    "最近一直没见到他。",
+    "那个计划正在推进。",
+    "请报告目前的情况。"
    ],
-   "hint": ""
+   "h": "382041d4",
+   "oh": [
+    "d01d0bdc",
+    "382041d4",
+    "9b6c1a61",
+    "aabf3a50"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0520"
   }
  ],
  "quiz": [

@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1894",
    "front": "結局",
    "back": "结果；终究",
+   "kana": "けっきょく",
    "stage": "planned"
   },
   {
    "kid": "V1895",
    "front": "決心",
    "back": "决心",
+   "kana": "けっしん",
    "stage": "planned"
   },
   {
    "kid": "V1896",
    "front": "欠席",
    "back": "缺席",
+   "kana": "けっせき",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0449",
    "front": "命",
-   "back": "生命；命令｜音 メイ、ミョウ",
+   "back": "生命；命令",
+   "kana": "メイ、ミョウ、いのち",
    "stage": "planned"
   },
   {
    "kid": "K0450",
    "front": "福",
-   "back": "福气；幸福｜音 フク",
+   "back": "福气；幸福",
+   "kana": "フク",
    "stage": "planned"
   },
   {
    "kid": "V1861",
    "front": "クリーム",
    "back": "奶油",
+   "kana": "クリーム",
    "stage": "planned"
   },
   {
    "kid": "V1862",
    "front": "繰り返す",
    "back": "重复",
+   "kana": "くりかえす",
    "stage": "planned"
   },
   {
    "kid": "V1863",
    "front": "クリスマス",
    "back": "圣诞节",
+   "kana": "クリスマス",
    "stage": "planned"
   },
   {
@@ -531,104 +539,204 @@
  ],
  "sentences": [
   {
-   "id": "S1081",
-   "day": 109,
-   "direction": "zh-ja",
+   "qid": "P-109-00-d355ac0c73f4",
    "prompt": "有钱人不一定幸福。",
-   "knowledge_ids": [
-    "V1947"
+   "options": [
+    "金持ちが必ずしも幸福とは限らない。",
+    "スイッチは時間通りに働かなかった。",
+    "同じ事が国家についても当てはまる。",
+    "彼は世間でいう音楽の真の愛好者だ。"
    ],
-   "hint": ""
+   "h": "b584ae09",
+   "oh": [
+    "b584ae09",
+    "e8b6d63c",
+    "1bbb6c5b",
+    "3e786b72"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1081"
   },
   {
-   "id": "S1082",
-   "day": 109,
-   "direction": "zh-ja",
+   "qid": "P-109-01-e253c63421d6",
    "prompt": "法律未必总是公平的。",
-   "knowledge_ids": [
-    "V1948"
+   "options": [
+    "法が常に公平であるとは限らない。",
+    "インドの人口はどのくらいですか。",
+    "それはホテルから遠くありません。",
+    "その計画では彼に同調できました。"
    ],
-   "hint": ""
+   "h": "d663334c",
+   "oh": [
+    "d663334c",
+    "4c5d8293",
+    "2d083832",
+    "9c573687"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1082"
   },
   {
-   "id": "S1083",
-   "day": 109,
-   "direction": "zh-ja",
+   "qid": "P-109-02-b450916e89b7",
    "prompt": "史密斯先生是市长候选人。",
-   "knowledge_ids": [
-    "V1949"
+   "options": [
+    "スミス氏は市長候補である。",
+    "この紙はインクを吸わない。",
+    "われわれは体力を自慢した。",
+    "彼の語学力が羨ましいです。"
    ],
-   "hint": ""
+   "h": "d7451ff4",
+   "oh": [
+    "d7451ff4",
+    "1efc66f7",
+    "3ab0055a",
+    "51b280e9"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1083"
   },
   {
-   "id": "S1084",
-   "day": 109,
-   "direction": "zh-ja",
+   "qid": "P-109-03-868f4b3f658b",
    "prompt": "我正在考虑要不要跟他们一起去。",
-   "knowledge_ids": [
-    "V1950"
+   "options": [
+    "お祭りでロブスターを食べました。",
+    "それは翼の全長が約４インチある。",
+    "彼らに同行しようかと考慮中です。",
+    "あなたに頼んでもよろしいですか。"
    ],
-   "hint": ""
+   "h": "f1b32fc3",
+   "oh": [
+    "6e738748",
+    "18490b8d",
+    "f1b32fc3",
+    "e84dbeb6"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1084"
   },
   {
-   "id": "S1085",
-   "day": 109,
-   "direction": "zh-ja",
+   "qid": "P-109-04-036ab20ad770",
    "prompt": "那超出了人类智慧的极限。",
-   "knowledge_ids": [
-    "V1951"
+   "options": [
+    "それは人知の限界を越えている。",
+    "アイロンで手をやけどしました。",
+    "オリーブの実から油が取れます。",
+    "兄はアパートをさがしています。"
    ],
-   "hint": ""
+   "h": "289d0261",
+   "oh": [
+    "289d0261",
+    "8afa85c",
+    "9ffe72d0",
+    "7f656d90"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1085"
   },
   {
-   "id": "S1086",
-   "day": 109,
-   "direction": "zh-ja",
+   "qid": "P-109-05-fbc3afdb5558",
    "prompt": "教练给了我建议。",
-   "knowledge_ids": [
-    "V1952"
+   "options": [
+    "コーチが助言をしてくれた。",
+    "あなたは数学が得意ですか。",
+    "京都には多くの神社がある。",
+    "国会は来週月曜に開かれる。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1087",
-   "day": 109,
+   "h": "93917603",
+   "oh": [
+    "93917603",
+    "169afc24",
+    "8cc76400",
+    "cbf2efc5"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1086"
+  },
+  {
+   "qid": "P-109-06-556b15fba8f2",
    "prompt": "船被冰封住了。",
-   "knowledge_ids": [
-    "V1954"
+   "options": [
+    "船は氷に閉じ込められてしまった。",
+    "この学校は男子よりも女子が多い。",
+    "みんなには優しく話してください。",
+    "その事が彼のすべての夢を壊した。"
    ],
-   "hint": ""
+   "h": "8c427351",
+   "oh": [
+    "8c427351",
+    "53353c8",
+    "125e9885",
+    "2835eaff"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1087"
   },
   {
-   "id": "S1088",
-   "day": 109,
-   "direction": "ja-zh",
+   "qid": "P-109-07-4d84040087c2",
    "prompt": "道が凍っているから気を付けなさい。",
-   "knowledge_ids": [
-    "V1955"
+   "options": [
+    "对不起，我误会你了。",
+    "路面结冰了，小心点。",
+    "他们坐在餐厅里面。",
+    "雨正好停了，出发吧。"
    ],
-   "hint": ""
+   "h": "cbef4708",
+   "oh": [
+    "eeb23946",
+    "cbef4708",
+    "7c1ef408",
+    "65ac9c57"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1088"
   },
   {
-   "id": "S1089",
-   "day": 109,
-   "direction": "ja-zh",
+   "qid": "P-109-08-59b57e260e0b",
    "prompt": "あなたを誤解してしまってごめんなさい。",
-   "knowledge_ids": [
-    "V1957"
+   "options": [
+    "鲍勃到底是不是病了？",
+    "对不起，我误会你了。",
+    "茶叶的质量正在下降。",
+    "女孩子几乎都很温柔。"
    ],
-   "hint": ""
+   "h": "eeb23946",
+   "oh": [
+    "f2ed1fa9",
+    "eeb23946",
+    "353aa331",
+    "5bf5f95d"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1089"
   },
   {
-   "id": "S1090",
-   "day": 109,
-   "direction": "ja-zh",
+   "qid": "P-109-09-d80e763a983b",
    "prompt": "これは私の語学の能力を有利に使える好機である。",
-   "knowledge_ids": [
-    "V1958"
+   "options": [
+    "这条河一直延伸到新奥尔良。",
+    "巨型油轮刚刚终于出港了。",
+    "你的工作没有达到期待的水准。",
+    "这是能发挥我语言能力的好机会。"
    ],
-   "hint": ""
+   "h": "38a01c2f",
+   "oh": [
+    "52962a3e",
+    "b64496b6",
+    "aa45ad00",
+    "38a01c2f"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1090"
   }
  ],
  "quiz": [

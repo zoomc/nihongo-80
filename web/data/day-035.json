@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0817",
    "front": "みんな",
    "back": "大家；全部",
+   "kana": "みんな",
    "stage": "planned"
   },
   {
    "kid": "V0818",
    "front": "六日",
    "back": "六天；六号",
+   "kana": "むいか",
    "stage": "planned"
   },
   {
    "kid": "V0819",
    "front": "向こう",
    "back": "对面；那边",
+   "kana": "むこう",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0188",
    "front": "用",
-   "back": "使用；事情；用途｜音 ヨウ",
+   "back": "使用；事情；用途",
+   "kana": "ヨウ、もち.いる",
    "stage": "planned"
   },
   {
    "kid": "K0189",
    "front": "度",
-   "back": "程度；次数；每次｜音 ド、ト、タク",
+   "back": "程度；次数；每次",
+   "kana": "ド、ト、タク、たび、-た.い",
    "stage": "planned"
   },
   {
    "kid": "V0779",
    "front": "辺",
    "back": "附近；一带",
+   "kana": "へん",
    "stage": "planned"
   },
   {
    "kid": "V0780",
    "front": "ペン",
    "back": "笔；钢笔",
+   "kana": "ペン",
    "stage": "planned"
   },
   {
    "kid": "V0781",
    "front": "帽子",
    "back": "帽子",
+   "kana": "ぼうし",
    "stage": "planned"
   },
   {
@@ -524,104 +532,204 @@
  ],
  "sentences": [
   {
-   "id": "S0341",
-   "day": 35,
-   "direction": "zh-ja",
+   "qid": "P-035-00-6a8eec62c4be",
    "prompt": "哪个包是你的？",
-   "knowledge_ids": [
-    "V0828"
+   "options": [
+    "人類だけが火の使い方を知っている。",
+    "どちらのかばんがあなたの物ですか。",
+    "バリウムをまず一口飲んでください。",
+    "おじいさんはとてもゆっくりと話す。"
    ],
-   "hint": ""
+   "h": "1da36d41",
+   "oh": [
+    "802a2f24",
+    "1da36d41",
+    "50f70cb0",
+    "ade4fb30"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0341"
   },
   {
-   "id": "S0342",
-   "day": 35,
-   "direction": "zh-ja",
+   "qid": "P-035-01-800f6326fd55",
    "prompt": "约翰一直走到门口。",
-   "knowledge_ids": [
-    "V0829"
+   "options": [
+    "ジャックは８月１０日に生まれた。",
+    "ジョンは門のところまで出てきた。",
+    "これらの語をノートに書きなさい。",
+    "スケートはとてもおもしろかった。"
    ],
-   "hint": ""
+   "h": "7aac2a83",
+   "oh": [
+    "6df6eadc",
+    "7aac2a83",
+    "7a4a4062",
+    "ebd819a3"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0342"
   },
   {
-   "id": "S0343",
-   "day": 35,
-   "direction": "zh-ja",
+   "qid": "P-035-02-899eceb97db0",
    "prompt": "问题是我们没钱。",
-   "knowledge_ids": [
-    "V0830"
+   "options": [
+    "その計画では彼に同調できました。",
+    "その話は親から子へと伝えられた。",
+    "問題はお金がないということです。",
+    "こ、こら！ナニやっとるかぁぁ！！"
    ],
-   "hint": ""
+   "h": "6d3a7215",
+   "oh": [
+    "9c573687",
+    "c65bb93d",
+    "6d3a7215",
+    "1b91f40"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0343"
   },
   {
-   "id": "S0344",
-   "day": 35,
-   "direction": "zh-ja",
+   "qid": "P-035-03-ac700eafd16e",
    "prompt": "那家菜店对客人很热情。",
-   "knowledge_ids": [
-    "V0831"
+   "options": [
+    "このページをコピーして下さい。",
+    "その八百屋は客にとても親切だ。",
+    "このスープは塩が少し足りない。",
+    "そのオレンジは後味が変だった。"
    ],
-   "hint": ""
+   "h": "4586f317",
+   "oh": [
+    "fd6444e6",
+    "4586f317",
+    "5e1ae47d",
+    "d6185ff2"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0344"
   },
   {
-   "id": "S0345",
-   "day": 35,
-   "direction": "zh-ja",
+   "qid": "P-035-04-a6848546a891",
    "prompt": "请问点简单些的。",
-   "knowledge_ids": [
-    "V0832"
+   "options": [
+    "あなたの考えを言ってください。",
+    "もっと易しい事を聞いて下さい。",
+    "この家は住むのにとても快適だ。",
+    "そのオレンジは後味が変だった。"
    ],
-   "hint": ""
+   "h": "84e4e179",
+   "oh": [
+    "a9413e5c",
+    "84e4e179",
+    "be849b07",
+    "d6185ff2"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0345"
   },
   {
-   "id": "S0346",
-   "day": 35,
-   "direction": "zh-ja",
+   "qid": "P-035-05-f21c23017a85",
    "prompt": "学校因圣诞节放假了。",
-   "knowledge_ids": [
-    "V0833"
+   "options": [
+    "アラビア語は右から左へ書きます。",
+    "それはすべて天候に依存している。",
+    "その作家は会話を書くのがうまい。",
+    "学校はクリスマスで休みになった。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0347",
-   "day": 35,
+   "h": "ac500766",
+   "oh": [
+    "36918c3",
+    "3189be4f",
+    "34f482bb",
+    "ac500766"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0346"
+  },
+  {
+   "qid": "P-035-06-ae18f21bee54",
    "prompt": "那里有八颗小石子。",
-   "knowledge_ids": [
-    "V0834"
+   "options": [
+    "その知らせにはがっかりだ。",
+    "そこに八つの小石があった。",
+    "空には太陽が輝いています。",
+    "科学は観察に基づいている。"
    ],
-   "hint": ""
+   "h": "9818201b",
+   "oh": [
+    "d49d10e5",
+    "9818201b",
+    "3ed5e986",
+    "d541c6"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0347"
   },
   {
-   "id": "S0348",
-   "day": 35,
-   "direction": "ja-zh",
+   "qid": "P-035-07-c01b6ad06198",
    "prompt": "その山はどれくらいの高さですか。",
-   "knowledge_ids": [
-    "V0835"
+   "options": [
+    "今晚是有聚会吗？",
+    "部长做了说明。",
+    "那座山有多高？",
+    "从第十课开始吧。"
    ],
-   "hint": ""
+   "h": "f66afa54",
+   "oh": [
+    "6ed5872b",
+    "4941703c",
+    "f66afa54",
+    "7c4687ec"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0348"
   },
   {
-   "id": "S0349",
-   "day": 35,
-   "direction": "ja-zh",
+   "qid": "P-035-08-6c2a08a5cd77",
    "prompt": "５ドルをやる。",
-   "knowledge_ids": [
-    "V0836"
+   "options": [
+    "电梯在哪儿？",
+    "给你五美元。",
+    "两个当中哪个贵？",
+    "收银台在哪里。"
    ],
-   "hint": ""
+   "h": "82b87323",
+   "oh": [
+    "6e24e41d",
+    "82b87323",
+    "fc08db83",
+    "55df731b"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0349"
   },
   {
-   "id": "S0350",
-   "day": 35,
-   "direction": "ja-zh",
+   "qid": "P-035-09-694f0a03aa27",
    "prompt": "ひょっとすると夕方前に雨になるかもしれない。",
-   "knowledge_ids": [
-    "V0837"
+   "options": [
+    "说不定傍晚前会下雨。",
+    "我解不出这道数学题。",
+    "布谷鸟春天会来这里。",
+    "和同事一起吃了午饭。"
    ],
-   "hint": ""
+   "h": "2fddc9ef",
+   "oh": [
+    "2fddc9ef",
+    "aeda3c9e",
+    "29d516f0",
+    "e795c739"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0350"
   }
  ],
  "quiz": [

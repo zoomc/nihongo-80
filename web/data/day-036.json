@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0836",
    "front": "やる",
    "back": "做；给",
+   "kana": "やる",
    "stage": "planned"
   },
   {
    "kid": "V0837",
    "front": "夕方",
    "back": "傍晚",
+   "kana": "ゆうがた",
    "stage": "planned"
   },
   {
    "kid": "V0838",
    "front": "夕飯",
    "back": "晚饭",
+   "kana": "ゆうはん",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0192",
    "front": "思",
-   "back": "想；认为｜音 シ",
+   "back": "想；认为",
+   "kana": "シ、おも.う、おもえら.く、おぼ.す",
    "stage": "planned"
   },
   {
    "kid": "K0193",
    "front": "世",
-   "back": "世间；世代；社会｜音 セイ、セ、ソウ",
+   "back": "世间；世代；社会",
+   "kana": "セイ、セ、ソウ、よ",
    "stage": "planned"
   },
   {
    "kid": "V0798",
    "front": "また",
    "back": "又；再",
+   "kana": "また",
    "stage": "planned"
   },
   {
    "kid": "V0799",
    "front": "町",
    "back": "城镇；街道",
+   "kana": "まち",
    "stage": "planned"
   },
   {
    "kid": "V0800",
    "front": "まっすぐ",
    "back": "笔直；直接",
+   "kana": "まっすぐ",
    "stage": "planned"
   },
   {
@@ -519,104 +527,204 @@
  ],
  "sentences": [
   {
-   "id": "S0351",
-   "day": 36,
-   "direction": "zh-ja",
+   "qid": "P-036-00-6e6c4ab7ac49",
    "prompt": "最多只能等四天。",
-   "knowledge_ids": [
-    "V0848"
+   "options": [
+    "その商品はテレビで広告された。",
+    "それはあなたのナイフではない。",
+    "長くても４日しか待てませんよ。",
+    "この制度には改良の余地がない。"
    ],
-   "hint": ""
+   "h": "9d3f755d",
+   "oh": [
+    "5295e0d9",
+    "89c04ee5",
+    "9d3f755d",
+    "849b2eb5"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0351"
   },
   {
-   "id": "S0352",
-   "day": 36,
-   "direction": "zh-ja",
+   "qid": "P-036-01-d85243fa5204",
    "prompt": "把那张纸折成四折。",
-   "knowledge_ids": [
-    "V0849"
+   "options": [
+    "彼は商売をたたんで引退した。",
+    "その船が沈んだのは明らかだ。",
+    "朝の電車はとても混雑します。",
+    "その紙を四つ折りにしなさい。"
    ],
-   "hint": ""
+   "h": "6860baf1",
+   "oh": [
+    "144390d5",
+    "c794b5c3",
+    "14d044ce",
+    "6860baf1"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0352"
   },
   {
-   "id": "S0353",
-   "day": 36,
-   "direction": "zh-ja",
+   "qid": "P-036-02-9f196aaed00f",
    "prompt": "我们就叫你凯法吧。",
-   "knowledge_ids": [
-    "V0850"
+   "options": [
+    "あなたをケパと呼ぶことにします。",
+    "ラジオの音を下げてくれませんか。",
+    "ロジャーはパーティーが大好きだ。",
+    "ここでは煙草は禁止されています。"
    ],
-   "hint": ""
+   "h": "27fecd16",
+   "oh": [
+    "27fecd16",
+    "2be3730e",
+    "e9d09b67",
+    "ecc80e4d"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0353"
   },
   {
-   "id": "S0354",
-   "day": 36,
-   "direction": "zh-ja",
+   "qid": "P-036-03-801adc6026d0",
    "prompt": "除此之外已经没有别的办法了。",
-   "knowledge_ids": [
-    "V0851"
+   "options": [
+    "あなたは夜よく寝れませんか。",
+    "ジョージは勉強に真剣でない。",
+    "もうこれよりほかに手はない。",
+    "テーブルの上にカップがある。"
    ],
-   "hint": ""
+   "h": "9865793f",
+   "oh": [
+    "9b9a05d6",
+    "112da97",
+    "9865793f",
+    "b6c3b73b"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0354"
   },
   {
-   "id": "S0355",
-   "day": 36,
-   "direction": "zh-ja",
+   "qid": "P-036-04-fa7cec768e9f",
    "prompt": "你晚上睡不好吗？",
-   "knowledge_ids": [
-    "V0852"
+   "options": [
+    "パスポートを拝見できますか。",
+    "あなたは夜よく寝れませんか。",
+    "この手の本はあまり読まない。",
+    "毎月のガス代はいくらですか。"
    ],
-   "hint": ""
+   "h": "9b9a05d6",
+   "oh": [
+    "f4834db0",
+    "9b9a05d6",
+    "771de503",
+    "a5257803"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0355"
   },
   {
-   "id": "S0356",
-   "day": 36,
-   "direction": "zh-ja",
+   "qid": "P-036-05-297f203813a0",
    "prompt": "被这么一说我就没辙了。",
-   "knowledge_ids": [
-    "V0853"
+   "options": [
+    "彼は根はやさしい男だった。",
+    "私たちは毎年展覧会を開く。",
+    "それを言われると弱いなあ。",
+    "私たちは制服を支給された。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0357",
-   "day": 36,
+   "h": "84412a13",
+   "oh": [
+    "a6673fe9",
+    "e4b88455",
+    "84412a13",
+    "9edbefef"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0356"
+  },
+  {
+   "qid": "P-036-06-536d26635d6f",
    "prompt": "下个月出租车费要涨。",
-   "knowledge_ids": [
-    "V0854"
+   "options": [
+    "この豚肉は１キロいくらですか。",
+    "シャッターを押してくれますか。",
+    "どんぐりからオークが生まれる。",
+    "来月タクシー料金があがります。"
    ],
-   "hint": ""
+   "h": "1f88314c",
+   "oh": [
+    "24e2e940",
+    "a9a6fa1f",
+    "13cc23d0",
+    "1f88314c"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0357"
   },
   {
-   "id": "S0358",
-   "day": 36,
-   "direction": "ja-zh",
+   "qid": "P-036-07-aa3468617c4b",
    "prompt": "来週ヨーロッパへ行くつもりなんです。",
-   "knowledge_ids": [
-    "V0855"
+   "options": [
+    "我打算下周去欧洲。",
+    "这是他唯一的希望。",
+    "我们不能依赖父母。",
+    "这类事我完全不懂。"
    ],
-   "hint": ""
+   "h": "221cdbf7",
+   "oh": [
+    "221cdbf7",
+    "8aacf9ab",
+    "d8540292",
+    "39d0bd54"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0358"
   },
   {
-   "id": "S0359",
-   "day": 36,
-   "direction": "ja-zh",
+   "qid": "P-036-08-bb523d5edba8",
    "prompt": "あなたは来年この本を読むことが出来るでしょう。",
-   "knowledge_ids": [
-    "V0856"
+   "options": [
+    "你明年应该就能读这本书了。",
+    "那场暴风雨带来了巨大损失。",
+    "约翰逊先生简直是一部活词典。",
+    "德语不是一门容易的语言。"
    ],
-   "hint": ""
+   "h": "7c2a0552",
+   "oh": [
+    "7c2a0552",
+    "5f9247ec",
+    "a187ea35",
+    "a69c3150"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0359"
   },
   {
-   "id": "S0360",
-   "day": 36,
-   "direction": "ja-zh",
+   "qid": "P-036-09-767f65b291f8",
    "prompt": "そのニュースはラジオで聞いたよ。",
-   "knowledge_ids": [
-    "V0857"
+   "options": [
+    "要是电话响了，你能接一下吗。",
+    "你的工作没有达到期待的水准。",
+    "约翰急得连说话的空都没有。",
+    "那消息我是从收音机里听到的。"
    ],
-   "hint": ""
+   "h": "329be490",
+   "oh": [
+    "c0147fd2",
+    "aa45ad00",
+    "e5d6bf6f",
+    "329be490"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0360"
   }
  ],
  "quiz": [

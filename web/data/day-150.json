@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V2659",
    "front": "莫大",
    "back": "巨大；巨额",
+   "kana": "ばくだい",
    "stage": "planned"
   },
   {
    "kid": "V2660",
    "front": "爆発",
    "back": "爆炸",
+   "kana": "ばくはつ",
    "stage": "planned"
   },
   {
    "kid": "V2661",
    "front": "博物館",
    "back": "博物馆",
+   "kana": "はくぶつかん",
    "stage": "planned"
   },
   {
@@ -70,31 +73,36 @@
   {
    "kid": "K0613",
    "front": "杯",
-   "back": "杯；酒杯｜音 ハイ",
+   "back": "杯；酒杯",
+   "kana": "ハイ、さかずき",
    "stage": "planned"
   },
   {
    "kid": "K0614",
    "front": "疲",
-   "back": "疲劳；累｜音 ヒ",
+   "back": "疲劳；累",
+   "kana": "ヒ、つか.れる、-づか.れ、つか.らす",
    "stage": "planned"
   },
   {
    "kid": "V2617",
    "front": "熱中",
    "back": "热衷；着迷",
+   "kana": "ねっちゅう",
    "stage": "planned"
   },
   {
    "kid": "V2618",
    "front": "年間",
    "back": "一年间；年度",
+   "kana": "ねんかん",
    "stage": "planned"
   },
   {
    "kid": "V2619",
    "front": "年中",
    "back": "全年；一年到头",
+   "kana": "ねんじゅう",
    "stage": "planned"
   },
   {
@@ -106,13 +114,15 @@
   {
    "kid": "K0605",
    "front": "慣",
-   "back": "习惯；习惯干｜音 カン",
+   "back": "习惯；习惯干",
+   "kana": "カン、な.れる、な.らす",
    "stage": "planned"
   },
   {
    "kid": "K0606",
    "front": "礼",
-   "back": "礼节；谢意｜音 レイ、ライ",
+   "back": "礼节；谢意",
+   "kana": "レイ、ライ",
    "stage": "planned"
   }
  ],
@@ -515,104 +525,204 @@
  ],
  "sentences": [
   {
-   "id": "S1491",
-   "day": 150,
-   "direction": "zh-ja",
+   "qid": "P-150-00-2bd4f7d2dc2b",
    "prompt": "我对她有感情，离不开她。",
-   "knowledge_ids": [
-    "V2687"
+   "options": [
+    "ラジオの音を下げてくれませんか。",
+    "この学校は男子よりも女子が多い。",
+    "あなたをケパと呼ぶことにします。",
+    "彼女に愛着があって離れられない。"
    ],
-   "hint": ""
+   "h": "a0c7b41e",
+   "oh": [
+    "2be3730e",
+    "53353c8",
+    "27fecd16",
+    "a0c7b41e"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1491"
   },
   {
-   "id": "S1492",
-   "day": 150,
-   "direction": "zh-ja",
+   "qid": "P-150-01-0bee10bf6729",
    "prompt": "羽毛颜色相同的鸟会聚在一起。",
-   "knowledge_ids": [
-    "V2688"
+   "options": [
+    "同じ色の羽の鳥は共に集まるものだ。",
+    "その場所は今は相当建て込んでいる。",
+    "彼は高等学校の生徒ではありません。",
+    "ライオンとヒョウの違いは何ですか。"
    ],
-   "hint": ""
+   "h": "83985809",
+   "oh": [
+    "83985809",
+    "923b8d6a",
+    "31457fd",
+    "b866895a"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1492"
   },
   {
-   "id": "S1493",
-   "day": 150,
-   "direction": "zh-ja",
+   "qid": "P-150-02-805197b07ff6",
    "prompt": "这条河宽一英里。",
-   "knowledge_ids": [
-    "V2689"
+   "options": [
+    "スミス氏は市長候補である。",
+    "全国民が平和を望んでいる。",
+    "この川の幅が１マイルある。",
+    "事態はかなり切迫している。"
    ],
-   "hint": ""
+   "h": "ee0a3e53",
+   "oh": [
+    "d7451ff4",
+    "ad056ed6",
+    "ee0a3e53",
+    "23d029f3"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1493"
   },
   {
-   "id": "S1494",
-   "day": 150,
-   "direction": "zh-ja",
+   "qid": "P-150-03-e1ba48a3d385",
    "prompt": "那个女孩长得很像她母亲。",
-   "knowledge_ids": [
-    "V2690"
+   "options": [
+    "その時計はスイスで製造されている。",
+    "アメリカ旅行のよい記念になります。",
+    "ぼくは少々君に腹が立っているんだ。",
+    "その女の子は彼女の母親と似ている。"
    ],
-   "hint": ""
+   "h": "133f7fc7",
+   "oh": [
+    "9593021b",
+    "626a81c1",
+    "6ef7715c",
+    "133f7fc7"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1494"
   },
   {
-   "id": "S1495",
-   "day": 150,
-   "direction": "zh-ja",
+   "qid": "P-150-04-5dc71f2b1c6a",
    "prompt": "细节可以省略。",
-   "knowledge_ids": [
-    "V2691"
+   "options": [
+    "二つの店の値段を比べます。",
+    "心理学は人間の感情を扱う。",
+    "細かい所は省いて構わない。",
+    "雨は夜には止む見込みです。"
    ],
-   "hint": ""
+   "h": "6a76b4d8",
+   "oh": [
+    "b027db99",
+    "40ba6b43",
+    "6a76b4d8",
+    "e54102ce"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1495"
   },
   {
-   "id": "S1496",
-   "day": 150,
-   "direction": "zh-ja",
+   "qid": "P-150-05-e95cfa9a4708",
    "prompt": "我特别喜欢这个场景。",
-   "knowledge_ids": [
-    "V2692"
+   "options": [
+    "特にこの場面が好きですねえ。",
+    "その火事はおととい発生した。",
+    "その車は修理する価値がない。",
+    "その光景を見てぎょっとした。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1497",
-   "day": 150,
+   "h": "2bcf13fd",
+   "oh": [
+    "2bcf13fd",
+    "d0498af0",
+    "d8740c48",
+    "f1930e87"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1496"
+  },
+  {
+   "qid": "P-150-06-15f4d56f90c7",
    "prompt": "我们常去打球的那片空地如今盖满了房子。",
-   "knowledge_ids": [
-    "V2693"
+   "options": [
+    "ほとんど空なのでガソリンを入れなくてはなりません。",
+    "あれだけのコインを収集するのにどれだけの年月がかかりましたか。",
+    "私は現代の音楽はあまり好きではない事を認めます。",
+    "私達がよく野球をして遊んだ原は今すっかり家が建て込んでしまった。"
    ],
-   "hint": ""
+   "h": "4dff08f8",
+   "oh": [
+    "a35826ea",
+    "a9bdb64e",
+    "6ca4aead",
+    "4dff08f8"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1497"
   },
   {
-   "id": "S1498",
-   "day": 150,
-   "direction": "ja-zh",
+   "qid": "P-150-07-c3d4401d66f6",
    "prompt": "あの人は口と腹が反対だ。",
-   "knowledge_ids": [
-    "V2694"
+   "options": [
+    "那个人口是心非。",
+    "汤姆终于戒烟了。",
+    "事态非常严重。",
+    "恶魔也许会来哦。"
    ],
-   "hint": ""
+   "h": "4f662265",
+   "oh": [
+    "4f662265",
+    "9c580eba",
+    "7e196bc1",
+    "e02eee05"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1498"
   },
   {
-   "id": "S1499",
-   "day": 150,
-   "direction": "ja-zh",
+   "qid": "P-150-08-bac68909cd86",
    "prompt": "針で親指を突いてしまった。",
-   "knowledge_ids": [
-    "V2695"
+   "options": [
+    "针扎到了我的拇指。",
+    "风轻柔地拂过树丛。",
+    "他们会组织工会吧。",
+    "他不知道受了多少苦。"
    ],
-   "hint": ""
+   "h": "97a1ec94",
+   "oh": [
+    "97a1ec94",
+    "ce06f34d",
+    "4a5d6cc4",
+    "95b0f650"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1499"
   },
   {
-   "id": "S1500",
-   "day": 150,
-   "direction": "ja-zh",
+   "qid": "P-150-09-05fcdbb5c865",
    "prompt": "問題はどこにテントを張るかだった。",
-   "knowledge_ids": [
-    "V2696"
+   "options": [
+    "下下个月是十二月。",
+    "我和大臣本人谈过了。",
+    "我解不出这道数学题。",
+    "问题是在哪里搭帐篷。"
    ],
-   "hint": ""
+   "h": "8ad9c1ae",
+   "oh": [
+    "3d2240f5",
+    "e4acb359",
+    "aeda3c9e",
+    "8ad9c1ae"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1500"
   }
  ],
  "quiz": [

@@ -1,4 +1,14 @@
 
+[hidden]{display:none!important}
+.lesson-nav{display:flex;justify-content:space-between;gap:16px;margin-top:28px;font-size:14px}
+.study-toolbar,.view-switch{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin:12px 0}
+.btn[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+.study-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:10px;padding:16px 0;border-bottom:1px solid var(--line);align-items:start}
+.study-ja,.study-meaning{min-width:0;overflow-wrap:anywhere}.list-word{font-size:21px;font-weight:600}.kana-line{display:block}.list-example{grid-column:1/-1;line-height:1.9;font-size:15px}
+.list-meta{grid-column:1/-1}.list-meta summary{font-size:12px}.view-switch .btn{padding:7px 10px;font-size:13px}
+.rating-row{grid-column:1/-1;display:flex;gap:6px}.today-focus{font-weight:750;text-decoration-thickness:1px}.kanji-details{margin-top:18px}
+@media(max-width:480px){.study-row{column-gap:8px}.list-word{font-size:19px}.study-row .speak{font-size:12px;padding:6px}.study-toolbar .btn{font-size:13px;padding:7px 9px}}
+
 :root{--bg:#fbfaf7;--surface:#fff;--ink:#1d1c1a;--muted:#6b6862;--line:#e4e0d8;
 --accent:#b4472e;--ok:#2e7d4f;--bad:#b3261e;--radius:14px;--max:760px}
 @media (prefers-color-scheme:dark){:root{--bg:#171614;--surface:#201f1c;--ink:#efede7;

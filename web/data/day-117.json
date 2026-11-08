@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V2026",
    "front": "作曲",
    "back": "作曲",
+   "kana": "さっきょく",
    "stage": "planned"
   },
   {
    "kid": "V2027",
    "front": "ざっと",
    "back": "大致；粗略",
+   "kana": "ざっと",
    "stage": "planned"
   },
   {
    "kid": "V2028",
    "front": "さっぱり",
    "back": "清爽；完全（不）",
+   "kana": "さっぱり",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0481",
    "front": "登",
-   "back": "攀登；登记｜音 トウ、ト、ドウ、ショウ、チョウ",
+   "back": "攀登；登记",
+   "kana": "トウ、ト、ドウ、ショウ、チョウ、のぼ.る、あ.がる",
    "stage": "planned"
   },
   {
    "kid": "K0482",
    "front": "易",
-   "back": "容易；贸易｜音 エキ、イ",
+   "back": "容易；贸易",
+   "kana": "エキ、イ、やさ.しい、やす.い",
    "stage": "planned"
   },
   {
    "kid": "V1993",
    "front": "コンピューター",
    "back": "电脑",
+   "kana": "コンピューター",
    "stage": "planned"
   },
   {
    "kid": "V1994",
    "front": "婚約",
    "back": "婚约；订婚",
+   "kana": "こんやく",
    "stage": "planned"
   },
   {
    "kid": "V1995",
    "front": "混乱",
    "back": "混乱",
+   "kana": "こんらん",
    "stage": "planned"
   },
   {
@@ -454,104 +462,204 @@
  ],
  "sentences": [
   {
-   "id": "S1161",
-   "day": 117,
-   "direction": "zh-ja",
+   "qid": "P-117-00-4a37b3785df5",
    "prompt": "新分店下个月在芝加哥开业。",
-   "knowledge_ids": [
-    "V2089"
+   "options": [
+    "新しい支店が来月シカゴに開店する。",
+    "いつでも私のオフィスを訪ねなさい。",
+    "あなたの家族はきっと親切でしょう。",
+    "みんな、その装置にとても感心した。"
    ],
-   "hint": ""
+   "h": "81d32798",
+   "oh": [
+    "81d32798",
+    "17a853f2",
+    "4f1d4d0e",
+    "a024abe9"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1161"
   },
   {
-   "id": "S1162",
-   "day": 117,
-   "direction": "zh-ja",
+   "qid": "P-117-01-6fd0e3ee530b",
    "prompt": "即使没人指导，他也能学。",
-   "knowledge_ids": [
-    "V2090"
+   "options": [
+    "こんな余計な機能なんでつけたんだろう。",
+    "私はかつて大病にかかったことがあった。",
+    "ここでお買い上げの品は無料で配達します。",
+    "彼は指導されなくても学ぶことができた。"
    ],
-   "hint": ""
+   "h": "3d30d7f1",
+   "oh": [
+    "33aba312",
+    "58b7a9f0",
+    "108078d3",
+    "3d30d7f1"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1162"
   },
   {
-   "id": "S1163",
-   "day": 117,
-   "direction": "zh-ja",
+   "qid": "P-117-02-d4206b3680c8",
    "prompt": "她有一台自动洗衣机。",
-   "knowledge_ids": [
-    "V2091"
+   "options": [
+    "彼女は自動式の洗濯機をもっている。",
+    "あの二人はどうもできているらしい。",
+    "エレベーターから煙の臭いがします。",
+    "これからも人生を楽しんでください。"
    ],
-   "hint": ""
+   "h": "d2c6d572",
+   "oh": [
+    "d2c6d572",
+    "3402efb8",
+    "ed7c7a3d",
+    "36b09d73"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1163"
   },
   {
-   "id": "S1164",
-   "day": 117,
-   "direction": "zh-ja",
+   "qid": "P-117-03-ed7f3f33ca90",
    "prompt": "在本店购买的商品免费送货。",
-   "knowledge_ids": [
-    "V2092"
+   "options": [
+    "ここでお買い上げの品は無料で配達します。",
+    "彼のいいところを引き出すようにしなさい。",
+    "ごめんね。明日は朝からパートがあるのよ。",
+    "ここの下りも手掛かりがないので危険だ。"
    ],
-   "hint": ""
+   "h": "108078d3",
+   "oh": [
+    "108078d3",
+    "f8beb9a9",
+    "9d067c9",
+    "966a4e45"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1164"
   },
   {
-   "id": "S1165",
-   "day": 117,
-   "direction": "zh-ja",
+   "qid": "P-117-04-d22bdce44c30",
    "prompt": "寂静笼罩着森林。",
-   "knowledge_ids": [
-    "V2093"
+   "options": [
+    "喜んで質問に答えましょう。",
+    "静けさが森を支配していた。",
+    "すぐに旅の支度をしなさい。",
+    "島の天候はとても温暖です。"
    ],
-   "hint": ""
+   "h": "b7f58f24",
+   "oh": [
+    "b449f1b9",
+    "b7f58f24",
+    "a0bc963b",
+    "5dc2523b"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1165"
   },
   {
-   "id": "S1166",
-   "day": 117,
-   "direction": "zh-ja",
+   "qid": "P-117-05-412bc0c814c9",
    "prompt": "哪出戏好呢？",
-   "knowledge_ids": [
-    "V2094"
+   "options": [
+    "話す機会がありません。",
+    "今日はかなり寒いです。",
+    "この部屋は静かです。",
+    "どの芝居がいいですか。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1167",
-   "day": 117,
+   "h": "5a67b73d",
+   "oh": [
+    "30d4fb48",
+    "c2c783e2",
+    "ed05be90",
+    "5a67b73d"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1166"
+  },
+  {
+   "qid": "P-117-06-ccd7d96f2023",
    "prompt": "贫困常常成为犯罪的原因。",
-   "knowledge_ids": [
-    "V2095"
+   "options": [
+    "その日は実にすばらしい日だった。",
+    "ビールびんはガラスでできている。",
+    "コンピューター業界は景気がいい。",
+    "貧困はしばしば犯罪の原因となる。"
    ],
-   "hint": ""
+   "h": "506aab88",
+   "oh": [
+    "5734bd46",
+    "45e4dbee",
+    "56eaf7bf",
+    "506aab88"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1167"
   },
   {
-   "id": "S1168",
-   "day": 117,
-   "direction": "ja-zh",
+   "qid": "P-117-07-21ce31220a32",
    "prompt": "彼らは芝生の上に横になっていた。",
-   "knowledge_ids": [
-    "V2096"
+   "options": [
+    "法国在英国南边。",
+    "这个碗真不错啊。",
+    "钻石本来就很硬。",
+    "他们躺在草坪上。"
    ],
-   "hint": ""
+   "h": "2bb7a3d6",
+   "oh": [
+    "85c3daf",
+    "987d26e",
+    "aa75a0ff",
+    "2bb7a3d6"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1168"
   },
   {
-   "id": "S1169",
-   "day": 117,
-   "direction": "ja-zh",
+   "qid": "P-117-08-57194d049b24",
    "prompt": "どのような支払方法がありますか。",
-   "knowledge_ids": [
-    "V2097"
+   "options": [
+    "还有很多事该做。",
+    "向上司汇报结果。",
+    "我来给花换水吧。",
+    "有哪些支付方式？"
    ],
-   "hint": ""
+   "h": "40f54f95",
+   "oh": [
+    "283c5d8c",
+    "5d580bc5",
+    "c570507a",
+    "40f54f95"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1169"
   },
   {
-   "id": "S1170",
-   "day": 117,
-   "direction": "ja-zh",
+   "qid": "P-117-09-df0ec6e4fa91",
    "prompt": "私はその本に３ドル支払った。",
-   "knowledge_ids": [
-    "V2098"
+   "options": [
+    "那些肉完全不适合食用。",
+    "你为什么拒绝了他的提议？",
+    "跳舞对保持身材有好处。",
+    "我为那本书付了三美元。"
    ],
-   "hint": ""
+   "h": "30a5faed",
+   "oh": [
+    "7d804d6e",
+    "59938dd",
+    "ea070baa",
+    "30a5faed"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1170"
   }
  ],
  "quiz": [

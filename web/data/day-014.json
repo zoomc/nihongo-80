@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0413",
    "front": "お母さん",
    "back": "母亲；妈妈",
+   "kana": "おかあさん",
    "stage": "planned"
   },
   {
    "kid": "V0414",
    "front": "お菓子",
    "back": "点心；零食",
+   "kana": "おかし",
    "stage": "planned"
   },
   {
    "kid": "V0415",
    "front": "お金",
    "back": "钱",
+   "kana": "おかね",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0062",
    "front": "行",
-   "back": "去；行；举行｜音 コウ、ギョウ",
+   "back": "去；行；举行",
+   "kana": "コウ、ギョウ、い、おこな",
    "stage": "planned"
   },
   {
    "kid": "K0063",
    "front": "来",
-   "back": "来｜音 ライ",
+   "back": "来",
+   "kana": "ライ、く、き、こ",
    "stage": "planned"
   },
   {
    "kid": "V0373",
    "front": "いいえ",
    "back": "不；不是",
+   "kana": "いいえ",
    "stage": "planned"
   },
   {
    "kid": "V0374",
    "front": "言う",
    "back": "说",
+   "kana": "いう",
    "stage": "planned"
   },
   {
    "kid": "V0375",
    "front": "いかが",
    "back": "怎么样",
+   "kana": "いかが",
    "stage": "planned"
   },
   {
@@ -532,104 +540,204 @@
  ],
  "sentences": [
   {
-   "id": "S0131",
-   "day": 14,
-   "direction": "zh-ja",
+   "qid": "P-014-00-6630de7f1a43",
    "prompt": "他太太好像出门去哪儿了。",
-   "knowledge_ids": [
-    "V0417"
+   "options": [
+    "おはよう。ご飯をよそっても良いかしら？",
+    "安い物を買って、かえって高くつきました。",
+    "チューリップは、私たちの県の県花です。",
+    "奥さんがどこかに出かけているらしいから。"
    ],
-   "hint": ""
+   "h": "b6522b85",
+   "oh": [
+    "d3995434",
+    "9fec41e6",
+    "9f1b20e5",
+    "b6522b85"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0131"
   },
   {
-   "id": "S0132",
-   "day": 14,
-   "direction": "zh-ja",
+   "qid": "P-014-01-b56e887e298c",
    "prompt": "迈克戒酒了吗？",
-   "knowledge_ids": [
-    "V0418"
+   "options": [
+    "図書館で言葉を調べます。",
+    "ありがとうございます。",
+    "マイクはお酒をやめたの？",
+    "この紙はインクを吸わない。"
    ],
-   "hint": ""
+   "h": "2c017500",
+   "oh": [
+    "f3f4482f",
+    "4ffb347a",
+    "2c017500",
+    "1efc66f7"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0132"
   },
   {
-   "id": "S0133",
-   "day": 14,
-   "direction": "zh-ja",
+   "qid": "P-014-02-29ca9b68944b",
    "prompt": "有盛汤用的深盘吗？",
-   "knowledge_ids": [
-    "V0419"
+   "options": [
+    "土日月の午前１０時半から午後４時まで開館。",
+    "あの人達は都会の生活にあこがれている。",
+    "スープを入れるくぼんだお皿がありますか。",
+    "不動産会社に部屋を紹介してもらいました。"
    ],
-   "hint": ""
+   "h": "610e3422",
+   "oh": [
+    "823a3d8f",
+    "f7e43dfe",
+    "610e3422",
+    "e14ddae8"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0133"
   },
   {
-   "id": "S0134",
-   "day": 14,
-   "direction": "zh-ja",
+   "qid": "P-014-03-eaf697cadd62",
    "prompt": "爷爷说话非常慢。",
-   "knowledge_ids": [
-    "V0420"
+   "options": [
+    "その時計はスイスで製造されている。",
+    "先生は私に一番長い章を割り当てた。",
+    "おじいさんはとてもゆっくりと話す。",
+    "あの信号の手前で降ろしてください。"
    ],
-   "hint": ""
+   "h": "ade4fb30",
+   "oh": [
+    "9593021b",
+    "ca7cc11a",
+    "ade4fb30",
+    "4e4f3267"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0134"
   },
   {
-   "id": "S0135",
-   "day": 14,
-   "direction": "zh-ja",
+   "qid": "P-014-04-4cb6c60492f3",
    "prompt": "能帮我按一下快门吗？",
-   "knowledge_ids": [
-    "V0421"
+   "options": [
+    "その公演は万雷の拍手を受けた。",
+    "シャッターを押してくれますか。",
+    "この都市の面積はどれくらいか。",
+    "あなたの考えを言ってください。"
    ],
-   "hint": ""
+   "h": "a9a6fa1f",
+   "oh": [
+    "4c0102c4",
+    "a9a6fa1f",
+    "b726d24f",
+    "a9413e5c"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0135"
   },
   {
-   "id": "S0136",
-   "day": 14,
-   "direction": "zh-ja",
+   "qid": "P-014-05-8268c66e61d0",
    "prompt": "晚做总比不做好。",
-   "knowledge_ids": [
-    "V0422"
+   "options": [
+    "遅くなっても何もないよりはまし。",
+    "あなたをケパと呼ぶことにします。",
+    "トムはメアリーにバイクを売った。",
+    "こ、こら！ナニやっとるかぁぁ！！"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0137",
-   "day": 14,
+   "h": "6dee429",
+   "oh": [
+    "6dee429",
+    "27fecd16",
+    "3db0f9d3",
+    "1b91f40"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0136"
+  },
+  {
+   "qid": "P-014-06-9675fb215b6c",
    "prompt": "洗手间在哪儿？",
-   "knowledge_ids": [
-    "V0423"
+   "options": [
+    "まだ時間はたっぷりある。",
+    "お手洗いはどこですか。",
+    "ご協力に感謝します。",
+    "トムとフランクは親友だ。"
    ],
-   "hint": ""
+   "h": "9f20e43f",
+   "oh": [
+    "9b3b11e5",
+    "9f20e43f",
+    "fab0a215",
+    "75bb8c2d"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0137"
   },
   {
-   "id": "S0138",
-   "day": 14,
-   "direction": "ja-zh",
+   "qid": "P-014-07-f3d35dced120",
    "prompt": "お父さんからことづけがあります。",
-   "knowledge_ids": [
-    "V0424"
+   "options": [
+    "这些物品是非卖品。",
+    "你为什么想当护士？",
+    "你父亲托我带个话。",
+    "山里空气非常清新。"
    ],
-   "hint": ""
+   "h": "96804bcf",
+   "oh": [
+    "715c8a8f",
+    "28ee32c5",
+    "96804bcf",
+    "47258165"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0138"
   },
   {
-   "id": "S0139",
-   "day": 14,
-   "direction": "ja-zh",
+   "qid": "P-014-08-f97d713069a3",
    "prompt": "その男とつきあってはいけないよ。",
-   "knowledge_ids": [
-    "V0425"
+   "options": [
+    "不必用现金支付。",
+    "最近没有她的消息。",
+    "哪一把是你的吉他？",
+    "别跟那个男人来往。"
    ],
-   "hint": ""
+   "h": "c323d350",
+   "oh": [
+    "8eb5edfd",
+    "31ae203e",
+    "4a841a74",
+    "c323d350"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0139"
   },
   {
-   "id": "S0140",
-   "day": 14,
-   "direction": "ja-zh",
+   "qid": "P-014-09-ca573efd7743",
    "prompt": "あのハンサムな男の子を見て。",
-   "knowledge_ids": [
-    "V0426"
+   "options": [
+    "下下个月是十二月。",
+    "你必须学习一辈子。",
+    "能在什么地方打工？",
+    "看那个帅气的男孩。"
    ],
-   "hint": ""
+   "h": "e0e337e0",
+   "oh": [
+    "3d2240f5",
+    "9f5ce3c3",
+    "7929d740",
+    "e0e337e0"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0140"
   }
  ],
  "quiz": [

@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0099",
    "front": "映画",
    "back": "电影",
+   "kana": "えいが",
    "stage": "planned"
   },
   {
    "kid": "V0100",
    "front": "音楽",
    "back": "音乐",
+   "kana": "おんがく",
    "stage": "planned"
   },
   {
    "kid": "V0101",
    "front": "食べる",
    "back": "吃",
+   "kana": "たべる",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0032",
    "front": "人",
-   "back": "人｜音 ジン、ニン",
+   "back": "人",
+   "kana": "ジン、ニン、ひと",
    "stage": "planned"
   },
   {
    "kid": "K0033",
    "front": "男",
-   "back": "男；男性｜音 ダン、ナン",
+   "back": "男；男性",
+   "kana": "ダン、ナン、おとこ",
    "stage": "planned"
   },
   {
    "kid": "V0055",
    "front": "肉",
    "back": "肉",
+   "kana": "にく",
    "stage": "planned"
   },
   {
    "kid": "V0056",
    "front": "魚",
    "back": "鱼",
+   "kana": "さかな",
    "stage": "planned"
   },
   {
    "kid": "V0057",
    "front": "野菜",
    "back": "蔬菜",
+   "kana": "やさい",
    "stage": "planned"
   },
   {
@@ -551,104 +559,204 @@
  ],
  "sentences": [
   {
-   "id": "S0071",
-   "day": 8,
-   "direction": "zh-ja",
+   "qid": "P-008-00-76d3aae3fa98",
    "prompt": "房间里有猫。",
-   "knowledge_ids": [
-    "V0109"
+   "options": [
+    "えっ嘘でしょ。",
+    "部屋に猫がいます。",
+    "田中さんは先生です。",
+    "私は泳げません。"
    ],
-   "hint": ""
+   "h": "dcb9e3b7",
+   "oh": [
+    "cceb1ad7",
+    "dcb9e3b7",
+    "8e0bbf88",
+    "1319ae82"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0071"
   },
   {
-   "id": "S0072",
-   "day": 8,
-   "direction": "zh-ja",
+   "qid": "P-008-01-9ef61bbaea36",
    "prompt": "当上医生了。",
-   "knowledge_ids": [
-    "V0110"
+   "options": [
+    "医者になりました。",
+    "お茶を飲みます。",
+    "これは何ですか。",
+    "八日から休みます。"
    ],
-   "hint": ""
+   "h": "89a7fc5c",
+   "oh": [
+    "89a7fc5c",
+    "d303d227",
+    "c31f804f",
+    "4d6dbc76"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0072"
   },
   {
-   "id": "S0073",
-   "day": 8,
-   "direction": "zh-ja",
+   "qid": "P-008-02-d0ff786abd89",
    "prompt": "请写名字。",
-   "knowledge_ids": [
-    "V0112"
+   "options": [
+    "毎日、学校へ行きます。",
+    "名前を書いてください。",
+    "話す機会がありません。",
+    "ご協力に感謝します。"
    ],
-   "hint": ""
+   "h": "68ad7811",
+   "oh": [
+    "53ed5616",
+    "68ad7811",
+    "30d4fb48",
+    "fab0a215"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0073"
   },
   {
-   "id": "S0074",
-   "day": 8,
-   "direction": "zh-ja",
+   "qid": "P-008-03-ba2700fb2c7e",
    "prompt": "读书。",
-   "knowledge_ids": [
-    "V0113"
+   "options": [
+    "本を読みます。",
+    "子供が公園にいます。",
+    "医者になりたいです。",
+    "習い性となる。"
    ],
-   "hint": ""
+   "h": "5a4d748c",
+   "oh": [
+    "5a4d748c",
+    "c0591056",
+    "22bf2f45",
+    "32da4d7b"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0074"
   },
   {
-   "id": "S0075",
-   "day": 8,
-   "direction": "zh-ja",
+   "qid": "P-008-04-1d611c2d7e85",
    "prompt": "说日语。",
-   "knowledge_ids": [
-    "V0114"
+   "options": [
+    "日本語を話します。",
+    "遠くに小屋が見えた。",
+    "間違いを直します。",
+    "弟に本を貸します。"
    ],
-   "hint": ""
+   "h": "29338a89",
+   "oh": [
+    "29338a89",
+    "6a6c4ab3",
+    "f38675d3",
+    "e1a08215"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0075"
   },
   {
-   "id": "S0076",
-   "day": 8,
-   "direction": "zh-ja",
+   "qid": "P-008-05-ae8a1860e2fa",
    "prompt": "听音乐。",
-   "knowledge_ids": [
-    "V0115"
+   "options": [
+    "何時間も海を眺めた。",
+    "運賃は二百円です。",
+    "この問題は簡単です。",
+    "音楽を聞きます。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0077",
-   "day": 8,
+   "h": "ae738ead",
+   "oh": [
+    "aead5bf6",
+    "bc3a4c76",
+    "18fa881",
+    "ae738ead"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0076"
+  },
+  {
+   "qid": "P-008-06-9eae0a291713",
    "prompt": "在车站等朋友。",
-   "knowledge_ids": [
-    "V0116"
+   "options": [
+    "駅で友達を待ちます。",
+    "木曜日に映画を見ます。",
+    "最後まで戦い抜こう。",
+    "共益費は五千円です。"
    ],
-   "hint": ""
+   "h": "2ae190df",
+   "oh": [
+    "2ae190df",
+    "bd43fb8",
+    "441c844d",
+    "76c95f5d"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0077"
   },
   {
-   "id": "S0078",
-   "day": 8,
-   "direction": "ja-zh",
+   "qid": "P-008-07-7b0b08e8f716",
    "prompt": "電車に乗ります。",
-   "knowledge_ids": [
-    "V0117"
+   "options": [
+    "上电车。",
+    "不必用现金支付。",
+    "这绝不是小事。",
+    "医生开了药。"
    ],
-   "hint": ""
+   "h": "efa44868",
+   "oh": [
+    "efa44868",
+    "8eb5edfd",
+    "3cf7c71",
+    "f53e8688"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0078"
   },
   {
-   "id": "S0079",
-   "day": 8,
-   "direction": "ja-zh",
+   "qid": "P-008-08-179c317f79d1",
    "prompt": "雨が降っています。",
-   "knowledge_ids": [
-    "V0118"
+   "options": [
+    "正在下雨。",
+    "上学期成绩很好。",
+    "部长做了说明。",
+    "我还不太清楚。"
    ],
-   "hint": ""
+   "h": "effe2eb5",
+   "oh": [
+    "effe2eb5",
+    "964e19e4",
+    "4941703c",
+    "e0e1cf46"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0079"
   },
   {
-   "id": "S0080",
-   "day": 8,
-   "direction": "ja-zh",
+   "qid": "P-008-09-5d13a26ee7cb",
    "prompt": "七時に起きます。",
-   "knowledge_ids": [
-    "V0119"
+   "options": [
+    "必须做手术。",
+    "七点起床。",
+    "我正在找助手。",
+    "有十个人。"
    ],
-   "hint": ""
+   "h": "2fdab03e",
+   "oh": [
+    "8e4548b3",
+    "2fdab03e",
+    "f7ef99a7",
+    "90da857"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0080"
   }
  ],
  "quiz": [

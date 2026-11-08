@@ -1,0 +1,84 @@
+{
+  "base": "https://nihongo80-preview.cmjfire.workers.dev",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "2a3383614a10a1d372e3d63a4cc0ede5171dcae8621be30e5c7352746f556f72",
+      "matches_local": true
+    },
+    {
+      "path": "/day-001.html",
+      "status": 200,
+      "sha256": "9431e835c901292408bcc34024c0551812682bf3a08d6c40575114209bd29b90",
+      "matches_local": true
+    },
+    {
+      "path": "/day-047.html",
+      "status": 200,
+      "sha256": "a28d3f487c72f12421876cb703cd8424cf41feb0c18d4a3b96863b8b88af4117",
+      "matches_local": true
+    },
+    {
+      "path": "/day-150.html",
+      "status": 200,
+      "sha256": "5f18dd6aa37356a23ac1c55063071ebc27e7fd4a894fbf3c71b97b10addb55df",
+      "matches_local": true
+    },
+    {
+      "path": "/resources.html",
+      "status": 200,
+      "sha256": "e9131671ede6dd2c9664d2b1ae841b5791eee0c73a5bc9c76c4f98a2849a53e2",
+      "matches_local": true
+    },
+    {
+      "path": "/library.html",
+      "status": 200,
+      "sha256": "828bbc338478221d3b70cac7d8e0bb74a812ab7c9a3375cec597bc928077154a",
+      "matches_local": true
+    },
+    {
+      "path": "/assets/app.js",
+      "status": 200,
+      "sha256": "945b44417f2fcf2969c21cdcaaa83e9727d67e02a07324e08d145167516b9b2a",
+      "matches_local": true
+    },
+    {
+      "path": "/audio/NOTICE.txt",
+      "status": 200,
+      "sha256": "4de4c8a7b7e04d7c8dec7491d284312d80a6389e32d0ba9aec81a3a2f79804aa",
+      "matches_local": true
+    },
+    {
+      "path": "/audio/M0096.m4a",
+      "status": 200,
+      "sha256": "0669f447420907368103694b18881e6d832a290211250df98352aa0da566b7fb",
+      "matches_local": true
+    },
+    {
+      "path": "/audio/M0140.m4a",
+      "status": 200,
+      "sha256": "464214f21a0c06cff31fbd3b0293583f3b1e15ce33b17fc05b1dfd9c20fca44e",
+      "matches_local": true
+    },
+    {
+      "path": "/api/health",
+      "status": 200,
+      "sha256": "9f740070512df426f1fcf71f6292ba6fc839f379edc0cc15981b02b4bde8bda4",
+      "health": {
+        "status": "ok",
+        "features": {
+          "db": true,
+          "sync": true
+        }
+      }
+    }
+  ],
+  "unauthenticated_post": 401,
+  "owner_dry_check": {
+    "ok": true,
+    "check": true,
+    "stored": 0,
+    "day": 150
+  }
+}

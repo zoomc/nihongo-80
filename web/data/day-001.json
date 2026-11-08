@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -327,104 +327,204 @@
  ],
  "sentences": [
   {
-   "id": "S0001",
-   "day": 1,
-   "direction": "zh-ja",
+   "qid": "P-001-00-5545fb561c4f",
    "prompt": "我是学生。",
-   "knowledge_ids": [
-    "V0001"
+   "options": [
+    "雨が降っています。",
+    "私は学生です。",
+    "火災の理由は何か。",
+    "部屋に猫がいます。"
    ],
-   "hint": ""
+   "h": "749e1f84",
+   "oh": [
+    "db98fcac",
+    "749e1f84",
+    "bba4dfdd",
+    "dcb9e3b7"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0001"
   },
   {
-   "id": "S0002",
-   "day": 1,
-   "direction": "zh-ja",
+   "qid": "P-001-01-a3cf436b0ccb",
    "prompt": "您是老师吗？",
-   "knowledge_ids": [
-    "V0002"
+   "options": [
+    "最後まで戦い抜こう。",
+    "車に乗せてください。",
+    "どの芝居がいいですか。",
+    "あなたは先生ですか。"
    ],
-   "hint": ""
+   "h": "7cbc9d0b",
+   "oh": [
+    "441c844d",
+    "881c5c96",
+    "5a67b73d",
+    "7cbc9d0b"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0002"
   },
   {
-   "id": "S0003",
-   "day": 1,
-   "direction": "zh-ja",
+   "qid": "P-001-02-5289be954433",
    "prompt": "田中是老师。",
-   "knowledge_ids": [
-    "V0003"
+   "options": [
+    "八日から休みます。",
+    "友達に電話します。",
+    "田中さんは先生です。",
+    "旅行の日を決めました。"
    ],
-   "hint": ""
+   "h": "8e0bbf88",
+   "oh": [
+    "4d6dbc76",
+    "ec5f7b75",
+    "8e0bbf88",
+    "a06ca4c6"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0003"
   },
   {
-   "id": "S0004",
-   "day": 1,
-   "direction": "zh-ja",
+   "qid": "P-001-03-b769887f1ab0",
    "prompt": "你好，你好吗？",
-   "knowledge_ids": [
-    "V0004"
+   "options": [
+    "ありがとうございます。",
+    "新聞の記事を読みました。",
+    "すっかり忘れていました。",
+    "こんにちは、元気ですか。"
    ],
-   "hint": ""
+   "h": "21e6b5c4",
+   "oh": [
+    "4ffb347a",
+    "54f405f6",
+    "5ac78734",
+    "21e6b5c4"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0004"
   },
   {
-   "id": "S0005",
-   "day": 1,
-   "direction": "zh-ja",
+   "qid": "P-001-04-a32568f72f3e",
    "prompt": "晚上好，您好吗？",
-   "knowledge_ids": [
-    "V0005"
+   "options": [
+    "こんばんは、お元気ですか。",
+    "でも、これで１つ貸しだね。",
+    "この紙はインクを吸わない。",
+    "事故の原因を調べています。"
    ],
-   "hint": ""
+   "h": "81d2ed7",
+   "oh": [
+    "81d2ed7",
+    "8347f85c",
+    "1efc66f7",
+    "820e254f"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0005"
   },
   {
-   "id": "S0006",
-   "day": 1,
-   "direction": "zh-ja",
+   "qid": "P-001-05-487b2609534c",
    "prompt": "早上好。",
-   "knowledge_ids": [
-    "V0006"
+   "options": [
+    "あなたは先生ですか。",
+    "おはようございます。",
+    "お互い相性がいい。",
+    "遠くに小屋が見えた。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0007",
-   "day": 1,
+   "h": "f17175ff",
+   "oh": [
+    "7cbc9d0b",
+    "f17175ff",
+    "e4d2ac20",
+    "6a6c4ab3"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0006"
+  },
+  {
+   "qid": "P-001-06-6f8f4ad462dc",
    "prompt": "谢谢。",
-   "knowledge_ids": [
-    "V0007"
+   "options": [
+    "この問題は簡単です。",
+    "ありがとうございます。",
+    "彼は太い首をしている。",
+    "冗談はもうたくさんだ。"
    ],
-   "hint": ""
+   "h": "4ffb347a",
+   "oh": [
+    "18fa881",
+    "4ffb347a",
+    "ec596638",
+    "6808b25c"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0007"
   },
   {
-   "id": "S0008",
-   "day": 1,
-   "direction": "ja-zh",
+   "qid": "P-001-07-134bd6d604b6",
    "prompt": "すみません、駅はどこですか。",
-   "knowledge_ids": [
-    "V0008"
+   "options": [
+    "那违背我的原则。",
+    "劳驾，车站在哪？",
+    "你以为我好骗吧。",
+    "他责怪她撒谎。"
    ],
-   "hint": ""
+   "h": "ccf599ec",
+   "oh": [
+    "80ad1d1c",
+    "ccf599ec",
+    "dbbf4ad2",
+    "6ed649fb"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0008"
   },
   {
-   "id": "S0009",
-   "day": 1,
-   "direction": "ja-zh",
+   "qid": "P-001-08-5fda84048a72",
    "prompt": "りんごを一つください。",
-   "knowledge_ids": [
-    "V0009"
+   "options": [
+    "今晚是有聚会吗？",
+    "火车穿过了隧道。",
+    "请给我一个苹果。",
+    "这类书我不太读。"
    ],
-   "hint": ""
+   "h": "dd58fecf",
+   "oh": [
+    "6ed5872b",
+    "443acd9c",
+    "dd58fecf",
+    "bde26ff2"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0009"
   },
   {
-   "id": "S0010",
-   "day": 1,
-   "direction": "ja-zh",
+   "qid": "P-001-09-ae5ed8f04d0d",
    "prompt": "これは本です。",
-   "knowledge_ids": [
-    "G0001"
+   "options": [
+    "必须做手术。",
+    "稍微休息一下。",
+    "这是书。",
+    "开会迟到了。"
    ],
-   "hint": "N は N です"
+   "h": "3fc79685",
+   "oh": [
+    "8e4548b3",
+    "f3109a5f",
+    "3fc79685",
+    "bb7937e0"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0010"
   }
  ],
  "quiz": [

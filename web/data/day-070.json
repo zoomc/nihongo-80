@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V1383",
    "front": "昔",
    "back": "从前",
+   "kana": "むかし",
    "stage": "planned"
   },
   {
    "kid": "V1384",
    "front": "虫",
    "back": "虫子",
+   "kana": "むし",
    "stage": "planned"
   },
   {
    "kid": "V1385",
    "front": "息子",
    "back": "儿子",
+   "kana": "むすこ",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0293",
    "front": "定",
-   "back": "决定；规定｜音 テイ、ジョウ",
+   "back": "决定；规定",
+   "kana": "テイ、ジョウ、さだ.める、さだ.まる、さだ.か",
    "stage": "planned"
   },
   {
    "kid": "K0294",
    "front": "回",
-   "back": "回；次；旋转｜音 カイ、エ",
+   "back": "回；次；旋转",
+   "kana": "カイ、エ、まわ.る、-まわ.る、-まわ.り、まわ.す、-まわ.す、まわ.し-、-まわ.し、もとお.る、か.える",
    "stage": "planned"
   },
   {
    "kid": "V1350",
    "front": "文化",
    "back": "文化",
+   "kana": "ぶんか",
    "stage": "planned"
   },
   {
    "kid": "V1351",
    "front": "文学",
    "back": "文学",
+   "kana": "ぶんがく",
    "stage": "planned"
   },
   {
    "kid": "V1352",
    "front": "文法",
    "back": "语法",
+   "kana": "ぶんぽう",
    "stage": "planned"
   },
   {
@@ -531,104 +539,204 @@
  ],
  "sentences": [
   {
-   "id": "S0691",
-   "day": 70,
-   "direction": "zh-ja",
+   "qid": "P-070-00-5ca5bfc7b35e",
    "prompt": "要不要顺路进去坐坐。",
-   "knowledge_ids": [
-    "V1419"
+   "options": [
+    "ちょっと寄って行きませんか。",
+    "ヘレンはせいぜい４０キロだ。",
+    "その仕事をもう終えましたか。",
+    "オートバイに乗るのは楽しい。"
    ],
-   "hint": ""
+   "h": "187ef6ad",
+   "oh": [
+    "187ef6ad",
+    "4495f400",
+    "f2fbd2db",
+    "b48df371"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0691"
   },
   {
-   "id": "S0692",
-   "day": 70,
-   "direction": "zh-ja",
+   "qid": "P-070-01-5286a0da1bd3",
    "prompt": "我很乐意回答问题。",
-   "knowledge_ids": [
-    "V1420"
+   "options": [
+    "全国民が平和を望んでいる。",
+    "先生が本をくださいました。",
+    "苦痛で彼の顔が歪んでいる。",
+    "喜んで質問に答えましょう。"
    ],
-   "hint": ""
+   "h": "b449f1b9",
+   "oh": [
+    "ad056ed6",
+    "6a45a506",
+    "15706b98",
+    "b449f1b9"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0692"
   },
   {
-   "id": "S0693",
-   "day": 70,
-   "direction": "zh-ja",
+   "qid": "P-070-02-22c760e7876e",
    "prompt": "能拜托您一件事吗。",
-   "knowledge_ids": [
-    "V1421"
+   "options": [
+    "ホッチキスを貸してくれませんか。",
+    "この案を検討することにしました。",
+    "おひる頃やっと太陽が顔を出した。",
+    "あなたに頼んでもよろしいですか。"
    ],
-   "hint": ""
+   "h": "e84dbeb6",
+   "oh": [
+    "1b2dc8f1",
+    "f4913c93",
+    "c5040bc1",
+    "e84dbeb6"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0693"
   },
   {
-   "id": "S0694",
-   "day": 70,
-   "direction": "zh-ja",
+   "qid": "P-070-03-f88019f01aa8",
    "prompt": "学生应该利用图书馆的书。",
-   "knowledge_ids": [
-    "V1422"
+   "options": [
+    "その代わりにトランプをしようよ。",
+    "みんなでカブトムシを競争させた。",
+    "その日は実にすばらしい日だった。",
+    "学生は図書館の本を利用すべきだ。"
    ],
-   "hint": ""
+   "h": "aa4837e0",
+   "oh": [
+    "420672f9",
+    "fdf064f8",
+    "5734bd46",
+    "aa4837e0"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0694"
   },
   {
-   "id": "S0695",
-   "day": 70,
-   "direction": "zh-ja",
+   "qid": "P-070-04-7cf4e91c5572",
    "prompt": "这副手套不成对。",
-   "knowledge_ids": [
-    "V1423"
+   "options": [
+    "この手袋は両方がそろっていない。",
+    "スケートはとてもおもしろかった。",
+    "このソファーは場所を取りすぎる。",
+    "お尋ねしてもよろしいでしょうか。"
    ],
-   "hint": ""
+   "h": "9ed978b8",
+   "oh": [
+    "9ed978b8",
+    "ebd819a3",
+    "fa74e348",
+    "1317d3c0"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0695"
   },
   {
-   "id": "S0696",
-   "day": 70,
-   "direction": "zh-ja",
+   "qid": "P-070-05-79bd9d2c9478",
    "prompt": "那家旅馆很有家庭气氛。",
-   "knowledge_ids": [
-    "V1424"
+   "options": [
+    "毎日、学校へ行きます。",
+    "これはいくらですか。",
+    "あの旅館は家庭的だ。",
+    "今日は月曜日です。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0697",
-   "day": 70,
+   "h": "92fca1b2",
+   "oh": [
+    "53ed5616",
+    "6506aa3c",
+    "92fca1b2",
+    "6a0156fe"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0696"
+  },
+  {
+   "qid": "P-070-06-946b190989ad",
    "prompt": "我托她看家就出门了。",
-   "knowledge_ids": [
-    "V1425"
+   "options": [
+    "このテーブルを頼んだのではない。",
+    "インドの人口はどのくらいですか。",
+    "彼女に留守を頼んで外出しました。",
+    "パーティーはたのしかったですか。"
    ],
-   "hint": ""
+   "h": "98b3f94f",
+   "oh": [
+    "e76e4b0",
+    "4c5d8293",
+    "98b3f94f",
+    "4939410a"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0697"
   },
   {
-   "id": "S0698",
-   "day": 70,
-   "direction": "ja-zh",
+   "qid": "P-070-07-b02f3ec88f86",
    "prompt": "冷房が効きすぎているのですが。",
-   "knowledge_ids": [
-    "V1426"
+   "options": [
+    "这场考试可以带词典。",
+    "冷气好像开得太足了。",
+    "问题是在哪里搭帐篷。",
+    "他们的意见和我的不同。"
    ],
-   "hint": ""
+   "h": "d1afd2f0",
+   "oh": [
+    "7cd75105",
+    "d1afd2f0",
+    "8ad9c1ae",
+    "1d38ae3"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0698"
   },
   {
-   "id": "S0699",
-   "day": 70,
-   "direction": "ja-zh",
+   "qid": "P-070-08-bc8553a59994",
    "prompt": "私は地理より歴史が好きだ。",
-   "knowledge_ids": [
-    "V1427"
+   "options": [
+    "比起地理我更喜欢历史。",
+    "累的话倒不如休息更好。",
+    "一到春天就翻地播种。",
+    "迟到的人就让鬼吃掉吧。"
    ],
-   "hint": ""
+   "h": "10c41b81",
+   "oh": [
+    "10c41b81",
+    "97b7981d",
+    "24c05567",
+    "3069b7e7"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0699"
   },
   {
-   "id": "S0700",
-   "day": 70,
-   "direction": "ja-zh",
+   "qid": "P-070-09-ec41ed37fafb",
    "prompt": "レジはどこですか。",
-   "knowledge_ids": [
-    "V1428"
+   "options": [
+    "戏正好准时开演。",
+    "收银台在哪里。",
+    "和这件事没关系。",
+    "你的蓝笔不见了。"
    ],
-   "hint": ""
+   "h": "55df731b",
+   "oh": [
+    "998bd8d4",
+    "55df731b",
+    "1abbc7cc",
+    "136317ea"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0700"
   }
  ],
  "quiz": [

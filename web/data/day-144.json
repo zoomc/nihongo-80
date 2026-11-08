@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V2533",
    "front": "解ける",
    "back": "解开；解出",
+   "kana": "とける",
    "stage": "planned"
   },
   {
    "kid": "V2534",
    "front": "どこか",
    "back": "某处；总觉得",
+   "kana": "どこか",
    "stage": "planned"
   },
   {
    "kid": "V2535",
    "front": "ところが",
    "back": "然而；可是",
+   "kana": "ところが",
    "stage": "planned"
   },
   {
@@ -65,31 +68,36 @@
   {
    "kid": "K0589",
    "front": "掛",
-   "back": "挂；花费；架｜音 カイ、ケイ",
+   "back": "挂；花费；架",
+   "kana": "カイ、ケイ、か.ける、-か.ける、か.け、-か.け、-が.け、か.かる、-か.かる、-が.かる、か.かり、-が.かり、かかり、-がかり",
    "stage": "planned"
   },
   {
    "kid": "K0590",
    "front": "到",
-   "back": "到达；达到｜音 トウ",
+   "back": "到达；达到",
+   "kana": "トウ、いた.る",
    "stage": "planned"
   },
   {
    "kid": "V2491",
    "front": "手品",
    "back": "魔术；戏法",
+   "kana": "てじな",
    "stage": "planned"
   },
   {
    "kid": "V2492",
    "front": "ですから",
    "back": "所以",
+   "kana": "ですから",
    "stage": "planned"
   },
   {
    "kid": "V2493",
    "front": "鉄",
    "back": "铁",
+   "kana": "てつ",
    "stage": "planned"
   },
   {
@@ -101,13 +109,15 @@
   {
    "kid": "K0581",
    "front": "閉",
-   "back": "关闭；关｜音 ヘイ",
+   "back": "关闭；关",
+   "kana": "ヘイ、と.じる、と.ざす、し.める、し.まる、た.てる",
    "stage": "planned"
   },
   {
    "kid": "K0582",
    "front": "緒",
-   "back": "头绪；开端｜音 ショ、チョ",
+   "back": "头绪；开端",
+   "kana": "ショ、チョ、お、いとぐち",
    "stage": "planned"
   }
  ],
@@ -509,104 +519,204 @@
  ],
  "sentences": [
   {
-   "id": "S1431",
-   "day": 144,
-   "direction": "zh-ja",
+   "qid": "P-144-00-ccbf43b2a0fd",
    "prompt": "不值得为那种可怕的男人流泪。",
-   "knowledge_ids": [
-    "V2571"
+   "options": [
+    "お宅の暖房はどのようにしていますか。",
+    "あんな恐ろしい男のために流す涙はない。",
+    "とにかく、試験が終わってほっとしたよ。",
+    "これがいわゆる「天ぷら」というものです。"
    ],
-   "hint": ""
+   "h": "cfc08b10",
+   "oh": [
+    "754f087f",
+    "cfc08b10",
+    "47f611de",
+    "b094a64a"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1431"
   },
   {
-   "id": "S1432",
-   "day": 144,
-   "direction": "zh-ja",
+   "qid": "P-144-01-5139ed32174e",
    "prompt": "她四十多岁中期再婚了。",
-   "knowledge_ids": [
-    "V2572"
+   "options": [
+    "最初の打者はアウトになった。",
+    "彼女は４０代半ばで再婚した。",
+    "このセーターは気に入らない。",
+    "日本語の勉強を続けています。"
    ],
-   "hint": ""
+   "h": "7f05d656",
+   "oh": [
+    "812a999a",
+    "7f05d656",
+    "468b4643",
+    "3c17b352"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1432"
   },
   {
-   "id": "S1433",
-   "day": 144,
-   "direction": "zh-ja",
+   "qid": "P-144-02-06065c3d858a",
    "prompt": "田中是我父亲的钓友之一。",
-   "knowledge_ids": [
-    "V2573"
+   "options": [
+    "この学校は男子よりも女子が多い。",
+    "コックさんは少しもかけていない。",
+    "田中さんは父のつり仲間の一人だ。",
+    "この小包を船便で送ってください。"
    ],
-   "hint": ""
+   "h": "f8baffe4",
+   "oh": [
+    "53353c8",
+    "9948ee99",
+    "f8baffe4",
+    "79aca341"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1433"
   },
   {
-   "id": "S1434",
-   "day": 144,
-   "direction": "zh-ja",
+   "qid": "P-144-03-4d10c6b2953f",
    "prompt": "请给我一间视野好的房间。",
-   "knowledge_ids": [
-    "V2574"
+   "options": [
+    "眺めのよい部屋をお願いします。",
+    "彼は今日、お弁当を持って来た。",
+    "彼は会社で高い地位にあります。",
+    "あなたの考えを言ってください。"
    ],
-   "hint": ""
+   "h": "362057a5",
+   "oh": [
+    "362057a5",
+    "acc40490",
+    "1db91e4",
+    "a9413e5c"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1434"
   },
   {
-   "id": "S1435",
-   "day": 144,
-   "direction": "zh-ja",
+   "qid": "P-144-04-31fa1525a498",
    "prompt": "我望着大海看了好几个小时。",
-   "knowledge_ids": [
-    "V2575"
+   "options": [
+    "ただの風邪でしょう。",
+    "田中さんは先生です。",
+    "何時間も海を眺めた。",
+    "もう手が冷たくって。"
    ],
-   "hint": ""
+   "h": "aead5bf6",
+   "oh": [
+    "8dd6c2d9",
+    "8e0bbf88",
+    "aead5bf6",
+    "36fdb0e"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1435"
   },
   {
-   "id": "S1436",
-   "day": 144,
-   "direction": "zh-ja",
+   "qid": "P-144-05-38f3d4f16903",
    "prompt": "溪水流进池塘。",
-   "knowledge_ids": [
-    "V2576"
+   "options": [
+    "あの山の頂上は平らだ。",
+    "カーテンが風になびいた。",
+    "流れは池に注いでいる。",
+    "彼は太い首をしている。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1437",
-   "day": 144,
+   "h": "b649417e",
+   "oh": [
+    "31771ee1",
+    "f01f9c0a",
+    "b649417e",
+    "ec596638"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1436"
+  },
+  {
+   "qid": "P-144-06-71e06d028220",
    "prompt": "当时这条河里也流着干净的水。",
-   "knowledge_ids": [
-    "V2577"
+   "options": [
+    "ケイトはケーキの作り方を知っています。",
+    "当時はきれいな水がこの川にも流れていた。",
+    "先生は私たちを二つのグループに分けた。",
+    "その少年は死んだものとしてあきらめられた。"
    ],
-   "hint": ""
+   "h": "e9cf2459",
+   "oh": [
+    "c1f17d29",
+    "e9cf2459",
+    "13bdf689",
+    "ab3a94b8"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1437"
   },
   {
-   "id": "S1438",
-   "day": 144,
-   "direction": "ja-zh",
+   "qid": "P-144-07-87f01ca18778",
    "prompt": "ようやくその男と貸し借り無しになった。",
-   "knowledge_ids": [
-    "V2578"
+   "options": [
+    "快点的话能赶上首班车。",
+    "我不小心说漏了他生病的事。",
+    "他四肢摊开躺在榻榻米上。",
+    "我终于和那个男人两清了。"
    ],
-   "hint": ""
+   "h": "a6a93bb5",
+   "oh": [
+    "36293e64",
+    "2844a1ed",
+    "7e58bdbb",
+    "a6a93bb5"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1438"
   },
   {
-   "id": "S1439",
-   "day": 144,
-   "direction": "ja-zh",
+   "qid": "P-144-08-01cbea0ee751",
    "prompt": "なぜなら新聞記者だったからです。",
-   "knowledge_ids": [
-    "V2579"
+   "options": [
+    "这个星期六去打网球吧？",
+    "因为当时我是报社记者。",
+    "我反对任何形式的战争。",
+    "我想要角落的那张桌子。"
    ],
-   "hint": ""
+   "h": "479e92ec",
+   "oh": [
+    "b964d343",
+    "479e92ec",
+    "57c62162",
+    "230d8172"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1439"
   },
   {
-   "id": "S1440",
-   "day": 144,
-   "direction": "ja-zh",
+   "qid": "P-144-09-cc24ed5d2c80",
    "prompt": "彼がなぜ仕事をやめたのかは謎だ。",
-   "knowledge_ids": [
-    "V2580"
+   "options": [
+    "他们会组织工会吧。",
+    "路面结冰了，小心点。",
+    "最好把房间整理一下。",
+    "他为什么辞职是个谜。"
    ],
-   "hint": ""
+   "h": "f91d2778",
+   "oh": [
+    "4a5d6cc4",
+    "cbef4708",
+    "9f16195a",
+    "f91d2778"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1440"
   }
  ],
  "quiz": [

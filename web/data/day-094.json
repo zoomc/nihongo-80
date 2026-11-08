@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V1639",
    "front": "恩",
    "back": "恩情",
+   "kana": "おん",
    "stage": "planned"
   },
   {
    "kid": "V1640",
    "front": "音",
    "back": "声音",
+   "kana": "おん",
    "stage": "planned"
   },
   {
    "kid": "V1641",
    "front": "温暖",
    "back": "温暖",
+   "kana": "おんだん",
    "stage": "planned"
   },
   {
@@ -76,31 +79,36 @@
   {
    "kid": "K0389",
    "front": "放",
-   "back": "放开；播放；放弃｜音 ホウ",
+   "back": "放开；播放；放弃",
+   "kana": "ホウ、はな.す、-っぱな.し、はな.つ、はな.れる、こ.く、ほう.る",
    "stage": "planned"
   },
   {
    "kid": "K0390",
    "front": "常",
-   "back": "平常；经常｜音 ジョウ",
+   "back": "平常；经常",
+   "kana": "ジョウ、つね、とこ-",
    "stage": "planned"
   },
   {
    "kid": "V1606",
    "front": "大家",
    "back": "房东",
+   "kana": "おおや",
    "stage": "planned"
   },
   {
    "kid": "V1607",
    "front": "丘",
    "back": "小山；丘陵",
+   "kana": "おか",
    "stage": "planned"
   },
   {
    "kid": "V1608",
    "front": "沖",
    "back": "海上；洋面",
+   "kana": "おき",
    "stage": "planned"
   },
   {
@@ -457,104 +465,204 @@
  ],
  "sentences": [
   {
-   "id": "S0931",
-   "day": 94,
-   "direction": "zh-ja",
+   "qid": "P-094-00-06aeb34815d1",
    "prompt": "我一直提醒自己不要总纠结于过去。",
-   "knowledge_ids": [
-    "V1689"
+   "options": [
+    "デパートの屋上にアドバルーンが上がっている。",
+    "私はいつまでも過去にこだわらないようにと心がけている。",
+    "彼か私のどちらかが大会に出席しなければならない。",
+    "ドアをそのままにしておいてはいけません。"
    ],
-   "hint": ""
+   "h": "73155259",
+   "oh": [
+    "9bc9f740",
+    "73155259",
+    "4e3ac675",
+    "6fe1fecd"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0931"
   },
   {
-   "id": "S0932",
-   "day": 94,
-   "direction": "zh-ja",
+   "qid": "P-094-01-d997cfecae40",
    "prompt": "那个篮子装满了苹果。",
-   "knowledge_ids": [
-    "V1690"
+   "options": [
+    "ルーシーは電灯のスイッチをつけた。",
+    "同じ色の羽の鳥は共に集まるものだ。",
+    "その木には実がたわわになっていた。",
+    "そのかごはリンゴでいっぱいだった。"
    ],
-   "hint": ""
+   "h": "8ffcbdb4",
+   "oh": [
+    "28480d99",
+    "83985809",
+    "71531757",
+    "8ffcbdb4"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0932"
   },
   {
-   "id": "S0933",
-   "day": 94,
-   "direction": "zh-ja",
+   "qid": "P-094-02-6ab9dce46244",
    "prompt": "院子被木栅栏围着。",
-   "knowledge_ids": [
-    "V1691"
+   "options": [
+    "このビルは非常階段を備えている。",
+    "その広間は日本画で飾られていた。",
+    "マイクはバスで学校に通っている。",
+    "庭は木のフェンスで囲まれていた。"
    ],
-   "hint": ""
+   "h": "5d46ebeb",
+   "oh": [
+    "d631b058",
+    "6d732f36",
+    "1062eb67",
+    "5d46ebeb"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0933"
   },
   {
-   "id": "S0934",
-   "day": 94,
-   "direction": "zh-ja",
+   "qid": "P-094-03-b8dc45d8063c",
    "prompt": "火灾的原因是什么？",
-   "knowledge_ids": [
-    "V1692"
+   "options": [
+    "火災の理由は何か。",
+    "あなたは先生ですか。",
+    "合格して嬉しいです。",
+    "私は数学は苦手だ。"
    ],
-   "hint": ""
+   "h": "bba4dfdd",
+   "oh": [
+    "bba4dfdd",
+    "7cbc9d0b",
+    "f6598066",
+    "1dae0651"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0934"
   },
   {
-   "id": "S0935",
-   "day": 94,
-   "direction": "zh-ja",
+   "qid": "P-094-04-4bab3dcbf971",
    "prompt": "请随便拿这些点心。",
-   "knowledge_ids": [
-    "V1693"
+   "options": [
+    "交通に注意しなければいけない。",
+    "サムは仕事に関してまじめです。",
+    "彼は会社で高い地位にあります。",
+    "この菓子を自由にお取り下さい。"
    ],
-   "hint": ""
+   "h": "ff6eaffd",
+   "oh": [
+    "208febf8",
+    "b939740c",
+    "1db91e4",
+    "ff6eaffd"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0935"
   },
   {
-   "id": "S0936",
-   "day": 94,
-   "direction": "zh-ja",
+   "qid": "P-094-05-ec085e670619",
    "prompt": "不过这样一来你就欠我一个人情了。",
-   "knowledge_ids": [
-    "V1694"
+   "options": [
+    "私たちは毎年展覧会を開く。",
+    "ここに手のないナベがある。",
+    "犬の毛はいわばセーターだ。",
+    "でも、これで１つ貸しだね。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0937",
-   "day": 94,
+   "h": "8347f85c",
+   "oh": [
+    "e4b88455",
+    "4bd0565",
+    "f20ee6fa",
+    "8347f85c"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0936"
+  },
+  {
+   "qid": "P-094-06-54a454c68936",
    "prompt": "我帮父母做了家务。",
-   "knowledge_ids": [
-    "V1695"
+   "options": [
+    "さあ、あなたの体温を計りましょう。",
+    "私は両親が家事をするのを手伝った。",
+    "彼女その瞬間にカッとなったんだね。",
+    "彼女は自動式の洗濯機をもっている。"
    ],
-   "hint": ""
+   "h": "4c834b7f",
+   "oh": [
+    "f1eef958",
+    "4c834b7f",
+    "b90b4381",
+    "d2c6d572"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0937"
   },
   {
-   "id": "S0938",
-   "day": 94,
-   "direction": "ja-zh",
+   "qid": "P-094-07-9c130821fc2d",
    "prompt": "あなたは何と賢い生徒なのでしょう。",
-   "knowledge_ids": [
-    "V1696"
+   "options": [
+    "我不小心说漏了他生病的事。",
+    "我听过有人用这句谚语。",
+    "一轻视危险，危险马上就来。",
+    "你是个多么聪明的学生啊。"
    ],
-   "hint": ""
+   "h": "9c468c5f",
+   "oh": [
+    "2844a1ed",
+    "e5759169",
+    "fc180e94",
+    "9c468c5f"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0938"
   },
   {
-   "id": "S0939",
-   "day": 94,
-   "direction": "ja-zh",
+   "qid": "P-094-08-481411110c01",
    "prompt": "その歌手は若者たちのアイドルだ。",
-   "knowledge_ids": [
-    "V1697"
+   "options": [
+    "我们在咖啡馆吃了午饭。",
+    "那位歌手是年轻人的偶像。",
+    "他会的杂技多得让人吃惊。",
+    "我的错误招来了他的怒气。"
    ],
-   "hint": ""
+   "h": "a61776d",
+   "oh": [
+    "f4d70353",
+    "a61776d",
+    "c257ae4e",
+    "3604d3ec"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0939"
   },
   {
-   "id": "S0940",
-   "day": 94,
-   "direction": "ja-zh",
+   "qid": "P-094-09-3ba13b9f06ab",
    "prompt": "旅行者の数が近年大きく増加した。",
-   "knowledge_ids": [
-    "V1698"
+   "options": [
+    "对了，明天安排是什么？",
+    "游客数量近年大幅增加。",
+    "账算下来一共五百美元。",
+    "我听过有人用这句谚语。"
    ],
-   "hint": ""
+   "h": "45b99f8d",
+   "oh": [
+    "f3613f32",
+    "45b99f8d",
+    "2e1e71de",
+    "e5759169"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0940"
   }
  ],
  "quiz": [

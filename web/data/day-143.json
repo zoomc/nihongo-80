@@ -28,7 +28,7 @@
   {
    "type": "句子输出",
    "min": 5,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -47,18 +47,21 @@
    "kid": "V2512",
    "front": "当時",
    "back": "当时；那时",
+   "kana": "とうじ",
    "stage": "planned"
   },
   {
    "kid": "V2513",
    "front": "動詞",
    "back": "动词",
+   "kana": "どうし",
    "stage": "planned"
   },
   {
    "kid": "V2514",
    "front": "同時",
    "back": "同时",
+   "kana": "どうじ",
    "stage": "planned"
   },
   {
@@ -70,31 +73,36 @@
   {
    "kid": "K0585",
    "front": "暮",
-   "back": "傍晚；生活｜音 ボ",
+   "back": "傍晚；生活",
+   "kana": "ボ、く.れる、く.らす",
    "stage": "planned"
   },
   {
    "kid": "K0586",
    "front": "酒",
-   "back": "酒｜音 シュ",
+   "back": "酒",
+   "kana": "シュ、さけ、さか-",
    "stage": "planned"
   },
   {
    "kid": "V2470",
    "front": "積もる",
    "back": "积；堆积",
+   "kana": "つもる",
    "stage": "planned"
   },
   {
    "kid": "V2471",
    "front": "梅雨",
    "back": "梅雨",
+   "kana": "つゆ",
    "stage": "planned"
   },
   {
    "kid": "V2472",
    "front": "辛い",
    "back": "难受；痛苦",
+   "kana": "つらい",
    "stage": "planned"
   },
   {
@@ -106,13 +114,15 @@
   {
    "kid": "K0577",
    "front": "遊",
-   "back": "玩；游玩｜音 ユウ、ユ",
+   "back": "玩；游玩",
+   "kana": "ユウ、ユ、あそ.ぶ、あそ.ばす",
    "stage": "planned"
   },
   {
    "kid": "K0578",
    "front": "迷",
-   "back": "迷路；迷惑｜音 メイ",
+   "back": "迷路；迷惑",
+   "kana": "メイ、まよ.う",
    "stage": "planned"
   }
  ],
@@ -514,104 +524,204 @@
  ],
  "sentences": [
   {
-   "id": "S1421",
-   "day": 143,
-   "direction": "zh-ja",
+   "qid": "P-143-00-05a4d9a0a100",
    "prompt": "打牌作弊是不好的。",
-   "knowledge_ids": [
-    "V2557"
+   "options": [
+    "この世界の教育にはがっかりしてしまう。",
+    "あのおいしいワインをなぜ飲まないんだい。",
+    "本の代金を小切手で払ってもいいですか。",
+    "トランプでごまかすのはよくないことだ。"
    ],
-   "hint": ""
+   "h": "7ef07a76",
+   "oh": [
+    "6b522ac9",
+    "5ebf955f",
+    "24b0413a",
+    "7ef07a76"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1421"
   },
   {
-   "id": "S1422",
-   "day": 143,
-   "direction": "zh-ja",
+   "qid": "P-143-01-61c0b26fc7df",
    "prompt": "她拿起了一个玻璃花瓶。",
-   "knowledge_ids": [
-    "V2558"
+   "options": [
+    "お祭りでロブスターを食べました。",
+    "その代わりにトランプをしようよ。",
+    "彼女はガラスの花瓶を取り上げた。",
+    "それはホテルから遠くありません。"
    ],
-   "hint": ""
+   "h": "8a364279",
+   "oh": [
+    "6e738748",
+    "420672f9",
+    "8a364279",
+    "2d083832"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1422"
   },
   {
-   "id": "S1423",
-   "day": 143,
-   "direction": "zh-ja",
+   "qid": "P-143-02-9b7738b60fdd",
    "prompt": "他努力想解开那道题。",
-   "knowledge_ids": [
-    "V2559"
+   "options": [
+    "彼はその問題を解こうと努力した。",
+    "お尋ねしてもよろしいでしょうか。",
+    "みんなでカブトムシを競争させた。",
+    "あなたをケパと呼ぶことにします。"
    ],
-   "hint": ""
+   "h": "70b3b533",
+   "oh": [
+    "70b3b533",
+    "1317d3c0",
+    "fdf064f8",
+    "27fecd16"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S1423"
   },
   {
-   "id": "S1424",
-   "day": 143,
-   "direction": "zh-ja",
+   "qid": "P-143-03-65426fb8e1fb",
    "prompt": "那条连衣裙很适合她。",
-   "knowledge_ids": [
-    "V2560"
+   "options": [
+    "あなたの声が聞けてうれしいわ。",
+    "あのドレスは彼女によく似合う。",
+    "この家は住むのにとても快適だ。",
+    "グラスは粉々に割れてしまった。"
    ],
-   "hint": ""
+   "h": "d2b39483",
+   "oh": [
+    "aa196585",
+    "d2b39483",
+    "be849b07",
+    "c01abf22"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1424"
   },
   {
-   "id": "S1425",
-   "day": 143,
-   "direction": "zh-ja",
+   "qid": "P-143-04-d7310bec15c5",
    "prompt": "橄榄果能榨出油。",
-   "knowledge_ids": [
-    "V2561"
+   "options": [
+    "やっぱり何とかやってのけたね。",
+    "オリーブの実から油が取れます。",
+    "もっと易しい事を聞いて下さい。",
+    "それは人知の限界を越えている。"
    ],
-   "hint": ""
+   "h": "9ffe72d0",
+   "oh": [
+    "6295853d",
+    "9ffe72d0",
+    "84e4e179",
+    "289d0261"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1425"
   },
   {
-   "id": "S1426",
-   "day": 143,
-   "direction": "zh-ja",
+   "qid": "P-143-05-8e091dd7e7da",
    "prompt": "他刮掉了靴子上的泥。",
-   "knowledge_ids": [
-    "V2562"
+   "options": [
+    "その話は親から子へと伝えられた。",
+    "彼はブーツの泥をこすり落とした。",
+    "ぼくは知らないし、気にもしない。",
+    "それはホテルから遠くありません。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S1427",
-   "day": 143,
+   "h": "733fa726",
+   "oh": [
+    "c65bb93d",
+    "733fa726",
+    "c9b35858",
+    "2d083832"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1426"
+  },
+  {
+   "qid": "P-143-06-2660af79cc3c",
    "prompt": "说她是歌手，简直荒唐。",
-   "knowledge_ids": [
-    "V2564"
+   "options": [
+    "その象は動物園に連れてこられた。",
+    "それは私が見たことのない景色だ。",
+    "このビルは非常階段を備えている。",
+    "彼女が歌手だなんてとんでもない。"
    ],
-   "hint": ""
+   "h": "ebe1be1e",
+   "oh": [
+    "f9632f0f",
+    "af5a2328",
+    "d631b058",
+    "ebe1be1e"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S1427"
   },
   {
-   "id": "S1428",
-   "day": 143,
-   "direction": "ja-zh",
+   "qid": "P-143-07-07b2ce02beda",
    "prompt": "私はどんな戦争にも反対だ。",
-   "knowledge_ids": [
-    "V2565"
+   "options": [
+    "他为什么辞职是个谜。",
+    "这个星期六去打网球吧？",
+    "我反对任何形式的战争。",
+    "我想要角落的那张桌子。"
    ],
-   "hint": ""
+   "h": "57c62162",
+   "oh": [
+    "f91d2778",
+    "b964d343",
+    "57c62162",
+    "230d8172"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1428"
   },
   {
-   "id": "S1429",
-   "day": 143,
-   "direction": "ja-zh",
+   "qid": "P-143-08-2a27d9006ecf",
    "prompt": "君は私がどんなに心配しているかを知らない。",
-   "knowledge_ids": [
-    "V2566"
+   "options": [
+    "你不知道我有多担心。",
+    "这趟公交到美术馆吗？",
+    "最好把房间整理一下。",
+    "你赞成我们的计划吗？"
    ],
-   "hint": ""
+   "h": "80b938b0",
+   "oh": [
+    "80b938b0",
+    "f2733930",
+    "9f16195a",
+    "4a12bcc1"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1429"
   },
   {
-   "id": "S1430",
-   "day": 143,
-   "direction": "ja-zh",
+   "qid": "P-143-09-fd9ca4b691d8",
    "prompt": "汽車はトンネルを通り抜けた。",
-   "knowledge_ids": [
-    "V2567"
+   "options": [
+    "他用无线电发了报。",
+    "火车穿过了隧道。",
+    "那条街充满活力。",
+    "约翰在给门刷漆。"
    ],
-   "hint": ""
+   "h": "443acd9c",
+   "oh": [
+    "3e7102f9",
+    "443acd9c",
+    "d3ea8b20",
+    "5a2d87f9"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S1430"
   }
  ],
  "quiz": [

@@ -23,7 +23,7 @@
   {
    "type": "句子输出",
    "min": 6,
-   "desc": "3句必做，7句拓展；先写，再批改"
+   "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
@@ -42,18 +42,21 @@
    "kid": "V0181",
    "front": "丈夫",
    "back": "结实；健壮",
+   "kana": "じょうぶ",
    "stage": "planned"
   },
   {
    "kid": "V0182",
    "front": "大丈夫",
    "back": "没问题；不要紧；不用了",
+   "kana": "だいじょうぶ",
    "stage": "planned"
   },
   {
    "kid": "V0183",
    "front": "簡単",
    "back": "简单；容易",
+   "kana": "かんたん",
    "stage": "planned"
   },
   {
@@ -71,31 +74,36 @@
   {
    "kid": "K0208",
    "front": "集",
-   "back": "集合；收集｜音 シュウ",
+   "back": "集合；收集",
+   "kana": "シュウ、あつ.まる、あつ.める、つど.う",
    "stage": "planned"
   },
   {
    "kid": "K0209",
    "front": "別",
-   "back": "分别；另外；特别｜音 ベツ",
+   "back": "分别；另外；特别",
+   "kana": "ベツ、わか.れる、わ.ける",
    "stage": "planned"
   },
   {
    "kid": "V0065",
    "front": "切符",
    "back": "车票；票",
+   "kana": "きっぷ",
    "stage": "planned"
   },
   {
    "kid": "V0088",
    "front": "パソコン",
    "back": "个人电脑",
+   "kana": "パソコン",
    "stage": "planned"
   },
   {
    "kid": "V0090",
    "front": "メール",
    "back": "邮件；短信",
+   "kana": "メール",
    "stage": "planned"
   },
   {
@@ -544,104 +552,204 @@
  ],
  "sentences": [
   {
-   "id": "S0391",
-   "day": 40,
-   "direction": "zh-ja",
+   "qid": "P-040-00-cb5fa78321e0",
    "prompt": "车电瓶没电了。",
-   "knowledge_ids": [
-    "V0879"
+   "options": [
+    "もっと易しい事を聞いて下さい。",
+    "兄はアパートをさがしています。",
+    "車のバッテリーが上がってるよ。",
+    "この家は住むのにとても快適だ。"
    ],
-   "hint": ""
+   "h": "7acddfc6",
+   "oh": [
+    "84e4e179",
+    "7f656d90",
+    "7acddfc6",
+    "be849b07"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0391"
   },
   {
-   "id": "S0392",
-   "day": 40,
-   "direction": "zh-ja",
+   "qid": "P-040-01-e8d1d226dc42",
    "prompt": "我家宝宝开始会说话了。",
-   "knowledge_ids": [
-    "V0880"
+   "options": [
+    "ギャンブルで味を占めるとなかなか止められない。",
+    "古き良き時代は去って、二度ともどってこない。",
+    "うちの赤ん坊は口をきくようになってきました。",
+    "いったい、いつになったらそのケチは直るの？"
    ],
-   "hint": ""
+   "h": "8a4c02b8",
+   "oh": [
+    "b52357c0",
+    "45662e4e",
+    "8a4c02b8",
+    "a9085e74"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0392"
   },
   {
-   "id": "S0393",
-   "day": 40,
-   "direction": "zh-ja",
+   "qid": "P-040-02-16cc0abf849d",
    "prompt": "放学后有空吗？",
-   "knowledge_ids": [
-    "V0881"
+   "options": [
+    "彼が近所に越してきた。",
+    "一人の教授がささやいた。",
+    "冗談はもうたくさんだ。",
+    "放課後は空いてますか？"
    ],
-   "hint": ""
+   "h": "6d4ccf23",
+   "oh": [
+    "ff733aee",
+    "44eb1b0d",
+    "6808b25c",
+    "6d4ccf23"
+   ],
+   "direction": "zh-ja",
+   "optional": false,
+   "source_id": "S0393"
   },
   {
-   "id": "S0394",
-   "day": 40,
-   "direction": "zh-ja",
+   "qid": "P-040-03-1ade7659b12d",
    "prompt": "这身衣服配什么首饰？",
-   "knowledge_ids": [
-    "V0882"
+   "options": [
+    "この服にはどんなアクセサリーを付けるの？",
+    "ところが実はどうすることもできないのです。",
+    "せっけんだらけの手で私にさわらないで。",
+    "まるで、沈む船から逃げるネズミみたいね。"
    ],
-   "hint": ""
+   "h": "6991196d",
+   "oh": [
+    "6991196d",
+    "34a8c7a1",
+    "41d0d85f",
+    "b4d0dde4"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0394"
   },
   {
-   "id": "S0395",
-   "day": 40,
-   "direction": "zh-ja",
+   "qid": "P-040-04-1438106d552d",
    "prompt": "这条河在那里变浅了。",
-   "knowledge_ids": [
-    "V0883"
+   "options": [
+    "この川はあそこで浅くなっている。",
+    "その城は１６１０年に建てられた。",
+    "ロジャーはパーティーが大好きだ。",
+    "みんなでカブトムシを競争させた。"
    ],
-   "hint": ""
+   "h": "ec02db03",
+   "oh": [
+    "ec02db03",
+    "6b28f1e6",
+    "e9d09b67",
+    "fdf064f8"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0395"
   },
   {
-   "id": "S0396",
-   "day": 40,
-   "direction": "zh-ja",
+   "qid": "P-040-05-60917cd60c77",
    "prompt": "这奶酪味道有点冲。",
-   "knowledge_ids": [
-    "V0884"
+   "options": [
+    "彼は医師になるために勉強している。",
+    "このチーズはピリッとした味がする。",
+    "彼女その瞬間にカッとなったんだね。",
+    "掲示には「全席予約済み」とあった。"
    ],
-   "hint": ""
-  },
-  {
-   "id": "S0397",
-   "day": 40,
+   "h": "14565358",
+   "oh": [
+    "225171f1",
+    "14565358",
+    "b90b4381",
+    "ef57930"
+   ],
    "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0396"
+  },
+  {
+   "qid": "P-040-06-de6500164aa6",
    "prompt": "欧洲人口比亚洲少。",
-   "knowledge_ids": [
-    "V0885"
+   "options": [
+    "ヨーロッパはアジアより人口が少ない。",
+    "およそどれくらいの価値がありますか。",
+    "あなたの時計、時間は狂いませんか。",
+    "その泥棒は刑事を見ると走って逃げた。"
    ],
-   "hint": ""
+   "h": "5244066b",
+   "oh": [
+    "5244066b",
+    "a31880dc",
+    "7697026a",
+    "ea10fb03"
+   ],
+   "direction": "zh-ja",
+   "optional": true,
+   "source_id": "S0397"
   },
   {
-   "id": "S0398",
-   "day": 40,
-   "direction": "ja-zh",
+   "qid": "P-040-07-1d204f55b21c",
    "prompt": "あしたは一日中ひまです。",
-   "knowledge_ids": [
-    "V0886"
+   "options": [
+    "父亲去世已经三年了。",
+    "明天我一整天都有空。",
+    "下下个月是十二月。",
+    "我不确定这是否正确。"
    ],
-   "hint": ""
+   "h": "bfabc530",
+   "oh": [
+    "2fe86ae",
+    "bfabc530",
+    "3d2240f5",
+    "22be0b90"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0398"
   },
   {
-   "id": "S0399",
-   "day": 40,
-   "direction": "ja-zh",
+   "qid": "P-040-08-b3624ebe2a9f",
    "prompt": "今度の旅行は仕事じゃなくて遊びです。",
-   "knowledge_ids": [
-    "V0887"
+   "options": [
+    "这道菜是顾及巴黎风味调味的。",
+    "这次旅行不是出差，是去玩。",
+    "祖父没有拐杖就走不了路。",
+    "那样的话，运气迟早会好起来。"
    ],
-   "hint": ""
+   "h": "f448d16f",
+   "oh": [
+    "53e2bb2d",
+    "f448d16f",
+    "e511983a",
+    "416c8035"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0399"
   },
   {
-   "id": "S0400",
-   "day": 40,
-   "direction": "ja-zh",
+   "qid": "P-040-09-5f1e87ae3d89",
    "prompt": "通りに人がたくさん集まっている。",
-   "knowledge_ids": [
-    "V0888"
+   "options": [
+    "街上聚集了很多人。",
+    "最近没有她的消息。",
+    "上个月几乎没下雨。",
+    "父亲劝我去学钢琴。"
    ],
-   "hint": ""
+   "h": "96c13ff4",
+   "oh": [
+    "96c13ff4",
+    "31ae203e",
+    "42b374eb",
+    "20580166"
+   ],
+   "direction": "ja-zh",
+   "optional": true,
+   "source_id": "S0400"
   }
  ],
  "quiz": [

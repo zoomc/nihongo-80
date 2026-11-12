@@ -55,12 +55,12 @@ class TestSimplifiedPage(unittest.TestCase):
 
     def test_small_japanese_above_chinese_and_speakable_examples(self):
         h = page(47)
-        self.assertGreater(h.count('class="kana-line"'), 5, "中文上方缺小日语文字")
-        self.assertGreater(h.count("<ruby>"), 5, "日文汉字缺 ruby 假名")
+        self.assertGreater(h.count('class="kana-line"'), 5, "汉字词缺平假读音行")
+        self.assertGreater(h.count("<ruby>"), 5, "例句里的汉字词缺 ruby 假名")
         self.assertGreater(h.count('data-speak='), 5, "例句/单词缺发音按钮")
-        self.assertIn("朗读例句", h, "例句没有独立发音入口")
-        # 中文块之前必须有小字日语音读行
-        self.assertRegex(h, r'class="kana-line"[^>]*>.*?</div>\s*<div class="zh"')
+        self.assertIn("朗读</button>", h, "例句没有独立发音入口")
+        # v12 起假名行在词形上方（原来在中文上方），中文之前改由韩语读音行占位
+        self.assertRegex(h, r'class="kana-line"[^>]*>[^<]*</div><div class="jp"')
 
 
 class TestMergedQuestions(unittest.TestCase):

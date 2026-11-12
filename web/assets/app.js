@@ -9,6 +9,8 @@ function fnv(t){var s=String(t==null?'':t).normalize('NFKC').replace(/\s+/g,'');
 function reveal(el){el.classList.add('peek');setTimeout(function(){el.classList.remove('peek')},3000)}
 function applyScope(sec,mode){
  if(!sec)return;
+ if(PEEK){clearInterval(PEEK.timer);PEEK.box.classList.remove('co-show');
+  PEEK.btn.disabled=false;PEEK.btn.textContent=PEEK.label;PEEK=null}
  $$('[data-role]',sec).forEach(function(el){
   var r=el.getAttribute('data-role');
   var hide=(mode==='both')||(mode==='zh'&&r==='zh')||(mode==='ja'&&r==='ja');
@@ -18,7 +20,23 @@ function applyScope(sec,mode){
  });
  $$('.mask-switch button',sec).forEach(function(b){
   b.setAttribute('aria-pressed',String(b.getAttribute('data-mask')===mode))});
+ $$('[data-show-all]',sec).forEach(function(b){b.hidden=(mode==='all')});
  try{localStorage.setItem(STORE+'mask.'+sec.id,mode)}catch(e){}
+}
+var PEEK=null;
+function showAll(btn){
+ var box=btn.closest('.item,.gcard');if(!box)return;
+ if(PEEK){clearInterval(PEEK.timer);PEEK.btn.disabled=false;PEEK.btn.textContent=PEEK.label;PEEK.box.classList.remove('co-show')}
+ var label=btn.textContent.trim()||'显示';
+ box.classList.add('co-show');btn.disabled=true;
+ var left=10;btn.textContent=left+'秒';
+ var state={box:box,btn:btn,label:label,timer:null};
+ state.timer=setInterval(function(){
+  left--;btn.textContent=left+'秒';
+  if(left<=0){clearInterval(state.timer);box.classList.remove('co-show');
+   btn.disabled=false;btn.textContent=label;PEEK=null}
+ },1000);
+ PEEK=state;
 }
 var RESULTS={},RATINGS={},STARTED=Date.now();
 function saveLocal(){try{localStorage.setItem(STORE+'state.'+DAY,JSON.stringify({results:RESULTS,ratings:RATINGS}))}catch(e){}}
@@ -50,6 +68,8 @@ function speak(text,btn){
 document.addEventListener('click',function(e){
  var mb=e.target.closest('.mask-switch button');
  if(mb){applyScope(mb.closest('section'),mb.getAttribute('data-mask'));return}
+ var sb=e.target.closest('[data-show-all]');
+ if(sb){showAll(sb);return}
  var m=e.target.closest('.mask');if(m){reveal(m);return}
  var sp=e.target.closest('[data-speak]');
  if(sp){speak(sp.getAttribute('data-speak'),sp);return}
@@ -78,6 +98,7 @@ document.addEventListener('keydown',function(e){
 });
 ['vocab','grammar'].forEach(function(id){var s=$('#'+id);if(!s)return;
  var saved='all';try{saved=localStorage.getItem(STORE+'mask.'+id)||'all'}catch(e){}
+ if(['all','zh','ja','both'].indexOf(saved)<0)saved='all';
  applyScope(s,saved)});
 restore();
 var f=$('#finish');

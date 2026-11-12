@@ -9,6 +9,9 @@
 ## 真源与唯一写入通道
 
 - 内容：`knowledge/seeds/*.jsonl`，可审计的人类/AI 草稿；不把 AI 内容升级为 verified。
+- 读音：韩语读音由 `scripts/ko_pron.py` 从 kana 推导（假名唯一决定读音，不写进 seeds）；
+  含汉字/助词型句型才用 `grammar.jsonl` 的 `pattern_kana` 显式给读音。例句整句解析不出来就不显示，
+  补充词表在 `knowledge/ko_reading_supplement.json`（self_reviewed）。
 - 课程：`curriculum_v5.py` 生成；网页：`build_v5_site.py` 生成。`curriculum.json`、`web/` 不手改。
 - 状态：`data/state.db` 唯一真源，**只经 `python3 scripts/nh80.py ...` 写入**（事务与 audit_log）。不得手改 DB、FSRS、阶段、门控计数。
 - `student/*.json` 是 export_state 生成的只读镜像，不手改当状态。

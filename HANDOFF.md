@@ -1,4 +1,4 @@
-# HANDOFF · Nihongo 120 v11
+# HANDOFF · Nihongo 120 v12
 
 120 天版以 N5（Day 1–30）、N4（Day 31–60）、N3（Day 61–120）推进。每日预算 60 分钟，先做网页前 9–12 道基础题，余题按薄弱项练习。每日新词区可展开当天汉字与读音。前三天有假名跟读，10 次分级精读和 45 篇原有精听贯穿课程，后段四次任务指向官方题型与计时练习卷。历史 v10 验收见 `reports/v10_completion.md`。
 
@@ -32,6 +32,9 @@ v10 用户明确要求：顶部模式按钮/分钟数/分段导航/站点链接�
 
 - **每日页**：4 个内容块（复习 / 新词 / 语法 / 练习）+ 1 个完成按钮。120 页全量生成，顶部与底部杂项断言为 0（`tests/test_v10.py`）。
 - **练习**：基础题 9–12 道，另有拓展题，一整块列出，无翻页、无分段；每个知识点最多 2 题；120 天全部覆盖当天 `new_vocab_ids ∪ new_grammar_ids`；公开题只有 `h/oh` 哈希，无明文答案。
+- **韩语读音（v12）**：每个单词/语法/例句给韩语读音（한글 표음），版式「平假 → 单词 → 韩语发音 → 中文」，
+  重复的日语行已删；整句读音只在能完整解析时显示（N5 93% / N4 83% / N3 68%，语法卡 87%）；所有韩语元素随「遮中文」一起隐藏；
+  每项一个「显示」按钮可临时三种语言全显 10 秒。实现见 `scripts/ko_pron.py` + `knowledge/ko_reading_supplement.json`。
 - **小日语文字 + 发音**：中文上方 `.kana-line` 小假名，日文汉字 `<ruby>` 注音，每条例句 `data-speak` 朗读；浏览器实测 375/1280 均可用。
 - **完成 → 云端**：`POST /api/progress` 写 D1 `study_progress_120`（`day` 主键幂等覆盖，最多 120 行），页面无口令；`GET /api/progress?day=N|latest=1` 需 `X-NH80-Key`。
 - **agent 侧**：`skills/nh80-progress/SKILL.md`（仓库内 + 项目级 + 用户级三份）、`scripts/progress_read.py`、`AGENTS.md` 已追加调用说明。
@@ -45,6 +48,8 @@ v10 用户明确要求：顶部模式按钮/分钟数/分段导航/站点链接�
 | `knowledge/seeds/*.jsonl` | 内容种子（词 / 语法 / 汉字 / 句子 / 素材 / 测评），改内容改这里 |
 | `scripts/curriculum_v5.py` | 120 天排课、必学/拓展、时间块 |
 | `scripts/quiz_v5.py` + `assessment_v6.py` + `practice_v9.py` + `sentence_choices.py` | 确定性出题、私有答案、公开投影 |
+| `scripts/ko_pron.py` | 假名→한글 转写、数词量词、整句读音解析（v12 读音层） |
+| `knowledge/ko_reading_supplement.json` | 例句读音补充词表（160 条：专名/复合词/活用形，self_reviewed） |
 | `scripts/build_v5_site.py` | **唯一页面生成器**：每日页 HTML、CSS、`assets/app.js`、首页、资源页、听力页、资料库、复习集、五日单元、`sw.js` |
 | `scripts/nh80.py` | 唯一学习状态写入入口；生成 `curriculum.json`、答案表、grade 分片、DB |
 | `scripts/study_ui.py` | 复习集 / 五日单元的本地自评与练习 JS（已去掉口令与自动 POST） |

@@ -42,49 +42,57 @@
    "kid": "V0029",
    "front": "毎日",
    "back": "每天",
-   "kana": "まいにち"
+   "kana": "まいにち",
+   "ko_pron": "마이니치"
   },
   {
    "kid": "V0030",
    "front": "今週",
    "back": "本周",
-   "kana": "こんしゅう"
+   "kana": "こんしゅう",
+   "ko_pron": "콘슈우"
   },
   {
    "kid": "G0004",
    "front": "N も",
    "back": "…也…",
-   "kana": ""
+   "kana": "",
+   "ko_pron": "N 모"
   },
   {
    "kid": "K0007",
    "front": "土",
    "back": "土；星期六",
-   "kana": "ド、ト、つち"
+   "kana": "ド、ト、つち",
+   "ko_pron": "도·토 / 쓰치"
   },
   {
    "kid": "V0003",
    "front": "さん",
    "back": "…先生／…小姐（敬称）",
-   "kana": "さん"
+   "kana": "さん",
+   "ko_pron": "산"
   },
   {
    "kid": "V0004",
    "front": "こんにちは",
    "back": "你好（白天问候）",
-   "kana": "こんにちは"
+   "kana": "こんにちは",
+   "ko_pron": "콘니치와"
   },
   {
    "kid": "G0001",
    "front": "N は N です",
    "back": "…是…",
-   "kana": ""
+   "kana": "",
+   "ko_pron": "N 와 N 데스"
   },
   {
    "kid": "K0003",
    "front": "火",
    "back": "火；星期二",
-   "kana": "カ、ひ"
+   "kana": "カ、ひ",
+   "ko_pron": "카 / 히"
   }
  ],
  "vocab": [
@@ -94,12 +102,14 @@
    "kana": "びょういん",
    "meaning": "医院",
    "ko": "병원（医院）",
+   "ko_pron": "뵤우인",
    "ko_status": "dictionary",
    "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "病院に行きます。",
-    "zh": "去医院。"
+    "zh": "去医院。",
+    "ko_pron": "뵤우인니이키마스."
    },
    "audio": "tts"
   },
@@ -109,12 +119,14 @@
    "kana": "としょかん",
    "meaning": "图书馆",
    "ko": "도서관（图书馆）",
+   "ko_pron": "토쇼칸",
    "ko_status": "dictionary",
    "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "図書館で本を読みます。",
-    "zh": "在图书馆读书。"
+    "zh": "在图书馆读书。",
+    "ko_pron": "토쇼칸데혼오요미마스."
    },
    "audio": "tts"
   },
@@ -124,12 +136,14 @@
    "kana": "へや",
    "meaning": "房间",
    "ko": "방（房间） / 집칸（房间）",
+   "ko_pron": "헤야",
    "ko_status": "dictionary",
    "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "部屋に猫がいます。",
-    "zh": "房间里有猫。"
+    "zh": "房间里有猫。",
+    "ko_pron": "헤야니네코가이마스."
    },
    "audio": "tts"
   },
@@ -139,12 +153,14 @@
    "kana": "うえ",
    "meaning": "上面；上方",
    "ko": "위",
+   "ko_pron": "우에",
    "ko_status": "ai_gloss",
    "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "机の上に本があります。",
-    "zh": "桌上有书。"
+    "zh": "桌上有书。",
+    "ko_pron": "쓰쿠에노우에니혼가아리마스."
    },
    "audio": "tts"
   },
@@ -154,12 +170,14 @@
    "kana": "なか",
    "meaning": "里面；中间",
    "ko": "속（里面，里头） / 안（里，里面） / 가운데（中间，正中，中央）",
+   "ko_pron": "나카",
    "ko_status": "dictionary",
    "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "部屋の中にいます。",
-    "zh": "在房间里。"
+    "zh": "在房间里。",
+    "ko_pron": "헤야노나카니이마스."
    },
    "audio": "tts"
   },
@@ -169,12 +187,14 @@
    "kana": "まえ",
    "meaning": "前面；之前",
    "ko": "앞（前，前面）",
+   "ko_pron": "마에",
    "ko_status": "dictionary",
    "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "駅の前に店があります。",
-    "zh": "车站前有店。"
+    "zh": "车站前有店。",
+    "ko_pron": "에키노마에니미세가아리마스."
    },
    "audio": "tts"
   },
@@ -184,12 +204,14 @@
    "kana": "あと",
    "meaning": "后面；之后",
    "ko": "담（之后） / 뒤（后，之后，后来） / 후（后，以后，之后）",
+   "ko_pron": "아토",
    "ko_status": "dictionary",
    "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "食事の後に、薬を飲みます。",
-    "zh": "饭后吃药。"
+    "zh": "饭后吃药。",
+    "ko_pron": "쇼쿠지노아토니,쿠스리오노미마스."
    },
    "audio": "tts"
   },
@@ -199,12 +221,14 @@
    "kana": "ごはん",
    "meaning": "米饭；饭（餐）",
    "ko": "밥 / 식사",
+   "ko_pron": "고한",
    "ko_status": "ai_gloss",
    "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "ご飯を食べます。",
-    "zh": "吃饭。"
+    "zh": "吃饭。",
+    "ko_pron": "고한오타베마스."
    },
    "audio": "tts"
   },
@@ -214,12 +238,14 @@
    "kana": "あさごはん",
    "meaning": "早饭",
    "ko": "아침（早饭，早餐）",
+   "ko_pron": "아사고한",
    "ko_status": "dictionary",
    "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "朝ご飯を食べます。",
-    "zh": "吃早饭。"
+    "zh": "吃早饭。",
+    "ko_pron": "아사고한오타베마스."
    },
    "audio": "tts"
   },
@@ -229,12 +255,14 @@
    "kana": "みず",
    "meaning": "水（冷水／生水）",
    "ko": "물（水）",
+   "ko_pron": "미즈",
    "ko_status": "dictionary",
    "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "水を飲みます。",
-    "zh": "喝水。"
+    "zh": "喝水。",
+    "ko_pron": "미즈오노미마스."
    },
    "audio": "tts"
   },
@@ -244,12 +272,14 @@
    "kana": "おちゃ",
    "meaning": "茶",
    "ko": "차（茶，茶水）",
+   "ko_pron": "오차",
    "ko_status": "dictionary",
    "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "お茶を飲みます。",
-    "zh": "喝茶。"
+    "zh": "喝茶。",
+    "ko_pron": "오차오노미마스."
    },
    "audio": "tts"
   },
@@ -259,12 +289,14 @@
    "kana": "にく",
    "meaning": "肉",
    "ko": "살（肉） / 고기（肉）",
+   "ko_pron": "니쿠",
    "ko_status": "dictionary",
    "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "肉を買います。",
-    "zh": "买肉。"
+    "zh": "买肉。",
+    "ko_pron": "니쿠오카이마스."
    },
    "audio": "tts"
   },
@@ -274,12 +306,14 @@
    "kana": "さかな",
    "meaning": "鱼",
    "ko": "물고기 / 생선（문맥에 따라）",
+   "ko_pron": "사카나",
    "ko_status": "ai_gloss",
    "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "魚が好きです。",
-    "zh": "喜欢鱼。"
+    "zh": "喜欢鱼。",
+    "ko_pron": "사카나가스키데스."
    },
    "audio": "tts"
   },
@@ -289,12 +323,14 @@
    "kana": "やさい",
    "meaning": "蔬菜",
    "ko": "야채（蔬菜） / 채소（菜，蔬菜）",
+   "ko_pron": "야사이",
    "ko_status": "dictionary",
    "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "野菜を買います。",
-    "zh": "买蔬菜。"
+    "zh": "买蔬菜。",
+    "ko_pron": "야사이오카이마스."
    },
    "audio": "tts"
   },
@@ -304,12 +340,14 @@
    "kana": "パン",
    "meaning": "面包",
    "ko": "빵（面包）",
+   "ko_pron": "판",
    "ko_status": "dictionary",
    "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "パンを食べます。",
-    "zh": "吃面包。"
+    "zh": "吃面包。",
+    "ko_pron": "판오타베마스."
    },
    "audio": "tts"
   },
@@ -319,12 +357,14 @@
    "kana": "りょうり",
    "meaning": "菜肴；烹饪",
    "ko": "요리（烹饪，烹调）",
+   "ko_pron": "료우리",
    "ko_status": "dictionary",
    "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "料理を作ります。",
-    "zh": "做菜。"
+    "zh": "做菜。",
+    "ko_pron": "료우리오쓰쿠리마스."
    },
    "audio": "tts"
   },
@@ -334,12 +374,14 @@
    "kana": "でんしゃ",
    "meaning": "电车（轨道交通）",
    "ko": "전차（电车） / 전동차（电动车，电车）",
+   "ko_pron": "덴샤",
    "ko_status": "dictionary",
    "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "電車で行きます。",
-    "zh": "坐电车去。"
+    "zh": "坐电车去。",
+    "ko_pron": "덴샤데이키마스."
    },
    "audio": "tts"
   },
@@ -349,12 +391,14 @@
    "kana": "バス",
    "meaning": "公交车",
    "ko": "버스（公共汽车，公交车）",
+   "ko_pron": "바스",
    "ko_status": "dictionary",
    "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "バスに乗ります。",
-    "zh": "上公交。"
+    "zh": "上公交。",
+    "ko_pron": "바스니노리마스."
    },
    "audio": "tts"
   },
@@ -364,12 +408,14 @@
    "kana": "くるま",
    "meaning": "汽车；车",
    "ko": "차（车，车辆） / 자동차（汽车）",
+   "ko_pron": "쿠루마",
    "ko_status": "dictionary",
    "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "車で会社へ行きます。",
-    "zh": "开车去公司。"
+    "zh": "开车去公司。",
+    "ko_pron": "쿠루마데카이샤에이키마스."
    },
    "audio": "tts"
   },
@@ -379,12 +425,14 @@
    "kana": "じてんしゃ",
    "meaning": "自行车",
    "ko": "자전거（自行车）",
+   "ko_pron": "지텐샤",
    "ko_status": "dictionary",
    "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "自転車で学校へ行きます。",
-    "zh": "骑车去学校。"
+    "zh": "骑车去学校。",
+    "ko_pron": "지텐샤데가꼬우에이키마스."
    },
    "audio": "tts"
   },
@@ -394,12 +442,14 @@
    "kana": "ひこうき",
    "meaning": "飞机",
    "ko": "비행기（飞机）",
+   "ko_pron": "히코우키",
    "ko_status": "dictionary",
    "optional": true,
    "pos": "名詞",
    "ex": {
     "ja": "飛行機で旅行します。",
-    "zh": "坐飞机旅行。"
+    "zh": "坐飞机旅行。",
+    "ko_pron": "히코우키데료코우시마스."
    },
    "audio": "tts"
   },
@@ -409,12 +459,14 @@
    "kana": "ちち",
    "meaning": "(我)父亲",
    "ko": "아버지（父亲，爸爸）",
+   "ko_pron": "치치",
    "ko_status": "dictionary",
    "optional": true,
    "pos": "名詞",
    "ex": {
     "ja": "父は会社員です。",
-    "zh": "我父亲是公司职员。"
+    "zh": "我父亲是公司职员。",
+    "ko_pron": "치치와카이샤인데스."
    },
    "audio": "tts"
   },
@@ -424,12 +476,14 @@
    "kana": "はは",
    "meaning": "(我)母亲",
    "ko": "어머니（母亲，妈妈）",
+   "ko_pron": "하하",
    "ko_status": "dictionary",
    "optional": true,
    "pos": "名詞",
    "ex": {
     "ja": "母は医者です。",
-    "zh": "我母亲是医生。"
+    "zh": "我母亲是医生。",
+    "ko_pron": "하하와이샤데스."
    },
    "audio": "tts"
   }
@@ -515,7 +569,8 @@
    "review_status": "self_reviewed",
    "provenance": "self_reviewed",
    "ko_equiv": "N의 N",
-   "ko_diff": "韩语의多表所属，口语常省略；修饰关系更常用名词直接并列，使用范围比日语の窄。"
+   "ko_diff": "韩语의多表所属，口语常省略；修饰关系更常用名词直接并列，使用范围比日语の窄。",
+   "ko_pron": "N 노 N"
   },
   {
    "id": "G0007",
@@ -573,7 +628,8 @@
    "review_status": "self_reviewed",
    "provenance": "self_reviewed",
    "ko_equiv": "이/가",
-   "ko_diff": "韩语主格助词按收音选이/가，口语가常被는替换表对比；日语が还表能力对象。"
+   "ko_diff": "韩语主格助词按收音选이/가，口语가常被는替换表对比；日语が还表能力对象。",
+   "ko_pron": "가"
   },
   {
    "id": "G0008",
@@ -625,7 +681,8 @@
    "review_status": "self_reviewed",
    "provenance": "self_reviewed",
    "ko_equiv": "을/를",
-   "ko_diff": "韩语宾格助词按收音选을/를，口语可省略；日语を还能表移动经过，韩语该义也用를。"
+   "ko_diff": "韩语宾格助词按收音选을/를，口语可省略；日语を还能表移动经过，韩语该义也用를。",
+   "ko_pron": "오"
   }
  ],
  "unit_questions": [],

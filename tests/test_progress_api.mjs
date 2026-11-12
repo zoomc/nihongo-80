@@ -17,7 +17,7 @@ const worker = (await import('data:text/javascript;base64,' +
 
 const BASE = 'https://example.test';
 const KEY = 'test-only-key';
-const MIGRATIONS = ['0003_personal_budget.sql', '0005_progress.sql'];
+const MIGRATIONS = ['0003_personal_budget.sql', '0005_progress.sql', '0006_progress_120.sql'];
 
 function makeDb() {
   const sqlite = new DatabaseSync(':memory:');
@@ -42,7 +42,7 @@ const env = {
 };
 
 const payload = {
-  v: 1,
+  v: 2,
   day: 47,
   completed_at: '2026-11-08T23:50:00+08:00',
   required_ids: ['V0001'],
@@ -74,7 +74,7 @@ assert.deepEqual(await r1.json(), { ok: true, day: 47, saved: true });
 console.log('PASS: POST without Origin accepted (content-type guard + strong limits)');
 
 // 2) 错误 day -> 400。
-for (const bad of [0, 151, '47x', null, 3.5]) {
+for (const bad of [0, 121, '47x', null, 3.5]) {
   const r = await post({ ...payload, day: bad });
   assert.equal(r.status, 400, 'bad day: ' + String(bad));
 }
@@ -124,7 +124,7 @@ console.log('PASS: ?latest=1&limit=7 reads back the saved snapshot');
 // 7) 同 day 再 POST 覆盖不追加。
 const r7 = await post({ ...payload, accuracy: 0.5, note: '第二次覆盖' });
 assert.equal(r7.status, 200);
-assert.equal(sqlite.prepare('SELECT COUNT(*) AS n FROM study_progress').get().n, 1,
+assert.equal(sqlite.prepare('SELECT COUNT(*) AS n FROM study_progress_120').get().n, 1,
   'same-day overwrite must not append rows');
 const it7 = (await readDay(47))[0];
 assert.equal(it7.accuracy, 0.5);

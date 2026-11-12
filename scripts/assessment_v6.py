@@ -5,6 +5,7 @@ import random
 from pathlib import Path
 
 from quiz_v5 import fnv
+from curriculum_v5 import DAYS, source_day
 
 SEED_PATH = Path(__file__).resolve().parent.parent / "knowledge/seeds/assessments.jsonl"
 
@@ -16,15 +17,15 @@ def build_for_day(day):
     knowledge-card mastery. This short practice is not a JLPT score or mock exam.
     """
     number = day["day"] if isinstance(day, dict) else day
-    if isinstance(number, bool) or not isinstance(number, int) or not 1 <= number <= 150:
-        raise ValueError("day must be an integer from 1 to 150")
+    if isinstance(number, bool) or not isinstance(number, int) or not 1 <= number <= DAYS:
+        raise ValueError("day must be an integer within the current course")
     questions = []
     with SEED_PATH.open(encoding="utf-8") as f:
         for line in f:
             if not line.strip():
                 continue
             item = json.loads(line)
-            if item["day"] != number:
+            if source_day(item["day"]) != number:
                 continue
             # Include all answer-relevant content in the id so changed material
             # cannot be silently mistaken for an old registered question.

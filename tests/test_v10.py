@@ -26,7 +26,7 @@ class TestSimplifiedPage(unittest.TestCase):
                 "再练7题", "翻页练习", "学习口令", "导出待同步记录", "导出作答",
                 "保存本次作答", "lesson-nav", "study.js", "data-view", "studySync",
                 "错题与复习集</a>", "id=\"quiz\"")
-        for day in (1, 7, 45, 47, 100, 150):
+        for day in (1, 7, 45, 47, 100, 120):
             h = page(day)
             for word in junk:
                 self.assertNotIn(word, h, "Day %d 仍含 %s" % (day, word))
@@ -81,7 +81,7 @@ class TestMergedQuestions(unittest.TestCase):
 
     def test_no_more_than_two_questions_per_knowledge_point(self):
         from collections import Counter
-        for day in (1, 47, 150):
+        for day in (1, 47, 120):
             c = Counter(k for q in data(day)["questions"] for k in (q.get("knowledge_ids") or []))
             self.assertLessEqual(max(c.values()), 2, "Day %d 同考点重复过多" % day)
 
@@ -110,8 +110,8 @@ class TestProgressChain(unittest.TestCase):
         ts = (ROOT / "deploy/worker/src/index.ts").read_text(encoding="utf-8")
         self.assertIn("/api/progress", ts)
         self.assertIn("study_progress", ts)
-        self.assertTrue((ROOT / "deploy/migrations/0005_progress.sql").is_file())
-        sql = (ROOT / "deploy/migrations/0005_progress.sql").read_text(encoding="utf-8")
+        self.assertTrue((ROOT / "deploy/migrations/0006_progress_120.sql").is_file())
+        sql = (ROOT / "deploy/migrations/0006_progress_120.sql").read_text(encoding="utf-8")
         self.assertIn("CREATE TABLE IF NOT EXISTS study_progress", sql)
         self.assertRegex(sql, r"day\s+INTEGER PRIMARY KEY")
 
@@ -139,7 +139,7 @@ class TestProgressChain(unittest.TestCase):
 
     def test_service_worker_bumped(self):
         sw = (ROOT / "web/sw.js").read_text(encoding="utf-8")
-        self.assertIn("nh80-v10-", sw)
+        self.assertIn("nh80-v11-", sw)
         self.assertNotIn("nh80-v5.1-", sw)
         self.assertIn("/api/", sw)
 

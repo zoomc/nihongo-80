@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "11 个必学词；0 个选学拓展"
+   "desc": "14 个必学词；0 个选学拓展"
   },
   {
    "type": "语法",
@@ -51,21 +51,9 @@
    "kana": "あなた"
   },
   {
-   "kid": "V0003",
-   "front": "さん",
-   "back": "…先生／…小姐（敬称）",
-   "kana": "さん"
-  },
-  {
    "kid": "G0001",
    "front": "N は N です",
    "back": "…是…",
-   "kana": ""
-  },
-  {
-   "kid": "G0261",
-   "front": "〜か（or）",
-   "back": "…或…",
    "kana": ""
   },
   {
@@ -73,60 +61,9 @@
    "front": "日",
    "back": "太阳；日子；日本",
    "kana": "ニチ、ジツ、ひ、か"
-  },
-  {
-   "kid": "K0002",
-   "front": "月",
-   "back": "月亮；月份",
-   "kana": "ゲツ、ガツ、つき"
   }
  ],
  "vocab": [
-  {
-   "id": "V0012",
-   "surface": "四",
-   "kana": "よん",
-   "meaning": "四（し／よん）",
-   "ko": "사 / 넷",
-   "ko_status": "ai_gloss",
-   "optional": false,
-   "pos": "数詞",
-   "ex": {
-    "ja": "四つください。",
-    "zh": "请给我四个。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0013",
-   "surface": "五",
-   "kana": "ご",
-   "meaning": "五",
-   "ko": "오（五） / 다섯（五）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "数詞",
-   "ex": {
-    "ja": "五円です。",
-    "zh": "五日元。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0014",
-   "surface": "六",
-   "kana": "ろく",
-   "meaning": "六",
-   "ko": "엿（六） / 육（六） / 여섯（六）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "数詞",
-   "ex": {
-    "ja": "六時です。",
-    "zh": "六点。"
-   },
-   "audio": "tts"
-  },
   {
    "id": "V0015",
    "surface": "七",
@@ -246,12 +183,99 @@
     "zh": "现在几点？"
    },
    "audio": "tts"
+  },
+  {
+   "id": "V0023",
+   "surface": "今日",
+   "kana": "きょう",
+   "meaning": "今天",
+   "ko": "금일（今日，今天） / 오늘（今天，今日）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "今日は月曜日です。",
+    "zh": "今天是周一。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V0024",
+   "surface": "明日",
+   "kana": "あした",
+   "meaning": "明天",
+   "ko": "내일（明天）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "明日、学校へ行きます。",
+    "zh": "明天去学校。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V0025",
+   "surface": "昨日",
+   "kana": "きのう",
+   "meaning": "昨天",
+   "ko": "어제（昨天，昨日） / 어저께（在昨天，在昨日）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "昨日は日曜日でした。",
+    "zh": "昨天是周日。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V0026",
+   "surface": "朝",
+   "kana": "あさ",
+   "meaning": "早晨",
+   "ko": "아침（早上，早晨）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "朝ご飯を食べます。",
+    "zh": "吃早饭。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V0027",
+   "surface": "時間",
+   "kana": "じかん",
+   "meaning": "时间；小时",
+   "ko": "시간（时间）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "時間がありません。",
+    "zh": "没时间。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V0028",
+   "surface": "時計",
+   "kana": "とけい",
+   "meaning": "钟表；手表",
+   "ko": "시계",
+   "ko_status": "ai_gloss",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "時計を見ます。",
+    "zh": "看表。"
+   },
+   "audio": "tts"
   }
  ],
  "core_vocab_ids": [
-  "V0012",
-  "V0013",
-  "V0014",
   "V0015",
   "V0016",
   "V0017",
@@ -259,7 +283,13 @@
   "V0019",
   "V0020",
   "V0021",
-  "V0022"
+  "V0022",
+  "V0023",
+  "V0024",
+  "V0025",
+  "V0026",
+  "V0027",
+  "V0028"
  ],
  "extension_vocab_ids": [],
  "grammar": [
@@ -357,168 +387,6 @@
  ],
  "unit_questions": [],
  "practice": [
-  {
-   "id": "P-002-V0012-m-97a325ce8d6d",
-   "qid": "P-002-V0012-m-97a325ce8d6d",
-   "type": "mcq",
-   "prompt": "本课词条「四」（例句语境：请给我四个。）的释义是哪一项？",
-   "options": [
-    "探望",
-    "缺陷",
-    "四（し／よん）",
-    "郊外"
-   ],
-   "h": "18533024",
-   "oh": [
-    "2556e29a",
-    "6aafbee",
-    "18533024",
-    "954b4fd1"
-   ],
-   "day": 2,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0012"
-   ],
-   "source_day": 2,
-   "optional": true
-  },
-  {
-   "id": "P-002-V0012-r-e048bca4510a",
-   "qid": "P-002-V0012-r-e048bca4510a",
-   "type": "mcq",
-   "prompt": "本课词条「四」（四（し／よん））的假名读音是哪一项？",
-   "options": [
-    "ちゅうしゃ",
-    "どっち",
-    "よん",
-    "なおる"
-   ],
-   "h": "d50da22c",
-   "oh": [
-    "19910d99",
-    "ba884ecc",
-    "d50da22c",
-    "4b090b3a"
-   ],
-   "day": 2,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0012"
-   ],
-   "source_day": 2,
-   "optional": true
-  },
-  {
-   "id": "P-002-V0013-m-91ef348fe71b",
-   "qid": "P-002-V0013-m-91ef348fe71b",
-   "type": "mcq",
-   "prompt": "本课词条「五」（例句语境：五日元。）的释义是哪一项？",
-   "options": [
-    "五",
-    "感觉",
-    "中；其中",
-    "又；再"
-   ],
-   "h": "9160a883",
-   "oh": [
-    "9160a883",
-    "d4d411a5",
-    "b17a35d0",
-    "5f46a08b"
-   ],
-   "day": 2,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0013"
-   ],
-   "source_day": 2,
-   "optional": true
-  },
-  {
-   "id": "P-002-V0013-r-d14c7d4e75b6",
-   "qid": "P-002-V0013-r-d14c7d4e75b6",
-   "type": "mcq",
-   "prompt": "本课词条「五」（五）的假名读音是哪一项？",
-   "options": [
-    "つぎつぎ",
-    "ご",
-    "ざっし",
-    "どう"
-   ],
-   "h": "d1253b43",
-   "oh": [
-    "cdfbdab5",
-    "d1253b43",
-    "610f9cb",
-    "40c59ba6"
-   ],
-   "day": 2,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0013"
-   ],
-   "source_day": 2,
-   "optional": true
-  },
-  {
-   "id": "P-002-V0014-m-af95e11c4c71",
-   "qid": "P-002-V0014-m-af95e11c4c71",
-   "type": "mcq",
-   "prompt": "本课词条「六」（例句语境：六点。）的释义是哪一项？",
-   "options": [
-    "六",
-    "飞机",
-    "一点也不",
-    "难"
-   ],
-   "h": "e8562c78",
-   "oh": [
-    "e8562c78",
-    "95c25061",
-    "707020e",
-    "ba2612a1"
-   ],
-   "day": 2,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0014"
-   ],
-   "source_day": 2,
-   "optional": true
-  },
-  {
-   "id": "P-002-V0014-r-3a000e657008",
-   "qid": "P-002-V0014-r-3a000e657008",
-   "type": "mcq",
-   "prompt": "本课词条「六」（六）的假名读音是哪一项？",
-   "options": [
-    "とくべつ",
-    "ろく",
-    "ぬる",
-    "せんしゅ"
-   ],
-   "h": "69328c35",
-   "oh": [
-    "86888545",
-    "69328c35",
-    "85bf4c80",
-    "d62a6c03"
-   ],
-   "day": 2,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0014"
-   ],
-   "source_day": 2,
-   "optional": true
-  },
   {
    "id": "P-002-V0015-m-827c91c6d392",
    "qid": "P-002-V0015-m-827c91c6d392",
@@ -947,6 +815,330 @@
    "capability": "reading",
    "knowledge_ids": [
     "V0022"
+   ],
+   "source_day": 2,
+   "optional": true
+  },
+  {
+   "id": "P-002-V0023-m-25232b712ffd",
+   "qid": "P-002-V0023-m-25232b712ffd",
+   "type": "mcq",
+   "prompt": "本课词条「今日」（例句语境：今天是周一。）的释义是哪一项？",
+   "options": [
+    "切；剪",
+    "今天",
+    "长",
+    "还；尚未"
+   ],
+   "h": "a848765c",
+   "oh": [
+    "ed395e77",
+    "a848765c",
+    "f921bcce",
+    "cea2b1e0"
+   ],
+   "day": 2,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0023"
+   ],
+   "source_day": 2,
+   "optional": true
+  },
+  {
+   "id": "P-002-V0023-r-840de2c08381",
+   "qid": "P-002-V0023-r-840de2c08381",
+   "type": "mcq",
+   "prompt": "本课词条「今日」（今天）的假名读音是哪一项？",
+   "options": [
+    "べつ",
+    "きょう",
+    "けんぽう",
+    "うんてんしゅ"
+   ],
+   "h": "5a7b5451",
+   "oh": [
+    "7ebaacb0",
+    "5a7b5451",
+    "7fa67672",
+    "cdfc49c5"
+   ],
+   "day": 2,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0023"
+   ],
+   "source_day": 2,
+   "optional": true
+  },
+  {
+   "id": "P-002-V0024-m-69da17c2f7b1",
+   "qid": "P-002-V0024-m-69da17c2f7b1",
+   "type": "mcq",
+   "prompt": "本课词条「明日」（例句语境：明天去学校。）的释义是哪一项？",
+   "options": [
+    "明天",
+    "广告",
+    "来；在（敬）",
+    "体温"
+   ],
+   "h": "53adca8",
+   "oh": [
+    "53adca8",
+    "83cbbacc",
+    "c157ed32",
+    "84009551"
+   ],
+   "day": 2,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0024"
+   ],
+   "source_day": 2,
+   "optional": true
+  },
+  {
+   "id": "P-002-V0024-r-567226fbb50f",
+   "qid": "P-002-V0024-r-567226fbb50f",
+   "type": "mcq",
+   "prompt": "本课词条「明日」（明天）的假名读音是哪一项？",
+   "options": [
+    "とる",
+    "まがる",
+    "たいはん",
+    "あした"
+   ],
+   "h": "f46a5d6b",
+   "oh": [
+    "2dc94f54",
+    "9621c7d4",
+    "8d2ef850",
+    "f46a5d6b"
+   ],
+   "day": 2,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0024"
+   ],
+   "source_day": 2,
+   "optional": true
+  },
+  {
+   "id": "P-002-V0025-m-4efd6ea59b7f",
+   "qid": "P-002-V0025-m-4efd6ea59b7f",
+   "type": "mcq",
+   "prompt": "本课词条「昨日」（例句语境：昨天是周日。）的释义是哪一项？",
+   "options": [
+    "生活",
+    "昨天",
+    "男孩",
+    "柔软；温和"
+   ],
+   "h": "12263e9a",
+   "oh": [
+    "d109e70f",
+    "12263e9a",
+    "231f374d",
+    "6609f280"
+   ],
+   "day": 2,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0025"
+   ],
+   "source_day": 2,
+   "optional": true
+  },
+  {
+   "id": "P-002-V0025-r-4aca32d84801",
+   "qid": "P-002-V0025-r-4aca32d84801",
+   "type": "mcq",
+   "prompt": "本课词条「昨日」（昨天）的假名读音是哪一项？",
+   "options": [
+    "とこや",
+    "やせる",
+    "きのう",
+    "たてる"
+   ],
+   "h": "4815bfcc",
+   "oh": [
+    "d185cbd8",
+    "288e66e9",
+    "4815bfcc",
+    "f26732e9"
+   ],
+   "day": 2,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0025"
+   ],
+   "source_day": 2,
+   "optional": true
+  },
+  {
+   "id": "P-002-V0026-m-35eab3db8b88",
+   "qid": "P-002-V0026-m-35eab3db8b88",
+   "type": "mcq",
+   "prompt": "本课词条「朝」（例句语境：吃早饭。）的释义是哪一项？",
+   "options": [
+    "河",
+    "梅；梅子",
+    "通过",
+    "早晨"
+   ],
+   "h": "23add644",
+   "oh": [
+    "b6901cc2",
+    "42f9fa34",
+    "451858fe",
+    "23add644"
+   ],
+   "day": 2,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0026"
+   ],
+   "source_day": 2,
+   "optional": true
+  },
+  {
+   "id": "P-002-V0026-r-c5ca667f29f3",
+   "qid": "P-002-V0026-r-c5ca667f29f3",
+   "type": "mcq",
+   "prompt": "本课词条「朝」（早晨）的假名读音是哪一项？",
+   "options": [
+    "あさ",
+    "ためす",
+    "かたがた",
+    "いう"
+   ],
+   "h": "4f6ac870",
+   "oh": [
+    "4f6ac870",
+    "ea0d966c",
+    "5d1c5f12",
+    "625bdbcf"
+   ],
+   "day": 2,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0026"
+   ],
+   "source_day": 2,
+   "optional": true
+  },
+  {
+   "id": "P-002-V0027-m-2926f710cda2",
+   "qid": "P-002-V0027-m-2926f710cda2",
+   "type": "mcq",
+   "prompt": "本课词条「時間」（例句语境：没时间。）的释义是哪一项？",
+   "options": [
+    "春天",
+    "糖果",
+    "家具",
+    "时间；小时"
+   ],
+   "h": "21283d75",
+   "oh": [
+    "e634dfab",
+    "d8194d2f",
+    "bef9c85a",
+    "21283d75"
+   ],
+   "day": 2,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0027"
+   ],
+   "source_day": 2,
+   "optional": true
+  },
+  {
+   "id": "P-002-V0027-r-f55304999dca",
+   "qid": "P-002-V0027-r-f55304999dca",
+   "type": "mcq",
+   "prompt": "本课词条「時間」（时间；小时）的假名读音是哪一项？",
+   "options": [
+    "くだり",
+    "ちゅうもく",
+    "いらっしゃい",
+    "じかん"
+   ],
+   "h": "2ac4c9b5",
+   "oh": [
+    "f62e4950",
+    "e63007e0",
+    "4d8572a7",
+    "2ac4c9b5"
+   ],
+   "day": 2,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0027"
+   ],
+   "source_day": 2,
+   "optional": true
+  },
+  {
+   "id": "P-002-V0028-m-25940304c86a",
+   "qid": "P-002-V0028-m-25940304c86a",
+   "type": "mcq",
+   "prompt": "本课词条「時計」（例句语境：看表。）的释义是哪一项？",
+   "options": [
+    "钟表；手表",
+    "诚实；老实",
+    "因为；就连",
+    "完全（不）"
+   ],
+   "h": "bce4f0d8",
+   "oh": [
+    "bce4f0d8",
+    "ef8298f1",
+    "368cf1bb",
+    "7ca9eed9"
+   ],
+   "day": 2,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0028"
+   ],
+   "source_day": 2,
+   "optional": true
+  },
+  {
+   "id": "P-002-V0028-r-f1fd8e499c91",
+   "qid": "P-002-V0028-r-f1fd8e499c91",
+   "type": "mcq",
+   "prompt": "本课词条「時計」（钟表；手表）的假名读音是哪一项？",
+   "options": [
+    "とけい",
+    "びょういん",
+    "すなわち",
+    "ねぼう"
+   ],
+   "h": "65899f02",
+   "oh": [
+    "65899f02",
+    "23666d7a",
+    "1c8aabea",
+    "429598be"
+   ],
+   "day": 2,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0028"
    ],
    "source_day": 2,
    "optional": true
@@ -1294,47 +1486,47 @@
  ],
  "quiz": [
   {
-   "id": "Q-002-K0-478a13efa799",
-   "qid": "Q-002-K0-478a13efa799",
+   "id": "Q-002-K0-ee6bab36505c",
+   "qid": "Q-002-K0-ee6bab36505c",
    "type": "mcq",
-   "prompt": "汉字「金」的一个常用读音是？",
+   "prompt": "汉字「水」的一个常用读音是？",
    "options": [
-    "バツ",
+    "ひる",
     "と.く",
-    "しら-",
-    "キン"
+    "しめ.す",
+    "スイ"
    ],
-   "h": "fcea7411",
+   "h": "be8200b0",
    "oh": [
-    "d31e9791",
+    "adafbdba",
     "957f7adc",
-    "1ed576e0",
-    "fcea7411"
+    "9b7df348",
+    "be8200b0"
    ],
    "knowledge_ids": [
-    "K0006"
+    "K0004"
    ]
   },
   {
-   "id": "Q-002-K1-3bfc81deefb9",
-   "qid": "Q-002-K1-3bfc81deefb9",
+   "id": "Q-002-K1-5453d83c0a96",
+   "qid": "Q-002-K1-5453d83c0a96",
    "type": "mcq",
-   "prompt": "汉字「土」的一个常用读音是？",
+   "prompt": "汉字「木」的一个常用读音是？",
    "options": [
     "はじ.め",
     "かんが.える",
     "むしろ",
-    "ド"
+    "ボク"
    ],
-   "h": "4c2469e4",
+   "h": "48284a1c",
    "oh": [
     "4063350f",
     "2db6b3a0",
     "4d300ecf",
-    "4c2469e4"
+    "48284a1c"
    ],
    "knowledge_ids": [
-    "K0007"
+    "K0005"
    ]
   },
   {
@@ -1360,47 +1552,47 @@
    ]
   },
   {
-   "id": "Q-002-V0-326fa9f49073",
-   "qid": "Q-002-V0-326fa9f49073",
+   "id": "Q-002-V0-3a0315c923b1",
+   "qid": "Q-002-V0-3a0315c923b1",
    "type": "mcq",
-   "prompt": "假名「よん」对应的词形是？",
+   "prompt": "假名「なな」对应的词形是？",
    "options": [
-    "四",
+    "七",
     "遠く",
     "多少",
     "あそこ"
    ],
-   "h": "5e53c03a",
+   "h": "66160b2",
    "oh": [
-    "5e53c03a",
+    "66160b2",
     "1d00f7d0",
     "5d0b4114",
     "f8470e41"
    ],
    "knowledge_ids": [
-    "V0012"
+    "V0015"
    ]
   },
   {
-   "id": "Q-002-V1-cf322ee16275",
-   "qid": "Q-002-V1-cf322ee16275",
+   "id": "Q-002-V1-4963ff664cf0",
+   "qid": "Q-002-V1-4963ff664cf0",
    "type": "mcq",
-   "prompt": "假名「ご」对应的词形是？",
+   "prompt": "假名「はち」对应的词形是？",
    "options": [
     "早い",
     "参考",
-    "五",
+    "八",
     "ください"
    ],
-   "h": "9160a883",
+   "h": "ee5635ea",
    "oh": [
     "f7652700",
     "56d75872",
-    "9160a883",
+    "ee5635ea",
     "f15fedbb"
    ],
    "knowledge_ids": [
-    "V0013"
+    "V0016"
    ]
   },
   {
@@ -1428,47 +1620,47 @@
  ],
  "questions": [
   {
-   "id": "Q-002-K0-478a13efa799",
-   "qid": "Q-002-K0-478a13efa799",
+   "id": "Q-002-K0-ee6bab36505c",
+   "qid": "Q-002-K0-ee6bab36505c",
    "type": "mcq",
-   "prompt": "汉字「金」的一个常用读音是？",
+   "prompt": "汉字「水」的一个常用读音是？",
    "options": [
-    "バツ",
+    "ひる",
     "と.く",
-    "しら-",
-    "キン"
+    "しめ.す",
+    "スイ"
    ],
-   "h": "fcea7411",
+   "h": "be8200b0",
    "oh": [
-    "d31e9791",
+    "adafbdba",
     "957f7adc",
-    "1ed576e0",
-    "fcea7411"
+    "9b7df348",
+    "be8200b0"
    ],
    "knowledge_ids": [
-    "K0006"
+    "K0004"
    ]
   },
   {
-   "id": "Q-002-K1-3bfc81deefb9",
-   "qid": "Q-002-K1-3bfc81deefb9",
+   "id": "Q-002-K1-5453d83c0a96",
+   "qid": "Q-002-K1-5453d83c0a96",
    "type": "mcq",
-   "prompt": "汉字「土」的一个常用读音是？",
+   "prompt": "汉字「木」的一个常用读音是？",
    "options": [
     "はじ.め",
     "かんが.える",
     "むしろ",
-    "ド"
+    "ボク"
    ],
-   "h": "4c2469e4",
+   "h": "48284a1c",
    "oh": [
     "4063350f",
     "2db6b3a0",
     "4d300ecf",
-    "4c2469e4"
+    "48284a1c"
    ],
    "knowledge_ids": [
-    "K0007"
+    "K0005"
    ]
   },
   {
@@ -1494,47 +1686,47 @@
    ]
   },
   {
-   "id": "Q-002-V0-326fa9f49073",
-   "qid": "Q-002-V0-326fa9f49073",
+   "id": "Q-002-V0-3a0315c923b1",
+   "qid": "Q-002-V0-3a0315c923b1",
    "type": "mcq",
-   "prompt": "假名「よん」对应的词形是？",
+   "prompt": "假名「なな」对应的词形是？",
    "options": [
-    "四",
+    "七",
     "遠く",
     "多少",
     "あそこ"
    ],
-   "h": "5e53c03a",
+   "h": "66160b2",
    "oh": [
-    "5e53c03a",
+    "66160b2",
     "1d00f7d0",
     "5d0b4114",
     "f8470e41"
    ],
    "knowledge_ids": [
-    "V0012"
+    "V0015"
    ]
   },
   {
-   "id": "Q-002-V1-cf322ee16275",
-   "qid": "Q-002-V1-cf322ee16275",
+   "id": "Q-002-V1-4963ff664cf0",
+   "qid": "Q-002-V1-4963ff664cf0",
    "type": "mcq",
-   "prompt": "假名「ご」对应的词形是？",
+   "prompt": "假名「はち」对应的词形是？",
    "options": [
     "早い",
     "参考",
-    "五",
+    "八",
     "ください"
    ],
-   "h": "9160a883",
+   "h": "ee5635ea",
    "oh": [
     "f7652700",
     "56d75872",
-    "9160a883",
+    "ee5635ea",
     "f15fedbb"
    ],
    "knowledge_ids": [
-    "V0013"
+    "V0016"
    ]
   },
   {
@@ -1623,114 +1815,6 @@
    "optional": false
   },
   {
-   "id": "P-002-V0012-m-97a325ce8d6d",
-   "qid": "P-002-V0012-m-97a325ce8d6d",
-   "type": "mcq",
-   "prompt": "本课词条「四」（例句语境：请给我四个。）的释义是哪一项？",
-   "options": [
-    "探望",
-    "缺陷",
-    "四（し／よん）",
-    "郊外"
-   ],
-   "h": "18533024",
-   "oh": [
-    "2556e29a",
-    "6aafbee",
-    "18533024",
-    "954b4fd1"
-   ],
-   "day": 2,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0012"
-   ],
-   "source_day": 2,
-   "optional": true
-  },
-  {
-   "id": "P-002-V0013-m-91ef348fe71b",
-   "qid": "P-002-V0013-m-91ef348fe71b",
-   "type": "mcq",
-   "prompt": "本课词条「五」（例句语境：五日元。）的释义是哪一项？",
-   "options": [
-    "五",
-    "感觉",
-    "中；其中",
-    "又；再"
-   ],
-   "h": "9160a883",
-   "oh": [
-    "9160a883",
-    "d4d411a5",
-    "b17a35d0",
-    "5f46a08b"
-   ],
-   "day": 2,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0013"
-   ],
-   "source_day": 2,
-   "optional": true
-  },
-  {
-   "id": "P-002-V0014-m-af95e11c4c71",
-   "qid": "P-002-V0014-m-af95e11c4c71",
-   "type": "mcq",
-   "prompt": "本课词条「六」（例句语境：六点。）的释义是哪一项？",
-   "options": [
-    "六",
-    "飞机",
-    "一点也不",
-    "难"
-   ],
-   "h": "e8562c78",
-   "oh": [
-    "e8562c78",
-    "95c25061",
-    "707020e",
-    "ba2612a1"
-   ],
-   "day": 2,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0014"
-   ],
-   "source_day": 2,
-   "optional": true
-  },
-  {
-   "id": "P-002-V0014-r-3a000e657008",
-   "qid": "P-002-V0014-r-3a000e657008",
-   "type": "mcq",
-   "prompt": "本课词条「六」（六）的假名读音是哪一项？",
-   "options": [
-    "とくべつ",
-    "ろく",
-    "ぬる",
-    "せんしゅ"
-   ],
-   "h": "69328c35",
-   "oh": [
-    "86888545",
-    "69328c35",
-    "85bf4c80",
-    "d62a6c03"
-   ],
-   "day": 2,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0014"
-   ],
-   "source_day": 2,
-   "optional": true
-  },
-  {
    "id": "P-002-V0015-m-827c91c6d392",
    "qid": "P-002-V0015-m-827c91c6d392",
    "type": "mcq",
@@ -1758,33 +1842,6 @@
    "optional": true
   },
   {
-   "id": "P-002-V0015-r-c4f2fd2be577",
-   "qid": "P-002-V0015-r-c4f2fd2be577",
-   "type": "mcq",
-   "prompt": "本课词条「七」（七（なな／しち））的假名读音是哪一项？",
-   "options": [
-    "どくりつ",
-    "なな",
-    "じゃ",
-    "たまご"
-   ],
-   "h": "8eccd235",
-   "oh": [
-    "5bde83f",
-    "8eccd235",
-    "c6065c2c",
-    "db49c96c"
-   ],
-   "day": 2,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0015"
-   ],
-   "source_day": 2,
-   "optional": true
-  },
-  {
    "id": "P-002-V0016-m-ad49a225138b",
    "qid": "P-002-V0016-m-ad49a225138b",
    "type": "mcq",
@@ -1805,33 +1862,6 @@
    "day": 2,
    "group": "vocab",
    "capability": "meaning",
-   "knowledge_ids": [
-    "V0016"
-   ],
-   "source_day": 2,
-   "optional": true
-  },
-  {
-   "id": "P-002-V0016-r-5a19d66d8244",
-   "qid": "P-002-V0016-r-5a19d66d8244",
-   "type": "mcq",
-   "prompt": "本课词条「八」（八）的假名读音是哪一项？",
-   "options": [
-    "けっこん",
-    "たかい",
-    "はち",
-    "ひかり"
-   ],
-   "h": "97c1a76d",
-   "oh": [
-    "37edb60b",
-    "11920a1",
-    "97c1a76d",
-    "1b216850"
-   ],
-   "day": 2,
-   "group": "vocab",
-   "capability": "reading",
    "knowledge_ids": [
     "V0016"
    ],
@@ -2158,6 +2188,330 @@
    "capability": "reading",
    "knowledge_ids": [
     "V0022"
+   ],
+   "source_day": 2,
+   "optional": true
+  },
+  {
+   "id": "P-002-V0023-m-25232b712ffd",
+   "qid": "P-002-V0023-m-25232b712ffd",
+   "type": "mcq",
+   "prompt": "本课词条「今日」（例句语境：今天是周一。）的释义是哪一项？",
+   "options": [
+    "切；剪",
+    "今天",
+    "长",
+    "还；尚未"
+   ],
+   "h": "a848765c",
+   "oh": [
+    "ed395e77",
+    "a848765c",
+    "f921bcce",
+    "cea2b1e0"
+   ],
+   "day": 2,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0023"
+   ],
+   "source_day": 2,
+   "optional": true
+  },
+  {
+   "id": "P-002-V0023-r-840de2c08381",
+   "qid": "P-002-V0023-r-840de2c08381",
+   "type": "mcq",
+   "prompt": "本课词条「今日」（今天）的假名读音是哪一项？",
+   "options": [
+    "べつ",
+    "きょう",
+    "けんぽう",
+    "うんてんしゅ"
+   ],
+   "h": "5a7b5451",
+   "oh": [
+    "7ebaacb0",
+    "5a7b5451",
+    "7fa67672",
+    "cdfc49c5"
+   ],
+   "day": 2,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0023"
+   ],
+   "source_day": 2,
+   "optional": true
+  },
+  {
+   "id": "P-002-V0024-m-69da17c2f7b1",
+   "qid": "P-002-V0024-m-69da17c2f7b1",
+   "type": "mcq",
+   "prompt": "本课词条「明日」（例句语境：明天去学校。）的释义是哪一项？",
+   "options": [
+    "明天",
+    "广告",
+    "来；在（敬）",
+    "体温"
+   ],
+   "h": "53adca8",
+   "oh": [
+    "53adca8",
+    "83cbbacc",
+    "c157ed32",
+    "84009551"
+   ],
+   "day": 2,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0024"
+   ],
+   "source_day": 2,
+   "optional": true
+  },
+  {
+   "id": "P-002-V0024-r-567226fbb50f",
+   "qid": "P-002-V0024-r-567226fbb50f",
+   "type": "mcq",
+   "prompt": "本课词条「明日」（明天）的假名读音是哪一项？",
+   "options": [
+    "とる",
+    "まがる",
+    "たいはん",
+    "あした"
+   ],
+   "h": "f46a5d6b",
+   "oh": [
+    "2dc94f54",
+    "9621c7d4",
+    "8d2ef850",
+    "f46a5d6b"
+   ],
+   "day": 2,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0024"
+   ],
+   "source_day": 2,
+   "optional": true
+  },
+  {
+   "id": "P-002-V0025-m-4efd6ea59b7f",
+   "qid": "P-002-V0025-m-4efd6ea59b7f",
+   "type": "mcq",
+   "prompt": "本课词条「昨日」（例句语境：昨天是周日。）的释义是哪一项？",
+   "options": [
+    "生活",
+    "昨天",
+    "男孩",
+    "柔软；温和"
+   ],
+   "h": "12263e9a",
+   "oh": [
+    "d109e70f",
+    "12263e9a",
+    "231f374d",
+    "6609f280"
+   ],
+   "day": 2,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0025"
+   ],
+   "source_day": 2,
+   "optional": true
+  },
+  {
+   "id": "P-002-V0025-r-4aca32d84801",
+   "qid": "P-002-V0025-r-4aca32d84801",
+   "type": "mcq",
+   "prompt": "本课词条「昨日」（昨天）的假名读音是哪一项？",
+   "options": [
+    "とこや",
+    "やせる",
+    "きのう",
+    "たてる"
+   ],
+   "h": "4815bfcc",
+   "oh": [
+    "d185cbd8",
+    "288e66e9",
+    "4815bfcc",
+    "f26732e9"
+   ],
+   "day": 2,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0025"
+   ],
+   "source_day": 2,
+   "optional": true
+  },
+  {
+   "id": "P-002-V0026-m-35eab3db8b88",
+   "qid": "P-002-V0026-m-35eab3db8b88",
+   "type": "mcq",
+   "prompt": "本课词条「朝」（例句语境：吃早饭。）的释义是哪一项？",
+   "options": [
+    "河",
+    "梅；梅子",
+    "通过",
+    "早晨"
+   ],
+   "h": "23add644",
+   "oh": [
+    "b6901cc2",
+    "42f9fa34",
+    "451858fe",
+    "23add644"
+   ],
+   "day": 2,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0026"
+   ],
+   "source_day": 2,
+   "optional": true
+  },
+  {
+   "id": "P-002-V0026-r-c5ca667f29f3",
+   "qid": "P-002-V0026-r-c5ca667f29f3",
+   "type": "mcq",
+   "prompt": "本课词条「朝」（早晨）的假名读音是哪一项？",
+   "options": [
+    "あさ",
+    "ためす",
+    "かたがた",
+    "いう"
+   ],
+   "h": "4f6ac870",
+   "oh": [
+    "4f6ac870",
+    "ea0d966c",
+    "5d1c5f12",
+    "625bdbcf"
+   ],
+   "day": 2,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0026"
+   ],
+   "source_day": 2,
+   "optional": true
+  },
+  {
+   "id": "P-002-V0027-m-2926f710cda2",
+   "qid": "P-002-V0027-m-2926f710cda2",
+   "type": "mcq",
+   "prompt": "本课词条「時間」（例句语境：没时间。）的释义是哪一项？",
+   "options": [
+    "春天",
+    "糖果",
+    "家具",
+    "时间；小时"
+   ],
+   "h": "21283d75",
+   "oh": [
+    "e634dfab",
+    "d8194d2f",
+    "bef9c85a",
+    "21283d75"
+   ],
+   "day": 2,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0027"
+   ],
+   "source_day": 2,
+   "optional": true
+  },
+  {
+   "id": "P-002-V0027-r-f55304999dca",
+   "qid": "P-002-V0027-r-f55304999dca",
+   "type": "mcq",
+   "prompt": "本课词条「時間」（时间；小时）的假名读音是哪一项？",
+   "options": [
+    "くだり",
+    "ちゅうもく",
+    "いらっしゃい",
+    "じかん"
+   ],
+   "h": "2ac4c9b5",
+   "oh": [
+    "f62e4950",
+    "e63007e0",
+    "4d8572a7",
+    "2ac4c9b5"
+   ],
+   "day": 2,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0027"
+   ],
+   "source_day": 2,
+   "optional": true
+  },
+  {
+   "id": "P-002-V0028-m-25940304c86a",
+   "qid": "P-002-V0028-m-25940304c86a",
+   "type": "mcq",
+   "prompt": "本课词条「時計」（例句语境：看表。）的释义是哪一项？",
+   "options": [
+    "钟表；手表",
+    "诚实；老实",
+    "因为；就连",
+    "完全（不）"
+   ],
+   "h": "bce4f0d8",
+   "oh": [
+    "bce4f0d8",
+    "ef8298f1",
+    "368cf1bb",
+    "7ca9eed9"
+   ],
+   "day": 2,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0028"
+   ],
+   "source_day": 2,
+   "optional": true
+  },
+  {
+   "id": "P-002-V0028-r-f1fd8e499c91",
+   "qid": "P-002-V0028-r-f1fd8e499c91",
+   "type": "mcq",
+   "prompt": "本课词条「時計」（钟表；手表）的假名读音是哪一项？",
+   "options": [
+    "とけい",
+    "びょういん",
+    "すなわち",
+    "ねぼう"
+   ],
+   "h": "65899f02",
+   "oh": [
+    "65899f02",
+    "23666d7a",
+    "1c8aabea",
+    "429598be"
+   ],
+   "day": 2,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0028"
    ],
    "source_day": 2,
    "optional": true

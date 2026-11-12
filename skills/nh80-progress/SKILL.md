@@ -43,7 +43,7 @@ python3 scripts/progress_read.py --latest --base https://nihongo80-preview.cmjfi
 
 | 字段 | 含义 |
 |---|---|
-| `day` | 当天编号 1..150；主键，同日覆盖不追加 |
+| `day` | 当天编号 1..120；当前课程同日覆盖不追加 |
 | `completed_at` | 客户端点「完成」时刻（ISO 8601，截断 40 字符，仅参考） |
 | `server_ts` | Worker 收到时刻（UTC ISO 8601），权威时间戳 |
 | `accuracy` | 客户端自算 0..1，**仅展示、非权威** |

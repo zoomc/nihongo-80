@@ -13,7 +13,7 @@
   {
    "type": "新词",
    "min": 14,
-   "desc": "11 个必学词；0 个选学拓展"
+   "desc": "14 个必学词；0 个选学拓展"
   },
   {
    "type": "语法",
@@ -203,6 +203,51 @@
     "zh": "三点见。"
    },
    "audio": "tts"
+  },
+  {
+   "id": "V0012",
+   "surface": "四",
+   "kana": "よん",
+   "meaning": "四（し／よん）",
+   "ko": "사 / 넷",
+   "ko_status": "ai_gloss",
+   "optional": false,
+   "pos": "数詞",
+   "ex": {
+    "ja": "四つください。",
+    "zh": "请给我四个。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V0013",
+   "surface": "五",
+   "kana": "ご",
+   "meaning": "五",
+   "ko": "오（五） / 다섯（五）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "数詞",
+   "ex": {
+    "ja": "五円です。",
+    "zh": "五日元。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V0014",
+   "surface": "六",
+   "kana": "ろく",
+   "meaning": "六",
+   "ko": "엿（六） / 육（六） / 여섯（六）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "数詞",
+   "ex": {
+    "ja": "六時です。",
+    "zh": "六点。"
+   },
+   "audio": "tts"
   }
  ],
  "core_vocab_ids": [
@@ -216,7 +261,10 @@
   "V0008",
   "V0009",
   "V0010",
-  "V0011"
+  "V0011",
+  "V0012",
+  "V0013",
+  "V0014"
  ],
  "extension_vocab_ids": [],
  "grammar": [
@@ -917,6 +965,168 @@
    "capability": "reading",
    "knowledge_ids": [
     "V0011"
+   ],
+   "source_day": 1,
+   "optional": true
+  },
+  {
+   "id": "P-001-V0012-m-2e79ceaf06e2",
+   "qid": "P-001-V0012-m-2e79ceaf06e2",
+   "type": "mcq",
+   "prompt": "本课词条「四」（例句语境：请给我四个。）的释义是哪一项？",
+   "options": [
+    "下沉；消沉",
+    "四（し／よん）",
+    "流动；漂流",
+    "责备；训斥"
+   ],
+   "h": "18533024",
+   "oh": [
+    "863fa19",
+    "18533024",
+    "6391f0fc",
+    "cb882632"
+   ],
+   "day": 1,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0012"
+   ],
+   "source_day": 1,
+   "optional": true
+  },
+  {
+   "id": "P-001-V0012-r-908d6a79f478",
+   "qid": "P-001-V0012-r-908d6a79f478",
+   "type": "mcq",
+   "prompt": "本课词条「四」（四（し／よん））的假名读音是哪一项？",
+   "options": [
+    "せいかく",
+    "よん",
+    "こんなに",
+    "はっしゃ"
+   ],
+   "h": "d50da22c",
+   "oh": [
+    "4b51bae4",
+    "d50da22c",
+    "1c9c2b00",
+    "b82f58c9"
+   ],
+   "day": 1,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0012"
+   ],
+   "source_day": 1,
+   "optional": true
+  },
+  {
+   "id": "P-001-V0013-m-e71b7398f0cf",
+   "qid": "P-001-V0013-m-e71b7398f0cf",
+   "type": "mcq",
+   "prompt": "本课词条「五」（例句语境：五日元。）的释义是哪一项？",
+   "options": [
+    "男人；男性",
+    "之际；时候",
+    "五",
+    "黑色的"
+   ],
+   "h": "9160a883",
+   "oh": [
+    "7b5c2c8b",
+    "c7e3a5af",
+    "9160a883",
+    "fbe8158a"
+   ],
+   "day": 1,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0013"
+   ],
+   "source_day": 1,
+   "optional": true
+  },
+  {
+   "id": "P-001-V0013-r-2c80643ed381",
+   "qid": "P-001-V0013-r-2c80643ed381",
+   "type": "mcq",
+   "prompt": "本课词条「五」（五）的假名读音是哪一项？",
+   "options": [
+    "わたす",
+    "じっこう",
+    "げんご",
+    "ご"
+   ],
+   "h": "d1253b43",
+   "oh": [
+    "dc33779e",
+    "f26adb91",
+    "581b77f2",
+    "d1253b43"
+   ],
+   "day": 1,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0013"
+   ],
+   "source_day": 1,
+   "optional": true
+  },
+  {
+   "id": "P-001-V0014-m-0605ac8c9ae6",
+   "qid": "P-001-V0014-m-0605ac8c9ae6",
+   "type": "mcq",
+   "prompt": "本课词条「六」（例句语境：六点。）的释义是哪一项？",
+   "options": [
+    "经济",
+    "改变（他动）",
+    "六",
+    "声音；嗓音"
+   ],
+   "h": "e8562c78",
+   "oh": [
+    "2c8458d0",
+    "f031da09",
+    "e8562c78",
+    "4006bf5b"
+   ],
+   "day": 1,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0014"
+   ],
+   "source_day": 1,
+   "optional": true
+  },
+  {
+   "id": "P-001-V0014-r-bc24e2b70fb9",
+   "qid": "P-001-V0014-r-bc24e2b70fb9",
+   "type": "mcq",
+   "prompt": "本课词条「六」（六）的假名读音是哪一项？",
+   "options": [
+    "ろく",
+    "みっつ",
+    "しょうねん",
+    "ちり"
+   ],
+   "h": "69328c35",
+   "oh": [
+    "69328c35",
+    "809d1349",
+    "35d8a87f",
+    "cce55052"
+   ],
+   "day": 1,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0014"
    ],
    "source_day": 1,
    "optional": true
@@ -2170,6 +2380,168 @@
    "capability": "reading",
    "knowledge_ids": [
     "V0011"
+   ],
+   "source_day": 1,
+   "optional": true
+  },
+  {
+   "id": "P-001-V0012-m-2e79ceaf06e2",
+   "qid": "P-001-V0012-m-2e79ceaf06e2",
+   "type": "mcq",
+   "prompt": "本课词条「四」（例句语境：请给我四个。）的释义是哪一项？",
+   "options": [
+    "下沉；消沉",
+    "四（し／よん）",
+    "流动；漂流",
+    "责备；训斥"
+   ],
+   "h": "18533024",
+   "oh": [
+    "863fa19",
+    "18533024",
+    "6391f0fc",
+    "cb882632"
+   ],
+   "day": 1,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0012"
+   ],
+   "source_day": 1,
+   "optional": true
+  },
+  {
+   "id": "P-001-V0012-r-908d6a79f478",
+   "qid": "P-001-V0012-r-908d6a79f478",
+   "type": "mcq",
+   "prompt": "本课词条「四」（四（し／よん））的假名读音是哪一项？",
+   "options": [
+    "せいかく",
+    "よん",
+    "こんなに",
+    "はっしゃ"
+   ],
+   "h": "d50da22c",
+   "oh": [
+    "4b51bae4",
+    "d50da22c",
+    "1c9c2b00",
+    "b82f58c9"
+   ],
+   "day": 1,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0012"
+   ],
+   "source_day": 1,
+   "optional": true
+  },
+  {
+   "id": "P-001-V0013-m-e71b7398f0cf",
+   "qid": "P-001-V0013-m-e71b7398f0cf",
+   "type": "mcq",
+   "prompt": "本课词条「五」（例句语境：五日元。）的释义是哪一项？",
+   "options": [
+    "男人；男性",
+    "之际；时候",
+    "五",
+    "黑色的"
+   ],
+   "h": "9160a883",
+   "oh": [
+    "7b5c2c8b",
+    "c7e3a5af",
+    "9160a883",
+    "fbe8158a"
+   ],
+   "day": 1,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0013"
+   ],
+   "source_day": 1,
+   "optional": true
+  },
+  {
+   "id": "P-001-V0013-r-2c80643ed381",
+   "qid": "P-001-V0013-r-2c80643ed381",
+   "type": "mcq",
+   "prompt": "本课词条「五」（五）的假名读音是哪一项？",
+   "options": [
+    "わたす",
+    "じっこう",
+    "げんご",
+    "ご"
+   ],
+   "h": "d1253b43",
+   "oh": [
+    "dc33779e",
+    "f26adb91",
+    "581b77f2",
+    "d1253b43"
+   ],
+   "day": 1,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0013"
+   ],
+   "source_day": 1,
+   "optional": true
+  },
+  {
+   "id": "P-001-V0014-m-0605ac8c9ae6",
+   "qid": "P-001-V0014-m-0605ac8c9ae6",
+   "type": "mcq",
+   "prompt": "本课词条「六」（例句语境：六点。）的释义是哪一项？",
+   "options": [
+    "经济",
+    "改变（他动）",
+    "六",
+    "声音；嗓音"
+   ],
+   "h": "e8562c78",
+   "oh": [
+    "2c8458d0",
+    "f031da09",
+    "e8562c78",
+    "4006bf5b"
+   ],
+   "day": 1,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0014"
+   ],
+   "source_day": 1,
+   "optional": true
+  },
+  {
+   "id": "P-001-V0014-r-bc24e2b70fb9",
+   "qid": "P-001-V0014-r-bc24e2b70fb9",
+   "type": "mcq",
+   "prompt": "本课词条「六」（六）的假名读音是哪一项？",
+   "options": [
+    "ろく",
+    "みっつ",
+    "しょうねん",
+    "ちり"
+   ],
+   "h": "69328c35",
+   "oh": [
+    "69328c35",
+    "809d1349",
+    "35d8a87f",
+    "cce55052"
+   ],
+   "day": 1,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0014"
    ],
    "source_day": 1,
    "optional": true

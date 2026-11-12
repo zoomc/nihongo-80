@@ -1,13 +1,16 @@
 """Turn the existing bilingual sentence seeds into deterministic comprehension MCQs."""
+from functools import lru_cache
 import hashlib
 import json
 from pathlib import Path
 import random
 import re
 from quiz_v5 import fnv
+from curriculum_v5 import source_day
 
 ROOT = Path(__file__).resolve().parents[1]
 
+@lru_cache(maxsize=4096)
 def chinese_key(text):
     text = re.sub(r'[\s，。！？、,.!?「」“”\"：:；;（）()]', '', text)
     for a,b in [('早餐','早饭'),('晚餐','晚饭'),('午餐','午饭'),('您','你'),('一名','一个')]:
@@ -19,7 +22,7 @@ def build_for_day(day, rows=None):
     if rows is None:
         rows = [json.loads(l) for l in (ROOT/'knowledge/seeds/sentences.jsonl').read_text().splitlines() if l.strip()]
     result=[]
-    for index,s in enumerate(x for x in rows if x['day']==number):
+    for index,s in enumerate(x for x in rows if source_day(x['day']) == number):
         zh = s['prompt'] if s['direction']=='zh-ja' else s['answer']
         candidates=[]
         for other in rows:

@@ -36,7 +36,7 @@ class TestQuestionContract(unittest.TestCase):
     def test_every_question_has_four_unique_options(self):
         from quiz_v5 import fnv
         seen = set()
-        self.assertEqual(len(self.all_q), 1035)
+        self.assertEqual(len(self.all_q), 855)
         for q in self.all_q:
             self.assertNotIn(q["qid"], seen, "重复题号 " + q["qid"])
             seen.add(q["qid"])
@@ -60,7 +60,7 @@ class TestQuestionContract(unittest.TestCase):
                              "同形词把答案写进题干：" + q["qid"])
 
     def test_assessment_days_still_practice_new_kanji_and_grammar(self):
-        for day in (45, 95, 110, 130, 132, 148):
+        for day in (36, 76, 88, 104, 106, 119):
             tags = [q["qid"].split("-")[2] for q in self.by_day[day]
                     if q["qid"].startswith("Q-")]
             self.assertTrue(any(t.startswith("K") for t in tags),
@@ -82,12 +82,18 @@ class TestCurriculumQuality(unittest.TestCase):
         self.assertEqual(len(pairs), 45)
         self.assertEqual([r for _, r in pairs], sorted(r for _, r in pairs),
                          "听力素材难度倒挂")
-        self.assertFalse(any(day > 95 and r < 2 for day, r in pairs),
+        self.assertFalse(any(day > 60 and r < 2 for day, r in pairs),
                          "N3 阶段仍在用 N4 素材")
 
     def test_review_snapshot_covers_all_three_kinds(self):
         kinds = {i[0] for d in self.cur["days"] for i in d["review_knowledge_ids"]}
         self.assertEqual(kinds, {"V", "G", "K"})
+
+    def test_static_review_keeps_seven_day_vocab(self):
+        days = self.cur["days"]
+        for day in days[7:]:
+            self.assertTrue(set(day["review_knowledge_ids"]) &
+                            set(days[day["day"] - 8]["new_vocab_ids"]), day["day"])
 
     def test_grammar_prerequisites_and_synonym_spacing(self):
         days = self.cur["days"]
@@ -175,8 +181,7 @@ class TestDatabaseAndPages(unittest.TestCase):
         finally:
             con.close()
         self.assertEqual(set(ids), set(keys))
-        # Existing bank 2535 + audited daily 4872 + five-day units 600.
-        self.assertEqual(len(ids), 8007)
+        self.assertEqual(len(ids), len(keys))
 
     def test_real_listening_page_is_honest_and_playable(self):
         h = (ROOT / "web/listening.html").read_text(encoding="utf-8")

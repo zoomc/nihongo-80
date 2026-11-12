@@ -42,6 +42,7 @@ def check():
         rows=list(map(json.loads,(ROOT/'knowledge/seeds'/(name+'.jsonl')).read_text().splitlines()))
         if name=='vocabulary' and any(not x.get('ko_hint') for x in rows):
             raise ValueError('incomplete Korean hints')
+    from curriculum_v5 import DAYS, core_vocab_limit
     for p in (ROOT/'web/data').glob('day-*.json'):
         d=json.loads(p.read_text())
         merged=d.get('questions',[])
@@ -57,10 +58,10 @@ def check():
             if len(merged)>60:
                 raise ValueError('merged questions exceed progress API limit: '+p.name)
         core=d['core_vocab_ids'];extra=d['extension_vocab_ids']
-        if len(core)>(11 if d['listening'] else 16) or set(core)&set(extra) or len(core)+len(extra)!=len(d['vocab']):
+        if len(core)>core_vocab_limit(d['listening']) or set(core)&set(extra) or len(core)+len(extra)!=len(d['vocab']):
             raise ValueError('daily workload split broken')
     shards=list((ROOT/'web/data/grade').glob('day-*.json'))
-    if len(shards)!=150 or any('answer' in q or not re.fullmatch('[a-f0-9]{64}',q.get('answer_hash','')) for p in shards for q in json.loads(p.read_text())['answers'].values()):
+    if len(shards)!=DAYS or any('answer' in q or not re.fullmatch('[a-f0-9]{64}',q.get('answer_hash','')) for p in shards for q in json.loads(p.read_text())['answers'].values()):
         raise ValueError('grading shards incomplete or contain plaintext answers')
     if 'generated-key.json' in (ROOT/'deploy/worker/src/index.ts').read_text():
         raise ValueError('private full bank must not be bundled into Worker')

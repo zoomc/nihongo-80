@@ -1,7 +1,7 @@
 
 (function(){
 'use strict';
-var STORE='nh80.v10.', DAY=Number(document.body.dataset.day)||0;
+var STORE='nh80.v11.', DAY=Number(document.body.dataset.day)||0;
 function $(s,r){return (r||document).querySelector(s)}
 function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))}
 function fnv(t){var s=String(t==null?'':t).normalize('NFKC').replace(/\s+/g,'');
@@ -86,7 +86,7 @@ if(f)f.addEventListener('click',function(){
  var right=qs.filter(function(x){return x.correct}).length;
  var wrong=qs.filter(function(x){return !x.correct}).map(function(x){
   return {qid:x.qid,knowledge_ids:(meta.q_kids||{})[x.qid]||[]}});
- var payload={v:1,day:DAY,completed_at:new Date().toISOString(),
+ var payload={v:2,day:DAY,completed_at:new Date().toISOString(),
   required_ids:meta.required_ids||[],extra_ids:meta.extra_ids||[],grammar_ids:meta.grammar_ids||[],
   questions:qs,accuracy:qs.length?right/qs.length:0,self_rating:RATINGS,
   wrong_summary:wrong,

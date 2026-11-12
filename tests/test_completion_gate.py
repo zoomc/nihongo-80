@@ -26,8 +26,8 @@ class CompletionGate(unittest.TestCase):
             src = sqlite3.connect(ROOT / 'data/state.db'); dst = sqlite3.connect(root / 'data/state.db')
             src.backup(dst); src.close(); dst.close()
             key = json.loads((ROOT / 'deploy/worker/src/generated-key.json').read_text())['answers']
-            payload = {'v': 1, 'day': 149, 'session': 'objective-only-gate', 'ts': '2026-11-07T00:00:00Z',
-                       'results': [{'qid': q, 'answer': x['answer']} for q, x in key.items() if x['day'] == 149],
+            payload = {'v': 1, 'day': 117, 'session': 'objective-only-gate', 'ts': '2026-11-07T00:00:00Z',
+                       'results': [{'qid': q, 'answer': x['answer']} for q, x in key.items() if x['day'] == 117],
                        'minutes': None, 'source': 'test'}
             with contextlib.redirect_stdout(io.StringIO()):
                 results = payload["results"]
@@ -35,5 +35,5 @@ class CompletionGate(unittest.TestCase):
                     batch = dict(payload, results=results[offset:offset + 40])
                     nh80.cmd_import_web(argparse.Namespace(root=str(root), code=cloud_sync.encode_payload(batch)))
             with contextlib.redirect_stdout(io.StringIO()) as result:
-                nh80.cmd_finish_day(argparse.Namespace(root=str(root), day=149, minutes=60))
+                nh80.cmd_finish_day(argparse.Namespace(root=str(root), day=117, minutes=60))
             self.assertFalse(json.loads(result.getvalue())['passed'])

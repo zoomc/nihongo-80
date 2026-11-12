@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""v5 验收：150 天 / 2700 词 / 276 语法 / 620 汉字 / 5 块网页 / 会话协议。"""
+"""v5 验收：120 天 / 2700 词 / 276 语法 / 620 汉字 / 5 块网页 / 会话协议。"""
 from __future__ import annotations
 
 import json
@@ -57,9 +57,9 @@ class TestCurriculum(unittest.TestCase):
         cls.cur = json.loads((ROOT / "curriculum/curriculum.json").read_text(encoding="utf-8"))
         cls.days = cls.cur["days"]
 
-    def test_150_days(self):
-        self.assertEqual(len(self.days), 150)
-        self.assertEqual([d["day"] for d in self.days], list(range(1, 151)))
+    def test_120_days(self):
+        self.assertEqual(len(self.days), 120)
+        self.assertEqual([d["day"] for d in self.days], list(range(1, 121)))
 
     def test_blocks_sum_60(self):
         for d in self.days:
@@ -77,8 +77,8 @@ class TestCurriculum(unittest.TestCase):
     def test_listening_schedule(self):
         days = [d["day"] for d in self.days if d.get("listening")]
         self.assertGreaterEqual(len(days), 40)
-        self.assertTrue(all(d >= 46 for d in days))
-        self.assertTrue(all(d % 7 in (1, 3, 5) for d in days))
+        self.assertEqual(sum(31 <= d <= 60 for d in days), 18)
+        self.assertEqual(sum(61 <= d <= 120 for d in days), 27)
 
     def test_no_duplicate_new_ids(self):
         seen_v, seen_g, seen_k = set(), set(), set()
@@ -95,9 +95,9 @@ class TestCurriculum(unittest.TestCase):
 
 
 class TestWeb(unittest.TestCase):
-    def test_150_pages(self):
+    def test_120_pages(self):
         pages = sorted((ROOT / "web").glob("day-*.html"))
-        self.assertEqual(len(pages), 150)
+        self.assertEqual(len(pages), 120)
 
     def test_no_dashboard_junk(self):
         for p in list((ROOT / "web").glob("day-*.html"))[:20]:
@@ -119,7 +119,7 @@ class TestWeb(unittest.TestCase):
             self.assertNotIn(junk, h, "每日页仍含被移除的元素：" + junk)
 
     def test_listening_day_has_section(self):
-        h = (ROOT / "web/day-047.html").read_text(encoding="utf-8")
+        h = (ROOT / "web/day-048.html").read_text(encoding="utf-8")
         self.assertIn('id="listening"', h)
 
     def test_quiz_aligned_and_no_plain_answer(self):
@@ -142,7 +142,7 @@ class TestCli(unittest.TestCase):
         r = subprocess.run([sys.executable, str(ROOT / "scripts/nh80.py"), "validate"],
                            capture_output=True, text=True)
         self.assertEqual(r.returncode, 0, r.stderr)
-        self.assertIn('"days": 150', r.stdout)
+        self.assertIn('"days": 120', r.stdout)
         self.assertIn('"v": 2700', r.stdout)
 
 
@@ -254,12 +254,12 @@ class TestReviewRegressions(unittest.TestCase):
             dst = sqlite3.connect(root / 'data/state.db')
             src.backup(dst)
             src.close(); dst.close()
-            page = json.loads((ROOT / 'web/data/day-150.json').read_text())
+            page = json.loads((ROOT / 'web/data/day-120.json').read_text())
             qid = page['quiz'][0]['qid']
             key = json.loads((ROOT / 'deploy/worker/src/generated-key.json').read_text())['answers']
             results = []
             for sid in ('codex-test-first', 'codex-test-retake'):
-                payload = {'v': 1, 'day': 150, 'session': sid, 'ts': '2026-11-07T00:00:00Z',
+                payload = {'v': 1, 'day': 120, 'session': sid, 'ts': '2026-11-07T00:00:00Z',
                            'minutes': None, 'source': 'test',
                            'results': [{'qid': qid, 'answer': key[qid]['answer']}]}
                 with redirect_stdout(io.StringIO()) as buf:

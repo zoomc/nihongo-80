@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""curriculum_v5.py — 生成 150 天课程骨架（v5）。
+"""curriculum_v5.py — 生成 120 天课程骨架（v5）。
 
 只依赖 seeds，不依赖旧 curriculum。输出：
   curriculum/curriculum.json
-  curriculum/day-001.md ... day-150.md
+  curriculum/day-001.md ... day-120.md
   curriculum/coverage_v5.md
 
 设计要点：
@@ -24,16 +24,39 @@ ROOT = Path(__file__).resolve().parent.parent
 SEED = ROOT / "knowledge/seeds"
 OUT = ROOT / "curriculum"
 
-DAYS = 150
+DAYS = 120
 PHASES = [
-    ("P0", 1, 3, "发音诊断"),
-    ("P1", 4, 45, "N5 核心"),
-    ("P2", 46, 95, "N4 主体"),
-    ("P3", 96, 130, "N3 前半"),
-    ("P4", 131, 150, "N3 后半 + 自测"),
+    ("P0", 1, 3, "假名与听辨"),
+    ("P1", 4, 30, "N5 核心"),
+    ("P2", 31, 60, "N4 主体"),
+    ("P3", 61, 95, "N3 词句与听读"),
+    ("P4", 96, 120, "N3 综合与自测"),
 ]
+LEVEL_RANGES = {"N5": (1, 30), "N4": (31, 60), "N3": (61, DAYS)}
+READING_DAYS = {10:"M0001", 20:"M0009", 40:"M0017", 55:"M0036",
+                65:"M0037", 75:"M0041", 85:"M0045", 95:"M0063",
+                105:"M0067", 115:"M0075"}
+PRACTICE_NOTES = {
+    1: "听辨与跟读：先认识五个元音 あ・い・う・え・お（片假名 ア・イ・ウ・エ・オ），按五个拍子读一遍。再听 か・が，比较清音和浊音。",
+    2: "听辨与跟读：比较 きて（き・て）和 きって（き・っ・て），小っ占一拍；再比较 きや（き・や）和 きゃ（一拍）。",
+    3: "听辨与跟读：比较 おばさん 和 おばあさん，长音多一拍；把 こんにちは 分成 こ・ん・に・ち・は，ん 单独占一拍，末尾 は 读 wa。",
+    30: "阶段回顾：从 Day 26–30 的复习单元挑出五个容易混的词，先听读，再用两条句型各说一句。",
+    60: "阶段回顾：从本阶段选一篇听力，听完复述谁、何时、要做什么，再回看脚本核对遗漏。",
+    90: "N3 题型练习：做官方词汇样题，标出读音、语境选词、近义改写和用法中最容易失分的一类。",
+    100: "N3 题型练习：做官方句子排序和文章语法样题。先找句尾谓语，再用指示词、接续词核对上下文。",
+    110: "N3 题型练习：做官方长文、信息检索和即时应答样题。检索先圈条件，应答先听句末意图。",
+    120: "N3 自测安排：在课外单独留出官方练习卷的计时段，按词汇 30、语法与阅读 70、听力 40 分钟完成；将错题按题型带回会话。",
+}
+EARLY_AUDIO = {1: "あ、い、う、え、お。か、が。", 2: "きて。きって。きや。きゃ。", 3: "おばさん。おばあさん。こんにちは。"}
 
+def source_day(day):
+    """Map a v10 source row to its new lesson without editing the seed."""
+    return (day * DAYS + 149) // 150
 
+def listening_schedule(start, end, count):
+    return {start + ((2 * i + 1) * (end - start + 1)) // (2 * count) for i in range(count)}
+
+LISTENING_DAYS = listening_schedule(31, 60, 18) | listening_schedule(61, DAYS, 27)
 
 def read(name):
     return [json.loads(x) for x in (SEED / name).read_text(encoding="utf-8").splitlines() if x.strip()]
@@ -43,38 +66,27 @@ def phase_of(day):
     for code, a, b, _ in PHASES:
         if a <= day <= b:
             return code, a, b
-    return "P4", 131, 150
-
+    raise ValueError("day outside course")
 
 def is_listening_day(day):
-    # 与 meta.listening_from=47 及页面文案保持一致
-    return day >= 47 and day % 7 in (1, 3, 5)
-
+    return day in LISTENING_DAYS
 
 def level_of_day(day):
-    if day <= 45:
-        return "N5"
-    if day <= 95:
-        return "N4"
-    return "N3"
+    return next(level for level, (start, end) in LEVEL_RANGES.items() if start <= day <= end)
+
+def core_vocab_limit(listening):
+    return 16 if listening else 20
 
 
 def allocate(items, weights):
-    """按权重把 items 顺序分配到 150 天，返回 day -> [item]。"""
-    total_w = sum(weights.values())
-    counts = {d: max(0, round(len(items) * weights[d] / total_w)) for d in weights}
-    diff = len(items) - sum(counts.values())
-    for i, d in enumerate(sorted(counts)):
-        if diff == 0:
-            break
-        counts[d] += 1 if diff > 0 else -1
-        diff += -1 if diff > 0 else 1
-    out, pos = defaultdict(list), 0
-    for d in sorted(counts):
-        out[d] = items[pos:pos + counts[d]]
-        pos += counts[d]
-    if pos < len(items):          # 余数给最后一天，保证不丢
-        out[150].extend(items[pos:])
+    """按权重把 items 顺序分配到指定课日，返回 day -> [item]。"""
+    total = sum(weights.values())
+    out, cumulative, previous = {}, 0, 0
+    for day, weight in sorted(weights.items()):
+        cumulative += weight
+        end = round(len(items) * cumulative / total)
+        out[day] = items[previous:end]
+        previous = end
     return out
 
 
@@ -84,79 +96,31 @@ def build():
     kanji = sorted(read("kanji.jsonl"), key=lambda x: ("N5 N4 N3".index(x.get("jlpt", "N5")), int(x["id"][1:])))
     materials = read("materials.jsonl")
 
-    # v5：从 0 基础开始，全部 2700 词 / 276 语法 / 620 汉字都要排进 150 天，
-    # 不能只排「新增」，否则旧 340 词永远不教（复审 P0）。
-    new_vocab = list(vocab)
-    new_grammar = list(grammar)
-    new_kanji = list(kanji)
+    vby, gby, kby = {}, defaultdict(list), {}
+    scheduled = {}
+    last_meaning = {}
+    for level, (start, end) in LEVEL_RANGES.items():
+        weights = {d: (6 if d <= 3 else 9 if is_listening_day(d) else 10)
+                   for d in range(start, end + 1)}
+        vby.update(allocate([v for v in vocab if v["jlpt"] == level], weights))
+        kby.update(allocate([k for k in kanji if k["jlpt"] == level], dict.fromkeys(weights, 1)))
+        pending = [g for g in grammar if g["jlpt"] == level]
+        slots = allocate(pending, dict.fromkeys(weights, 1))
+        for day in weights:
+            for _ in slots[day]:
+                ready = [g for g in pending if all(scheduled.get(p, DAYS) < day
+                                                   for p in g.get("prerequisites", []))]
+                if not ready:
+                    break
+                pick = next((g for g in ready if day - last_meaning.get(g["meaning_zh"], -7) >= 7), ready[0])
+                gby[day].append(pick)
+                scheduled[pick["id"]] = day
+                last_meaning[pick["meaning_zh"]] = day
+                pending.remove(pick)
+        if pending:
+            raise ValueError("语法排课缺少先修或课时：" + ", ".join(g["id"] for g in pending))
 
-    def weight(d):
-        if d <= 3:
-            return 0.5          # 发音诊断期，词量减半
-        if d >= 131:
-            return 1.1          # 冲刺期略加压（必学上限不变，只增加选学拓展）
-        if is_listening_day(d):
-            return 0.7
-        return 1.0
-    weights = {d: weight(d) for d in range(1, DAYS + 1)}
-    vby = allocate(new_vocab, weights)
-
-    # 语法：先按先修拓扑排序，再按天分配；同一天的第二条不能依赖同一天第一条，
-    # 否则 start-day 的门控会把它推迟，造成「排了但永远不教」。
-    by_id = {g["id"]: g for g in new_grammar}
-    order, temp, done = [], set(), set()
-
-    def visit(gid):
-        if gid in done or gid in temp:
-            return
-        temp.add(gid)
-        for p in (by_id.get(gid, {}).get("prerequisites") or []):
-            if p in by_id:
-                visit(p)
-        temp.discard(gid)
-        done.add(gid)
-        order.append(by_id[gid])
-
-    for g in new_grammar:
-        visit(g["id"])
-    gday = {}
-    gby = defaultdict(list)
-    pending = list(order)
-    last_meaning = {}          # 同义语法条目至少错开 7 天
-    for d in range(1, DAYS + 1):
-        n = 2 if d <= 126 else 1
-        for _ in range(n):
-            ready = [c for c in pending
-                     if all(p in gday and gday[p] < d
-                            for p in (c.get("prerequisites") or []) if p in by_id)]
-            if not ready:
-                break
-            pick = None
-            for cand in ready:
-                m = cand.get("meaning_zh") or ""
-                if m and m in last_meaning and d - last_meaning[m] < 7:
-                    continue      # 换个条目，避免同义句型连着教
-                pick = cand
-                break
-            if pick is None:
-                pick = ready[0]  # 全冲突时不能卡死，拓扑仍成立
-            gby[d].append(pick)
-            gday[pick["id"]] = d
-            if pick.get("meaning_zh"):
-                last_meaning[pick["meaning_zh"]] = d
-            pending.remove(pick)
-    for cand in pending:      # 兜底：拓扑异常时放最后，validate 会报
-        gby[DAYS].append(cand)
-        gday[cand["id"]] = DAYS
-
-    # 汉字：620 / 150 ≈ 4.1，每天 4 个，最后几天补 5
-    kby, ki = defaultdict(list), 0
-    for d in range(1, DAYS + 1):
-        n = 5 if d <= 20 else 4
-        kby[d] = new_kanji[ki:ki + n]; ki += n
-    while ki < len(new_kanji):
-        kby[DAYS].append(new_kanji[ki]); ki += 1
-
+    assessment_by_day = {source_day(x["day"]): x["assessment"] for x in read("assessments.jsonl")}
     # 只使用带三题的 v5 原创听力；按级别顺序一次性分配，不循环复用。
     rank = {"N5": 0, "N4": 1, "N3": 2}
     listening_pool = sorted([m for m in materials if m.get("kind") == "listening"
@@ -168,14 +132,13 @@ def build():
     mby = {d: [m["id"]] for d, m in zip(listening_days, listening_pool)}
 
     days = []
-    learned_v, learned_g = [], []
     for d in range(1, DAYS + 1):
         ph, a, b = phase_of(d)
         nv = vby.get(d, [])
         ng = gby.get(d, [])
         nk = kby.get(d, [])
         listening = is_listening_day(d)
-        core_limit = 11 if listening else 16
+        core_limit = core_vocab_limit(listening)
         essential = nv[:core_limit]
         extension = nv[core_limit:]
         # 复习快照：T+1 / T+3 / T+7，词汇 + 语法 + 汉字三类都要复现。
@@ -183,10 +146,13 @@ def build():
         rev = []
         for back in (1, 3, 7):
             if d - back >= 1:
-                rev += [v["id"] for v in vby.get(d - back, [])][:3]
-                rev += [g["id"] for g in gby.get(d - back, [])][:2]
-                rev += [k["id"] for k in kby.get(d - back, [])][:2]
-        rev = list(dict.fromkeys(rev))[:12]
+                words = vby[d - back]
+                grammar_items = gby[d - back]
+                characters = kby[d - back]
+                start = {1: 0, 3: 2, 7: 4}[back]
+                rev.extend(words[(start + i) % len(words)]["id"] for i in range(2))
+                rev.append(grammar_items[start % len(grammar_items)]["id"])
+                rev.append(characters[start % len(characters)]["id"])
         gpat = ng[0]["pattern"] if ng else ""
         patterns = "、".join(g["pattern"] for g in ng)
         meanings = "；".join(g["meaning_zh"] for g in ng)
@@ -221,8 +187,10 @@ def build():
             "material_ids": mby.get(d, []),
             "question_ids": ["web-%03d" % d],
             "listening": listening,
-            "assessment": ("diagnostic" if d == 1 else "stage" if d in (45, 95, 130) else
-                           "self_check" if d in (110, 132, 148) else "weekly" if d % 7 == 0 else "none"),
+            "assessment": "diagnostic" if d == 1 else assessment_by_day.get(d, "none"),
+            "reading_id": READING_DAYS.get(d),
+            "practice_note": PRACTICE_NOTES.get(d, ""),
+            "early_audio": EARLY_AUDIO.get(d, ""),
             "objectives": [
                 "认出并读出今天的 %d 个必学词；其余拓展自选" % len(essential),
                 "用 %s 造 2 句自己的话" % ("、".join(g["pattern"] for g in ng) or "今天语法"),
@@ -237,13 +205,11 @@ def build():
             "completion": "当天 6 题（抽样）全部作答且正确率 ≥70%；复习与独立输出另由教师核对",
             "review_status": "generated",
         })
-        learned_v += [v["id"] for v in nv]
-        learned_g += [g["id"] for g in ng]
 
     data = {
         "meta": {
-            "version": "7.0", "days": DAYS, "minutes_per_day": 60,
-            "total_hours": DAYS, "listening_from": 47,
+            "version": "11.0", "days": DAYS, "minutes_per_day": 60,
+            "total_hours": DAYS, "listening_from": min(LISTENING_DAYS),
             "target": "N3词句学习、读解听解训练与官方样题自测",
             "honesty": "2700词完整资源；必学与拓展分开；6题为当天新内容抽样，不覆盖全部条目；成绩以官方试题自测为准。",
             "generated_at": "2026-11-08",
@@ -266,13 +232,17 @@ def build():
     lines = ["# v7 覆盖报告", "",
              "- 天数：%d｜总时长：%d 小时" % (DAYS, DAYS),
              "- 新词：%d｜新语法：%d｜新汉字：%d" % (c["vocab"], c["grammar"], c["kanji"]),
-             "- 听力日：%d 天（Day 47 起，每周 3 次）" % c["listening_days"],
+             "- 听力日：%d 天（N4 18 篇、N3 27 篇）" % c["listening_days"],
              "- 词库总量：%d｜语法：%d｜汉字：%d" % (len(vocab), len(grammar), len(kanji)),
              "", "## 每天新词分布", ""]
     dist = Counter(len(d["new_vocab_ids"]) for d in days)
     for n, k in sorted(dist.items()):
         lines.append("- %d 词/天：%d 天" % (n, k))
     (OUT / "coverage_v5.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+    for path in OUT.glob("day-[0-9][0-9][0-9].md"):
+        if int(path.stem[4:]) > DAYS:
+            path.unlink()
 
     # 每日 md（简版，细节在网页）
     for d in days:

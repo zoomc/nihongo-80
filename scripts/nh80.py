@@ -2,7 +2,7 @@
 """nh80.py — Nihongo 80 唯一状态写入入口 / 命令行。
 
 用法速查：
-  python3 scripts/nh80.py init      # 150 天 v5
+  python3 scripts/nh80.py init      # 120 天课程
   python3 scripts/nh80.py build
   python3 scripts/nh80.py start-day 1
   python3 scripts/nh80.py answer --day 1 --q Q0001 --answer "です"
@@ -27,6 +27,7 @@ import unicodedata
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from curriculum_v5 import DAYS as COURSE_DAYS, level_of_day, source_day
 
 import core  # noqa: E402
 import curriculum as curr  # noqa: E402
@@ -241,7 +242,7 @@ def cmd_init(args):
 
 
 def _build_v5(root, conn):
-    """v5 生成 150 天课程并写入 DB；返回 curriculum data。"""
+    """v5 生成 120 天课程并写入 DB；返回 curriculum data。"""
     import hashlib
     import curriculum_v5 as c5
     data = c5.build()
@@ -292,6 +293,9 @@ def _build_v5(root, conn):
     (root / "deploy/worker/src/generated-key.json").write_text(jdump({"answers": keys}) + "\n", encoding="utf-8")
     grade_dir = root / "web/data/grade"
     grade_dir.mkdir(parents=True, exist_ok=True)
+    for path in grade_dir.glob("day-???.json"):
+        if path.stem[4:].isdigit() and int(path.stem[4:]) > c5.DAYS:
+            path.unlink()
     for day, answers in grade_shards.items():
         (grade_dir / ("day-%03d.json" % day)).write_text(jdump({"answers": answers}) + "\n", encoding="utf-8")
     return data
@@ -727,7 +731,7 @@ def cmd_confirm_output(args):
     try:
         ensure_session_schema(conn)
         d = _curriculum_payload(conn, args.day)
-        valid = {x["id"] for x in core.read_jsonl(r / "knowledge/seeds/sentences.jsonl") if x["day"] == args.day}
+        valid = {x["id"] for x in core.read_jsonl(r / "knowledge/seeds/sentences.jsonl") if source_day(x["day"]) == args.day}
         for field, count in (("sentences", 3), ("grammar_sentences", 2), ("vocab_check", 3)):
             rows = payload.get(field, [])
             if not isinstance(rows, list) or len(rows) < count:
@@ -818,7 +822,7 @@ def cmd_finish_day(args):
              "completed_days": completed, "incomplete_days": incomplete,
              "pending_open": pending, "output_confirmed": output_confirmed, "practice_mode": "choice" if choice_mode else "teacher",
              "summary": summary, "backup": bk["backup"] if bk else None,
-             "next": ("python3 scripts/nh80.py start-day %d" % (day + 1)) if day < 150 else "打开 resources.html 进行 N3 官方自测与薄弱项复习"})
+             "next": ("python3 scripts/nh80.py start-day %d" % (day + 1)) if day < COURSE_DAYS else "打开 resources.html 进行 N3 官方自测与薄弱项复习"})
     finally:
         conn.close()
 
@@ -943,8 +947,8 @@ def cmd_validate(args):
     data = json.loads(path.read_text(encoding="utf-8"))
     days = data.get("days") or []
     errs, warns = [], []
-    if len(days) != 150:
-        errs.append("天数应为 150，实际 %d" % len(days))
+    if [d["day"] for d in days] != list(range(1, COURSE_DAYS + 1)):
+        errs.append("课程必须连续编号 Day 1–%d" % COURSE_DAYS)
     seeds = {name: {x["id"]: x for x in core.read_jsonl(r / "knowledge/seeds" / (name + ".jsonl"))}
              for name in ("vocabulary", "grammar", "kanji", "materials")}
     listening_seen = set()
@@ -959,6 +963,12 @@ def cmd_validate(args):
             for pre in seeds["grammar"].get(gid, {}).get("prerequisites", []):
                 if pre not in grammar_days or grammar_days[pre] >= d["day"]:
                     errs.append("Day %s 先修未满足 %s -> %s" % (d["day"], gid, pre))
+        if d.get("reading_id"):
+            reading = seeds["materials"].get(d["reading_id"], {})
+            if (reading.get("kind") != "reading" or reading.get("license") != "original"
+                    or reading.get("level") != level_of_day(d["day"])
+                    or not reading.get("text_ja") or not reading.get("text_zh")):
+                errs.append("Day %s 精读素材不符合级别或缺少原文/译文" % d["day"])
         if d.get("listening"):
             for mid in d["material_ids"]:
                 m = seeds["materials"].get(mid, {})

@@ -504,8 +504,8 @@ function progressIdList(value: unknown, max: number): string[] | null {
 
 /** 字段白名单 + 逐项校验；返回规范化对象（未知字段一律丢弃）或错误 reason。 */
 function parseProgressBody(body: ProgressObject): ProgressObject | string {
-  if (body.v !== undefined && body.v !== 1) return "bad_version";
-  const day = strictInt(body.day, 1, 150);
+  if (body.v !== 2) return "bad_version";
+  const day = strictInt(body.day, 1, 120);
   if (day === null) return "bad_day";
 
   const requiredIds = progressIdList(body.required_ids, PROGRESS_MAX_IDS);
@@ -569,7 +569,7 @@ function parseProgressBody(body: ProgressObject): ProgressObject | string {
   if (typeof body.note === "string" && body.note.length > PROGRESS_MAX_NOTE) return "note_too_large";
 
   return {
-    v: 1,
+    v: 2,
     day,
     completed_at: typeof body.completed_at === "string" ? body.completed_at.slice(0, 40) : "",
     required_ids: requiredIds,
@@ -606,13 +606,13 @@ async function handleGetProgress(env: Env, url: URL, origin: string | null): Pro
   try {
     let res: D1Result<Record<string, unknown>>;
     if (dayParam !== null) {
-      const day = strictInt(dayParam, 1, 150);
+      const day = strictInt(dayParam, 1, 120);
       if (day === null) return jsonResponse({ ok: false, reason: "bad_query" }, 400, origin);
-      res = await db.prepare("SELECT day,server_ts,completed_at,payload,accuracy,self_reported FROM study_progress WHERE day=?")
+      res = await db.prepare("SELECT day,server_ts,completed_at,payload,accuracy,self_reported FROM study_progress_120 WHERE day=?")
         .bind(day).all<Record<string, unknown>>();
     } else if (latestParam !== null && latestParam !== "0") {
-      const limit = asInt(url.searchParams.get("limit"), PROGRESS_LIMIT_DEFAULT, 1, 150) ?? PROGRESS_LIMIT_DEFAULT;
-      res = await db.prepare("SELECT day,server_ts,completed_at,payload,accuracy,self_reported FROM study_progress ORDER BY server_ts DESC, day DESC LIMIT ?")
+      const limit = asInt(url.searchParams.get("limit"), PROGRESS_LIMIT_DEFAULT, 1, 120) ?? PROGRESS_LIMIT_DEFAULT;
+      res = await db.prepare("SELECT day,server_ts,completed_at,payload,accuracy,self_reported FROM study_progress_120 ORDER BY server_ts DESC, day DESC LIMIT ?")
         .bind(limit).all<Record<string, unknown>>();
     } else {
       return jsonResponse({ ok: false, reason: "bad_query" }, 400, origin);
@@ -687,7 +687,7 @@ async function handleProgress(request: Request, env: Env, url: URL): Promise<Res
     }
     const day = normalized.day as number;
     const payload = JSON.stringify(normalized);
-    await db.prepare(`INSERT INTO study_progress(day,server_ts,completed_at,payload,accuracy,self_reported)
+    await db.prepare(`INSERT INTO study_progress_120(day,server_ts,completed_at,payload,accuracy,self_reported)
       VALUES(?,?,?,?,?,1)
       ON CONFLICT(day) DO UPDATE SET server_ts=excluded.server_ts,
         completed_at=excluded.completed_at, payload=excluded.payload,

@@ -12,6 +12,8 @@ import os
 import re
 from pathlib import Path
 
+from curriculum_v5 import DAYS as COURSE_DAYS, source_day
+
 ROOT = Path(__file__).resolve().parent.parent
 CUR = ROOT / "curriculum/curriculum.json"
 PROGRESS = ROOT / "data/progress.json"
@@ -42,7 +44,7 @@ def progress():
         from contextlib import closing
         with closing(sqlite3.connect("file:%s?mode=ro" % db, uri=True)) as conn:
             completed = {r[0] for r in conn.execute("SELECT day FROM sessions WHERE status='finished' AND passed=1")}
-        return {"day": next((n for n in range(1,151) if n not in completed),150)}
+        return {"day": next((n for n in range(1, COURSE_DAYS + 1) if n not in completed), COURSE_DAYS)}
     return {"day": 1}
 
 
@@ -70,7 +72,7 @@ def brief(day: int, force=False):
     out.mkdir(parents=True, exist_ok=True)
     template = out / "output-review.json"
     if not template.exists():
-        sentence_ids = [x["id"] for x in read_jsonl(ROOT / "knowledge/seeds/sentences.jsonl") if x["day"] == day][:3]
+        sentence_ids = [x["id"] for x in read_jsonl(ROOT / "knowledge/seeds/sentences.jsonl") if source_day(x["day"]) == day][:3]
         template.write_text(json.dumps({"sentences":[{"id":sid,"text":"","feedback":""} for sid in sentence_ids],
             "grammar_sentences":[{"grammar_id":gid,"text":"","feedback":"","correct":False} for gid in (d["new_grammar_ids"]*2)[:2]],
             "vocab_check":[{"id":vid,"text":"","feedback":""} for vid in d.get("core_vocab_ids",d["new_vocab_ids"])[:3]]},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
@@ -80,6 +82,8 @@ def brief(day: int, force=False):
          "- 今日页面：%s" % page_link(day),
          "- Can-do：%s" % d["can_do"], "",
          "## 今天要学", ""]
+    if d.get("practice_note"):
+        L.extend([d["practice_note"], ""])
     L.append("### 必学新词 %d · 拓展 %d（自选）" % (len(d.get("core_vocab_ids", d["new_vocab_ids"])),len(d.get("extension_vocab_ids", []))))
     for vid in d.get("core_vocab_ids", d["new_vocab_ids"]):
         v = vocab[vid]
@@ -102,7 +106,7 @@ def brief(day: int, force=False):
     L += ["", "## 会话流程（18 分钟）", "",
           "1. **先发页面链接**，等学生看完，不要一上来讲课。",
           "2. 只回答学生问的，不复述页面。",
-          "3. 网页练习均为选择题：3道必做选句＋6道综合，听力日另3题；7道选句拓展可选。",
+          "3. 网页练习均为选择题：以当天网页整块练习为准；时间不足先做必学内容，余题回头补。",
           "4. 拉取或导入choice模式作答后，CLI自动按必做题完整性和70%正确率计算当天完成，不要求手写或confirm-output。",
           "5. 会话优先解释错题；有余力可口头复述或造句，不作为网页完成的前置条件。",
           "6. 写 `days/day-%03d/report.md` 记录难点；未答齐或未达标就补做，不降低难度。" % day,
@@ -234,7 +238,7 @@ def state_write(day_override=None):
             summary = [x.strip("- ").strip() for x in m.group(1).strip().splitlines() if x.strip()][:5]
     L = ["# 学习状态", "",
          "- 更新：%s（scripts/session_v5.py state 生成，勿手改）" % now(),
-         "- 当前：Day %03d / 150（%s %s）" % (day, d["phase"], d["phase_name"]),
+         "- 当前：Day %03d / %d（%s %s）" % (day, COURSE_DAYS, d["phase"], d["phase_name"]),
          "- 今日：days/day-%03d/brief.md ｜ %d 分钟 ｜ %s" % (day, d["minutes"], "听力日" if d.get("listening") else "常规日"),
          "- 今日页面：%s" % page_link(day),
          "- Can-do：%s" % d["can_do"],

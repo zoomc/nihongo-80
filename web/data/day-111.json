@@ -1,8 +1,8 @@
 {
  "day": 111,
- "phase": "P3",
- "theme": "〜ば〜ほど、〜ほど",
- "can_do": "用「〜ば〜ほど、〜ほど」造两句自己的话，表达：越…越…；到了…的程度",
+ "phase": "P4",
+ "theme": "〜とか（hearsay）、〜って",
+ "can_do": "用「〜とか（hearsay）、〜って」造两句自己的话，表达：听说…；好像说…；说是…；所谓…",
  "minutes": 60,
  "blocks": [
   {
@@ -12,22 +12,27 @@
   },
   {
    "type": "新词",
-   "min": 14,
-   "desc": "16 个必学词；3 个选学拓展"
+   "min": 8,
+   "desc": "16 个必学词；6 个选学拓展"
   },
   {
    "type": "语法",
    "min": 6,
-   "desc": "〜ば〜ほど、〜ほど"
+   "desc": "〜とか（hearsay）、〜って"
+  },
+  {
+   "type": "听力",
+   "min": 8,
+   "desc": "原创 TTS + 3 道理解题；时长为估计，非真人音频"
   },
   {
    "type": "句子输出",
-   "min": 6,
+   "min": 5,
    "desc": "3道选句必做，7道拓展；答后核对"
   },
   {
    "type": "练习",
-   "min": 6,
+   "min": 5,
    "desc": "6 题即时自评"
   },
   {
@@ -36,438 +41,485 @@
    "desc": "抽词、造句、批改"
   }
  ],
- "listening": false,
+ "listening": true,
  "review": [
   {
-   "kid": "V1927",
-   "front": "講演",
-   "back": "演讲；报告",
-   "kana": "こうえん"
+   "kid": "V2442",
+   "front": "直接",
+   "back": "直接",
+   "kana": "ちょくせつ"
   },
   {
-   "kid": "V1928",
-   "front": "効果",
-   "back": "效果",
-   "kana": "こうか"
+   "kid": "V2443",
+   "front": "著者",
+   "back": "作者",
+   "kana": "ちょしゃ"
   },
   {
-   "kid": "V1929",
-   "front": "硬貨",
-   "back": "硬币",
-   "kana": "こうか"
-  },
-  {
-   "kid": "G0120",
-   "front": "〜だけでなく",
-   "back": "不仅…而且…",
+   "kid": "G0166",
+   "front": "〜場合（は）",
+   "back": "在…情况下",
    "kana": ""
   },
   {
-   "kid": "G0133",
-   "front": "〜ところに / 〜ところへ / 〜ところを",
-   "back": "正当…的时候",
+   "kid": "K0553",
+   "front": "招",
+   "back": "招待；招引",
+   "kana": "ショウ、まね.く"
+  },
+  {
+   "kid": "V2397",
+   "front": "男子",
+   "back": "男子；男生",
+   "kana": "だんし"
+  },
+  {
+   "kid": "V2398",
+   "front": "単純",
+   "back": "单纯；简单",
+   "kana": "たんじゅん"
+  },
+  {
+   "kid": "G0162",
+   "front": "〜てたまらない",
+   "back": "…得受不了；非常…",
    "kana": ""
   },
   {
-   "kid": "K0457",
-   "front": "深",
-   "back": "深；深刻",
-   "kana": "シン、ふか.い、-ぶか.い、ふか.まる、ふか.める、み-"
+   "kid": "K0543",
+   "front": "等",
+   "back": "等等；平等；等于",
+   "kana": "トウ、ひと.しい、など、-ら"
   },
   {
-   "kid": "K0458",
-   "front": "様",
-   "back": "样子；敬称",
-   "kana": "ヨウ、ショウ、さま、さん"
+   "kid": "V2306",
+   "front": "底",
+   "back": "底部；底",
+   "kana": "そこ"
   },
   {
-   "kid": "V1894",
-   "front": "結局",
-   "back": "结果；终究",
-   "kana": "けっきょく"
+   "kid": "V2307",
+   "front": "そこで",
+   "back": "于是；因此",
+   "kana": "そこで"
   },
   {
-   "kid": "V1895",
-   "front": "決心",
-   "back": "决心",
-   "kana": "けっしん"
-  },
-  {
-   "kid": "V1896",
-   "front": "欠席",
-   "back": "缺席",
-   "kana": "けっせき"
-  },
-  {
-   "kid": "G0129",
-   "front": "〜気がする",
-   "back": "感觉…；总觉得…",
+   "kid": "G0154",
+   "front": "〜ついでに",
+   "back": "顺便…",
    "kana": ""
   },
   {
-   "kid": "G0130",
-   "front": "〜ずに",
-   "back": "不…就…；没…而…",
-   "kana": ""
+   "kid": "K0520",
+   "front": "背",
+   "back": "背；违背",
+   "kana": "ハイ、せ、せい、そむ.く、そむ.ける"
   }
  ],
  "vocab": [
   {
-   "id": "V1941",
-   "surface": "後者",
-   "kana": "こうしゃ",
-   "meaning": "后者",
-   "ko": "후자（后者）",
+   "id": "V2467",
+   "surface": "つまり",
+   "kana": "つまり",
+   "meaning": "也就是说",
+   "ko": "곧（也就是，换言之） / 즉（也就是）",
    "ko_status": "dictionary",
    "optional": false,
-   "pos": "名词",
+   "pos": "副词",
    "ex": {
-    "ja": "このうち大事なのは後者の方です。",
-    "zh": "其中重要的是后者。"
+    "ja": "つまり彼女は下手な踊り子だ。",
+    "zh": "也就是说，她是个蹩脚的舞者。"
    },
    "audio": "tts"
   },
   {
-   "id": "V1942",
-   "surface": "構成",
-   "kana": "こうせい",
-   "meaning": "构成",
-   "ko": "구성（构成）",
+   "id": "V2468",
+   "surface": "罪",
+   "kana": "つみ",
+   "meaning": "罪；过错",
+   "ko": "죄（罪，罪孽）",
    "ko_status": "dictionary",
    "optional": false,
-   "pos": "名词/动词(サ变)/他动词",
+   "pos": "名词/な形容词/连体词",
    "ex": {
-    "ja": "委員会は８名から構成されている。",
-    "zh": "委员会由八名成员组成。"
+    "ja": "ビルはその罪を犯していなかった。",
+    "zh": "比尔没有犯那项罪。"
    },
    "audio": "tts"
   },
   {
-   "id": "V1943",
-   "surface": "高速",
-   "kana": "こうそく",
-   "meaning": "高速",
-   "ko": "고속（高速） / 고속 도로（高速公路）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "な形容词/连体词/名词",
-   "ex": {
-    "ja": "運転者は高速を出し続けた。",
-    "zh": "司机一直保持高速行驶。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1944",
-   "surface": "行動",
-   "kana": "こうどう",
-   "meaning": "行动",
-   "ko": "행동（行动，行为，举动） / 행위（行为，行动）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名词/动词(サ变)/自动词/连体词",
-   "ex": {
-    "ja": "私がこの行動の責任はすべて取る。",
-    "zh": "这次行动的责任全由我来负。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1945",
-   "surface": "強盗",
-   "kana": "ごうとう",
-   "meaning": "强盗；抢劫",
-   "ko": "강도（强盗） / 강도질（当强盗，抢劫） / 날강도（强盗， 抢劫犯，匪贼）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名词",
-   "ex": {
-    "ja": "父は強盗と取っ組み合いをした。",
-    "zh": "父亲和劫匪扭打了起来。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1946",
-   "surface": "工場",
-   "kana": "こうば",
-   "meaning": "工厂",
-   "ko": "공장",
-   "ko_status": "ai_gloss",
-   "optional": false,
-   "pos": "名词",
-   "ex": {
-    "ja": "私の父と兄はこの工場で働いている。",
-    "zh": "我父亲和哥哥在这家工厂工作。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1947",
-   "surface": "幸福",
-   "kana": "こうふく",
-   "meaning": "幸福",
-   "ko": "행복（幸福）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名词/な形容词",
-   "ex": {
-    "ja": "金持ちが必ずしも幸福とは限らない。",
-    "zh": "有钱人不一定幸福。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1948",
-   "surface": "公平",
-   "kana": "こうへい",
-   "meaning": "公平",
-   "ko": "공평（公平，平等）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名词",
-   "ex": {
-    "ja": "法が常に公平であるとは限らない。",
-    "zh": "法律未必总是公平的。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1949",
-   "surface": "候補",
-   "kana": "こうほ",
-   "meaning": "候选；候选人",
-   "ko": "후보（候选人）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名词",
-   "ex": {
-    "ja": "スミス氏は市長候補である。",
-    "zh": "史密斯先生是市长候选人。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1950",
-   "surface": "考慮",
-   "kana": "こうりょ",
-   "meaning": "考虑",
-   "ko": "고려（考虑，斟酌）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名词/动词(サ变)/他动词",
-   "ex": {
-    "ja": "彼らに同行しようかと考慮中です。",
-    "zh": "我正在考虑要不要跟他们一起去。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1951",
-   "surface": "越える",
-   "kana": "こえる",
-   "meaning": "超过；越过",
-   "ko": "넘다（过，超过） / 넘기다（越过） / 넘어가다（超过，超）",
+   "id": "V2469",
+   "surface": "詰める",
+   "kana": "つめる",
+   "meaning": "塞；改短",
+   "ko": "놓다（填充，塞，装）",
    "ko_status": "dictionary",
    "optional": false,
    "pos": "动词(一段)/他动词",
    "ex": {
-    "ja": "それは人知の限界を越えている。",
-    "zh": "那超出了人类智慧的极限。"
+    "ja": "このブラウスをつめていただけますか。",
+    "zh": "这件衬衫能帮我改小一点吗？"
    },
    "audio": "tts"
   },
   {
-   "id": "V1952",
-   "surface": "コーチ",
-   "kana": "コーチ",
-   "meaning": "教练",
-   "ko": "코치（教练，训练）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名词/动词(サ变)/他动词",
-   "ex": {
-    "ja": "コーチが助言をしてくれた。",
-    "zh": "教练给了我建议。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1953",
-   "surface": "コード",
-   "kana": "コード",
-   "meaning": "代码；软线",
-   "ko": "코드（代码，编码）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名词",
-   "ex": {
-    "ja": "パソコンのコードを抜かないでください。",
-    "zh": "请不要拔掉电脑的电源线。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1954",
-   "surface": "氷",
-   "kana": "こおり",
-   "meaning": "冰",
-   "ko": "얼음（冰）",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名词",
-   "ex": {
-    "ja": "船は氷に閉じ込められてしまった。",
-    "zh": "船被冰封住了。"
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V1955",
-   "surface": "凍る",
-   "kana": "こおる",
-   "meaning": "结冰；冻",
-   "ko": "얼다（冻结，冻）",
+   "id": "V2470",
+   "surface": "積もる",
+   "kana": "つもる",
+   "meaning": "积；堆积",
+   "ko": "쌓이다（堆，叠放，堆积）",
    "ko_status": "dictionary",
    "optional": false,
    "pos": "动词(五段)/自动词",
    "ex": {
-    "ja": "道が凍っているから気を付けなさい。",
-    "zh": "路面结冰了，小心点。"
+    "ja": "雪はあたり一面に積もっていた。",
+    "zh": "雪积得满地都是。"
    },
    "audio": "tts"
   },
   {
-   "id": "V1956",
-   "surface": "ゴール",
-   "kana": "ゴール",
-   "meaning": "终点；球门",
-   "ko": "골（球门，球篮） / 골문（球门） / 결승점（终点）",
+   "id": "V2471",
+   "surface": "梅雨",
+   "kana": "つゆ",
+   "meaning": "梅雨",
+   "ko": "장마（梅雨）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "天気予報によれば、まもなく梅雨に入るそうだ。",
+    "zh": "据天气预报，马上就要入梅了。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2472",
+   "surface": "辛い",
+   "kana": "つらい",
+   "meaning": "难受；痛苦",
+   "ko": "괴롭다（痛苦，难过） / 아프다（难受，难过） / 쓰라리다（痛苦）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "い形容词",
+   "ex": {
+    "ja": "流産はとても辛い経験です。",
+    "zh": "流产是非常痛苦的经历。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2473",
+   "surface": "釣",
+   "kana": "つり",
+   "meaning": "钓鱼",
+   "ko": "낚시",
+   "ko_status": "ai_gloss",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "あなたは釣りに行きたがっている。",
+    "zh": "你很想去钓鱼。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2474",
+   "surface": "連れ",
+   "kana": "つれ",
+   "meaning": "同伴；同行者（〜連れ＝带着…同行）",
+   "ko": "동행 / 데리고 감",
+   "ko_status": "ai_gloss",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "駅までお連れいたしましょう。",
+    "zh": "我送您到车站吧。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2475",
+   "surface": "で",
+   "kana": "で",
+   "meaning": "出；出自",
+   "ko": "나옴 / 출신",
+   "ko_status": "ai_gloss",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "そこは風景が美しいことで有名だ。",
+    "zh": "那里以风景优美而闻名。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2476",
+   "surface": "出会い",
+   "kana": "であい",
+   "meaning": "相遇；邂逅",
+   "ko": "만남",
+   "ko_status": "ai_gloss",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "私たちの出会いはまったくの偶然でした。",
+    "zh": "我们的相遇完全是偶然。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2477",
+   "surface": "出会う",
+   "kana": "であう",
+   "meaning": "遇见；邂逅",
+   "ko": "만나다（遇到，遇见，碰见） / 마주치다（邂逅，偶遇）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "动词(五段)/自动词",
+   "ex": {
+    "ja": "きのう旧友の一人に出会った。",
+    "zh": "昨天遇见了一位老朋友。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2478",
+   "surface": "提案",
+   "kana": "ていあん",
+   "meaning": "提议；建议",
+   "ko": "제안（提案，提议）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名词/动词(サ变)/他动词",
+   "ex": {
+    "ja": "私の提案を承認していただけますか。",
+    "zh": "能批准我的提案吗？"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2479",
+   "surface": "定期",
+   "kana": "ていき",
+   "meaning": "定期",
+   "ko": "정기（定期） / 정기권（定期票，月票，季票） / 정기 예금（定期存款）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "彼らは定期旅客船に乗り込んだ。",
+    "zh": "他们登上了定期客轮。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2480",
+   "surface": "抵抗",
+   "kana": "ていこう",
+   "meaning": "抵抗；阻力",
+   "ko": "저항（抵抗）",
    "ko_status": "dictionary",
    "optional": false,
    "pos": "名词/动词(サ变)/自动词",
    "ex": {
-    "ja": "ゴールまであと百メートルです。",
-    "zh": "离终点还有一百米。"
+    "ja": "困難に対してあくまでも抵抗した。",
+    "zh": "面对困难始终抵抗到底。"
    },
    "audio": "tts"
   },
   {
-   "id": "V1957",
-   "surface": "誤解",
-   "kana": "ごかい",
-   "meaning": "误解",
-   "ko": "오해（误解，误会）",
+   "id": "V2481",
+   "surface": "程度",
+   "kana": "ていど",
+   "meaning": "程度",
+   "ko": "정도（程度）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名词/副词",
+   "ex": {
+    "ja": "この程度のお金じゃ長くは持たないだろう。",
+    "zh": "这点钱撑不了多久吧。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2482",
+   "surface": "停留所",
+   "kana": "ていりゅうじょ",
+   "meaning": "车站；站点",
+   "ko": "정거장（车站） / 정류소（车站） / 정류장（车站）",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名词",
+   "ex": {
+    "ja": "バスの停留所まで競争しよう。",
+    "zh": "我们比赛跑到公交站吧。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2483",
+   "surface": "デート",
+   "kana": "デート",
+   "meaning": "约会",
+   "ko": "데이트（约会）",
    "ko_status": "dictionary",
    "optional": true,
-   "pos": "名词/动词(サ变)/他动词/自动词",
+   "pos": "名词/动词(サ变)/自动词",
    "ex": {
-    "ja": "あなたを誤解してしまってごめんなさい。",
-    "zh": "对不起，我误会你了。"
+    "ja": "アンディはけっしてデートにおくれたことはない。",
+    "zh": "安迪约会从不迟到。"
    },
    "audio": "tts"
   },
   {
-   "id": "V1958",
-   "surface": "語学",
-   "kana": "ごがく",
-   "meaning": "外语学习",
-   "ko": "어학（外语）",
+   "id": "V2484",
+   "surface": "敵",
+   "kana": "てき",
+   "meaning": "敌人；对手",
+   "ko": "적（敌，敌人）",
    "ko_status": "dictionary",
    "optional": true,
    "pos": "名词",
    "ex": {
-    "ja": "これは私の語学の能力を有利に使える好機である。",
-    "zh": "这是能发挥我语言能力的好机会。"
+    "ja": "彼は敵に不意打ちを食わせた。",
+    "zh": "他偷袭了对手。"
    },
    "audio": "tts"
   },
   {
-   "id": "V1959",
-   "surface": "呼吸",
-   "kana": "こきゅう",
-   "meaning": "呼吸；诀窍",
-   "ko": "호흡（呼吸） / 숨（呼吸） / 숨쉬기（呼吸）",
-   "ko_status": "dictionary",
+   "id": "V2485",
+   "surface": "出来事",
+   "kana": "できごと",
+   "meaning": "事件；事情",
+   "ko": "사건 / 일",
+   "ko_status": "ai_gloss",
    "optional": true,
-   "pos": "名词/动词(サ变)/他动词/自动词",
+   "pos": "名词",
    "ex": {
-    "ja": "英語の発音の呼吸がなかなか飲み込めない。",
-    "zh": "英语发音的诀窍我怎么也掌握不了。"
+    "ja": "このようのしてその出来事は起こった。",
+    "zh": "那件事就是这样发生的。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2486",
+   "surface": "適する",
+   "kana": "てきする",
+   "meaning": "适合",
+   "ko": "적합하다",
+   "ko_status": "ai_gloss",
+   "optional": true,
+   "pos": "自动词",
+   "ex": {
+    "ja": "その肉は全く食用に適さなかった。",
+    "zh": "那些肉完全不适合食用。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2487",
+   "surface": "適切",
+   "kana": "てきせつ",
+   "meaning": "恰当；合适",
+   "ko": "적절하다",
+   "ko_status": "ai_gloss",
+   "optional": true,
+   "pos": "な形容词/名词",
+   "ex": {
+    "ja": "「行った」というのが適切な言葉だ。",
+    "zh": "「去了」才是恰当的词。"
+   },
+   "audio": "tts"
+  },
+  {
+   "id": "V2488",
+   "surface": "適度",
+   "kana": "てきど",
+   "meaning": "适度",
+   "ko": "적당한 정도",
+   "ko_status": "ai_gloss",
+   "optional": true,
+   "pos": "な形容词/连体词/名词",
+   "ex": {
+    "ja": "適度の運動は体に良い。",
+    "zh": "适度的运动对身体有好处。"
    },
    "audio": "tts"
   }
  ],
  "core_vocab_ids": [
-  "V1941",
-  "V1942",
-  "V1943",
-  "V1944",
-  "V1945",
-  "V1946",
-  "V1947",
-  "V1948",
-  "V1949",
-  "V1950",
-  "V1951",
-  "V1952",
-  "V1953",
-  "V1954",
-  "V1955",
-  "V1956"
+  "V2467",
+  "V2468",
+  "V2469",
+  "V2470",
+  "V2471",
+  "V2472",
+  "V2473",
+  "V2474",
+  "V2475",
+  "V2476",
+  "V2477",
+  "V2478",
+  "V2479",
+  "V2480",
+  "V2481",
+  "V2482"
  ],
  "extension_vocab_ids": [
-  "V1957",
-  "V1958",
-  "V1959"
+  "V2483",
+  "V2484",
+  "V2485",
+  "V2486",
+  "V2487",
+  "V2488"
  ],
  "grammar": [
   {
-   "id": "G0134",
-   "pattern": "〜ば〜ほど",
-   "meaning_zh": "越…越…",
-   "connection": "动词ば形 + 同一动词辞书形 + ほど；い形容词ければ + い形容词 + ほど；ナ形容词なら + ナ形容词な + ほど",
-   "usage": "表示随着前项程度加深，后项程度也随之变化。",
-   "register_note": "口语书面均可，谚语中常见。",
+   "id": "G0169",
+   "pattern": "〜とか（hearsay）",
+   "meaning_zh": "听说…；好像说…",
+   "connection": "普通形 + とか（句末，或用「とかで」表原因）",
+   "usage": "转述听来的不确定消息，语气比「そうだ」更随意、含糊。",
+   "register_note": "口语为主，新闻口语中也见。",
    "examples": [
     {
-     "ja": "日本語は、勉強すればするほど面白くなる。",
-     "zh": "日语越学越有意思。"
+     "ja": "駅前の本屋、今月で閉店するとか。寂しくなりますね。",
+     "zh": "听说车站前的书店这个月就要关门了，真有点寂寞。"
     },
     {
-     "ja": "スマホの画面は大きければ大きいほど見やすいが、持ち歩くのは大変だ。",
-     "zh": "手机屏幕越大越容易看，但带着走很麻烦。"
+     "ja": "今年の冬は、例年より寒くなるとかいう話だよ。",
+     "zh": "听说今年冬天会比往年冷。"
     },
     {
-     "ja": "部屋が静かなら静かなほど、よく眠れる。",
-     "zh": "房间越安静，睡得越好。"
+     "ja": "部長は今日、熱があるとかで休んでいます。",
+     "zh": "部长今天好像发烧，请假了。"
     }
    ],
    "prerequisites": [
-    "G0079"
+    "G0043"
    ],
    "compare": [
     {
-     "id": "G0135",
-     "diff": "ほど 单表程度，ば〜ほど 表“程度随之递增”的联动关系。"
+     "id": "G0171",
+     "diff": "ということだ 是较确定的转述，とか 更含糊，暗示“听说是这样”。"
     }
    ],
    "common_errors": [
     {
-     "wrong": "日本語は、勉強するすればするほど面白くなる。",
-     "why": "前项必须用ば形「すれば」，「するすれば」不合法。",
-     "fix": "勉強すればするほど",
+     "wrong": "駅前の本屋、今月で閉店しますとか。",
+     "why": "传闻「とか」前接普通形，不用「ます」。",
+     "fix": "閉店するとか",
      "learner": "zh"
     }
    ],
    "jlpt": "N3",
-   "ko_equiv": "-면 -ㄹ수록",
-   "ko_diff": "韩语「-ㄹ수록」一个形式即可；日语要把同一词重复两次（すればするほど），形式负担更重。",
+   "ko_equiv": "-다고 하던데",
+   "ko_diff": "韩语「-다고 하던데」带“听说…”的转述感；日语「とか」还可单纯列举，需靠位置和语调区分。",
    "notes": "",
    "tags": [
-    "condition",
-    "degree",
-    "change"
+    "hearsay",
+    "casual"
    ],
    "source_ids": [
     "S900"
@@ -477,49 +529,51 @@
    "license": "CC-BY-SA-4.0"
   },
   {
-   "id": "G0135",
-   "pattern": "〜ほど",
-   "meaning_zh": "到了…的程度",
-   "connection": "普通形 + ほど；名词 + ほど",
-   "usage": "举出极端例子说明程度之高，常与「〜ない」呼应表最高级。",
-   "register_note": "口语书面均可。",
+   "id": "G0170",
+   "pattern": "〜って",
+   "meaning_zh": "说是…；所谓…",
+   "connection": "普通形 + って；名词 + って（表话题）",
+   "usage": "口语引用、转述传闻，或提出话题加以说明。",
+   "register_note": "仅限口语。",
    "examples": [
     {
-     "ja": "昨日は、立っていられないほど疲れていた。",
-     "zh": "昨天累得站都站不住。"
+     "ja": "彼女、今日は来られないって。",
+     "zh": "她说今天来不了。"
     },
     {
-     "ja": "試験に合格したと聞いて、涙が出るほどうれしかった。",
-     "zh": "听说考试合格，高兴得流下眼泪。"
+     "ja": "駅前に新しいカフェができたんだって。行ってみない？",
+     "zh": "听说车站前开了家新咖啡店，去看看？"
     },
     {
-     "ja": "このあたりは、夜になると怖いほど静かだ。",
-     "zh": "这一带到了晚上静得让人害怕。"
+     "ja": "「ふろしき」って何ですか。",
+     "zh": "“风吕敷”是什么？"
     }
    ],
    "prerequisites": [
-    "G0034"
+    "G0012"
    ],
    "compare": [
     {
-     "id": "G0136",
-     "diff": "ほど 偏书面、程度更强，くらい 更口语，还可表“最低限度”。"
+     "id": "G0171",
+     "diff": "ということだ 是书面的正式转述，って 是口语缩略，语气随意。"
     }
    ],
    "common_errors": [
     {
-     "wrong": "このあたりは、夜になると怖いなほど静かだ。",
-     "why": "い形容词直接接「ほど」，不加「な」。",
-     "fix": "怖いほど",
+     "wrong": "彼女、今日は来られないだって。",
+     "why": "「って」直接接普通形「来られない」，不能加「だ」。",
+     "fix": "来られないって",
      "learner": "zh"
     }
    ],
    "jlpt": "N3",
-   "ko_equiv": "-ㄹ 정도로",
-   "ko_diff": "韩语「-ㄹ 정도로」与「ほど」基本对应；但日语「ほど」还用于「〜ほど〜ない」比较句，韩语要用「-만큼」。",
+   "ko_equiv": "-대",
+   "ko_diff": "韩语「-대」是口语转述缩略，与「って」很像；但日语「って」还能当话题助词（「〜って何？」），韩语要用「-는」。",
    "notes": "",
    "tags": [
-    "degree"
+    "quotation",
+    "hearsay",
+    "casual"
    ],
    "source_ids": [
     "S900"
@@ -532,973 +586,973 @@
  "unit_questions": [],
  "practice": [
   {
-   "id": "P-111-V1941-m-29f061b01f26",
-   "qid": "P-111-V1941-m-29f061b01f26",
+   "id": "P-111-V2467-m-8d8751202f00",
+   "qid": "P-111-V2467-m-8d8751202f00",
    "type": "mcq",
-   "prompt": "本课词条「後者」（例句语境：其中重要的是后者。）的释义是哪一项？",
+   "prompt": "本课词条「つまり」（例句语境：也就是说，她是个蹩脚的舞者。）的释义是哪一项？",
    "options": [
-    "昨",
-    "后者",
-    "认真；严肃",
-    "说明；解释"
+    "利用；使用",
+    "也就是说",
+    "景色；眺望",
+    "旅行"
    ],
-   "h": "64c606fc",
+   "h": "e16fe4f6",
    "oh": [
-    "2da09617",
-    "64c606fc",
-    "9dac69c1",
-    "1bd923d"
+    "1d68825a",
+    "e16fe4f6",
+    "eccd2bea",
+    "ffcf17a4"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V1941"
+    "V2467"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1941-r-9a8684c913dd",
-   "qid": "P-111-V1941-r-9a8684c913dd",
+   "id": "P-111-V2467-r-1760e59f7434",
+   "qid": "P-111-V2467-r-1760e59f7434",
    "type": "mcq",
-   "prompt": "本课词条「後者」（后者）的假名读音是哪一项？",
+   "prompt": "本课词条「つまり」（也就是说）的假名读音是哪一项？",
    "options": [
-    "せいぶつ",
-    "こうしゃ",
-    "ことわる",
-    "わすれる"
+    "ちきゅう",
+    "つまり",
+    "もり",
+    "うん"
    ],
-   "h": "e3136446",
+   "h": "666a9e47",
    "oh": [
-    "5ffda1e0",
-    "e3136446",
-    "8df01338",
-    "a181dcc0"
+    "b5a3350c",
+    "666a9e47",
+    "e2fbe5d",
+    "dd611a9e"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V1941"
+    "V2467"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1942-m-37f34a4d9bc8",
-   "qid": "P-111-V1942-m-37f34a4d9bc8",
+   "id": "P-111-V2468-m-34971121da27",
+   "qid": "P-111-V2468-m-34971121da27",
    "type": "mcq",
-   "prompt": "本课词条「構成」（例句语境：委员会由八名成员组成。）的释义是哪一项？",
+   "prompt": "本课词条「罪」（例句语境：比尔没有犯那项罪。）的释义是哪一项？",
    "options": [
-    "灰；灰烬",
-    "不安；担心",
-    "不满；不满意",
-    "构成"
+    "罪；过错",
+    "大学",
+    "朋友",
+    "借（入）；向人借"
    ],
-   "h": "4e138b79",
+   "h": "2953082",
    "oh": [
-    "445053d8",
-    "62acdc3c",
-    "2409c557",
-    "4e138b79"
+    "2953082",
+    "9a0757e0",
+    "8485de13",
+    "1cce165f"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V1942"
+    "V2468"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1942-r-7caa4a6e9016",
-   "qid": "P-111-V1942-r-7caa4a6e9016",
+   "id": "P-111-V2468-r-73daff411cdf",
+   "qid": "P-111-V2468-r-73daff411cdf",
    "type": "mcq",
-   "prompt": "本课词条「構成」（构成）的假名读音是哪一项？",
+   "prompt": "本课词条「罪」（罪；过错）的假名读音是哪一项？",
    "options": [
-    "こしょう",
-    "しけん",
-    "おつり",
-    "こうせい"
+    "つみ",
+    "てぶくろ",
+    "にゅうじょう",
+    "しょう"
    ],
-   "h": "60aa103",
+   "h": "79dc7ee4",
    "oh": [
-    "31d7a29a",
-    "8cec3aa2",
-    "19460d63",
-    "60aa103"
+    "79dc7ee4",
+    "81d1d921",
+    "3728fdf6",
+    "3999df1f"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V1942"
+    "V2468"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1943-m-1c07d07d7108",
-   "qid": "P-111-V1943-m-1c07d07d7108",
+   "id": "P-111-V2469-m-9ae78e3eae61",
+   "qid": "P-111-V2469-m-9ae78e3eae61",
    "type": "mcq",
-   "prompt": "本课词条「高速」（例句语境：司机一直保持高速行驶。）的释义是哪一项？",
+   "prompt": "本课词条「詰める」（例句语境：这件衬衫能帮我改小一点吗？）的释义是哪一项？",
    "options": [
-    "高速",
-    "扩大",
-    "成绩",
-    "见解"
+    "排列",
+    "上面；表面",
+    "塞；改短",
+    "什么"
    ],
-   "h": "bdcd27a8",
+   "h": "3279bca8",
    "oh": [
-    "bdcd27a8",
-    "6c88eb59",
-    "bb846b52",
-    "785b647d"
+    "9978f3c6",
+    "f8537414",
+    "3279bca8",
+    "cde747b5"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V1943"
+    "V2469"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1943-r-38d9edcd7a19",
-   "qid": "P-111-V1943-r-38d9edcd7a19",
+   "id": "P-111-V2469-r-7440b988a188",
+   "qid": "P-111-V2469-r-7440b988a188",
    "type": "mcq",
-   "prompt": "本课词条「高速」（高速）的假名读音是哪一项？",
+   "prompt": "本课词条「詰める」（塞；改短）的假名读音是哪一项？",
    "options": [
-    "こうそく",
-    "たにん",
-    "あの",
-    "さいご"
+    "ケース",
+    "じどうしゃ",
+    "ごぞんじ",
+    "つめる"
    ],
-   "h": "2f2e3704",
+   "h": "673bccc7",
    "oh": [
-    "2f2e3704",
-    "725fada4",
-    "6a6af2f1",
-    "7dbe7258"
+    "d65fdadb",
+    "df7f55fe",
+    "4cb580cc",
+    "673bccc7"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V1943"
+    "V2469"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1944-m-7fe655c2753f",
-   "qid": "P-111-V1944-m-7fe655c2753f",
+   "id": "P-111-V2470-m-54e2666faf52",
+   "qid": "P-111-V2470-m-54e2666faf52",
    "type": "mcq",
-   "prompt": "本课词条「行動」（例句语境：这次行动的责任全由我来负。）的释义是哪一项？",
+   "prompt": "本课词条「積もる」（例句语境：雪积得满地都是。）的释义是哪一项？",
    "options": [
-    "行动",
-    "返回",
-    "批准；认可",
-    "周；星期"
+    "积；堆积",
+    "生物",
+    "果然；还是",
+    "明星"
    ],
-   "h": "2f8a60b9",
+   "h": "4e3f203c",
    "oh": [
-    "2f8a60b9",
-    "58cbffa7",
-    "decf6232",
-    "c8b38aba"
+    "4e3f203c",
+    "334b6c5",
+    "cc101421",
+    "daea518a"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V1944"
+    "V2470"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1944-r-05c22b6b9f50",
-   "qid": "P-111-V1944-r-05c22b6b9f50",
+   "id": "P-111-V2470-r-9a92fb64497a",
+   "qid": "P-111-V2470-r-9a92fb64497a",
    "type": "mcq",
-   "prompt": "本课词条「行動」（行动）的假名读音是哪一项？",
+   "prompt": "本课词条「積もる」（积；堆积）的假名读音是哪一项？",
+   "options": [
+    "ごはん",
+    "つもる",
+    "けいこく",
+    "めしあがる"
+   ],
+   "h": "3f3ae238",
+   "oh": [
+    "a0f6a475",
+    "3f3ae238",
+    "e91cec2a",
+    "e1cfb6ac"
+   ],
+   "day": 111,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V2470"
+   ],
+   "source_day": 111,
+   "optional": true
+  },
+  {
+   "id": "P-111-V2471-m-fd552d1a6a99",
+   "qid": "P-111-V2471-m-fd552d1a6a99",
+   "type": "mcq",
+   "prompt": "本课词条「梅雨」（例句语境：据天气预报，马上就要入梅了。）的释义是哪一项？",
+   "options": [
+    "交给；递",
+    "牛排",
+    "梅雨",
+    "发光；闪耀"
+   ],
+   "h": "94f39df8",
+   "oh": [
+    "8b2cbe97",
+    "807ea0f8",
+    "94f39df8",
+    "1d3603c6"
+   ],
+   "day": 111,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V2471"
+   ],
+   "source_day": 111,
+   "optional": true
+  },
+  {
+   "id": "P-111-V2471-r-d7748b66be85",
+   "qid": "P-111-V2471-r-d7748b66be85",
+   "type": "mcq",
+   "prompt": "本课词条「梅雨」（梅雨）的假名读音是哪一项？",
+   "options": [
+    "つゆ",
+    "ぬれる",
+    "ふむ",
+    "あいて"
+   ],
+   "h": "62ddedaf",
+   "oh": [
+    "62ddedaf",
+    "9f4f3b0a",
+    "9ad0b6b0",
+    "1ca89cef"
+   ],
+   "day": 111,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V2471"
+   ],
+   "source_day": 111,
+   "optional": true
+  },
+  {
+   "id": "P-111-V2472-m-7e53c7e4441e",
+   "qid": "P-111-V2472-m-7e53c7e4441e",
+   "type": "mcq",
+   "prompt": "本课词条「辛い」（例句语境：流产是非常痛苦的经历。）的释义是哪一项？",
+   "options": [
+    "大战",
+    "香烟",
+    "顺序；次序",
+    "难受；痛苦"
+   ],
+   "h": "4e5b7cf2",
+   "oh": [
+    "d7ca547a",
+    "35fcd551",
+    "2b380ee7",
+    "4e5b7cf2"
+   ],
+   "day": 111,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V2472"
+   ],
+   "source_day": 111,
+   "optional": true
+  },
+  {
+   "id": "P-111-V2472-r-30106ba01f5e",
+   "qid": "P-111-V2472-r-30106ba01f5e",
+   "type": "mcq",
+   "prompt": "本课词条「辛い」（难受；痛苦）的假名读音是哪一项？",
+   "options": [
+    "とき",
+    "つらい",
+    "こおる",
+    "くせ"
+   ],
+   "h": "4c1e5cfe",
+   "oh": [
+    "6bc81dee",
+    "4c1e5cfe",
+    "8011e449",
+    "9d3f9eff"
+   ],
+   "day": 111,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V2472"
+   ],
+   "source_day": 111,
+   "optional": true
+  },
+  {
+   "id": "P-111-V2473-m-7061aac56e55",
+   "qid": "P-111-V2473-m-7061aac56e55",
+   "type": "mcq",
+   "prompt": "本课词条「釣」（例句语境：你很想去钓鱼。）的释义是哪一项？",
+   "options": [
+    "省略；节省",
+    "旅行",
+    "钓鱼",
+    "态度"
+   ],
+   "h": "e2ce993a",
+   "oh": [
+    "88b58635",
+    "ffcf17a4",
+    "e2ce993a",
+    "76d3811e"
+   ],
+   "day": 111,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V2473"
+   ],
+   "source_day": 111,
+   "optional": true
+  },
+  {
+   "id": "P-111-V2473-r-a95bff8e5bc2",
+   "qid": "P-111-V2473-r-a95bff8e5bc2",
+   "type": "mcq",
+   "prompt": "本课词条「釣」（钓鱼）的假名读音是哪一项？",
+   "options": [
+    "つり",
+    "しょう",
+    "こわれる",
+    "はたらき"
+   ],
+   "h": "66ddf3fb",
+   "oh": [
+    "66ddf3fb",
+    "3999df1f",
+    "a1c9d7e",
+    "7daec959"
+   ],
+   "day": 111,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V2473"
+   ],
+   "source_day": 111,
+   "optional": true
+  },
+  {
+   "id": "P-111-V2474-m-e32dc7ed6800",
+   "qid": "P-111-V2474-m-e32dc7ed6800",
+   "type": "mcq",
+   "prompt": "本课词条「連れ」（例句语境：我送您到车站吧。）的释义是哪一项？",
+   "options": [
+    "捐赠",
+    "同伴；同行者（〜連れ＝带着…同行）",
+    "不在家",
+    "吃惊"
+   ],
+   "h": "1bde7c8e",
+   "oh": [
+    "40a0633d",
+    "1bde7c8e",
+    "6288aa92",
+    "6ab522e8"
+   ],
+   "day": 111,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V2474"
+   ],
+   "source_day": 111,
+   "optional": true
+  },
+  {
+   "id": "P-111-V2474-r-2b3c628c53dc",
+   "qid": "P-111-V2474-r-2b3c628c53dc",
+   "type": "mcq",
+   "prompt": "本课词条「連れ」（同伴；同行者（〜連れ＝带着…同行））的假名读音是哪一项？",
+   "options": [
+    "じこく",
+    "つれ",
+    "しんぱい",
+    "かいいん"
+   ],
+   "h": "6cddfd6d",
+   "oh": [
+    "fea5ac29",
+    "6cddfd6d",
+    "5af0c8aa",
+    "797318db"
+   ],
+   "day": 111,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V2474"
+   ],
+   "source_day": 111,
+   "optional": true
+  },
+  {
+   "id": "P-111-V2475-m-23e13eeeb537",
+   "qid": "P-111-V2475-m-23e13eeeb537",
+   "type": "mcq",
+   "prompt": "本课词条「で」（例句语境：那里以风景优美而闻名。）的释义是哪一项？",
+   "options": [
+    "多",
+    "红色",
+    "出；出自",
+    "永远"
+   ],
+   "h": "6d8dd146",
+   "oh": [
+    "1f49eb0d",
+    "fb3a03f5",
+    "6d8dd146",
+    "85774e01"
+   ],
+   "day": 111,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V2475"
+   ],
+   "source_day": 111,
+   "optional": true
+  },
+  {
+   "id": "P-111-V2475-r-cf09c0a81b49",
+   "qid": "P-111-V2475-r-cf09c0a81b49",
+   "type": "mcq",
+   "prompt": "本课词条「で」（出；出自）的假名读音是哪一项？",
    "options": [
     "こうどう",
-    "せつめい",
-    "ていねい",
-    "みつかる"
+    "ぜんぶ",
+    "で",
+    "ことり"
    ],
-   "h": "17c04bdb",
+   "h": "e2255606",
    "oh": [
     "17c04bdb",
-    "d525a9ff",
-    "6e175b0e",
-    "4ad9cd8c"
+    "60118a6a",
+    "e2255606",
+    "696b71c"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V1944"
+    "V2475"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1945-m-69855358ac98",
-   "qid": "P-111-V1945-m-69855358ac98",
+   "id": "P-111-V2476-m-94e1e965812d",
+   "qid": "P-111-V2476-m-94e1e965812d",
    "type": "mcq",
-   "prompt": "本课词条「強盗」（例句语境：父亲和劫匪扭打了起来。）的释义是哪一项？",
+   "prompt": "本课词条「出会い」（例句语境：我们的相遇完全是偶然。）的释义是哪一项？",
    "options": [
-    "强盗；抢劫",
-    "战争",
-    "习惯（自动）",
-    "变瘦"
+    "请；拜托",
+    "建筑；建设",
+    "岁月；年月",
+    "相遇；邂逅"
    ],
-   "h": "cf692054",
+   "h": "eb7a7594",
    "oh": [
-    "cf692054",
-    "1b259f2a",
-    "20c67ab9",
-    "728a5e13"
+    "1c7754cb",
+    "7e4ade01",
+    "ab88f721",
+    "eb7a7594"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V1945"
+    "V2476"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1945-r-2755283f287b",
-   "qid": "P-111-V1945-r-2755283f287b",
+   "id": "P-111-V2476-r-eb06304e890f",
+   "qid": "P-111-V2476-r-eb06304e890f",
    "type": "mcq",
-   "prompt": "本课词条「強盗」（强盗；抢劫）的假名读音是哪一项？",
+   "prompt": "本课词条「出会い」（相遇；邂逅）的假名读音是哪一项？",
    "options": [
-    "ごうとう",
-    "はなれる",
-    "そくど",
-    "おなじ"
+    "つる",
+    "さかい",
+    "であい",
+    "はなれる"
    ],
-   "h": "be69baa9",
+   "h": "b4502858",
    "oh": [
-    "be69baa9",
-    "3ca1a8e1",
-    "def6f104",
-    "f3fed77"
+    "65ddf268",
+    "9f9d90ff",
+    "b4502858",
+    "3ca1a8e1"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V1945"
+    "V2476"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1946-m-b392ccb400d5",
-   "qid": "P-111-V1946-m-b392ccb400d5",
+   "id": "P-111-V2477-m-a706725c6a0e",
+   "qid": "P-111-V2477-m-a706725c6a0e",
    "type": "mcq",
-   "prompt": "本课词条「工場」（例句语境：我父亲和哥哥在这家工厂工作。）的释义是哪一项？",
+   "prompt": "本课词条「出会う」（例句语境：昨天遇见了一位老朋友。）的释义是哪一项？",
    "options": [
-    "城市；都市",
-    "收银台",
-    "工厂",
-    "动；运转"
+    "得到；获得",
+    "晚上好",
+    "遇见；邂逅",
+    "会员"
    ],
-   "h": "6a1b56c6",
+   "h": "7df0ea57",
    "oh": [
-    "e3b0cc9",
-    "2e9c57a7",
-    "6a1b56c6",
-    "414ed830"
+    "5bb2d99",
+    "493546a8",
+    "7df0ea57",
+    "b88af8cf"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V1946"
+    "V2477"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1946-r-5ef9e52efae8",
-   "qid": "P-111-V1946-r-5ef9e52efae8",
+   "id": "P-111-V2477-r-97914b76d7ab",
+   "qid": "P-111-V2477-r-97914b76d7ab",
    "type": "mcq",
-   "prompt": "本课词条「工場」（工厂）的假名读音是哪一项？",
+   "prompt": "本课词条「出会う」（遇见；邂逅）的假名读音是哪一项？",
    "options": [
-    "こうば",
-    "チャンス",
-    "あくしゅ",
-    "ころ"
+    "ちえん",
+    "たびたび",
+    "であう",
+    "ゆき"
    ],
-   "h": "1d084e14",
+   "h": "b6502b7e",
    "oh": [
-    "1d084e14",
-    "64661749",
-    "9b1d0b8a",
-    "cbf51c7d"
+    "a541996d",
+    "85250481",
+    "b6502b7e",
+    "a72621dc"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V1946"
+    "V2477"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1947-m-ac6215d53451",
-   "qid": "P-111-V1947-m-ac6215d53451",
+   "id": "P-111-V2478-m-f8c7d9731e11",
+   "qid": "P-111-V2478-m-f8c7d9731e11",
    "type": "mcq",
-   "prompt": "本课词条「幸福」（例句语境：有钱人不一定幸福。）的释义是哪一项？",
+   "prompt": "本课词条「提案」（例句语境：能批准我的提案吗？）的释义是哪一项？",
    "options": [
-    "西方；西洋",
-    "人物",
-    "幸福",
-    "日式拉门"
+    "通行",
+    "腰",
+    "逃跑；逃避",
+    "提议；建议"
    ],
-   "h": "c0e74d98",
+   "h": "645a0678",
    "oh": [
-    "d28c768c",
-    "c8ed75cc",
-    "c0e74d98",
-    "80c6089c"
+    "bc1f6053",
+    "f44130ef",
+    "69643020",
+    "645a0678"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V1947"
+    "V2478"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1947-r-731f684bfcfc",
-   "qid": "P-111-V1947-r-731f684bfcfc",
+   "id": "P-111-V2478-r-f317337414b9",
+   "qid": "P-111-V2478-r-f317337414b9",
    "type": "mcq",
-   "prompt": "本课词条「幸福」（幸福）的假名读音是哪一项？",
+   "prompt": "本课词条「提案」（提议；建议）的假名读音是哪一项？",
    "options": [
-    "ちゅう",
-    "こうふく",
-    "つり",
-    "うらぎる"
+    "ていあん",
+    "かんじ",
+    "あたえる",
+    "さわる"
    ],
-   "h": "f569a7c",
+   "h": "a18b5e44",
    "oh": [
-    "931e7837",
-    "f569a7c",
-    "66ddf3fb",
-    "1a8cdee3"
+    "a18b5e44",
+    "9c620fb9",
+    "1b7e5f5b",
+    "eb631f52"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V1947"
+    "V2478"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1948-m-52e3c3292026",
-   "qid": "P-111-V1948-m-52e3c3292026",
+   "id": "P-111-V2479-m-4cb6413930af",
+   "qid": "P-111-V2479-m-4cb6413930af",
    "type": "mcq",
-   "prompt": "本课词条「公平」（例句语境：法律未必总是公平的。）的释义是哪一项？",
+   "prompt": "本课词条「定期」（例句语境：他们登上了定期客轮。）的释义是哪一项？",
    "options": [
-    "公平",
-    "违抗；逆着",
-    "骚动；吵闹",
-    "房东"
+    "氏；先生",
+    "离开；逝去",
+    "定期",
+    "环境"
    ],
-   "h": "cb130ce8",
+   "h": "56d745d6",
    "oh": [
-    "cb130ce8",
-    "b680d664",
-    "af7ec5a6",
-    "e6748dd6"
+    "1e9e985e",
+    "aa67797",
+    "56d745d6",
+    "d5de2a67"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V1948"
+    "V2479"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1948-r-c487e2e9c04a",
-   "qid": "P-111-V1948-r-c487e2e9c04a",
+   "id": "P-111-V2479-r-db4e1066ede9",
+   "qid": "P-111-V2479-r-db4e1066ede9",
    "type": "mcq",
-   "prompt": "本课词条「公平」（公平）的假名读音是哪一项？",
+   "prompt": "本课词条「定期」（定期）的假名读音是哪一项？",
    "options": [
-    "こうへい",
-    "ちのう",
-    "びっくりする",
-    "いちどに"
+    "かしゅ",
+    "とくに",
+    "さしあげる",
+    "ていき"
    ],
-   "h": "544a3b28",
+   "h": "5edc1b9e",
    "oh": [
-    "544a3b28",
-    "bfb9a1e0",
-    "9c343cf6",
-    "1530c652"
+    "8979e146",
+    "291b1e99",
+    "b4d3a4fa",
+    "5edc1b9e"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V1948"
+    "V2479"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1949-m-1e3b7633a9c8",
-   "qid": "P-111-V1949-m-1e3b7633a9c8",
+   "id": "P-111-V2480-m-12a1345e5047",
+   "qid": "P-111-V2480-m-12a1345e5047",
    "type": "mcq",
-   "prompt": "本课词条「候補」（例句语境：史密斯先生是市长候选人。）的释义是哪一项？",
+   "prompt": "本课词条「抵抗」（例句语境：面对困难始终抵抗到底。）的释义是哪一项？",
    "options": [
-    "候选；候选人",
-    "某物；什么",
-    "反抗；违抗",
-    "放晴；转晴"
-   ],
-   "h": "7da7fde0",
-   "oh": [
-    "7da7fde0",
-    "6373299b",
-    "78f37b3e",
-    "8a9245ac"
-   ],
-   "day": 111,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1949"
-   ],
-   "source_day": 111,
-   "optional": true
-  },
-  {
-   "id": "P-111-V1949-r-717adfc2b2f1",
-   "qid": "P-111-V1949-r-717adfc2b2f1",
-   "type": "mcq",
-   "prompt": "本课词条「候補」（候选；候选人）的假名读音是哪一项？",
-   "options": [
-    "のぞみ",
-    "こうほ",
-    "いただきます",
-    "なし"
-   ],
-   "h": "18084635",
-   "oh": [
-    "64515f66",
-    "18084635",
-    "bde0060a",
-    "a1ccf01e"
-   ],
-   "day": 111,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1949"
-   ],
-   "source_day": 111,
-   "optional": true
-  },
-  {
-   "id": "P-111-V1950-m-d9f3feb8fe68",
-   "qid": "P-111-V1950-m-d9f3feb8fe68",
-   "type": "mcq",
-   "prompt": "本课词条「考慮」（例句语境：我正在考虑要不要跟他们一起去。）的释义是哪一项？",
-   "options": [
-    "考虑",
-    "下起来",
-    "牙医；牙科",
-    "茶"
-   ],
-   "h": "2a71ed59",
-   "oh": [
-    "2a71ed59",
-    "b51ebf46",
-    "887540e0",
-    "3244b889"
-   ],
-   "day": 111,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1950"
-   ],
-   "source_day": 111,
-   "optional": true
-  },
-  {
-   "id": "P-111-V1950-r-c88980a19088",
-   "qid": "P-111-V1950-r-c88980a19088",
-   "type": "mcq",
-   "prompt": "本课词条「考慮」（考虑）的假名读音是哪一项？",
-   "options": [
-    "しょくひん",
-    "こうりょ",
-    "むかう",
-    "しち"
-   ],
-   "h": "4953de8f",
-   "oh": [
-    "d888da63",
-    "4953de8f",
-    "d61c9b8e",
-    "87530415"
-   ],
-   "day": 111,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1950"
-   ],
-   "source_day": 111,
-   "optional": true
-  },
-  {
-   "id": "P-111-V1951-m-3da2fc30c470",
-   "qid": "P-111-V1951-m-3da2fc30c470",
-   "type": "mcq",
-   "prompt": "本课词条「越える」（例句语境：那超出了人类智慧的极限。）的释义是哪一项？",
-   "options": [
-    "比赛",
-    "超过；越过",
-    "拜访",
-    "明亮；开朗"
-   ],
-   "h": "76fb5ed5",
-   "oh": [
-    "9fef248",
-    "76fb5ed5",
-    "2f133ec",
-    "69df3cc3"
-   ],
-   "day": 111,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1951"
-   ],
-   "source_day": 111,
-   "optional": true
-  },
-  {
-   "id": "P-111-V1951-r-9364f888f83e",
-   "qid": "P-111-V1951-r-9364f888f83e",
-   "type": "mcq",
-   "prompt": "本课词条「越える」（超过；越过）的假名读音是哪一项？",
-   "options": [
-    "こえる",
-    "シャワー",
-    "うつ",
-    "スープ"
-   ],
-   "h": "c816d2cf",
-   "oh": [
-    "c816d2cf",
-    "3b3c2754",
-    "9060a167",
-    "1e49cf9d"
-   ],
-   "day": 111,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1951"
-   ],
-   "source_day": 111,
-   "optional": true
-  },
-  {
-   "id": "P-111-V1952-m-a1e8f293a209",
-   "qid": "P-111-V1952-m-a1e8f293a209",
-   "type": "mcq",
-   "prompt": "本课词条「コーチ」（例句语境：教练给了我建议。）的释义是哪一项？",
-   "options": [
-    "教练",
-    "奶酪",
-    "抓住；逮住",
-    "冷气"
-   ],
-   "h": "9f38a1f5",
-   "oh": [
-    "9f38a1f5",
-    "9f3ddc99",
-    "1b500d03",
-    "1ef5fb46"
-   ],
-   "day": 111,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1952"
-   ],
-   "source_day": 111,
-   "optional": true
-  },
-  {
-   "id": "P-111-V1952-r-f42dffb8c2fd",
-   "qid": "P-111-V1952-r-f42dffb8c2fd",
-   "type": "mcq",
-   "prompt": "本课词条「コーチ」（教练）的假名读音是哪一项？",
-   "options": [
-    "まわる",
-    "チェックする",
-    "ベル",
-    "コーチ"
-   ],
-   "h": "9c5ef241",
-   "oh": [
-    "30325af3",
-    "16556a57",
-    "cc75a6d",
-    "9c5ef241"
-   ],
-   "day": 111,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1952"
-   ],
-   "source_day": 111,
-   "optional": true
-  },
-  {
-   "id": "P-111-V1953-m-02a28ee3e203",
-   "qid": "P-111-V1953-m-02a28ee3e203",
-   "type": "mcq",
-   "prompt": "本课词条「コード」（例句语境：请不要拔掉电脑的电源线。）的释义是哪一项？",
-   "options": [
-    "全体成员；所有人",
-    "手提包",
-    "比赛",
+    "污染",
+    "抵抗；阻力",
+    "聚集；集合",
     "代码；软线"
    ],
-   "h": "d2fcda4c",
+   "h": "5a10ef8",
    "oh": [
-    "7170e1e0",
-    "aceaa831",
-    "9fef248",
+    "cdb4b76d",
+    "5a10ef8",
+    "227ab0c0",
     "d2fcda4c"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V1953"
+    "V2480"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1953-r-67d285883c2e",
-   "qid": "P-111-V1953-r-67d285883c2e",
+   "id": "P-111-V2480-r-7fcf2300661a",
+   "qid": "P-111-V2480-r-7fcf2300661a",
    "type": "mcq",
-   "prompt": "本课词条「コード」（代码；软线）的假名读音是哪一项？",
+   "prompt": "本课词条「抵抗」（抵抗；阻力）的假名读音是哪一项？",
    "options": [
-    "びょういん",
-    "こわす",
-    "あたま",
-    "コード"
+    "ていこう",
+    "こんなん",
+    "ほんとう",
+    "さゆう"
    ],
-   "h": "945ee5a9",
+   "h": "2c7ea9ee",
    "oh": [
-    "23666d7a",
-    "faefa10a",
-    "134bb5f0",
-    "945ee5a9"
+    "2c7ea9ee",
+    "149db168",
+    "32da57ad",
+    "5e4c7b0c"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V1953"
+    "V2480"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1954-m-db5fb6d8466a",
-   "qid": "P-111-V1954-m-db5fb6d8466a",
+   "id": "P-111-V2481-m-410e7a3eb7fe",
+   "qid": "P-111-V2481-m-410e7a3eb7fe",
    "type": "mcq",
-   "prompt": "本课词条「氷」（例句语境：船被冰封住了。）的释义是哪一项？",
+   "prompt": "本课词条「程度」（例句语境：这点钱撑不了多久吧。）的释义是哪一项？",
    "options": [
-    "经由；途经",
-    "出租车",
-    "牙医；牙科",
-    "冰"
+    "程度",
+    "日式旅馆",
+    "门",
+    "请"
    ],
-   "h": "b555dc2f",
+   "h": "c0a18884",
    "oh": [
-    "d3a08ec7",
-    "ba767db0",
-    "887540e0",
-    "b555dc2f"
+    "c0a18884",
+    "b580042a",
+    "6c20ded7",
+    "7136f0b6"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V1954"
+    "V2481"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1954-r-dacad3ae44d1",
-   "qid": "P-111-V1954-r-dacad3ae44d1",
+   "id": "P-111-V2481-r-94d5a91fd670",
+   "qid": "P-111-V2481-r-94d5a91fd670",
    "type": "mcq",
-   "prompt": "本课词条「氷」（冰）的假名读音是哪一项？",
+   "prompt": "本课词条「程度」（程度）的假名读音是哪一项？",
    "options": [
-    "ゆうべ",
-    "さくぶん",
-    "こおり",
-    "せつめい"
+    "しゅう",
+    "ていど",
+    "いっしょう",
+    "ほめる"
    ],
-   "h": "7f11e2b6",
+   "h": "42dbef8a",
    "oh": [
-    "c5d73d3c",
-    "8b7d3656",
-    "7f11e2b6",
-    "d525a9ff"
+    "899eda3d",
+    "42dbef8a",
+    "b057b9a0",
+    "24b1c73e"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V1954"
+    "V2481"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1955-m-03fc10d7db27",
-   "qid": "P-111-V1955-m-03fc10d7db27",
+   "id": "P-111-V2482-m-b7702c26aad3",
+   "qid": "P-111-V2482-m-b7702c26aad3",
    "type": "mcq",
-   "prompt": "本课词条「凍る」（例句语境：路面结冰了，小心点。）的释义是哪一项？",
+   "prompt": "本课词条「停留所」（例句语境：我们比赛跑到公交站吧。）的释义是哪一项？",
    "options": [
-    "离开；逝去",
-    "结冰；冻",
-    "外交",
-    "吵架"
+    "冰淇淋",
+    "车站；站点",
+    "反倒；反而",
+    "取出；提取"
    ],
-   "h": "34cebd44",
+   "h": "b3852c03",
    "oh": [
-    "aa67797",
-    "34cebd44",
-    "e9d7fff7",
-    "7651d992"
+    "c66b4589",
+    "b3852c03",
+    "c8fee4ae",
+    "8ae381ec"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V1955"
+    "V2482"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1955-r-19ccc1f38fb5",
-   "qid": "P-111-V1955-r-19ccc1f38fb5",
+   "id": "P-111-V2482-r-dcabacb901c1",
+   "qid": "P-111-V2482-r-dcabacb901c1",
    "type": "mcq",
-   "prompt": "本课词条「凍る」（结冰；冻）的假名读音是哪一项？",
+   "prompt": "本课词条「停留所」（车站；站点）的假名读音是哪一项？",
    "options": [
-    "こづつみ",
-    "くつう",
-    "じょうきょう",
-    "こおる"
+    "はら",
+    "にし",
+    "ていりゅうじょ",
+    "いんたい"
    ],
-   "h": "8011e449",
+   "h": "7dce1c2d",
    "oh": [
-    "7a2911e4",
-    "2257f438",
-    "45366028",
-    "8011e449"
+    "afc03a35",
+    "a1cab187",
+    "7dce1c2d",
+    "9f7776eb"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V1955"
+    "V2482"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1956-m-823194e57fa2",
-   "qid": "P-111-V1956-m-823194e57fa2",
+   "id": "P-111-G0169-m-d16683cf1348",
+   "qid": "P-111-G0169-m-d16683cf1348",
    "type": "mcq",
-   "prompt": "本课词条「ゴール」（例句语境：离终点还有一百米。）的释义是哪一项？",
+   "prompt": "本课句型「〜とか（hearsay）」在以下语境中的释义是哪一项？ 例句：駅前の本屋、今月で閉店するとか。寂しくなりますね。（听说车站前的书店这个月就要关门了，真有点寂寞。）",
    "options": [
-    "终点；球门",
-    "报告；汇报",
-    "像；相似",
-    "生活"
+    "顺便…",
+    "在…（存在场所）",
+    "与…一起；随着…",
+    "听说…；好像说…"
    ],
-   "h": "bfade658",
+   "h": "aaf72ae0",
    "oh": [
-    "bfade658",
-    "11075f7",
-    "c55ae39b",
-    "d109e70f"
-   ],
-   "day": 111,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1956"
-   ],
-   "source_day": 111,
-   "optional": true
-  },
-  {
-   "id": "P-111-V1956-r-89c188c89370",
-   "qid": "P-111-V1956-r-89c188c89370",
-   "type": "mcq",
-   "prompt": "本课词条「ゴール」（终点；球门）的假名读音是哪一项？",
-   "options": [
-    "ゴール",
-    "かみ",
-    "きんにく",
-    "どうろ"
-   ],
-   "h": "c858f3d2",
-   "oh": [
-    "c858f3d2",
-    "7949f3af",
-    "8b6fa013",
-    "222c74b1"
-   ],
-   "day": 111,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1956"
-   ],
-   "source_day": 111,
-   "optional": true
-  },
-  {
-   "id": "P-111-G0134-m-5b7c28ca96cb",
-   "qid": "P-111-G0134-m-5b7c28ca96cb",
-   "type": "mcq",
-   "prompt": "本课句型「〜ば〜ほど」在以下语境中的释义是哪一项？ 例句：日本語は、勉強すればするほど面白くなる。（日语越学越有意思。）",
-   "options": [
-    "觉得…／说「…」",
-    "…完；…不了",
-    "让…做；使…做",
-    "越…越…"
-   ],
-   "h": "33bedf05",
-   "oh": [
-    "590dd0d3",
-    "578a5a51",
-    "a12d61b6",
-    "33bedf05"
+    "9f195e94",
+    "65c81c26",
+    "670183f4",
+    "aaf72ae0"
    ],
    "day": 111,
    "group": "grammar",
    "capability": "meaning",
    "knowledge_ids": [
-    "G0134"
+    "G0169"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-G0134-u-2d506a2cc0a9",
-   "qid": "P-111-G0134-u-2d506a2cc0a9",
+   "id": "P-111-G0169-u-37eaecb243ec",
+   "qid": "P-111-G0169-u-37eaecb243ec",
    "type": "mcq",
-   "prompt": "课程中「〜ば〜ほど」的接续说明是哪一项？ 例句：日本語は、勉強すればするほど面白くなる。（日语越学越有意思。）",
+   "prompt": "课程中「〜とか（hearsay）」的接续说明是哪一项？ 例句：駅前の本屋、今月で閉店するとか。寂しくなりますね。（听说车站前的书店这个月就要关门了，真有点寂寞。）",
    "options": [
-    "动词ば形 + 同一动词辞书形 + ほど；い形容词ければ + い形容词 + ほど；ナ形容词なら + ナ形容词な + ほど",
-    "动词辞书形 + な",
-    "动词て形 + もらう（施益者用 に/から 标记）",
-    "动词て形/い形容词くて/ナ形容词で + しょうがない（しかたがない）"
+    "普通形 + とか（句末，或用「とかで」表原因）",
+    "动词辞书形/ない形 + ことにしている",
+    "名词 + に対して；动词/い形容词/ナ形容词 + な + のに対して",
+    "名词 + にとって；名词 + にとっての + 名词"
    ],
-   "h": "aec66f2d",
+   "h": "d81e2e50",
    "oh": [
-    "aec66f2d",
-    "b8e151a1",
-    "1e00d8aa",
-    "7db70c3f"
+    "d81e2e50",
+    "cd4ea5f4",
+    "2b223eba",
+    "4746d099"
    ],
    "day": 111,
    "group": "grammar",
    "capability": "usage",
    "knowledge_ids": [
-    "G0134"
+    "G0169"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-G0135-m-afefa2e70d1f",
-   "qid": "P-111-G0135-m-afefa2e70d1f",
+   "id": "P-111-G0170-m-9c5a2bbff5e9",
+   "qid": "P-111-G0170-m-9c5a2bbff5e9",
    "type": "mcq",
-   "prompt": "本课句型「〜ほど」在以下语境中的释义是哪一项？ 例句：昨日は、立っていられないほど疲れていた。（昨天累得站都站不住。）",
+   "prompt": "本课句型「〜って」在以下语境中的释义是哪一项？ 例句：彼女、今日は来られないって。（她说今天来不了。）",
    "options": [
-    "从…到…期间",
-    "不可能…；不会…",
-    "（自己）决定…／（结果）定为…、将要…",
-    "到了…的程度"
+    "有点…；容易…；带…色",
+    "…哦；…呀（告知、强调）",
+    "…比…更…",
+    "说是…；所谓…"
    ],
-   "h": "7b419d20",
+   "h": "72524cec",
    "oh": [
-    "de2c4028",
-    "f41d393a",
-    "ccb70769",
-    "7b419d20"
+    "c9c070c7",
+    "e7cfda32",
+    "32cc2c79",
+    "72524cec"
    ],
    "day": 111,
    "group": "grammar",
    "capability": "meaning",
    "knowledge_ids": [
-    "G0135"
+    "G0170"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-G0135-u-8d66b1d7e080",
-   "qid": "P-111-G0135-u-8d66b1d7e080",
+   "id": "P-111-G0170-u-d545ba75e37c",
+   "qid": "P-111-G0170-u-d545ba75e37c",
    "type": "mcq",
-   "prompt": "课程中「〜ほど」的接续说明是哪一项？ 例句：昨日は、立っていられないほど疲れていた。（昨天累得站都站不住。）",
+   "prompt": "课程中「〜って」的接续说明是哪一项？ 例句：彼女、今日は来られないって。（她说今天来不了。）",
    "options": [
-    "動詞辞書形/た形 + ついでに；名詞 + の + ついでに",
-    "普通形 + ほど；名词 + ほど",
-    "动词て形 + くれる（对长辈用 くださる）",
-    "五段动词词尾改え段；一段动词去る+ろ；する→しろ；来る→来い"
+    "普通形 + くらい／ぐらい；名词 + くらい",
+    "普通形 + って；名词 + って（表话题）",
+    "动词普通形／い形容词／な形容词／名词 + かどうか",
+    "动词辞书形 + ことはない"
    ],
-   "h": "4fe547e",
+   "h": "ccb114a6",
    "oh": [
-    "3acca4c7",
-    "4fe547e",
-    "d42018ef",
-    "7fe9a120"
+    "8e482284",
+    "ccb114a6",
+    "1677674b",
+    "c3aa8d11"
    ],
    "day": 111,
    "group": "grammar",
    "capability": "usage",
    "knowledge_ids": [
-    "G0135"
+    "G0170"
    ],
    "source_day": 111,
    "optional": true
@@ -1506,1535 +1560,1742 @@
  ],
  "sentences": [
   {
-   "id": "P-111-00-3e75f6c3cac5",
-   "qid": "P-111-00-3e75f6c3cac5",
+   "id": "P-111-00-19bb493660a9",
+   "qid": "P-111-00-19bb493660a9",
    "type": "mcq",
-   "prompt": "请把这一页复印一下。",
+   "prompt": "请帮我接史密斯先生。",
    "options": [
+    "スミスさんにつないで下さい。",
+    "この手の本はあまり読まない。",
+    "最初の打者はアウトになった。",
+    "ラジオの音を低くして下さい。"
+   ],
+   "h": "3dda2614",
+   "oh": [
+    "3dda2614",
+    "771de503",
+    "812a999a",
+    "847c7179"
+   ],
+   "knowledge_ids": [],
+   "optional": false,
+   "direction": "zh-ja",
+   "source_id": "S1371"
+  },
+  {
+   "id": "P-111-01-dd2df7c5a7ee",
+   "qid": "P-111-01-dd2df7c5a7ee",
+   "type": "mcq",
+   "prompt": "总是有疲劳感。",
+   "options": [
+    "何時間も海を眺めた。",
+    "彼が近所に越してきた。",
+    "ただの風邪でしょう。",
+    "常に疲労感があります。"
+   ],
+   "h": "1f9b24a2",
+   "oh": [
+    "aead5bf6",
+    "ff733aee",
+    "8dd6c2d9",
+    "1f9b24a2"
+   ],
+   "knowledge_ids": [],
+   "optional": false,
+   "direction": "zh-ja",
+   "source_id": "S1372"
+  },
+  {
+   "id": "P-111-02-3609ebd2fe75",
+   "qid": "P-111-02-3609ebd2fe75",
+   "type": "mcq",
+   "prompt": "蜗牛一下子伸出了触角。",
+   "options": [
+    "少女は立って鏡をのぞきこんだ。",
     "兄はアパートをさがしています。",
-    "このページをコピーして下さい。",
-    "これは北海道からのお土産です。",
-    "お答えできる立場にありません。"
+    "カタツムリがすっと角を出した。",
+    "あの交差点で何が起こったのか。"
    ],
-   "h": "fd6444e6",
+   "h": "1141342d",
    "oh": [
+    "b6b02350",
     "7f656d90",
-    "fd6444e6",
-    "7e2c9ed2",
-    "3c490fe4"
+    "1141342d",
+    "28d0e3e9"
    ],
    "knowledge_ids": [],
    "optional": false,
    "direction": "zh-ja",
-   "source_id": "S1101"
+   "source_id": "S1373"
   },
   {
-   "id": "P-111-01-54925c136ea2",
-   "qid": "P-111-01-54925c136ea2",
+   "id": "P-111-03-aa3d6f653be1",
+   "qid": "P-111-03-aa3d6f653be1",
    "type": "mcq",
-   "prompt": "这些小麦被磨成面粉。",
+   "prompt": "它的翼展约有四英寸。",
    "options": [
-    "信号が青に変わったわよ。",
-    "この靴下はちぐはぐだ。",
-    "カエルが鳴いたら帰ろう。",
-    "この小麦は粉にされる。"
+    "それは翼の全長が約４インチある。",
+    "お礼の申し上げようもありません。",
+    "テーブルの上に花が一本あります。",
+    "アラビア語は右から左へ書きます。"
    ],
-   "h": "8fa39b7e",
+   "h": "18490b8d",
    "oh": [
-    "a3da3ad",
-    "6db284b2",
-    "e5bebda",
-    "8fa39b7e"
-   ],
-   "knowledge_ids": [],
-   "optional": false,
-   "direction": "zh-ja",
-   "source_id": "S1102"
-  },
-  {
-   "id": "P-111-02-dd21af58f0eb",
-   "qid": "P-111-02-dd21af58f0eb",
-   "type": "mcq",
-   "prompt": "远处能看到一间小屋。",
-   "options": [
-    "遠くに小屋が見えた。",
-    "冗談はもうたくさんだ。",
-    "予定を変えました。",
-    "この部屋は静かです。"
-   ],
-   "h": "6a6c4ab3",
-   "oh": [
-    "6a6c4ab3",
-    "6808b25c",
-    "a0ad83b4",
-    "ed05be90"
-   ],
-   "knowledge_ids": [],
-   "optional": false,
-   "direction": "zh-ja",
-   "source_id": "S1103"
-  },
-  {
-   "id": "P-111-03-68cb334e6994",
-   "qid": "P-111-03-68cb334e6994",
-   "type": "mcq",
-   "prompt": "这些饼干是星星形状的。",
-   "options": [
-    "これらのクッキーは星の形をしている。",
-    "中国の音楽はどうも僕の肌に合わない。",
-    "その泥棒は刑事を見ると走って逃げた。",
-    "私はあの店で新しいステレオを買った。"
-   ],
-   "h": "97cc4678",
-   "oh": [
-    "97cc4678",
-    "62bcc9c",
-    "ea10fb03",
-    "cb357e2c"
+    "18490b8d",
+    "d477e2e9",
+    "9718d6f5",
+    "36918c3"
    ],
    "knowledge_ids": [],
    "optional": true,
    "direction": "zh-ja",
-   "source_id": "S1104"
+   "source_id": "S1374"
   },
   {
-   "id": "P-111-04-3c8a6af35b8b",
-   "qid": "P-111-04-3c8a6af35b8b",
+   "id": "P-111-04-de9d8b313888",
+   "qid": "P-111-04-de9d8b313888",
    "type": "mcq",
-   "prompt": "快到中午时太阳才露出来。",
+   "prompt": "也就是说，她是个蹩脚的舞者。",
    "options": [
-    "おひる頃やっと太陽が顔を出した。",
-    "その小説は彼の名声を更に高めた。",
-    "ホッチキスを貸してくれませんか。",
-    "トムは今にもここに来るはずです。"
+    "つまり彼女は下手な踊り子だ。",
+    "最初の打者はアウトになった。",
+    "熱はエネルギーの一種である。",
+    "無事だと聞いて安心しました。"
    ],
-   "h": "c5040bc1",
+   "h": "c49e2f71",
    "oh": [
-    "c5040bc1",
-    "c4f79a06",
-    "1b2dc8f1",
-    "1c43f179"
+    "c49e2f71",
+    "812a999a",
+    "c698082b",
+    "a16b8d46"
    ],
    "knowledge_ids": [],
    "optional": true,
    "direction": "zh-ja",
-   "source_id": "S1105"
+   "source_id": "S1375"
   },
   {
-   "id": "P-111-05-ffa3edf2c792",
-   "qid": "P-111-05-ffa3edf2c792",
+   "id": "P-111-05-7d2c756baa85",
+   "qid": "P-111-05-7d2c756baa85",
    "type": "mcq",
-   "prompt": "你想杀了我。",
+   "prompt": "比尔没有犯那项罪。",
    "options": [
-    "おまえはオレを殺そうとしている。",
-    "あの先生に質問してもいいですよ。",
-    "インドの人口はどのくらいですか。",
-    "お礼の申し上げようもありません。"
+    "そのコーヒーはいいにおいがする。",
+    "システムが作動しない場合がある。",
+    "ビールびんはガラスでできている。",
+    "ビルはその罪を犯していなかった。"
    ],
-   "h": "aac242c3",
+   "h": "8cfed4a4",
    "oh": [
-    "aac242c3",
-    "c64703e1",
-    "4c5d8293",
-    "d477e2e9"
+    "eff509fd",
+    "e09812e6",
+    "45e4dbee",
+    "8cfed4a4"
    ],
    "knowledge_ids": [],
    "optional": true,
    "direction": "zh-ja",
-   "source_id": "S1106"
+   "source_id": "S1376"
   },
   {
-   "id": "P-111-06-3ce1aef14b3a",
-   "qid": "P-111-06-3ce1aef14b3a",
+   "id": "P-111-06-977e490b1ec6",
+   "qid": "P-111-06-977e490b1ec6",
    "type": "mcq",
-   "prompt": "我摔倒伤了手腕。",
+   "prompt": "这件衬衫能帮我改小一点吗？",
    "options": [
-    "転んで手首を痛めました。",
-    "新聞の記事を読みました。",
-    "火曜日に国会が開かれる。",
-    "ありがとうございます。"
+    "このブラウスをつめていただけますか。",
+    "おじいさんはとてもゆっくりと話す。",
+    "あの人達は都会の生活にあこがれている。",
+    "どちらかといえば木造住宅に住みたい。"
    ],
-   "h": "6fd786a",
+   "h": "92c2a853",
    "oh": [
-    "6fd786a",
-    "54f405f6",
-    "71348ffa",
-    "4ffb347a"
+    "92c2a853",
+    "ade4fb30",
+    "f7e43dfe",
+    "595610d9"
    ],
    "knowledge_ids": [],
    "optional": true,
    "direction": "zh-ja",
-   "source_id": "S1107"
+   "source_id": "S1377"
   },
   {
-   "id": "P-111-07-444a151d348e",
-   "qid": "P-111-07-444a151d348e",
+   "id": "P-111-07-639c596fd0cb",
+   "qid": "P-111-07-639c596fd0cb",
    "type": "mcq",
-   "prompt": "今回はしくじれないぞ。",
+   "prompt": "雪はあたり一面に積もっていた。",
    "options": [
-    "健在三跑得最快。",
-    "这次可不能失手。",
-    "部长已经到了吗？",
+    "下下周四怎么样？",
+    "这块表走时准确。",
+    "我来给花换水吧。",
     "雪积得满地都是。"
    ],
-   "h": "2fe4f620",
+   "h": "8aeb8cdc",
    "oh": [
-    "57e1f82c",
-    "2fe4f620",
-    "542308b3",
+    "aab0ec66",
+    "5111725d",
+    "c570507a",
     "8aeb8cdc"
    ],
    "knowledge_ids": [],
    "optional": true,
    "direction": "ja-zh",
-   "source_id": "S1108"
+   "source_id": "S1378"
   },
   {
-   "id": "P-111-08-019f591d044a",
-   "qid": "P-111-08-019f591d044a",
+   "id": "P-111-08-a81c3da10896",
+   "qid": "P-111-08-a81c3da10896",
    "type": "mcq",
-   "prompt": "今後気をつけなくてはなりません。",
+   "prompt": "天気予報によれば、まもなく梅雨に入るそうだ。",
    "options": [
-    "今后必须多加小心。",
-    "你没有权利去那里。",
-    "下下周四怎么样？",
-    "能借我一下橡皮吗？"
+    "世界上有各种各样的人种。",
+    "那场暴风雨带来了巨大损失。",
+    "据天气预报，马上就要入梅了。",
+    "我看见他们挽着手臂走路。"
    ],
-   "h": "643f25c1",
+   "h": "d468a87f",
    "oh": [
-    "643f25c1",
-    "2e3620c5",
-    "aab0ec66",
-    "7f225cac"
+    "1d508341",
+    "5f9247ec",
+    "d468a87f",
+    "e24b81f7"
    ],
    "knowledge_ids": [],
    "optional": true,
    "direction": "ja-zh",
-   "source_id": "S1109"
+   "source_id": "S1379"
   },
   {
-   "id": "P-111-09-5b4c7c625dba",
-   "qid": "P-111-09-5b4c7c625dba",
+   "id": "P-111-09-58d243fc2395",
+   "qid": "P-111-09-58d243fc2395",
    "type": "mcq",
-   "prompt": "どうして帰りがこんなに遅くなったの。",
+   "prompt": "流産はとても辛い経験です。",
    "options": [
-    "怎么回来得这么晚？",
-    "两个当中哪个贵？",
-    "我们绕到车后面推。",
-    "铁是最有用的金属。"
+    "语调有时也能传达感情。",
+    "流产是非常痛苦的经历。",
+    "他的话简单得不能再简单。",
+    "世界上有各种各样的人种。"
    ],
-   "h": "da3dbd3d",
+   "h": "70445b68",
    "oh": [
-    "da3dbd3d",
-    "fc08db83",
-    "f9ef5dc7",
-    "eb5e2c2d"
+    "ac5b615a",
+    "70445b68",
+    "1723f272",
+    "1d508341"
    ],
    "knowledge_ids": [],
    "optional": true,
    "direction": "ja-zh",
-   "source_id": "S1110"
+   "source_id": "S1380"
   }
  ],
  "quiz": [
   {
-   "id": "Q-111-K0-045dd7b8f29f",
-   "qid": "Q-111-K0-045dd7b8f29f",
+   "id": "Q-111-K0-9cfdd2b8d624",
+   "qid": "Q-111-K0-9cfdd2b8d624",
    "type": "mcq",
-   "prompt": "汉字「識」的一个常用读音是？",
+   "prompt": "汉字「抱」的一个常用读音是？",
    "options": [
-    "シキ",
-    "なが.れる",
-    "せい",
-    "ほ.しい"
+    "ホウ",
+    "ジカ",
+    "かぶり",
+    "そ.る"
    ],
-   "h": "4b9ba6c1",
+   "h": "cfcb7794",
    "oh": [
-    "4b9ba6c1",
-    "2680b99e",
-    "b3087cda",
-    "881be78f"
+    "cfcb7794",
+    "2d835b04",
+    "322fab9a",
+    "a2baed5b"
    ],
    "knowledge_ids": [
-    "K0461"
+    "K0559"
    ]
   },
   {
-   "id": "Q-111-K1-bdfbee30730a",
-   "qid": "Q-111-K1-bdfbee30730a",
+   "id": "Q-111-K1-79e07eb77b3b",
+   "qid": "Q-111-K1-79e07eb77b3b",
    "type": "mcq",
-   "prompt": "汉字「呼」的一个常用读音是？",
+   "prompt": "汉字「犯」的一个常用读音是？",
    "options": [
-    "とみ",
-    "くに",
-    "コ",
-    "ショク"
+    "とも",
+    "くば.る",
+    "ハン",
+    "ショウ"
    ],
-   "h": "b62510c2",
+   "h": "433db37",
    "oh": [
-    "79c833f8",
-    "8d3f85cf",
-    "b62510c2",
-    "73059984"
+    "26c9444f",
+    "9915ae25",
+    "433db37",
+    "6c058e7f"
    ],
    "knowledge_ids": [
-    "K0462"
+    "K0560"
    ]
   },
   {
-   "id": "Q-111-G-23004cff8c7b",
-   "qid": "Q-111-G-23004cff8c7b",
+   "id": "Q-111-G-c5f34b44a9b6",
+   "qid": "Q-111-G-c5f34b44a9b6",
    "type": "mcq",
-   "prompt": "句型「〜ほど」的意思是？",
+   "prompt": "句型「〜って」的意思是？",
    "options": [
-    "到了…的程度",
+    "说是…；所谓…",
     "本来就…；应当…；过去常…",
     "不必…；用不着…",
     "想（做）…／（第三人称）想…"
    ],
-   "h": "7b419d20",
+   "h": "72524cec",
    "oh": [
-    "7b419d20",
+    "72524cec",
     "b4c365d8",
     "8c5f4369",
     "67e38dd"
    ],
    "knowledge_ids": [
-    "G0135"
+    "G0170"
    ]
   },
   {
-   "id": "Q-111-V0-804cbabb4ee6",
-   "qid": "Q-111-V0-804cbabb4ee6",
+   "id": "Q-111-V0-fdbefdc2d5aa",
+   "qid": "Q-111-V0-fdbefdc2d5aa",
    "type": "mcq",
-   "prompt": "「後者」是什么意思？",
+   "prompt": "「つまり」是什么意思？",
    "options": [
-    "上学；走读",
-    "后者",
+    "通过",
+    "也就是说",
     "大大地；非常",
     "逐渐"
    ],
-   "h": "64c606fc",
+   "h": "e16fe4f6",
    "oh": [
-    "2e337c13",
-    "64c606fc",
+    "451858fe",
+    "e16fe4f6",
     "60fc51f0",
     "1c940d8d"
    ],
    "knowledge_ids": [
-    "V1941"
+    "V2467"
    ]
   },
   {
-   "id": "Q-111-V1-1bcd18163df3",
-   "qid": "Q-111-V1-1bcd18163df3",
+   "id": "Q-111-V1-3410bf1ea185",
+   "qid": "Q-111-V1-3410bf1ea185",
    "type": "mcq",
-   "prompt": "「構成」是什么意思？",
+   "prompt": "假名「つみ」对应的词形是？",
    "options": [
-    "薄；淡",
-    "构成",
-    "交通工具",
-    "冷（天气/体感）"
+    "薄い",
+    "罪",
+    "乗り物",
+    "寒い"
    ],
-   "h": "4e138b79",
+   "h": "ef78d97d",
    "oh": [
-    "c04cac1b",
-    "4e138b79",
-    "791970e7",
-    "9d591f79"
+    "f27d5e35",
+    "ef78d97d",
+    "af9ab187",
+    "dd7bc3e3"
    ],
    "knowledge_ids": [
-    "V1942"
+    "V2468"
    ]
   },
   {
-   "id": "Q-111-R-f53b1a78bd89",
-   "qid": "Q-111-R-f53b1a78bd89",
+   "id": "Q-111-R-40772f873c61",
+   "qid": "Q-111-R-40772f873c61",
    "type": "mcq",
-   "prompt": "复习：「講演」是什么意思？",
+   "prompt": "复习：假名「ちょくせつ」对应的词形是？",
    "options": [
-    "控诉；呼吁",
-    "星期日",
-    "演讲；报告",
-    "明星"
+    "訴える",
+    "日曜",
+    "直接",
+    "進める"
    ],
-   "h": "cbe6fc67",
+   "h": "3c8539f2",
    "oh": [
-    "9fccb1f1",
-    "628c24b2",
-    "cbe6fc67",
-    "daea518a"
+    "1a4ae44e",
+    "cffbdbf4",
+    "3c8539f2",
+    "abcc5f15"
    ],
    "knowledge_ids": [
-    "V1927"
+    "V2442"
    ]
   }
  ],
  "questions": [
   {
-   "id": "Q-111-K0-045dd7b8f29f",
-   "qid": "Q-111-K0-045dd7b8f29f",
+   "id": "Q-111-K0-9cfdd2b8d624",
+   "qid": "Q-111-K0-9cfdd2b8d624",
    "type": "mcq",
-   "prompt": "汉字「識」的一个常用读音是？",
+   "prompt": "汉字「抱」的一个常用读音是？",
    "options": [
-    "シキ",
-    "なが.れる",
-    "せい",
-    "ほ.しい"
+    "ホウ",
+    "ジカ",
+    "かぶり",
+    "そ.る"
    ],
-   "h": "4b9ba6c1",
+   "h": "cfcb7794",
    "oh": [
-    "4b9ba6c1",
-    "2680b99e",
-    "b3087cda",
-    "881be78f"
+    "cfcb7794",
+    "2d835b04",
+    "322fab9a",
+    "a2baed5b"
    ],
    "knowledge_ids": [
-    "K0461"
+    "K0559"
    ]
   },
   {
-   "id": "Q-111-K1-bdfbee30730a",
-   "qid": "Q-111-K1-bdfbee30730a",
+   "id": "Q-111-K1-79e07eb77b3b",
+   "qid": "Q-111-K1-79e07eb77b3b",
    "type": "mcq",
-   "prompt": "汉字「呼」的一个常用读音是？",
+   "prompt": "汉字「犯」的一个常用读音是？",
    "options": [
-    "とみ",
-    "くに",
-    "コ",
-    "ショク"
+    "とも",
+    "くば.る",
+    "ハン",
+    "ショウ"
    ],
-   "h": "b62510c2",
+   "h": "433db37",
    "oh": [
-    "79c833f8",
-    "8d3f85cf",
-    "b62510c2",
-    "73059984"
+    "26c9444f",
+    "9915ae25",
+    "433db37",
+    "6c058e7f"
    ],
    "knowledge_ids": [
-    "K0462"
+    "K0560"
    ]
   },
   {
-   "id": "Q-111-G-23004cff8c7b",
-   "qid": "Q-111-G-23004cff8c7b",
+   "id": "Q-111-G-c5f34b44a9b6",
+   "qid": "Q-111-G-c5f34b44a9b6",
    "type": "mcq",
-   "prompt": "句型「〜ほど」的意思是？",
+   "prompt": "句型「〜って」的意思是？",
    "options": [
-    "到了…的程度",
+    "说是…；所谓…",
     "本来就…；应当…；过去常…",
     "不必…；用不着…",
     "想（做）…／（第三人称）想…"
    ],
-   "h": "7b419d20",
+   "h": "72524cec",
    "oh": [
-    "7b419d20",
+    "72524cec",
     "b4c365d8",
     "8c5f4369",
     "67e38dd"
    ],
    "knowledge_ids": [
-    "G0135"
+    "G0170"
    ]
   },
   {
-   "id": "Q-111-V0-804cbabb4ee6",
-   "qid": "Q-111-V0-804cbabb4ee6",
+   "id": "Q-111-V0-fdbefdc2d5aa",
+   "qid": "Q-111-V0-fdbefdc2d5aa",
    "type": "mcq",
-   "prompt": "「後者」是什么意思？",
+   "prompt": "「つまり」是什么意思？",
    "options": [
-    "上学；走读",
-    "后者",
+    "通过",
+    "也就是说",
     "大大地；非常",
     "逐渐"
    ],
-   "h": "64c606fc",
+   "h": "e16fe4f6",
    "oh": [
-    "2e337c13",
-    "64c606fc",
+    "451858fe",
+    "e16fe4f6",
     "60fc51f0",
     "1c940d8d"
    ],
    "knowledge_ids": [
-    "V1941"
+    "V2467"
    ]
   },
   {
-   "id": "Q-111-V1-1bcd18163df3",
-   "qid": "Q-111-V1-1bcd18163df3",
+   "id": "Q-111-V1-3410bf1ea185",
+   "qid": "Q-111-V1-3410bf1ea185",
    "type": "mcq",
-   "prompt": "「構成」是什么意思？",
+   "prompt": "假名「つみ」对应的词形是？",
    "options": [
-    "薄；淡",
-    "构成",
-    "交通工具",
-    "冷（天气/体感）"
+    "薄い",
+    "罪",
+    "乗り物",
+    "寒い"
    ],
-   "h": "4e138b79",
+   "h": "ef78d97d",
    "oh": [
-    "c04cac1b",
-    "4e138b79",
-    "791970e7",
-    "9d591f79"
+    "f27d5e35",
+    "ef78d97d",
+    "af9ab187",
+    "dd7bc3e3"
    ],
    "knowledge_ids": [
-    "V1942"
+    "V2468"
    ]
   },
   {
-   "id": "Q-111-R-f53b1a78bd89",
-   "qid": "Q-111-R-f53b1a78bd89",
+   "id": "Q-111-R-40772f873c61",
+   "qid": "Q-111-R-40772f873c61",
    "type": "mcq",
-   "prompt": "复习：「講演」是什么意思？",
+   "prompt": "复习：假名「ちょくせつ」对应的词形是？",
    "options": [
-    "控诉；呼吁",
-    "星期日",
-    "演讲；报告",
+    "訴える",
+    "日曜",
+    "直接",
+    "進める"
+   ],
+   "h": "3c8539f2",
+   "oh": [
+    "1a4ae44e",
+    "cffbdbf4",
+    "3c8539f2",
+    "abcc5f15"
+   ],
+   "knowledge_ids": [
+    "V2442"
+   ]
+  },
+  {
+   "id": "L-111-0-67e95219eca8",
+   "qid": "L-111-0-67e95219eca8",
+   "type": "mcq",
+   "prompt": "研修はどこで行いますか。",
+   "options": [
+    "本社の会議室",
+    "市民センター",
+    "ホテルの会議室",
+    "駅前の研修室"
+   ],
+   "h": "2c7dbd1d",
+   "oh": [
+    "1840f63f",
+    "197d03e1",
+    "2c7dbd1d",
+    "39696957"
+   ],
+   "knowledge_ids": []
+  },
+  {
+   "id": "L-111-1-d3170b1373c7",
+   "qid": "L-111-1-d3170b1373c7",
+   "type": "mcq",
+   "prompt": "欠席する場合は、いつまでに連絡しますか。",
+   "options": [
+    "研修の後で",
+    "一週間前までに",
+    "前の日までにメールで",
+    "当日の朝にメールで"
+   ],
+   "h": "3597b620",
+   "oh": [
+    "f42a2f36",
+    "32cb26e6",
+    "3597b620",
+    "73d0934a"
+   ],
+   "knowledge_ids": []
+  },
+  {
+   "id": "L-111-2-434c2271679e",
+   "qid": "L-111-2-434c2271679e",
+   "type": "mcq",
+   "prompt": "どうしていつもの本社の会議室を使いませんか。",
+   "options": [
+    "狭すぎるから",
+    "修理中だから",
+    "ほかの会議が入っているから",
+    "遠すぎるから"
+   ],
+   "h": "57a7e5da",
+   "oh": [
+    "76a26b9c",
+    "9dad5820",
+    "57a7e5da",
+    "8a1666e1"
+   ],
+   "knowledge_ids": []
+  },
+  {
+   "id": "P-111-00-19bb493660a9",
+   "qid": "P-111-00-19bb493660a9",
+   "type": "mcq",
+   "prompt": "请帮我接史密斯先生。",
+   "options": [
+    "スミスさんにつないで下さい。",
+    "この手の本はあまり読まない。",
+    "最初の打者はアウトになった。",
+    "ラジオの音を低くして下さい。"
+   ],
+   "h": "3dda2614",
+   "oh": [
+    "3dda2614",
+    "771de503",
+    "812a999a",
+    "847c7179"
+   ],
+   "knowledge_ids": [],
+   "optional": false
+  },
+  {
+   "id": "P-111-01-dd2df7c5a7ee",
+   "qid": "P-111-01-dd2df7c5a7ee",
+   "type": "mcq",
+   "prompt": "总是有疲劳感。",
+   "options": [
+    "何時間も海を眺めた。",
+    "彼が近所に越してきた。",
+    "ただの風邪でしょう。",
+    "常に疲労感があります。"
+   ],
+   "h": "1f9b24a2",
+   "oh": [
+    "aead5bf6",
+    "ff733aee",
+    "8dd6c2d9",
+    "1f9b24a2"
+   ],
+   "knowledge_ids": [],
+   "optional": false
+  },
+  {
+   "id": "P-111-02-3609ebd2fe75",
+   "qid": "P-111-02-3609ebd2fe75",
+   "type": "mcq",
+   "prompt": "蜗牛一下子伸出了触角。",
+   "options": [
+    "少女は立って鏡をのぞきこんだ。",
+    "兄はアパートをさがしています。",
+    "カタツムリがすっと角を出した。",
+    "あの交差点で何が起こったのか。"
+   ],
+   "h": "1141342d",
+   "oh": [
+    "b6b02350",
+    "7f656d90",
+    "1141342d",
+    "28d0e3e9"
+   ],
+   "knowledge_ids": [],
+   "optional": false
+  },
+  {
+   "id": "P-111-V2467-m-8d8751202f00",
+   "qid": "P-111-V2467-m-8d8751202f00",
+   "type": "mcq",
+   "prompt": "本课词条「つまり」（例句语境：也就是说，她是个蹩脚的舞者。）的释义是哪一项？",
+   "options": [
+    "利用；使用",
+    "也就是说",
+    "景色；眺望",
+    "旅行"
+   ],
+   "h": "e16fe4f6",
+   "oh": [
+    "1d68825a",
+    "e16fe4f6",
+    "eccd2bea",
+    "ffcf17a4"
+   ],
+   "day": 111,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V2467"
+   ],
+   "source_day": 111,
+   "optional": true
+  },
+  {
+   "id": "P-111-V2468-m-34971121da27",
+   "qid": "P-111-V2468-m-34971121da27",
+   "type": "mcq",
+   "prompt": "本课词条「罪」（例句语境：比尔没有犯那项罪。）的释义是哪一项？",
+   "options": [
+    "罪；过错",
+    "大学",
+    "朋友",
+    "借（入）；向人借"
+   ],
+   "h": "2953082",
+   "oh": [
+    "2953082",
+    "9a0757e0",
+    "8485de13",
+    "1cce165f"
+   ],
+   "day": 111,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V2468"
+   ],
+   "source_day": 111,
+   "optional": true
+  },
+  {
+   "id": "P-111-V2469-m-9ae78e3eae61",
+   "qid": "P-111-V2469-m-9ae78e3eae61",
+   "type": "mcq",
+   "prompt": "本课词条「詰める」（例句语境：这件衬衫能帮我改小一点吗？）的释义是哪一项？",
+   "options": [
+    "排列",
+    "上面；表面",
+    "塞；改短",
+    "什么"
+   ],
+   "h": "3279bca8",
+   "oh": [
+    "9978f3c6",
+    "f8537414",
+    "3279bca8",
+    "cde747b5"
+   ],
+   "day": 111,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V2469"
+   ],
+   "source_day": 111,
+   "optional": true
+  },
+  {
+   "id": "P-111-V2469-r-7440b988a188",
+   "qid": "P-111-V2469-r-7440b988a188",
+   "type": "mcq",
+   "prompt": "本课词条「詰める」（塞；改短）的假名读音是哪一项？",
+   "options": [
+    "ケース",
+    "じどうしゃ",
+    "ごぞんじ",
+    "つめる"
+   ],
+   "h": "673bccc7",
+   "oh": [
+    "d65fdadb",
+    "df7f55fe",
+    "4cb580cc",
+    "673bccc7"
+   ],
+   "day": 111,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V2469"
+   ],
+   "source_day": 111,
+   "optional": true
+  },
+  {
+   "id": "P-111-V2470-m-54e2666faf52",
+   "qid": "P-111-V2470-m-54e2666faf52",
+   "type": "mcq",
+   "prompt": "本课词条「積もる」（例句语境：雪积得满地都是。）的释义是哪一项？",
+   "options": [
+    "积；堆积",
+    "生物",
+    "果然；还是",
     "明星"
    ],
-   "h": "cbe6fc67",
+   "h": "4e3f203c",
    "oh": [
-    "9fccb1f1",
-    "628c24b2",
-    "cbe6fc67",
+    "4e3f203c",
+    "334b6c5",
+    "cc101421",
     "daea518a"
    ],
-   "knowledge_ids": [
-    "V1927"
-   ]
-  },
-  {
-   "id": "P-111-00-3e75f6c3cac5",
-   "qid": "P-111-00-3e75f6c3cac5",
-   "type": "mcq",
-   "prompt": "请把这一页复印一下。",
-   "options": [
-    "兄はアパートをさがしています。",
-    "このページをコピーして下さい。",
-    "これは北海道からのお土産です。",
-    "お答えできる立場にありません。"
-   ],
-   "h": "fd6444e6",
-   "oh": [
-    "7f656d90",
-    "fd6444e6",
-    "7e2c9ed2",
-    "3c490fe4"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-111-01-54925c136ea2",
-   "qid": "P-111-01-54925c136ea2",
-   "type": "mcq",
-   "prompt": "这些小麦被磨成面粉。",
-   "options": [
-    "信号が青に変わったわよ。",
-    "この靴下はちぐはぐだ。",
-    "カエルが鳴いたら帰ろう。",
-    "この小麦は粉にされる。"
-   ],
-   "h": "8fa39b7e",
-   "oh": [
-    "a3da3ad",
-    "6db284b2",
-    "e5bebda",
-    "8fa39b7e"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-111-02-dd21af58f0eb",
-   "qid": "P-111-02-dd21af58f0eb",
-   "type": "mcq",
-   "prompt": "远处能看到一间小屋。",
-   "options": [
-    "遠くに小屋が見えた。",
-    "冗談はもうたくさんだ。",
-    "予定を変えました。",
-    "この部屋は静かです。"
-   ],
-   "h": "6a6c4ab3",
-   "oh": [
-    "6a6c4ab3",
-    "6808b25c",
-    "a0ad83b4",
-    "ed05be90"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-111-V1941-m-29f061b01f26",
-   "qid": "P-111-V1941-m-29f061b01f26",
-   "type": "mcq",
-   "prompt": "本课词条「後者」（例句语境：其中重要的是后者。）的释义是哪一项？",
-   "options": [
-    "昨",
-    "后者",
-    "认真；严肃",
-    "说明；解释"
-   ],
-   "h": "64c606fc",
-   "oh": [
-    "2da09617",
-    "64c606fc",
-    "9dac69c1",
-    "1bd923d"
-   ],
    "day": 111,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V1941"
+    "V2470"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1942-m-37f34a4d9bc8",
-   "qid": "P-111-V1942-m-37f34a4d9bc8",
+   "id": "P-111-V2470-r-9a92fb64497a",
+   "qid": "P-111-V2470-r-9a92fb64497a",
    "type": "mcq",
-   "prompt": "本课词条「構成」（例句语境：委员会由八名成员组成。）的释义是哪一项？",
+   "prompt": "本课词条「積もる」（积；堆积）的假名读音是哪一项？",
    "options": [
-    "灰；灰烬",
-    "不安；担心",
-    "不满；不满意",
-    "构成"
+    "ごはん",
+    "つもる",
+    "けいこく",
+    "めしあがる"
    ],
-   "h": "4e138b79",
+   "h": "3f3ae238",
    "oh": [
-    "445053d8",
-    "62acdc3c",
-    "2409c557",
-    "4e138b79"
-   ],
-   "day": 111,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1942"
-   ],
-   "source_day": 111,
-   "optional": true
-  },
-  {
-   "id": "P-111-V1943-m-1c07d07d7108",
-   "qid": "P-111-V1943-m-1c07d07d7108",
-   "type": "mcq",
-   "prompt": "本课词条「高速」（例句语境：司机一直保持高速行驶。）的释义是哪一项？",
-   "options": [
-    "高速",
-    "扩大",
-    "成绩",
-    "见解"
-   ],
-   "h": "bdcd27a8",
-   "oh": [
-    "bdcd27a8",
-    "6c88eb59",
-    "bb846b52",
-    "785b647d"
-   ],
-   "day": 111,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1943"
-   ],
-   "source_day": 111,
-   "optional": true
-  },
-  {
-   "id": "P-111-V1943-r-38d9edcd7a19",
-   "qid": "P-111-V1943-r-38d9edcd7a19",
-   "type": "mcq",
-   "prompt": "本课词条「高速」（高速）的假名读音是哪一项？",
-   "options": [
-    "こうそく",
-    "たにん",
-    "あの",
-    "さいご"
-   ],
-   "h": "2f2e3704",
-   "oh": [
-    "2f2e3704",
-    "725fada4",
-    "6a6af2f1",
-    "7dbe7258"
+    "a0f6a475",
+    "3f3ae238",
+    "e91cec2a",
+    "e1cfb6ac"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V1943"
+    "V2470"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1944-m-7fe655c2753f",
-   "qid": "P-111-V1944-m-7fe655c2753f",
+   "id": "P-111-V2471-m-fd552d1a6a99",
+   "qid": "P-111-V2471-m-fd552d1a6a99",
    "type": "mcq",
-   "prompt": "本课词条「行動」（例句语境：这次行动的责任全由我来负。）的释义是哪一项？",
+   "prompt": "本课词条「梅雨」（例句语境：据天气预报，马上就要入梅了。）的释义是哪一项？",
    "options": [
-    "行动",
-    "返回",
-    "批准；认可",
-    "周；星期"
+    "交给；递",
+    "牛排",
+    "梅雨",
+    "发光；闪耀"
    ],
-   "h": "2f8a60b9",
+   "h": "94f39df8",
    "oh": [
-    "2f8a60b9",
-    "58cbffa7",
-    "decf6232",
-    "c8b38aba"
+    "8b2cbe97",
+    "807ea0f8",
+    "94f39df8",
+    "1d3603c6"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V1944"
+    "V2471"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1944-r-05c22b6b9f50",
-   "qid": "P-111-V1944-r-05c22b6b9f50",
+   "id": "P-111-V2471-r-d7748b66be85",
+   "qid": "P-111-V2471-r-d7748b66be85",
    "type": "mcq",
-   "prompt": "本课词条「行動」（行动）的假名读音是哪一项？",
+   "prompt": "本课词条「梅雨」（梅雨）的假名读音是哪一项？",
+   "options": [
+    "つゆ",
+    "ぬれる",
+    "ふむ",
+    "あいて"
+   ],
+   "h": "62ddedaf",
+   "oh": [
+    "62ddedaf",
+    "9f4f3b0a",
+    "9ad0b6b0",
+    "1ca89cef"
+   ],
+   "day": 111,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V2471"
+   ],
+   "source_day": 111,
+   "optional": true
+  },
+  {
+   "id": "P-111-V2472-m-7e53c7e4441e",
+   "qid": "P-111-V2472-m-7e53c7e4441e",
+   "type": "mcq",
+   "prompt": "本课词条「辛い」（例句语境：流产是非常痛苦的经历。）的释义是哪一项？",
+   "options": [
+    "大战",
+    "香烟",
+    "顺序；次序",
+    "难受；痛苦"
+   ],
+   "h": "4e5b7cf2",
+   "oh": [
+    "d7ca547a",
+    "35fcd551",
+    "2b380ee7",
+    "4e5b7cf2"
+   ],
+   "day": 111,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V2472"
+   ],
+   "source_day": 111,
+   "optional": true
+  },
+  {
+   "id": "P-111-V2472-r-30106ba01f5e",
+   "qid": "P-111-V2472-r-30106ba01f5e",
+   "type": "mcq",
+   "prompt": "本课词条「辛い」（难受；痛苦）的假名读音是哪一项？",
+   "options": [
+    "とき",
+    "つらい",
+    "こおる",
+    "くせ"
+   ],
+   "h": "4c1e5cfe",
+   "oh": [
+    "6bc81dee",
+    "4c1e5cfe",
+    "8011e449",
+    "9d3f9eff"
+   ],
+   "day": 111,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V2472"
+   ],
+   "source_day": 111,
+   "optional": true
+  },
+  {
+   "id": "P-111-V2473-m-7061aac56e55",
+   "qid": "P-111-V2473-m-7061aac56e55",
+   "type": "mcq",
+   "prompt": "本课词条「釣」（例句语境：你很想去钓鱼。）的释义是哪一项？",
+   "options": [
+    "省略；节省",
+    "旅行",
+    "钓鱼",
+    "态度"
+   ],
+   "h": "e2ce993a",
+   "oh": [
+    "88b58635",
+    "ffcf17a4",
+    "e2ce993a",
+    "76d3811e"
+   ],
+   "day": 111,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V2473"
+   ],
+   "source_day": 111,
+   "optional": true
+  },
+  {
+   "id": "P-111-V2473-r-a95bff8e5bc2",
+   "qid": "P-111-V2473-r-a95bff8e5bc2",
+   "type": "mcq",
+   "prompt": "本课词条「釣」（钓鱼）的假名读音是哪一项？",
+   "options": [
+    "つり",
+    "しょう",
+    "こわれる",
+    "はたらき"
+   ],
+   "h": "66ddf3fb",
+   "oh": [
+    "66ddf3fb",
+    "3999df1f",
+    "a1c9d7e",
+    "7daec959"
+   ],
+   "day": 111,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V2473"
+   ],
+   "source_day": 111,
+   "optional": true
+  },
+  {
+   "id": "P-111-V2474-m-e32dc7ed6800",
+   "qid": "P-111-V2474-m-e32dc7ed6800",
+   "type": "mcq",
+   "prompt": "本课词条「連れ」（例句语境：我送您到车站吧。）的释义是哪一项？",
+   "options": [
+    "捐赠",
+    "同伴；同行者（〜連れ＝带着…同行）",
+    "不在家",
+    "吃惊"
+   ],
+   "h": "1bde7c8e",
+   "oh": [
+    "40a0633d",
+    "1bde7c8e",
+    "6288aa92",
+    "6ab522e8"
+   ],
+   "day": 111,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V2474"
+   ],
+   "source_day": 111,
+   "optional": true
+  },
+  {
+   "id": "P-111-V2474-r-2b3c628c53dc",
+   "qid": "P-111-V2474-r-2b3c628c53dc",
+   "type": "mcq",
+   "prompt": "本课词条「連れ」（同伴；同行者（〜連れ＝带着…同行））的假名读音是哪一项？",
+   "options": [
+    "じこく",
+    "つれ",
+    "しんぱい",
+    "かいいん"
+   ],
+   "h": "6cddfd6d",
+   "oh": [
+    "fea5ac29",
+    "6cddfd6d",
+    "5af0c8aa",
+    "797318db"
+   ],
+   "day": 111,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V2474"
+   ],
+   "source_day": 111,
+   "optional": true
+  },
+  {
+   "id": "P-111-V2475-m-23e13eeeb537",
+   "qid": "P-111-V2475-m-23e13eeeb537",
+   "type": "mcq",
+   "prompt": "本课词条「で」（例句语境：那里以风景优美而闻名。）的释义是哪一项？",
+   "options": [
+    "多",
+    "红色",
+    "出；出自",
+    "永远"
+   ],
+   "h": "6d8dd146",
+   "oh": [
+    "1f49eb0d",
+    "fb3a03f5",
+    "6d8dd146",
+    "85774e01"
+   ],
+   "day": 111,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V2475"
+   ],
+   "source_day": 111,
+   "optional": true
+  },
+  {
+   "id": "P-111-V2475-r-cf09c0a81b49",
+   "qid": "P-111-V2475-r-cf09c0a81b49",
+   "type": "mcq",
+   "prompt": "本课词条「で」（出；出自）的假名读音是哪一项？",
    "options": [
     "こうどう",
-    "せつめい",
-    "ていねい",
-    "みつかる"
+    "ぜんぶ",
+    "で",
+    "ことり"
    ],
-   "h": "17c04bdb",
+   "h": "e2255606",
    "oh": [
     "17c04bdb",
-    "d525a9ff",
-    "6e175b0e",
-    "4ad9cd8c"
+    "60118a6a",
+    "e2255606",
+    "696b71c"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V1944"
+    "V2475"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1945-m-69855358ac98",
-   "qid": "P-111-V1945-m-69855358ac98",
+   "id": "P-111-V2476-m-94e1e965812d",
+   "qid": "P-111-V2476-m-94e1e965812d",
    "type": "mcq",
-   "prompt": "本课词条「強盗」（例句语境：父亲和劫匪扭打了起来。）的释义是哪一项？",
+   "prompt": "本课词条「出会い」（例句语境：我们的相遇完全是偶然。）的释义是哪一项？",
    "options": [
-    "强盗；抢劫",
-    "战争",
-    "习惯（自动）",
-    "变瘦"
+    "请；拜托",
+    "建筑；建设",
+    "岁月；年月",
+    "相遇；邂逅"
    ],
-   "h": "cf692054",
+   "h": "eb7a7594",
    "oh": [
-    "cf692054",
-    "1b259f2a",
-    "20c67ab9",
-    "728a5e13"
+    "1c7754cb",
+    "7e4ade01",
+    "ab88f721",
+    "eb7a7594"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V1945"
+    "V2476"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1945-r-2755283f287b",
-   "qid": "P-111-V1945-r-2755283f287b",
+   "id": "P-111-V2476-r-eb06304e890f",
+   "qid": "P-111-V2476-r-eb06304e890f",
    "type": "mcq",
-   "prompt": "本课词条「強盗」（强盗；抢劫）的假名读音是哪一项？",
+   "prompt": "本课词条「出会い」（相遇；邂逅）的假名读音是哪一项？",
    "options": [
-    "ごうとう",
-    "はなれる",
-    "そくど",
-    "おなじ"
+    "つる",
+    "さかい",
+    "であい",
+    "はなれる"
    ],
-   "h": "be69baa9",
+   "h": "b4502858",
    "oh": [
-    "be69baa9",
-    "3ca1a8e1",
-    "def6f104",
-    "f3fed77"
+    "65ddf268",
+    "9f9d90ff",
+    "b4502858",
+    "3ca1a8e1"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V1945"
+    "V2476"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1946-m-b392ccb400d5",
-   "qid": "P-111-V1946-m-b392ccb400d5",
+   "id": "P-111-V2477-m-a706725c6a0e",
+   "qid": "P-111-V2477-m-a706725c6a0e",
    "type": "mcq",
-   "prompt": "本课词条「工場」（例句语境：我父亲和哥哥在这家工厂工作。）的释义是哪一项？",
+   "prompt": "本课词条「出会う」（例句语境：昨天遇见了一位老朋友。）的释义是哪一项？",
    "options": [
-    "城市；都市",
-    "收银台",
-    "工厂",
-    "动；运转"
+    "得到；获得",
+    "晚上好",
+    "遇见；邂逅",
+    "会员"
    ],
-   "h": "6a1b56c6",
+   "h": "7df0ea57",
    "oh": [
-    "e3b0cc9",
-    "2e9c57a7",
-    "6a1b56c6",
-    "414ed830"
+    "5bb2d99",
+    "493546a8",
+    "7df0ea57",
+    "b88af8cf"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V1946"
+    "V2477"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1946-r-5ef9e52efae8",
-   "qid": "P-111-V1946-r-5ef9e52efae8",
+   "id": "P-111-V2477-r-97914b76d7ab",
+   "qid": "P-111-V2477-r-97914b76d7ab",
    "type": "mcq",
-   "prompt": "本课词条「工場」（工厂）的假名读音是哪一项？",
+   "prompt": "本课词条「出会う」（遇见；邂逅）的假名读音是哪一项？",
    "options": [
-    "こうば",
-    "チャンス",
-    "あくしゅ",
-    "ころ"
+    "ちえん",
+    "たびたび",
+    "であう",
+    "ゆき"
    ],
-   "h": "1d084e14",
+   "h": "b6502b7e",
    "oh": [
-    "1d084e14",
-    "64661749",
-    "9b1d0b8a",
-    "cbf51c7d"
+    "a541996d",
+    "85250481",
+    "b6502b7e",
+    "a72621dc"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V1946"
+    "V2477"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1947-m-ac6215d53451",
-   "qid": "P-111-V1947-m-ac6215d53451",
+   "id": "P-111-V2478-m-f8c7d9731e11",
+   "qid": "P-111-V2478-m-f8c7d9731e11",
    "type": "mcq",
-   "prompt": "本课词条「幸福」（例句语境：有钱人不一定幸福。）的释义是哪一项？",
+   "prompt": "本课词条「提案」（例句语境：能批准我的提案吗？）的释义是哪一项？",
    "options": [
-    "西方；西洋",
-    "人物",
-    "幸福",
-    "日式拉门"
+    "通行",
+    "腰",
+    "逃跑；逃避",
+    "提议；建议"
    ],
-   "h": "c0e74d98",
+   "h": "645a0678",
    "oh": [
-    "d28c768c",
-    "c8ed75cc",
-    "c0e74d98",
-    "80c6089c"
+    "bc1f6053",
+    "f44130ef",
+    "69643020",
+    "645a0678"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V1947"
+    "V2478"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1947-r-731f684bfcfc",
-   "qid": "P-111-V1947-r-731f684bfcfc",
+   "id": "P-111-V2478-r-f317337414b9",
+   "qid": "P-111-V2478-r-f317337414b9",
    "type": "mcq",
-   "prompt": "本课词条「幸福」（幸福）的假名读音是哪一项？",
+   "prompt": "本课词条「提案」（提议；建议）的假名读音是哪一项？",
    "options": [
-    "ちゅう",
-    "こうふく",
-    "つり",
-    "うらぎる"
+    "ていあん",
+    "かんじ",
+    "あたえる",
+    "さわる"
    ],
-   "h": "f569a7c",
+   "h": "a18b5e44",
    "oh": [
-    "931e7837",
-    "f569a7c",
-    "66ddf3fb",
-    "1a8cdee3"
+    "a18b5e44",
+    "9c620fb9",
+    "1b7e5f5b",
+    "eb631f52"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V1947"
+    "V2478"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1948-m-52e3c3292026",
-   "qid": "P-111-V1948-m-52e3c3292026",
+   "id": "P-111-V2479-m-4cb6413930af",
+   "qid": "P-111-V2479-m-4cb6413930af",
    "type": "mcq",
-   "prompt": "本课词条「公平」（例句语境：法律未必总是公平的。）的释义是哪一项？",
+   "prompt": "本课词条「定期」（例句语境：他们登上了定期客轮。）的释义是哪一项？",
    "options": [
-    "公平",
-    "违抗；逆着",
-    "骚动；吵闹",
-    "房东"
+    "氏；先生",
+    "离开；逝去",
+    "定期",
+    "环境"
    ],
-   "h": "cb130ce8",
+   "h": "56d745d6",
    "oh": [
-    "cb130ce8",
-    "b680d664",
-    "af7ec5a6",
-    "e6748dd6"
+    "1e9e985e",
+    "aa67797",
+    "56d745d6",
+    "d5de2a67"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V1948"
+    "V2479"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1948-r-c487e2e9c04a",
-   "qid": "P-111-V1948-r-c487e2e9c04a",
+   "id": "P-111-V2479-r-db4e1066ede9",
+   "qid": "P-111-V2479-r-db4e1066ede9",
    "type": "mcq",
-   "prompt": "本课词条「公平」（公平）的假名读音是哪一项？",
+   "prompt": "本课词条「定期」（定期）的假名读音是哪一项？",
    "options": [
-    "こうへい",
-    "ちのう",
-    "びっくりする",
-    "いちどに"
+    "かしゅ",
+    "とくに",
+    "さしあげる",
+    "ていき"
    ],
-   "h": "544a3b28",
+   "h": "5edc1b9e",
    "oh": [
-    "544a3b28",
-    "bfb9a1e0",
-    "9c343cf6",
-    "1530c652"
+    "8979e146",
+    "291b1e99",
+    "b4d3a4fa",
+    "5edc1b9e"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V1948"
+    "V2479"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1949-m-1e3b7633a9c8",
-   "qid": "P-111-V1949-m-1e3b7633a9c8",
+   "id": "P-111-V2480-m-12a1345e5047",
+   "qid": "P-111-V2480-m-12a1345e5047",
    "type": "mcq",
-   "prompt": "本课词条「候補」（例句语境：史密斯先生是市长候选人。）的释义是哪一项？",
+   "prompt": "本课词条「抵抗」（例句语境：面对困难始终抵抗到底。）的释义是哪一项？",
    "options": [
-    "候选；候选人",
-    "某物；什么",
-    "反抗；违抗",
-    "放晴；转晴"
-   ],
-   "h": "7da7fde0",
-   "oh": [
-    "7da7fde0",
-    "6373299b",
-    "78f37b3e",
-    "8a9245ac"
-   ],
-   "day": 111,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1949"
-   ],
-   "source_day": 111,
-   "optional": true
-  },
-  {
-   "id": "P-111-V1949-r-717adfc2b2f1",
-   "qid": "P-111-V1949-r-717adfc2b2f1",
-   "type": "mcq",
-   "prompt": "本课词条「候補」（候选；候选人）的假名读音是哪一项？",
-   "options": [
-    "のぞみ",
-    "こうほ",
-    "いただきます",
-    "なし"
-   ],
-   "h": "18084635",
-   "oh": [
-    "64515f66",
-    "18084635",
-    "bde0060a",
-    "a1ccf01e"
-   ],
-   "day": 111,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1949"
-   ],
-   "source_day": 111,
-   "optional": true
-  },
-  {
-   "id": "P-111-V1950-m-d9f3feb8fe68",
-   "qid": "P-111-V1950-m-d9f3feb8fe68",
-   "type": "mcq",
-   "prompt": "本课词条「考慮」（例句语境：我正在考虑要不要跟他们一起去。）的释义是哪一项？",
-   "options": [
-    "考虑",
-    "下起来",
-    "牙医；牙科",
-    "茶"
-   ],
-   "h": "2a71ed59",
-   "oh": [
-    "2a71ed59",
-    "b51ebf46",
-    "887540e0",
-    "3244b889"
-   ],
-   "day": 111,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1950"
-   ],
-   "source_day": 111,
-   "optional": true
-  },
-  {
-   "id": "P-111-V1950-r-c88980a19088",
-   "qid": "P-111-V1950-r-c88980a19088",
-   "type": "mcq",
-   "prompt": "本课词条「考慮」（考虑）的假名读音是哪一项？",
-   "options": [
-    "しょくひん",
-    "こうりょ",
-    "むかう",
-    "しち"
-   ],
-   "h": "4953de8f",
-   "oh": [
-    "d888da63",
-    "4953de8f",
-    "d61c9b8e",
-    "87530415"
-   ],
-   "day": 111,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1950"
-   ],
-   "source_day": 111,
-   "optional": true
-  },
-  {
-   "id": "P-111-V1951-m-3da2fc30c470",
-   "qid": "P-111-V1951-m-3da2fc30c470",
-   "type": "mcq",
-   "prompt": "本课词条「越える」（例句语境：那超出了人类智慧的极限。）的释义是哪一项？",
-   "options": [
-    "比赛",
-    "超过；越过",
-    "拜访",
-    "明亮；开朗"
-   ],
-   "h": "76fb5ed5",
-   "oh": [
-    "9fef248",
-    "76fb5ed5",
-    "2f133ec",
-    "69df3cc3"
-   ],
-   "day": 111,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1951"
-   ],
-   "source_day": 111,
-   "optional": true
-  },
-  {
-   "id": "P-111-V1951-r-9364f888f83e",
-   "qid": "P-111-V1951-r-9364f888f83e",
-   "type": "mcq",
-   "prompt": "本课词条「越える」（超过；越过）的假名读音是哪一项？",
-   "options": [
-    "こえる",
-    "シャワー",
-    "うつ",
-    "スープ"
-   ],
-   "h": "c816d2cf",
-   "oh": [
-    "c816d2cf",
-    "3b3c2754",
-    "9060a167",
-    "1e49cf9d"
-   ],
-   "day": 111,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1951"
-   ],
-   "source_day": 111,
-   "optional": true
-  },
-  {
-   "id": "P-111-V1952-m-a1e8f293a209",
-   "qid": "P-111-V1952-m-a1e8f293a209",
-   "type": "mcq",
-   "prompt": "本课词条「コーチ」（例句语境：教练给了我建议。）的释义是哪一项？",
-   "options": [
-    "教练",
-    "奶酪",
-    "抓住；逮住",
-    "冷气"
-   ],
-   "h": "9f38a1f5",
-   "oh": [
-    "9f38a1f5",
-    "9f3ddc99",
-    "1b500d03",
-    "1ef5fb46"
-   ],
-   "day": 111,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1952"
-   ],
-   "source_day": 111,
-   "optional": true
-  },
-  {
-   "id": "P-111-V1952-r-f42dffb8c2fd",
-   "qid": "P-111-V1952-r-f42dffb8c2fd",
-   "type": "mcq",
-   "prompt": "本课词条「コーチ」（教练）的假名读音是哪一项？",
-   "options": [
-    "まわる",
-    "チェックする",
-    "ベル",
-    "コーチ"
-   ],
-   "h": "9c5ef241",
-   "oh": [
-    "30325af3",
-    "16556a57",
-    "cc75a6d",
-    "9c5ef241"
-   ],
-   "day": 111,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1952"
-   ],
-   "source_day": 111,
-   "optional": true
-  },
-  {
-   "id": "P-111-V1953-m-02a28ee3e203",
-   "qid": "P-111-V1953-m-02a28ee3e203",
-   "type": "mcq",
-   "prompt": "本课词条「コード」（例句语境：请不要拔掉电脑的电源线。）的释义是哪一项？",
-   "options": [
-    "全体成员；所有人",
-    "手提包",
-    "比赛",
+    "污染",
+    "抵抗；阻力",
+    "聚集；集合",
     "代码；软线"
    ],
-   "h": "d2fcda4c",
+   "h": "5a10ef8",
    "oh": [
-    "7170e1e0",
-    "aceaa831",
-    "9fef248",
+    "cdb4b76d",
+    "5a10ef8",
+    "227ab0c0",
     "d2fcda4c"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V1953"
+    "V2480"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1953-r-67d285883c2e",
-   "qid": "P-111-V1953-r-67d285883c2e",
+   "id": "P-111-V2480-r-7fcf2300661a",
+   "qid": "P-111-V2480-r-7fcf2300661a",
    "type": "mcq",
-   "prompt": "本课词条「コード」（代码；软线）的假名读音是哪一项？",
+   "prompt": "本课词条「抵抗」（抵抗；阻力）的假名读音是哪一项？",
    "options": [
-    "びょういん",
-    "こわす",
-    "あたま",
-    "コード"
+    "ていこう",
+    "こんなん",
+    "ほんとう",
+    "さゆう"
    ],
-   "h": "945ee5a9",
+   "h": "2c7ea9ee",
    "oh": [
-    "23666d7a",
-    "faefa10a",
-    "134bb5f0",
-    "945ee5a9"
+    "2c7ea9ee",
+    "149db168",
+    "32da57ad",
+    "5e4c7b0c"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V1953"
+    "V2480"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1954-m-db5fb6d8466a",
-   "qid": "P-111-V1954-m-db5fb6d8466a",
+   "id": "P-111-V2481-m-410e7a3eb7fe",
+   "qid": "P-111-V2481-m-410e7a3eb7fe",
    "type": "mcq",
-   "prompt": "本课词条「氷」（例句语境：船被冰封住了。）的释义是哪一项？",
+   "prompt": "本课词条「程度」（例句语境：这点钱撑不了多久吧。）的释义是哪一项？",
    "options": [
-    "经由；途经",
-    "出租车",
-    "牙医；牙科",
-    "冰"
+    "程度",
+    "日式旅馆",
+    "门",
+    "请"
    ],
-   "h": "b555dc2f",
+   "h": "c0a18884",
    "oh": [
-    "d3a08ec7",
-    "ba767db0",
-    "887540e0",
-    "b555dc2f"
+    "c0a18884",
+    "b580042a",
+    "6c20ded7",
+    "7136f0b6"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V1954"
+    "V2481"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1954-r-dacad3ae44d1",
-   "qid": "P-111-V1954-r-dacad3ae44d1",
+   "id": "P-111-V2481-r-94d5a91fd670",
+   "qid": "P-111-V2481-r-94d5a91fd670",
    "type": "mcq",
-   "prompt": "本课词条「氷」（冰）的假名读音是哪一项？",
+   "prompt": "本课词条「程度」（程度）的假名读音是哪一项？",
    "options": [
-    "ゆうべ",
-    "さくぶん",
-    "こおり",
-    "せつめい"
+    "しゅう",
+    "ていど",
+    "いっしょう",
+    "ほめる"
    ],
-   "h": "7f11e2b6",
+   "h": "42dbef8a",
    "oh": [
-    "c5d73d3c",
-    "8b7d3656",
-    "7f11e2b6",
-    "d525a9ff"
+    "899eda3d",
+    "42dbef8a",
+    "b057b9a0",
+    "24b1c73e"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V1954"
+    "V2481"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1955-m-03fc10d7db27",
-   "qid": "P-111-V1955-m-03fc10d7db27",
+   "id": "P-111-V2482-m-b7702c26aad3",
+   "qid": "P-111-V2482-m-b7702c26aad3",
    "type": "mcq",
-   "prompt": "本课词条「凍る」（例句语境：路面结冰了，小心点。）的释义是哪一项？",
+   "prompt": "本课词条「停留所」（例句语境：我们比赛跑到公交站吧。）的释义是哪一项？",
    "options": [
-    "离开；逝去",
-    "结冰；冻",
-    "外交",
-    "吵架"
+    "冰淇淋",
+    "车站；站点",
+    "反倒；反而",
+    "取出；提取"
    ],
-   "h": "34cebd44",
+   "h": "b3852c03",
    "oh": [
-    "aa67797",
-    "34cebd44",
-    "e9d7fff7",
-    "7651d992"
+    "c66b4589",
+    "b3852c03",
+    "c8fee4ae",
+    "8ae381ec"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V1955"
+    "V2482"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1955-r-19ccc1f38fb5",
-   "qid": "P-111-V1955-r-19ccc1f38fb5",
+   "id": "P-111-V2482-r-dcabacb901c1",
+   "qid": "P-111-V2482-r-dcabacb901c1",
    "type": "mcq",
-   "prompt": "本课词条「凍る」（结冰；冻）的假名读音是哪一项？",
+   "prompt": "本课词条「停留所」（车站；站点）的假名读音是哪一项？",
    "options": [
-    "こづつみ",
-    "くつう",
-    "じょうきょう",
-    "こおる"
+    "はら",
+    "にし",
+    "ていりゅうじょ",
+    "いんたい"
    ],
-   "h": "8011e449",
+   "h": "7dce1c2d",
    "oh": [
-    "7a2911e4",
-    "2257f438",
-    "45366028",
-    "8011e449"
+    "afc03a35",
+    "a1cab187",
+    "7dce1c2d",
+    "9f7776eb"
    ],
    "day": 111,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V1955"
+    "V2482"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-V1956-m-823194e57fa2",
-   "qid": "P-111-V1956-m-823194e57fa2",
+   "id": "P-111-G0169-m-d16683cf1348",
+   "qid": "P-111-G0169-m-d16683cf1348",
    "type": "mcq",
-   "prompt": "本课词条「ゴール」（例句语境：离终点还有一百米。）的释义是哪一项？",
+   "prompt": "本课句型「〜とか（hearsay）」在以下语境中的释义是哪一项？ 例句：駅前の本屋、今月で閉店するとか。寂しくなりますね。（听说车站前的书店这个月就要关门了，真有点寂寞。）",
    "options": [
-    "终点；球门",
-    "报告；汇报",
-    "像；相似",
-    "生活"
+    "顺便…",
+    "在…（存在场所）",
+    "与…一起；随着…",
+    "听说…；好像说…"
    ],
-   "h": "bfade658",
+   "h": "aaf72ae0",
    "oh": [
-    "bfade658",
-    "11075f7",
-    "c55ae39b",
-    "d109e70f"
-   ],
-   "day": 111,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1956"
-   ],
-   "source_day": 111,
-   "optional": true
-  },
-  {
-   "id": "P-111-V1956-r-89c188c89370",
-   "qid": "P-111-V1956-r-89c188c89370",
-   "type": "mcq",
-   "prompt": "本课词条「ゴール」（终点；球门）的假名读音是哪一项？",
-   "options": [
-    "ゴール",
-    "かみ",
-    "きんにく",
-    "どうろ"
-   ],
-   "h": "c858f3d2",
-   "oh": [
-    "c858f3d2",
-    "7949f3af",
-    "8b6fa013",
-    "222c74b1"
-   ],
-   "day": 111,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1956"
-   ],
-   "source_day": 111,
-   "optional": true
-  },
-  {
-   "id": "P-111-G0134-m-5b7c28ca96cb",
-   "qid": "P-111-G0134-m-5b7c28ca96cb",
-   "type": "mcq",
-   "prompt": "本课句型「〜ば〜ほど」在以下语境中的释义是哪一项？ 例句：日本語は、勉強すればするほど面白くなる。（日语越学越有意思。）",
-   "options": [
-    "觉得…／说「…」",
-    "…完；…不了",
-    "让…做；使…做",
-    "越…越…"
-   ],
-   "h": "33bedf05",
-   "oh": [
-    "590dd0d3",
-    "578a5a51",
-    "a12d61b6",
-    "33bedf05"
+    "9f195e94",
+    "65c81c26",
+    "670183f4",
+    "aaf72ae0"
    ],
    "day": 111,
    "group": "grammar",
    "capability": "meaning",
    "knowledge_ids": [
-    "G0134"
+    "G0169"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-G0134-u-2d506a2cc0a9",
-   "qid": "P-111-G0134-u-2d506a2cc0a9",
+   "id": "P-111-G0169-u-37eaecb243ec",
+   "qid": "P-111-G0169-u-37eaecb243ec",
    "type": "mcq",
-   "prompt": "课程中「〜ば〜ほど」的接续说明是哪一项？ 例句：日本語は、勉強すればするほど面白くなる。（日语越学越有意思。）",
+   "prompt": "课程中「〜とか（hearsay）」的接续说明是哪一项？ 例句：駅前の本屋、今月で閉店するとか。寂しくなりますね。（听说车站前的书店这个月就要关门了，真有点寂寞。）",
    "options": [
-    "动词ば形 + 同一动词辞书形 + ほど；い形容词ければ + い形容词 + ほど；ナ形容词なら + ナ形容词な + ほど",
-    "动词辞书形 + な",
-    "动词て形 + もらう（施益者用 に/から 标记）",
-    "动词て形/い形容词くて/ナ形容词で + しょうがない（しかたがない）"
+    "普通形 + とか（句末，或用「とかで」表原因）",
+    "动词辞书形/ない形 + ことにしている",
+    "名词 + に対して；动词/い形容词/ナ形容词 + な + のに対して",
+    "名词 + にとって；名词 + にとっての + 名词"
    ],
-   "h": "aec66f2d",
+   "h": "d81e2e50",
    "oh": [
-    "aec66f2d",
-    "b8e151a1",
-    "1e00d8aa",
-    "7db70c3f"
+    "d81e2e50",
+    "cd4ea5f4",
+    "2b223eba",
+    "4746d099"
    ],
    "day": 111,
    "group": "grammar",
    "capability": "usage",
    "knowledge_ids": [
-    "G0134"
+    "G0169"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "P-111-G0135-m-afefa2e70d1f",
-   "qid": "P-111-G0135-m-afefa2e70d1f",
+   "id": "P-111-G0170-m-9c5a2bbff5e9",
+   "qid": "P-111-G0170-m-9c5a2bbff5e9",
    "type": "mcq",
-   "prompt": "本课句型「〜ほど」在以下语境中的释义是哪一项？ 例句：昨日は、立っていられないほど疲れていた。（昨天累得站都站不住。）",
+   "prompt": "本课句型「〜って」在以下语境中的释义是哪一项？ 例句：彼女、今日は来られないって。（她说今天来不了。）",
    "options": [
-    "从…到…期间",
-    "不可能…；不会…",
-    "（自己）决定…／（结果）定为…、将要…",
-    "到了…的程度"
+    "有点…；容易…；带…色",
+    "…哦；…呀（告知、强调）",
+    "…比…更…",
+    "说是…；所谓…"
    ],
-   "h": "7b419d20",
+   "h": "72524cec",
    "oh": [
-    "de2c4028",
-    "f41d393a",
-    "ccb70769",
-    "7b419d20"
+    "c9c070c7",
+    "e7cfda32",
+    "32cc2c79",
+    "72524cec"
    ],
    "day": 111,
    "group": "grammar",
    "capability": "meaning",
    "knowledge_ids": [
-    "G0135"
+    "G0170"
    ],
    "source_day": 111,
    "optional": true
   },
   {
-   "id": "X-111-V1957-c",
-   "qid": "X-111-V1957-c",
+   "id": "X-111-V2483-c",
+   "qid": "X-111-V2483-c",
    "type": "mcq",
    "day": 111,
-   "prompt": "「誤解」的假名读音是？",
+   "prompt": "「デート」的假名读音是？",
    "options": [
-    "けんとう",
-    "かぜ",
-    "ごかい",
-    "かす"
+    "デート",
+    "じゅよう",
+    "もういちど",
+    "きにゅう"
    ],
-   "h": "f99cf154",
+   "h": "65454912",
    "oh": [
-    "91434e2b",
-    "5a49c2e2",
-    "f99cf154",
-    "5749be29"
+    "65454912",
+    "9df22f24",
+    "5c71ffe1",
+    "3e9aa586"
    ],
    "knowledge_ids": [
-    "V1957"
+    "V2483"
    ],
    "capability": "reading",
    "group": "vocab",
    "optional": true
   },
   {
-   "id": "X-111-V1958-c",
-   "qid": "X-111-V1958-c",
+   "id": "X-111-V2484-c",
+   "qid": "X-111-V2484-c",
    "type": "mcq",
    "day": 111,
-   "prompt": "「語学」的意思是？",
+   "prompt": "「敵」的意思是？",
    "options": [
-    "日式旅馆",
-    "放；放置",
-    "笑眯眯",
-    "外语学习"
+    "每天早上",
+    "照顾；照料",
+    "在/去/来（尊敬语）",
+    "敌人；对手"
    ],
-   "h": "a31fa59a",
+   "h": "bc817898",
    "oh": [
-    "b580042a",
-    "c837633a",
-    "14ce632",
-    "a31fa59a"
+    "740cb77a",
+    "280b81a9",
+    "d7635f7",
+    "bc817898"
    ],
    "knowledge_ids": [
-    "V1958"
+    "V2484"
    ],
    "capability": "meaning",
    "group": "vocab",
    "optional": true
   },
   {
-   "id": "X-111-V1959-c",
-   "qid": "X-111-V1959-c",
+   "id": "X-111-V2485-c",
+   "qid": "X-111-V2485-c",
    "type": "mcq",
    "day": 111,
-   "prompt": "「呼吸」的假名读音是？",
+   "prompt": "「出来事」的假名读音是？",
    "options": [
-    "しじん",
-    "ようじ",
-    "こきゅう",
-    "とたん"
+    "できごと",
+    "たがい",
+    "こちら",
+    "かぞえる"
    ],
-   "h": "9445c42a",
+   "h": "6bb0d5",
    "oh": [
-    "9594b05b",
-    "d610d961",
-    "9445c42a",
-    "61253451"
+    "6bb0d5",
+    "8f11b166",
+    "fd855fd0",
+    "17c844b5"
    ],
    "knowledge_ids": [
-    "V1959"
+    "V2485"
    ],
    "capability": "reading",
    "group": "vocab",
    "optional": true
+  },
+  {
+   "id": "X-111-V2486-c",
+   "qid": "X-111-V2486-c",
+   "type": "mcq",
+   "day": 111,
+   "prompt": "「適する」的意思是？",
+   "options": [
+    "提问；问题",
+    "适合",
+    "短",
+    "共同；共通"
+   ],
+   "h": "f26537",
+   "oh": [
+    "64506dae",
+    "f26537",
+    "68849cf8",
+    "34c66cce"
+   ],
+   "knowledge_ids": [
+    "V2486"
+   ],
+   "capability": "meaning",
+   "group": "vocab",
+   "optional": true
+  },
+  {
+   "id": "X-111-V2487-c",
+   "qid": "X-111-V2487-c",
+   "type": "mcq",
+   "day": 111,
+   "prompt": "「適切」的假名读音是？",
+   "options": [
+    "ペット",
+    "てきせつ",
+    "そぼ",
+    "あんない"
+   ],
+   "h": "5b96e2d3",
+   "oh": [
+    "bf4fb266",
+    "5b96e2d3",
+    "76f913dc",
+    "34315e94"
+   ],
+   "knowledge_ids": [
+    "V2487"
+   ],
+   "capability": "reading",
+   "group": "vocab",
+   "optional": true
+  },
+  {
+   "id": "X-111-V2488-c",
+   "qid": "X-111-V2488-c",
+   "type": "mcq",
+   "day": 111,
+   "prompt": "「適度」的意思是？",
+   "options": [
+    "一次；一遍",
+    "可以说；可谓",
+    "事件；事情",
+    "适度"
+   ],
+   "h": "97030f59",
+   "oh": [
+    "4370040c",
+    "cd4fb1ee",
+    "897dba65",
+    "97030f59"
+   ],
+   "knowledge_ids": [
+    "V2488"
+   ],
+   "capability": "meaning",
+   "group": "vocab",
+   "optional": true
   }
  ],
- "listening_material": null
+ "listening_material": {
+  "id": "M0136",
+  "title": "会社の研修・5",
+  "audio_url": "/audio/M0136.m4a",
+  "audio_kind": "synthetic",
+  "transcript": "来週の研修について、担当者から連絡がありました。研修は本社ではなく、ホテルの会議室で行います。いつも使っている本社の会議室は、その日ほかの会議が入っているからです。開始時間は十一時です。十分前までに受付を済ませてください。会場の入口で社員証を見せると、資料を受け取れます。パソコンはこちらで用意しますので、自分の物を持ってくる必要はありません。ただし、メモを取るための筆記用具は各自で準備してください。午前中は説明を聞き、午後は三人ずつのグループで練習します。昼ご飯は会場で用意しません。近くに食堂がありますが、混むことがあるので、お弁当を持ってきてもかまいません。研修が終わったら、短い感想を書いて担当者に渡してください。欠席する場合は、前の日までにメールで知らせてください。当日の朝は電話でも受け付けます。",
+  "duration_sec": 67.825,
+  "questions": [
+   {
+    "id": "L-111-0-67e95219eca8",
+    "qid": "L-111-0-67e95219eca8",
+    "type": "mcq",
+    "prompt": "研修はどこで行いますか。",
+    "options": [
+     "本社の会議室",
+     "市民センター",
+     "ホテルの会議室",
+     "駅前の研修室"
+    ],
+    "h": "2c7dbd1d",
+    "oh": [
+     "1840f63f",
+     "197d03e1",
+     "2c7dbd1d",
+     "39696957"
+    ],
+    "knowledge_ids": []
+   },
+   {
+    "id": "L-111-1-d3170b1373c7",
+    "qid": "L-111-1-d3170b1373c7",
+    "type": "mcq",
+    "prompt": "欠席する場合は、いつまでに連絡しますか。",
+    "options": [
+     "研修の後で",
+     "一週間前までに",
+     "前の日までにメールで",
+     "当日の朝にメールで"
+    ],
+    "h": "3597b620",
+    "oh": [
+     "f42a2f36",
+     "32cb26e6",
+     "3597b620",
+     "73d0934a"
+    ],
+    "knowledge_ids": []
+   },
+   {
+    "id": "L-111-2-434c2271679e",
+    "qid": "L-111-2-434c2271679e",
+    "type": "mcq",
+    "prompt": "どうしていつもの本社の会議室を使いませんか。",
+    "options": [
+     "狭すぎるから",
+     "修理中だから",
+     "ほかの会議が入っているから",
+     "遠すぎるから"
+    ],
+    "h": "57a7e5da",
+    "oh": [
+     "76a26b9c",
+     "9dad5820",
+     "57a7e5da",
+     "8a1666e1"
+    ],
+    "knowledge_ids": []
+   }
+  ]
+ }
 }

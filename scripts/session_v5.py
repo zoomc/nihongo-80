@@ -102,15 +102,16 @@ def brief(day: int, force=False):
                                                 "、".join(k.get("onyomi") or []),
                                                 "、".join(k.get("kunyomi") or [])))
     L += ["", "## 复习到期", ""]
-    L.append("会话开始同步后读取 `data/review/CONTEXT.md` 和 `data/review/context.json`，优先真实 FSRS 到期项；页面内容是课程复习资源。")
-    L += ["", "## 会话流程（18 分钟）", "",
+    L.append("新会话先跑 `python3 scripts/today.py`：它把本机 finish-day 与云端「完成」快照合并，"
+             "给出今天该学哪天、上次卡在哪。`data/review/CONTEXT.md` 若存在再显式读取。")
+    L += ["", "## 会话流程（约 20 分钟）", "",
           "1. **先发页面链接**，等学生看完，不要一上来讲课。",
-          "2. 只回答学生问的，不复述页面。",
-          "3. 网页练习均为选择题：以当天网页整块练习为准；时间不足先做必学内容，余题回头补。",
-          "4. 拉取或导入choice模式作答后，CLI自动按必做题完整性和70%正确率计算当天完成，不要求手写或confirm-output。",
-          "5. 会话优先解释错题；有余力可口头复述或造句，不作为网页完成的前置条件。",
-          "6. 写 `days/day-%03d/report.md` 记录难点；未答齐或未达标就补做，不降低难度。" % day,
-          "7. 会话结束执行 `python3 scripts/nh80.py study-sync --push-only`，检查发布结果。",
+          "2. 抽查上次卡点（`TODAY.md` 的「上次卡点」），答不上就回炉。",
+          "3. 只讲今天语法里他没懂的；每条让他造 1 句自己的话。不要复述页面。",
+          "4. 练习是一整块题目，逐题问「为什么错」，不要直接报答案。",
+          "5. 写 `days/day-%03d/report.md`：摘要 ≤5 行（完成度 / 真正学会 / 仍然卡 / 明日建议）。" % day,
+          "6. 学生点页面底部「完成」写入云端自报快照；复核用 `python3 scripts/progress_read.py --day %d`。" % day,
+          "7. 本机权威仍是 `python3 scripts/nh80.py finish-day`；云端记录不等于掌握判定。",
           "", "## 禁止", "",
           "- 不改 `plan/`、`STATE.md`、`knowledge/seeds/`。",
           "- 不把答案写进本文件。",
@@ -128,7 +129,7 @@ def report(day: int, force=False):
     p.write_text("""# Day %03d 日报
 
 ## 摘要（≤5 行，主会话只读这段）
-- 完成：—/6 块｜练习 —/6｜复习 — 张
+- 完成：—/4 块｜练习正确率 —｜复习 — 张
 - 真正学会：
 - 仍然卡：
 - 明日建议：
@@ -161,7 +162,7 @@ def task_new(day: int, role="tutor"):
           "inputs:", "  - STATE.md", "  - days/day-%03d/brief.md" % day, "  - data/state.db",
           "  - data/review/CONTEXT.md", "  - data/review/context.json",
           "outputs:", "  - days/day-%03d/report.md" % day,
-          "acceptance:", "  - 6 块完成或明确记录未完成原因", "  - 报告含「摘要」≤5 行",
+          "acceptance:", "  - 4 块完成或明确记录未完成原因", "  - 报告含「摘要」≤5 行",
           "created_at: %s" % now(), "claimed_at: null", "done_at: null", "---", "",
           "## 今日任务", "", "按 `brief.md` 教 Day %03d；先发页面链接。" % day, "",
           "## 禁止", "", "- 不改 plan/、STATE.md、seeds。", ""]
@@ -244,7 +245,7 @@ def state_write(day_override=None):
          "- Can-do：%s" % d["can_do"],
          "- 本日摘要：%s" % ("；".join(summary) if summary else "无（还没写日报）"),
          "- 待办：%s" % (", ".join(t["id"] for t in task_list() if t["dir"] == "open") or "无"),
-         "- 学生下一步：先打开页面，学完再进会话",
+         "- 学生下一步：新会话先跑 `python3 scripts/today.py`，再打开页面",
          "", "## 文件索引", "",
          "- 任务卡：`tasks/open/`", "- 日报：`days/day-%03d/report.md`" % day,
          "- 周计划：`plan/`", "- 收件箱：`inbox/to-main.md`", ""]

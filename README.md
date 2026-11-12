@@ -6,6 +6,16 @@
 
 ## 每天怎么用
 
+**每天新开一个会话，第一条命令固定是：**
+
+```sh
+python3 scripts/today.py
+```
+
+它把「课程表 + 本机 finish-day（权威）+ 云端「完成」快照（自报）」合并，直接告诉你：今天该学 Day 几、已经完成几天、上次正确率与卡点、今天必学词/语法/汉字、页面链接，并写 `TODAY.md`（同时刷新 `STATE.md` 与当天 `brief.md`）。会话读 `TODAY.md` 就能开工，不需要你复述进度。
+
+- 云端连不上：`--offline`（只用本机，文件里会写明）；补课/回看：`--day N`；给程序用：`--json`。
+
 网页只放内容，打开就是今天：**今日复习 → 今日新词 → 今日语法 → 一整块练习**，底部只有一个「完成」按钮。没有顶部模式按钮、分段导航、时间块、学习口令、导出/同步按钮。
 
 - **遮盖下放到模块**：新词与语法各有一个局部开关（显示 / 遮中文 / 遮日语 / 双向），互不影响；点模糊处可临时揭开。
@@ -35,7 +45,7 @@ Skill 规范在 [`skills/nh80-progress/SKILL.md`](skills/nh80-progress/SKILL.md)
 python3 scripts/nh80.py init
 python3 scripts/nh80.py validate
 python3 scripts/release_guard.py
-python3 -m unittest discover -s tests -p 'test*.py'   # 59 项
+python3 -m unittest discover -s tests -p 'test*.py'   # 67 项
 node tests/test_worker_access.mjs && node tests/test_progress_api.mjs
 ```
 

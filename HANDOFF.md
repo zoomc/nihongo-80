@@ -12,6 +12,14 @@
 | D1 | `nihongo80`（prod）/ `nihongo80-preview`（preview）两库隔离，`0001`–`0006` 均已应用 |
 | 额度 | Cloudflare Workers Free；无 R2 / KV / AI / 定时任务 / 日志；无付费绑定 |
 
+## 新会话第一步（每天）
+
+```sh
+python3 scripts/today.py
+```
+
+合并本机 finish-day 与云端完成快照，输出今天 Day N、上次卡点、今天词/语法/汉字与页面链接，写 `TODAY.md` 并刷新 `STATE.md`、当天 `brief.md`。这是每日会话唯一入口；`session_v5.py daily` 退居兼容命令。云端不通加 `--offline`，回看用 `--day N`，机器读用 `--json`。
+
 ## 目的与产品决策
 
 中文母语、朝鲜族（韩语母语级）学习者，目标高效学到 N3。**网页只给资源，WorkBuddy 会话负责教学、答疑、纠错、逼输出**；120 天 × 60 分钟，2700 词分 2202 必学 + 498 选学，语法靠母语迁移快速过，重心在词汇与句子。

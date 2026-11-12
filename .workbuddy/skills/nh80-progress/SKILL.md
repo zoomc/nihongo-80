@@ -23,6 +23,20 @@ description: "读取 Nihongo-80 日语学习站云端「当天完成快照」，
 - 也可 `--key` 或环境变量 `NH80_SYNC_KEY`。
 - `GET /api/progress` 必须 `X-NH80-Key`；`POST /api/progress`（页面完成按钮）不需要口令，但带 Origin 白名单、64KB 体量上限、按 day 幂等覆盖与限流。
 
+## 先判断「今天该学哪天」（推荐顺序）
+
+在 `progress_read.py` 之前先跑：
+
+```sh
+python3 scripts/today.py            # 写 TODAY.md 并打印开场包
+python3 scripts/today.py --offline  # 云端不通时
+python3 scripts/today.py --json     # 给程序解析
+```
+
+它合并本机 `data/state.db` 的 finish-day 与云端 `study_progress`，输出：今天 Day N / 总天数、
+已完成天数、上次正确率与卡点、今天必学词与语法、页面链接、会话流程。**这是新会话唯一入口**，
+不要靠猜或问用户。云端只是自报快照，权威仍是本机 finish-day；`TODAY.md` 里已写明这一点。
+
 ## 跑哪条命令
 
 脚本在 `<repo>/scripts/progress_read.py`（纯标准库，任何能跑 Python 3 的 agent 都能用，不装依赖、不改文件）：

@@ -25,16 +25,21 @@ python3 -m unittest discover -s tests -p test_v5.py
 
 只用 nh80 init/build。禁止运行 v4 `scripts/build_site.py`、`scripts/curriculum.py` 重建当前站点。运行时状态、密钥、Wrangler 本地状态不提交。部署步骤见 HANDOFF。
 
-## 每日会话
+## 每日会话（新会话第一步）
+
+**不要问用户「学到哪了」。** 每个新会话第一条命令：
 
 ```sh
-python3 scripts/session_v5.py daily --sync --day N
-python3 scripts/nh80.py start-day N
-# 会话结束，生成并发布本地复习建议，检查 published 字段
-python3 scripts/nh80.py study-sync --push-only
+python3 scripts/today.py
 ```
 
-开始时 `daily --sync` 经 nh80 CLI 拉取作答和自评并生成复习上下文；同步失败要说明，发布失败检查 `published` 并可重试。显式读取 `data/review/CONTEXT.md`、`data/review/context.json`，以及 STATE、当天 brief、curriculum 与数据库（只读）。先给页面链接，等学生看完；答疑、解释选择题错因；可选口头复述或造句。网页不要求手写，前 9–12 道基础题优先，其余按薄弱项练习。网页预算 42 分钟，会话 18 分钟，听力已包含在 42 分钟内。当天精确内容和时间只取课程 blocks，不使用旧 80 天模板。
+它把「课程表 + 本机 finish-day（权威）+ 云端「完成」快照（自报）」合并，算出今天该学哪天、上次卡在哪、今天的词/语法/汉字/页面链接，写 `TODAY.md` 并刷新 `STATE.md`。然后读 `TODAY.md`，按里面「会话怎么做」执行；需要更细内容再读 `days/day-NNN/brief.md`。
+
+- 云端连不上：加 `--offline`，只用本机记录，`TODAY.md` 会写明。
+- 补课/回看：`--day N`。
+- 机器可读：`--json`；只看不写：`--no-write`。
+
+`session_v5.py daily` 仍可用（调 brief/state），但不再是入口；`study-sync` 只用于私有复习上下文，不是每日必经步骤。显式读取 `data/review/CONTEXT.md`（若存在）、STATE、当天 brief 与数据库（只读）。先给页面链接，等学生看完；答疑只讲他没懂的，逐题问错因。网页不要求手写，前 9–12 道基础题优先。页面不显示时间块，当天精确内容只取课程 blocks。
 
 网页提交只代表原始作答保存。同步使用 `deploy/.sync-key` 本机密钥（禁止显示或提交）。choice模式导入后，CLI自动按必做题完整性及70%正确率计算完成，无需手写验收；未达标记录incomplete，不降低难度。旧教师输出接口仅兼容历史会话。
 

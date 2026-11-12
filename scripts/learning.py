@@ -595,6 +595,18 @@ def due_queue(conn, at=None, limit=50) -> list[dict]:
     return out
 
 
+def pending_prerequisites(conn, at=None, limit=50):
+    """Return unresolved prerequisite tasks, once per knowledge point."""
+    rows = conn.execute("""
+        SELECT t.knowledge_id AS kid, MIN(t.due) AS due
+        FROM review_tasks t LEFT JOIN knowledge_state k ON k.knowledge_id=t.knowledge_id
+        WHERE t.status='pending' AND t.reason LIKE 'gate_defer:%' AND t.due<=?
+          AND COALESCE(k.stage, 'unseen') IN ('unseen','initial_understanding','hinted_recall')
+        GROUP BY t.knowledge_id ORDER BY due,t.knowledge_id LIMIT ?
+        """, (iso(at or now_utc()), limit))
+    return [dict(row) for row in rows]
+
+
 def metrics(conn, upto_day: int | None = None) -> dict:
     where = "WHERE day<=?" if upto_day else ""
     args = (upto_day,) if upto_day else ()

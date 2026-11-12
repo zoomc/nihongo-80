@@ -21,6 +21,7 @@ padding:9px 14px;font-size:15px;cursor:pointer}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
 .btn:disabled{opacity:.45;cursor:not-allowed}
 .small{font-size:12px;color:var(--muted)}
+.review-link{display:inline-block;margin-bottom:8px;color:var(--accent)}
 .mask-switch{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 12px}
 .mask-switch button{font:inherit;font-size:12px;padding:5px 11px;border:1px solid var(--line);
 border-radius:999px;background:var(--surface);color:var(--muted);cursor:pointer}
@@ -93,6 +94,9 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-off
 @media(max-width:600px){.unit-grid .study-item{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px}.unit-grid .study-rates{grid-column:1/-1}.unit-grid .study-rates button{padding:4px 10px}.unit-grid .study-badge{margin-left:0}}
 
 .study-tools,.study-bar,.study-rates,.study-filters{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:.7rem 0}
+.recall-prompt{font-size:clamp(1.2rem,4vw,1.55rem);overflow-wrap:anywhere;margin:.6rem 0}
+.recall-answer{overflow-wrap:anywhere;margin-top:.75rem;padding-top:.75rem;border-top:1px solid var(--line)}
+.recall-answer p{margin:.2rem 0}
 .today-focus{color:#ad4035}.pattern,.conn,.lesson-nav a{color:#315c8e}
 .study-tools input{min-width:12rem;max-width:100%;padding:.55rem;border:1px solid #bdb6ad;border-radius:.4rem}
 .study-tools button,.study-bar button,.study-rates button,.study-filters button,.study-choice{font:inherit;background:#fff;border:1px solid #b6b9bb;border-radius:.45rem;padding:.45rem .7rem;cursor:pointer;color:#294a72}

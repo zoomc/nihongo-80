@@ -59,6 +59,7 @@ padding:9px 14px;font-size:15px;cursor:pointer}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
 .btn:disabled{opacity:.45;cursor:not-allowed}
 .small{font-size:12px;color:var(--muted)}
+.review-link{display:inline-block;margin-bottom:8px;color:var(--accent)}
 .mask-switch{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 12px}
 .mask-switch button{font:inherit;font-size:12px;padding:5px 11px;border:1px solid var(--line);
 border-radius:999px;background:var(--surface);color:var(--muted);cursor:pointer}
@@ -260,6 +261,7 @@ document.addEventListener('change',function(e){
   hinted:false,revealed:false,seconds:Math.min(86400,Math.round((Date.now()-STARTED)/1000))};
  activeResults()[id]=result;
  renderQuestion(q,result);saveLocal();updateScore();
+ if(!RETRY)updateReviewLink();
 });
 function speak(text,btn){
  if(!window.speechSynthesis){if(btn)btn.textContent='此设备不支持朗读';return}
@@ -290,6 +292,16 @@ document.addEventListener('keydown',function(e){
  if(['all','zh','ja','both'].indexOf(saved)<0)saved='all';
  applyScope(s,saved)});
 restore();
+function updateReviewLink(){
+ var link=$('#dueReviewLink');
+ if(!link||!window.NHReview)return;
+ try{
+  NHReview.lesson(DAY,RESULTS);
+  var count=NHReview.due().length;
+  link.textContent=count?'到期复习（'+count+'）':'到期复习';
+ }catch(e){link.textContent='浏览器无法保存复习排期'}
+}
+updateReviewLink();
 var f=$('#finish');
 if(f)f.addEventListener('click',function(){
  var meta=window.__PAGE__||{},qs=Object.keys(RESULTS).map(function(k){return RESULTS[k]});
@@ -654,7 +666,8 @@ def day_page(d, review_html, vocab_html, grammar_html, listen_html, questions_ht
             '<link rel="icon" href="data:,"><link rel="stylesheet" href="assets/app.css"></head>'
             '<body data-day="%03d"><div class="wrap"><main>'
             '<h1 class="lesson">Day <b>%03d</b> · %s</h1>'
-            '<section class="card" id="review"><h2>今日复习 <span class="count">先回忆再核对</span></h2>%s</section>'
+            '<section class="card" id="review"><h2>今日复习</h2>'
+            '<a id="dueReviewLink" class="small review-link" href="review.html">到期复习</a>%s</section>'
             '<section class="card" id="vocab"><h2>今日新词 <span class="count">%d 个</span></h2>%s%s</section>'
             '<section class="card" id="grammar"><h2>今日语法 <span class="count">%d 条</span></h2>%s%s</section>'
             '<section class="card" id="questions"><h2>练习 <span class="count">%d 题</span></h2>'
@@ -665,7 +678,7 @@ def day_page(d, review_html, vocab_html, grammar_html, listen_html, questions_ht
             '<div class="foot"><button class="btn primary" id="finish" type="button">完成</button>'
             '<span class="status" id="finishStatus" role="status" aria-live="polite"></span></div>'
             '</main></div>'
-            '<script>window.__PAGE__=%s;</script><script src="assets/app.js"></script>'
+            '<script>window.__PAGE__=%s;</script><script src="assets/review_schedule.js"></script><script src="assets/app.js"></script>'
             '</body></html>'
             % (d["day"], esc(d["theme"]), d["day"], d["day"], esc(d["theme"]),
                review_html, len(d["new_vocab_ids"]), mask_switch("新词"), vocab_html,
@@ -687,7 +700,7 @@ def study_page(title, body, day=0, unit=None):
             '<h1>' + esc(title) + '</h1>' + body + '</main></div>'
             '<script>window.__UNIT__=' + json.dumps(unit, ensure_ascii=False) +
             ';window.__PRACTICE__=' + json.dumps(unit["questions"] if unit else [], ensure_ascii=False) +
-            '</script><script src="assets/study.js"></script></body></html>')
+            '</script><script src="assets/review_schedule.js"></script><script src="assets/study.js"></script></body></html>')
 
 
 def main():
@@ -728,17 +741,20 @@ def main():
     (OUT / "assets/app.css").write_text(CSS + study_ui.CSS, encoding="utf-8")
     (OUT / "assets/app.js").write_text(JS, encoding="utf-8")
     (OUT / "assets/study.js").write_text(study_ui.JS, encoding="utf-8")
+    schedule_js = (ROOT / "scripts/review_schedule.js").read_text(encoding="utf-8")
+    (OUT / "assets/review_schedule.js").write_text(schedule_js, encoding="utf-8")
 
     catalog = []
     for day in cur["days"]:
         for kid in day["new_vocab_ids"]:
             v = vocab[kid]
-            catalog.append({"kid": kid, "front": v["surface"], "back": v["meaning_zh"],
-                            "kana": v["kana"], "kind": "vocab", "day": day["day"]})
+            meaning, readings = vocabulary_display(v)
+            catalog.append({"kid": kid, "front": v["surface"], "back": meaning,
+                            "kana": "／".join(readings), "kind": "vocab", "day": day["day"]})
         for kid in day["new_grammar_ids"]:
             g = grammar[kid]
             catalog.append({"kid": kid, "front": g["pattern"], "back": g["meaning_zh"],
-                            "kana": g.get("connection", ""), "kind": "grammar", "day": day["day"]})
+                            "kana": g.get("connection", ""), "example": g["examples"][0]["ja"], "kind": "grammar", "day": day["day"]})
         for kid in day["new_kanji_ids"]:
             k = kanji[kid]
             catalog.append({"kid": kid, "front": k["char"], "back": k["meaning_zh"],
@@ -747,8 +763,9 @@ def main():
 
     (OUT / "review.html").write_text(study_page(
         "错题与复习集",
-        '<p class="small">先练到期内容，再补薄弱项。自评只调整复习排期，不代表掌握。</p>'
-        '<div id="personalReview"></div>'), encoding="utf-8")
+        '<p><a href="/">课程目录</a></p>'
+        '<section class="card" id="scheduledReview"><h2>到期复习</h2><p class="small">正在加载词表…</p></section>'
+        '<section class="card"><h2>回看错题与自评</h2><div id="personalReview"></div></section>' ), encoding="utf-8")
     for end in range(5, len(cur["days"]) + 1, 5):
         unit = build_unit(end, cur["days"], vocab, grammar, kanji)
         unit["items"] = [x for x in catalog if end - 4 <= x["day"] <= end and x["kind"] != "kanji"]
@@ -973,7 +990,7 @@ def main():
         '<script src="assets/app.js"></script></html>', encoding="utf-8")
 
     # HTML 模板必须进 revision，否则只改模板时 SW 不更新，用户会一直看到旧页面。
-    revision = hashlib.sha256((CSS + JS + study_ui.CSS + study_ui.JS
+    revision = hashlib.sha256((CSS + JS + study_ui.CSS + study_ui.JS + schedule_js
                                + lesson_revision.hexdigest() + json.dumps(cur, ensure_ascii=False)).encode()).hexdigest()[:12]
     (OUT / "sw.js").write_text(
         "const C='nh80-v13-" + revision + "';self.addEventListener('install',e=>self.skipWaiting());"

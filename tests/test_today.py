@@ -5,10 +5,14 @@
 from __future__ import annotations
 
 import json
+import sqlite3
+import tempfile
 import subprocess
 import sys
 import unittest
+from contextlib import closing
 from pathlib import Path
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -66,6 +70,28 @@ class TestToday(unittest.TestCase):
             today.cloud_items = original
         self.assertTrue(any("私" in w for w in s["weak"]), s["weak"])
         self.assertTrue(any("N は N です" in w for w in s["weak"]), s["weak"])
+
+    def test_today_prioritizes_due_cards_and_pending_prerequisites(self):
+        with tempfile.TemporaryDirectory() as directory:
+            db = Path(directory) / "state.db"
+            with closing(sqlite3.connect(db)) as conn:
+                conn.executescript("""
+                    CREATE TABLE sessions (day, status, passed);
+                    CREATE TABLE fsrs_cards (knowledge_id, due, stage, stability, difficulty, reps, lapses, last_review);
+                    CREATE TABLE review_tasks (id, knowledge_id, due, reason, status);
+                    CREATE TABLE knowledge_state (knowledge_id, stage);
+                    INSERT INTO fsrs_cards VALUES
+                        ('V0001|reading','2020-01-01T00:00:00+00:00','independent_recall',1,2,1,0,NULL),
+                        ('V0002|meaning','2099-01-01T00:00:00+00:00','unseen',1,2,1,0,NULL);
+                    INSERT INTO review_tasks VALUES (1,'G0001','2020-01-01T00:00:00+00:00','gate_defer:2','pending'),
+                        (2,'G0002','2020-01-01T00:00:00+00:00','gate_defer:3','pending');
+                    INSERT INTO knowledge_state VALUES ('G0002','transfer');
+                """)
+            with patch.object(today, "DB", db):
+                result = today.build(day=2, offline=True)
+            self.assertEqual([card["card_key"] for card in result["due_review"]], ["V0001|reading"])
+            self.assertEqual([item["kid"] for item in result["prerequisite_review"]], ["G0001"])
+            self.assertIn("本机 FSRS 到期", today.render_md(result))
 
     def test_json_cli_is_parseable(self):
         r = subprocess.run([sys.executable, str(ROOT / "scripts/today.py"),

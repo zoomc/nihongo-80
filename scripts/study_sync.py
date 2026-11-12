@@ -110,7 +110,12 @@ def _context(conn):
         key = item['card_key']
         recommendations[key] = {'kid': key, 'due': item['due'], 'stage': item['stage'],
                                 'priority': 1, 'reasons': ['FSRS 已到期']}
-    for row in conn.execute('SELECT knowledge_ids,error_type,remedy FROM mistakes ORDER BY id DESC LIMIT 500'):
+    for row in conn.execute("""
+        SELECT m.knowledge_ids,m.error_type FROM mistakes m
+        WHERE NOT EXISTS (SELECT 1 FROM attempts a
+                          WHERE a.day=m.day AND a.qid=m.qid AND a.correct=1 AND a.hinted=0 AND a.created_at>m.created_at)
+        ORDER BY m.id DESC LIMIT 500
+        """):
         try:
             kids = json.loads(row['knowledge_ids'] or '[]')
         except (ValueError, TypeError):
@@ -125,24 +130,29 @@ def _context(conn):
             if reason not in item['reasons']:
                 item['reasons'].append(reason)
     # Self-ratings are stored in the existing audit record; review_tasks alone does not contain the label.
+    seen_ratings = set()
     for row in conn.execute("SELECT detail FROM audit_log WHERE action='web_review_rating' ORDER BY id DESC LIMIT 1000"):
         try:
             obj = json.loads(row['detail'])
         except (TypeError, ValueError):
             continue
-        if obj.get('label') not in ('again', 'hard') or not obj.get('kid'):
+        if not isinstance(obj, dict):
             continue
-        kid = obj.get('card_key') or obj['kid']
+        kid = obj.get('card_key') or obj.get('kid')
+        if not kid or kid in seen_ratings:
+            continue
+        seen_ratings.add(kid)
+        if obj.get('label') not in ('again', 'hard'):
+            continue
         item = recommendations.setdefault(kid, {'kid': kid, 'due': obj.get('due'), 'stage': None, 'priority': 2, 'reasons': []})
         reason = '自评' + ('遗忘' if obj['label'] == 'again' else '不熟')
         if reason not in item['reasons']:
             item['reasons'].append(reason)
-    for row in conn.execute("SELECT knowledge_id,reason,remedy,due FROM review_tasks WHERE status='pending' ORDER BY id DESC LIMIT 500"):
-        kid = row['knowledge_id']
-        item = recommendations.setdefault(kid, {'kid': kid, 'due': row['due'], 'stage': None, 'priority': 3, 'reasons': []})
-        reason = '待处理复习任务：' + str(row['remedy'] or row['reason'] or '复习')
-        if reason not in item['reasons']:
-            item['reasons'].append(reason)
+    for row in learning.pending_prerequisites(conn, limit=500):
+        kid = row['kid']
+        item = recommendations.setdefault(kid, {'kid': kid, 'due': row['due'],
+                                               'stage': None, 'priority': 3, 'reasons': []})
+        item['reasons'].append('待补先修：独立回忆并造句')
     items = sorted(recommendations.values(), key=lambda x: (x['priority'], x['due'] or '9999', x['kid']))[:500]
     return {'updated_at': updated, 'recommendations': items,
             'note': '自评只调整复习排期，不代表掌握；优先处理真实 FSRS 到期卡。'}

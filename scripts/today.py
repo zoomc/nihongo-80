@@ -75,6 +75,22 @@ def local_done() -> set[int]:
         return set()
 
 
+def local_review():
+    """Read live FSRS and outstanding prerequisites without opening a writer."""
+    if not DB.is_file():
+        return [], [], ""
+    from learning import due_queue, pending_prerequisites
+    try:
+        conn = sqlite3.connect("file:%s?mode=ro" % DB, uri=True)
+        conn.row_factory = sqlite3.Row
+        try:
+            return due_queue(conn, limit=6), pending_prerequisites(conn, limit=3), ""
+        finally:
+            conn.close()
+    except sqlite3.Error as exc:
+        return [], [], type(exc).__name__
+
+
 def cloud_items(total: int, base: str = BASE):
     """云端自报快照。返回 (items, error)。不带密钥时 error='no_key'。"""
     try:
@@ -119,6 +135,7 @@ def build(day=None, offline=False, base=BASE):
     kanji = {x["id"]: x for x in read_jsonl(SEED / "kanji.jsonl")}
 
     done_local = local_done()
+    due_review, prerequisites, review_error = local_review()
     items, cloud_err = ([], "offline") if offline else cloud_items(total, base)
     done_cloud = {int(x["day"]) for x in items}
 
@@ -182,6 +199,10 @@ def build(day=None, offline=False, base=BASE):
         "last_day": last_day,
         "last_accuracy": (last_item or {}).get("accuracy"),
         "weak": weak,
+        "due_review": [dict(card, label=resolve(card["kid"], vocab, grammar, kanji)) for card in due_review],
+        "prerequisite_review": [dict(item, label=resolve(item["kid"], vocab, grammar, kanji))
+                                for item in prerequisites],
+        "review_error": review_error,
         "recent": recent,
         "remaining": total - len(done),
         "cloud_error": cloud_err,
@@ -241,6 +262,16 @@ def render_md(s, base: str = BASE) -> str:
                                "（%s）" % r["completed_at"] if r["completed_at"] else "")
             for r in s["recent"]))
     L.append("- 上次卡点：%s" % ("；".join(s["weak"]) if s["weak"] else "无（还没开始，或上次没有错题）"))
+    capability_names = {"meaning": "释义", "reading": "读音", "listening": "听辨",
+                        "usage": "用法", "production": "独立输出"}
+    if s["review_error"]:
+        L.append("- 本机 FSRS 到期：本次读取失败（%s）。" % s["review_error"])
+    else:
+        L.append("- 本机 FSRS 到期（最多列 6 张）：%s" % ("；".join(
+            item["label"] + " · " + capability_names.get(item["capability"], item["capability"])
+            for item in s["due_review"]) or "当前无到期卡"))
+        if s["prerequisite_review"]:
+            L.append("- 本机待补先修：" + "；".join(item["label"] for item in s["prerequisite_review"]))
     if s.get("last_report"):
         L.append("- 上次会话记录：%s" % "；".join(s["last_report"]))
     if s["finished_all"]:
@@ -271,7 +302,7 @@ def render_md(s, base: str = BASE) -> str:
         "## 会话怎么做（不要复述页面）",
         "",
         "1. 先把页面链接发给学生，等他看完再来。",
-        "2. 先抽查上面「上次卡点」里的词/语法，答不上就回炉；显示「无」就跳过。",
+        "2. 先做本机到期卡和待补先修，再抽查云端自报的「上次卡点」。",
         "3. 只讲今天这 %d 条语法里他没懂的；让他用每条造 1 句自己的话。" % len(s["grammar_lines"]),
         "4. 打开页面练习里的错题，逐题问「为什么错」，不要直接报答案。",
         "5. 收尾写 `days/day-%03d/report.md`：摘要 ≤5 行（完成度 / 真正学会 / 仍然卡 / 明日建议）。" % day,

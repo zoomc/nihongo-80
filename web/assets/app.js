@@ -129,6 +129,7 @@ document.addEventListener('change',function(e){
   hinted:false,revealed:false,seconds:Math.min(86400,Math.round((Date.now()-STARTED)/1000))};
  activeResults()[id]=result;
  renderQuestion(q,result);saveLocal();updateScore();
+ if(!RETRY)updateReviewLink();
 });
 function speak(text,btn){
  if(!window.speechSynthesis){if(btn)btn.textContent='此设备不支持朗读';return}
@@ -159,6 +160,16 @@ document.addEventListener('keydown',function(e){
  if(['all','zh','ja','both'].indexOf(saved)<0)saved='all';
  applyScope(s,saved)});
 restore();
+function updateReviewLink(){
+ var link=$('#dueReviewLink');
+ if(!link||!window.NHReview)return;
+ try{
+  NHReview.lesson(DAY,RESULTS);
+  var count=NHReview.due().length;
+  link.textContent=count?'到期复习（'+count+'）':'到期复习';
+ }catch(e){link.textContent='浏览器无法保存复习排期'}
+}
+updateReviewLink();
 var f=$('#finish');
 if(f)f.addEventListener('click',function(){
  var meta=window.__PAGE__||{},qs=Object.keys(RESULTS).map(function(k){return RESULTS[k]});

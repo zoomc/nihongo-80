@@ -1,4 +1,4 @@
-# HANDOFF · Nihongo 120 v13
+# HANDOFF · Nihongo 120 v14
 
 120 天版以 N5（Day 1–30）、N4（Day 31–60）、N3（Day 61–120）推进。每日预算 60 分钟，其中网页练习 13–15 分钟。优先练当天必学词和语法，选学词按时间练习。每日新词区可展开当天汉字与读音。前三天有假名跟读，10 次分级精读和 45 篇原有精听贯穿课程，后段四次任务指向官方题型与计时练习卷。历史 v10 验收见 `reports/v10_completion.md`。
 
@@ -34,6 +34,7 @@ v10 用户明确要求：顶部模式按钮/分钟数/分段导航/站点链接�
 - **练习**：120 页均为当天新词每词两题、语法每条三题，构建时确定性打乱。同页错题可多轮重练，完成快照保留首次作答。
 - **新词（v13）**：左列为日语及假名，右列为中文和韩语读音。例句可展开，遮盖与自评仍可使用。整句仅在读音可完整解析时标韩语读音。
 - **小日语文字 + 发音**：新词左列 `.kana-line` 小假名，例句汉字 `<ruby>` 注音，每条例句 `data-speak` 朗读；浏览器实测 375/1280 均可用。
+- **到期复习（v14）**：`review_schedule.js` 按当前浏览器的每日首次作答建卡，`review.html` 先回忆再翻答案，自评更新间隔。跨设备的网页完成快照继续独立；`today.py` 从 SQLite 读取实时 FSRS 到期卡和待补先修。
 - **完成 → 云端**：`POST /api/progress` 写 D1 `study_progress_120`（`day` 主键幂等覆盖，最多 120 行），页面无口令；`GET /api/progress?day=N|latest=1` 需 `X-NH80-Key`。
 - **agent 侧**：`skills/nh80-progress/SKILL.md`（仓库内 + 项目级 + 用户级三份）、`scripts/progress_read.py`、`AGENTS.md` 已追加调用说明。
 - **安全清理**：Codex v9 误入库的明文答案表 `deploy/worker/src/generated-key.json` 已移出版本库并 gitignore；Worker 只用公开的哈希分片 `web/data/grade/day-*.json`，本地构建仍会生成该表供测试。

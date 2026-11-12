@@ -43,7 +43,7 @@ def check():
         rows=list(map(json.loads,(ROOT/'knowledge/seeds'/(name+'.jsonl')).read_text().splitlines()))
         if name=='vocabulary' and any(not x.get('ko_hint') for x in rows):
             raise ValueError('incomplete Korean hints')
-    from curriculum_v5 import DAYS, core_vocab_limit
+    from curriculum_v5 import DAYS, DAILY_VOCAB
     from daily_questions import compact
     from quiz_v5 import fnv
     for day in range(1, DAYS + 1):
@@ -58,7 +58,7 @@ def check():
         expected = {**{v['id']: 2 for v in d['vocab']}, **{g['id']: 3 for g in d['grammar']}}
         if Counter(k for q in daily for k in q['knowledge_ids']) != expected:
             raise ValueError('daily question quotas: ' + p.name)
-        if len({q['qid'] for q in daily}) != len(daily) or len(daily) > 60:
+        if len({q['qid'] for q in daily}) != len(daily) or len(daily) > 62:
             raise ValueError('invalid question count or duplicate ID: ' + p.name)
         for q in daily:
             hashes = [fnv(o) for o in q['options']]
@@ -68,7 +68,7 @@ def check():
             if not answer or compact(answer) in compact(q['prompt'] + q.get('passage', '')):
                 raise ValueError('answer visible in prompt: ' + q['qid'])
         core=d['core_vocab_ids'];extra=d['extension_vocab_ids']
-        if len(core)>core_vocab_limit(d['listening']) or set(core)&set(extra) or len(core)+len(extra)!=len(d['vocab']):
+        if len(core) != (14 if day == 1 else DAILY_VOCAB) or extra or len(core) != len(d['vocab']) or d['listening']:
             raise ValueError('daily workload split broken')
     shards=list((ROOT/'web/data/grade').glob('day-*.json'))
     if len(shards)!=DAYS or any('answer' in q or not re.fullmatch('[a-f0-9]{64}',q.get('answer_hash','')) for p in shards for q in json.loads(p.read_text())['answers'].values()):

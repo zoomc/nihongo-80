@@ -32,7 +32,8 @@ def hiragana(text):
 
 
 def question(day, kid, kind, prompt, answer, distractors, capability):
-    qid = f"D13-{day:03d}-{kid}-{kind}"
+    version = 13 if day == 1 else 15
+    qid = f"D{version}-{day:03d}-{kid}-{kind}"
     options = [answer]
     seen = {fnv(answer)}
     for option in distractors:
@@ -179,7 +180,8 @@ def build_daily_questions(day, vocab, grammar):
         bucket = extra if kid in optional else core
         bucket.extend(vocabulary_questions(number, vocab[kid], vocab.values(), today))
     for kid in day["new_grammar_ids"]:
-        core.extend(grammar_questions(number, grammar[kid], grammar.values()))
+        peers = (g for g in grammar.values() if number != 1 or g["jlpt"] != "N2")
+        core.extend(grammar_questions(number, grammar[kid], peers))
     rng = random.Random(f"daily-v13-{number}")
     for bucket in (core, extra):
         rng.shuffle(bucket)

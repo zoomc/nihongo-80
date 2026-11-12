@@ -32,7 +32,7 @@ CSS = r"""
 
 JS = r"""
 (function(){'use strict';
-var PREFIX='nh80.v9.pending.', LOCAL='nh80.v9.latest', SNAP='nh80.v9.study.snapshot', CATALOG='nh80.v14.catalog', study=read(SNAP,null),catalog=read(CATALOG,[]),busy=false,timer=null;
+var PREFIX='nh80.v9.pending.', LOCAL='nh80.v9.latest', SNAP='nh80.v9.study.snapshot', CATALOG='nh80.v15.catalog', study=read(SNAP,null),catalog=read(CATALOG,[]),busy=false,timer=null;
 var $=function(s,r){return (r||document).querySelector(s)};
 function esc(x){return String(x==null?'':x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;')}
 function uid(){return (crypto.randomUUID?crypto.randomUUID():Date.now()+'-'+Math.random().toString(36).slice(2))}
@@ -85,7 +85,7 @@ function renderScheduled(message){
  try{
   NHReview.recover();
   var index=new Map(catalog.map(function(c){return [c.kid,c]}));
-  var queue=NHReview.due().filter(function(x){return index.has(x.kid)});
+  var queue=NHReview.due().filter(function(x){return (index.get(x.kid)?.review_questions || []).length});
   var status=message?'<p class="small" role="status">'+esc(message)+'</p>':'';
   var heading='<h2>到期复习 <span class="count">'+queue.length+' 张</span></h2>';
   if(!catalog.length){
@@ -95,31 +95,37 @@ function renderScheduled(message){
    root.innerHTML=heading+status+'<p>今天没有到期卡。每日练习的首次作答会自动安排下一次复习。</p>'
     +'<p class="small">排期保存在当前浏览器。</p>';return;
   }
-  var next=queue[0], c=index.get(next.kid);
-  var reverse=c.kind==='grammar'||(c.kind==='vocab'&&next.step%2===0);
-  var cue=reverse?c.back:c.front;
-  var instruction=c.kind==='grammar'?'先回忆日语句型，再自己说一句。'
-   :reverse?'先说出日语单词，再核对。':'先说出读音和中文意思，再核对。';
-  root.innerHTML=heading+status+'<p class="small">按到期时间复习，记录保存在当前浏览器。</p>'
-   +'<div class="study-deck"><p>'+instruction+'</p>'
-   +'<p class="recall-prompt" lang="'+(reverse?'zh-CN':'ja')+'">'+esc(cue)+'</p>'
-   +'<button class="btn" type="button" id="revealRecall" aria-controls="recallAnswer">翻答案</button>'
-   +'<div id="recallAnswer" class="recall-answer" hidden>'
-   +'<p lang="ja">'+esc(c.front)+(c.kana?'　'+esc(c.kana):'')+'</p><p>'+esc(c.back)+'</p>'
-   +(c.example?'<p lang="ja">'+esc(c.example)+'</p>':'')
-   +'<div class="study-rates">'+[['again','忘了'],['hard','不熟'],['good','记得']].map(function(x){
-      return '<button type="button" data-recall-rating="'+x[0]+'">'+x[1]+'</button>';
-    }).join('')+'</div></div></div>';
-  var reveal=$('#revealRecall',root), answer=$('#recallAnswer',root);
-  reveal.onclick=function(){answer.hidden=false;reveal.hidden=true;answer.querySelector('button').focus()};
-  answer.querySelectorAll('[data-recall-rating]').forEach(function(button){
+  var next=queue[0], card=index.get(next.kid);
+  var variants=card.review_questions;
+  var question=variants[(Math.max(0,next.step+1))%variants.length];
+  root.innerHTML=heading+status+'<p class="small">答题结果用于更新当前浏览器的复习排期。</p>'
+   +'<div class="study-deck"><p class="recall-prompt">'+esc(question.prompt)+'</p>'
+   +'<div class="study-choices">'+question.options.map(function(option,i){
+     return '<button type="button" class="study-choice" data-recall-choice="'+i+'">'+esc(option)+'</button>';
+   }).join('')+'</div><p id="recallFeedback" role="status"></p>'
+   +'<button type="button" class="btn" id="nextRecall" hidden>下一张</button></div>';
+  var choices=Array.from(root.querySelectorAll('[data-recall-choice]'));
+  var nextButton=$('#nextRecall',root), feedback=$('#recallFeedback',root);
+  nextButton.onclick=function(){
+   renderScheduled();
+   var first=$('[data-recall-choice]',root);if(first)first.focus();
+  };
+  choices.forEach(function(button){
    button.onclick=function(){
+    var correct=fnv(question.options[Number(button.dataset.recallChoice)])===question.h;
     try{
-     var interval=NHReview.rate(c.kid,button.dataset.recallRating);
-     renderScheduled(interval?'已排到 '+interval+' 天后。':'这张卡已复习。');
+     var interval=NHReview.rate(card.kid,correct?'good':'again');
+     choices.forEach(function(choice){
+      choice.disabled=true;
+      if(fnv(question.options[Number(choice.dataset.recallChoice)])===question.h)choice.classList.add('is-right');
+     });
+     if(!correct)button.classList.add('is-wrong');
+     feedback.textContent=interval?(correct?'答对了。':'答错了，正确选项已标出。')+' 下次复习在 '+interval+' 天后。':'这张卡已复习。';
+     nextButton.hidden=false;
+     nextButton.textContent=queue.length===1?'查看复习结果':'下一张';
+     nextButton.focus();
      if(personalFilter==='hard')renderPersonal();
-     var nextButton=$('#revealRecall',root);if(nextButton)nextButton.focus();
-    }catch(e){renderScheduled('浏览器无法保存复习排期。')}
+    }catch(e){feedback.textContent='浏览器无法保存复习排期。'}
    };
   });
  }catch(e){root.innerHTML='<h2>到期复习</h2><p>浏览器无法保存复习排期。</p>'}

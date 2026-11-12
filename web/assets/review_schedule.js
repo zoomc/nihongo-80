@@ -5,7 +5,7 @@
   const KEY = 'nh80.review.v1';
   const LESSON = 'nh80.v11.state.';
   const INTERVALS = [1, 3, 7, 14, 30, 60];
-  const QUESTION = /^D13-(\d{3})-([VG]\d{4})-[a-z]+$/;
+  const QUESTION = /^D(?:13|15)-(\d{3})-([VG]\d{4})-[a-z]+$/;
 
   function today(date = new Date()) {
     return Math.floor(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) / 86400000);

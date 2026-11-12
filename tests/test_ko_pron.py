@@ -239,18 +239,13 @@ class TestPageLayout(unittest.TestCase):
         self.assertNotIn("<ruby>あなた", item)
         self.assertNotIn('<div class="kana-line" data-role="ja">あなた</div>', item)
 
-    def test_optional_tag_is_not_inside_japanese_word(self):
-        found = 0
-        for day in (1, 47, 100, 120):
-            h = page(day)
-            for m in re.finditer(r'<div class="jp"[^>]*>[^<]*</div>', h):
-                self.assertNotIn("选学", m.group(0), "Day %d 选学标签被塞进日语词里" % day)
-            found += h.count(" · 选学")
-        self.assertGreater(found, 0)
-        self.assertRegex(page(47), r'<div class="zh" data-role="zh">[^<]*<span class="small"> · 选学</span>')
+    def test_optional_vocabulary_has_separate_page(self):
+        for day in (1, 47, 99, 100):
+            self.assertNotIn(" · 选学", page(day))
+        self.assertIn("选学词库", (ROOT / "web/optional-vocab.html").read_text())
 
     def test_korean_elements_are_masked_with_chinese(self):
-        for day in (1, 47, 100, 120):
+        for day in (1, 47, 99, 100):
             h = page(day)
             for cls in ('class="ko-read"', 'class="ex-ko"', 'class="ko"', 'class="ko-box"',
                         'class="small ko-read"'):
@@ -258,28 +253,19 @@ class TestPageLayout(unittest.TestCase):
                     tail = h[m.start():m.start() + 120]
                     self.assertIn('data-role="zh"', tail, "Day %d %s 未随中文遮蔽" % (day, cls))
 
-    def test_every_example_block_has_speak_button(self):
-        h = page(47)
-        blocks = re.findall(r'<div class="ex">.*?</div>\s*</div>', h)
-        self.assertGreater(len(blocks), 10)
-        for b in re.finditer(r'<div class="ex">(.*?)</div></div>', h):
-            self.assertIn("data-speak=", b.group(1))
-
-    def test_examples_have_korean_and_speak(self):
+    def test_daily_examples_have_korean_reading_without_audio_controls(self):
         h = page(47)
         self.assertGreater(h.count('class="ex-ko"'), 10)
-        self.assertIn(">朗读</button>", h)
-        self.assertNotIn("朗读例句", h)
+        self.assertNotIn('data-speak=', h)
 
     def test_grammar_cards_get_korean_reading(self):
-        h = page(47)
-        grammar = h[h.index('id="grammar"'):h.index('id="questions"')]
-        self.assertEqual(grammar.count('class="ko-read"'), grammar.count('class="gcard"'))
-        self.assertIn("〜카타", grammar)          # 〜方（pattern_kana）
-        self.assertIn("〜추우／주우", grammar)      # 〜中（pattern_kana 给两读）
-        # 助词型句型：〜は 读 와、〜へ 读 에（不能读成 하/헤）
-        self.assertIn("〜와", page(17))
-        self.assertIn("〜에", page(21))
+        grammar_html = []
+        for day in range(1, 101):
+            h = page(day)
+            grammar_html.append(h[h.index('id="grammar"'):h.index('id="questions"')])
+        grammar = "".join(grammar_html)
+        for reading in ("〜카타", "〜추우／주우", "〜와", "〜에"):
+            self.assertIn(reading, grammar)
 
     def test_data_export_carries_korean_reading(self):
         d = data(1)

@@ -1,4 +1,4 @@
-"""v10 回归：页面只留内容、练习一整块、小日语文字与发音、完成按钮→云端→skill。
+"""v10 回归：页面只留内容、练习一整块、小日语文字与注音、完成按钮→云端→skill。
 
 这些断言锁住 2026-11-08 的重构，防止后续又把顶部控件、分段练习、学习口令加回来。
 """
@@ -26,7 +26,7 @@ class TestSimplifiedPage(unittest.TestCase):
                 "再练7题", "翻页练习", "学习口令", "导出待同步记录", "导出作答",
                 "保存本次作答", "lesson-nav", "study.js", "data-view", "studySync",
                 "错题与复习集</a>", "id=\"quiz\"")
-        for day in (1, 7, 45, 47, 100, 120):
+        for day in (1, 7, 45, 47, 99, 100):
             h = page(day)
             for word in junk:
                 self.assertNotIn(word, h, "Day %d 仍含 %s" % (day, word))
@@ -57,8 +57,7 @@ class TestSimplifiedPage(unittest.TestCase):
         h = page(47)
         self.assertGreater(h.count('class="kana-line"'), 5, "汉字词缺平假读音行")
         self.assertGreater(h.count("<ruby>"), 5, "例句里的汉字词缺 ruby 假名")
-        self.assertGreater(h.count('data-speak='), 5, "例句/单词缺发音按钮")
-        self.assertIn("朗读</button>", h, "例句没有独立发音入口")
+        self.assertNotIn("data-speak=", h)
         # v12 起假名行在词形上方（原来在中文上方），中文之前改由韩语读音行占位
         self.assertRegex(h, r'class="kana-line"[^>]*>[^<]*</div><div class="jp"')
 
@@ -71,7 +70,7 @@ class TestMergedQuestions(unittest.TestCase):
             covered = {k for q in qs for k in (q.get("knowledge_ids") or [])}
             need = set(d["new_vocab_ids"]) | set(d["new_grammar_ids"])
             self.assertFalse(need - covered, "Day %d 未覆盖：%s" % (d["day"], sorted(need - covered)[:5]))
-            self.assertLessEqual(len(qs), 60)
+            self.assertLessEqual(len(qs), 62)
             self.assertEqual(len({q["qid"] for q in qs}), len(qs))
             for q in qs:
                 self.assertNotIn("answer", q)
@@ -81,7 +80,7 @@ class TestMergedQuestions(unittest.TestCase):
 
     def test_daily_question_quota_per_knowledge_point(self):
         from collections import Counter
-        for day in (1, 47, 120):
+        for day in (1, 47, 100):
             c = Counter(k for q in data(day)["questions"] for k in (q.get("knowledge_ids") or []))
             d = data(day)
             expected = {**{v["id"]: 2 for v in d["vocab"]}, **{g["id"]: 3 for g in d["grammar"]}}
@@ -141,7 +140,7 @@ class TestProgressChain(unittest.TestCase):
 
     def test_service_worker_bumped(self):
         sw = (ROOT / "web/sw.js").read_text(encoding="utf-8")
-        self.assertRegex(sw, r"nh80-v13-[0-9a-f]{12}")
+        self.assertRegex(sw, r"nh80-v15-[0-9a-f]{12}")
         self.assertNotIn("nh80-v5.1-", sw)
         self.assertIn("/api/", sw)
 

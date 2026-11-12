@@ -36,7 +36,7 @@ class TestQuestionContract(unittest.TestCase):
     def test_every_question_has_four_unique_options(self):
         from quiz_v5 import fnv
         seen = set()
-        self.assertEqual(len(self.all_q), 855)
+        self.assertEqual(len(self.all_q), 600)
         for q in self.all_q:
             self.assertNotIn(q["qid"], seen, "重复题号 " + q["qid"])
             seen.add(q["qid"])
@@ -59,8 +59,8 @@ class TestQuestionContract(unittest.TestCase):
             self.assertFalse(any(shown in o for o in q["options"]),
                              "同形词把答案写进题干：" + q["qid"])
 
-    def test_assessment_days_still_practice_new_kanji_and_grammar(self):
-        for day in (36, 76, 88, 104, 106, 119):
+    def test_compatibility_quiz_still_practices_new_kanji_and_grammar(self):
+        for day in (1, 36, 76, 88, 99, 100):
             tags = [q["qid"].split("-")[2] for q in self.by_day[day]
                     if q["qid"].startswith("Q-")]
             self.assertTrue(any(t.startswith("K") for t in tags),
@@ -75,15 +75,8 @@ class TestCurriculumQuality(unittest.TestCase):
         cls.cur = json.loads((ROOT / "curriculum/curriculum.json").read_text(encoding="utf-8"))
         cls.materials = {x["id"]: x for x in load("materials")}
 
-    def test_listening_difficulty_never_goes_backwards(self):
-        rank = {"N5": 0, "N4": 1, "N3": 2}
-        pairs = [(d["day"], rank.get(self.materials[d["material_ids"][0]]["level"], 1))
-                 for d in self.cur["days"] if d.get("listening")]
-        self.assertEqual(len(pairs), 45)
-        self.assertEqual([r for _, r in pairs], sorted(r for _, r in pairs),
-                         "听力素材难度倒挂")
-        self.assertFalse(any(day > 60 and r < 2 for day, r in pairs),
-                         "N3 阶段仍在用 N4 素材")
+    def test_curriculum_does_not_assign_listening_materials(self):
+        self.assertTrue(all(not d["listening"] and not d["material_ids"] for d in self.cur["days"]))
 
     def test_review_snapshot_covers_all_three_kinds(self):
         kinds = {i[0] for d in self.cur["days"] for i in d["review_knowledge_ids"]}

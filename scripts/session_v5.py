@@ -71,7 +71,7 @@ def brief(day: int, force=False):
     out = DAYS / ("day-%03d" % day)
     out.mkdir(parents=True, exist_ok=True)
     template = out / "output-review.json"
-    if not template.exists():
+    if d.get("practice_mode") != "choice" and not template.exists():
         sentence_ids = [x["id"] for x in read_jsonl(ROOT / "knowledge/seeds/sentences.jsonl") if source_day(x["day"]) == day][:3]
         template.write_text(json.dumps({"sentences":[{"id":sid,"text":"","feedback":""} for sid in sentence_ids],
             "grammar_sentences":[{"grammar_id":gid,"text":"","feedback":"","correct":False} for gid in (d["new_grammar_ids"]*2)[:2]],
@@ -104,10 +104,10 @@ def brief(day: int, force=False):
     L += ["", "## 复习到期", ""]
     L.append("新会话先跑 `python3 scripts/today.py`：它把本机 finish-day 与云端「完成」快照合并，"
              "给出今天该学哪天、上次卡在哪。`data/review/CONTEXT.md` 若存在再显式读取。")
-    L += ["", "## 会话流程（约 20 分钟）", "",
+    L += ["", "## 会话答疑", "",
           "1. **先发页面链接**，等学生看完，不要一上来讲课。",
           "2. 抽查上次卡点（`TODAY.md` 的「上次卡点」），答不上就回炉。",
-          "3. 只讲今天语法里他没懂的；每条让他造 1 句自己的话。不要复述页面。",
+          "3. 讲解今天单选题暴露的易错句型，按需举例。",
           "4. 练习是一整块题目，逐题问「为什么错」，不要直接报答案。",
           "5. 写 `days/day-%03d/report.md`：摘要 ≤5 行（完成度 / 真正学会 / 仍然卡 / 明日建议）。" % day,
           "6. 学生点页面底部「完成」写入云端自报快照；复核用 `python3 scripts/progress_read.py --day %d`。" % day,

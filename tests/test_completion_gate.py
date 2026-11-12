@@ -1,4 +1,4 @@
-"""Regression: six MCQs alone must not finish a speaking/output lesson."""
+"""Regression: Choice lessons require complete graded coverage."""
 import argparse
 import contextlib
 import io
@@ -17,7 +17,7 @@ import cloud_sync
 
 
 class CompletionGate(unittest.TestCase):
-    def test_objective_answers_without_output_stay_incomplete(self):
+    def test_one_missing_single_choice_keeps_lesson_incomplete(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             (root / 'data').mkdir(); (root / 'curriculum').mkdir()
@@ -26,14 +26,14 @@ class CompletionGate(unittest.TestCase):
             src = sqlite3.connect(ROOT / 'data/state.db'); dst = sqlite3.connect(root / 'data/state.db')
             src.backup(dst); src.close(); dst.close()
             key = json.loads((ROOT / 'deploy/worker/src/generated-key.json').read_text())['answers']
-            payload = {'v': 1, 'day': 117, 'session': 'objective-only-gate', 'ts': '2026-11-07T00:00:00Z',
-                       'results': [{'qid': q, 'answer': x['answer']} for q, x in key.items() if x['day'] == 117],
+            payload = {'v': 1, 'day': 97, 'session': 'objective-only-gate', 'ts': '2026-11-07T00:00:00Z',
+                       'results': [{'qid': q, 'answer': x['answer']} for q, x in key.items() if x['day'] == 97 and q.startswith("D15-")],
                        'minutes': None, 'source': 'test'}
             with contextlib.redirect_stdout(io.StringIO()):
-                results = payload["results"]
+                results = payload["results"][:-1]
                 for offset in range(0, len(results), 40):
                     batch = dict(payload, results=results[offset:offset + 40])
                     nh80.cmd_import_web(argparse.Namespace(root=str(root), code=cloud_sync.encode_payload(batch)))
             with contextlib.redirect_stdout(io.StringIO()) as result:
-                nh80.cmd_finish_day(argparse.Namespace(root=str(root), day=117, minutes=60))
+                nh80.cmd_finish_day(argparse.Namespace(root=str(root), day=97, minutes=60))
             self.assertFalse(json.loads(result.getvalue())['passed'])

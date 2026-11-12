@@ -2,7 +2,7 @@
 """nh80.py — Nihongo 80 唯一状态写入入口 / 命令行。
 
 用法速查：
-  python3 scripts/nh80.py init      # 120 天课程
+  python3 scripts/nh80.py init      # 100 天课程
   python3 scripts/nh80.py build
   python3 scripts/nh80.py start-day 1
   python3 scripts/nh80.py answer --day 1 --q Q0001 --answer "です"
@@ -27,7 +27,7 @@ import unicodedata
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from curriculum_v5 import DAYS as COURSE_DAYS, level_of_day, source_day
+from curriculum_v5 import DAYS as COURSE_DAYS, DAILY_VOCAB, source_day
 
 import core  # noqa: E402
 import curriculum as curr  # noqa: E402
@@ -242,11 +242,13 @@ def cmd_init(args):
 
 
 def _build_v5(root, conn):
-    """v5 生成 120 天课程并写入 DB；返回 curriculum data。"""
+    """v5 生成 100 天课程并写入 DB；返回 curriculum data。"""
     import hashlib
     import curriculum_v5 as c5
     data = c5.build()
     from quiz_v5 import day_questions
+    from daily_questions import build_daily_questions
+    from quiz_v5 import fnv
     from sentence_choices import build_for_day as sentence_questions
     from practice_v9 import build_daily, build_unit
     sentence_rows = core.read_jsonl(root / "knowledge/seeds/sentences.jsonl")
@@ -255,17 +257,22 @@ def _build_v5(root, conn):
     keys = {}
     grade_shards = {}
     with conn:
+        for grammar in tables["grammar"].values():
+            core._insert_kind(conn, "grammar", grammar)
         for day in data["days"]:
             qs = day_questions(day, tables["vocabulary"], tables["grammar"], tables["kanji"], tables["materials"])
             sqs = sentence_questions(day, sentence_rows)
-            day["question_ids"] = [q["qid"] for q in qs] + [q["qid"] for q in sqs if not q["optional"]]
+            daily = build_daily_questions(day, tables["vocabulary"], tables["grammar"])
+            day["question_ids"] = [q["qid"] for q in daily]
+            for q in daily:
+                q["answer"] = next(option for option in q["options"] if fnv(option) == q["h"])
             practice = build_daily(day, tables["vocabulary"], tables["grammar"], tables["kanji"])
             if day["day"] % 5 == 0:
                 practice += build_unit(day["day"], data["days"], tables["vocabulary"],
                                        tables["grammar"], tables["kanji"])["questions"]
             shard = {}
             grade_shards[day["day"]] = shard
-            for q in qs + sqs + practice:
+            for q in daily + qs + sqs + practice:
                 q["prompt_ja"] = q["prompt"]
                 q["source"] = "v5-generated"
                 q["review_status"] = "ai_draft"
@@ -283,7 +290,7 @@ def _build_v5(root, conn):
                                    "capability": q.get("capability")}
         audit(conn, "build_v5_questions", {"count": len(keys)})
         # 清掉历史题库/旧构建遗留的孤儿题，避免 import-web-result 接受不在本次答案表里的题号。
-        stale = [row[0] for row in conn.execute("SELECT id FROM questions").fetchall()
+        stale = [row[0] for row in conn.execute("SELECT id FROM questions WHERE id NOT IN (SELECT qid FROM attempts WHERE qid IS NOT NULL)").fetchall()
                  if row[0] not in keys]
         if stale:
             conn.executemany("DELETE FROM questions WHERE id=?", [(qid,) for qid in stale])
@@ -378,7 +385,7 @@ def cmd_start_day(args):
             "", "## 教师必须执行", "",
             "1. 先让学生思考/作答，再揭示答案与解析；每次只推进一步，不一次输出几十屏。",
             "2. 每次作答经 `answer` / `import-web-result` 写库；开放题必须 `grade-open` 补录判定。",
-            "3. 错误必须标注 error_type；连续答对提高难度；保证足够独立输出。",
+            "3. 错误必须标注 error_type；连续答对提高难度；优先重练当天单选错题。",
             "4. 结束运行 `finish-day %d`，状态才会落盘供次日会话读取。" % day,
             "5. 完成条件：%s" % d["completion"], "",
         ]
@@ -792,7 +799,8 @@ def cmd_finish_day(args):
         output_review = conn.execute("SELECT payload FROM output_reviews WHERE day=?", (day,)).fetchone()
         output_confirmed = bool(output_review and json.loads(output_review["payload"]).get("accepted"))
         daily_payload = json.loads(conn.execute("SELECT payload FROM sessions WHERE day=?", (day,)).fetchone()["payload"] or "{}")
-        choice_mode = daily_payload.get("practice_mode") == "choice"
+        choice_mode = (d.get("practice_mode") == "choice"
+                       or daily_payload.get("practice_mode") == "choice")
         passed = (acc is not None and acc >= 0.70 and bool(expected) and expected <= {x["qid"] for x in scored}
                   and (choice_mode or output_confirmed))
         status = "finished" if passed else "incomplete"
@@ -951,30 +959,23 @@ def cmd_validate(args):
         errs.append("课程必须连续编号 Day 1–%d" % COURSE_DAYS)
     seeds = {name: {x["id"]: x for x in core.read_jsonl(r / "knowledge/seeds" / (name + ".jsonl"))}
              for name in ("vocabulary", "grammar", "kanji", "materials")}
-    listening_seen = set()
     grammar_days = {gid: d["day"] for d in days for gid in d["new_grammar_ids"]}
     seen = {"v": set(), "g": set(), "k": set()}
     for d in days:
         if sum(b.get("min", 0) for b in d.get("blocks") or []) != 60:
             errs.append("Day %s 时间块不等于 60" % d.get("day"))
-        if sum(b["min"] for b in d["blocks"] if b["type"] != "会话") != 42:
-            errs.append("Day %s 网页预算不等于42" % d["day"])
+        if [b["type"] for b in d["blocks"]] != ["记忆曲线复习", "新词", "语法", "练习"]:
+            errs.append("Day %s 课程模块不正确" % d["day"])
+        if len(d["new_vocab_ids"]) != (14 if d["day"] == 1 else DAILY_VOCAB):
+            errs.append("Day %s 词数不正确" % d["day"])
+        if not 2 <= len(d["new_grammar_ids"]) <= 4:
+            errs.append("Day %s 语法量不正确" % d["day"])
         for gid in d["new_grammar_ids"]:
             for pre in seeds["grammar"].get(gid, {}).get("prerequisites", []):
                 if pre not in grammar_days or grammar_days[pre] >= d["day"]:
                     errs.append("Day %s 先修未满足 %s -> %s" % (d["day"], gid, pre))
-        if d.get("reading_id"):
-            reading = seeds["materials"].get(d["reading_id"], {})
-            if (reading.get("kind") != "reading" or reading.get("license") != "original"
-                    or reading.get("level") != level_of_day(d["day"])
-                    or not reading.get("text_ja") or not reading.get("text_zh")):
-                errs.append("Day %s 精读素材不符合级别或缺少原文/译文" % d["day"])
-        if d.get("listening"):
-            for mid in d["material_ids"]:
-                m = seeds["materials"].get(mid, {})
-                if mid in listening_seen or len(m.get("questions", [])) != 3 or len(m.get("text_ja", "")) < 300:
-                    errs.append("Day %s 听力重复或缺内容/三题" % d["day"])
-                listening_seen.add(mid)
+        if d.get("listening") or d.get("material_ids"):
+            errs.append("主课包含听力材料")
         for key, field in (("v", "new_vocab_ids"), ("g", "new_grammar_ids"), ("k", "new_kanji_ids")):
             for kid in d.get(field) or []:
                 table = {"v": "vocabulary", "g": "grammar", "k": "kanji"}[key]
@@ -984,9 +985,11 @@ def cmd_validate(args):
                     errs.append("Day %s 重复排课 %s" % (d.get("day"), kid))
                 seen[key].add(kid)
     totals = {k: len(v) for k, v in seen.items()}
-    if totals["v"] < 2700: errs.append("词汇排课不足 2700：%d" % totals["v"])
-    if totals["g"] < 276: errs.append("语法排课不足 276：%d" % totals["g"])
-    if totals["k"] < 620: errs.append("汉字排课不足 620：%d" % totals["k"])
+    optional = set(data.get("optional_vocab_ids", []))
+    if seen["v"] & optional or seen["v"] | optional != set(seeds["vocabulary"]):
+        errs.append("主课与选学词库覆盖不正确")
+    if seen["g"] != set(seeds["grammar"]): errs.append("语法排课覆盖不足")
+    if seen["k"] != set(seeds["kanji"]): errs.append("汉字排课覆盖不足")
     out({"ok": not errs, "error_count": len(errs), "errors": errs[:20], "warnings": warns,
          "days": len(days), "totals": totals,
          "listening_days": sum(1 for d in days if d.get("listening"))})

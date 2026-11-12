@@ -228,7 +228,7 @@ def main(argv=None) -> int:
         description="读取 Nihongo-80 云端当天完成快照（自报、非权威），输出复习摘要。",
     )
     group = parser.add_mutually_exclusive_group(required=True)
-    group.add_argument("--day", type=int, metavar="N", help="读取指定 Day（1..120）")
+    group.add_argument("--day", type=int, metavar="N", help="读取指定 Day（新版 1..100，兼容旧版至 120）")
     group.add_argument("--latest", nargs="?", const=DEFAULT_LATEST, type=int,
                        metavar="N", help="读取最近 N 天（默认 %d，最大 %d）" % (DEFAULT_LATEST, MAX_LIMIT))
     parser.add_argument("--base", default=DEFAULT_BASE, help="站点根地址（默认 production）")

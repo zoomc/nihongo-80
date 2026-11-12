@@ -173,10 +173,11 @@ updateReviewLink();
 var f=$('#finish');
 if(f)f.addEventListener('click',function(){
  var meta=window.__PAGE__||{},qs=Object.keys(RESULTS).map(function(k){return RESULTS[k]});
+ if(!qs.length){$('#finishStatus').textContent='请先完成练习中的单选题。';return}
  var right=qs.filter(function(x){return x.correct}).length;
  var wrong=qs.filter(function(x){return !x.correct}).map(function(x){
   return {qid:x.qid,knowledge_ids:(meta.q_kids||{})[x.qid]||[]}});
- var payload={v:2,day:DAY,completed_at:new Date().toISOString(),
+ var payload={v:3,day:DAY,completed_at:new Date().toISOString(),
   required_ids:meta.required_ids||[],extra_ids:meta.extra_ids||[],grammar_ids:meta.grammar_ids||[],
   questions:qs,accuracy:qs.length?right/qs.length:0,self_rating:RATINGS,
   wrong_summary:wrong,
@@ -187,7 +188,7 @@ if(f)f.addEventListener('click',function(){
  fetch('/api/progress',{method:'POST',headers:{'content-type':'application/json'},
   body:JSON.stringify(payload)}).then(function(r){return r.json().then(function(d){
    if(!r.ok||d.ok!==true)throw new Error(d.reason||('HTTP '+r.status));return d})})
-  .then(function(){saveLocal();try{localStorage.setItem(STORE+'lastDay',String(DAY))}catch(e){}
+  .then(function(){saveLocal();try{localStorage.setItem('nh80.v15.lastDay',String(DAY))}catch(e){}
    f.textContent='已完成';if(status)status.textContent='学习情况已保存，会话可读取。'})
   .catch(function(e){f.disabled=false;f.textContent='完成';
    if(status)status.textContent='云端暂不可用（'+e.message+'）；记录已留在本机。'});

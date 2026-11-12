@@ -1,56 +1,46 @@
 {
  "day": 6,
  "phase": "P1",
- "theme": "へ（移动方向）、と（并列／共同／引用）",
- "can_do": "用「へ（移动方向）、と（并列／共同／引用）」各造一句自己的话，表达：往／向…；和…／与…（一起）；「…」地",
+ "theme": "へ（移动方向）、から ～ まで",
+ "can_do": "在单选题中辨认今天的词义、读音和句型用法。",
  "minutes": 60,
  "blocks": [
   {
-   "type": "复习",
-   "min": 6,
-   "desc": "到期项优先；未完成顺延，不追赶"
+   "type": "记忆曲线复习",
+   "min": 10,
+   "desc": "先做已到期的复习题"
   },
   {
    "type": "新词",
-   "min": 11,
-   "desc": "20 个必学词；3 个选学拓展"
+   "min": 16,
+   "desc": "25 个新词"
   },
   {
    "type": "语法",
-   "min": 6,
-   "desc": "へ（移动方向）、と（并列／共同／引用）"
-  },
-  {
-   "type": "句子输出",
-   "min": 4,
-   "desc": "每条新语法独立说一句，和例句对照"
+   "min": 9,
+   "desc": "へ（移动方向）、から ～ まで"
   },
   {
    "type": "练习",
-   "min": 15,
-   "desc": "优先做当天必学词与语法，答完重练错题"
-  },
-  {
-   "type": "会话",
-   "min": 18,
-   "desc": "抽词、造句、批改"
+   "min": 25,
+   "desc": "单选题，答完可重练错题"
   }
  ],
  "listening": false,
  "review": [
   {
-   "kid": "V0068",
-   "front": "兄",
-   "back": "(我)哥哥",
-   "kana": "あに",
-   "ko_pron": "아니"
+   "kid": "V0095",
+   "front": "薬",
+   "back": "药",
+   "kana": "くすり",
+   "ko_pron": "쿠스리"
   },
   {
-   "kid": "V0069",
-   "front": "姉",
-   "back": "(我)姐姐",
-   "kana": "あね",
-   "ko_pron": "아네"
+   "kid": "V0096",
+   "front": "雨",
+   "back": "雨",
+   "kana": "あめ",
+   "ko_pron": "아메"
   },
   {
    "kid": "G0009",
@@ -60,461 +50,496 @@
    "ko_pron": "니"
   },
   {
-   "kid": "K0014",
-   "front": "七",
-   "back": "七",
-   "kana": "シチ、なな、なの",
-   "ko_pron": "시치 / 나나·나노"
+   "kid": "K0015",
+   "front": "八",
+   "back": "八",
+   "kana": "ハチ、や、やっつ",
+   "ko_pron": "하치 / 야·야쯔"
   },
   {
-   "kid": "V0031",
-   "front": "月曜日",
-   "back": "星期一",
-   "kana": "げつようび",
-   "ko_pron": "게쓰요우비"
+   "kid": "V0042",
+   "front": "店",
+   "back": "商店；店铺",
+   "kana": "みせ",
+   "ko_pron": "미세"
   },
   {
-   "kid": "V0032",
-   "front": "火曜日",
-   "back": "星期二",
-   "kana": "かようび",
-   "ko_pron": "카요우비"
+   "kid": "V0043",
+   "front": "病院",
+   "back": "医院",
+   "kana": "びょういん",
+   "ko_pron": "뵤우인"
   },
   {
-   "kid": "G0004",
-   "front": "N も",
-   "back": "…也…",
+   "kid": "G0006",
+   "front": "N の N",
+   "back": "…的…；所属/修饰",
    "kana": "",
-   "ko_pron": "N 모"
+   "ko_pron": "N 노 N"
   },
   {
-   "kid": "K0009",
-   "front": "二",
-   "back": "二",
-   "kana": "ニ、ジ、ふた、ふたつ",
-   "ko_pron": "니·지 / 후타·후타쓰"
+   "kid": "K0010",
+   "front": "三",
+   "back": "三",
+   "kana": "サン、み、みっつ",
+   "ko_pron": "산 / 미·미쯔"
   }
  ],
  "vocab": [
   {
-   "id": "V0095",
-   "surface": "薬",
-   "kana": "くすり",
-   "meaning": "药",
-   "ko": "약（药）",
-   "ko_pron": "쿠스리",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "薬を飲みます。",
-    "zh": "吃药。",
-    "ko_pron": "쿠스리오노미마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0096",
-   "surface": "雨",
-   "kana": "あめ",
-   "meaning": "雨",
-   "ko": "비（雨）",
-   "ko_pron": "아메",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "雨が降っています。",
-    "zh": "正在下雨。",
-    "ko_pron": "아메가후떼이마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0097",
-   "surface": "天気",
-   "kana": "てんき",
-   "meaning": "天气",
-   "ko": "날씨（天气） / 일기（天气） / 천기（天气；气象）",
-   "ko_pron": "텐키",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "今日はいい天気です。",
-    "zh": "今天天气好。",
-    "ko_pron": "쿄우와이이텐키데스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0098",
-   "surface": "猫",
-   "kana": "ねこ",
-   "meaning": "猫",
-   "ko": "고양이（猫）",
-   "ko_pron": "네코",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "部屋に猫がいます。",
-    "zh": "房间里有猫。",
-    "ko_pron": "헤야니네코가이마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0099",
-   "surface": "映画",
-   "kana": "えいが",
-   "meaning": "电影",
-   "ko": "영화（电影）",
-   "ko_pron": "에이가",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "映画を見ます。",
-    "zh": "看电影。",
-    "ko_pron": "에이가오미마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0100",
-   "surface": "音楽",
-   "kana": "おんがく",
-   "meaning": "音乐",
-   "ko": "음악（音乐）",
-   "ko_pron": "온가쿠",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "音楽を聞きます。",
-    "zh": "听音乐。",
-    "ko_pron": "온가쿠오키키마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0101",
-   "surface": "食べる",
-   "kana": "たべる",
-   "meaning": "吃",
-   "ko": "먹다（吃）",
-   "ko_pron": "타베루",
+   "id": "V0121",
+   "surface": "教える",
+   "kana": "おしえる",
+   "meaning": "教；告诉",
+   "ko": "이르다（告诉） / 가르치다（教，教授，传授）",
+   "ko_pron": "오시에루",
    "ko_status": "dictionary",
    "optional": false,
    "pos": "動詞/一段",
    "ex": {
-    "ja": "ご飯を食べます。",
-    "zh": "吃饭。",
-    "ko_pron": "고한오타베마스."
+    "ja": "日本語を教えます。",
+    "zh": "教日语。",
+    "ko_pron": "니혼고오오시에마스."
    },
-   "audio": "tts"
+   "audio": null
   },
   {
-   "id": "V0102",
-   "surface": "飲む",
-   "kana": "のむ",
-   "meaning": "喝；吞（药）",
-   "ko": "먹다（喝） / 마시다（喝，饮） / 들이마시다（喝）",
-   "ko_pron": "노무",
+   "id": "V0122",
+   "surface": "帰る",
+   "kana": "かえる",
+   "meaning": "回；回家",
+   "ko": "돌아오다（回，回来，归来）",
+   "ko_pron": "카에루",
    "ko_status": "dictionary",
    "optional": false,
    "pos": "動詞/五段",
    "ex": {
-    "ja": "水を飲みます。",
-    "zh": "喝水。",
-    "ko_pron": "미즈오노미마스."
+    "ja": "家に帰ります。",
+    "zh": "回家。",
+    "ko_pron": "이에니카에리마스."
    },
-   "audio": "tts"
+   "audio": null
   },
   {
-   "id": "V0103",
-   "surface": "行く",
-   "kana": "いく",
-   "meaning": "去",
-   "ko": "가다",
-   "ko_pron": "이쿠",
+   "id": "V0123",
+   "surface": "休む",
+   "kana": "やすむ",
+   "meaning": "休息；请假；睡",
+   "ko": "쉬다（休息，歇）",
+   "ko_pron": "야스무",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "動詞/五段",
+   "ex": {
+    "ja": "会社を休みます。",
+    "zh": "向公司请假。",
+    "ko_pron": "카이샤오야스미마스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0124",
+   "surface": "分かる",
+   "kana": "わかる",
+   "meaning": "懂；明白",
+   "ko": "알다（知道，明白）",
+   "ko_pron": "와카루",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "動詞/五段",
+   "ex": {
+    "ja": "日本語が分かります。",
+    "zh": "懂日语。",
+    "ko_pron": "니혼고가와카리마스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0125",
+   "surface": "高い",
+   "kana": "たかい",
+   "meaning": "贵；高",
+   "ko": "높다（高） / 크다（大，高，长，壮阔） / 비싸다（贵）",
+   "ko_pron": "타카이",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "い形容詞",
+   "ex": {
+    "ja": "この本は高いです。",
+    "zh": "这本书贵。",
+    "ko_pron": "코노혼와타카이데스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0126",
+   "surface": "安い",
+   "kana": "やすい",
+   "meaning": "便宜",
+   "ko": "싸다（便宜，贱） / 헐하다（廉价，贱，便宜）",
+   "ko_pron": "야스이",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "い形容詞",
+   "ex": {
+    "ja": "電車よりバスのほうが安いです。",
+    "zh": "公交比电车便宜。",
+    "ko_pron": "덴샤요리바스노호우가야스이데스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0127",
+   "surface": "大きい",
+   "kana": "おおきい",
+   "meaning": "大",
+   "ko": "크다（大，高，长，壮阔）",
+   "ko_pron": "오오키이",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "い形容詞",
+   "ex": {
+    "ja": "大きい家です。",
+    "zh": "大房子。",
+    "ko_pron": "오오키이이에데스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0128",
+   "surface": "小さい",
+   "kana": "ちいさい",
+   "meaning": "小",
+   "ko": "작다（小， 矮）",
+   "ko_pron": "치이사이",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "い形容詞",
+   "ex": {
+    "ja": "小さい部屋です。",
+    "zh": "小房间。",
+    "ko_pron": "치이사이헤야데스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0129",
+   "surface": "新しい",
+   "kana": "あたらしい",
+   "meaning": "新",
+   "ko": "새롭다（新）",
+   "ko_pron": "아타라시이",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "い形容詞",
+   "ex": {
+    "ja": "新しいパソコンがほしいです。",
+    "zh": "想要新电脑。",
+    "ko_pron": "아타라시이파소콘가호시이데스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0130",
+   "surface": "美味しい",
+   "kana": "おいしい",
+   "meaning": "好吃；美味",
+   "ko": "맛나다（好吃，可口） / 맛있다（好吃，可口，香） / 맛깔나다（可口，美味）",
+   "ko_pron": "오이시이",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "い形容詞",
+   "ex": {
+    "ja": "この料理は美味しいです。",
+    "zh": "这道菜好吃。",
+    "ko_pron": "코노료우리와오이시이데스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0131",
+   "surface": "忙しい",
+   "kana": "いそがしい",
+   "meaning": "忙",
+   "ko": "바쁘다（忙，忙碌，紧张）",
+   "ko_pron": "이소가시이",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "い形容詞",
+   "ex": {
+    "ja": "今週は忙しいです。",
+    "zh": "这周很忙。",
+    "ko_pron": "콘슈우와이소가시이데스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0133",
+   "surface": "寒い",
+   "kana": "さむい",
+   "meaning": "冷（天气/体感）",
+   "ko": "춥다（冷）",
+   "ko_pron": "사무이",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "い形容詞",
+   "ex": {
+    "ja": "今日は昨日ほど寒くないです。",
+    "zh": "今天没昨天冷。",
+    "ko_pron": "쿄우와키노우호도사무쿠나이데스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0134",
+   "surface": "好き",
+   "kana": "すき",
+   "meaning": "喜欢",
+   "ko": "좋아하다",
+   "ko_pron": "스키",
    "ko_status": "ai_gloss",
    "optional": false,
-   "pos": "動詞/五段",
+   "pos": "な形容詞",
    "ex": {
-    "ja": "学校へ行きます。",
-    "zh": "去学校。",
-    "ko_pron": "가꼬우에이키마스."
+    "ja": "魚が好きです。",
+    "zh": "喜欢鱼。",
+    "ko_pron": "사카나가스키데스."
    },
-   "audio": "tts"
+   "audio": null
   },
   {
-   "id": "V0104",
-   "surface": "来る",
-   "kana": "くる",
-   "meaning": "来",
-   "ko": "오다（来，来到） / 나오다（来，出来）",
-   "ko_pron": "쿠루",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "動詞/カ変",
-   "ex": {
-    "ja": "友達が来ます。",
-    "zh": "朋友要来。",
-    "ko_pron": "토모다치가키마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0105",
-   "surface": "見る",
-   "kana": "みる",
-   "meaning": "看；观看",
-   "ko": "보다（看）",
-   "ko_pron": "미루",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "動詞/一段",
-   "ex": {
-    "ja": "映画を見ます。",
-    "zh": "看电影。",
-    "ko_pron": "에이가오미마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0106",
-   "surface": "買う",
-   "kana": "かう",
-   "meaning": "买",
-   "ko": "끊다（买） / 받다（买，沽） / 뽑다（买，购买）",
-   "ko_pron": "카우",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "動詞/五段",
-   "ex": {
-    "ja": "本を買います。",
-    "zh": "买书。",
-    "ko_pron": "혼오카이마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0107",
-   "surface": "する",
-   "kana": "する",
-   "meaning": "做；干",
-   "ko": "들다（做，服侍，伺侯）",
-   "ko_pron": "스루",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "動詞/サ変",
-   "ex": {
-    "ja": "宿題をします。",
-    "zh": "做作业。",
-    "ko_pron": "슈쿠다이오시마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0108",
-   "surface": "ある",
-   "kana": "ある",
-   "meaning": "有；存在（无生命）",
-   "ko": "있다（사물）",
-   "ko_pron": "아루",
+   "id": "V0135",
+   "surface": "元気",
+   "kana": "げんき",
+   "meaning": "精神；健康；有活力",
+   "ko": "건강하다 / 활기차다",
+   "ko_pron": "겐키",
    "ko_status": "ai_gloss",
    "optional": false,
-   "pos": "動詞/五段",
+   "pos": "な形容詞",
    "ex": {
-    "ja": "机の上に本があります。",
-    "zh": "桌上有书。",
-    "ko_pron": "쓰쿠에노우에니혼가아리마스."
+    "ja": "彼女は元気です。",
+    "zh": "她很精神。",
+    "ko_pron": "카노조와겐키데스."
    },
-   "audio": "tts"
+   "audio": null
   },
   {
-   "id": "V0109",
-   "surface": "いる",
-   "kana": "いる",
-   "meaning": "有；在（有生命）",
-   "ko": "있다（사람·동물）",
-   "ko_pron": "이루",
+   "id": "V0136",
+   "surface": "静か",
+   "kana": "しずか",
+   "meaning": "安静；宁静",
+   "ko": "조용하다",
+   "ko_pron": "시즈카",
    "ko_status": "ai_gloss",
    "optional": false,
-   "pos": "動詞/一段",
+   "pos": "な形容詞",
    "ex": {
-    "ja": "部屋に猫がいます。",
-    "zh": "房间里有猫。",
-    "ko_pron": "헤야니네코가이마스."
+    "ja": "この部屋は静かです。",
+    "zh": "这个房间安静。",
+    "ko_pron": "코노헤야와시즈카데스."
    },
-   "audio": "tts"
+   "audio": null
   },
   {
-   "id": "V0110",
-   "surface": "なる",
-   "kana": "なる",
-   "meaning": "变成；成为",
-   "ko": "되다（成为，变为）",
-   "ko_pron": "나루",
+   "id": "V0137",
+   "surface": "便利",
+   "kana": "べんり",
+   "meaning": "方便；便利",
+   "ko": "편리（便利，方便）",
+   "ko_pron": "벤리",
    "ko_status": "dictionary",
    "optional": false,
-   "pos": "動詞/五段",
+   "pos": "な形容詞",
    "ex": {
-    "ja": "医者になりました。",
-    "zh": "当上医生了。",
-    "ko_pron": "이샤니나리마시타."
+    "ja": "この地図は便利です。",
+    "zh": "这张地图很方便。",
+    "ko_pron": "코노치즈와벤리데스."
    },
-   "audio": "tts"
+   "audio": null
   },
   {
-   "id": "V0112",
-   "surface": "書く",
-   "kana": "かく",
-   "meaning": "写",
-   "ko": "쓰다（写） / 적다（写）",
-   "ko_pron": "카쿠",
+   "id": "V0139",
+   "surface": "とても",
+   "kana": "とても",
+   "meaning": "非常；很",
+   "ko": "된통（很，厉害） / 매우（非常，极其，很） / 몹시（十分，非常，太）",
+   "ko_pron": "토테모",
    "ko_status": "dictionary",
    "optional": false,
-   "pos": "動詞/五段",
+   "pos": "副詞",
    "ex": {
-    "ja": "名前を書いてください。",
-    "zh": "请写名字。",
-    "ko_pron": "나마에오카이테쿠다사이."
+    "ja": "この本はとても高いです。",
+    "zh": "这本书很贵。",
+    "ko_pron": "코노혼와토테모타카이데스."
    },
-   "audio": "tts"
+   "audio": null
   },
   {
-   "id": "V0113",
-   "surface": "読む",
-   "kana": "よむ",
-   "meaning": "读；念",
-   "ko": "읽다（读，朗读）",
-   "ko_pron": "요무",
+   "id": "V0140",
+   "surface": "少し",
+   "kana": "すこし",
+   "meaning": "稍微；一点",
+   "ko": "좀（一点点，有一点） / 살짝（稍微） / 슬쩍（稍微）",
+   "ko_pron": "스코시",
    "ko_status": "dictionary",
    "optional": false,
-   "pos": "動詞/五段",
+   "pos": "副詞",
    "ex": {
-    "ja": "本を読みます。",
-    "zh": "读书。",
-    "ko_pron": "혼오요미마스."
+    "ja": "少し休みます。",
+    "zh": "稍微休息一下。",
+    "ko_pron": "스코시야스미마스."
    },
-   "audio": "tts"
+   "audio": null
   },
   {
-   "id": "V0114",
-   "surface": "話す",
-   "kana": "はなす",
-   "meaning": "说；讲",
-   "ko": "말하다（说，讲） / 얘기하다（说，讲）",
-   "ko_pron": "하나스",
+   "id": "V0141",
+   "surface": "いつも",
+   "kana": "いつも",
+   "meaning": "总是；平时",
+   "ko": "노상（老是，总是） / 매양（回回，总是，老是） / 백날（天天，总是）",
+   "ko_pron": "이쓰모",
    "ko_status": "dictionary",
    "optional": false,
-   "pos": "動詞/五段",
+   "pos": "副詞",
    "ex": {
-    "ja": "日本語を話します。",
-    "zh": "说日语。",
-    "ko_pron": "니혼고오하나시마스."
+    "ja": "いつも電車で行きます。",
+    "zh": "总是坐电车去。",
+    "ko_pron": "이쓰모덴샤데이키마스."
    },
-   "audio": "tts"
+   "audio": null
   },
   {
-   "id": "V0115",
-   "surface": "聞く",
-   "kana": "きく",
-   "meaning": "听；问",
-   "ko": "듣다（听） / 묻다（问） / 질문하다（提问，问）",
-   "ko_pron": "키쿠",
+   "id": "V0142",
+   "surface": "時々",
+   "kana": "ときどき",
+   "meaning": "有时；时常",
+   "ko": "가끔가다（偶尔，有时）",
+   "ko_pron": "토키도키",
    "ko_status": "dictionary",
    "optional": false,
-   "pos": "動詞/五段",
+   "pos": "副詞",
    "ex": {
-    "ja": "音楽を聞きます。",
-    "zh": "听音乐。",
-    "ko_pron": "온가쿠오키키마스."
+    "ja": "時々映画を見ます。",
+    "zh": "有时看电影。",
+    "ko_pron": ""
    },
-   "audio": "tts"
+   "audio": null
   },
   {
-   "id": "V0116",
-   "surface": "待つ",
-   "kana": "まつ",
-   "meaning": "等；等待",
-   "ko": "참다（忍耐，等待） / 기다리다（等，等待）",
-   "ko_pron": "마쓰",
+   "id": "V0143",
+   "surface": "まだ",
+   "kana": "まだ",
+   "meaning": "还；尚未",
+   "ko": "채（还，尚） / 미처（尚未，来不及）",
+   "ko_pron": "마다",
    "ko_status": "dictionary",
-   "optional": true,
-   "pos": "動詞/五段",
+   "optional": false,
+   "pos": "副詞",
    "ex": {
-    "ja": "駅で友達を待ちます。",
-    "zh": "在车站等朋友。",
-    "ko_pron": "에키데토모다치오마치마스."
+    "ja": "まだ食べていません。",
+    "zh": "还没吃。",
+    "ko_pron": "마다타베테이마센."
    },
-   "audio": "tts"
+   "audio": null
   },
   {
-   "id": "V0117",
-   "surface": "乗る",
-   "kana": "のる",
-   "meaning": "乘；坐（车船）",
-   "ko": "타다（乘，乘坐） / 오르다（上，乘，骑） / 올라타다（乘，搭）",
-   "ko_pron": "노루",
+   "id": "V0144",
+   "surface": "もう",
+   "kana": "もう",
+   "meaning": "已经；再（一次）",
+   "ko": "벌써（已经） / 이미（已经）",
+   "ko_pron": "모우",
    "ko_status": "dictionary",
-   "optional": true,
-   "pos": "動詞/五段",
+   "optional": false,
+   "pos": "副詞",
    "ex": {
-    "ja": "電車に乗ります。",
-    "zh": "上电车。",
-    "ko_pron": "덴샤니노리마스."
+    "ja": "もう帰りました。",
+    "zh": "已经回去了。",
+    "ko_pron": "모우카에리마시타."
    },
-   "audio": "tts"
+   "audio": null
   },
   {
-   "id": "V0118",
-   "surface": "降る",
-   "kana": "ふる",
-   "meaning": "下（雨、雪等）",
-   "ko": "오다（下，来） / 내리다（下，落）",
-   "ko_pron": "후루",
+   "id": "V0145",
+   "surface": "そして",
+   "kana": "そして",
+   "meaning": "然后；而且",
+   "ko": "그리고（而且，并且，况且）",
+   "ko_pron": "소시테",
    "ko_status": "dictionary",
-   "optional": true,
-   "pos": "動詞/五段",
+   "optional": false,
+   "pos": "接続詞",
    "ex": {
-    "ja": "雨が降っています。",
-    "zh": "正在下雨。",
-    "ko_pron": "아메가후떼이마스."
+    "ja": "本を読んで、そして寝ます。",
+    "zh": "读书，然后睡觉。",
+    "ko_pron": "혼오욘데,소시테네마스."
    },
-   "audio": "tts"
+   "audio": null
+  },
+  {
+   "id": "V0147",
+   "surface": "だから",
+   "kana": "だから",
+   "meaning": "所以；因此",
+   "ko": "그러므로（因此，所以）",
+   "ko_pron": "다카라",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "接続詞",
+   "ex": {
+    "ja": "雨です。だから、行きません。",
+    "zh": "下雨，所以不去。",
+    "ko_pron": "아메데스.다카라,이키마센."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0148",
+   "surface": "でも",
+   "kana": "でも",
+   "meaning": "但是；不过；连…也",
+   "ko": "그런데（可是，但是）",
+   "ko_pron": "데모",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "接続詞/助詞",
+   "ex": {
+    "ja": "高いです。でも、買います。",
+    "zh": "贵，不过还是买。",
+    "ko_pron": "타카이데스.데모,카이마스."
+   },
+   "audio": null
   }
  ],
  "core_vocab_ids": [
-  "V0095",
-  "V0096",
-  "V0097",
-  "V0098",
-  "V0099",
-  "V0100",
-  "V0101",
-  "V0102",
-  "V0103",
-  "V0104",
-  "V0105",
-  "V0106",
-  "V0107",
-  "V0108",
-  "V0109",
-  "V0110",
-  "V0112",
-  "V0113",
-  "V0114",
-  "V0115"
+  "V0121",
+  "V0122",
+  "V0123",
+  "V0124",
+  "V0125",
+  "V0126",
+  "V0127",
+  "V0128",
+  "V0129",
+  "V0130",
+  "V0131",
+  "V0133",
+  "V0134",
+  "V0135",
+  "V0136",
+  "V0137",
+  "V0139",
+  "V0140",
+  "V0141",
+  "V0142",
+  "V0143",
+  "V0144",
+  "V0145",
+  "V0147",
+  "V0148"
  ],
- "extension_vocab_ids": [
-  "V0116",
-  "V0117",
-  "V0118"
- ],
+ "extension_vocab_ids": [],
  "grammar": [
   {
    "id": "G0011",
@@ -572,32 +597,41 @@
    "ko_pron": "〜에"
   },
   {
-   "id": "G0012",
-   "pattern": "と（并列／共同／引用）",
-   "meaning_zh": "和…／与…（一起）；「…」地",
-   "connection": "名詞 + と + 名詞／動詞；引用从句 + と + 思う/言う",
-   "usage": "完全并列、共同动作对象、引用内容",
-   "register_note": "と 表并列、共同、引用，口语书面通用。",
+   "id": "G0013",
+   "pattern": "から ～ まで",
+   "meaning_zh": "从…到…",
+   "connection": "名詞（时/处） + から + 名詞 + まで",
+   "usage": "时间/空间的起点与终点，成对使用",
+   "register_note": "から～まで 口语书面通用，正式通知也常见。",
    "examples": [
     {
-     "ja": "友達と映画を見ます。",
-     "zh": "和朋友看电影。",
+     "ja": "九時から五時まで勉強します。",
+     "zh": "从九点学习到五点。",
      "vocab_ids": [
-      "V0076",
-      "V0099",
-      "V0105"
+      "V0017",
+      "V0013",
+      "V0082"
+     ]
+    },
+    {
+     "ja": "駅から学校まで行きます。",
+     "zh": "从车站走到学校。",
+     "vocab_ids": [
+      "V0041",
+      "V0039",
+      "V0103"
      ]
     }
    ],
    "prerequisites": [
-    "G0001"
+    "G0009"
    ],
    "compare": [],
    "common_errors": [
     {
-     "wrong": "友達も映画を見ます。",
-     "why": "「も」是追加「也」，共同动作用 と；中文「和/也」易混",
-     "fix": "友達と映画を見ます。",
+     "wrong": "九時から五時に 勉強します。",
+     "why": "终点用 まで，に 是时点/归着；中文「到五点」误对应 に",
+     "fix": "九時から五時まで勉強します。",
      "learner": "zh"
     }
    ],
@@ -610,1110 +644,1380 @@
    ],
    "review_status": "needs_review",
    "provenance": "self_reviewed",
-   "ko_equiv": "와/과 / 하고 / (이)라고",
-   "ko_diff": "韩语并列用와/과、口语하고，引用用라고且随词性变；日语と一形通用。",
-   "ko_pron": "토"
+   "ko_equiv": "부터 ~ 까지",
+   "ko_diff": "韩语起点用부터、终点까지，与日语基本对应；但韩语时间起点口语可用에，日语から不可省。",
+   "ko_pron": "카라 ～ 마데"
   }
  ],
  "unit_questions": [],
  "practice": [
   {
-   "id": "P-006-V0095-m-fa765e4204d0",
-   "qid": "P-006-V0095-m-fa765e4204d0",
+   "id": "P-006-V0121-m-d5cb96e4e0cc",
+   "qid": "P-006-V0121-m-d5cb96e4e0cc",
    "type": "mcq",
-   "prompt": "本课词条「薬」（例句语境：吃药。）的释义是哪一项？",
+   "prompt": "本课词条「教える」（例句语境：教日语。）的释义是哪一项？",
    "options": [
-    "近",
-    "雾",
-    "聊天；话多",
-    "药"
+    "教；告诉",
+    "花瓶",
+    "高价；昂贵",
+    "有钱人"
    ],
-   "h": "e944459e",
+   "h": "7682a1d4",
    "oh": [
-    "5330757c",
-    "7a25ade1",
-    "381197f6",
-    "e944459e"
+    "7682a1d4",
+    "a1247bde",
+    "79712ad4",
+    "201d526f"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V0095"
+    "V0121"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0095-r-2bc38da23da7",
-   "qid": "P-006-V0095-r-2bc38da23da7",
+   "id": "P-006-V0121-r-f60d9841975b",
+   "qid": "P-006-V0121-r-f60d9841975b",
    "type": "mcq",
-   "prompt": "本课词条「薬」（药）的假名读音是哪一项？",
+   "prompt": "本课词条「教える」（教；告诉）的假名读音是哪一项？",
    "options": [
-    "いいん",
-    "さんせい",
-    "かける",
-    "くすり"
+    "スピーチ",
+    "おしえる",
+    "のこす",
+    "ちのう"
    ],
-   "h": "6013e97d",
+   "h": "40aed2ab",
    "oh": [
-    "62b84a92",
-    "3a223606",
-    "4b75027e",
-    "6013e97d"
+    "9299ff0f",
+    "40aed2ab",
+    "4a6342cd",
+    "bfb9a1e0"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V0095"
+    "V0121"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0096-m-4643433d045b",
-   "qid": "P-006-V0096-m-4643433d045b",
+   "id": "P-006-V0122-m-91427b3bedd2",
+   "qid": "P-006-V0122-m-91427b3bedd2",
    "type": "mcq",
-   "prompt": "本课词条「雨」（例句语境：正在下雨。）的释义是哪一项？",
+   "prompt": "本课词条「帰る」（例句语境：回家。）的释义是哪一项？",
    "options": [
-    "金属",
-    "讲述；谈论",
-    "雨",
-    "慢；晚"
+    "摔倒",
+    "学生",
+    "打电话；挂",
+    "回；回家"
    ],
-   "h": "6c2597d7",
+   "h": "e41c2df2",
    "oh": [
-    "8fac286",
-    "4f5e4c02",
-    "6c2597d7",
-    "24546960"
+    "4a759c83",
+    "57de17f2",
+    "e0f87561",
+    "e41c2df2"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V0096"
+    "V0122"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0096-r-056847bb1b25",
-   "qid": "P-006-V0096-r-056847bb1b25",
+   "id": "P-006-V0122-r-6ab6696f822b",
+   "qid": "P-006-V0122-r-6ab6696f822b",
    "type": "mcq",
-   "prompt": "本课词条「雨」（雨）的假名读音是哪一项？",
+   "prompt": "本课词条「帰る」（回；回家）的假名读音是哪一项？",
    "options": [
-    "だいり",
-    "はじめる",
-    "あめ",
-    "きおん"
+    "かえる",
+    "たす",
+    "しまう",
+    "ぎん"
    ],
-   "h": "8369874c",
+   "h": "92d3de17",
    "oh": [
-    "73322831",
-    "18869666",
-    "8369874c",
-    "9cbd995f"
+    "92d3de17",
+    "9ffdd195",
+    "a870b59a",
+    "d40fae6"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V0096"
+    "V0122"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0097-m-88e42498bcac",
-   "qid": "P-006-V0097-m-88e42498bcac",
+   "id": "P-006-V0123-m-48925351207d",
+   "qid": "P-006-V0123-m-48925351207d",
    "type": "mcq",
-   "prompt": "本课词条「天気」（例句语境：今天天气好。）的释义是哪一项？",
+   "prompt": "本课词条「休む」（例句语境：向公司请假。）的释义是哪一项？",
    "options": [
-    "解开；解除",
-    "天气",
-    "茶",
-    "性格"
+    "关联",
+    "景气；行情",
+    "休息；请假；睡",
+    "兔子"
    ],
-   "h": "47d34bb0",
+   "h": "d355e08c",
    "oh": [
-    "4e7bd228",
-    "47d34bb0",
-    "3244b889",
-    "81cbef8e"
+    "a094b6e2",
+    "b90cdc4",
+    "d355e08c",
+    "9de4c6e9"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V0097"
+    "V0123"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0097-r-b4b7c8d72848",
-   "qid": "P-006-V0097-r-b4b7c8d72848",
+   "id": "P-006-V0123-r-928a76792050",
+   "qid": "P-006-V0123-r-928a76792050",
    "type": "mcq",
-   "prompt": "本课词条「天気」（天气）的假名读音是哪一项？",
+   "prompt": "本课词条「休む」（休息；请假；睡）的假名读音是哪一项？",
    "options": [
-    "くるしい",
-    "あいて",
-    "ちょうど",
-    "てんき"
+    "やすむ",
+    "ひろう",
+    "ばったり",
+    "たま"
    ],
-   "h": "7c3aca89",
+   "h": "7993639a",
    "oh": [
-    "d1f94284",
-    "1ca89cef",
-    "cc82d774",
-    "7c3aca89"
+    "7993639a",
+    "74ce20a",
+    "13471971",
+    "78fd9430"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V0097"
+    "V0123"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0098-m-d37abb6250d2",
-   "qid": "P-006-V0098-m-d37abb6250d2",
+   "id": "P-006-V0124-m-5cff014cfa7d",
+   "qid": "P-006-V0124-m-5cff014cfa7d",
    "type": "mcq",
-   "prompt": "本课词条「猫」（例句语境：房间里有猫。）的释义是哪一项？",
+   "prompt": "本课词条「分かる」（例句语境：懂日语。）的释义是哪一项？",
    "options": [
-    "终于；到底",
-    "猫",
-    "想；认为",
-    "关系；关联"
+    "因为",
+    "天气预报",
+    "鸟",
+    "懂；明白"
    ],
-   "h": "2e8c20aa",
+   "h": "b7d2ad13",
    "oh": [
-    "cbd1641f",
-    "2e8c20aa",
-    "4fb0e8d5",
-    "13575727"
+    "877a66df",
+    "6355867b",
+    "191a102e",
+    "b7d2ad13"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V0098"
+    "V0124"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0098-r-636222fabaf9",
-   "qid": "P-006-V0098-r-636222fabaf9",
+   "id": "P-006-V0124-r-63d7415cd60d",
+   "qid": "P-006-V0124-r-63d7415cd60d",
    "type": "mcq",
-   "prompt": "本课词条「猫」（猫）的假名读音是哪一项？",
+   "prompt": "本课词条「分かる」（懂；明白）的假名读音是哪一项？",
    "options": [
-    "としょ",
-    "ねこ",
-    "ぶどう",
-    "ならう"
+    "かがやく",
+    "えんそう",
+    "わかる",
+    "しんせつ"
    ],
-   "h": "9dee00b1",
+   "h": "920172ec",
    "oh": [
-    "447bf385",
-    "9dee00b1",
-    "8207d652",
-    "f79c7ae"
+    "c547937",
+    "7d70a6ff",
+    "920172ec",
+    "3688d938"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V0098"
+    "V0124"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0099-m-2097d3fd1908",
-   "qid": "P-006-V0099-m-2097d3fd1908",
+   "id": "P-006-V0125-m-9c0f8017125d",
+   "qid": "P-006-V0125-m-9c0f8017125d",
    "type": "mcq",
-   "prompt": "本课词条「映画」（例句语境：看电影。）的释义是哪一项？",
+   "prompt": "本课词条「高い」（例句语境：这本书贵。）的释义是哪一项？",
    "options": [
-    "刑警；刑事",
-    "会议室",
-    "具备；准备",
-    "电影"
+    "被找到；（东西）找到了（自动）",
+    "角落",
+    "暗；阴沉",
+    "贵；高"
    ],
-   "h": "ff1da773",
+   "h": "599528b",
    "oh": [
-    "d69e0ea3",
-    "333df307",
-    "46621977",
-    "ff1da773"
+    "950377d6",
+    "ba81b898",
+    "cd46b470",
+    "599528b"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V0099"
+    "V0125"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0099-r-072f3019c72b",
-   "qid": "P-006-V0099-r-072f3019c72b",
+   "id": "P-006-V0125-r-10867859dd86",
+   "qid": "P-006-V0125-r-10867859dd86",
    "type": "mcq",
-   "prompt": "本课词条「映画」（电影）的假名读音是哪一项？",
+   "prompt": "本课词条「高い」（贵；高）的假名读音是哪一项？",
    "options": [
-    "ちか",
-    "しゅっしん",
-    "えいが",
-    "ていあん"
+    "さようなら",
+    "いんたい",
+    "たかい",
+    "かいしゃいん"
    ],
-   "h": "1fb8a05f",
+   "h": "11920a1",
    "oh": [
-    "8de4ed25",
-    "e76b0448",
-    "1fb8a05f",
-    "a18b5e44"
+    "d068c4eb",
+    "9f7776eb",
+    "11920a1",
+    "cbf34131"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V0099"
+    "V0125"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0100-m-7e29dcd18313",
-   "qid": "P-006-V0100-m-7e29dcd18313",
+   "id": "P-006-V0126-m-f152096da0c4",
+   "qid": "P-006-V0126-m-f152096da0c4",
    "type": "mcq",
-   "prompt": "本课词条「音楽」（例句语境：听音乐。）的释义是哪一项？",
+   "prompt": "本课词条「安い」（例句语境：公交比电车便宜。）的释义是哪一项？",
    "options": [
-    "于是；那么",
-    "脱（衣鞋）",
-    "不",
-    "音乐"
-   ],
-   "h": "ba3ee816",
-   "oh": [
-    "40241428",
-    "ccb3a821",
-    "86163d8",
-    "ba3ee816"
-   ],
-   "day": 6,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0100"
-   ],
-   "source_day": 6,
-   "optional": true
-  },
-  {
-   "id": "P-006-V0100-r-8939b8c76557",
-   "qid": "P-006-V0100-r-8939b8c76557",
-   "type": "mcq",
-   "prompt": "本课词条「音楽」（音乐）的假名读音是哪一项？",
-   "options": [
-    "しょうぼう",
-    "どりょく",
-    "しんぶん",
-    "おんがく"
-   ],
-   "h": "64beb247",
-   "oh": [
-    "5317324d",
-    "fa1c48e8",
-    "e615a488",
-    "64beb247"
-   ],
-   "day": 6,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0100"
-   ],
-   "source_day": 6,
-   "optional": true
-  },
-  {
-   "id": "P-006-V0101-m-6ce906f27877",
-   "qid": "P-006-V0101-m-6ce906f27877",
-   "type": "mcq",
-   "prompt": "本课词条「食べる」（例句语境：吃饭。）的释义是哪一项？",
-   "options": [
-    "(我)母亲",
-    "相机",
-    "吃",
-    "大街；通风"
-   ],
-   "h": "651a2b2",
-   "oh": [
-    "ad8b91e2",
-    "d7476207",
-    "651a2b2",
-    "21bf4328"
-   ],
-   "day": 6,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0101"
-   ],
-   "source_day": 6,
-   "optional": true
-  },
-  {
-   "id": "P-006-V0101-r-a580b2f33e7d",
-   "qid": "P-006-V0101-r-a580b2f33e7d",
-   "type": "mcq",
-   "prompt": "本课词条「食べる」（吃）的假名读音是哪一项？",
-   "options": [
-    "ともだち",
-    "ビル",
-    "たいいん",
-    "たべる"
-   ],
-   "h": "3a5ba81a",
-   "oh": [
-    "6b434494",
-    "e41f5deb",
-    "255abc07",
-    "3a5ba81a"
-   ],
-   "day": 6,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0101"
-   ],
-   "source_day": 6,
-   "optional": true
-  },
-  {
-   "id": "P-006-V0102-m-34c745e9684c",
-   "qid": "P-006-V0102-m-34c745e9684c",
-   "type": "mcq",
-   "prompt": "本课词条「飲む」（例句语境：喝水。）的释义是哪一项？",
-   "options": [
+    "结果；终究",
     "检查",
-    "神",
-    "响；鸣",
-    "喝；吞（药）"
+    "便宜",
+    "多亏；托福"
    ],
-   "h": "898fe2a3",
+   "h": "f5a25cd6",
    "oh": [
+    "43e25635",
     "c4d85e4e",
-    "db7be001",
-    "4504b5ce",
-    "898fe2a3"
+    "f5a25cd6",
+    "4ae8ae46"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V0102"
+    "V0126"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0102-r-c466481756a0",
-   "qid": "P-006-V0102-r-c466481756a0",
+   "id": "P-006-V0126-r-a942c67458e9",
+   "qid": "P-006-V0126-r-a942c67458e9",
    "type": "mcq",
-   "prompt": "本课词条「飲む」（喝；吞（药））的假名读音是哪一项？",
+   "prompt": "本课词条「安い」（便宜）的假名读音是哪一项？",
    "options": [
-    "こんにち",
-    "ながれる",
-    "れいぼう",
-    "のむ"
+    "やすい",
+    "セーター",
+    "きょか",
+    "とりかえる"
    ],
-   "h": "dcc452a3",
+   "h": "35948b8e",
    "oh": [
-    "429a283b",
-    "df567f42",
-    "d7e804f",
-    "dcc452a3"
+    "35948b8e",
+    "e9cfdcf1",
+    "557b4c72",
+    "19084a3d"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V0102"
+    "V0126"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0103-m-10ed40fcff04",
-   "qid": "P-006-V0103-m-10ed40fcff04",
+   "id": "P-006-V0127-m-6c2bb8a56546",
+   "qid": "P-006-V0127-m-6c2bb8a56546",
    "type": "mcq",
-   "prompt": "本课词条「行く」（例句语境：去学校。）的释义是哪一项？",
+   "prompt": "本课词条「大きい」（例句语境：大房子。）的释义是哪一项？",
    "options": [
-    "成功",
-    "去",
-    "态度",
-    "洗手间"
+    "旁边；附近",
+    "吸；抽（烟）",
+    "大",
+    "下下个月"
    ],
-   "h": "be59105a",
+   "h": "2249efc6",
    "oh": [
-    "e5c9f170",
-    "be59105a",
-    "76d3811e",
-    "e911ffe9"
+    "8720e67b",
+    "d6ae61e1",
+    "2249efc6",
+    "6704a709"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V0103"
+    "V0127"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0103-r-8e9cdf5689c3",
-   "qid": "P-006-V0103-r-8e9cdf5689c3",
+   "id": "P-006-V0127-r-36ad1d45160e",
+   "qid": "P-006-V0127-r-36ad1d45160e",
    "type": "mcq",
-   "prompt": "本课词条「行く」（去）的假名读音是哪一项？",
+   "prompt": "本课词条「大きい」（大）的假名读音是哪一项？",
    "options": [
-    "いく",
-    "とおりすぎる",
-    "じょうとう",
-    "くれ"
+    "たたかう",
+    "おおきい",
+    "ようじ",
+    "スクリーン"
    ],
-   "h": "695be6d4",
+   "h": "32b42684",
    "oh": [
-    "695be6d4",
-    "32eb6205",
-    "78831198",
-    "ea401836"
+    "d8a870da",
+    "32b42684",
+    "d610d961",
+    "c9d1acc"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V0103"
+    "V0127"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0104-m-96d3335846b7",
-   "qid": "P-006-V0104-m-96d3335846b7",
+   "id": "P-006-V0128-m-93bc9ff603c9",
+   "qid": "P-006-V0128-m-93bc9ff603c9",
    "type": "mcq",
-   "prompt": "本课词条「来る」（例句语境：朋友要来。）的释义是哪一项？",
+   "prompt": "本课词条「小さい」（例句语境：小房间。）的释义是哪一项？",
    "options": [
-    "完全；完美",
-    "害处",
-    "来",
-    "大衣；球场"
+    "小",
+    "心；心情",
+    "会；团体",
+    "吃惊"
    ],
-   "h": "e09e89e0",
+   "h": "a4510fe",
    "oh": [
-    "bc9bc30",
-    "bff3edb2",
-    "e09e89e0",
-    "837f86a5"
+    "a4510fe",
+    "bf850a07",
+    "b6283989",
+    "6ab522e8"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V0104"
+    "V0128"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0104-r-0b3399795c39",
-   "qid": "P-006-V0104-r-0b3399795c39",
+   "id": "P-006-V0128-r-9cdea9533790",
+   "qid": "P-006-V0128-r-9cdea9533790",
    "type": "mcq",
-   "prompt": "本课词条「来る」（来）的假名读音是哪一项？",
+   "prompt": "本课词条「小さい」（小）的假名读音是哪一项？",
    "options": [
-    "そふ",
-    "しゅみ",
-    "くる",
-    "かる"
+    "ちいさい",
+    "うつす",
+    "ガソリン",
+    "きもち"
    ],
-   "h": "ed401cef",
+   "h": "d5dd8fa9",
    "oh": [
-    "7ff92207",
-    "709eb2e2",
-    "ed401cef",
-    "85487393"
+    "d5dd8fa9",
+    "8604a49a",
+    "1226d1d1",
+    "7fa1229d"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V0104"
+    "V0128"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0105-m-d45642329785",
-   "qid": "P-006-V0105-m-d45642329785",
+   "id": "P-006-V0129-m-4f1cfcc5ddaf",
+   "qid": "P-006-V0129-m-4f1cfcc5ddaf",
    "type": "mcq",
-   "prompt": "本课词条「見る」（例句语境：看电影。）的释义是哪一项？",
+   "prompt": "本课词条「新しい」（例句语境：想要新电脑。）的释义是哪一项？",
    "options": [
-    "看；观看",
-    "这边；这位",
-    "老师；医生/律师等",
-    "取决于；一…就"
+    "赏花；赏樱",
+    "新",
+    "柔软；温和",
+    "不久；改天"
    ],
-   "h": "c675468",
+   "h": "b59b202f",
    "oh": [
-    "c675468",
-    "87b2a79e",
-    "c5ace6d6",
-    "b08aa6ca"
+    "1c35f5a2",
+    "b59b202f",
+    "6609f280",
+    "941751da"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V0105"
+    "V0129"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0105-r-a5da7b80e14b",
-   "qid": "P-006-V0105-r-a5da7b80e14b",
+   "id": "P-006-V0129-r-8eaa70d4c4f1",
+   "qid": "P-006-V0129-r-8eaa70d4c4f1",
    "type": "mcq",
-   "prompt": "本课词条「見る」（看；观看）的假名读音是哪一项？",
+   "prompt": "本课词条「新しい」（新）的假名读音是哪一项？",
    "options": [
-    "みる",
-    "りょうしん",
-    "えいが",
-    "ざっと"
+    "そちら",
+    "いしゃ",
+    "あたらしい",
+    "さいしょ"
    ],
-   "h": "db57d9f",
+   "h": "9d7e0976",
    "oh": [
-    "db57d9f",
-    "516d94ea",
-    "1fb8a05f",
-    "f310dbe2"
+    "fb49b926",
+    "a2bd441d",
+    "9d7e0976",
+    "418ab122"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V0105"
+    "V0129"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0106-m-66188101ee71",
-   "qid": "P-006-V0106-m-66188101ee71",
+   "id": "P-006-V0130-m-08b21424b2c1",
+   "qid": "P-006-V0130-m-08b21424b2c1",
    "type": "mcq",
-   "prompt": "本课词条「買う」（例句语境：买书。）的释义是哪一项？",
+   "prompt": "本课词条「美味しい」（例句语境：这道菜好吃。）的释义是哪一项？",
    "options": [
-    "点心；糕点",
-    "联络；联系",
-    "买",
-    "哭"
+    "喷气式飞机",
+    "好吃；美味",
+    "撑（伞）；照射",
+    "拜访"
    ],
-   "h": "f56145ef",
+   "h": "2c306a59",
    "oh": [
-    "77c4243c",
-    "39d4219b",
-    "f56145ef",
-    "6850a9f8"
+    "efbc47cf",
+    "2c306a59",
+    "c4032ad1",
+    "2f133ec"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V0106"
+    "V0130"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0106-r-b23a465847b8",
-   "qid": "P-006-V0106-r-b23a465847b8",
+   "id": "P-006-V0130-r-01cb495c9bb9",
+   "qid": "P-006-V0130-r-01cb495c9bb9",
    "type": "mcq",
-   "prompt": "本课词条「買う」（买）的假名读音是哪一项？",
+   "prompt": "本课词条「美味しい」（好吃；美味）的假名读音是哪一项？",
    "options": [
-    "はく",
-    "ただしい",
-    "かう",
-    "ぜいたく"
+    "ばめん",
+    "グラス",
+    "あたり",
+    "おいしい"
    ],
-   "h": "5049b324",
+   "h": "fd2d59a0",
    "oh": [
-    "69c15f03",
-    "79f2a619",
-    "5049b324",
-    "4324e25b"
+    "b82ec53b",
+    "491d4d51",
+    "674c3a2c",
+    "fd2d59a0"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V0106"
+    "V0130"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0107-m-3362fa9c3a1e",
-   "qid": "P-006-V0107-m-3362fa9c3a1e",
+   "id": "P-006-V0131-m-8c32b765b1e9",
+   "qid": "P-006-V0131-m-8c32b765b1e9",
    "type": "mcq",
-   "prompt": "本课词条「する」（例句语境：做作业。）的释义是哪一项？",
+   "prompt": "本课词条「忙しい」（例句语境：这周很忙。）的释义是哪一项？",
    "options": [
-    "时代",
-    "很喜欢",
-    "预计；可能性",
-    "做；干"
+    "亿",
+    "风",
+    "范围",
+    "忙"
    ],
-   "h": "39e83b10",
+   "h": "5c459214",
    "oh": [
-    "a6f24d9e",
-    "6ead7de9",
-    "70029b98",
-    "39e83b10"
+    "ba60e90e",
+    "4a1bf051",
+    "9049d332",
+    "5c459214"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V0107"
+    "V0131"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0107-r-a3cc7f90880c",
-   "qid": "P-006-V0107-r-a3cc7f90880c",
+   "id": "P-006-V0131-r-31c9da279679",
+   "qid": "P-006-V0131-r-31c9da279679",
    "type": "mcq",
-   "prompt": "本课词条「する」（做；干）的假名读音是哪一项？",
+   "prompt": "本课词条「忙しい」（忙）的假名读音是哪一项？",
    "options": [
-    "ぐたい",
-    "うわ",
-    "する",
-    "せつやく"
+    "しゅくはく",
+    "そんけい",
+    "いそがしい",
+    "ひなん"
    ],
-   "h": "ae0264cd",
+   "h": "84812621",
    "oh": [
-    "cc1f3fdc",
-    "e9612d82",
-    "ae0264cd",
-    "be2c418f"
+    "cd372e18",
+    "7d50101c",
+    "84812621",
+    "1ca5ba5a"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V0107"
+    "V0131"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0108-m-acf2c3a5297b",
-   "qid": "P-006-V0108-m-acf2c3a5297b",
+   "id": "P-006-V0133-m-30bb94c73006",
+   "qid": "P-006-V0133-m-30bb94c73006",
    "type": "mcq",
-   "prompt": "本课词条「ある」（例句语境：桌上有书。）的释义是哪一项？",
+   "prompt": "本课词条「寒い」（例句语境：今天没昨天冷。）的释义是哪一项？",
    "options": [
-    "轻",
-    "放；放置",
-    "或者；也许",
-    "有；存在（无生命）"
+    "窄",
+    "前辈；学长",
+    "负责；担任",
+    "冷（天气/体感）"
    ],
-   "h": "abd8ad90",
+   "h": "9d591f79",
    "oh": [
-    "fd31811a",
-    "c837633a",
-    "43de378a",
-    "abd8ad90"
+    "81800b53",
+    "b87816de",
+    "ceddf258",
+    "9d591f79"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V0108"
+    "V0133"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0108-r-06ac7ed4205c",
-   "qid": "P-006-V0108-r-06ac7ed4205c",
+   "id": "P-006-V0133-r-2280766dccb2",
+   "qid": "P-006-V0133-r-2280766dccb2",
    "type": "mcq",
-   "prompt": "本课词条「ある」（有；存在（无生命））的假名读音是哪一项？",
+   "prompt": "本课词条「寒い」（冷（天气/体感））的假名读音是哪一项？",
    "options": [
-    "だいぶ",
-    "とき",
-    "ある",
-    "アイロン"
+    "さむい",
+    "たたく",
+    "はいゆう",
+    "しんたい"
    ],
-   "h": "8d69970a",
+   "h": "7ba67fbc",
    "oh": [
-    "1f31a3f5",
-    "6bc81dee",
-    "8d69970a",
-    "b52f638b"
+    "7ba67fbc",
+    "d6ce1204",
+    "a927ee9a",
+    "6b0604c"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V0108"
+    "V0133"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0109-m-358bfaecb021",
-   "qid": "P-006-V0109-m-358bfaecb021",
+   "id": "P-006-V0134-m-98da93a5495c",
+   "qid": "P-006-V0134-m-98da93a5495c",
    "type": "mcq",
-   "prompt": "本课词条「いる」（例句语境：房间里有猫。）的释义是哪一项？",
+   "prompt": "本课词条「好き」（例句语境：喜欢鱼。）的释义是哪一项？",
    "options": [
-    "处理",
-    "有；在（有生命）",
-    "事态",
-    "爆炸"
+    "回；回家",
+    "正；正确",
+    "话；故事",
+    "喜欢"
    ],
-   "h": "f52905f7",
+   "h": "9074f6bb",
    "oh": [
-    "dc322c4f",
-    "f52905f7",
-    "ed543891",
-    "d8283353"
+    "e41c2df2",
+    "615f722",
+    "8f6afa7d",
+    "9074f6bb"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V0109"
+    "V0134"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0109-r-1b17164c3f18",
-   "qid": "P-006-V0109-r-1b17164c3f18",
+   "id": "P-006-V0134-r-0aa1fd6b675c",
+   "qid": "P-006-V0134-r-0aa1fd6b675c",
    "type": "mcq",
-   "prompt": "本课词条「いる」（有；在（有生命））的假名读音是哪一项？",
+   "prompt": "本课词条「好き」（喜欢）的假名读音是哪一项？",
    "options": [
-    "とどく",
-    "いる",
-    "けんこう",
-    "しゅふ"
+    "てんこう",
+    "はたらき",
+    "すき",
+    "たいくつ"
    ],
-   "h": "a55c4548",
+   "h": "6803899b",
    "oh": [
-    "2d79e14f",
-    "a55c4548",
-    "cfe6d884",
-    "769ebc54"
+    "6fc9e283",
+    "7daec959",
+    "6803899b",
+    "a3ae9da5"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V0109"
+    "V0134"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0110-m-f314c841fa6e",
-   "qid": "P-006-V0110-m-f314c841fa6e",
+   "id": "P-006-V0135-m-9c5a8a1c6573",
+   "qid": "P-006-V0135-m-9c5a8a1c6573",
    "type": "mcq",
-   "prompt": "本课词条「なる」（例句语境：当上医生了。）的释义是哪一项？",
+   "prompt": "本课词条「元気」（例句语境：她很精神。）的释义是哪一项？",
    "options": [
-    "扶起；唤醒",
-    "也就是说",
-    "变成；成为",
-    "思考；考虑"
+    "善；善行",
+    "脱（衣鞋）",
+    "精神；健康；有活力",
+    "剪刀"
    ],
-   "h": "2c6ac2dc",
+   "h": "b4f4a4f8",
    "oh": [
-    "ef2946a5",
-    "e16fe4f6",
-    "2c6ac2dc",
-    "e7d9c982"
+    "527c1228",
+    "ccb3a821",
+    "b4f4a4f8",
+    "48adcac7"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V0110"
+    "V0135"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0110-r-dc6da9a5ae6d",
-   "qid": "P-006-V0110-r-dc6da9a5ae6d",
+   "id": "P-006-V0135-r-46acbd334ef1",
+   "qid": "P-006-V0135-r-46acbd334ef1",
    "type": "mcq",
-   "prompt": "本课词条「なる」（变成；成为）的假名读音是哪一项？",
+   "prompt": "本课词条「元気」（精神；健康；有活力）的假名读音是哪一项？",
    "options": [
-    "かげ",
-    "もの",
-    "がくしゅう",
+    "バン",
+    "はっこう",
+    "げんき",
     "なる"
    ],
-   "h": "6dce3142",
+   "h": "711b9f4d",
    "oh": [
-    "5c49c608",
-    "6a304f31",
-    "f083639e",
+    "41ee4b4",
+    "8b380c4e",
+    "711b9f4d",
     "6dce3142"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V0110"
+    "V0135"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0112-m-615dc70275f5",
-   "qid": "P-006-V0112-m-615dc70275f5",
+   "id": "P-006-V0136-m-60ca5f9509fb",
+   "qid": "P-006-V0136-m-60ca5f9509fb",
    "type": "mcq",
-   "prompt": "本课词条「書く」（例句语境：请写名字。）的释义是哪一项？",
+   "prompt": "本课词条「静か」（例句语境：这个房间安静。）的释义是哪一项？",
    "options": [
-    "责任",
-    "流动；漂流",
-    "写",
-    "城市；都市"
+    "千",
+    "晚上好",
+    "安静；宁静",
+    "终点；球门"
    ],
-   "h": "9c55b4d4",
+   "h": "67f74f82",
    "oh": [
-    "71b92acb",
-    "6391f0fc",
-    "9c55b4d4",
-    "e3b0cc9"
+    "c6591cf2",
+    "493546a8",
+    "67f74f82",
+    "bfade658"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V0112"
+    "V0136"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0112-r-8e42bdfe2af0",
-   "qid": "P-006-V0112-r-8e42bdfe2af0",
+   "id": "P-006-V0136-r-b35b23297e1d",
+   "qid": "P-006-V0136-r-b35b23297e1d",
    "type": "mcq",
-   "prompt": "本课词条「書く」（写）的假名读音是哪一项？",
+   "prompt": "本课词条「静か」（安静；宁静）的假名读音是哪一项？",
    "options": [
-    "いちにち",
-    "きょう",
-    "とりにく",
-    "かく"
-   ],
-   "h": "4949a81f",
-   "oh": [
-    "f2c3fb2",
-    "5a7b5451",
-    "786767b1",
-    "4949a81f"
-   ],
-   "day": 6,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0112"
-   ],
-   "source_day": 6,
-   "optional": true
-  },
-  {
-   "id": "P-006-V0113-m-a5fe83de0019",
-   "qid": "P-006-V0113-m-a5fe83de0019",
-   "type": "mcq",
-   "prompt": "本课词条「読む」（例句语境：读书。）的释义是哪一项？",
-   "options": [
-    "读；念",
-    "季节",
-    "中央；中间",
-    "学问"
-   ],
-   "h": "93dd9df2",
-   "oh": [
-    "93dd9df2",
-    "59f8b670",
-    "c1e01982",
-    "47e22055"
-   ],
-   "day": 6,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0113"
-   ],
-   "source_day": 6,
-   "optional": true
-  },
-  {
-   "id": "P-006-V0113-r-254cd1613a6b",
-   "qid": "P-006-V0113-r-254cd1613a6b",
-   "type": "mcq",
-   "prompt": "本课词条「読む」（读；念）的假名读音是哪一项？",
-   "options": [
-    "ゆび",
     "よむ",
-    "たな",
-    "にんぎょう"
-   ],
-   "h": "e80dc015",
-   "oh": [
-    "7d25dfbe",
-    "e80dc015",
-    "6cfd814c",
-    "794f5a5a"
-   ],
-   "day": 6,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0113"
-   ],
-   "source_day": 6,
-   "optional": true
-  },
-  {
-   "id": "P-006-V0114-m-5f0fd5091a3b",
-   "qid": "P-006-V0114-m-5f0fd5091a3b",
-   "type": "mcq",
-   "prompt": "本课词条「話す」（例句语境：说日语。）的释义是哪一项？",
-   "options": [
-    "注入；倾注",
-    "稻子",
-    "作业",
-    "说；讲"
-   ],
-   "h": "557d8b0e",
-   "oh": [
-    "ba3edab9",
-    "efc2963e",
-    "f2c907d3",
-    "557d8b0e"
-   ],
-   "day": 6,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0114"
-   ],
-   "source_day": 6,
-   "optional": true
-  },
-  {
-   "id": "P-006-V0114-r-7bb705e65d5b",
-   "qid": "P-006-V0114-r-7bb705e65d5b",
-   "type": "mcq",
-   "prompt": "本课词条「話す」（说；讲）的假名读音是哪一项？",
-   "options": [
+    "しずか",
     "はなす",
-    "せいけつ",
-    "かぎ",
-    "たいかい"
+    "はじめ"
    ],
-   "h": "d9d8be9f",
+   "h": "859019fd",
    "oh": [
+    "e80dc015",
+    "859019fd",
     "d9d8be9f",
-    "81abe6ef",
-    "4849a68c",
-    "93b77ed1"
+    "5d981749"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V0114"
+    "V0136"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0115-m-99dc6efcd762",
-   "qid": "P-006-V0115-m-99dc6efcd762",
+   "id": "P-006-V0137-m-d5d981be5887",
+   "qid": "P-006-V0137-m-d5d981be5887",
    "type": "mcq",
-   "prompt": "本课词条「聞く」（例句语境：听音乐。）的释义是哪一项？",
+   "prompt": "本课词条「便利」（例句语境：这张地图很方便。）的释义是哪一项？",
    "options": [
-    "听；问",
-    "支撑；支持",
-    "观光；旅游",
-    "春天"
+    "心情；感受；心意",
+    "大致；粗略",
+    "去年",
+    "方便；便利"
    ],
-   "h": "b6f9749a",
+   "h": "b421d9ee",
    "oh": [
-    "b6f9749a",
-    "26098272",
-    "72078a60",
-    "e634dfab"
+    "af537003",
+    "722d519f",
+    "d496126a",
+    "b421d9ee"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V0115"
+    "V0137"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-V0115-r-29ab280a8b66",
-   "qid": "P-006-V0115-r-29ab280a8b66",
+   "id": "P-006-V0137-r-530cd69ca322",
+   "qid": "P-006-V0137-r-530cd69ca322",
    "type": "mcq",
-   "prompt": "本课词条「聞く」（听；问）的假名读音是哪一项？",
+   "prompt": "本课词条「便利」（方便；便利）的假名读音是哪一项？",
    "options": [
-    "さんぎょう",
-    "いる",
-    "きく",
-    "カーテン"
+    "くつした",
+    "おに",
+    "じんるい",
+    "べんり"
    ],
-   "h": "696d2ff5",
+   "h": "a35fe77d",
    "oh": [
-    "b0dea290",
-    "a55c4548",
-    "696d2ff5",
-    "aae9c98d"
+    "77ea9c2c",
+    "8d4c51c2",
+    "f73d2023",
+    "a35fe77d"
    ],
    "day": 6,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V0115"
+    "V0137"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-G0011-m-ef7a9cc7b58a",
-   "qid": "P-006-G0011-m-ef7a9cc7b58a",
+   "id": "P-006-V0139-m-7eb30ef3cf85",
+   "qid": "P-006-V0139-m-7eb30ef3cf85",
+   "type": "mcq",
+   "prompt": "本课词条「とても」（例句语境：这本书很贵。）的释义是哪一项？",
+   "options": [
+    "打扫；扫除",
+    "但是；然而",
+    "黑色的",
+    "非常；很"
+   ],
+   "h": "89034998",
+   "oh": [
+    "64ff8a7f",
+    "ec483a81",
+    "fbe8158a",
+    "89034998"
+   ],
+   "day": 6,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0139"
+   ],
+   "source_day": 6,
+   "optional": true
+  },
+  {
+   "id": "P-006-V0139-r-0c98083fc1f8",
+   "qid": "P-006-V0139-r-0c98083fc1f8",
+   "type": "mcq",
+   "prompt": "本课词条「とても」（非常；很）的假名读音是哪一项？",
+   "options": [
+    "しゅっぱん",
+    "とうひょう",
+    "とても",
+    "たのしむ"
+   ],
+   "h": "828c7373",
+   "oh": [
+    "eef8098a",
+    "e63e535e",
+    "828c7373",
+    "c691c32f"
+   ],
+   "day": 6,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0139"
+   ],
+   "source_day": 6,
+   "optional": true
+  },
+  {
+   "id": "P-006-V0140-m-e4b72c0f2eee",
+   "qid": "P-006-V0140-m-e4b72c0f2eee",
+   "type": "mcq",
+   "prompt": "本课词条「少し」（例句语境：稍微休息一下。）的释义是哪一项？",
+   "options": [
+    "乘客",
+    "上司",
+    "玩笑",
+    "稍微；一点"
+   ],
+   "h": "98aebc48",
+   "oh": [
+    "575725f",
+    "5b13413f",
+    "b41b1e0f",
+    "98aebc48"
+   ],
+   "day": 6,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0140"
+   ],
+   "source_day": 6,
+   "optional": true
+  },
+  {
+   "id": "P-006-V0140-r-35b988dea9e7",
+   "qid": "P-006-V0140-r-35b988dea9e7",
+   "type": "mcq",
+   "prompt": "本课词条「少し」（稍微；一点）的假名读音是哪一项？",
+   "options": [
+    "さくひん",
+    "スカート",
+    "すこし",
+    "けいけん"
+   ],
+   "h": "794b8356",
+   "oh": [
+    "2354bffa",
+    "b1744271",
+    "794b8356",
+    "bd1696b8"
+   ],
+   "day": 6,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0140"
+   ],
+   "source_day": 6,
+   "optional": true
+  },
+  {
+   "id": "P-006-V0141-m-0e5dd0fa7f47",
+   "qid": "P-006-V0141-m-0e5dd0fa7f47",
+   "type": "mcq",
+   "prompt": "本课词条「いつも」（例句语境：总是坐电车去。）的释义是哪一项？",
+   "options": [
+    "浅；浅薄",
+    "种类",
+    "总是；平时",
+    "大臣；部长"
+   ],
+   "h": "2026a0f1",
+   "oh": [
+    "fe9d79f8",
+    "fbdf3159",
+    "2026a0f1",
+    "a4ebe9a9"
+   ],
+   "day": 6,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0141"
+   ],
+   "source_day": 6,
+   "optional": true
+  },
+  {
+   "id": "P-006-V0141-r-a1af16bf1d5e",
+   "qid": "P-006-V0141-r-a1af16bf1d5e",
+   "type": "mcq",
+   "prompt": "本课词条「いつも」（总是；平时）的假名读音是哪一项？",
+   "options": [
+    "いつも",
+    "てんらんかい",
+    "あたえる",
+    "おさら"
+   ],
+   "h": "34094575",
+   "oh": [
+    "34094575",
+    "2c8ee36d",
+    "1b7e5f5b",
+    "d5ff0403"
+   ],
+   "day": 6,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0141"
+   ],
+   "source_day": 6,
+   "optional": true
+  },
+  {
+   "id": "P-006-V0142-m-3f7e547bed2e",
+   "qid": "P-006-V0142-m-3f7e547bed2e",
+   "type": "mcq",
+   "prompt": "本课词条「時々」（例句语境：有时看电影。）的释义是哪一项？",
+   "options": [
+    "终于；好不容易",
+    "全国",
+    "休假",
+    "有时；时常"
+   ],
+   "h": "16beb411",
+   "oh": [
+    "9f39b0a2",
+    "48fd519e",
+    "da85421",
+    "16beb411"
+   ],
+   "day": 6,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0142"
+   ],
+   "source_day": 6,
+   "optional": true
+  },
+  {
+   "id": "P-006-V0142-r-c9f6052b2f16",
+   "qid": "P-006-V0142-r-c9f6052b2f16",
+   "type": "mcq",
+   "prompt": "本课词条「時々」（有时；时常）的假名读音是哪一项？",
+   "options": [
+    "よっか",
+    "ぜいきん",
+    "チーズ",
+    "ときどき"
+   ],
+   "h": "42c23bd8",
+   "oh": [
+    "ea973755",
+    "6694ce69",
+    "e47e9f9e",
+    "42c23bd8"
+   ],
+   "day": 6,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0142"
+   ],
+   "source_day": 6,
+   "optional": true
+  },
+  {
+   "id": "P-006-V0143-m-6d29f241baeb",
+   "qid": "P-006-V0143-m-6d29f241baeb",
+   "type": "mcq",
+   "prompt": "本课词条「まだ」（例句语境：还没吃。）的释义是哪一项？",
+   "options": [
+    "全部",
+    "还；尚未",
+    "现在；目前",
+    "站起来"
+   ],
+   "h": "cea2b1e0",
+   "oh": [
+    "5e6558ad",
+    "cea2b1e0",
+    "5aaec203",
+    "ef67bff4"
+   ],
+   "day": 6,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0143"
+   ],
+   "source_day": 6,
+   "optional": true
+  },
+  {
+   "id": "P-006-V0143-r-3fed50dd7a08",
+   "qid": "P-006-V0143-r-3fed50dd7a08",
+   "type": "mcq",
+   "prompt": "本课词条「まだ」（还；尚未）的假名读音是哪一项？",
+   "options": [
+    "いんかん",
+    "きょうじゅ",
+    "じじょう",
+    "まだ"
+   ],
+   "h": "5cb83893",
+   "oh": [
+    "dbdfe726",
+    "8b0f8fea",
+    "88840a48",
+    "5cb83893"
+   ],
+   "day": 6,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0143"
+   ],
+   "source_day": 6,
+   "optional": true
+  },
+  {
+   "id": "P-006-V0144-m-b0575ed468a2",
+   "qid": "P-006-V0144-m-b0575ed468a2",
+   "type": "mcq",
+   "prompt": "本课词条「もう」（例句语境：已经回去了。）的释义是哪一项？",
+   "options": [
+    "已经；再（一次）",
+    "成年人",
+    "居民",
+    "没有"
+   ],
+   "h": "6954846c",
+   "oh": [
+    "6954846c",
+    "6a2c9341",
+    "3d86b443",
+    "7452c3ff"
+   ],
+   "day": 6,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0144"
+   ],
+   "source_day": 6,
+   "optional": true
+  },
+  {
+   "id": "P-006-V0144-r-baf9bc0e8aa0",
+   "qid": "P-006-V0144-r-baf9bc0e8aa0",
+   "type": "mcq",
+   "prompt": "本课词条「もう」（已经；再（一次））的假名读音是哪一项？",
+   "options": [
+    "きんこ",
+    "こと",
+    "ともに",
+    "もう"
+   ],
+   "h": "42301039",
+   "oh": [
+    "55ae6fa6",
+    "66f47d7e",
+    "3321d4ac",
+    "42301039"
+   ],
+   "day": 6,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0144"
+   ],
+   "source_day": 6,
+   "optional": true
+  },
+  {
+   "id": "P-006-V0145-m-9d6933e73af2",
+   "qid": "P-006-V0145-m-9d6933e73af2",
+   "type": "mcq",
+   "prompt": "本课词条「そして」（例句语境：读书，然后睡觉。）的释义是哪一项？",
+   "options": [
+    "站起来",
+    "沸腾；热闹",
+    "数量；数目",
+    "然后；而且"
+   ],
+   "h": "1beb382",
+   "oh": [
+    "ef67bff4",
+    "a76e2baa",
+    "488b6eb7",
+    "1beb382"
+   ],
+   "day": 6,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0145"
+   ],
+   "source_day": 6,
+   "optional": true
+  },
+  {
+   "id": "P-006-V0145-r-e3a4cd0c06ba",
+   "qid": "P-006-V0145-r-e3a4cd0c06ba",
+   "type": "mcq",
+   "prompt": "本课词条「そして」（然后；而且）的假名读音是哪一项？",
+   "options": [
+    "あやまり",
+    "そして",
+    "げんご",
+    "ざっし"
+   ],
+   "h": "e59a7331",
+   "oh": [
+    "2460f827",
+    "e59a7331",
+    "581b77f2",
+    "610f9cb"
+   ],
+   "day": 6,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0145"
+   ],
+   "source_day": 6,
+   "optional": true
+  },
+  {
+   "id": "P-006-V0147-m-a3430ee9ace8",
+   "qid": "P-006-V0147-m-a3430ee9ace8",
+   "type": "mcq",
+   "prompt": "本课词条「だから」（例句语境：下雨，所以不去。）的释义是哪一项？",
+   "options": [
+    "公平",
+    "(我)妹妹",
+    "继续（他动）",
+    "所以；因此"
+   ],
+   "h": "38856bbb",
+   "oh": [
+    "cb130ce8",
+    "1f979903",
+    "e17088ec",
+    "38856bbb"
+   ],
+   "day": 6,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0147"
+   ],
+   "source_day": 6,
+   "optional": true
+  },
+  {
+   "id": "P-006-V0147-r-b2765c1f241b",
+   "qid": "P-006-V0147-r-b2765c1f241b",
+   "type": "mcq",
+   "prompt": "本课词条「だから」（所以；因此）的假名读音是哪一项？",
+   "options": [
+    "きゅうげき",
+    "うわさ",
+    "しんさつ",
+    "だから"
+   ],
+   "h": "5853148f",
+   "oh": [
+    "d5b53e5a",
+    "3ae1f975",
+    "5a96896e",
+    "5853148f"
+   ],
+   "day": 6,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0147"
+   ],
+   "source_day": 6,
+   "optional": true
+  },
+  {
+   "id": "P-006-V0148-m-259b17981cf3",
+   "qid": "P-006-V0148-m-259b17981cf3",
+   "type": "mcq",
+   "prompt": "本课词条「でも」（例句语境：贵，不过还是买。）的释义是哪一项？",
+   "options": [
+    "但是；不过；连…也",
+    "误解",
+    "回家",
+    "地铁"
+   ],
+   "h": "ca1a9b11",
+   "oh": [
+    "ca1a9b11",
+    "9daf2547",
+    "fc09f695",
+    "611b9e2a"
+   ],
+   "day": 6,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0148"
+   ],
+   "source_day": 6,
+   "optional": true
+  },
+  {
+   "id": "P-006-V0148-r-233b7aa25ba6",
+   "qid": "P-006-V0148-r-233b7aa25ba6",
+   "type": "mcq",
+   "prompt": "本课词条「でも」（但是；不过；连…也）的假名读音是哪一项？",
+   "options": [
+    "こうこうせい",
+    "でも",
+    "せいり",
+    "もっとも"
+   ],
+   "h": "84e061cc",
+   "oh": [
+    "9a66c2ae",
+    "84e061cc",
+    "261021f0",
+    "a1dbc124"
+   ],
+   "day": 6,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0148"
+   ],
+   "source_day": 6,
+   "optional": true
+  },
+  {
+   "id": "P-006-G0011-m-b3f9e7cc9e90",
+   "qid": "P-006-G0011-m-b3f9e7cc9e90",
    "type": "mcq",
    "prompt": "本课句型「へ（移动方向）」在以下语境中的释义是哪一项？ 例句：明日、学校へ行きます。（明天去学校。）",
    "options": [
-    "…下去／…起来（趋势）；去…再来／…过来（移动）",
     "往／向…",
-    "过于…；…得过头",
-    "…去；从现在起继续…"
+    "每…（几次）",
+    "应该…／并不是…",
+    "动词て形（连接/中顿/请求基础）"
    ],
    "h": "bcb6033f",
    "oh": [
-    "40ef5b4",
     "bcb6033f",
-    "14106897",
-    "5531fe22"
+    "30309f2",
+    "7161d625",
+    "7a23ce01"
    ],
    "day": 6,
    "group": "grammar",
@@ -1725,22 +2029,22 @@
    "optional": true
   },
   {
-   "id": "P-006-G0011-u-cf9a88a4b8a5",
-   "qid": "P-006-G0011-u-cf9a88a4b8a5",
+   "id": "P-006-G0011-u-fc8de3180dc0",
+   "qid": "P-006-G0011-u-fc8de3180dc0",
    "type": "mcq",
    "prompt": "课程中「へ（移动方向）」的接续说明是哪一项？ 例句：明日、学校へ行きます。（明天去学校。）",
    "options": [
     "名詞 + へ + 移動動詞",
-    "名词 + と + 名词（全部列举）",
-    "动词辞书形／动词ない形 + ようになる",
-    "名词 + らしい（らしくない 表“不像”）"
+    "动词普通形／い形容词 + し；な形容词・名词 + だ + し",
+    "名词（人）+ と（共同）",
+    "動詞/い形 普通形 + かどうか；名詞・な形 词干 + かどうか（不加 だ/な）；疑问词问句不用 かどうか"
    ],
    "h": "24f815d5",
    "oh": [
     "24f815d5",
-    "f370333b",
-    "47adc5e5",
-    "1592ef69"
+    "6d42d7e8",
+    "c699dff3",
+    "d17b6854"
    ],
    "day": 6,
    "group": "grammar",
@@ -1752,55 +2056,55 @@
    "optional": true
   },
   {
-   "id": "P-006-G0012-m-f8770112d832",
-   "qid": "P-006-G0012-m-f8770112d832",
+   "id": "P-006-G0013-m-e5e394e40653",
+   "qid": "P-006-G0013-m-e5e394e40653",
    "type": "mcq",
-   "prompt": "本课句型「と（并列／共同／引用）」在以下语境中的释义是哪一项？ 例句：友達と映画を見ます。（和朋友看电影。）",
+   "prompt": "本课句型「から ～ まで」在以下语境中的释义是哪一项？ 例句：九時から五時まで勉強します。（从九点学习到五点。）",
    "options": [
-    "又…又…／时而…时而…",
-    "听说…；好像说…",
-    "给（别人）做…／给（我）做…／请（人）做…",
-    "和…／与…（一起）；「…」地"
+    "在…（某时点）",
+    "应该…／并不是…",
+    "按照…；随着…",
+    "从…到…"
    ],
-   "h": "5b9a598a",
+   "h": "1a214d9b",
    "oh": [
-    "221368e6",
-    "aaf72ae0",
-    "4cd65e05",
-    "5b9a598a"
+    "4b49ad11",
+    "7161d625",
+    "d29fbcd9",
+    "1a214d9b"
    ],
    "day": 6,
    "group": "grammar",
    "capability": "meaning",
    "knowledge_ids": [
-    "G0012"
+    "G0013"
    ],
    "source_day": 6,
    "optional": true
   },
   {
-   "id": "P-006-G0012-u-241aad9cebdd",
-   "qid": "P-006-G0012-u-241aad9cebdd",
+   "id": "P-006-G0013-u-13ca42ee57f5",
+   "qid": "P-006-G0013-u-13ca42ee57f5",
    "type": "mcq",
-   "prompt": "课程中「と（并列／共同／引用）」的接续说明是哪一项？ 例句：友達と映画を見ます。（和朋友看电影。）",
+   "prompt": "课程中「から ～ まで」的接续说明是哪一项？ 例句：九時から五時まで勉強します。（从九点学习到五点。）",
    "options": [
-    "名詞 + に基づいて（依据资料/规则/数据）；名詞 + をもとに（以…为素材/基础）；名詞 + どおり(に)（照原样、按预定）",
-    "名词 + の方が + 名词 + より + 形容词",
-    "動詞て形 + も いい（です）／+ は いけない",
-    "名詞 + と + 名詞／動詞；引用从句 + と + 思う/言う"
+    "普通形 + ようだ／らしい（名 + の + ようだ）",
+    "普通形 + くらい／ぐらい；名词 + くらい",
+    "名/な形 + の/な + おかげで／せいで；普通形 + おかげで／せいで",
+    "名詞（时/处） + から + 名詞 + まで"
    ],
-   "h": "e89fa884",
+   "h": "cf19cdbb",
    "oh": [
-    "ae1d51f8",
-    "e9f3828a",
-    "1060ccf6",
-    "e89fa884"
+    "8e1e029f",
+    "8e482284",
+    "497725ba",
+    "cf19cdbb"
    ],
    "day": 6,
    "group": "grammar",
    "capability": "usage",
    "knowledge_ids": [
-    "G0012"
+    "G0013"
    ],
    "source_day": 6,
    "optional": true
@@ -1808,1188 +2112,1194 @@
  ],
  "sentences": [
   {
-   "id": "P-006-00-5cfa74314274",
-   "qid": "P-006-00-5cfa74314274",
+   "id": "P-006-00-76d3aae3fa98",
+   "qid": "P-006-00-76d3aae3fa98",
    "type": "mcq",
-   "prompt": "想当医生。",
+   "prompt": "房间里有猫。",
+   "options": [
+    "えっ嘘でしょ。",
+    "部屋に猫がいます。",
+    "田中さんは先生です。",
+    "私は泳げません。"
+   ],
+   "h": "dcb9e3b7",
+   "oh": [
+    "cceb1ad7",
+    "dcb9e3b7",
+    "8e0bbf88",
+    "1319ae82"
+   ],
+   "knowledge_ids": [],
+   "optional": false,
+   "direction": "zh-ja",
+   "source_id": "S0071"
+  },
+  {
+   "id": "P-006-01-9ef61bbaea36",
+   "qid": "P-006-01-9ef61bbaea36",
+   "type": "mcq",
+   "prompt": "当上医生了。",
+   "options": [
+    "医者になりました。",
+    "お茶を飲みます。",
+    "これは何ですか。",
+    "八日から休みます。"
+   ],
+   "h": "89a7fc5c",
+   "oh": [
+    "89a7fc5c",
+    "d303d227",
+    "c31f804f",
+    "4d6dbc76"
+   ],
+   "knowledge_ids": [],
+   "optional": false,
+   "direction": "zh-ja",
+   "source_id": "S0072"
+  },
+  {
+   "id": "P-006-02-d0ff786abd89",
+   "qid": "P-006-02-d0ff786abd89",
+   "type": "mcq",
+   "prompt": "请写名字。",
+   "options": [
+    "毎日、学校へ行きます。",
+    "名前を書いてください。",
+    "話す機会がありません。",
+    "ご協力に感謝します。"
+   ],
+   "h": "68ad7811",
+   "oh": [
+    "53ed5616",
+    "68ad7811",
+    "30d4fb48",
+    "fab0a215"
+   ],
+   "knowledge_ids": [],
+   "optional": false,
+   "direction": "zh-ja",
+   "source_id": "S0073"
+  },
+  {
+   "id": "P-006-03-ba2700fb2c7e",
+   "qid": "P-006-03-ba2700fb2c7e",
+   "type": "mcq",
+   "prompt": "读书。",
+   "options": [
+    "本を読みます。",
+    "子供が公園にいます。",
+    "医者になりたいです。",
+    "習い性となる。"
+   ],
+   "h": "5a4d748c",
+   "oh": [
+    "5a4d748c",
+    "c0591056",
+    "22bf2f45",
+    "32da4d7b"
+   ],
+   "knowledge_ids": [],
+   "optional": true,
+   "direction": "zh-ja",
+   "source_id": "S0074"
+  },
+  {
+   "id": "P-006-04-1d611c2d7e85",
+   "qid": "P-006-04-1d611c2d7e85",
+   "type": "mcq",
+   "prompt": "说日语。",
+   "options": [
+    "日本語を話します。",
+    "遠くに小屋が見えた。",
+    "間違いを直します。",
+    "弟に本を貸します。"
+   ],
+   "h": "29338a89",
+   "oh": [
+    "29338a89",
+    "6a6c4ab3",
+    "f38675d3",
+    "e1a08215"
+   ],
+   "knowledge_ids": [],
+   "optional": true,
+   "direction": "zh-ja",
+   "source_id": "S0075"
+  },
+  {
+   "id": "P-006-05-ae8a1860e2fa",
+   "qid": "P-006-05-ae8a1860e2fa",
+   "type": "mcq",
+   "prompt": "听音乐。",
+   "options": [
+    "何時間も海を眺めた。",
+    "運賃は二百円です。",
+    "この問題は簡単です。",
+    "音楽を聞きます。"
+   ],
+   "h": "ae738ead",
+   "oh": [
+    "aead5bf6",
+    "bc3a4c76",
+    "18fa881",
+    "ae738ead"
+   ],
+   "knowledge_ids": [],
+   "optional": true,
+   "direction": "zh-ja",
+   "source_id": "S0076"
+  },
+  {
+   "id": "P-006-06-9eae0a291713",
+   "qid": "P-006-06-9eae0a291713",
+   "type": "mcq",
+   "prompt": "在车站等朋友。",
+   "options": [
+    "駅で友達を待ちます。",
+    "木曜日に映画を見ます。",
+    "最後まで戦い抜こう。",
+    "共益費は五千円です。"
+   ],
+   "h": "2ae190df",
+   "oh": [
+    "2ae190df",
+    "bd43fb8",
+    "441c844d",
+    "76c95f5d"
+   ],
+   "knowledge_ids": [],
+   "optional": true,
+   "direction": "zh-ja",
+   "source_id": "S0077"
+  },
+  {
+   "id": "P-006-07-7b0b08e8f716",
+   "qid": "P-006-07-7b0b08e8f716",
+   "type": "mcq",
+   "prompt": "電車に乗ります。",
+   "options": [
+    "上电车。",
+    "不必用现金支付。",
+    "这绝不是小事。",
+    "医生开了药。"
+   ],
+   "h": "efa44868",
+   "oh": [
+    "efa44868",
+    "8eb5edfd",
+    "3cf7c71",
+    "f53e8688"
+   ],
+   "knowledge_ids": [],
+   "optional": true,
+   "direction": "ja-zh",
+   "source_id": "S0078"
+  },
+  {
+   "id": "P-006-08-179c317f79d1",
+   "qid": "P-006-08-179c317f79d1",
+   "type": "mcq",
+   "prompt": "雨が降っています。",
+   "options": [
+    "正在下雨。",
+    "上学期成绩很好。",
+    "部长做了说明。",
+    "我还不太清楚。"
+   ],
+   "h": "effe2eb5",
+   "oh": [
+    "effe2eb5",
+    "964e19e4",
+    "4941703c",
+    "e0e1cf46"
+   ],
+   "knowledge_ids": [],
+   "optional": true,
+   "direction": "ja-zh",
+   "source_id": "S0079"
+  },
+  {
+   "id": "P-006-09-5d13a26ee7cb",
+   "qid": "P-006-09-5d13a26ee7cb",
+   "type": "mcq",
+   "prompt": "七時に起きます。",
+   "options": [
+    "必须做手术。",
+    "七点起床。",
+    "我正在找助手。",
+    "有十个人。"
+   ],
+   "h": "2fdab03e",
+   "oh": [
+    "8e4548b3",
+    "2fdab03e",
+    "f7ef99a7",
+    "90da857"
+   ],
+   "knowledge_ids": [],
+   "optional": true,
+   "direction": "ja-zh",
+   "source_id": "S0080"
+  },
+  {
+   "id": "P-006-10-f311d48485f9",
+   "qid": "P-006-10-f311d48485f9",
+   "type": "mcq",
+   "prompt": "想要新电脑。",
+   "options": [
+    "この本は最近よく売れている。",
+    "新しいパソコンがほしいです。",
+    "上部前方で何かが光っている。",
+    "その嵐の天候は恐ろしかった。"
+   ],
+   "h": "70214d18",
+   "oh": [
+    "4defd2d2",
+    "70214d18",
+    "2f7340d9",
+    "99ad2f6e"
+   ],
+   "knowledge_ids": [],
+   "optional": true,
+   "direction": "zh-ja",
+   "source_id": "S0081"
+  },
+  {
+   "id": "P-006-11-8bab999dc902",
+   "qid": "P-006-11-8bab999dc902",
+   "type": "mcq",
+   "prompt": "这道菜好吃。",
+   "options": [
+    "この料理は美味しいです。",
+    "あの山の頂上は平らだ。",
+    "この靴下はちぐはぐだ。",
+    "地下鉄で行きたいのです。"
+   ],
+   "h": "b166969e",
+   "oh": [
+    "b166969e",
+    "31771ee1",
+    "6db284b2",
+    "7081a755"
+   ],
+   "knowledge_ids": [],
+   "optional": true,
+   "direction": "zh-ja",
+   "source_id": "S0082"
+  },
+  {
+   "id": "P-006-12-c6abb092a5ee",
+   "qid": "P-006-12-c6abb092a5ee",
+   "type": "mcq",
+   "prompt": "这周很忙。",
+   "options": [
+    "今週は忙しいです。",
+    "政府は倒された。",
+    "給料が上がりました。",
+    "田中さんは先生です。"
+   ],
+   "h": "3b7539ef",
+   "oh": [
+    "3b7539ef",
+    "d81a873f",
+    "fcd1ef76",
+    "8e0bbf88"
+   ],
+   "knowledge_ids": [],
+   "optional": true,
+   "direction": "zh-ja",
+   "source_id": "S0083"
+  },
+  {
+   "id": "P-006-13-84ad6fc2bfd7",
+   "qid": "P-006-13-84ad6fc2bfd7",
+   "type": "mcq",
+   "prompt": "今天没昨天冷。",
+   "options": [
+    "このイヤホンは壊れています。",
+    "スミスさんにつないで下さい。",
+    "このネクタイはいくらですか。",
+    "今日は昨日ほど寒くないです。"
+   ],
+   "h": "ec826cff",
+   "oh": [
+    "cae4bbd8",
+    "3dda2614",
+    "1261105",
+    "ec826cff"
+   ],
+   "knowledge_ids": [],
+   "optional": true,
+   "direction": "zh-ja",
+   "source_id": "S0084"
+  },
+  {
+   "id": "P-006-14-bd079c589633",
+   "qid": "P-006-14-bd079c589633",
+   "type": "mcq",
+   "prompt": "喜欢鱼。",
+   "options": [
+    "これはいくらですか。",
+    "切符を買います。",
+    "姉は学生です。",
+    "魚が好きです。"
+   ],
+   "h": "988b0efd",
+   "oh": [
+    "6506aa3c",
+    "9ad3920e",
+    "fcea6a6c",
+    "988b0efd"
+   ],
+   "knowledge_ids": [],
+   "optional": true,
+   "direction": "zh-ja",
+   "source_id": "S0085"
+  },
+  {
+   "id": "P-006-15-5878002469f6",
+   "qid": "P-006-15-5878002469f6",
+   "type": "mcq",
+   "prompt": "她很精神。",
+   "options": [
+    "大か、小か。",
+    "この魚は毒がない。",
+    "彼女は元気です。",
+    "晴れだと思うよ。"
+   ],
+   "h": "5a2e94c3",
+   "oh": [
+    "184abe02",
+    "14e4bcc7",
+    "5a2e94c3",
+    "802c8fe4"
+   ],
+   "knowledge_ids": [],
+   "optional": true,
+   "direction": "zh-ja",
+   "source_id": "S0086"
+  },
+  {
+   "id": "P-006-16-c0589b6ae5fb",
+   "qid": "P-006-16-c0589b6ae5fb",
+   "type": "mcq",
+   "prompt": "这个房间安静。",
    "options": [
     "この小麦は粉にされる。",
-    "医者になりたいです。",
-    "遠くに小屋が見えた。",
-    "ケンとけんかしたのか。"
+    "この部屋は静かです。",
+    "食糧が不足している。",
+    "この川の流れは急だ。"
    ],
-   "h": "22bf2f45",
+   "h": "ed05be90",
    "oh": [
     "8fa39b7e",
-    "22bf2f45",
-    "6a6c4ab3",
-    "e90453f9"
-   ],
-   "knowledge_ids": [],
-   "optional": false,
-   "direction": "zh-ja",
-   "source_id": "S0061"
-  },
-  {
-   "id": "P-006-01-cd7bd9acf258",
-   "qid": "P-006-01-cd7bd9acf258",
-   "type": "mcq",
-   "prompt": "给朋友打电话。",
-   "options": [
-    "ホテルに泊まります。",
-    "友達に電話します。",
-    "合格して嬉しいです。",
-    "お手洗いはどこですか。"
-   ],
-   "h": "ec5f7b75",
-   "oh": [
-    "7f5d8029",
-    "ec5f7b75",
-    "f6598066",
-    "9f20e43f"
-   ],
-   "knowledge_ids": [],
-   "optional": false,
-   "direction": "zh-ja",
-   "source_id": "S0062"
-  },
-  {
-   "id": "P-006-02-e0559caca003",
-   "qid": "P-006-02-e0559caca003",
-   "type": "mcq",
-   "prompt": "和家人旅行。",
-   "options": [
-    "ホテルに泊まります。",
-    "田中さんは先生です。",
-    "家族と旅行します。",
-    "遠くに小屋が見えた。"
-   ],
-   "h": "8582dd31",
-   "oh": [
-    "7f5d8029",
-    "8e0bbf88",
-    "8582dd31",
-    "6a6c4ab3"
-   ],
-   "knowledge_ids": [],
-   "optional": false,
-   "direction": "zh-ja",
-   "source_id": "S0063"
-  },
-  {
-   "id": "P-006-03-aaea71f7e286",
-   "qid": "P-006-03-aaea71f7e286",
-   "type": "mcq",
-   "prompt": "住宾馆。",
-   "options": [
-    "最近食欲がないんです。",
-    "これはいくらですか。",
-    "友達に電話します。",
-    "ホテルに泊まります。"
-   ],
-   "h": "7f5d8029",
-   "oh": [
-    "f3e36ba6",
-    "6506aa3c",
-    "ec5f7b75",
-    "7f5d8029"
+    "ed05be90",
+    "fdc63dc1",
+    "2deea5d0"
    ],
    "knowledge_ids": [],
    "optional": true,
    "direction": "zh-ja",
-   "source_id": "S0064"
+   "source_id": "S0087"
   },
   {
-   "id": "P-006-04-853e8843f6c6",
-   "qid": "P-006-04-853e8843f6c6",
+   "id": "P-006-17-0821a189a9d3",
+   "qid": "P-006-17-0821a189a9d3",
    "type": "mcq",
-   "prompt": "头疼。",
+   "prompt": "この地図は便利です。",
    "options": [
-    "これはいくらですか。",
-    "間違いを直します。",
-    "政府は倒された。",
-    "頭が痛いです。"
+    "这张地图很方便。",
+    "食物在胃里消化。",
+    "定期做健康检查。",
+    "和这件事没关系。"
    ],
-   "h": "e7640aa7",
+   "h": "1be23d38",
    "oh": [
-    "6506aa3c",
-    "f38675d3",
-    "d81a873f",
-    "e7640aa7"
-   ],
-   "knowledge_ids": [],
-   "optional": true,
-   "direction": "zh-ja",
-   "source_id": "S0065"
-  },
-  {
-   "id": "P-006-05-815ee4bc40f6",
-   "qid": "P-006-05-815ee4bc40f6",
-   "type": "mcq",
-   "prompt": "吃药。",
-   "options": [
-    "薬を飲みます。",
-    "水を飲みます。",
-    "部屋の中にいます。",
-    "話を聞かせてくれ。"
-   ],
-   "h": "8936631d",
-   "oh": [
-    "8936631d",
-    "9d2cc3e5",
-    "3d1f2b43",
-    "daa927f"
-   ],
-   "knowledge_ids": [],
-   "optional": true,
-   "direction": "zh-ja",
-   "source_id": "S0066"
-  },
-  {
-   "id": "P-006-06-3e34ef9b09db",
-   "qid": "P-006-06-3e34ef9b09db",
-   "type": "mcq",
-   "prompt": "正在下雨。",
-   "options": [
-    "二人で行きます。",
-    "雨が降っています。",
-    "彼は重責を解かれた。",
-    "彼は非常に学がある。"
-   ],
-   "h": "db98fcac",
-   "oh": [
-    "2889b9fc",
-    "db98fcac",
-    "93f07e6c",
-    "e2759f64"
-   ],
-   "knowledge_ids": [],
-   "optional": true,
-   "direction": "zh-ja",
-   "source_id": "S0067"
-  },
-  {
-   "id": "P-006-07-4da7085d6e0a",
-   "qid": "P-006-07-4da7085d6e0a",
-   "type": "mcq",
-   "prompt": "今日はいい天気です。",
-   "options": [
-    "收银台在哪里。",
-    "我还不太清楚。",
-    "今天天气好。",
-    "开会迟到了。"
-   ],
-   "h": "1b222922",
-   "oh": [
-    "55df731b",
-    "e0e1cf46",
-    "1b222922",
-    "bb7937e0"
+    "1be23d38",
+    "835e5ce8",
+    "e7de9c23",
+    "1abbc7cc"
    ],
    "knowledge_ids": [],
    "optional": true,
    "direction": "ja-zh",
-   "source_id": "S0068"
+   "source_id": "S0088"
   },
   {
-   "id": "P-006-08-160ac2c29b03",
-   "qid": "P-006-08-160ac2c29b03",
+   "id": "P-006-18-60f417b967ac",
+   "qid": "P-006-18-60f417b967ac",
    "type": "mcq",
-   "prompt": "部屋に猫がいます。",
+   "prompt": "この本はとても高いです。",
    "options": [
-    "这种布很吸水。",
-    "房间里有猫。",
-    "他们躺在草坪上。",
-    "症状好转了。"
+    "他偷袭了对手。",
+    "买蔬菜。",
+    "给你五美元。",
+    "这本书很贵。"
    ],
-   "h": "44ea4960",
+   "h": "804e5fb1",
    "oh": [
-    "5347c362",
-    "44ea4960",
-    "2bb7a3d6",
-    "ce386345"
+    "4050f9f9",
+    "6563b707",
+    "82b87323",
+    "804e5fb1"
    ],
    "knowledge_ids": [],
    "optional": true,
    "direction": "ja-zh",
-   "source_id": "S0069"
+   "source_id": "S0089"
   },
   {
-   "id": "P-006-09-2c9880025544",
-   "qid": "P-006-09-2c9880025544",
+   "id": "P-006-19-653a2ab1e5fb",
+   "qid": "P-006-19-653a2ab1e5fb",
    "type": "mcq",
-   "prompt": "映画を見ます。",
+   "prompt": "少し休みます。",
    "options": [
-    "下午去看诊。",
-    "没时间。",
-    "看电影。",
-    "他一生独身。"
+    "他生于19世纪。",
+    "传闻原来是真的。",
+    "稍微休息一下。",
+    "她有表演天赋。"
    ],
-   "h": "9126c622",
+   "h": "f3109a5f",
    "oh": [
-    "3d9f1f18",
-    "eaced404",
-    "9126c622",
-    "d5317579"
+    "122eb4a0",
+    "6342e7d8",
+    "f3109a5f",
+    "85f35af"
    ],
    "knowledge_ids": [],
    "optional": true,
    "direction": "ja-zh",
-   "source_id": "S0070"
+   "source_id": "S0090"
   }
  ],
  "quiz": [
   {
-   "id": "Q-006-K0-60fc68f48bdb",
-   "qid": "Q-006-K0-60fc68f48bdb",
+   "id": "Q-006-K0-80f108e9981b",
+   "qid": "Q-006-K0-80f108e9981b",
    "type": "mcq",
-   "prompt": "汉字「十」的一个常用读音是？",
+   "prompt": "汉字「円」的一个常用读音是？",
    "options": [
-    "ズ",
-    "まい",
-    "むくいる",
-    "ジュウ"
+    "はな.す",
+    "エン",
+    "オク",
+    "くる.しい"
    ],
-   "h": "46f71460",
+   "h": "f58e536c",
    "oh": [
-    "bf251eed",
-    "80b8713f",
-    "fef35bf5",
-    "46f71460"
+    "ce13383d",
+    "f58e536c",
+    "c9928b56",
+    "61920e18"
    ],
    "knowledge_ids": [
-    "K0017"
+    "K0020"
    ]
   },
   {
-   "id": "Q-006-K1-e8028ccfbd5a",
-   "qid": "Q-006-K1-e8028ccfbd5a",
+   "id": "Q-006-K1-5c66cecf38ba",
+   "qid": "Q-006-K1-5c66cecf38ba",
    "type": "mcq",
-   "prompt": "汉字「百」的一个常用读音是？",
+   "prompt": "汉字「時」的一个常用读音是？",
    "options": [
-    "ヒャク",
-    "つか.らす",
-    "した",
-    "けむだし"
+    "わら.う",
+    "ぬ.かる",
+    "いつ",
+    "ジ"
    ],
-   "h": "d098fc37",
+   "h": "bd251bc7",
    "oh": [
-    "d098fc37",
-    "5c67cae8",
-    "5952bbab",
-    "c974b471"
+    "7197b025",
+    "e0137b35",
+    "845c1155",
+    "bd251bc7"
    ],
    "knowledge_ids": [
-    "K0018"
+    "K0021"
    ]
   },
   {
-   "id": "Q-006-G-9bdff0f041ec",
-   "qid": "Q-006-G-9bdff0f041ec",
+   "id": "Q-006-G-79cbae8eedfa",
+   "qid": "Q-006-G-79cbae8eedfa",
    "type": "mcq",
    "prompt": "句型「へ（移动方向）」的意思是？",
    "options": [
-    "关于…；就…",
     "往／向…",
-    "…也…",
-    "试着做…（看看效果）"
+    "（第三人称）想做…",
+    "被迫做…",
+    "难怪…；也就是说…"
    ],
    "h": "bcb6033f",
    "oh": [
-    "7bb0c864",
     "bcb6033f",
-    "1aca9020",
-    "5cf05d55"
+    "d20d98a",
+    "793643b7",
+    "98b9e285"
    ],
    "knowledge_ids": [
     "G0011"
    ]
   },
   {
-   "id": "Q-006-V0-7ec82cc46a54",
-   "qid": "Q-006-V0-7ec82cc46a54",
+   "id": "Q-006-V0-cb108b15123b",
+   "qid": "Q-006-V0-cb108b15123b",
    "type": "mcq",
-   "prompt": "「薬」是什么意思？",
+   "prompt": "「教える」是什么意思？",
    "options": [
-    "但是",
-    "早饭",
-    "准备",
+    "寄存；托付",
+    "教；告诉",
+    "最初",
+    "女护士"
+   ],
+   "h": "7682a1d4",
+   "oh": [
+    "5abb8fde",
+    "7682a1d4",
+    "daa62526",
+    "c9486abb"
+   ],
+   "knowledge_ids": [
+    "V0121"
+   ]
+  },
+  {
+   "id": "Q-006-V1-18b473959493",
+   "qid": "Q-006-V1-18b473959493",
+   "type": "mcq",
+   "prompt": "「帰る」是什么意思？",
+   "options": [
+    "回；回家",
+    "森林",
+    "幸福",
+    "枪；枪支"
+   ],
+   "h": "e41c2df2",
+   "oh": [
+    "e41c2df2",
+    "8279cad2",
+    "c0e74d98",
+    "d143cee5"
+   ],
+   "knowledge_ids": [
+    "V0122"
+   ]
+  },
+  {
+   "id": "Q-006-R-b2fd993c5211",
+   "qid": "Q-006-R-b2fd993c5211",
+   "type": "mcq",
+   "prompt": "复习：「薬」是什么意思？",
+   "options": [
+    "忘记；忘带",
+    "展览会",
+    "玄关；门厅",
     "药"
    ],
    "h": "e944459e",
    "oh": [
-    "a49048a2",
-    "1fc01c8b",
-    "bd820e1a",
+    "2783aa10",
+    "443a69f6",
+    "adc3478a",
     "e944459e"
    ],
    "knowledge_ids": [
     "V0095"
    ]
-  },
-  {
-   "id": "Q-006-V1-8facd2add2ef",
-   "qid": "Q-006-V1-8facd2add2ef",
-   "type": "mcq",
-   "prompt": "假名「あめ」对应的词形是？",
-   "options": [
-    "年中",
-    "食べる",
-    "雨",
-    "科学"
-   ],
-   "h": "6c2597d7",
-   "oh": [
-    "62bf328a",
-    "6189979a",
-    "6c2597d7",
-    "181f18ee"
-   ],
-   "knowledge_ids": [
-    "V0096"
-   ]
-  },
-  {
-   "id": "A007-1-a50ab925ef86",
-   "qid": "A007-1-a50ab925ef86",
-   "type": "mcq",
-   "prompt": "店へ行くのはいつですか。",
-   "options": [
-    "日曜日の夜",
-    "月曜日の朝",
-    "火曜日の朝",
-    "日曜日の朝"
-   ],
-   "h": "61c94891",
-   "oh": [
-    "e395511",
-    "61c94891",
-    "a0721364",
-    "d8e557e"
-   ],
-   "passage": "今日は日曜日です。店は休みです。明日の朝、店へ行きます。",
-   "knowledge_ids": []
   }
  ],
  "questions": [
   {
-   "id": "D13-006-V0104-meaning",
-   "qid": "D13-006-V0104-meaning",
+   "id": "D15-006-V0136-reading",
+   "qid": "D15-006-V0136-reading",
    "type": "mcq",
    "day": 6,
-   "prompt": "「くる」的中文释义？",
+   "prompt": "「静か」（安静；宁静）的假名读音是哪一项？",
    "options": [
-    "吃",
-    "喝；吞（药）",
-    "买",
-    "来"
+    "しずか",
+    "しんせん",
+    "しんけん",
+    "しんせつ"
    ],
-   "h": "e09e89e0",
+   "h": "859019fd",
    "oh": [
-    "651a2b2",
-    "898fe2a3",
-    "f56145ef",
-    "e09e89e0"
+    "859019fd",
+    "6d879ccd",
+    "e56f919b",
+    "3688d938"
    ],
    "knowledge_ids": [
-    "V0104"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0115-reading",
-   "qid": "D13-006-V0115-reading",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「聞く」（听；问）的假名读音是哪一项？",
-   "options": [
-    "きらう",
-    "きく",
-    "きる",
-    "きえる"
-   ],
-   "h": "696d2ff5",
-   "oh": [
-    "4abd68df",
-    "696d2ff5",
-    "a56d8e69",
-    "6cb73da1"
-   ],
-   "knowledge_ids": [
-    "V0115"
+    "V0136"
    ],
    "capability": "reading",
    "group": "vocab"
   },
   {
-   "id": "D13-006-V0098-meaning",
-   "qid": "D13-006-V0098-meaning",
+   "id": "D15-006-V0129-reading",
+   "qid": "D15-006-V0129-reading",
    "type": "mcq",
    "day": 6,
-   "prompt": "「ねこ」的中文释义？",
+   "prompt": "「新しい」（新）的假名读音是哪一项？",
    "options": [
-    "猫",
-    "雨",
-    "音乐",
-    "天气"
+    "あたたかい",
+    "あかるい",
+    "あたらしい",
+    "あぶない"
    ],
-   "h": "2e8c20aa",
+   "h": "9d7e0976",
    "oh": [
-    "2e8c20aa",
-    "6c2597d7",
-    "ba3ee816",
-    "47d34bb0"
+    "cc774",
+    "f9797b5",
+    "9d7e0976",
+    "eaf2a3a7"
    ],
    "knowledge_ids": [
-    "V0098"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0095-reading",
-   "qid": "D13-006-V0095-reading",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「薬」（药）的假名读音是哪一项？",
-   "options": [
-    "くすり",
-    "くつ",
-    "くつした",
-    "くる"
-   ],
-   "h": "6013e97d",
-   "oh": [
-    "6013e97d",
-    "923f8dae",
-    "77ea9c2c",
-    "ed401cef"
-   ],
-   "knowledge_ids": [
-    "V0095"
+    "V0129"
    ],
    "capability": "reading",
    "group": "vocab"
   },
   {
-   "id": "D13-006-V0097-reading",
-   "qid": "D13-006-V0097-reading",
+   "id": "D15-006-V0123-meaning",
+   "qid": "D15-006-V0123-meaning",
    "type": "mcq",
    "day": 6,
-   "prompt": "「天気」（天气）的假名读音是哪一项？",
+   "prompt": "「休む」的中文释义？",
    "options": [
-    "てんき",
-    "ていこう",
-    "てんそう",
-    "てがみ"
+    "休息；请假；睡",
+    "教；告诉",
+    "懂；明白",
+    "回；回家"
    ],
-   "h": "7c3aca89",
+   "h": "d355e08c",
    "oh": [
-    "7c3aca89",
-    "2c7ea9ee",
-    "7f1943cd",
-    "4c315790"
+    "d355e08c",
+    "7682a1d4",
+    "b7d2ad13",
+    "e41c2df2"
    ],
    "knowledge_ids": [
-    "V0097"
+    "V0123"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0126-reading",
+   "qid": "D15-006-V0126-reading",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「安い」（便宜）的假名读音是哪一项？",
+   "options": [
+    "やすむ",
+    "やすい",
+    "やさしい",
+    "やま"
+   ],
+   "h": "35948b8e",
+   "oh": [
+    "7993639a",
+    "35948b8e",
+    "d0354fa1",
+    "798a3dd7"
+   ],
+   "knowledge_ids": [
+    "V0126"
    ],
    "capability": "reading",
    "group": "vocab"
   },
   {
-   "id": "D13-006-V0097-meaning",
-   "qid": "D13-006-V0097-meaning",
+   "id": "D15-006-V0140-reading",
+   "qid": "D15-006-V0140-reading",
    "type": "mcq",
    "day": 6,
-   "prompt": "「天気」的中文释义？",
+   "prompt": "「少し」（稍微；一点）的假名读音是哪一项？",
    "options": [
-    "药",
-    "电影",
-    "音乐",
-    "天气"
+    "すぐに",
+    "すぐ",
+    "すこし",
+    "すき"
    ],
-   "h": "47d34bb0",
+   "h": "794b8356",
    "oh": [
-    "e944459e",
-    "ff1da773",
-    "ba3ee816",
-    "47d34bb0"
+    "9544f3a5",
+    "5303688c",
+    "794b8356",
+    "6803899b"
    ],
    "knowledge_ids": [
-    "V0097"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0109-recall",
-   "qid": "D13-006-V0109-recall",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「有；在」对应哪个日语词？",
-   "options": [
-    "よむ",
-    "たべる",
-    "いる",
-    "なる"
-   ],
-   "h": "a55c4548",
-   "oh": [
-    "e80dc015",
-    "3a5ba81a",
-    "a55c4548",
-    "6dce3142"
-   ],
-   "knowledge_ids": [
-    "V0109"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0107-meaning",
-   "qid": "D13-006-V0107-meaning",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「する」的中文释义？",
-   "options": [
-    "读；念",
-    "等；等待",
-    "写",
-    "做；干"
-   ],
-   "h": "39e83b10",
-   "oh": [
-    "93dd9df2",
-    "88eddb2b",
-    "9c55b4d4",
-    "39e83b10"
-   ],
-   "knowledge_ids": [
-    "V0107"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0108-recall",
-   "qid": "D13-006-V0108-recall",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「有；存在」对应哪个日语词？",
-   "options": [
-    "する",
-    "かう",
-    "なる",
-    "ある"
-   ],
-   "h": "8d69970a",
-   "oh": [
-    "ae0264cd",
-    "5049b324",
-    "6dce3142",
-    "8d69970a"
-   ],
-   "knowledge_ids": [
-    "V0108"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0113-reading",
-   "qid": "D13-006-V0113-reading",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「読む」（读；念）的假名读音是哪一项？",
-   "options": [
-    "よぶ",
-    "よこ",
-    "よる",
-    "よむ"
-   ],
-   "h": "e80dc015",
-   "oh": [
-    "720d0653",
-    "950d3d6c",
-    "ed0dc7f4",
-    "e80dc015"
-   ],
-   "knowledge_ids": [
-    "V0113"
+    "V0140"
    ],
    "capability": "reading",
    "group": "vocab"
   },
   {
-   "id": "D13-006-V0105-reading",
-   "qid": "D13-006-V0105-reading",
+   "id": "D15-006-V0124-meaning",
+   "qid": "D15-006-V0124-meaning",
    "type": "mcq",
    "day": 6,
-   "prompt": "「見る」（看；观看）的假名读音是哪一项？",
+   "prompt": "「分かる」的中文释义？",
    "options": [
-    "みがく",
-    "みせる",
-    "みる",
-    "みえる"
+    "回；回家",
+    "休息；请假；睡",
+    "懂；明白",
+    "教；告诉"
    ],
-   "h": "db57d9f",
+   "h": "b7d2ad13",
    "oh": [
-    "856585cb",
-    "892e974c",
-    "db57d9f",
-    "613be77b"
+    "e41c2df2",
+    "d355e08c",
+    "b7d2ad13",
+    "7682a1d4"
    ],
    "knowledge_ids": [
-    "V0105"
+    "V0124"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0144-meaning",
+   "qid": "D15-006-V0144-meaning",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「もう」的中文释义？",
+   "options": [
+    "已经；再（一次）",
+    "非常；很",
+    "稍微；一点",
+    "总是；平时"
+   ],
+   "h": "6954846c",
+   "oh": [
+    "6954846c",
+    "89034998",
+    "98aebc48",
+    "2026a0f1"
+   ],
+   "knowledge_ids": [
+    "V0144"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0147-meaning",
+   "qid": "D15-006-V0147-meaning",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「だから」的中文释义？",
+   "options": [
+    "所以；因此",
+    "但是；不过；连…也",
+    "然后；而且",
+    "教；告诉"
+   ],
+   "h": "38856bbb",
+   "oh": [
+    "38856bbb",
+    "ca1a9b11",
+    "1beb382",
+    "7682a1d4"
+   ],
+   "knowledge_ids": [
+    "V0147"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0137-meaning",
+   "qid": "D15-006-V0137-meaning",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「便利」的中文释义？",
+   "options": [
+    "安静；宁静",
+    "方便；便利",
+    "精神；健康；有活力",
+    "喜欢"
+   ],
+   "h": "b421d9ee",
+   "oh": [
+    "67f74f82",
+    "b421d9ee",
+    "b4f4a4f8",
+    "9074f6bb"
+   ],
+   "knowledge_ids": [
+    "V0137"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0127-reading",
+   "qid": "D15-006-V0127-reading",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「大きい」（大）的假名读音是哪一项？",
+   "options": [
+    "おおきい",
+    "おもしろい",
+    "おしえる",
+    "おいしい"
+   ],
+   "h": "32b42684",
+   "oh": [
+    "32b42684",
+    "e6417627",
+    "40aed2ab",
+    "fd2d59a0"
+   ],
+   "knowledge_ids": [
+    "V0127"
    ],
    "capability": "reading",
    "group": "vocab"
   },
   {
-   "id": "D13-006-V0100-reading",
-   "qid": "D13-006-V0100-reading",
+   "id": "D15-006-V0131-reading",
+   "qid": "D15-006-V0131-reading",
    "type": "mcq",
    "day": 6,
-   "prompt": "「音楽」（音乐）的假名读音是哪一项？",
+   "prompt": "「忙しい」（忙）的假名读音是哪一项？",
    "options": [
-    "おねえさん",
-    "おじいさん",
-    "おととし",
-    "おんがく"
+    "いちばん",
+    "いそがしい",
+    "いろいろ",
+    "いっしょ"
    ],
-   "h": "64beb247",
+   "h": "84812621",
    "oh": [
-    "722e655c",
-    "275afabd",
-    "90e92d6",
-    "64beb247"
+    "f5587e33",
+    "84812621",
+    "8c5723f5",
+    "4febd3a6"
    ],
    "knowledge_ids": [
-    "V0100"
+    "V0131"
    ],
    "capability": "reading",
    "group": "vocab"
   },
   {
-   "id": "D13-006-V0110-meaning",
-   "qid": "D13-006-V0110-meaning",
+   "id": "D15-006-V0125-reading",
+   "qid": "D15-006-V0125-reading",
    "type": "mcq",
    "day": 6,
-   "prompt": "「なる」的中文释义？",
+   "prompt": "「高い」（贵；高）的假名读音是哪一项？",
    "options": [
-    "看；观看",
-    "读；念",
-    "变成；成为",
-    "做；干"
-   ],
-   "h": "2c6ac2dc",
-   "oh": [
-    "c675468",
-    "93dd9df2",
-    "2c6ac2dc",
-    "39e83b10"
-   ],
-   "knowledge_ids": [
-    "V0110"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0103-reading",
-   "qid": "D13-006-V0103-reading",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「行く」（去）的假名读音是哪一项？",
-   "options": [
-    "いう",
-    "いく",
-    "いる",
-    "いれる"
-   ],
-   "h": "695be6d4",
-   "oh": [
-    "625bdbcf",
-    "695be6d4",
-    "a55c4548",
-    "1b6c57b2"
-   ],
-   "knowledge_ids": [
-    "V0103"
-   ],
-   "capability": "reading",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0105-meaning",
-   "qid": "D13-006-V0105-meaning",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「見る」的中文释义？",
-   "options": [
-    "看；观看",
-    "写",
-    "乘；坐（车船）",
-    "喝；吞（药）"
-   ],
-   "h": "c675468",
-   "oh": [
-    "c675468",
-    "9c55b4d4",
-    "fc174904",
-    "898fe2a3"
-   ],
-   "knowledge_ids": [
-    "V0105"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0106-reading",
-   "qid": "D13-006-V0106-reading",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「買う」（买）的假名读音是哪一项？",
-   "options": [
-    "かかる",
-    "かりる",
-    "かう",
-    "かく"
-   ],
-   "h": "5049b324",
-   "oh": [
-    "6acfcd88",
-    "c8c0c0d1",
-    "5049b324",
-    "4949a81f"
-   ],
-   "knowledge_ids": [
-    "V0106"
-   ],
-   "capability": "reading",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0112-reading",
-   "qid": "D13-006-V0112-reading",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「書く」（写）的假名读音是哪一项？",
-   "options": [
-    "かえる",
-    "かえす",
-    "かう",
-    "かく"
-   ],
-   "h": "4949a81f",
-   "oh": [
-    "92d3de17",
-    "e4d2cc2d",
-    "5049b324",
-    "4949a81f"
-   ],
-   "knowledge_ids": [
-    "V0112"
-   ],
-   "capability": "reading",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0107-recall",
-   "qid": "D13-006-V0107-recall",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「做；干」对应哪个日语词？",
-   "options": [
-    "する",
-    "かく",
-    "まつ",
-    "よむ"
-   ],
-   "h": "ae0264cd",
-   "oh": [
-    "ae0264cd",
-    "4949a81f",
-    "60b83edf",
-    "e80dc015"
-   ],
-   "knowledge_ids": [
-    "V0107"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0101-meaning",
-   "qid": "D13-006-V0101-meaning",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「食べる」的中文释义？",
-   "options": [
-    "去",
-    "吃",
-    "写",
-    "做；干"
-   ],
-   "h": "651a2b2",
-   "oh": [
-    "be59105a",
-    "651a2b2",
-    "9c55b4d4",
-    "39e83b10"
-   ],
-   "knowledge_ids": [
-    "V0101"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0113-meaning",
-   "qid": "D13-006-V0113-meaning",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「読む」的中文释义？",
-   "options": [
-    "去",
-    "读；念",
-    "喝；吞（药）",
-    "乘；坐（车船）"
-   ],
-   "h": "93dd9df2",
-   "oh": [
-    "be59105a",
-    "93dd9df2",
-    "898fe2a3",
-    "fc174904"
-   ],
-   "knowledge_ids": [
-    "V0113"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0095-meaning",
-   "qid": "D13-006-V0095-meaning",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「薬」的中文释义？",
-   "options": [
-    "猫",
-    "音乐",
-    "药",
-    "雨"
-   ],
-   "h": "e944459e",
-   "oh": [
-    "2e8c20aa",
-    "ba3ee816",
-    "e944459e",
-    "6c2597d7"
-   ],
-   "knowledge_ids": [
-    "V0095"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0103-meaning",
-   "qid": "D13-006-V0103-meaning",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「行く」的中文释义？",
-   "options": [
-    "写",
-    "去",
-    "喝；吞（药）",
-    "来"
-   ],
-   "h": "be59105a",
-   "oh": [
-    "9c55b4d4",
-    "be59105a",
-    "898fe2a3",
-    "e09e89e0"
-   ],
-   "knowledge_ids": [
-    "V0103"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0104-reading",
-   "qid": "D13-006-V0104-reading",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「来る」（来）的假名读音是哪一项？",
-   "options": [
-    "くもる",
-    "くすり",
-    "くる",
-    "くう"
-   ],
-   "h": "ed401cef",
-   "oh": [
-    "ffe4fced",
-    "6013e97d",
-    "ed401cef",
-    "b03fbce8"
-   ],
-   "knowledge_ids": [
-    "V0104"
-   ],
-   "capability": "reading",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0109-meaning",
-   "qid": "D13-006-V0109-meaning",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「いる」的中文释义？",
-   "options": [
-    "吃",
-    "读；念",
-    "有；在（有生命）",
-    "变成；成为"
-   ],
-   "h": "f52905f7",
-   "oh": [
-    "651a2b2",
-    "93dd9df2",
-    "f52905f7",
-    "2c6ac2dc"
-   ],
-   "knowledge_ids": [
-    "V0109"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0108-meaning",
-   "qid": "D13-006-V0108-meaning",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「ある」的中文释义？",
-   "options": [
-    "买",
-    "做；干",
-    "有；存在（无生命）",
-    "变成；成为"
-   ],
-   "h": "abd8ad90",
-   "oh": [
-    "f56145ef",
-    "39e83b10",
-    "abd8ad90",
-    "2c6ac2dc"
-   ],
-   "knowledge_ids": [
-    "V0108"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0114-meaning",
-   "qid": "D13-006-V0114-meaning",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「話す」的中文释义？",
-   "options": [
-    "下（雨、雪等）",
-    "做；干",
-    "乘；坐（车船）",
-    "说；讲"
-   ],
-   "h": "557d8b0e",
-   "oh": [
-    "f037fb63",
-    "39e83b10",
-    "fc174904",
-    "557d8b0e"
-   ],
-   "knowledge_ids": [
-    "V0114"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0100-meaning",
-   "qid": "D13-006-V0100-meaning",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「音楽」的中文释义？",
-   "options": [
-    "雨",
-    "猫",
-    "音乐",
-    "药"
-   ],
-   "h": "ba3ee816",
-   "oh": [
-    "6c2597d7",
-    "2e8c20aa",
-    "ba3ee816",
-    "e944459e"
-   ],
-   "knowledge_ids": [
-    "V0100"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-G0012-form",
-   "qid": "D13-006-G0012-form",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "选出符合下列意思的日语句子。\n和朋友看电影。",
-   "options": [
-    "映画を見に行きます。",
-    "日曜日は映画を見ようと思っています。",
-    "友達と映画を見ます。",
-    "映画が見たいです。"
-   ],
-   "h": "6c96baa1",
-   "oh": [
-    "a23cf648",
-    "80c74903",
-    "6c96baa1",
-    "bf6e4ed8"
-   ],
-   "knowledge_ids": [
-    "G0012"
-   ],
-   "capability": "usage",
-   "group": "grammar"
-  },
-  {
-   "id": "D13-006-V0110-recall",
-   "qid": "D13-006-V0110-recall",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「变成；成为」对应哪个日语词？",
-   "options": [
-    "なる",
-    "みる",
-    "する",
-    "よむ"
-   ],
-   "h": "6dce3142",
-   "oh": [
-    "6dce3142",
-    "db57d9f",
-    "ae0264cd",
-    "e80dc015"
-   ],
-   "knowledge_ids": [
-    "V0110"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0101-reading",
-   "qid": "D13-006-V0101-reading",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「食べる」（吃）的假名读音是哪一项？",
-   "options": [
-    "たべる",
+    "ただしい",
+    "たのしい",
     "たのむ",
-    "たつ",
-    "たのしむ"
+    "たかい"
    ],
-   "h": "3a5ba81a",
+   "h": "11920a1",
    "oh": [
-    "3a5ba81a",
+    "79f2a619",
+    "29221a3",
     "c6bdda80",
-    "72fd8abe",
-    "c691c32f"
+    "11920a1"
    ],
    "knowledge_ids": [
-    "V0101"
+    "V0125"
    ],
    "capability": "reading",
    "group": "vocab"
   },
   {
-   "id": "D13-006-V0099-reading",
-   "qid": "D13-006-V0099-reading",
+   "id": "D15-006-G0013-context",
+   "qid": "D15-006-G0013-context",
    "type": "mcq",
    "day": 6,
-   "prompt": "「映画」（电影）的假名读音是哪一项？",
+   "prompt": "请选择「駅から学校まで行きます。」的中文意思。",
    "options": [
-    "えんぴつ",
-    "えいご",
-    "えいが",
-    "えき"
+    "从车站走到学校。",
+    "我从学校走到车站。",
+    "去学校。",
+    "每天坐公交车去学校。"
    ],
-   "h": "1fb8a05f",
+   "h": "a1609a05",
    "oh": [
-    "6996dec4",
-    "37b8c627",
-    "1fb8a05f",
-    "ab4670ce"
+    "a1609a05",
+    "3f15a308",
+    "b5f010b7",
+    "78df0689"
    ],
    "knowledge_ids": [
-    "V0099"
-   ],
-   "capability": "reading",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-G0011-form",
-   "qid": "D13-006-G0011-form",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "选出符合下列意思的日语句子。\n明天去学校。",
-   "options": [
-    "かぜで学校を休みました。",
-    "毎日バスで学校に行きます。",
-    "ご飯を食べてから、学校へ行きます。",
-    "明日、学校へ行きます。"
-   ],
-   "h": "b7b27cd6",
-   "oh": [
-    "9512c64e",
-    "9eb7a552",
-    "d36d5de6",
-    "b7b27cd6"
-   ],
-   "knowledge_ids": [
-    "G0011"
+    "G0013"
    ],
    "capability": "usage",
    "group": "grammar"
   },
   {
-   "id": "D13-006-G0011-meaning",
-   "qid": "D13-006-G0011-meaning",
+   "id": "D15-006-V0137-recall",
+   "qid": "D15-006-V0137-recall",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「方便；便利」对应哪个日语词？",
+   "options": [
+    "しずか",
+    "べんり",
+    "すき",
+    "げんき"
+   ],
+   "h": "a35fe77d",
+   "oh": [
+    "859019fd",
+    "a35fe77d",
+    "6803899b",
+    "711b9f4d"
+   ],
+   "knowledge_ids": [
+    "V0137"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0134-meaning",
+   "qid": "D15-006-V0134-meaning",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「好き」的中文释义？",
+   "options": [
+    "精神；健康；有活力",
+    "安静；宁静",
+    "喜欢",
+    "方便；便利"
+   ],
+   "h": "9074f6bb",
+   "oh": [
+    "b4f4a4f8",
+    "67f74f82",
+    "9074f6bb",
+    "b421d9ee"
+   ],
+   "knowledge_ids": [
+    "V0134"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0123-reading",
+   "qid": "D15-006-V0123-reading",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「休む」（休息；请假；睡）的假名读音是哪一项？",
+   "options": [
+    "やすい",
+    "やすむ",
+    "やせる",
+    "やる"
+   ],
+   "h": "7993639a",
+   "oh": [
+    "35948b8e",
+    "7993639a",
+    "288e66e9",
+    "248b4b08"
+   ],
+   "knowledge_ids": [
+    "V0123"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0144-recall",
+   "qid": "D15-006-V0144-recall",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「已经；再」对应哪个日语词？",
+   "options": [
+    "もう",
+    "とても",
+    "いつも",
+    "すこし"
+   ],
+   "h": "42301039",
+   "oh": [
+    "42301039",
+    "828c7373",
+    "34094575",
+    "794b8356"
+   ],
+   "knowledge_ids": [
+    "V0144"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0134-reading",
+   "qid": "D15-006-V0134-reading",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「好き」（喜欢）的假名读音是哪一项？",
+   "options": [
+    "すき",
+    "すぐ",
+    "すこし",
+    "すてき"
+   ],
+   "h": "6803899b",
+   "oh": [
+    "6803899b",
+    "5303688c",
+    "794b8356",
+    "d383a661"
+   ],
+   "knowledge_ids": [
+    "V0134"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0121-reading",
+   "qid": "D15-006-V0121-reading",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「教える」（教；告诉）的假名读音是哪一项？",
+   "options": [
+    "おおきい",
+    "おしえる",
+    "おいしい",
+    "おわる"
+   ],
+   "h": "40aed2ab",
+   "oh": [
+    "32b42684",
+    "40aed2ab",
+    "fd2d59a0",
+    "e01dc967"
+   ],
+   "knowledge_ids": [
+    "V0121"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0135-reading",
+   "qid": "D15-006-V0135-reading",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「元気」（精神；健康；有活力）的假名读音是哪一项？",
+   "options": [
+    "げんき",
+    "げんきん",
+    "げんご",
+    "げんかん"
+   ],
+   "h": "711b9f4d",
+   "oh": [
+    "711b9f4d",
+    "ec95da7a",
+    "581b77f2",
+    "e4853058"
+   ],
+   "knowledge_ids": [
+    "V0135"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0143-meaning",
+   "qid": "D15-006-V0143-meaning",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「まだ」的中文释义？",
+   "options": [
+    "还；尚未",
+    "总是；平时",
+    "已经；再（一次）",
+    "非常；很"
+   ],
+   "h": "cea2b1e0",
+   "oh": [
+    "cea2b1e0",
+    "2026a0f1",
+    "6954846c",
+    "89034998"
+   ],
+   "knowledge_ids": [
+    "V0143"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0133-reading",
+   "qid": "D15-006-V0133-reading",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「寒い」（冷）的假名读音是哪一项？",
+   "options": [
+    "さびしい",
+    "さむい",
+    "さす",
+    "さかな"
+   ],
+   "h": "7ba67fbc",
+   "oh": [
+    "a8b259ea",
+    "7ba67fbc",
+    "934e99cb",
+    "859d6811"
+   ],
+   "knowledge_ids": [
+    "V0133"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0127-meaning",
+   "qid": "D15-006-V0127-meaning",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「おおきい」的中文释义？",
+   "options": [
+    "大",
+    "贵；高",
+    "便宜",
+    "小"
+   ],
+   "h": "2249efc6",
+   "oh": [
+    "2249efc6",
+    "599528b",
+    "f5a25cd6",
+    "a4510fe"
+   ],
+   "knowledge_ids": [
+    "V0127"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-G0011-meaning",
+   "qid": "D15-006-G0011-meaning",
    "type": "mcq",
    "day": 6,
    "prompt": "请选择「へ（移动方向）」所用句型的主要含义。",
    "options": [
-    "…是宾语；经过的场所",
     "往／向…",
-    "这/那/那是…",
-    "…和…（全部列举）"
+    "从…到…",
+    "到…为止；直到…",
+    "这/那/那是…"
    ],
    "h": "bcb6033f",
    "oh": [
-    "d2e06564",
     "bcb6033f",
-    "6fe352c9",
-    "9035b957"
+    "1a214d9b",
+    "e4ab3a72",
+    "6fe352c9"
    ],
    "knowledge_ids": [
     "G0011"
@@ -2998,479 +3308,804 @@
    "group": "grammar"
   },
   {
-   "id": "D13-006-V0096-recall",
-   "qid": "D13-006-V0096-recall",
+   "id": "D15-006-V0121-meaning",
+   "qid": "D15-006-V0121-meaning",
    "type": "mcq",
    "day": 6,
-   "prompt": "「雨」对应哪个日语词？",
+   "prompt": "「教える」的中文释义？",
    "options": [
-    "あめ",
-    "えいが",
-    "くすり",
-    "おんがく"
+    "休息；请假；睡",
+    "懂；明白",
+    "教；告诉",
+    "回；回家"
    ],
-   "h": "8369874c",
+   "h": "7682a1d4",
    "oh": [
-    "8369874c",
-    "1fb8a05f",
-    "6013e97d",
-    "64beb247"
+    "d355e08c",
+    "b7d2ad13",
+    "7682a1d4",
+    "e41c2df2"
    ],
    "knowledge_ids": [
-    "V0096"
+    "V0121"
    ],
    "capability": "meaning",
    "group": "vocab"
   },
   {
-   "id": "D13-006-V0099-meaning",
-   "qid": "D13-006-V0099-meaning",
+   "id": "D15-006-V0129-meaning",
+   "qid": "D15-006-V0129-meaning",
    "type": "mcq",
    "day": 6,
-   "prompt": "「映画」的中文释义？",
+   "prompt": "「あたらしい」的中文释义？",
    "options": [
-    "电影",
-    "天气",
-    "音乐",
-    "药"
+    "大",
+    "冷（天气/体感）",
+    "忙",
+    "新"
    ],
-   "h": "ff1da773",
+   "h": "b59b202f",
    "oh": [
-    "ff1da773",
-    "47d34bb0",
-    "ba3ee816",
-    "e944459e"
+    "2249efc6",
+    "9d591f79",
+    "5c459214",
+    "b59b202f"
    ],
    "knowledge_ids": [
-    "V0099"
+    "V0129"
    ],
    "capability": "meaning",
    "group": "vocab"
   },
   {
-   "id": "D13-006-G0012-context",
-   "qid": "D13-006-G0012-context",
+   "id": "D15-006-V0130-reading",
+   "qid": "D15-006-V0130-reading",
    "type": "mcq",
    "day": 6,
-   "prompt": "请选择「友達と映画を見ます。」的中文意思。",
+   "prompt": "「美味しい」（好吃；美味）的假名读音是哪一项？",
    "options": [
-    "周日打算看电影。",
-    "想看电影。",
-    "去看电影。",
-    "和朋友看电影。"
+    "おおきい",
+    "おしえる",
+    "おいしい",
+    "おもい"
    ],
-   "h": "1d346a36",
+   "h": "fd2d59a0",
    "oh": [
-    "fb19fba7",
-    "826731e9",
-    "7b6c12d1",
-    "1d346a36"
+    "32b42684",
+    "40aed2ab",
+    "fd2d59a0",
+    "3a3142b"
    ],
    "knowledge_ids": [
-    "G0012"
-   ],
-   "capability": "usage",
-   "group": "grammar"
-  },
-  {
-   "id": "D13-006-V0112-meaning",
-   "qid": "D13-006-V0112-meaning",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「書く」的中文释义？",
-   "options": [
-    "下（雨、雪等）",
-    "写",
-    "乘；坐（车船）",
-    "有；存在（无生命）"
-   ],
-   "h": "9c55b4d4",
-   "oh": [
-    "f037fb63",
-    "9c55b4d4",
-    "fc174904",
-    "abd8ad90"
-   ],
-   "knowledge_ids": [
-    "V0112"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0098-recall",
-   "qid": "D13-006-V0098-recall",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「猫」对应哪个日语词？",
-   "options": [
-    "あめ",
-    "おんがく",
-    "てんき",
-    "ねこ"
-   ],
-   "h": "9dee00b1",
-   "oh": [
-    "8369874c",
-    "64beb247",
-    "7c3aca89",
-    "9dee00b1"
-   ],
-   "knowledge_ids": [
-    "V0098"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0106-meaning",
-   "qid": "D13-006-V0106-meaning",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「買う」的中文释义？",
-   "options": [
-    "变成；成为",
-    "买",
-    "做；干",
-    "来"
-   ],
-   "h": "f56145ef",
-   "oh": [
-    "2c6ac2dc",
-    "f56145ef",
-    "39e83b10",
-    "e09e89e0"
-   ],
-   "knowledge_ids": [
-    "V0106"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0102-reading",
-   "qid": "D13-006-V0102-reading",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「飲む」（喝；吞）的假名读音是哪一项？",
-   "options": [
-    "のる",
-    "のぼる",
-    "のむ",
-    "のこる"
-   ],
-   "h": "dcc452a3",
-   "oh": [
-    "e5c460ce",
-    "d7cb86f4",
-    "dcc452a3",
-    "f86454b7"
-   ],
-   "knowledge_ids": [
-    "V0102"
+    "V0130"
    ],
    "capability": "reading",
    "group": "vocab"
   },
   {
-   "id": "D13-006-G0012-meaning",
-   "qid": "D13-006-G0012-meaning",
+   "id": "D15-006-V0141-meaning",
+   "qid": "D15-006-V0141-meaning",
    "type": "mcq",
    "day": 6,
-   "prompt": "请选择「と（并列／共同／引用）」所用句型的主要含义。",
+   "prompt": "「いつも」的中文释义？",
    "options": [
-    "…的…",
-    "和…／与…（一起）；「…」地",
-    "去／来／回…（目的地）",
-    "…哦；…呀（告知、强调）"
+    "稍微；一点",
+    "总是；平时",
+    "还；尚未",
+    "有时；时常"
    ],
-   "h": "5b9a598a",
+   "h": "2026a0f1",
    "oh": [
-    "3fcba563",
-    "5b9a598a",
-    "efed5858",
-    "e7cfda32"
+    "98aebc48",
+    "2026a0f1",
+    "cea2b1e0",
+    "16beb411"
    ],
    "knowledge_ids": [
-    "G0012"
+    "V0141"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0140-meaning",
+   "qid": "D15-006-V0140-meaning",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「少し」的中文释义？",
+   "options": [
+    "有时；时常",
+    "非常；很",
+    "总是；平时",
+    "稍微；一点"
+   ],
+   "h": "98aebc48",
+   "oh": [
+    "16beb411",
+    "89034998",
+    "2026a0f1",
+    "98aebc48"
+   ],
+   "knowledge_ids": [
+    "V0140"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0126-meaning",
+   "qid": "D15-006-V0126-meaning",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「安い」的中文释义？",
+   "options": [
+    "便宜",
+    "冷（天气/体感）",
+    "贵；高",
+    "小"
+   ],
+   "h": "f5a25cd6",
+   "oh": [
+    "f5a25cd6",
+    "9d591f79",
+    "599528b",
+    "a4510fe"
+   ],
+   "knowledge_ids": [
+    "V0126"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0148-recall",
+   "qid": "D15-006-V0148-recall",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「但是；不过；连…也」对应哪个日语词？",
+   "options": [
+    "そして",
+    "おいしい",
+    "だから",
+    "でも"
+   ],
+   "h": "84e061cc",
+   "oh": [
+    "e59a7331",
+    "fd2d59a0",
+    "5853148f",
+    "84e061cc"
+   ],
+   "knowledge_ids": [
+    "V0148"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0131-meaning",
+   "qid": "D15-006-V0131-meaning",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「いそがしい」的中文释义？",
+   "options": [
+    "新",
+    "冷（天气/体感）",
+    "便宜",
+    "忙"
+   ],
+   "h": "5c459214",
+   "oh": [
+    "b59b202f",
+    "9d591f79",
+    "f5a25cd6",
+    "5c459214"
+   ],
+   "knowledge_ids": [
+    "V0131"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0136-meaning",
+   "qid": "D15-006-V0136-meaning",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「静か」的中文释义？",
+   "options": [
+    "喜欢",
+    "方便；便利",
+    "精神；健康；有活力",
+    "安静；宁静"
+   ],
+   "h": "67f74f82",
+   "oh": [
+    "9074f6bb",
+    "b421d9ee",
+    "b4f4a4f8",
+    "67f74f82"
+   ],
+   "knowledge_ids": [
+    "V0136"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0148-meaning",
+   "qid": "D15-006-V0148-meaning",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「でも」的中文释义？",
+   "options": [
+    "所以；因此",
+    "然后；而且",
+    "好吃；美味",
+    "但是；不过；连…也"
+   ],
+   "h": "ca1a9b11",
+   "oh": [
+    "38856bbb",
+    "1beb382",
+    "2c306a59",
+    "ca1a9b11"
+   ],
+   "knowledge_ids": [
+    "V0148"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0135-meaning",
+   "qid": "D15-006-V0135-meaning",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「元気」的中文释义？",
+   "options": [
+    "方便；便利",
+    "安静；宁静",
+    "精神；健康；有活力",
+    "喜欢"
+   ],
+   "h": "b4f4a4f8",
+   "oh": [
+    "b421d9ee",
+    "67f74f82",
+    "b4f4a4f8",
+    "9074f6bb"
+   ],
+   "knowledge_ids": [
+    "V0135"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0130-meaning",
+   "qid": "D15-006-V0130-meaning",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「美味しい」的中文释义？",
+   "options": [
+    "大",
+    "冷（天气/体感）",
+    "忙",
+    "好吃；美味"
+   ],
+   "h": "2c306a59",
+   "oh": [
+    "2249efc6",
+    "9d591f79",
+    "5c459214",
+    "2c306a59"
+   ],
+   "knowledge_ids": [
+    "V0130"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0145-meaning",
+   "qid": "D15-006-V0145-meaning",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「そして」的中文释义？",
+   "options": [
+    "但是；不过；连…也",
+    "所以；因此",
+    "然后；而且",
+    "便宜"
+   ],
+   "h": "1beb382",
+   "oh": [
+    "ca1a9b11",
+    "38856bbb",
+    "1beb382",
+    "f5a25cd6"
+   ],
+   "knowledge_ids": [
+    "V0145"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0145-recall",
+   "qid": "D15-006-V0145-recall",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「然后；而且」对应哪个日语词？",
+   "options": [
+    "でも",
+    "やすい",
+    "だから",
+    "そして"
+   ],
+   "h": "e59a7331",
+   "oh": [
+    "84e061cc",
+    "35948b8e",
+    "5853148f",
+    "e59a7331"
+   ],
+   "knowledge_ids": [
+    "V0145"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-G0013-form",
+   "qid": "D15-006-G0013-form",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "选出符合下列意思的日语句子。\n从九点学习到五点。",
+   "options": [
+    "授業は9時からです。",
+    "きのうは夜11時まで勉強しました。",
+    "今から出発するとすれば、向こうに着くのは夜の九時ごろになる。",
+    "九時から五時まで勉強します。"
+   ],
+   "h": "3d71ffe1",
+   "oh": [
+    "8b730e4e",
+    "9c8caa55",
+    "bc530aba",
+    "3d71ffe1"
+   ],
+   "knowledge_ids": [
+    "G0013"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D15-006-V0139-recall",
+   "qid": "D15-006-V0139-recall",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「非常；很」对应哪个日语词？",
+   "options": [
+    "とても",
+    "もう",
+    "すこし",
+    "いつも"
+   ],
+   "h": "828c7373",
+   "oh": [
+    "828c7373",
+    "42301039",
+    "794b8356",
+    "34094575"
+   ],
+   "knowledge_ids": [
+    "V0139"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0122-reading",
+   "qid": "D15-006-V0122-reading",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「帰る」（回；回家）的假名读音是哪一项？",
+   "options": [
+    "かける",
+    "かく",
+    "かえる",
+    "かえす"
+   ],
+   "h": "92d3de17",
+   "oh": [
+    "4b75027e",
+    "4949a81f",
+    "92d3de17",
+    "e4d2cc2d"
+   ],
+   "knowledge_ids": [
+    "V0122"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0125-meaning",
+   "qid": "D15-006-V0125-meaning",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「高い」的中文释义？",
+   "options": [
+    "便宜",
+    "好吃；美味",
+    "贵；高",
+    "大"
+   ],
+   "h": "599528b",
+   "oh": [
+    "f5a25cd6",
+    "2c306a59",
+    "599528b",
+    "2249efc6"
+   ],
+   "knowledge_ids": [
+    "V0125"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-G0013-meaning",
+   "qid": "D15-006-G0013-meaning",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "请选择「から ～ まで」所用句型的主要含义。",
+   "options": [
+    "…哦；…呀（告知、强调）",
+    "…吧；…啊（寻求认同）",
+    "…是主语；提示新信息",
+    "从…到…"
+   ],
+   "h": "1a214d9b",
+   "oh": [
+    "e7cfda32",
+    "631894c3",
+    "cf8ceddb",
+    "1a214d9b"
+   ],
+   "knowledge_ids": [
+    "G0013"
    ],
    "capability": "meaning",
    "group": "grammar"
   },
   {
-   "id": "D13-006-G0011-context",
-   "qid": "D13-006-G0011-context",
+   "id": "D15-006-V0139-meaning",
+   "qid": "D15-006-V0139-meaning",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「とても」的中文释义？",
+   "options": [
+    "稍微；一点",
+    "已经；再（一次）",
+    "非常；很",
+    "总是；平时"
+   ],
+   "h": "89034998",
+   "oh": [
+    "98aebc48",
+    "6954846c",
+    "89034998",
+    "2026a0f1"
+   ],
+   "knowledge_ids": [
+    "V0139"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0124-reading",
+   "qid": "D15-006-V0124-reading",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「分かる」（懂；明白）的假名读音是哪一项？",
+   "options": [
+    "わたる",
+    "わすれる",
+    "わたす",
+    "わかる"
+   ],
+   "h": "920172ec",
+   "oh": [
+    "aa3328e8",
+    "a181dcc0",
+    "dc33779e",
+    "920172ec"
+   ],
+   "knowledge_ids": [
+    "V0124"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0133-meaning",
+   "qid": "D15-006-V0133-meaning",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「寒い」的中文释义？",
+   "options": [
+    "小",
+    "好吃；美味",
+    "贵；高",
+    "冷（天气/体感）"
+   ],
+   "h": "9d591f79",
+   "oh": [
+    "a4510fe",
+    "2c306a59",
+    "599528b",
+    "9d591f79"
+   ],
+   "knowledge_ids": [
+    "V0133"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0142-reading",
+   "qid": "D15-006-V0142-reading",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「時々」（有时；时常）的假名读音是哪一项？",
+   "options": [
+    "ともに",
+    "とくに",
+    "ときどき",
+    "とても"
+   ],
+   "h": "42c23bd8",
+   "oh": [
+    "3321d4ac",
+    "291b1e99",
+    "42c23bd8",
+    "828c7373"
+   ],
+   "knowledge_ids": [
+    "V0142"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0147-recall",
+   "qid": "D15-006-V0147-recall",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「所以；因此」对应哪个日语词？",
+   "options": [
+    "そして",
+    "だから",
+    "でも",
+    "おしえる"
+   ],
+   "h": "5853148f",
+   "oh": [
+    "e59a7331",
+    "5853148f",
+    "84e061cc",
+    "40aed2ab"
+   ],
+   "knowledge_ids": [
+    "V0147"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0128-reading",
+   "qid": "D15-006-V0128-reading",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「小さい」（小）的假名读音是哪一项？",
+   "options": [
+    "ちがう",
+    "ちいさい",
+    "ちゃわん",
+    "ちかい"
+   ],
+   "h": "d5dd8fa9",
+   "oh": [
+    "c0373692",
+    "d5dd8fa9",
+    "4ac3c0ff",
+    "c0487fb3"
+   ],
+   "knowledge_ids": [
+    "V0128"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-G0011-form",
+   "qid": "D15-006-G0011-form",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "选出符合下列意思的日语句子。\n明天去学校。",
+   "options": [
+    "明日、学校へ行きます。",
+    "かぜで学校を休みました。",
+    "毎日バスで学校に行きます。",
+    "ご飯を食べてから、学校へ行きます。"
+   ],
+   "h": "b7b27cd6",
+   "oh": [
+    "b7b27cd6",
+    "9512c64e",
+    "9eb7a552",
+    "d36d5de6"
+   ],
+   "knowledge_ids": [
+    "G0011"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D15-006-V0143-recall",
+   "qid": "D15-006-V0143-recall",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「还；尚未」对应哪个日语词？",
+   "options": [
+    "いつも",
+    "とても",
+    "まだ",
+    "もう"
+   ],
+   "h": "5cb83893",
+   "oh": [
+    "34094575",
+    "828c7373",
+    "5cb83893",
+    "42301039"
+   ],
+   "knowledge_ids": [
+    "V0143"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0141-recall",
+   "qid": "D15-006-V0141-recall",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「总是；平时」对应哪个日语词？",
+   "options": [
+    "ときどき",
+    "いつも",
+    "まだ",
+    "すこし"
+   ],
+   "h": "34094575",
+   "oh": [
+    "42c23bd8",
+    "34094575",
+    "5cb83893",
+    "794b8356"
+   ],
+   "knowledge_ids": [
+    "V0141"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0142-meaning",
+   "qid": "D15-006-V0142-meaning",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「時々」的中文释义？",
+   "options": [
+    "总是；平时",
+    "稍微；一点",
+    "有时；时常",
+    "非常；很"
+   ],
+   "h": "16beb411",
+   "oh": [
+    "2026a0f1",
+    "98aebc48",
+    "16beb411",
+    "89034998"
+   ],
+   "knowledge_ids": [
+    "V0142"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0122-meaning",
+   "qid": "D15-006-V0122-meaning",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「帰る」的中文释义？",
+   "options": [
+    "休息；请假；睡",
+    "懂；明白",
+    "教；告诉",
+    "回；回家"
+   ],
+   "h": "e41c2df2",
+   "oh": [
+    "d355e08c",
+    "b7d2ad13",
+    "7682a1d4",
+    "e41c2df2"
+   ],
+   "knowledge_ids": [
+    "V0122"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-V0128-meaning",
+   "qid": "D15-006-V0128-meaning",
+   "type": "mcq",
+   "day": 6,
+   "prompt": "「ちいさい」的中文释义？",
+   "options": [
+    "忙",
+    "贵；高",
+    "大",
+    "小"
+   ],
+   "h": "a4510fe",
+   "oh": [
+    "5c459214",
+    "599528b",
+    "2249efc6",
+    "a4510fe"
+   ],
+   "knowledge_ids": [
+    "V0128"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-006-G0011-context",
+   "qid": "D15-006-G0011-context",
    "type": "mcq",
    "day": 6,
    "prompt": "请选择「明日、学校へ行きます。」的中文意思。",
    "options": [
-    "吃完饭后去学校。",
+    "明天去学校。",
     "每天坐公交车去学校。",
-    "因为感冒，我请假没去学校。",
-    "明天去学校。"
+    "吃完饭后去学校。",
+    "因为感冒，我请假没去学校。"
    ],
    "h": "efb33fc2",
    "oh": [
-    "a8fc39b",
+    "efb33fc2",
     "78df0689",
-    "be3c2f44",
-    "efb33fc2"
+    "a8fc39b",
+    "be3c2f44"
    ],
    "knowledge_ids": [
     "G0011"
    ],
    "capability": "usage",
    "group": "grammar"
-  },
-  {
-   "id": "D13-006-V0114-reading",
-   "qid": "D13-006-V0114-reading",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「話す」（说；讲）的假名读音是哪一项？",
-   "options": [
-    "はれる",
-    "はなす",
-    "はじまる",
-    "はいる"
-   ],
-   "h": "d9d8be9f",
-   "oh": [
-    "a94481e7",
-    "d9d8be9f",
-    "e2343b7d",
-    "4b666abf"
-   ],
-   "knowledge_ids": [
-    "V0114"
-   ],
-   "capability": "reading",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0115-meaning",
-   "qid": "D13-006-V0115-meaning",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「聞く」的中文释义？",
-   "options": [
-    "看；观看",
-    "听；问",
-    "等；等待",
-    "变成；成为"
-   ],
-   "h": "b6f9749a",
-   "oh": [
-    "c675468",
-    "b6f9749a",
-    "88eddb2b",
-    "2c6ac2dc"
-   ],
-   "knowledge_ids": [
-    "V0115"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0096-meaning",
-   "qid": "D13-006-V0096-meaning",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「あめ」的中文释义？",
-   "options": [
-    "雨",
-    "电影",
-    "药",
-    "音乐"
-   ],
-   "h": "6c2597d7",
-   "oh": [
-    "6c2597d7",
-    "ff1da773",
-    "e944459e",
-    "ba3ee816"
-   ],
-   "knowledge_ids": [
-    "V0096"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0102-meaning",
-   "qid": "D13-006-V0102-meaning",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「飲む」的中文释义？",
-   "options": [
-    "喝；吞（药）",
-    "等；等待",
-    "听；问",
-    "来"
-   ],
-   "h": "898fe2a3",
-   "oh": [
-    "898fe2a3",
-    "88eddb2b",
-    "b6f9749a",
-    "e09e89e0"
-   ],
-   "knowledge_ids": [
-    "V0102"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0116-meaning",
-   "qid": "D13-006-V0116-meaning",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「待つ」的中文释义？",
-   "options": [
-    "看；观看",
-    "买",
-    "等；等待",
-    "喝；吞（药）"
-   ],
-   "h": "88eddb2b",
-   "oh": [
-    "c675468",
-    "f56145ef",
-    "88eddb2b",
-    "898fe2a3"
-   ],
-   "knowledge_ids": [
-    "V0116"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0118-meaning",
-   "qid": "D13-006-V0118-meaning",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「降る」的中文释义？",
-   "options": [
-    "喝；吞（药）",
-    "说；讲",
-    "有；存在（无生命）",
-    "下（雨、雪等）"
-   ],
-   "h": "f037fb63",
-   "oh": [
-    "898fe2a3",
-    "557d8b0e",
-    "abd8ad90",
-    "f037fb63"
-   ],
-   "knowledge_ids": [
-    "V0118"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0117-reading",
-   "qid": "D13-006-V0117-reading",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「乗る」（乘；坐）的假名读音是哪一项？",
-   "options": [
-    "のぼる",
-    "のむ",
-    "のる",
-    "のこる"
-   ],
-   "h": "e5c460ce",
-   "oh": [
-    "d7cb86f4",
-    "dcc452a3",
-    "e5c460ce",
-    "f86454b7"
-   ],
-   "knowledge_ids": [
-    "V0117"
-   ],
-   "capability": "reading",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0116-reading",
-   "qid": "D13-006-V0116-reading",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「待つ」（等；等待）的假名读音是哪一项？",
-   "options": [
-    "まがる",
-    "まいる",
-    "まつ",
-    "まわる"
-   ],
-   "h": "60b83edf",
-   "oh": [
-    "9621c7d4",
-    "560f6e5c",
-    "60b83edf",
-    "30325af3"
-   ],
-   "knowledge_ids": [
-    "V0116"
-   ],
-   "capability": "reading",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0118-reading",
-   "qid": "D13-006-V0118-reading",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「降る」（下）的假名读音是哪一项？",
-   "options": [
-    "ふえる",
-    "ふむ",
-    "ふく",
-    "ふる"
-   ],
-   "h": "a5d0c801",
-   "oh": [
-    "911d2eb9",
-    "9ad0b6b0",
-    "69d0698d",
-    "a5d0c801"
-   ],
-   "knowledge_ids": [
-    "V0118"
-   ],
-   "capability": "reading",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-006-V0117-meaning",
-   "qid": "D13-006-V0117-meaning",
-   "type": "mcq",
-   "day": 6,
-   "prompt": "「乗る」的中文释义？",
-   "options": [
-    "乘；坐（车船）",
-    "下（雨、雪等）",
-    "听；问",
-    "来"
-   ],
-   "h": "fc174904",
-   "oh": [
-    "fc174904",
-    "f037fb63",
-    "b6f9749a",
-    "e09e89e0"
-   ],
-   "knowledge_ids": [
-    "V0117"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
   }
  ],
  "listening_material": null

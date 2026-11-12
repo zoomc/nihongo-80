@@ -1,56 +1,46 @@
 {
  "day": 4,
  "phase": "P1",
- "theme": "N の N、が（主语／新信息／存在主体）、を（宾语／移动经过）",
- "can_do": "用「N の N、が（主语／新信息／存在主体）、を（宾语／移动经过）」各造一句自己的话，表达：…的…；所属/修饰；…（主语/新信息/存在主体/能力对象）；把…（标宾语）",
+ "theme": "が（主语／新信息／存在主体）、を（宾语／移动经过）",
+ "can_do": "在单选题中辨认今天的词义、读音和句型用法。",
  "minutes": 60,
  "blocks": [
   {
-   "type": "复习",
-   "min": 6,
-   "desc": "到期项优先；未完成顺延，不追赶"
+   "type": "记忆曲线复习",
+   "min": 10,
+   "desc": "先做已到期的复习题"
   },
   {
    "type": "新词",
-   "min": 11,
-   "desc": "20 个必学词；3 个选学拓展"
+   "min": 16,
+   "desc": "25 个新词"
   },
   {
    "type": "语法",
-   "min": 6,
-   "desc": "N の N、が（主语／新信息／存在主体）、を（宾语／移动经过）"
-  },
-  {
-   "type": "句子输出",
-   "min": 4,
-   "desc": "每条新语法独立说一句，和例句对照"
+   "min": 9,
+   "desc": "が（主语／新信息／存在主体）、を（宾语／移动经过）"
   },
   {
    "type": "练习",
-   "min": 15,
-   "desc": "优先做当天必学词与语法，答完重练错题"
-  },
-  {
-   "type": "会话",
-   "min": 18,
-   "desc": "抽词、造句、批改"
+   "min": 25,
+   "desc": "单选题，答完可重练错题"
   }
  ],
  "listening": false,
  "review": [
   {
-   "kid": "V0029",
-   "front": "毎日",
-   "back": "每天",
-   "kana": "まいにち",
-   "ko_pron": "마이니치"
+   "kid": "V0040",
+   "front": "会社",
+   "back": "公司",
+   "kana": "かいしゃ",
+   "ko_pron": "카이샤"
   },
   {
-   "kid": "V0030",
-   "front": "今週",
-   "back": "本周",
-   "kana": "こんしゅう",
-   "ko_pron": "콘슈우"
+   "kid": "V0041",
+   "front": "駅",
+   "back": "车站",
+   "kana": "えき",
+   "ko_pron": "에키"
   },
   {
    "kid": "G0004",
@@ -60,11 +50,11 @@
    "ko_pron": "N 모"
   },
   {
-   "kid": "K0007",
-   "front": "土",
-   "back": "土；星期六",
-   "kana": "ド、ト、つち",
-   "ko_pron": "도·토 / 쓰치"
+   "kid": "K0008",
+   "front": "一",
+   "back": "一",
+   "kana": "イチ、イツ、ひと、ひとつ",
+   "ko_pron": "이치·이쓰 / 히토·히토쓰"
   },
   {
    "kid": "V0003",
@@ -97,380 +87,6 @@
  ],
  "vocab": [
   {
-   "id": "V0043",
-   "surface": "病院",
-   "kana": "びょういん",
-   "meaning": "医院",
-   "ko": "병원（医院）",
-   "ko_pron": "뵤우인",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "病院に行きます。",
-    "zh": "去医院。",
-    "ko_pron": "뵤우인니이키마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0044",
-   "surface": "図書館",
-   "kana": "としょかん",
-   "meaning": "图书馆",
-   "ko": "도서관（图书馆）",
-   "ko_pron": "토쇼칸",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "図書館で本を読みます。",
-    "zh": "在图书馆读书。",
-    "ko_pron": "토쇼칸데혼오요미마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0045",
-   "surface": "部屋",
-   "kana": "へや",
-   "meaning": "房间",
-   "ko": "방（房间） / 집칸（房间）",
-   "ko_pron": "헤야",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "部屋に猫がいます。",
-    "zh": "房间里有猫。",
-    "ko_pron": "헤야니네코가이마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0047",
-   "surface": "上",
-   "kana": "うえ",
-   "meaning": "上面；上方",
-   "ko": "위",
-   "ko_pron": "우에",
-   "ko_status": "ai_gloss",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "机の上に本があります。",
-    "zh": "桌上有书。",
-    "ko_pron": "쓰쿠에노우에니혼가아리마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0048",
-   "surface": "中",
-   "kana": "なか",
-   "meaning": "里面；中间",
-   "ko": "속（里面，里头） / 안（里，里面） / 가운데（中间，正中，中央）",
-   "ko_pron": "나카",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "部屋の中にいます。",
-    "zh": "在房间里。",
-    "ko_pron": "헤야노나카니이마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0049",
-   "surface": "前",
-   "kana": "まえ",
-   "meaning": "前面；之前",
-   "ko": "앞（前，前面）",
-   "ko_pron": "마에",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "駅の前に店があります。",
-    "zh": "车站前有店。",
-    "ko_pron": "에키노마에니미세가아리마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0050",
-   "surface": "後",
-   "kana": "あと",
-   "meaning": "后面；之后",
-   "ko": "담（之后） / 뒤（后，之后，后来） / 후（后，以后，之后）",
-   "ko_pron": "아토",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "食事の後に、薬を飲みます。",
-    "zh": "饭后吃药。",
-    "ko_pron": "쇼쿠지노아토니,쿠스리오노미마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0051",
-   "surface": "ご飯",
-   "kana": "ごはん",
-   "meaning": "米饭；饭（餐）",
-   "ko": "밥 / 식사",
-   "ko_pron": "고한",
-   "ko_status": "ai_gloss",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "ご飯を食べます。",
-    "zh": "吃饭。",
-    "ko_pron": "고한오타베마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0052",
-   "surface": "朝ご飯",
-   "kana": "あさごはん",
-   "meaning": "早饭",
-   "ko": "아침（早饭，早餐）",
-   "ko_pron": "아사고한",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "朝ご飯を食べます。",
-    "zh": "吃早饭。",
-    "ko_pron": "아사고한오타베마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0053",
-   "surface": "水",
-   "kana": "みず",
-   "meaning": "水（冷水／生水）",
-   "ko": "물（水）",
-   "ko_pron": "미즈",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "水を飲みます。",
-    "zh": "喝水。",
-    "ko_pron": "미즈오노미마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0054",
-   "surface": "お茶",
-   "kana": "おちゃ",
-   "meaning": "茶",
-   "ko": "차（茶，茶水）",
-   "ko_pron": "오차",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "お茶を飲みます。",
-    "zh": "喝茶。",
-    "ko_pron": "오차오노미마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0055",
-   "surface": "肉",
-   "kana": "にく",
-   "meaning": "肉",
-   "ko": "살（肉） / 고기（肉）",
-   "ko_pron": "니쿠",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "肉を買います。",
-    "zh": "买肉。",
-    "ko_pron": "니쿠오카이마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0056",
-   "surface": "魚",
-   "kana": "さかな",
-   "meaning": "鱼",
-   "ko": "물고기 / 생선（문맥에 따라）",
-   "ko_pron": "사카나",
-   "ko_status": "ai_gloss",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "魚が好きです。",
-    "zh": "喜欢鱼。",
-    "ko_pron": "사카나가스키데스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0057",
-   "surface": "野菜",
-   "kana": "やさい",
-   "meaning": "蔬菜",
-   "ko": "야채（蔬菜） / 채소（菜，蔬菜）",
-   "ko_pron": "야사이",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "野菜を買います。",
-    "zh": "买蔬菜。",
-    "ko_pron": "야사이오카이마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0058",
-   "surface": "パン",
-   "kana": "パン",
-   "meaning": "面包",
-   "ko": "빵（面包）",
-   "ko_pron": "판",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "パンを食べます。",
-    "zh": "吃面包。",
-    "ko_pron": "판오타베마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0059",
-   "surface": "料理",
-   "kana": "りょうり",
-   "meaning": "菜肴；烹饪",
-   "ko": "요리（烹饪，烹调）",
-   "ko_pron": "료우리",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "料理を作ります。",
-    "zh": "做菜。",
-    "ko_pron": "료우리오쓰쿠리마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0060",
-   "surface": "電車",
-   "kana": "でんしゃ",
-   "meaning": "电车（轨道交通）",
-   "ko": "전차（电车） / 전동차（电动车，电车）",
-   "ko_pron": "덴샤",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "電車で行きます。",
-    "zh": "坐电车去。",
-    "ko_pron": "덴샤데이키마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0061",
-   "surface": "バス",
-   "kana": "バス",
-   "meaning": "公交车",
-   "ko": "버스（公共汽车，公交车）",
-   "ko_pron": "바스",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "バスに乗ります。",
-    "zh": "上公交。",
-    "ko_pron": "바스니노리마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0062",
-   "surface": "車",
-   "kana": "くるま",
-   "meaning": "汽车；车",
-   "ko": "차（车，车辆） / 자동차（汽车）",
-   "ko_pron": "쿠루마",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "車で会社へ行きます。",
-    "zh": "开车去公司。",
-    "ko_pron": "쿠루마데카이샤에이키마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0063",
-   "surface": "自転車",
-   "kana": "じてんしゃ",
-   "meaning": "自行车",
-   "ko": "자전거（自行车）",
-   "ko_pron": "지텐샤",
-   "ko_status": "dictionary",
-   "optional": false,
-   "pos": "名詞",
-   "ex": {
-    "ja": "自転車で学校へ行きます。",
-    "zh": "骑车去学校。",
-    "ko_pron": "지텐샤데가꼬우에이키마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0064",
-   "surface": "飛行機",
-   "kana": "ひこうき",
-   "meaning": "飞机",
-   "ko": "비행기（飞机）",
-   "ko_pron": "히코우키",
-   "ko_status": "dictionary",
-   "optional": true,
-   "pos": "名詞",
-   "ex": {
-    "ja": "飛行機で旅行します。",
-    "zh": "坐飞机旅行。",
-    "ko_pron": "히코우키데료코우시마스."
-   },
-   "audio": "tts"
-  },
-  {
-   "id": "V0066",
-   "surface": "父",
-   "kana": "ちち",
-   "meaning": "(我)父亲",
-   "ko": "아버지（父亲，爸爸）",
-   "ko_pron": "치치",
-   "ko_status": "dictionary",
-   "optional": true,
-   "pos": "名詞",
-   "ex": {
-    "ja": "父は会社員です。",
-    "zh": "我父亲是公司职员。",
-    "ko_pron": "치치와카이샤인데스."
-   },
-   "audio": "tts"
-  },
-  {
    "id": "V0067",
    "surface": "母",
    "kana": "はは",
@@ -478,100 +94,453 @@
    "ko": "어머니（母亲，妈妈）",
    "ko_pron": "하하",
    "ko_status": "dictionary",
-   "optional": true,
+   "optional": false,
    "pos": "名詞",
    "ex": {
     "ja": "母は医者です。",
     "zh": "我母亲是医生。",
     "ko_pron": "하하와이샤데스."
    },
-   "audio": "tts"
+   "audio": null
+  },
+  {
+   "id": "V0068",
+   "surface": "兄",
+   "kana": "あに",
+   "meaning": "(我)哥哥",
+   "ko": "형（哥，哥哥） / 오빠（哥哥） / 오라비（哥哥）",
+   "ko_pron": "아니",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "兄は東京にいます。",
+    "zh": "我哥哥在东京。",
+    "ko_pron": "아니와토우쿄우니이마스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0069",
+   "surface": "姉",
+   "kana": "あね",
+   "meaning": "(我)姐姐",
+   "ko": "누나（姐姐） / 언니（姐姐）",
+   "ko_pron": "아네",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "姉は学生です。",
+    "zh": "我姐姐是学生。",
+    "ko_pron": "아네와가쿠세이데스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0070",
+   "surface": "弟",
+   "kana": "おとうと",
+   "meaning": "(我)弟弟",
+   "ko": "동생（弟弟；妹妹） / 아우（弟弟） / 남동생（弟弟）",
+   "ko_pron": "오토우토",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "弟に本を貸します。",
+    "zh": "借书给弟弟。",
+    "ko_pron": "오토우토니혼오카시마스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0071",
+   "surface": "妹",
+   "kana": "いもうと",
+   "meaning": "(我)妹妹",
+   "ko": "동생（弟弟；妹妹） / 여동생（妹妹） / 누이동생（妹妹）",
+   "ko_pron": "이모우토",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "妹は元気です。",
+    "zh": "我妹妹很精神。",
+    "ko_pron": "이모우토와겐키데스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0072",
+   "surface": "家族",
+   "kana": "かぞく",
+   "meaning": "家人；家庭",
+   "ko": "가족（家庭，家人） / 식구（家人）",
+   "ko_pron": "카조쿠",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "家族と旅行します。",
+    "zh": "和家人旅行。",
+    "ko_pron": "카조쿠토료코우시마스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0073",
+   "surface": "子供",
+   "kana": "こども",
+   "meaning": "孩子；小孩",
+   "ko": "애（孩子，小孩） / 아이（小孩，孩子） / 어린애（小孩）",
+   "ko_pron": "코도모",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "子供が公園にいます。",
+    "zh": "孩子在公园。",
+    "ko_pron": "코도모가코우엔니이마스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0074",
+   "surface": "彼",
+   "kana": "かれ",
+   "meaning": "他；男朋友",
+   "ko": "그（他）",
+   "ko_pron": "카레",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "代名詞",
+   "ex": {
+    "ja": "彼は学生です。",
+    "zh": "他是学生。",
+    "ko_pron": "카레와가쿠세이데스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0075",
+   "surface": "彼女",
+   "kana": "かのじょ",
+   "meaning": "她；女朋友",
+   "ko": "그녀（她） / 여자 친구（女朋友）",
+   "ko_pron": "카노조",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "代名詞",
+   "ex": {
+    "ja": "彼女は元気です。",
+    "zh": "她很精神。",
+    "ko_pron": "카노조와겐키데스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0076",
+   "surface": "友達",
+   "kana": "ともだち",
+   "meaning": "朋友",
+   "ko": "벗（朋友，友人） / 친구（朋友，好友， 友人，故旧）",
+   "ko_pron": "토모다치",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "友達と映画を見ます。",
+    "zh": "和朋友看电影。",
+    "ko_pron": "토모다치토에이가오미마스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0077",
+   "surface": "人",
+   "kana": "ひと",
+   "meaning": "人",
+   "ko": "사람（人） / 인간（人，人类）",
+   "ko_pron": "히토",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "あの人は先生です。",
+    "zh": "那位是老师。",
+    "ko_pron": "아노히토와센세이데스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0078",
+   "surface": "学生",
+   "kana": "がくせい",
+   "meaning": "学生",
+   "ko": "학생（学生） / 대학생（大学生）",
+   "ko_pron": "가쿠세이",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "私は学生です。",
+    "zh": "我是学生。",
+    "ko_pron": "와타시와가쿠세이데스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0079",
+   "surface": "先生",
+   "kana": "せんせい",
+   "meaning": "老师；医生/律师等",
+   "ko": "샘（老师） / 선생（老师，教师） / 선생님（老师，教师）",
+   "ko_pron": "센세이",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "田中さんは先生です。",
+    "zh": "田中是老师。",
+    "ko_pron": "타나카산와센세이데스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0080",
+   "surface": "本",
+   "kana": "ほん",
+   "meaning": "书",
+   "ko": "책（书，书籍，画册） / 서적（书籍，书）",
+   "ko_pron": "혼",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "本を読みます。",
+    "zh": "读书。",
+    "ko_pron": "혼오요미마스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0081",
+   "surface": "日本語",
+   "kana": "にほんご",
+   "meaning": "日语",
+   "ko": "일본어（日语，日本语）",
+   "ko_pron": "니혼고",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "日本語を勉強します。",
+    "zh": "学日语。",
+    "ko_pron": "니혼고오벤쿄우시마스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0082",
+   "surface": "勉強",
+   "kana": "べんきょう",
+   "meaning": "学习；用功",
+   "ko": "공부（学习，读书）",
+   "ko_pron": "벤쿄우",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞/サ変",
+   "ex": {
+    "ja": "図書館で勉強します。",
+    "zh": "在图书馆学习。",
+    "ko_pron": "토쇼칸데벤쿄우시마스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0083",
+   "surface": "宿題",
+   "kana": "しゅくだい",
+   "meaning": "作业",
+   "ko": "숙제（作业） / 과제물（作业）",
+   "ko_pron": "슈쿠다이",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "宿題をします。",
+    "zh": "做作业。",
+    "ko_pron": "슈쿠다이오시마스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0084",
+   "surface": "名前",
+   "kana": "なまえ",
+   "meaning": "名字；姓名",
+   "ko": "이름（名字，名称）",
+   "ko_pron": "나마에",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "ここに名前を書いてください。",
+    "zh": "请在这里写名字。",
+    "ko_pron": "코코니나마에오카이테쿠다사이."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0085",
+   "surface": "仕事",
+   "kana": "しごと",
+   "meaning": "工作；活儿",
+   "ko": "일（事情，工作） / 일감（活儿，工作） / 직장（职业，职场，工作）",
+   "ko_pron": "시고토",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "仕事が忙しいです。",
+    "zh": "工作很忙。",
+    "ko_pron": "시고토가이소가시이데스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0086",
+   "surface": "会社員",
+   "kana": "かいしゃいん",
+   "meaning": "公司职员",
+   "ko": "회사원（公司职员，公司员工）",
+   "ko_pron": "카이샤인",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "彼は会社員です。",
+    "zh": "他是公司职员。",
+    "ko_pron": "카레와카이샤인데스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0087",
+   "surface": "医者",
+   "kana": "いしゃ",
+   "meaning": "医生",
+   "ko": "의사（医生）",
+   "ko_pron": "이샤",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "医者になりたいです。",
+    "zh": "想当医生。",
+    "ko_pron": "이샤니나리타이데스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0089",
+   "surface": "電話",
+   "kana": "でんわ",
+   "meaning": "电话",
+   "ko": "전화（电话） / 전화기（电话机）",
+   "ko_pron": "덴와",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "友達に電話します。",
+    "zh": "给朋友打电话。",
+    "ko_pron": "토모다치니덴와시마스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0091",
+   "surface": "旅行",
+   "kana": "りょこう",
+   "meaning": "旅行",
+   "ko": "여행（旅行，旅游，游行）",
+   "ko_pron": "료코우",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞/サ変",
+   "ex": {
+    "ja": "家族と旅行します。",
+    "zh": "和家人旅行。",
+    "ko_pron": "카조쿠토료코우시마스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0092",
+   "surface": "ホテル",
+   "kana": "ホテル",
+   "meaning": "宾馆；酒店",
+   "ko": "호텔（酒店，饭店，宾馆）",
+   "ko_pron": "호테루",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "ホテルに泊まります。",
+    "zh": "住宾馆。",
+    "ko_pron": "호테루니토마리마스."
+   },
+   "audio": null
+  },
+  {
+   "id": "V0094",
+   "surface": "頭",
+   "kana": "あたま",
+   "meaning": "头；脑袋",
+   "ko": "골치（脑袋） / 골통（脑袋） / 머리（头）",
+   "ko_pron": "아타마",
+   "ko_status": "dictionary",
+   "optional": false,
+   "pos": "名詞",
+   "ex": {
+    "ja": "頭が痛いです。",
+    "zh": "头疼。",
+    "ko_pron": "아타마가이타이데스."
+   },
+   "audio": null
   }
  ],
  "core_vocab_ids": [
-  "V0043",
-  "V0044",
-  "V0045",
-  "V0047",
-  "V0048",
-  "V0049",
-  "V0050",
-  "V0051",
-  "V0052",
-  "V0053",
-  "V0054",
-  "V0055",
-  "V0056",
-  "V0057",
-  "V0058",
-  "V0059",
-  "V0060",
-  "V0061",
-  "V0062",
-  "V0063"
+  "V0067",
+  "V0068",
+  "V0069",
+  "V0070",
+  "V0071",
+  "V0072",
+  "V0073",
+  "V0074",
+  "V0075",
+  "V0076",
+  "V0077",
+  "V0078",
+  "V0079",
+  "V0080",
+  "V0081",
+  "V0082",
+  "V0083",
+  "V0084",
+  "V0085",
+  "V0086",
+  "V0087",
+  "V0089",
+  "V0091",
+  "V0092",
+  "V0094"
  ],
- "extension_vocab_ids": [
-  "V0064",
-  "V0066",
-  "V0067"
- ],
+ "extension_vocab_ids": [],
  "grammar": [
-  {
-   "id": "G0006",
-   "pattern": "N の N",
-   "meaning_zh": "…的…；所属/修饰",
-   "connection": "名詞 + の + 名詞",
-   "usage": "连体修饰、所属、同位；中文「的」的对应，但不可滥用",
-   "register_note": "の 口语书面通用；不要把所有中文「的」都机械译成 の。",
-   "examples": [
-    {
-     "ja": "私の本です。",
-     "zh": "是我的书。",
-     "vocab_ids": [
-      "V0001",
-      "V0080"
-     ]
-    },
-    {
-     "ja": "日本語の先生です。",
-     "zh": "是日语老师。",
-     "vocab_ids": [
-      "V0081",
-      "V0079"
-     ]
-    }
-   ],
-   "prerequisites": [
-    "G0001"
-   ],
-   "compare": [],
-   "common_errors": [
-    {
-     "wrong": "私は本です。",
-     "why": "该用 の 表所属却用 は；中文「我的书」直译成「我 是 书」",
-     "fix": "私の本です。",
-     "learner": "zh"
-    },
-    {
-     "wrong": "静かな の 部屋",
-     "why": "な形容词连体用 な，不叠加 の",
-     "fix": "静かな部屋",
-     "learner": "zh"
-    }
-   ],
-   "jlpt": "N5",
-   "tags": [
-    "particle"
-   ],
-   "source_ids": [
-    "S000"
-   ],
-   "review_status": "self_reviewed",
-   "provenance": "self_reviewed",
-   "ko_equiv": "N의 N",
-   "ko_diff": "韩语의多表所属，口语常省略；修饰关系更常用名词直接并列，使用范围比日语の窄。",
-   "ko_pron": "N 노 N"
-  },
   {
    "id": "G0007",
    "pattern": "が（主语／新信息／存在主体）",
@@ -688,1135 +657,1351 @@
  "unit_questions": [],
  "practice": [
   {
-   "id": "P-004-V0043-m-a251bfbcdd5a",
-   "qid": "P-004-V0043-m-a251bfbcdd5a",
+   "id": "P-004-V0067-m-8316ea2ed3be",
+   "qid": "P-004-V0067-m-8316ea2ed3be",
    "type": "mcq",
-   "prompt": "本课词条「病院」（例句语境：去医院。）的释义是哪一项？",
+   "prompt": "本课词条「母」（例句语境：我母亲是医生。）的释义是哪一项？",
    "options": [
-    "大家；都",
-    "医院",
-    "雪",
-    "大约；大概"
+    "竖；长度",
+    "(我)母亲",
+    "倒下；倒闭",
+    "可以；好"
    ],
-   "h": "de987ea8",
+   "h": "ad8b91e2",
    "oh": [
-    "edf4f064",
-    "de987ea8",
-    "6e259afd",
-    "48f6aa70"
+    "4d173497",
+    "ad8b91e2",
+    "af70cfba",
+    "cb367d69"
    ],
    "day": 4,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V0043"
+    "V0067"
    ],
    "source_day": 4,
    "optional": true
   },
   {
-   "id": "P-004-V0043-r-2aa39844895e",
-   "qid": "P-004-V0043-r-2aa39844895e",
+   "id": "P-004-V0067-r-8ca722f6e55f",
+   "qid": "P-004-V0067-r-8ca722f6e55f",
    "type": "mcq",
-   "prompt": "本课词条「病院」（医院）的假名读音是哪一项？",
+   "prompt": "本课词条「母」（(我)母亲）的假名读音是哪一项？",
    "options": [
-    "うみ",
-    "びょういん",
-    "おそれる",
-    "てつ"
+    "とくちょう",
+    "にし",
+    "はは",
+    "くう"
    ],
-   "h": "23666d7a",
+   "h": "89c19163",
    "oh": [
-    "79607d32",
-    "23666d7a",
-    "59237afd",
-    "90e2b347"
+    "f2ce3186",
+    "a1cab187",
+    "89c19163",
+    "b03fbce8"
    ],
    "day": 4,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V0043"
+    "V0067"
    ],
    "source_day": 4,
    "optional": true
   },
   {
-   "id": "P-004-V0044-m-57dcd26f0fa7",
-   "qid": "P-004-V0044-m-57dcd26f0fa7",
+   "id": "P-004-V0068-m-fb5fb9275df9",
+   "qid": "P-004-V0068-m-fb5fb9275df9",
    "type": "mcq",
-   "prompt": "本课词条「図書館」（例句语境：在图书馆读书。）的释义是哪一项？",
+   "prompt": "本课词条「兄」（例句语境：我哥哥在东京。）的释义是哪一项？",
+   "options": [
+    "说话；闲聊",
+    "四（し／よん）",
+    "合计",
+    "(我)哥哥"
+   ],
+   "h": "f516426b",
+   "oh": [
+    "16e573db",
+    "18533024",
+    "cbef4a2",
+    "f516426b"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0068"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0068-r-b40747150ac4",
+   "qid": "P-004-V0068-r-b40747150ac4",
+   "type": "mcq",
+   "prompt": "本课词条「兄」（(我)哥哥）的假名读音是哪一项？",
+   "options": [
+    "おだやか",
+    "アナウンサー",
+    "ぬぐ",
+    "あに"
+   ],
+   "h": "6d6af7aa",
+   "oh": [
+    "c25cb5b6",
+    "88d8475f",
+    "60bf1241",
+    "6d6af7aa"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0068"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0069-m-3677f9e63b26",
+   "qid": "P-004-V0069-m-3677f9e63b26",
+   "type": "mcq",
+   "prompt": "本课词条「姉」（例句语境：我姐姐是学生。）的释义是哪一项？",
+   "options": [
+    "触摸",
+    "(我)姐姐",
+    "文章；文笔",
+    "肥皂"
+   ],
+   "h": "bbb16169",
+   "oh": [
+    "f89c0db3",
+    "bbb16169",
+    "96805d30",
+    "57585706"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0069"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0069-r-4c254ce95626",
+   "qid": "P-004-V0069-r-4c254ce95626",
+   "type": "mcq",
+   "prompt": "本课词条「姉」（(我)姐姐）的假名读音是哪一项？",
+   "options": [
+    "ほそい",
+    "あね",
+    "うかがう",
+    "ぜんぶ"
+   ],
+   "h": "676aee38",
+   "oh": [
+    "dee05a13",
+    "676aee38",
+    "42bfbf98",
+    "60118a6a"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0069"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0070-m-1581e9ea6722",
+   "qid": "P-004-V0070-m-1581e9ea6722",
+   "type": "mcq",
+   "prompt": "本课词条「弟」（例句语境：借书给弟弟。）的释义是哪一项？",
+   "options": [
+    "(我)弟弟",
+    "结账；计算",
+    "篮子",
+    "工具"
+   ],
+   "h": "d3043d7f",
+   "oh": [
+    "d3043d7f",
+    "42818451",
+    "18716c33",
+    "9f1d3d35"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0070"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0070-r-83bc5006c7a0",
+   "qid": "P-004-V0070-r-83bc5006c7a0",
+   "type": "mcq",
+   "prompt": "本课词条「弟」（(我)弟弟）的假名读音是哪一项？",
+   "options": [
+    "ようじ",
+    "よく",
+    "おとうと",
+    "れんしゅう"
+   ],
+   "h": "2062e619",
+   "oh": [
+    "d610d961",
+    "a90d5ce8",
+    "2062e619",
+    "d0c3de1a"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0070"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0071-m-3cad54abbcff",
+   "qid": "P-004-V0071-m-3cad54abbcff",
+   "type": "mcq",
+   "prompt": "本课词条「妹」（例句语境：我妹妹很精神。）的释义是哪一项？",
+   "options": [
+    "感觉",
+    "交换；兑换",
+    "田地",
+    "(我)妹妹"
+   ],
+   "h": "1f979903",
+   "oh": [
+    "d4d411a5",
+    "ea9d925b",
+    "dc1da44d",
+    "1f979903"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0071"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0071-r-59399ed7c7cc",
+   "qid": "P-004-V0071-r-59399ed7c7cc",
+   "type": "mcq",
+   "prompt": "本课词条「妹」（(我)妹妹）的假名读音是哪一项？",
+   "options": [
+    "せんぱい",
+    "ぜんしん",
+    "せん",
+    "いもうと"
+   ],
+   "h": "7adbcf15",
+   "oh": [
+    "8dd3dfe",
+    "7c68610a",
+    "de072d8b",
+    "7adbcf15"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0071"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0072-m-aee0acd87baf",
+   "qid": "P-004-V0072-m-aee0acd87baf",
+   "type": "mcq",
+   "prompt": "本课词条「家族」（例句语境：和家人旅行。）的释义是哪一项？",
+   "options": [
+    "秋天",
+    "暗；阴沉",
+    "导演；监管",
+    "家人；家庭"
+   ],
+   "h": "34c67497",
+   "oh": [
+    "af307819",
+    "cd46b470",
+    "ca274b68",
+    "34c67497"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0072"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0072-r-03fcb7d22b32",
+   "qid": "P-004-V0072-r-03fcb7d22b32",
+   "type": "mcq",
+   "prompt": "本课词条「家族」（家人；家庭）的假名读音是哪一项？",
+   "options": [
+    "かぞく",
+    "おう",
+    "たび",
+    "クラシック"
+   ],
+   "h": "eecd9b89",
+   "oh": [
+    "eecd9b89",
+    "724c2741",
+    "85fda8a7",
+    "43e56b90"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0072"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0073-m-c434804f2d1a",
+   "qid": "P-004-V0073-m-c434804f2d1a",
+   "type": "mcq",
+   "prompt": "本课词条「子供」（例句语境：孩子在公园。）的释义是哪一项？",
+   "options": [
+    "背面；里面",
+    "孩子；小孩",
+    "抓住；逮住",
+    "治疗"
+   ],
+   "h": "a9bd0935",
+   "oh": [
+    "b8054e22",
+    "a9bd0935",
+    "1b500d03",
+    "ca4216b7"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0073"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0073-r-f60f62eba030",
+   "qid": "P-004-V0073-r-f60f62eba030",
+   "type": "mcq",
+   "prompt": "本课词条「子供」（孩子；小孩）的假名读音是哪一项？",
+   "options": [
+    "こうしゃ",
+    "シャワー",
+    "こども",
+    "パソコン"
+   ],
+   "h": "38994469",
+   "oh": [
+    "e3136446",
+    "3b3c2754",
+    "38994469",
+    "cbd66a29"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0073"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0074-m-a01d50189a51",
+   "qid": "P-004-V0074-m-a01d50189a51",
+   "type": "mcq",
+   "prompt": "本课词条「彼」（例句语境：他是学生。）的释义是哪一项？",
+   "options": [
+    "电梯",
+    "他；男朋友",
+    "五",
+    "难吃；糟糕"
+   ],
+   "h": "7247b519",
+   "oh": [
+    "dcfc62ed",
+    "7247b519",
+    "9160a883",
+    "1fa0e2e7"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0074"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0074-r-8c4f919a71af",
+   "qid": "P-004-V0074-r-8c4f919a71af",
+   "type": "mcq",
+   "prompt": "本课词条「彼」（他；男朋友）的假名读音是哪一项？",
+   "options": [
+    "しかし",
+    "あらた",
+    "はなす",
+    "かれ"
+   ],
+   "h": "8a487b72",
+   "oh": [
+    "8988a150",
+    "324cbf61",
+    "d9d8be9f",
+    "8a487b72"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0074"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0075-m-04ae8f5560e1",
+   "qid": "P-004-V0075-m-04ae8f5560e1",
+   "type": "mcq",
+   "prompt": "本课词条「彼女」（例句语境：她很精神。）的释义是哪一项？",
+   "options": [
+    "现实",
+    "重要",
+    "加；添",
+    "她；女朋友"
+   ],
+   "h": "939b868",
+   "oh": [
+    "7b2bd1a3",
+    "1a90a25b",
+    "eb726355",
+    "939b868"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0075"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0075-r-fb9bacbf03fd",
+   "qid": "P-004-V0075-r-fb9bacbf03fd",
+   "type": "mcq",
+   "prompt": "本课词条「彼女」（她；女朋友）的假名读音是哪一项？",
+   "options": [
+    "かいてき",
+    "かのじょ",
+    "いか",
+    "きし"
+   ],
+   "h": "7b831c1",
+   "oh": [
+    "2325132b",
+    "7b831c1",
+    "655be088",
+    "616d235d"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0075"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0076-m-42a66e8835d3",
+   "qid": "P-004-V0076-m-42a66e8835d3",
+   "type": "mcq",
+   "prompt": "本课词条「友達」（例句语境：和朋友看电影。）的释义是哪一项？",
+   "options": [
+    "朋友",
+    "会议",
+    "请",
+    "裁判；审判"
+   ],
+   "h": "8485de13",
+   "oh": [
+    "8485de13",
+    "6545a99",
+    "7136f0b6",
+    "693d7604"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0076"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0076-r-9a4823d9dfd8",
+   "qid": "P-004-V0076-r-9a4823d9dfd8",
+   "type": "mcq",
+   "prompt": "本课词条「友達」（朋友）的假名读音是哪一项？",
+   "options": [
+    "えんそう",
+    "ともだち",
+    "あの",
+    "じゅうたい"
+   ],
+   "h": "6b434494",
+   "oh": [
+    "7d70a6ff",
+    "6b434494",
+    "6a6af2f1",
+    "a74b632b"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0076"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0077-m-abc2f4008ed5",
+   "qid": "P-004-V0077-m-abc2f4008ed5",
+   "type": "mcq",
+   "prompt": "本课词条「人」（例句语境：那位是老师。）的释义是哪一项？",
+   "options": [
+    "朋友",
+    "人",
+    "一动不动；凝神",
+    "神社"
+   ],
+   "h": "bf60f0ed",
+   "oh": [
+    "8485de13",
+    "bf60f0ed",
+    "8435943e",
+    "c2923e2d"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0077"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0077-r-51a7d56ff1d1",
+   "qid": "P-004-V0077-r-51a7d56ff1d1",
+   "type": "mcq",
+   "prompt": "本课词条「人」（人）的假名读音是哪一项？",
+   "options": [
+    "けっして",
+    "ひと",
+    "くさい",
+    "ちっとも"
+   ],
+   "h": "8caf89c7",
+   "oh": [
+    "cb14dd18",
+    "8caf89c7",
+    "321c9b6f",
+    "c30a3d17"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0077"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0078-m-7ae3bea01065",
+   "qid": "P-004-V0078-m-7ae3bea01065",
+   "type": "mcq",
+   "prompt": "本课词条「学生」（例句语境：我是学生。）的释义是哪一项？",
+   "options": [
+    "学生",
+    "印刷",
+    "产业",
+    "火灾"
+   ],
+   "h": "57de17f2",
+   "oh": [
+    "57de17f2",
+    "136e3008",
+    "f9fe87d4",
+    "17c970fc"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0078"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0078-r-8a735f808cec",
+   "qid": "P-004-V0078-r-8a735f808cec",
+   "type": "mcq",
+   "prompt": "本课词条「学生」（学生）的假名读音是哪一项？",
+   "options": [
+    "ぼく",
+    "あつい",
+    "せいじ",
+    "がくせい"
+   ],
+   "h": "11411f83",
+   "oh": [
+    "a9b4349c",
+    "3f2ae455",
+    "581070a6",
+    "11411f83"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0078"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0079-m-6936cadf0027",
+   "qid": "P-004-V0079-m-6936cadf0027",
+   "type": "mcq",
+   "prompt": "本课词条「先生」（例句语境：田中是老师。）的释义是哪一项？",
+   "options": [
+    "种子；起因",
+    "老师；医生/律师等",
+    "星期日",
+    "金属"
+   ],
+   "h": "c5ace6d6",
+   "oh": [
+    "be62ce3e",
+    "c5ace6d6",
+    "628c24b2",
+    "8fac286"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0079"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0079-r-2ef34e8064d1",
+   "qid": "P-004-V0079-r-2ef34e8064d1",
+   "type": "mcq",
+   "prompt": "本课词条「先生」（老师；医生/律师等）的假名读音是哪一项？",
+   "options": [
+    "げんしょう",
+    "しょうゆ",
+    "じつは",
+    "せんせい"
+   ],
+   "h": "54a6cbdc",
+   "oh": [
+    "9deefcca",
+    "46542ddb",
+    "1e5daba2",
+    "54a6cbdc"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0079"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0080-m-86490596f3ad",
+   "qid": "P-004-V0080-m-86490596f3ad",
+   "type": "mcq",
+   "prompt": "本课词条「本」（例句语境：读书。）的释义是哪一项？",
+   "options": [
+    "法律",
+    "书",
+    "科目",
+    "改变（他动）"
+   ],
+   "h": "e3612999",
+   "oh": [
+    "8c553f61",
+    "e3612999",
+    "9066acd6",
+    "f031da09"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0080"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0080-r-5043ff900b32",
+   "qid": "P-004-V0080-r-5043ff900b32",
+   "type": "mcq",
+   "prompt": "本课词条「本」（书）的假名读音是哪一项？",
+   "options": [
+    "はやし",
+    "ちゅうい",
+    "ほん",
+    "はいしゃ"
+   ],
+   "h": "9e580dab",
+   "oh": [
+    "1d572d3b",
+    "bac0d09",
+    "9e580dab",
+    "65b49568"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0080"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0081-m-9ace3bc2fd96",
+   "qid": "P-004-V0081-m-9ace3bc2fd96",
+   "type": "mcq",
+   "prompt": "本课词条「日本語」（例句语境：学日语。）的释义是哪一项？",
+   "options": [
+    "折断；折叠",
+    "日语",
+    "正确",
+    "裤子"
+   ],
+   "h": "9f89a0f7",
+   "oh": [
+    "50dd3eff",
+    "9f89a0f7",
+    "3dab8b74",
+    "16975b99"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0081"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0081-r-406ffd63e439",
+   "qid": "P-004-V0081-r-406ffd63e439",
+   "type": "mcq",
+   "prompt": "本课词条「日本語」（日语）的假名读音是哪一项？",
+   "options": [
+    "さとう",
+    "じょうきょう",
+    "た",
+    "にほんご"
+   ],
+   "h": "df3e9ac",
+   "oh": [
+    "6f46d7ca",
+    "45366028",
+    "da25496e",
+    "df3e9ac"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0081"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0082-m-aa774262d07e",
+   "qid": "P-004-V0082-m-aa774262d07e",
+   "type": "mcq",
+   "prompt": "本课词条「勉強」（例句语境：在图书馆学习。）的释义是哪一项？",
+   "options": [
+    "焦躁；烦躁",
+    "广告",
+    "办公室",
+    "学习；用功"
+   ],
+   "h": "3ed99665",
+   "oh": [
+    "54a71ab4",
+    "83cbbacc",
+    "7d2d5709",
+    "3ed99665"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0082"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0082-r-719b9427b658",
+   "qid": "P-004-V0082-r-719b9427b658",
+   "type": "mcq",
+   "prompt": "本课词条「勉強」（学习；用功）的假名读音是哪一项？",
+   "options": [
+    "はかせ",
+    "わりあい",
+    "たいど",
+    "べんきょう"
+   ],
+   "h": "716d7071",
+   "oh": [
+    "db58ee7c",
+    "334f3d1a",
+    "dc25b255",
+    "716d7071"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0082"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0083-m-da7aaf4169a0",
+   "qid": "P-004-V0083-m-da7aaf4169a0",
+   "type": "mcq",
+   "prompt": "本课词条「宿題」（例句语境：做作业。）的释义是哪一项？",
+   "options": [
+    "警察",
+    "姐姐",
+    "作业",
+    "威士忌"
+   ],
+   "h": "f2c907d3",
+   "oh": [
+    "641d6932",
+    "20d97b0d",
+    "f2c907d3",
+    "51196ccb"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0083"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0083-r-fe5ad7924121",
+   "qid": "P-004-V0083-r-fe5ad7924121",
+   "type": "mcq",
+   "prompt": "本课词条「宿題」（作业）的假名读音是哪一项？",
+   "options": [
+    "にちようび",
+    "おとこのこ",
+    "あおい",
+    "しゅくだい"
+   ],
+   "h": "264e43b6",
+   "oh": [
+    "13b3a77c",
+    "4ab8047",
+    "b6232db",
+    "264e43b6"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0083"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0084-m-3c755d51f842",
+   "qid": "P-004-V0084-m-3c755d51f842",
+   "type": "mcq",
+   "prompt": "本课词条「名前」（例句语境：请在这里写名字。）的释义是哪一项？",
+   "options": [
+    "解开；解出",
+    "名字；姓名",
+    "细；瘦",
+    "接待处；受理"
+   ],
+   "h": "cae094ba",
+   "oh": [
+    "bb466052",
+    "cae094ba",
+    "64776880",
+    "3146e2c7"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0084"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0084-r-524961c8d092",
+   "qid": "P-004-V0084-r-524961c8d092",
+   "type": "mcq",
+   "prompt": "本课词条「名前」（名字；姓名）的假名读音是哪一项？",
+   "options": [
+    "あやまり",
+    "きかん",
+    "じだい",
+    "なまえ"
+   ],
+   "h": "40f22163",
+   "oh": [
+    "2460f827",
+    "e4beb64e",
+    "d567c613",
+    "40f22163"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0084"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0085-m-e72e733dd729",
+   "qid": "P-004-V0085-m-e72e733dd729",
+   "type": "mcq",
+   "prompt": "本课词条「仕事」（例句语境：工作很忙。）的释义是哪一项？",
+   "options": [
+    "工作；活儿",
+    "黑板",
+    "兔子",
+    "王；国王"
+   ],
+   "h": "56f0f957",
+   "oh": [
+    "56f0f957",
+    "d2f4b1b9",
+    "9de4c6e9",
+    "8cc1c523"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0085"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0085-r-6ddba3a29d6e",
+   "qid": "P-004-V0085-r-6ddba3a29d6e",
+   "type": "mcq",
+   "prompt": "本课词条「仕事」（工作；活儿）的假名读音是哪一项？",
+   "options": [
+    "よろしい",
+    "そふ",
+    "しごと",
+    "のりかえる"
+   ],
+   "h": "65e0c44a",
+   "oh": [
+    "72c76e4d",
+    "7ff92207",
+    "65e0c44a",
+    "dd9a0bcb"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0085"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0086-m-aac3dc670280",
+   "qid": "P-004-V0086-m-aac3dc670280",
+   "type": "mcq",
+   "prompt": "本课词条「会社員」（例句语境：他是公司职员。）的释义是哪一项？",
+   "options": [
+    "机场",
+    "公司职员",
+    "暑假",
+    "加油站"
+   ],
+   "h": "25ff02c5",
+   "oh": [
+    "7ebee0f5",
+    "25ff02c5",
+    "72cf70a1",
+    "ced0cf1"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "meaning",
+   "knowledge_ids": [
+    "V0086"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0086-r-c15269957190",
+   "qid": "P-004-V0086-r-c15269957190",
+   "type": "mcq",
+   "prompt": "本课词条「会社員」（公司职员）的假名读音是哪一项？",
+   "options": [
+    "かいしゃいん",
+    "せいり",
+    "ぎん",
+    "たより"
+   ],
+   "h": "cbf34131",
+   "oh": [
+    "cbf34131",
+    "261021f0",
+    "d40fae6",
+    "f32a3e48"
+   ],
+   "day": 4,
+   "group": "vocab",
+   "capability": "reading",
+   "knowledge_ids": [
+    "V0086"
+   ],
+   "source_day": 4,
+   "optional": true
+  },
+  {
+   "id": "P-004-V0087-m-a29947392579",
+   "qid": "P-004-V0087-m-a29947392579",
+   "type": "mcq",
+   "prompt": "本课词条「医者」（例句语境：想当医生。）的释义是哪一项？",
    "options": [
     "医生",
-    "直接",
-    "图书馆",
-    "像；相似"
+    "宪法",
+    "放弃",
+    "急；陡"
    ],
-   "h": "411e20b9",
+   "h": "ec2afa1f",
    "oh": [
     "ec2afa1f",
-    "3c8539f2",
-    "411e20b9",
-    "c55ae39b"
+    "5cb787b8",
+    "f80ff986",
+    "105cf420"
    ],
    "day": 4,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V0044"
+    "V0087"
    ],
    "source_day": 4,
    "optional": true
   },
   {
-   "id": "P-004-V0044-r-4b09e493fe90",
-   "qid": "P-004-V0044-r-4b09e493fe90",
+   "id": "P-004-V0087-r-1d64957d1bf8",
+   "qid": "P-004-V0087-r-1d64957d1bf8",
    "type": "mcq",
-   "prompt": "本课词条「図書館」（图书馆）的假名读音是哪一项？",
+   "prompt": "本课词条「医者」（医生）的假名读音是哪一项？",
    "options": [
-    "ごご",
-    "としょかん",
-    "がっこう",
-    "ははおや"
+    "ゆうびんきょく",
+    "こうじょう",
+    "いしゃ",
+    "えんぜつ"
    ],
-   "h": "bc64cc9b",
+   "h": "a2bd441d",
    "oh": [
-    "54507535",
-    "bc64cc9b",
-    "da49cfb5",
-    "a33e509d"
+    "49d1c7a0",
+    "7f7e3305",
+    "a2bd441d",
+    "796e621c"
    ],
    "day": 4,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V0044"
+    "V0087"
    ],
    "source_day": 4,
    "optional": true
   },
   {
-   "id": "P-004-V0045-m-0f9bacfe7cb9",
-   "qid": "P-004-V0045-m-0f9bacfe7cb9",
+   "id": "P-004-V0089-m-236808369265",
+   "qid": "P-004-V0089-m-236808369265",
    "type": "mcq",
-   "prompt": "本课词条「部屋」（例句语境：房间里有猫。）的释义是哪一项？",
+   "prompt": "本课词条「電話」（例句语境：给朋友打电话。）的释义是哪一项？",
    "options": [
-    "房间",
-    "谎话；假的",
-    "氧气",
-    "缘由；道理"
+    "电话",
+    "有钱人",
+    "跑出去；冲出",
+    "读；念"
    ],
-   "h": "cdee990e",
+   "h": "6a016277",
    "oh": [
-    "cdee990e",
-    "c71864e",
-    "3bbce896",
-    "5f10007a"
+    "6a016277",
+    "201d526f",
+    "11ae2894",
+    "93dd9df2"
    ],
    "day": 4,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V0045"
+    "V0089"
    ],
    "source_day": 4,
    "optional": true
   },
   {
-   "id": "P-004-V0045-r-8a5151a5eedb",
-   "qid": "P-004-V0045-r-8a5151a5eedb",
+   "id": "P-004-V0089-r-3d19bf807871",
+   "qid": "P-004-V0089-r-3d19bf807871",
    "type": "mcq",
-   "prompt": "本课词条「部屋」（房间）的假名读音是哪一项？",
+   "prompt": "本课词条「電話」（电话）的假名读音是哪一项？",
    "options": [
-    "はんい",
-    "ひく",
-    "つくえ",
-    "へや"
+    "わけ",
+    "ないよう",
+    "でんわ",
+    "てつだい"
    ],
-   "h": "855414b9",
+   "h": "f017a400",
    "oh": [
-    "20693e49",
-    "69af52ae",
-    "a2ddec74",
-    "855414b9"
+    "a7376afd",
+    "16c6669d",
+    "f017a400",
+    "eb6a65f3"
    ],
    "day": 4,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V0045"
+    "V0089"
    ],
    "source_day": 4,
    "optional": true
   },
   {
-   "id": "P-004-V0047-m-65192b1e25cb",
-   "qid": "P-004-V0047-m-65192b1e25cb",
+   "id": "P-004-V0091-m-d651426f2a81",
+   "qid": "P-004-V0091-m-d651426f2a81",
    "type": "mcq",
-   "prompt": "本课词条「上」（例句语境：桌上有书。）的释义是哪一项？",
+   "prompt": "本课词条「旅行」（例句语境：和家人旅行。）的释义是哪一项？",
    "options": [
-    "首位；顶端",
-    "上面；上方",
-    "少见；稀奇",
-    "给（敬）"
+    "旅行",
+    "达到",
+    "放开；放走",
+    "生产"
    ],
-   "h": "c9d29053",
+   "h": "ffcf17a4",
    "oh": [
-    "2a3e9262",
-    "c9d29053",
-    "9f019181",
-    "feb03933"
+    "ffcf17a4",
+    "ac908343",
+    "e009b946",
+    "44d6aaab"
    ],
    "day": 4,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V0047"
+    "V0091"
    ],
    "source_day": 4,
    "optional": true
   },
   {
-   "id": "P-004-V0047-r-edb8e1fba2e4",
-   "qid": "P-004-V0047-r-edb8e1fba2e4",
+   "id": "P-004-V0091-r-819df33e9887",
+   "qid": "P-004-V0091-r-819df33e9887",
    "type": "mcq",
-   "prompt": "本课词条「上」（上面；上方）的假名读音是哪一项？",
+   "prompt": "本课词条「旅行」（旅行）的假名读音是哪一项？",
    "options": [
-    "やすむ",
-    "おじいさん",
-    "まるい",
-    "うえ"
+    "みじかい",
+    "かんじ",
+    "きゅうけい",
+    "りょこう"
    ],
-   "h": "a460c0e3",
+   "h": "3b176713",
    "oh": [
-    "7993639a",
-    "275afabd",
-    "dd28ddee",
-    "a460c0e3"
+    "71601b9d",
+    "9c620fb9",
+    "6cb6d7a6",
+    "3b176713"
    ],
    "day": 4,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V0047"
+    "V0091"
    ],
    "source_day": 4,
    "optional": true
   },
   {
-   "id": "P-004-V0048-m-ba713c15dc12",
-   "qid": "P-004-V0048-m-ba713c15dc12",
+   "id": "P-004-V0092-m-66ea4e3dcd39",
+   "qid": "P-004-V0092-m-66ea4e3dcd39",
    "type": "mcq",
-   "prompt": "本课词条「中」（例句语境：在房间里。）的释义是哪一项？",
+   "prompt": "本课词条「ホテル」（例句语境：住宾馆。）的释义是哪一项？",
    "options": [
-    "扔掉；抛弃",
-    "里面；中间",
-    "未必",
-    "范围"
+    "宾馆；酒店",
+    "周围；四周",
+    "触摸",
+    "延误；晚点"
    ],
-   "h": "bc565869",
+   "h": "fbacb33d",
    "oh": [
-    "f88610dd",
-    "bc565869",
-    "efdaa168",
-    "9049d332"
+    "fbacb33d",
+    "8358d01d",
+    "f89c0db3",
+    "44e7ae0e"
    ],
    "day": 4,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V0048"
+    "V0092"
    ],
    "source_day": 4,
    "optional": true
   },
   {
-   "id": "P-004-V0048-r-eb977c4c57ac",
-   "qid": "P-004-V0048-r-eb977c4c57ac",
+   "id": "P-004-V0092-r-a3b64a3c702a",
+   "qid": "P-004-V0092-r-a3b64a3c702a",
    "type": "mcq",
-   "prompt": "本课词条「中」（里面；中间）的假名读音是哪一项？",
+   "prompt": "本课词条「ホテル」（宾馆；酒店）的假名读音是哪一项？",
    "options": [
-    "せいけつ",
-    "なか",
-    "ふろ",
-    "ていねい"
+    "ホテル",
+    "けんきゅうしつ",
+    "こくさい",
+    "じつげん"
    ],
-   "h": "adcd0302",
+   "h": "9d862f8d",
    "oh": [
-    "81abe6ef",
-    "adcd0302",
-    "a7d0cb27",
-    "6e175b0e"
+    "9d862f8d",
+    "28cdcb70",
+    "adc6ec86",
+    "fef3e986"
    ],
    "day": 4,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V0048"
+    "V0092"
    ],
    "source_day": 4,
    "optional": true
   },
   {
-   "id": "P-004-V0049-m-470e7dc81f4a",
-   "qid": "P-004-V0049-m-470e7dc81f4a",
+   "id": "P-004-V0094-m-731c05a8640d",
+   "qid": "P-004-V0094-m-731c05a8640d",
    "type": "mcq",
-   "prompt": "本课词条「前」（例句语境：车站前有店。）的释义是哪一项？",
+   "prompt": "本课词条「頭」（例句语境：头疼。）的释义是哪一项？",
    "options": [
-    "决定",
-    "坏掉",
-    "派出所",
-    "前面；之前"
+    "偶尔",
+    "头；脑袋",
+    "妨碍",
+    "毕业"
    ],
-   "h": "effd3533",
+   "h": "d786f3f0",
    "oh": [
-    "60a27c88",
-    "37327c15",
-    "f1216713",
-    "effd3533"
+    "efd2bfe7",
+    "d786f3f0",
+    "e46785ee",
+    "7d6511e"
    ],
    "day": 4,
    "group": "vocab",
    "capability": "meaning",
    "knowledge_ids": [
-    "V0049"
+    "V0094"
    ],
    "source_day": 4,
    "optional": true
   },
   {
-   "id": "P-004-V0049-r-c57b1029cb1e",
-   "qid": "P-004-V0049-r-c57b1029cb1e",
+   "id": "P-004-V0094-r-7384bae2f76e",
+   "qid": "P-004-V0094-r-7384bae2f76e",
    "type": "mcq",
-   "prompt": "本课词条「前」（前面；之前）的假名读音是哪一项？",
+   "prompt": "本课词条「頭」（头；脑袋）的假名读音是哪一项？",
    "options": [
-    "まえ",
-    "びょうき",
-    "おる",
-    "さき"
+    "あたま",
+    "しらせる",
+    "がいこう",
+    "いない"
    ],
-   "h": "84b8778b",
+   "h": "134bb5f0",
    "oh": [
-    "84b8778b",
-    "93707222",
-    "ad4c8422",
-    "a74eb947"
+    "134bb5f0",
+    "7e4ff64b",
+    "a0da8304",
+    "c20d0f2d"
    ],
    "day": 4,
    "group": "vocab",
    "capability": "reading",
    "knowledge_ids": [
-    "V0049"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0050-m-2c5831b7850c",
-   "qid": "P-004-V0050-m-2c5831b7850c",
-   "type": "mcq",
-   "prompt": "本课词条「後」（例句语境：饭后吃药。）的释义是哪一项？",
-   "options": [
-    "邮件；短信",
-    "症状",
-    "不方便",
-    "后面；之后"
-   ],
-   "h": "59e0ed6b",
-   "oh": [
-    "636653dc",
-    "4186cdb0",
-    "78f3b1e4",
-    "59e0ed6b"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0050"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0050-r-4a113f39fc8d",
-   "qid": "P-004-V0050-r-4a113f39fc8d",
-   "type": "mcq",
-   "prompt": "本课词条「後」（后面；之后）的假名读音是哪一项？",
-   "options": [
-    "あと",
-    "きょうりょく",
-    "さむい",
-    "きょうちょう"
-   ],
-   "h": "6c6af617",
-   "oh": [
-    "6c6af617",
-    "ef7c92c7",
-    "7ba67fbc",
-    "3c1b9009"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0050"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0051-m-5d795994a0e5",
-   "qid": "P-004-V0051-m-5d795994a0e5",
-   "type": "mcq",
-   "prompt": "本课词条「ご飯」（例句语境：吃饭。）的释义是哪一项？",
-   "options": [
-    "米饭；饭（餐）",
-    "感情",
-    "刀",
-    "集市"
-   ],
-   "h": "b6ffbfc",
-   "oh": [
-    "b6ffbfc",
-    "d8afe2f1",
-    "55b131f",
-    "db517761"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0051"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0051-r-d30272368ceb",
-   "qid": "P-004-V0051-r-d30272368ceb",
-   "type": "mcq",
-   "prompt": "本课词条「ご飯」（米饭；饭（餐））的假名读音是哪一项？",
-   "options": [
-    "のせる",
-    "わたくし",
-    "とし",
-    "ごはん"
-   ],
-   "h": "a0f6a475",
-   "oh": [
-    "18441bcf",
-    "9e4a9999",
-    "51c7f500",
-    "a0f6a475"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0051"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0052-m-dc991677e223",
-   "qid": "P-004-V0052-m-dc991677e223",
-   "type": "mcq",
-   "prompt": "本课词条「朝ご飯」（例句语境：吃早饭。）的释义是哪一项？",
-   "options": [
-    "各种各样",
-    "贴；撑起",
-    "运动；锻炼",
-    "早饭"
-   ],
-   "h": "1fc01c8b",
-   "oh": [
-    "7132f757",
-    "b07f8044",
-    "1a1e4b3d",
-    "1fc01c8b"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0052"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0052-r-b4d9bb8f2fbf",
-   "qid": "P-004-V0052-r-b4d9bb8f2fbf",
-   "type": "mcq",
-   "prompt": "本课词条「朝ご飯」（早饭）的假名读音是哪一项？",
-   "options": [
-    "とし",
-    "こまかい",
-    "あさごはん",
-    "つもり"
-   ],
-   "h": "6ba83cde",
-   "oh": [
-    "51c7f500",
-    "deb87d2b",
-    "6ba83cde",
-    "403ae3cb"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0052"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0053-m-f66f578b8630",
-   "qid": "P-004-V0053-m-f66f578b8630",
-   "type": "mcq",
-   "prompt": "本课词条「水」（例句语境：喝水。）的释义是哪一项？",
-   "options": [
-    "水（冷水／生水）",
-    "搬运；运送",
-    "司机",
-    "如果可能的话"
-   ],
-   "h": "21f2c9a7",
-   "oh": [
-    "21f2c9a7",
-    "3d9e78e1",
-    "8fcb1707",
-    "3d4a38d8"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0053"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0053-r-70f0aad99eb6",
-   "qid": "P-004-V0053-r-70f0aad99eb6",
-   "type": "mcq",
-   "prompt": "本课词条「水」（水（冷水／生水））的假名读音是哪一项？",
-   "options": [
-    "ズボン",
-    "みず",
-    "かた",
-    "げんしょう"
-   ],
-   "h": "5cb5f9fc",
-   "oh": [
-    "6d5acc70",
-    "5cb5f9fc",
-    "5949c14f",
-    "9deefcca"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0053"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0054-m-7651d369d07f",
-   "qid": "P-004-V0054-m-7651d369d07f",
-   "type": "mcq",
-   "prompt": "本课词条「お茶」（例句语境：喝茶。）的释义是哪一项？",
-   "options": [
-    "茶",
-    "铅笔",
-    "玩具",
-    "很喜欢"
-   ],
-   "h": "3244b889",
-   "oh": [
-    "3244b889",
-    "77040f7c",
-    "11d99409",
-    "6ead7de9"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0054"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0054-r-392cd60d16c1",
-   "qid": "P-004-V0054-r-392cd60d16c1",
-   "type": "mcq",
-   "prompt": "本课词条「お茶」（茶）的假名读音是哪一项？",
-   "options": [
-    "さくぶん",
-    "せいこう",
-    "にあう",
-    "おちゃ"
-   ],
-   "h": "984d9115",
-   "oh": [
-    "8b7d3656",
-    "93a78617",
-    "e0fa419a",
-    "984d9115"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0054"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0055-m-abc147bdc749",
-   "qid": "P-004-V0055-m-abc147bdc749",
-   "type": "mcq",
-   "prompt": "本课词条「肉」（例句语境：买肉。）的释义是哪一项？",
-   "options": [
-    "新闻",
-    "爆炸",
-    "肉",
-    "卡片"
-   ],
-   "h": "8b421ea4",
-   "oh": [
-    "b81f3cbc",
-    "d8283353",
-    "8b421ea4",
-    "e37d4271"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0055"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0055-r-0fa383d71793",
-   "qid": "P-004-V0055-r-0fa383d71793",
-   "type": "mcq",
-   "prompt": "本课词条「肉」（肉）的假名读音是哪一项？",
-   "options": [
-    "エネルギー",
-    "にく",
-    "さらいねん",
-    "もくようび"
-   ],
-   "h": "89ca8bbf",
-   "oh": [
-    "d336b30d",
-    "89ca8bbf",
-    "889f5c69",
-    "2fafd46d"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0055"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0056-m-e2945807bfcd",
-   "qid": "P-004-V0056-m-e2945807bfcd",
-   "type": "mcq",
-   "prompt": "本课词条「魚」（例句语境：喜欢鱼。）的释义是哪一项？",
-   "options": [
-    "有名；著名",
-    "进步；提高",
-    "鱼",
-    "打开（电器）"
-   ],
-   "h": "f816b63b",
-   "oh": [
-    "e54a1fd8",
-    "37a49d4a",
-    "f816b63b",
-    "767988e2"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0056"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0056-r-7cc4eab55492",
-   "qid": "P-004-V0056-r-7cc4eab55492",
-   "type": "mcq",
-   "prompt": "本课词条「魚」（鱼）的假名读音是哪一项？",
-   "options": [
-    "ちのう",
-    "おっと",
-    "さかな",
-    "たんい"
-   ],
-   "h": "859d6811",
-   "oh": [
-    "bfb9a1e0",
-    "395178b6",
-    "859d6811",
-    "93c6bfb9"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0056"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0057-m-0cb42fba16dd",
-   "qid": "P-004-V0057-m-0cb42fba16dd",
-   "type": "mcq",
-   "prompt": "本课词条「野菜」（例句语境：买蔬菜。）的释义是哪一项？",
-   "options": [
-    "梅；梅子",
-    "早上好",
-    "管子；烟斗",
-    "蔬菜"
-   ],
-   "h": "6cfe1335",
-   "oh": [
-    "42f9fa34",
-    "a3035e15",
-    "ec3f7a23",
-    "6cfe1335"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0057"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0057-r-58c8ca262979",
-   "qid": "P-004-V0057-r-58c8ca262979",
-   "type": "mcq",
-   "prompt": "本课词条「野菜」（蔬菜）的假名读音是哪一项？",
-   "options": [
-    "ふくざつ",
-    "くわしい",
-    "やさい",
-    "けむり"
-   ],
-   "h": "2589e502",
-   "oh": [
-    "cab17cbf",
-    "ffe1d088",
-    "2589e502",
-    "bd741b1a"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0057"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0058-m-cc50c56f4376",
-   "qid": "P-004-V0058-m-cc50c56f4376",
-   "type": "mcq",
-   "prompt": "本课词条「パン」（例句语境：吃面包。）的释义是哪一项？",
-   "options": [
-    "确实；可靠",
-    "证明",
-    "观光；旅游",
-    "面包"
-   ],
-   "h": "2b9b15a0",
-   "oh": [
-    "a0b4db85",
-    "1146b1e6",
-    "72078a60",
-    "2b9b15a0"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0058"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0058-r-0e2862037505",
-   "qid": "P-004-V0058-r-0e2862037505",
-   "type": "mcq",
-   "prompt": "本课词条「パン」（面包）的假名读音是哪一项？",
-   "options": [
-    "どく",
-    "ほしい",
-    "よろこぶ",
-    "パン"
-   ],
-   "h": "41b131d",
-   "oh": [
-    "49c5a9d1",
-    "42f00209",
-    "709f9883",
-    "41b131d"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0058"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0059-m-107f9409f6d7",
-   "qid": "P-004-V0059-m-107f9409f6d7",
-   "type": "mcq",
-   "prompt": "本课词条「料理」（例句语境：做菜。）的释义是哪一项？",
-   "options": [
-    "菜肴；烹饪",
-    "夺取；抢走",
-    "继续；续篇",
-    "感冒"
-   ],
-   "h": "5b28f961",
-   "oh": [
-    "5b28f961",
-    "15ef1efc",
-    "8c71b3ea",
-    "a994d5f4"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0059"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0059-r-1a3732aac447",
-   "qid": "P-004-V0059-r-1a3732aac447",
-   "type": "mcq",
-   "prompt": "本课词条「料理」（菜肴；烹饪）的假名读音是哪一项？",
-   "options": [
-    "かてい",
-    "ちゃんと",
-    "りょうり",
-    "がっき"
-   ],
-   "h": "dc7e37b6",
-   "oh": [
-    "843b7d40",
-    "5bbae166",
-    "dc7e37b6",
-    "db28f68f"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0059"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0060-m-84455cdd383c",
-   "qid": "P-004-V0060-m-84455cdd383c",
-   "type": "mcq",
-   "prompt": "本课词条「電車」（例句语境：坐电车去。）的释义是哪一项？",
-   "options": [
-    "年；年龄",
-    "认真；严肃",
-    "明星",
-    "电车（轨道交通）"
-   ],
-   "h": "f31b7c4c",
-   "oh": [
-    "4617ead0",
-    "9dac69c1",
-    "daea518a",
-    "f31b7c4c"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0060"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0060-r-3753db14eff7",
-   "qid": "P-004-V0060-r-3753db14eff7",
-   "type": "mcq",
-   "prompt": "本课词条「電車」（电车（轨道交通））的假名读音是哪一项？",
-   "options": [
-    "だいぶ",
-    "ほんだな",
-    "たしか",
-    "でんしゃ"
-   ],
-   "h": "8a03b2d1",
-   "oh": [
-    "1f31a3f5",
-    "7864d21",
-    "f2af65d0",
-    "8a03b2d1"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0060"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0061-m-2b276b90f87b",
-   "qid": "P-004-V0061-m-2b276b90f87b",
-   "type": "mcq",
-   "prompt": "本课词条「バス」（例句语境：上公交。）的释义是哪一项？",
-   "options": [
-    "公交车",
-    "岸",
-    "复印",
-    "价格"
-   ],
-   "h": "38b61e81",
-   "oh": [
-    "38b61e81",
-    "bd4497c7",
-    "b3d69778",
-    "9751a63e"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0061"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0061-r-6d498303531a",
-   "qid": "P-004-V0061-r-6d498303531a",
-   "type": "mcq",
-   "prompt": "本课词条「バス」（公交车）的假名读音是哪一项？",
-   "options": [
-    "つづける",
-    "てきせつ",
-    "バス",
-    "たのむ"
-   ],
-   "h": "be1e7682",
-   "oh": [
-    "51887b26",
-    "5b96e2d3",
-    "be1e7682",
-    "c6bdda80"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0061"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0062-m-ba74dcb3e0eb",
-   "qid": "P-004-V0062-m-ba74dcb3e0eb",
-   "type": "mcq",
-   "prompt": "本课词条「車」（例句语境：开车去公司。）的释义是哪一项？",
-   "options": [
-    "书房",
-    "苦",
-    "府上；您家",
-    "汽车；车"
-   ],
-   "h": "76c9ae5f",
-   "oh": [
-    "982a1652",
-    "62450419",
-    "2c1aeb42",
-    "76c9ae5f"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0062"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0062-r-b15147dc7170",
-   "qid": "P-004-V0062-r-b15147dc7170",
-   "type": "mcq",
-   "prompt": "本课词条「車」（汽车；车）的假名读音是哪一项？",
-   "options": [
-    "うし",
-    "はじまり",
-    "くるま",
-    "ギター"
-   ],
-   "h": "d062843",
-   "oh": [
-    "a160bc2a",
-    "e13439ea",
-    "d062843",
-    "5ca4e182"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0062"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0063-m-13a28ffcaa51",
-   "qid": "P-004-V0063-m-13a28ffcaa51",
-   "type": "mcq",
-   "prompt": "本课词条「自転車」（例句语境：骑车去学校。）的释义是哪一项？",
-   "options": [
-    "背诵",
-    "座位",
-    "自行车",
-    "变成；成为"
-   ],
-   "h": "32a1941f",
-   "oh": [
-    "9cb5f77a",
-    "821f6551",
-    "32a1941f",
-    "2c6ac2dc"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0063"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-V0063-r-e64ba2aa5143",
-   "qid": "P-004-V0063-r-e64ba2aa5143",
-   "type": "mcq",
-   "prompt": "本课词条「自転車」（自行车）的假名读音是哪一项？",
-   "options": [
-    "ジュース",
-    "かえって",
-    "ばしょ",
-    "じてんしゃ"
-   ],
-   "h": "ea221882",
-   "oh": [
-    "1cbbf615",
-    "a1fbe33b",
-    "ad16e7fd",
-    "ea221882"
-   ],
-   "day": 4,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0063"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-G0006-m-4bcff3b2a0e0",
-   "qid": "P-004-G0006-m-4bcff3b2a0e0",
-   "type": "mcq",
-   "prompt": "本课句型「N の N」在以下语境中的释义是哪一项？ 例句：私の本です。（是我的书。）",
-   "options": [
-    "…的…；所属/修饰",
-    "为别人做…（施惠）",
-    "不可能…／不能…（わけにはいかない）",
-    "动词て形（连接/中顿/请求基础）"
-   ],
-   "h": "49c98541",
-   "oh": [
-    "49c98541",
-    "fff1d78",
-    "a7dcf4a9",
-    "7a23ce01"
-   ],
-   "day": 4,
-   "group": "grammar",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "G0006"
-   ],
-   "source_day": 4,
-   "optional": true
-  },
-  {
-   "id": "P-004-G0006-u-397984a4394b",
-   "qid": "P-004-G0006-u-397984a4394b",
-   "type": "mcq",
-   "prompt": "课程中「N の N」的接续说明是哪一项？ 例句：私の本です。（是我的书。）",
-   "options": [
-    "動詞・い形 普通形 + ものだから；な形・名詞 + な/だ + ものだから；もので 更书面",
-    "名词 + の + ような/ように；普通形 + ような/ように",
-    "动词て形 + くださる／いただく（尊敬语／谦让语）",
-    "名詞 + の + 名詞"
-   ],
-   "h": "c097cf7",
-   "oh": [
-    "f1b2a63c",
-    "abcc9cb7",
-    "c48eb346",
-    "c097cf7"
-   ],
-   "day": 4,
-   "group": "grammar",
-   "capability": "usage",
-   "knowledge_ids": [
-    "G0006"
+    "V0094"
    ],
    "source_day": 4,
    "optional": true
@@ -1849,22 +2034,22 @@
    "optional": true
   },
   {
-   "id": "P-004-G0007-u-3911ca48ef6c",
-   "qid": "P-004-G0007-u-3911ca48ef6c",
+   "id": "P-004-G0007-u-9be06e3497c1",
+   "qid": "P-004-G0007-u-9be06e3497c1",
    "type": "mcq",
    "prompt": "课程中「が（主语／新信息／存在主体）」的接续说明是哪一项？ 例句：猫がいます。（有猫。）",
    "options": [
-    "他动词て形 + ある；结果状态常用 が，已完成的准备可用 を。",
-    "名词 + まで（终点）",
-    "动词ない形/い形容词くない/ナ形容词でない + ことはない",
-    "名詞 + が + 動詞／形容詞"
+    "名詞 + が + 動詞／形容詞",
+    "动词意志形 + とする（否定形：ようとしない）",
+    "动词普通形／い形容词／な形容词／名词 + かどうか",
+    "普通形 + ということだ"
    ],
    "h": "2eb27cdf",
    "oh": [
-    "e1d071b1",
-    "85a53d7d",
-    "d2a45019",
-    "2eb27cdf"
+    "2eb27cdf",
+    "d8b91809",
+    "1677674b",
+    "ad1fce25"
    ],
    "day": 4,
    "group": "grammar",
@@ -1876,22 +2061,22 @@
    "optional": true
   },
   {
-   "id": "P-004-G0008-m-db25c86ba39d",
-   "qid": "P-004-G0008-m-db25c86ba39d",
+   "id": "P-004-G0008-m-057c46cad8e1",
+   "qid": "P-004-G0008-m-057c46cad8e1",
    "type": "mcq",
    "prompt": "本课句型「を（宾语／移动经过）」在以下语境中的释义是哪一项？ 例句：ご飯を食べます。（吃饭。）",
    "options": [
-    "明明…却…；…却（意外、不满、遗憾）",
-    "顺便…",
-    "…完；…不了",
-    "把…（标宾语）"
+    "（人为地）已经…着；事先做好了…",
+    "明明…却…",
+    "把…（标宾语）",
+    "正当…的时候"
    ],
    "h": "235aacc0",
    "oh": [
-    "2fd6465",
-    "9f195e94",
-    "578a5a51",
-    "235aacc0"
+    "35d20238",
+    "b00784ab",
+    "235aacc0",
+    "69f0cec4"
    ],
    "day": 4,
    "group": "grammar",
@@ -1903,22 +2088,22 @@
    "optional": true
   },
   {
-   "id": "P-004-G0008-u-e430bfe2b44b",
-   "qid": "P-004-G0008-u-e430bfe2b44b",
+   "id": "P-004-G0008-u-6228c133779f",
+   "qid": "P-004-G0008-u-6228c133779f",
    "type": "mcq",
    "prompt": "课程中「を（宾语／移动经过）」的接续说明是哪一项？ 例句：ご飯を食べます。（吃饭。）",
    "options": [
     "名詞 + を + 他動詞",
-    "名词（场所）+ に + 行く／来る／帰る",
-    "动词ます形去ます + なさい",
-    "名詞 + の + 名詞"
+    "名词（场所／方向）+ へ（读作 e）",
+    "动词辞书形/ない形 + ことにしている",
+    "動詞ます形（去ます）／名詞 + に + 移動動詞 行く/来る"
    ],
    "h": "7672791",
    "oh": [
     "7672791",
-    "77c2797",
-    "6e13e885",
-    "c097cf7"
+    "696ac90b",
+    "cd4ea5f4",
+    "d2ac055e"
    ],
    "day": 4,
    "group": "grammar",
@@ -1932,238 +2117,8 @@
  ],
  "sentences": [
   {
-   "id": "P-004-00-2bca17a116e9",
-   "qid": "P-004-00-2bca17a116e9",
-   "type": "mcq",
-   "prompt": "看表。",
-   "options": [
-    "時計を見ます。",
-    "日本語を話します。",
-    "ご協力に感謝します。",
-    "部屋の中にいます。"
-   ],
-   "h": "4799fc5d",
-   "oh": [
-    "4799fc5d",
-    "29338a89",
-    "fab0a215",
-    "3d1f2b43"
-   ],
-   "knowledge_ids": [],
-   "optional": false,
-   "direction": "zh-ja",
-   "source_id": "S0031"
-  },
-  {
-   "id": "P-004-01-3d3871145dd2",
-   "qid": "P-004-01-3d3871145dd2",
-   "type": "mcq",
-   "prompt": "每天去学校。",
-   "options": [
-    "新しい仕事を始めます。",
-    "毎日、学校へ行きます。",
-    "この料理は美味しいです。",
-    "この川の流れは急だ。"
-   ],
-   "h": "53ed5616",
-   "oh": [
-    "2ac3d1c7",
-    "53ed5616",
-    "b166969e",
-    "2deea5d0"
-   ],
-   "knowledge_ids": [],
-   "optional": false,
-   "direction": "zh-ja",
-   "source_id": "S0032"
-  },
-  {
-   "id": "P-004-02-ba3d824298e8",
-   "qid": "P-004-02-ba3d824298e8",
-   "type": "mcq",
-   "prompt": "这周很忙。",
-   "options": [
-    "給料が上がりました。",
-    "食糧が不足している。",
-    "あの山の頂上は平らだ。",
-    "今週は忙しいです。"
-   ],
-   "h": "3b7539ef",
-   "oh": [
-    "fcd1ef76",
-    "fdc63dc1",
-    "31771ee1",
-    "3b7539ef"
-   ],
-   "knowledge_ids": [],
-   "optional": false,
-   "direction": "zh-ja",
-   "source_id": "S0033"
-  },
-  {
-   "id": "P-004-03-eba99917c92a",
-   "qid": "P-004-03-eba99917c92a",
-   "type": "mcq",
-   "prompt": "周一有考试。",
-   "options": [
-    "この靴下はちぐはぐだ。",
-    "月曜日に試験があります。",
-    "文法なんかくそくらえだ。",
-    "この線の終点はどこですか。"
-   ],
-   "h": "3c031ff",
-   "oh": [
-    "6db284b2",
-    "3c031ff",
-    "cc3a97f3",
-    "4b98e1d7"
-   ],
-   "knowledge_ids": [],
-   "optional": true,
-   "direction": "zh-ja",
-   "source_id": "S0034"
-  },
-  {
-   "id": "P-004-04-3d6870ef2077",
-   "qid": "P-004-04-3d6870ef2077",
-   "type": "mcq",
-   "prompt": "周二有考试。",
-   "options": [
-    "あの長髪の青年は粗野だ。",
-    "月曜日に試験があります。",
-    "なぜ彼と踊らなかったの？",
-    "火曜日に試験があります。"
-   ],
-   "h": "8a208808",
-   "oh": [
-    "bc046002",
-    "3c031ff",
-    "afc9d668",
-    "8a208808"
-   ],
-   "knowledge_ids": [],
-   "optional": true,
-   "direction": "zh-ja",
-   "source_id": "S0035"
-  },
-  {
-   "id": "P-004-05-a4d07d462473",
-   "qid": "P-004-05-a4d07d462473",
-   "type": "mcq",
-   "prompt": "周三休息。",
-   "options": [
-    "部屋に猫がいます。",
-    "食糧が不足している。",
-    "水曜日は休みです。",
-    "駅で友達を待ちます。"
-   ],
-   "h": "e29e6c91",
-   "oh": [
-    "dcb9e3b7",
-    "fdc63dc1",
-    "e29e6c91",
-    "2ae190df"
-   ],
-   "knowledge_ids": [],
-   "optional": true,
-   "direction": "zh-ja",
-   "source_id": "S0036"
-  },
-  {
-   "id": "P-004-06-5093249fffc7",
-   "qid": "P-004-06-5093249fffc7",
-   "type": "mcq",
-   "prompt": "周四看电影。",
-   "options": [
-    "木曜日に映画を見ます。",
-    "明日、学校へ行きます。",
-    "人は意識のある生き物だ。",
-    "こんにちは、元気ですか。"
-   ],
-   "h": "bd43fb8",
-   "oh": [
-    "bd43fb8",
-    "b7b27cd6",
-    "5eb9d09f",
-    "21e6b5c4"
-   ],
-   "knowledge_ids": [],
-   "optional": true,
-   "direction": "zh-ja",
-   "source_id": "S0037"
-  },
-  {
-   "id": "P-004-07-a22d899b2eff",
-   "qid": "P-004-07-a22d899b2eff",
-   "type": "mcq",
-   "prompt": "金曜日は忙しいです。",
-   "options": [
-    "这本书很贵。",
-    "上电车。",
-    "周五很忙。",
-    "和朋友看电影。"
-   ],
-   "h": "ec14dca4",
-   "oh": [
-    "804e5fb1",
-    "efa44868",
-    "ec14dca4",
-    "1d346a36"
-   ],
-   "knowledge_ids": [],
-   "optional": true,
-   "direction": "ja-zh",
-   "source_id": "S0038"
-  },
-  {
-   "id": "P-004-08-6d437c9521a9",
-   "qid": "P-004-08-6d437c9521a9",
-   "type": "mcq",
-   "prompt": "土曜日に買い物します。",
-   "options": [
-    "她很精神。",
-    "周六购物。",
-    "从第十课开始吧。",
-    "这本书很贵。"
-   ],
-   "h": "2cd26856",
-   "oh": [
-    "cd3f1586",
-    "2cd26856",
-    "7c4687ec",
-    "804e5fb1"
-   ],
-   "knowledge_ids": [],
-   "optional": true,
-   "direction": "ja-zh",
-   "source_id": "S0039"
-  },
-  {
-   "id": "P-004-09-ca53cd5b98e5",
-   "qid": "P-004-09-ca53cd5b98e5",
-   "type": "mcq",
-   "prompt": "日曜日は休みです。",
-   "options": [
-    "这本书很贵。",
-    "周日休息。",
-    "喜欢鱼。",
-    "买蔬菜。"
-   ],
-   "h": "ba3618f4",
-   "oh": [
-    "804e5fb1",
-    "ba3618f4",
-    "1c49d4c5",
-    "6563b707"
-   ],
-   "knowledge_ids": [],
-   "optional": true,
-   "direction": "ja-zh",
-   "source_id": "S0040"
-  },
-  {
-   "id": "P-004-10-23a656437caa",
-   "qid": "P-004-10-23a656437caa",
+   "id": "P-004-00-23a656437caa",
+   "qid": "P-004-00-23a656437caa",
    "type": "mcq",
    "prompt": "在房间里。",
    "options": [
@@ -2180,13 +2135,13 @@
     "3d1f2b43"
    ],
    "knowledge_ids": [],
-   "optional": true,
+   "optional": false,
    "direction": "zh-ja",
    "source_id": "S0041"
   },
   {
-   "id": "P-004-11-17aaee874ccd",
-   "qid": "P-004-11-17aaee874ccd",
+   "id": "P-004-01-17aaee874ccd",
+   "qid": "P-004-01-17aaee874ccd",
    "type": "mcq",
    "prompt": "车站前有店。",
    "options": [
@@ -2203,13 +2158,13 @@
     "e62e23a2"
    ],
    "knowledge_ids": [],
-   "optional": true,
+   "optional": false,
    "direction": "zh-ja",
    "source_id": "S0042"
   },
   {
-   "id": "P-004-12-679389d5e5ab",
-   "qid": "P-004-12-679389d5e5ab",
+   "id": "P-004-02-679389d5e5ab",
+   "qid": "P-004-02-679389d5e5ab",
    "type": "mcq",
    "prompt": "饭后吃药。",
    "options": [
@@ -2226,13 +2181,13 @@
     "8347f85c"
    ],
    "knowledge_ids": [],
-   "optional": true,
+   "optional": false,
    "direction": "zh-ja",
    "source_id": "S0043"
   },
   {
-   "id": "P-004-13-a057a632a2b8",
-   "qid": "P-004-13-a057a632a2b8",
+   "id": "P-004-03-a057a632a2b8",
+   "qid": "P-004-03-a057a632a2b8",
    "type": "mcq",
    "prompt": "吃饭。",
    "options": [
@@ -2254,8 +2209,8 @@
    "source_id": "S0044"
   },
   {
-   "id": "P-004-14-55e2ceb26061",
-   "qid": "P-004-14-55e2ceb26061",
+   "id": "P-004-04-55e2ceb26061",
+   "qid": "P-004-04-55e2ceb26061",
    "type": "mcq",
    "prompt": "吃早饭。",
    "options": [
@@ -2277,8 +2232,8 @@
    "source_id": "S0045"
   },
   {
-   "id": "P-004-15-b88b209f1559",
-   "qid": "P-004-15-b88b209f1559",
+   "id": "P-004-05-b88b209f1559",
+   "qid": "P-004-05-b88b209f1559",
    "type": "mcq",
    "prompt": "喝水。",
    "options": [
@@ -2300,8 +2255,8 @@
    "source_id": "S0046"
   },
   {
-   "id": "P-004-16-f4ba2cf28354",
-   "qid": "P-004-16-f4ba2cf28354",
+   "id": "P-004-06-f4ba2cf28354",
+   "qid": "P-004-06-f4ba2cf28354",
    "type": "mcq",
    "prompt": "喝茶。",
    "options": [
@@ -2323,8 +2278,8 @@
    "source_id": "S0047"
   },
   {
-   "id": "P-004-17-545794a3752e",
-   "qid": "P-004-17-545794a3752e",
+   "id": "P-004-07-545794a3752e",
+   "qid": "P-004-07-545794a3752e",
    "type": "mcq",
    "prompt": "肉を買います。",
    "options": [
@@ -2346,8 +2301,8 @@
    "source_id": "S0048"
   },
   {
-   "id": "P-004-18-cd43616a1758",
-   "qid": "P-004-18-cd43616a1758",
+   "id": "P-004-08-cd43616a1758",
+   "qid": "P-004-08-cd43616a1758",
    "type": "mcq",
    "prompt": "魚が好きです。",
    "options": [
@@ -2369,8 +2324,8 @@
    "source_id": "S0049"
   },
   {
-   "id": "P-004-19-2e7261da8c34",
-   "qid": "P-004-19-2e7261da8c34",
+   "id": "P-004-09-2e7261da8c34",
+   "qid": "P-004-09-2e7261da8c34",
    "type": "mcq",
    "prompt": "野菜を買います。",
    "options": [
@@ -2390,6 +2345,236 @@
    "optional": true,
    "direction": "ja-zh",
    "source_id": "S0050"
+  },
+  {
+   "id": "P-004-10-ae5cccd837f7",
+   "qid": "P-004-10-ae5cccd837f7",
+   "type": "mcq",
+   "prompt": "我哥哥在东京。",
+   "options": [
+    "兄は東京にいます。",
+    "何時間も海を眺めた。",
+    "食糧が不足している。",
+    "部屋には家具がない。"
+   ],
+   "h": "9a02b653",
+   "oh": [
+    "9a02b653",
+    "aead5bf6",
+    "fdc63dc1",
+    "7d411b95"
+   ],
+   "knowledge_ids": [],
+   "optional": true,
+   "direction": "zh-ja",
+   "source_id": "S0051"
+  },
+  {
+   "id": "P-004-11-479896b20571",
+   "qid": "P-004-11-479896b20571",
+   "type": "mcq",
+   "prompt": "我姐姐是学生。",
+   "options": [
+    "お茶を飲みます。",
+    "あなたは先生ですか。",
+    "水曜日は休みです。",
+    "姉は学生です。"
+   ],
+   "h": "fcea6a6c",
+   "oh": [
+    "d303d227",
+    "7cbc9d0b",
+    "e29e6c91",
+    "fcea6a6c"
+   ],
+   "knowledge_ids": [],
+   "optional": true,
+   "direction": "zh-ja",
+   "source_id": "S0052"
+  },
+  {
+   "id": "P-004-12-802e5463c03f",
+   "qid": "P-004-12-802e5463c03f",
+   "type": "mcq",
+   "prompt": "借书给弟弟。",
+   "options": [
+    "この川の流れは急だ。",
+    "家族と旅行します。",
+    "弟に本を貸します。",
+    "友達に電話します。"
+   ],
+   "h": "e1a08215",
+   "oh": [
+    "2deea5d0",
+    "8582dd31",
+    "e1a08215",
+    "ec5f7b75"
+   ],
+   "knowledge_ids": [],
+   "optional": true,
+   "direction": "zh-ja",
+   "source_id": "S0053"
+  },
+  {
+   "id": "P-004-13-f859ebaeec92",
+   "qid": "P-004-13-f859ebaeec92",
+   "type": "mcq",
+   "prompt": "我妹妹很精神。",
+   "options": [
+    "妹は元気です。",
+    "習い性となる。",
+    "切符を買います。",
+    "予定を変えました。"
+   ],
+   "h": "7ab839b7",
+   "oh": [
+    "7ab839b7",
+    "32da4d7b",
+    "9ad3920e",
+    "a0ad83b4"
+   ],
+   "knowledge_ids": [],
+   "optional": true,
+   "direction": "zh-ja",
+   "source_id": "S0054"
+  },
+  {
+   "id": "P-004-14-c71592299613",
+   "qid": "P-004-14-c71592299613",
+   "type": "mcq",
+   "prompt": "和家人旅行。",
+   "options": [
+    "私は泳げません。",
+    "部屋の中にいます。",
+    "あの山の頂上は平らだ。",
+    "家族と旅行します。"
+   ],
+   "h": "8582dd31",
+   "oh": [
+    "1319ae82",
+    "3d1f2b43",
+    "31771ee1",
+    "8582dd31"
+   ],
+   "knowledge_ids": [],
+   "optional": true,
+   "direction": "zh-ja",
+   "source_id": "S0055"
+  },
+  {
+   "id": "P-004-15-b2845d26844d",
+   "qid": "P-004-15-b2845d26844d",
+   "type": "mcq",
+   "prompt": "孩子在公园。",
+   "options": [
+    "彼女は料理が上手です。",
+    "この靴下はちぐはぐだ。",
+    "子供が公園にいます。",
+    "この部屋は静かです。"
+   ],
+   "h": "c0591056",
+   "oh": [
+    "bd50740d",
+    "6db284b2",
+    "c0591056",
+    "ed05be90"
+   ],
+   "knowledge_ids": [],
+   "optional": true,
+   "direction": "zh-ja",
+   "source_id": "S0056"
+  },
+  {
+   "id": "P-004-16-856d373a1dd3",
+   "qid": "P-004-16-856d373a1dd3",
+   "type": "mcq",
+   "prompt": "他是学生。",
+   "options": [
+    "本を読みます。",
+    "部屋の中にいます。",
+    "間違いを直します。",
+    "彼は学生です。"
+   ],
+   "h": "b1b71837",
+   "oh": [
+    "5a4d748c",
+    "3d1f2b43",
+    "f38675d3",
+    "b1b71837"
+   ],
+   "knowledge_ids": [],
+   "optional": true,
+   "direction": "zh-ja",
+   "source_id": "S0057"
+  },
+  {
+   "id": "P-004-17-b066929d388f",
+   "qid": "P-004-17-b066929d388f",
+   "type": "mcq",
+   "prompt": "彼女は元気です。",
+   "options": [
+    "七点起床。",
+    "上电车。",
+    "她很精神。",
+    "晴转多云。"
+   ],
+   "h": "cd3f1586",
+   "oh": [
+    "2fdab03e",
+    "efa44868",
+    "cd3f1586",
+    "3222c51a"
+   ],
+   "knowledge_ids": [],
+   "optional": true,
+   "direction": "ja-zh",
+   "source_id": "S0058"
+  },
+  {
+   "id": "P-004-18-e68b17b6b319",
+   "qid": "P-004-18-e68b17b6b319",
+   "type": "mcq",
+   "prompt": "友達と映画を見ます。",
+   "options": [
+    "事态非常严重。",
+    "他生于19世纪。",
+    "收银台在哪里。",
+    "和朋友看电影。"
+   ],
+   "h": "1d346a36",
+   "oh": [
+    "7e196bc1",
+    "122eb4a0",
+    "55df731b",
+    "1d346a36"
+   ],
+   "knowledge_ids": [],
+   "optional": true,
+   "direction": "ja-zh",
+   "source_id": "S0059"
+  },
+  {
+   "id": "P-004-19-22fa244b1d9d",
+   "qid": "P-004-19-22fa244b1d9d",
+   "type": "mcq",
+   "prompt": "あの人は先生です。",
+   "options": [
+    "那位是老师。",
+    "我还不太清楚。",
+    "她很精神。",
+    "给你五美元。"
+   ],
+   "h": "a04fdaaf",
+   "oh": [
+    "a04fdaaf",
+    "e0e1cf46",
+    "cd3f1586",
+    "82b87323"
+   ],
+   "knowledge_ids": [],
+   "optional": true,
+   "direction": "ja-zh",
+   "source_id": "S0060"
   }
  ],
  "quiz": [
@@ -2438,88 +2623,88 @@
    ]
   },
   {
-   "id": "Q-004-G-3a389b795a33",
-   "qid": "Q-004-G-3a389b795a33",
+   "id": "Q-004-G-97fb405e8a62",
+   "qid": "Q-004-G-97fb405e8a62",
    "type": "mcq",
    "prompt": "句型「が（主语／新信息／存在主体）」的意思是？",
    "options": [
+    "明明…却…；…却（意外、不满、遗憾）",
+    "（嵌入）什么…、哪里…",
     "…（主语/新信息/存在主体/能力对象）",
-    "因为…所以…",
-    "向…（动作的对象）",
-    "但愿…；希望…"
+    "并不是…；并非…"
    ],
    "h": "800ca841",
    "oh": [
+    "2fd6465",
+    "8bfa2a46",
     "800ca841",
-    "a6b77642",
-    "dfc1a123",
-    "5edc215a"
+    "ca292ff4"
    ],
    "knowledge_ids": [
     "G0007"
    ]
   },
   {
-   "id": "Q-004-V0-999b0a8e5741",
-   "qid": "Q-004-V0-999b0a8e5741",
+   "id": "Q-004-V0-93cef92cb21a",
+   "qid": "Q-004-V0-93cef92cb21a",
    "type": "mcq",
-   "prompt": "「病院」是什么意思？",
+   "prompt": "假名「はは」对应的词形是？",
    "options": [
-    "医院",
-    "气候",
-    "手续费",
-    "土；土壤"
+    "母",
+    "違いない",
+    "株",
+    "訴える"
    ],
-   "h": "de987ea8",
+   "h": "48974e98",
    "oh": [
-    "de987ea8",
-    "c13cdcee",
-    "9cc27b14",
-    "96569fbc"
+    "48974e98",
+    "875b30f2",
+    "2f97273d",
+    "1a4ae44e"
    ],
    "knowledge_ids": [
-    "V0043"
+    "V0067"
    ]
   },
   {
-   "id": "Q-004-V1-f0df229ce861",
-   "qid": "Q-004-V1-f0df229ce861",
+   "id": "Q-004-V1-58307d46109f",
+   "qid": "Q-004-V1-58307d46109f",
    "type": "mcq",
-   "prompt": "「図書館」是什么意思？",
+   "prompt": "「兄」是什么意思？",
    "options": [
     "安全",
-    "图书馆",
+    "(我)哥哥",
     "拼命；努力",
     "严厉；严酷"
    ],
-   "h": "411e20b9",
+   "h": "f516426b",
    "oh": [
     "a8622924",
-    "411e20b9",
+    "f516426b",
     "95f2d198",
     "45890ac8"
    ],
    "knowledge_ids": [
-    "V0044"
+    "V0068"
    ]
   },
   {
-   "id": "Q-004-R-3c9b34774718",
-   "qid": "Q-004-R-3c9b34774718",
+   "id": "Q-004-R-ecb0bd1ad505",
+   "qid": "Q-004-R-ecb0bd1ad505",
    "type": "mcq",
    "prompt": "复习：句型「N も」的意思是？",
    "options": [
-    "必须…；不得…",
-    "多亏…；托…的福",
+    "不可能…；绝不会…",
+    "不论…；不限…",
     "…也…",
-    "向…（动作的对象）"
+    "去／来／回…（目的地）"
    ],
    "h": "1aca9020",
    "oh": [
-    "b72f8fc4",
-    "90862f16",
+    "d4779515",
+    "ce9fc456",
     "1aca9020",
-    "dfc1a123"
+    "efed5858"
    ],
    "knowledge_ids": [
     "G0004"
@@ -2528,98 +2713,173 @@
  ],
  "questions": [
   {
-   "id": "D13-004-V0061-recall",
-   "qid": "D13-004-V0061-recall",
+   "id": "D15-004-V0089-reading",
+   "qid": "D15-004-V0089-reading",
    "type": "mcq",
    "day": 4,
-   "prompt": "「公交车」对应哪个日语词？",
+   "prompt": "「電話」（电话）的假名读音是哪一项？",
    "options": [
-    "びょういん",
-    "くるま",
-    "にく",
-    "バス"
+    "でぐち",
+    "でんしゃ",
+    "でんき",
+    "でんわ"
    ],
-   "h": "be1e7682",
+   "h": "f017a400",
    "oh": [
-    "23666d7a",
-    "d062843",
-    "89ca8bbf",
-    "be1e7682"
+    "c5e08fb9",
+    "8a03b2d1",
+    "b218d566",
+    "f017a400"
    ],
    "knowledge_ids": [
-    "V0061"
+    "V0089"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0094-meaning",
+   "qid": "D15-004-V0094-meaning",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「頭」的中文释义？",
+   "options": [
+    "朋友",
+    "家人；家庭",
+    "头；脑袋",
+    "学习；用功"
+   ],
+   "h": "d786f3f0",
+   "oh": [
+    "8485de13",
+    "34c67497",
+    "d786f3f0",
+    "3ed99665"
+   ],
+   "knowledge_ids": [
+    "V0094"
    ],
    "capability": "meaning",
    "group": "vocab"
   },
   {
-   "id": "D13-004-V0060-meaning",
-   "qid": "D13-004-V0060-meaning",
+   "id": "D15-004-G0007-context",
+   "qid": "D15-004-G0007-context",
    "type": "mcq",
    "day": 4,
-   "prompt": "「電車」的中文释义？",
+   "prompt": "请选择「誰が来ますか。」的中文意思。",
    "options": [
-    "电车（轨道交通）",
-    "米饭；饭（餐）",
+    "谁来？",
+    "暑假我要去北海道。",
+    "和朋友看电影。",
+    "下周回国。"
+   ],
+   "h": "da63ba1c",
+   "oh": [
+    "da63ba1c",
+    "847af9df",
+    "1d346a36",
+    "b663f8d7"
+   ],
+   "knowledge_ids": [
+    "G0007"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D15-004-V0085-meaning",
+   "qid": "D15-004-V0085-meaning",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「仕事」的中文释义？",
+   "options": [
+    "(我)弟弟",
+    "工作；活儿",
+    "医生",
+    "(我)妹妹"
+   ],
+   "h": "56f0f957",
+   "oh": [
+    "d3043d7f",
+    "56f0f957",
+    "ec2afa1f",
+    "1f979903"
+   ],
+   "knowledge_ids": [
+    "V0085"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0084-reading",
+   "qid": "D15-004-V0084-reading",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「名前」（名字；姓名）的假名读音是哪一项？",
+   "options": [
+    "なまえ",
+    "なつ",
+    "なか",
+    "なのか"
+   ],
+   "h": "40f22163",
+   "oh": [
+    "40f22163",
+    "90ccd55b",
+    "adcd0302",
+    "22b02006"
+   ],
+   "knowledge_ids": [
+    "V0084"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0071-meaning",
+   "qid": "D15-004-V0071-meaning",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「妹」的中文释义？",
+   "options": [
+    "(我)妹妹",
     "(我)母亲",
-    "后面；之后"
+    "(我)哥哥",
+    "人"
    ],
-   "h": "f31b7c4c",
+   "h": "1f979903",
    "oh": [
-    "f31b7c4c",
-    "b6ffbfc",
+    "1f979903",
     "ad8b91e2",
-    "59e0ed6b"
+    "f516426b",
+    "bf60f0ed"
    ],
    "knowledge_ids": [
-    "V0060"
+    "V0071"
    ],
    "capability": "meaning",
    "group": "vocab"
   },
   {
-   "id": "D13-004-V0048-meaning",
-   "qid": "D13-004-V0048-meaning",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「中」的中文释义？",
-   "options": [
-    "菜肴；烹饪",
-    "面包",
-    "公交车",
-    "里面；中间"
-   ],
-   "h": "bc565869",
-   "oh": [
-    "5b28f961",
-    "2b9b15a0",
-    "38b61e81",
-    "bc565869"
-   ],
-   "knowledge_ids": [
-    "V0048"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-004-G0007-meaning",
-   "qid": "D13-004-G0007-meaning",
+   "id": "D15-004-G0007-meaning",
+   "qid": "D15-004-G0007-meaning",
    "type": "mcq",
    "day": 4,
    "prompt": "请选择「が（主语／新信息／存在主体）」所用句型的主要含义。",
    "options": [
-    "用…；靠…；以…",
-    "…（主语/新信息/存在主体/能力对象）",
-    "…哦；…呀（告知、强调）",
-    "在…（做某事）"
+    "和…／与…（一起）；「…」地",
+    "往…；朝…",
+    "往／向…",
+    "…（主语/新信息/存在主体/能力对象）"
    ],
    "h": "800ca841",
    "oh": [
-    "ab0836fc",
-    "800ca841",
-    "e7cfda32",
-    "9f1fe8a3"
+    "5b9a598a",
+    "4b603e03",
+    "bcb6033f",
+    "800ca841"
    ],
    "knowledge_ids": [
     "G0007"
@@ -2628,23 +2888,23 @@
    "group": "grammar"
   },
   {
-   "id": "D13-004-G0007-form",
-   "qid": "D13-004-G0007-form",
+   "id": "D15-004-G0007-form",
+   "qid": "D15-004-G0007-form",
    "type": "mcq",
    "day": 4,
    "prompt": "选出符合下列意思的日语句子。\n有猫。",
    "options": [
-    "はしでご飯を食べます。",
-    "猫がいます。",
+    "夏休みに北海道へ行きます。",
+    "友達と映画を見ます。",
     "犬の方が猫より好きです。",
-    "毎日電車で会社へ行きます。"
+    "猫がいます。"
    ],
    "h": "a6b7e16f",
    "oh": [
-    "838ee366",
-    "a6b7e16f",
+    "dbf7af3a",
+    "6c96baa1",
     "ce7ede8f",
-    "41809c46"
+    "a6b7e16f"
    ],
    "knowledge_ids": [
     "G0007"
@@ -2653,647 +2913,422 @@
    "group": "grammar"
   },
   {
-   "id": "D13-004-V0063-reading",
-   "qid": "D13-004-V0063-reading",
+   "id": "D15-004-V0082-reading",
+   "qid": "D15-004-V0082-reading",
    "type": "mcq",
    "day": 4,
-   "prompt": "「自転車」（自行车）的假名读音是哪一项？",
+   "prompt": "「勉強」（学习；用功）的假名读音是哪一项？",
    "options": [
-    "じどうしゃ",
-    "じてんしゃ",
-    "じょおう",
-    "じゅぎょう"
+    "ともだち",
+    "べつ",
+    "べんきょう",
+    "べんり"
    ],
-   "h": "ea221882",
+   "h": "716d7071",
    "oh": [
-    "df7f55fe",
-    "ea221882",
-    "e2b2a208",
-    "c2d4ff11"
+    "6b434494",
+    "7ebaacb0",
+    "716d7071",
+    "a35fe77d"
    ],
    "knowledge_ids": [
-    "V0063"
+    "V0082"
    ],
    "capability": "reading",
    "group": "vocab"
   },
   {
-   "id": "D13-004-V0045-meaning",
-   "qid": "D13-004-V0045-meaning",
+   "id": "D15-004-V0072-reading",
+   "qid": "D15-004-V0072-reading",
    "type": "mcq",
    "day": 4,
-   "prompt": "「部屋」的中文释义？",
+   "prompt": "「家族」（家人；家庭）的假名读音是哪一项？",
    "options": [
-    "飞机",
-    "房间",
-    "菜肴；烹饪",
-    "汽车；车"
+    "かれ",
+    "かびん",
+    "かぞく",
+    "かのじょ"
    ],
-   "h": "cdee990e",
+   "h": "eecd9b89",
    "oh": [
-    "95c25061",
-    "cdee990e",
-    "5b28f961",
-    "76c9ae5f"
+    "8a487b72",
+    "a3280eb8",
+    "eecd9b89",
+    "7b831c1"
    ],
    "knowledge_ids": [
-    "V0045"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-004-V0054-reading",
-   "qid": "D13-004-V0054-reading",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「お茶」（茶）的假名读音是哪一项？",
-   "options": [
-    "おくさん",
-    "おととい",
-    "おちゃ",
-    "おとこ"
-   ],
-   "h": "984d9115",
-   "oh": [
-    "3121fc5e",
-    "f80e7813",
-    "984d9115",
-    "583be334"
-   ],
-   "knowledge_ids": [
-    "V0054"
+    "V0072"
    ],
    "capability": "reading",
    "group": "vocab"
   },
   {
-   "id": "D13-004-V0059-reading",
-   "qid": "D13-004-V0059-reading",
+   "id": "D15-004-V0094-reading",
+   "qid": "D15-004-V0094-reading",
    "type": "mcq",
    "day": 4,
-   "prompt": "「料理」（菜肴；烹饪）的假名读音是哪一项？",
-   "options": [
-    "りょこう",
-    "りゆう",
-    "りょうしん",
-    "りょうり"
-   ],
-   "h": "dc7e37b6",
-   "oh": [
-    "3b176713",
-    "5a21e785",
-    "516d94ea",
-    "dc7e37b6"
-   ],
-   "knowledge_ids": [
-    "V0059"
-   ],
-   "capability": "reading",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-004-V0044-meaning",
-   "qid": "D13-004-V0044-meaning",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「図書館」的中文释义？",
-   "options": [
-    "图书馆",
-    "蔬菜",
-    "(我)母亲",
-    "鱼"
-   ],
-   "h": "411e20b9",
-   "oh": [
-    "411e20b9",
-    "6cfe1335",
-    "ad8b91e2",
-    "f816b63b"
-   ],
-   "knowledge_ids": [
-    "V0044"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-004-V0063-meaning",
-   "qid": "D13-004-V0063-meaning",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「自転車」的中文释义？",
-   "options": [
-    "水（冷水／生水）",
-    "里面；中间",
-    "自行车",
-    "汽车；车"
-   ],
-   "h": "32a1941f",
-   "oh": [
-    "21f2c9a7",
-    "bc565869",
-    "32a1941f",
-    "76c9ae5f"
-   ],
-   "knowledge_ids": [
-    "V0063"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-004-V0051-reading",
-   "qid": "D13-004-V0051-reading",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「ご飯」（米饭；饭）的假名读音是哪一项？",
-   "options": [
-    "ごうかく",
-    "ごぜん",
-    "ごはん",
-    "ごご"
-   ],
-   "h": "a0f6a475",
-   "oh": [
-    "4dfc9c9",
-    "b10736fa",
-    "a0f6a475",
-    "54507535"
-   ],
-   "knowledge_ids": [
-    "V0051"
-   ],
-   "capability": "reading",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-004-V0062-reading",
-   "qid": "D13-004-V0062-reading",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「車」（汽车；车）的假名读音是哪一项？",
-   "options": [
-    "くに",
-    "くもり",
-    "くち",
-    "くるま"
-   ],
-   "h": "d062843",
-   "oh": [
-    "8d3f85cf",
-    "fee4fb5a",
-    "973f958d",
-    "d062843"
-   ],
-   "knowledge_ids": [
-    "V0062"
-   ],
-   "capability": "reading",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-004-G0008-context",
-   "qid": "D13-004-G0008-context",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "请选择「ご飯を食べます。」的中文意思。",
-   "options": [
-    "吃饭前要洗手。",
-    "正吃饭时突然停电了。",
-    "父亲一到发薪日就带家人出去吃饭。",
-    "吃饭。"
-   ],
-   "h": "e1e3679d",
-   "oh": [
-    "bdc3d145",
-    "a0c19ac0",
-    "766a65b9",
-    "e1e3679d"
-   ],
-   "knowledge_ids": [
-    "G0008"
-   ],
-   "capability": "usage",
-   "group": "grammar"
-  },
-  {
-   "id": "D13-004-V0047-recall",
-   "qid": "D13-004-V0047-recall",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「上面；上方」对应哪个日语词？",
-   "options": [
-    "あと",
-    "ごはん",
-    "やさい",
-    "うえ"
-   ],
-   "h": "a460c0e3",
-   "oh": [
-    "6c6af617",
-    "a0f6a475",
-    "2589e502",
-    "a460c0e3"
-   ],
-   "knowledge_ids": [
-    "V0047"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-004-V0060-reading",
-   "qid": "D13-004-V0060-reading",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「電車」（电车）的假名读音是哪一项？",
-   "options": [
-    "でんき",
-    "でぐち",
-    "でんわ",
-    "でんしゃ"
-   ],
-   "h": "8a03b2d1",
-   "oh": [
-    "b218d566",
-    "c5e08fb9",
-    "f017a400",
-    "8a03b2d1"
-   ],
-   "knowledge_ids": [
-    "V0060"
-   ],
-   "capability": "reading",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-004-V0055-meaning",
-   "qid": "D13-004-V0055-meaning",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「にく」的中文释义？",
-   "options": [
-    "肉",
-    "早饭",
-    "医院",
-    "水（冷水／生水）"
-   ],
-   "h": "8b421ea4",
-   "oh": [
-    "8b421ea4",
-    "1fc01c8b",
-    "de987ea8",
-    "21f2c9a7"
-   ],
-   "knowledge_ids": [
-    "V0055"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-004-G0006-context",
-   "qid": "D13-004-G0006-context",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "请选择「日本語の先生です。」的中文意思。",
-   "options": [
-    "是日语老师。",
-    "多亏老师，日语变好了。",
-    "日语老师非常温柔。",
-    "我不是老师。"
-   ],
-   "h": "bdc03375",
-   "oh": [
-    "bdc03375",
-    "a0dadbcc",
-    "4617a3a5",
-    "b3476675"
-   ],
-   "knowledge_ids": [
-    "G0006"
-   ],
-   "capability": "usage",
-   "group": "grammar"
-  },
-  {
-   "id": "D13-004-V0052-meaning",
-   "qid": "D13-004-V0052-meaning",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「朝ご飯」的中文释义？",
-   "options": [
-    "早饭",
-    "茶",
-    "菜肴；烹饪",
-    "飞机"
-   ],
-   "h": "1fc01c8b",
-   "oh": [
-    "1fc01c8b",
-    "3244b889",
-    "5b28f961",
-    "95c25061"
-   ],
-   "knowledge_ids": [
-    "V0052"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-004-V0061-meaning",
-   "qid": "D13-004-V0061-meaning",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「バス」的中文释义？",
-   "options": [
-    "医院",
-    "肉",
-    "汽车；车",
-    "公交车"
-   ],
-   "h": "38b61e81",
-   "oh": [
-    "de987ea8",
-    "8b421ea4",
-    "76c9ae5f",
-    "38b61e81"
-   ],
-   "knowledge_ids": [
-    "V0061"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-004-V0050-reading",
-   "qid": "D13-004-V0050-reading",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「後」（后面；之后）的假名读音是哪一项？",
+   "prompt": "「頭」（头；脑袋）的假名读音是哪一项？",
    "options": [
     "あさ",
-    "あし",
-    "あと",
+    "あに",
+    "あね",
     "あたま"
    ],
-   "h": "6c6af617",
+   "h": "134bb5f0",
    "oh": [
     "4f6ac870",
-    "516acb96",
-    "6c6af617",
+    "6d6af7aa",
+    "676aee38",
     "134bb5f0"
    ],
    "knowledge_ids": [
-    "V0050"
+    "V0094"
    ],
    "capability": "reading",
    "group": "vocab"
   },
   {
-   "id": "D13-004-V0047-meaning",
-   "qid": "D13-004-V0047-meaning",
+   "id": "D15-004-V0083-meaning",
+   "qid": "D15-004-V0083-meaning",
    "type": "mcq",
    "day": 4,
-   "prompt": "「上」的中文释义？",
+   "prompt": "「宿題」的中文释义？",
    "options": [
-    "米饭；饭（餐）",
-    "蔬菜",
-    "上面；上方",
-    "后面；之后"
+    "学习；用功",
+    "(我)母亲",
+    "(我)妹妹",
+    "作业"
    ],
-   "h": "c9d29053",
+   "h": "f2c907d3",
    "oh": [
-    "b6ffbfc",
-    "6cfe1335",
-    "c9d29053",
-    "59e0ed6b"
+    "3ed99665",
+    "ad8b91e2",
+    "1f979903",
+    "f2c907d3"
    ],
    "knowledge_ids": [
-    "V0047"
+    "V0083"
    ],
    "capability": "meaning",
    "group": "vocab"
   },
   {
-   "id": "D13-004-G0006-form",
-   "qid": "D13-004-G0006-form",
+   "id": "D15-004-V0079-reading",
+   "qid": "D15-004-V0079-reading",
    "type": "mcq",
    "day": 4,
-   "prompt": "选出符合下列意思的日语句子。\n是我的书。",
+   "prompt": "「先生」（老师；医生/律师等）的假名读音是哪一项？",
    "options": [
-    "これは私のかさです。",
-    "彼は日本の歴史に関する本をたくさん持っている。",
-    "私の本です。",
-    "きのうは私の誕生日でした。"
+    "せびろ",
+    "せんしゅう",
+    "せんせい",
+    "せっけん"
    ],
-   "h": "e93a974c",
+   "h": "54a6cbdc",
    "oh": [
-    "b7fc5d82",
-    "e2b97d2d",
-    "e93a974c",
-    "c23b5eb6"
+    "4cc0c512",
+    "69af409f",
+    "54a6cbdc",
+    "9872e497"
    ],
    "knowledge_ids": [
-    "G0006"
-   ],
-   "capability": "usage",
-   "group": "grammar"
-  },
-  {
-   "id": "D13-004-V0050-meaning",
-   "qid": "D13-004-V0050-meaning",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「後」的中文释义？",
-   "options": [
-    "早饭",
-    "后面；之后",
-    "肉",
-    "公交车"
-   ],
-   "h": "59e0ed6b",
-   "oh": [
-    "1fc01c8b",
-    "59e0ed6b",
-    "8b421ea4",
-    "38b61e81"
-   ],
-   "knowledge_ids": [
-    "V0050"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-004-V0056-meaning",
-   "qid": "D13-004-V0056-meaning",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「魚」的中文释义？",
-   "options": [
-    "蔬菜",
-    "里面；中间",
-    "鱼",
-    "自行车"
-   ],
-   "h": "f816b63b",
-   "oh": [
-    "6cfe1335",
-    "bc565869",
-    "f816b63b",
-    "32a1941f"
-   ],
-   "knowledge_ids": [
-    "V0056"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-004-V0062-meaning",
-   "qid": "D13-004-V0062-meaning",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「車」的中文释义？",
-   "options": [
-    "水（冷水／生水）",
-    "汽车；车",
-    "自行车",
-    "里面；中间"
-   ],
-   "h": "76c9ae5f",
-   "oh": [
-    "21f2c9a7",
-    "76c9ae5f",
-    "32a1941f",
-    "bc565869"
-   ],
-   "knowledge_ids": [
-    "V0062"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-004-V0056-reading",
-   "qid": "D13-004-V0056-reading",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「魚」（鱼）的假名读音是哪一项？",
-   "options": [
-    "さとう",
-    "さかな",
-    "さき",
-    "さんぽ"
-   ],
-   "h": "859d6811",
-   "oh": [
-    "6f46d7ca",
-    "859d6811",
-    "a74eb947",
-    "94b8b36c"
-   ],
-   "knowledge_ids": [
-    "V0056"
+    "V0079"
    ],
    "capability": "reading",
    "group": "vocab"
   },
   {
-   "id": "D13-004-V0057-reading",
-   "qid": "D13-004-V0057-reading",
+   "id": "D15-004-V0089-meaning",
+   "qid": "D15-004-V0089-meaning",
    "type": "mcq",
    "day": 4,
-   "prompt": "「野菜」（蔬菜）的假名读音是哪一项？",
+   "prompt": "「電話」的中文释义？",
    "options": [
-    "やま",
-    "やさい",
-    "やすみ",
-    "やおや"
+    "电话",
+    "(我)妹妹",
+    "(我)姐姐",
+    "(我)母亲"
    ],
-   "h": "2589e502",
+   "h": "6a016277",
    "oh": [
-    "798a3dd7",
-    "2589e502",
-    "fc9431d3",
-    "b787c90d"
+    "6a016277",
+    "1f979903",
+    "bbb16169",
+    "ad8b91e2"
    ],
    "knowledge_ids": [
-    "V0057"
+    "V0089"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0077-recall",
+   "qid": "D15-004-V0077-recall",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「人」对应哪个日语词？",
+   "options": [
+    "ひと",
+    "こども",
+    "あね",
+    "がくせい"
+   ],
+   "h": "8caf89c7",
+   "oh": [
+    "8caf89c7",
+    "38994469",
+    "676aee38",
+    "11411f83"
+   ],
+   "knowledge_ids": [
+    "V0077"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0068-meaning",
+   "qid": "D15-004-V0068-meaning",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「兄」的中文释义？",
+   "options": [
+    "(我)弟弟",
+    "孩子；小孩",
+    "人",
+    "(我)哥哥"
+   ],
+   "h": "f516426b",
+   "oh": [
+    "d3043d7f",
+    "a9bd0935",
+    "bf60f0ed",
+    "f516426b"
+   ],
+   "knowledge_ids": [
+    "V0068"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0073-meaning",
+   "qid": "D15-004-V0073-meaning",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「子供」的中文释义？",
+   "options": [
+    "(我)母亲",
+    "孩子；小孩",
+    "学习；用功",
+    "学生"
+   ],
+   "h": "a9bd0935",
+   "oh": [
+    "ad8b91e2",
+    "a9bd0935",
+    "3ed99665",
+    "57de17f2"
+   ],
+   "knowledge_ids": [
+    "V0073"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0070-recall",
+   "qid": "D15-004-V0070-recall",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「弟弟」对应哪个日语词？",
+   "options": [
+    "ほん",
+    "おとうと",
+    "しゅくだい",
+    "ホテル"
+   ],
+   "h": "2062e619",
+   "oh": [
+    "9e580dab",
+    "2062e619",
+    "264e43b6",
+    "9d862f8d"
+   ],
+   "knowledge_ids": [
+    "V0070"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0069-meaning",
+   "qid": "D15-004-V0069-meaning",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「姉」的中文释义？",
+   "options": [
+    "学生",
+    "医生",
+    "旅行",
+    "(我)姐姐"
+   ],
+   "h": "bbb16169",
+   "oh": [
+    "57de17f2",
+    "ec2afa1f",
+    "ffcf17a4",
+    "bbb16169"
+   ],
+   "knowledge_ids": [
+    "V0069"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0074-reading",
+   "qid": "D15-004-V0074-reading",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「彼」（他；男朋友）的假名读音是哪一项？",
+   "options": [
+    "かれら",
+    "かれ",
+    "かぞく",
+    "かばん"
+   ],
+   "h": "8a487b72",
+   "oh": [
+    "aacf9c21",
+    "8a487b72",
+    "eecd9b89",
+    "eb2abea7"
+   ],
+   "knowledge_ids": [
+    "V0074"
    ],
    "capability": "reading",
    "group": "vocab"
   },
   {
-   "id": "D13-004-V0049-recall",
-   "qid": "D13-004-V0049-recall",
+   "id": "D15-004-V0077-meaning",
+   "qid": "D15-004-V0077-meaning",
    "type": "mcq",
    "day": 4,
-   "prompt": "「前面；之前」对应哪个日语词？",
+   "prompt": "「ひと」的中文释义？",
    "options": [
-    "ひこうき",
-    "パン",
-    "さかな",
-    "まえ"
+    "孩子；小孩",
+    "人",
+    "(我)姐姐",
+    "学生"
    ],
-   "h": "84b8778b",
+   "h": "bf60f0ed",
    "oh": [
-    "3cd603",
-    "41b131d",
-    "859d6811",
-    "84b8778b"
+    "a9bd0935",
+    "bf60f0ed",
+    "bbb16169",
+    "57de17f2"
    ],
    "knowledge_ids": [
-    "V0049"
+    "V0077"
    ],
    "capability": "meaning",
    "group": "vocab"
   },
   {
-   "id": "D13-004-V0054-meaning",
-   "qid": "D13-004-V0054-meaning",
+   "id": "D15-004-V0078-meaning",
+   "qid": "D15-004-V0078-meaning",
    "type": "mcq",
    "day": 4,
-   "prompt": "「おちゃ」的中文释义？",
+   "prompt": "「がくせい」的中文释义？",
    "options": [
-    "(我)父亲",
-    "水（冷水／生水）",
-    "自行车",
-    "茶"
+    "(我)哥哥",
+    "旅行",
+    "家人；家庭",
+    "学生"
    ],
-   "h": "3244b889",
+   "h": "57de17f2",
    "oh": [
-    "e84a90a5",
-    "21f2c9a7",
-    "32a1941f",
-    "3244b889"
+    "f516426b",
+    "ffcf17a4",
+    "34c67497",
+    "57de17f2"
    ],
    "knowledge_ids": [
-    "V0054"
+    "V0078"
    ],
    "capability": "meaning",
    "group": "vocab"
   },
   {
-   "id": "D13-004-G0008-form",
-   "qid": "D13-004-G0008-form",
+   "id": "D15-004-V0080-reading",
+   "qid": "D15-004-V0080-reading",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「本」（书）的假名读音是哪一项？",
+   "options": [
+    "ほど",
+    "ほん",
+    "ほか",
+    "ほし"
+   ],
+   "h": "9e580dab",
+   "oh": [
+    "8857eb09",
+    "9e580dab",
+    "6657b583",
+    "6257af37"
+   ],
+   "knowledge_ids": [
+    "V0080"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0087-reading",
+   "qid": "D15-004-V0087-reading",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「医者」（医生）的假名读音是哪一项？",
+   "options": [
+    "いっしょ",
+    "いしゃ",
+    "いもうと",
+    "いぬ"
+   ],
+   "h": "a2bd441d",
+   "oh": [
+    "4febd3a6",
+    "a2bd441d",
+    "7adbcf15",
+    "8c5c1ded"
+   ],
+   "knowledge_ids": [
+    "V0087"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-G0008-form",
+   "qid": "D15-004-G0008-form",
    "type": "mcq",
    "day": 4,
    "prompt": "选出符合下列意思的日语句子。\n吃饭。",
    "options": [
     "ご飯の前に手を洗いなさい。",
-    "父は、給料日には家族を外食に連れていくことにしている。",
     "ご飯を食べます。",
+    "父は、給料日には家族を外食に連れていくことにしている。",
     "ご飯の最中に、突然停電しました。"
    ],
    "h": "26896ad7",
    "oh": [
     "9e4aeb9b",
-    "1d45daf4",
     "26896ad7",
+    "1d45daf4",
     "d676b552"
    ],
    "knowledge_ids": [
@@ -3303,48 +3338,548 @@
    "group": "grammar"
   },
   {
-   "id": "D13-004-V0044-reading",
-   "qid": "D13-004-V0044-reading",
+   "id": "D15-004-V0092-recall",
+   "qid": "D15-004-V0092-recall",
    "type": "mcq",
    "day": 4,
-   "prompt": "「図書館」（图书馆）的假名读音是哪一项？",
+   "prompt": "「宾馆；酒店」对应哪个日语词？",
    "options": [
-    "としより",
-    "としょかん",
-    "ともだち",
-    "とりにく"
+    "いもうと",
+    "りょこう",
+    "でんわ",
+    "ホテル"
    ],
-   "h": "bc64cc9b",
+   "h": "9d862f8d",
    "oh": [
-    "f3d804d6",
-    "bc64cc9b",
-    "6b434494",
-    "786767b1"
+    "7adbcf15",
+    "3b176713",
+    "f017a400",
+    "9d862f8d"
    ],
    "knowledge_ids": [
-    "V0044"
+    "V0092"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0075-meaning",
+   "qid": "D15-004-V0075-meaning",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「彼女」的中文释义？",
+   "options": [
+    "工作；活儿",
+    "他；男朋友",
+    "她；女朋友",
+    "名字；姓名"
+   ],
+   "h": "939b868",
+   "oh": [
+    "56f0f957",
+    "7247b519",
+    "939b868",
+    "cae094ba"
+   ],
+   "knowledge_ids": [
+    "V0075"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0084-meaning",
+   "qid": "D15-004-V0084-meaning",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「名前」的中文释义？",
+   "options": [
+    "(我)哥哥",
+    "工作；活儿",
+    "学习；用功",
+    "名字；姓名"
+   ],
+   "h": "cae094ba",
+   "oh": [
+    "f516426b",
+    "56f0f957",
+    "3ed99665",
+    "cae094ba"
+   ],
+   "knowledge_ids": [
+    "V0084"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0086-meaning",
+   "qid": "D15-004-V0086-meaning",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「会社員」的中文释义？",
+   "options": [
+    "老师；医生/律师等",
+    "公司职员",
+    "(我)哥哥",
+    "学习；用功"
+   ],
+   "h": "25ff02c5",
+   "oh": [
+    "c5ace6d6",
+    "25ff02c5",
+    "f516426b",
+    "3ed99665"
+   ],
+   "knowledge_ids": [
+    "V0086"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0073-reading",
+   "qid": "D15-004-V0073-reading",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「子供」（孩子；小孩）的假名读音是哪一项？",
+   "options": [
+    "こども",
+    "ここのか",
+    "こうばん",
+    "こんげつ"
+   ],
+   "h": "38994469",
+   "oh": [
+    "38994469",
+    "8b86d8f4",
+    "3b5f2e85",
+    "1bff6305"
+   ],
+   "knowledge_ids": [
+    "V0073"
    ],
    "capability": "reading",
    "group": "vocab"
   },
   {
-   "id": "D13-004-G0008-meaning",
-   "qid": "D13-004-G0008-meaning",
+   "id": "D15-004-V0070-meaning",
+   "qid": "D15-004-V0070-meaning",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「弟」的中文释义？",
+   "options": [
+    "作业",
+    "(我)弟弟",
+    "宾馆；酒店",
+    "书"
+   ],
+   "h": "d3043d7f",
+   "oh": [
+    "f2c907d3",
+    "d3043d7f",
+    "fbacb33d",
+    "e3612999"
+   ],
+   "knowledge_ids": [
+    "V0070"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0083-reading",
+   "qid": "D15-004-V0083-reading",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「宿題」（作业）的假名读音是哪一项？",
+   "options": [
+    "しゅくだい",
+    "しゃしん",
+    "しつもん",
+    "しょうゆ"
+   ],
+   "h": "264e43b6",
+   "oh": [
+    "264e43b6",
+    "63f5a6c1",
+    "ada0e2dd",
+    "46542ddb"
+   ],
+   "knowledge_ids": [
+    "V0083"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0079-meaning",
+   "qid": "D15-004-V0079-meaning",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「先生」的中文释义？",
+   "options": [
+    "(我)弟弟",
+    "家人；家庭",
+    "老师；医生/律师等",
+    "日语"
+   ],
+   "h": "c5ace6d6",
+   "oh": [
+    "d3043d7f",
+    "34c67497",
+    "c5ace6d6",
+    "9f89a0f7"
+   ],
+   "knowledge_ids": [
+    "V0079"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0086-reading",
+   "qid": "D15-004-V0086-reading",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「会社員」（公司职员）的假名读音是哪一项？",
+   "options": [
+    "かんじょう",
+    "かいしゃく",
+    "かいしゃいん",
+    "かのうせい"
+   ],
+   "h": "cbf34131",
+   "oh": [
+    "eb377454",
+    "f3754459",
+    "cbf34131",
+    "ed1b2c41"
+   ],
+   "knowledge_ids": [
+    "V0086"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-G0008-context",
+   "qid": "D15-004-G0008-context",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "请选择「ご飯を食べます。」的中文意思。",
+   "options": [
+    "吃饭。",
+    "父亲一到发薪日就带家人出去吃饭。",
+    "正吃饭时突然停电了。",
+    "吃饭前要洗手。"
+   ],
+   "h": "e1e3679d",
+   "oh": [
+    "e1e3679d",
+    "766a65b9",
+    "a0c19ac0",
+    "bdc3d145"
+   ],
+   "knowledge_ids": [
+    "G0008"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D15-004-V0068-reading",
+   "qid": "D15-004-V0068-reading",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「兄」（哥哥）的假名读音是哪一项？",
+   "options": [
+    "あに",
+    "あし",
+    "あたま",
+    "あね"
+   ],
+   "h": "6d6af7aa",
+   "oh": [
+    "6d6af7aa",
+    "516acb96",
+    "134bb5f0",
+    "676aee38"
+   ],
+   "knowledge_ids": [
+    "V0068"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0091-recall",
+   "qid": "D15-004-V0091-recall",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「旅行」对应哪个日语词？",
+   "options": [
+    "りょこう",
+    "ひと",
+    "かぞく",
+    "かいしゃいん"
+   ],
+   "h": "3b176713",
+   "oh": [
+    "3b176713",
+    "8caf89c7",
+    "eecd9b89",
+    "cbf34131"
+   ],
+   "knowledge_ids": [
+    "V0091"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0082-meaning",
+   "qid": "D15-004-V0082-meaning",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「勉強」的中文释义？",
+   "options": [
+    "医生",
+    "学习；用功",
+    "朋友",
+    "人"
+   ],
+   "h": "3ed99665",
+   "oh": [
+    "ec2afa1f",
+    "3ed99665",
+    "8485de13",
+    "bf60f0ed"
+   ],
+   "knowledge_ids": [
+    "V0082"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0072-meaning",
+   "qid": "D15-004-V0072-meaning",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「家族」的中文释义？",
+   "options": [
+    "作业",
+    "家人；家庭",
+    "医生",
+    "(我)哥哥"
+   ],
+   "h": "34c67497",
+   "oh": [
+    "f2c907d3",
+    "34c67497",
+    "ec2afa1f",
+    "f516426b"
+   ],
+   "knowledge_ids": [
+    "V0072"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0081-meaning",
+   "qid": "D15-004-V0081-meaning",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「日本語」的中文释义？",
+   "options": [
+    "日语",
+    "朋友",
+    "工作；活儿",
+    "宾馆；酒店"
+   ],
+   "h": "9f89a0f7",
+   "oh": [
+    "9f89a0f7",
+    "8485de13",
+    "56f0f957",
+    "fbacb33d"
+   ],
+   "knowledge_ids": [
+    "V0081"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0085-reading",
+   "qid": "D15-004-V0085-reading",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「仕事」（工作；活儿）的假名读音是哪一项？",
+   "options": [
+    "しごと",
+    "しお",
+    "しつもん",
+    "した"
+   ],
+   "h": "65e0c44a",
+   "oh": [
+    "65e0c44a",
+    "6c52d994",
+    "ada0e2dd",
+    "5952bbab"
+   ],
+   "knowledge_ids": [
+    "V0085"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0074-meaning",
+   "qid": "D15-004-V0074-meaning",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「彼」的中文释义？",
+   "options": [
+    "他；男朋友",
+    "学习；用功",
+    "孩子；小孩",
+    "她；女朋友"
+   ],
+   "h": "7247b519",
+   "oh": [
+    "7247b519",
+    "3ed99665",
+    "a9bd0935",
+    "939b868"
+   ],
+   "knowledge_ids": [
+    "V0074"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0076-reading",
+   "qid": "D15-004-V0076-reading",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「友達」（朋友）的假名读音是哪一项？",
+   "options": [
+    "としょかん",
+    "とりにく",
+    "ともだち",
+    "とおか"
+   ],
+   "h": "6b434494",
+   "oh": [
+    "bc64cc9b",
+    "786767b1",
+    "6b434494",
+    "50f5c984"
+   ],
+   "knowledge_ids": [
+    "V0076"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0075-reading",
+   "qid": "D15-004-V0075-reading",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「彼女」（她；女朋友）的假名读音是哪一项？",
+   "options": [
+    "かのじょ",
+    "かぞく",
+    "かてい",
+    "かれら"
+   ],
+   "h": "7b831c1",
+   "oh": [
+    "7b831c1",
+    "eecd9b89",
+    "843b7d40",
+    "aacf9c21"
+   ],
+   "knowledge_ids": [
+    "V0075"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0067-meaning",
+   "qid": "D15-004-V0067-meaning",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「母」的中文释义？",
+   "options": [
+    "作业",
+    "(我)母亲",
+    "学生",
+    "孩子；小孩"
+   ],
+   "h": "ad8b91e2",
+   "oh": [
+    "f2c907d3",
+    "ad8b91e2",
+    "57de17f2",
+    "a9bd0935"
+   ],
+   "knowledge_ids": [
+    "V0067"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-V0069-reading",
+   "qid": "D15-004-V0069-reading",
+   "type": "mcq",
+   "day": 4,
+   "prompt": "「姉」（姐姐）的假名读音是哪一项？",
+   "options": [
+    "あたま",
+    "あに",
+    "あと",
+    "あね"
+   ],
+   "h": "676aee38",
+   "oh": [
+    "134bb5f0",
+    "6d6af7aa",
+    "6c6af617",
+    "676aee38"
+   ],
+   "knowledge_ids": [
+    "V0069"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D15-004-G0008-meaning",
+   "qid": "D15-004-G0008-meaning",
    "type": "mcq",
    "day": 4,
    "prompt": "请选择「を（宾语／移动经过）」所用句型的主要含义。",
    "options": [
-    "往／向…",
     "把…（标宾语）",
+    "和…／与…（一起）；「…」地",
     "…吧；…啊（寻求认同）",
-    "和…／与…（一起）；「…」地"
+    "和…一起"
    ],
    "h": "235aacc0",
    "oh": [
-    "bcb6033f",
     "235aacc0",
+    "5b9a598a",
     "631894c3",
-    "5b9a598a"
+    "5a007d86"
    ],
    "knowledge_ids": [
     "G0008"
@@ -3353,448 +3888,123 @@
    "group": "grammar"
   },
   {
-   "id": "D13-004-V0059-meaning",
-   "qid": "D13-004-V0059-meaning",
+   "id": "D15-004-V0071-recall",
+   "qid": "D15-004-V0071-recall",
    "type": "mcq",
    "day": 4,
-   "prompt": "「料理」的中文释义？",
+   "prompt": "「妹妹」对应哪个日语词？",
    "options": [
-    "后面；之后",
-    "菜肴；烹饪",
-    "(我)母亲",
-    "飞机"
+    "いもうと",
+    "あに",
+    "ひと",
+    "はは"
    ],
-   "h": "5b28f961",
+   "h": "7adbcf15",
    "oh": [
-    "59e0ed6b",
-    "5b28f961",
-    "ad8b91e2",
-    "95c25061"
+    "7adbcf15",
+    "6d6af7aa",
+    "8caf89c7",
+    "89c19163"
    ],
    "knowledge_ids": [
-    "V0059"
+    "V0071"
    ],
    "capability": "meaning",
    "group": "vocab"
   },
   {
-   "id": "D13-004-V0049-meaning",
-   "qid": "D13-004-V0049-meaning",
+   "id": "D15-004-V0080-meaning",
+   "qid": "D15-004-V0080-meaning",
    "type": "mcq",
    "day": 4,
-   "prompt": "「前」的中文释义？",
+   "prompt": "「本」的中文释义？",
    "options": [
-    "飞机",
-    "前面；之前",
-    "鱼",
-    "面包"
+    "旅行",
+    "书",
+    "日语",
+    "医生"
    ],
-   "h": "effd3533",
+   "h": "e3612999",
    "oh": [
-    "95c25061",
-    "effd3533",
-    "f816b63b",
-    "2b9b15a0"
+    "ffcf17a4",
+    "e3612999",
+    "9f89a0f7",
+    "ec2afa1f"
    ],
    "knowledge_ids": [
-    "V0049"
+    "V0080"
    ],
    "capability": "meaning",
    "group": "vocab"
   },
   {
-   "id": "D13-004-V0058-meaning",
-   "qid": "D13-004-V0058-meaning",
+   "id": "D15-004-V0081-reading",
+   "qid": "D15-004-V0081-reading",
    "type": "mcq",
    "day": 4,
-   "prompt": "「パン」的中文释义？",
+   "prompt": "「日本語」（日语）的假名读音是哪一项？",
    "options": [
-    "面包",
-    "飞机",
-    "(我)父亲",
-    "公交车"
+    "にちようび",
+    "にゅういん",
+    "にもつ",
+    "にほんご"
    ],
-   "h": "2b9b15a0",
+   "h": "df3e9ac",
    "oh": [
-    "2b9b15a0",
-    "95c25061",
-    "e84a90a5",
-    "38b61e81"
+    "13b3a77c",
+    "ed60a904",
+    "be29db54",
+    "df3e9ac"
    ],
    "knowledge_ids": [
-    "V0058"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-004-V0051-meaning",
-   "qid": "D13-004-V0051-meaning",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「ご飯」的中文释义？",
-   "options": [
-    "鱼",
-    "米饭；饭（餐）",
-    "后面；之后",
-    "图书馆"
-   ],
-   "h": "b6ffbfc",
-   "oh": [
-    "f816b63b",
-    "b6ffbfc",
-    "59e0ed6b",
-    "411e20b9"
-   ],
-   "knowledge_ids": [
-    "V0051"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-004-V0053-recall",
-   "qid": "D13-004-V0053-recall",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「水」对应哪个日语词？",
-   "options": [
-    "にく",
-    "みず",
-    "さかな",
-    "あさごはん"
-   ],
-   "h": "5cb5f9fc",
-   "oh": [
-    "89ca8bbf",
-    "5cb5f9fc",
-    "859d6811",
-    "6ba83cde"
-   ],
-   "knowledge_ids": [
-    "V0053"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-004-V0052-reading",
-   "qid": "D13-004-V0052-reading",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「朝ご飯」（早饭）的假名读音是哪一项？",
-   "options": [
-    "あいじょう",
-    "あさごはん",
-    "あさって",
-    "あいさつする"
-   ],
-   "h": "6ba83cde",
-   "oh": [
-    "245307ac",
-    "6ba83cde",
-    "f589d01d",
-    "8cd6b71e"
-   ],
-   "knowledge_ids": [
-    "V0052"
+    "V0081"
    ],
    "capability": "reading",
    "group": "vocab"
   },
   {
-   "id": "D13-004-V0043-meaning",
-   "qid": "D13-004-V0043-meaning",
+   "id": "D15-004-V0087-meaning",
+   "qid": "D15-004-V0087-meaning",
    "type": "mcq",
    "day": 4,
-   "prompt": "「病院」的中文释义？",
+   "prompt": "「医者」的中文释义？",
    "options": [
-    "图书馆",
-    "上面；上方",
-    "医院",
-    "面包"
+    "人",
+    "头；脑袋",
+    "名字；姓名",
+    "医生"
    ],
-   "h": "de987ea8",
+   "h": "ec2afa1f",
    "oh": [
-    "411e20b9",
-    "c9d29053",
-    "de987ea8",
-    "2b9b15a0"
+    "bf60f0ed",
+    "d786f3f0",
+    "cae094ba",
+    "ec2afa1f"
    ],
    "knowledge_ids": [
-    "V0043"
+    "V0087"
    ],
    "capability": "meaning",
    "group": "vocab"
   },
   {
-   "id": "D13-004-V0045-reading",
-   "qid": "D13-004-V0045-reading",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「部屋」（房间）的假名读音是哪一项？",
-   "options": [
-    "へた",
-    "へや",
-    "へんじ",
-    "へん"
-   ],
-   "h": "855414b9",
-   "oh": [
-    "5a556408",
-    "855414b9",
-    "ca6d05ac",
-    "96542f7c"
-   ],
-   "knowledge_ids": [
-    "V0045"
-   ],
-   "capability": "reading",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-004-V0048-recall",
-   "qid": "D13-004-V0048-recall",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「里面；中间」对应哪个日语词？",
-   "options": [
-    "パン",
-    "りょうり",
-    "なか",
-    "バス"
-   ],
-   "h": "adcd0302",
-   "oh": [
-    "41b131d",
-    "dc7e37b6",
-    "adcd0302",
-    "be1e7682"
-   ],
-   "knowledge_ids": [
-    "V0048"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-004-V0057-meaning",
-   "qid": "D13-004-V0057-meaning",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「野菜」的中文释义？",
-   "options": [
-    "蔬菜",
-    "(我)母亲",
-    "面包",
-    "公交车"
-   ],
-   "h": "6cfe1335",
-   "oh": [
-    "6cfe1335",
-    "ad8b91e2",
-    "2b9b15a0",
-    "38b61e81"
-   ],
-   "knowledge_ids": [
-    "V0057"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-004-V0058-recall",
-   "qid": "D13-004-V0058-recall",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「面包」对应哪个日语词？",
-   "options": [
-    "ひこうき",
-    "ちち",
-    "パン",
-    "バス"
-   ],
-   "h": "41b131d",
-   "oh": [
-    "3cd603",
-    "73e4c437",
-    "41b131d",
-    "be1e7682"
-   ],
-   "knowledge_ids": [
-    "V0058"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-004-G0006-meaning",
-   "qid": "D13-004-G0006-meaning",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "请选择「N の N」所用句型的主要含义。",
-   "options": [
-    "每…（几次）",
-    "…的…；所属/修饰",
-    "在／于／向…",
-    "从…到…"
-   ],
-   "h": "49c98541",
-   "oh": [
-    "30309f2",
-    "49c98541",
-    "fb7936b0",
-    "1a214d9b"
-   ],
-   "knowledge_ids": [
-    "G0006"
-   ],
-   "capability": "meaning",
-   "group": "grammar"
-  },
-  {
-   "id": "D13-004-V0043-reading",
-   "qid": "D13-004-V0043-reading",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「病院」（医院）的假名读音是哪一项？",
-   "options": [
-    "びょうき",
-    "びょういん",
-    "びじゅつかん",
-    "びっくりする"
-   ],
-   "h": "23666d7a",
-   "oh": [
-    "93707222",
-    "23666d7a",
-    "bb1a248d",
-    "9c343cf6"
-   ],
-   "knowledge_ids": [
-    "V0043"
-   ],
-   "capability": "reading",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-004-G0007-context",
-   "qid": "D13-004-G0007-context",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "请选择「誰が来ますか。」的中文意思。",
-   "options": [
-    "每天坐电车去公司。",
-    "我用日语写了信。",
-    "用筷子吃饭。",
-    "谁来？"
-   ],
-   "h": "da63ba1c",
-   "oh": [
-    "b5efd05",
-    "f9479daa",
-    "51b8648a",
-    "da63ba1c"
-   ],
-   "knowledge_ids": [
-    "G0007"
-   ],
-   "capability": "usage",
-   "group": "grammar"
-  },
-  {
-   "id": "D13-004-V0055-recall",
-   "qid": "D13-004-V0055-recall",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「肉」对应哪个日语词？",
-   "options": [
-    "あさごはん",
-    "みず",
-    "にく",
-    "びょういん"
-   ],
-   "h": "89ca8bbf",
-   "oh": [
-    "6ba83cde",
-    "5cb5f9fc",
-    "89ca8bbf",
-    "23666d7a"
-   ],
-   "knowledge_ids": [
-    "V0055"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-004-V0053-meaning",
-   "qid": "D13-004-V0053-meaning",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「水」的中文释义？",
-   "options": [
-    "鱼",
-    "早饭",
-    "水（冷水／生水）",
-    "肉"
-   ],
-   "h": "21f2c9a7",
-   "oh": [
-    "f816b63b",
-    "1fc01c8b",
-    "21f2c9a7",
-    "8b421ea4"
-   ],
-   "knowledge_ids": [
-    "V0053"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-004-V0066-recall",
-   "qid": "D13-004-V0066-recall",
-   "type": "mcq",
-   "day": 4,
-   "prompt": "「父亲」对应哪个日语词？",
-   "options": [
-    "としょかん",
-    "なか",
-    "ちち",
-    "あと"
-   ],
-   "h": "73e4c437",
-   "oh": [
-    "bc64cc9b",
-    "adcd0302",
-    "73e4c437",
-    "6c6af617"
-   ],
-   "knowledge_ids": [
-    "V0066"
-   ],
-   "capability": "meaning",
-   "group": "vocab"
-  },
-  {
-   "id": "D13-004-V0067-recall",
-   "qid": "D13-004-V0067-recall",
+   "id": "D15-004-V0067-recall",
+   "qid": "D15-004-V0067-recall",
    "type": "mcq",
    "day": 4,
    "prompt": "「母亲」对应哪个日语词？",
    "options": [
-    "あと",
     "はは",
-    "パン",
-    "びょういん"
+    "がくせい",
+    "しゅくだい",
+    "こども"
    ],
    "h": "89c19163",
    "oh": [
-    "6c6af617",
     "89c19163",
-    "41b131d",
-    "23666d7a"
+    "11411f83",
+    "264e43b6",
+    "38994469"
    ],
    "knowledge_ids": [
     "V0067"
@@ -3803,101 +4013,101 @@
    "group": "vocab"
   },
   {
-   "id": "D13-004-V0067-meaning",
-   "qid": "D13-004-V0067-meaning",
+   "id": "D15-004-V0092-meaning",
+   "qid": "D15-004-V0092-meaning",
    "type": "mcq",
    "day": 4,
-   "prompt": "「母」的中文释义？",
+   "prompt": "「ホテル」的中文释义？",
    "options": [
-    "后面；之后",
-    "面包",
-    "医院",
-    "(我)母亲"
+    "宾馆；酒店",
+    "电话",
+    "(我)妹妹",
+    "旅行"
    ],
-   "h": "ad8b91e2",
+   "h": "fbacb33d",
    "oh": [
-    "59e0ed6b",
-    "2b9b15a0",
-    "de987ea8",
-    "ad8b91e2"
+    "fbacb33d",
+    "6a016277",
+    "1f979903",
+    "ffcf17a4"
    ],
    "knowledge_ids": [
-    "V0067"
+    "V0092"
    ],
    "capability": "meaning",
    "group": "vocab"
   },
   {
-   "id": "D13-004-V0064-meaning",
-   "qid": "D13-004-V0064-meaning",
+   "id": "D15-004-V0091-meaning",
+   "qid": "D15-004-V0091-meaning",
    "type": "mcq",
    "day": 4,
-   "prompt": "「飛行機」的中文释义？",
+   "prompt": "「りょこう」的中文释义？",
    "options": [
-    "上面；上方",
-    "飞机",
-    "肉",
-    "米饭；饭（餐）"
+    "人",
+    "公司职员",
+    "家人；家庭",
+    "旅行"
    ],
-   "h": "95c25061",
+   "h": "ffcf17a4",
    "oh": [
-    "c9d29053",
-    "95c25061",
-    "8b421ea4",
-    "b6ffbfc"
+    "bf60f0ed",
+    "25ff02c5",
+    "34c67497",
+    "ffcf17a4"
    ],
    "knowledge_ids": [
-    "V0064"
+    "V0091"
    ],
    "capability": "meaning",
    "group": "vocab"
   },
   {
-   "id": "D13-004-V0064-reading",
-   "qid": "D13-004-V0064-reading",
+   "id": "D15-004-V0078-recall",
+   "qid": "D15-004-V0078-recall",
    "type": "mcq",
    "day": 4,
-   "prompt": "「飛行機」（飞机）的假名读音是哪一项？",
+   "prompt": "「学生」对应哪个日语词？",
    "options": [
-    "ひこうき",
-    "ひるごはん",
-    "ひだり",
-    "ひとり"
+    "あに",
+    "かぞく",
+    "がくせい",
+    "りょこう"
    ],
-   "h": "3cd603",
+   "h": "11411f83",
    "oh": [
-    "3cd603",
-    "12363364",
-    "84f73abf",
-    "c5a0b437"
+    "6d6af7aa",
+    "eecd9b89",
+    "11411f83",
+    "3b176713"
    ],
    "knowledge_ids": [
-    "V0064"
+    "V0078"
    ],
-   "capability": "reading",
+   "capability": "meaning",
    "group": "vocab"
   },
   {
-   "id": "D13-004-V0066-meaning",
-   "qid": "D13-004-V0066-meaning",
+   "id": "D15-004-V0076-meaning",
+   "qid": "D15-004-V0076-meaning",
    "type": "mcq",
    "day": 4,
-   "prompt": "「父」的中文释义？",
+   "prompt": "「友達」的中文释义？",
    "options": [
-    "图书馆",
-    "(我)父亲",
-    "里面；中间",
-    "后面；之后"
+    "书",
+    "旅行",
+    "朋友",
+    "(我)姐姐"
    ],
-   "h": "e84a90a5",
+   "h": "8485de13",
    "oh": [
-    "411e20b9",
-    "e84a90a5",
-    "bc565869",
-    "59e0ed6b"
+    "e3612999",
+    "ffcf17a4",
+    "8485de13",
+    "bbb16169"
    ],
    "knowledge_ids": [
-    "V0066"
+    "V0076"
    ],
    "capability": "meaning",
    "group": "vocab"

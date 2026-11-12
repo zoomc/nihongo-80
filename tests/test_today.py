@@ -30,7 +30,7 @@ class TestToday(unittest.TestCase):
         self.assertEqual(s["cloud_error"], "offline")
 
     def test_day_override(self):
-        for day in (1, 30, 60, 120):
+        for day in (1, 30, 60, 100):
             s = today.build(day=day, offline=True)
             self.assertEqual(s["day"], day, "显式 --day 必须生效")
 

@@ -60,8 +60,11 @@ agents/teacher.md / examiner.md / reviewer.md / director.md 仅作为教师、�
 
 云端「完成」按钮把当天**自报快照**写入 `POST /api/progress`；任何 agent 用 `GET /api/progress` + `X-NH80-Key` 读取。**云端进度是自报、非掌握权威**；本机 `data/state.db`（只经 `python3 scripts/nh80.py finish-day` 写入）才是权威，不回写、不据此判掌握。
 
-- Skill 规范：`skills/nh80-progress/SKILL.md`（同一份已放到 `~/.workbuddy/skills/nh80-progress/` 与 `.workbuddy/skills/nh80-progress/`，WorkBuddy 本机立即可用）。
+- Skill 规范：`skills/nh80-progress/SKILL.md`（源真本）。同一个文件装到 4 个加载位置：本仓库 `skills/`、仓库 `.workbuddy/skills/`、工作区根 `.workbuddy/skills/`、用户级 `~/.workbuddy/skills/`，WorkBuddy 本机立即可用。
+- 改完 skill 必须同步，否则会出现「PC 能触发、换机器不触发」：`python3 scripts/skill_sync.py --write`；`--check` 只校验（不一致退出 1）。
 - CLI：`python3 scripts/progress_read.py --latest`（最近 7 天）/ `--day N` / `--json`；密钥默认读 `deploy/.sync-key`，**禁止打印或写入**。
+
+工作区根 `/Users/mj/Documents/learn/jp` 还有一份 `AGENTS.md` 做路由（会话 cwd 在根，不在本目录），内容只指向本文件与 `today.py`，**不承载规则**。那份不在 git 里，换机器需重建。
 
 给 Claude Code / Codex 的一句话提示词：
 

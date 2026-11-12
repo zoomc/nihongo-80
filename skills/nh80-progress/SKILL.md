@@ -1,13 +1,17 @@
 ---
 name: nh80-progress
-description: "读取 Nihongo-80 日语学习站云端「当天完成快照」，生成当天家教会话的复习重点。只要用户提到「日语学习进度 / 今天学了什么 / 学到第几天 / nihongo progress / 复习建议 / 错题 / 忘了哪些词 / 继续上次 / 日语复习」——即使没点名这个 skill 也要用它。注意云端进度是学习者自报、非掌握权威，权威完成以本机 SQLite finish-day 为准。"
+description: "开始或继续 Nihongo-80 日语课（0 基础→N3，120 天，中文母语/朝鲜族学习者）：新会话第一步跑 `python3 nihongo-80/scripts/today.py`，拿到今天该学 Day N、上次卡点、今日词/语法/汉字与页面链接，再按 TODAY.md 带课；也用于读云端「完成」快照整理复习重点。只要用户提到「开始学日语 / 今天学什么 / 今天开始上课 / 继续上次 / 学到第几天 / 日语学习进度 / 复习建议 / 错题 / 忘了哪些词 / N3 日语课 / nihongo progress」——即使没点名本 skill 也必须用。注意云端进度是学习者自报、非掌握权威，权威完成以本机 SQLite finish-day 为准。"
 ---
 
-# nh80-progress · 日语学习进度读取
+# nh80-progress · 日语学习进度与每日开课
 
 ## 何时使用
 
-用户问「今天学了什么」「学到第几天了」「日语学习进度」「复习建议」「错了哪些词」「忘了哪些词」「继续上次」「nihongo progress」等，或每日家教会话开始前需要拿到当天的复习上下文时，使用本 skill。
+- **开课型**（最常见）：「开始学日语」「今天学什么」「继续上课」「接着上次」「日语课走起」「Day N 学完了吗」——先跑 `today.py` 定位，再当老师带课。
+- **查询型**：「今天学了什么」「学到第几天了」「日语学习进度」「复习建议」「错了哪些词」「忘了哪些词」「nihongo progress」。
+- **接续型**：每日家教会话开始前需要拿到当天的复习上下文时。
+
+两类都从下一节「今天该学哪天」开始，不要靠猜、不要问用户学到哪了。
 
 ## 最重要的边界（先读，别跳）
 
@@ -28,10 +32,13 @@ description: "读取 Nihongo-80 日语学习站云端「当天完成快照」，
 在 `progress_read.py` 之前先跑：
 
 ```sh
-python3 scripts/today.py            # 写 TODAY.md 并打印开场包
+python3 scripts/today.py            # 在 nihongo-80/ 里跑
+python3 nihongo-80/scripts/today.py # 在工作区根 /Users/mj/Documents/learn/jp 里跑
 python3 scripts/today.py --offline  # 云端不通时
 python3 scripts/today.py --json     # 给程序解析
 ```
+
+脚本用 `__file__` 定位仓库根，与当前目录无关；`TODAY.md` 始终写在 `nihongo-80/` 下。
 
 它合并本机 `data/state.db` 的 finish-day 与云端 `study_progress`，输出：今天 Day N / 总天数、
 已完成天数、上次正确率与卡点、今天必学词与语法、页面链接、会话流程。**这是新会话唯一入口**，

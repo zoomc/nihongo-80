@@ -2,12 +2,12 @@
  "day": 104,
  "phase": "P4",
  "theme": "〜最中に、〜ついでに、〜おかげで",
- "can_do": "用「〜最中に、〜ついでに、〜おかげで」造两句自己的话，表达：正当…的时候；顺便…；多亏…；托…的福",
+ "can_do": "用「〜最中に、〜ついでに、〜おかげで」各造一句自己的话，表达：正当…的时候；顺便…；多亏…；托…的福",
  "minutes": 60,
  "blocks": [
   {
    "type": "复习",
-   "min": 10,
+   "min": 5,
    "desc": "到期项优先；未完成顺延，不追赶"
   },
   {
@@ -17,23 +17,23 @@
   },
   {
    "type": "语法",
-   "min": 6,
+   "min": 5,
    "desc": "〜最中に、〜ついでに、〜おかげで"
   },
   {
    "type": "听力",
-   "min": 8,
-   "desc": "原创 TTS + 3 道理解题；时长为估计，非真人音频"
+   "min": 7,
+   "desc": "先听并复述主旨，再找两个细节，最后核对脚本（原创合成语音）"
   },
   {
    "type": "句子输出",
-   "min": 5,
-   "desc": "3道选句必做，7道拓展；答后核对"
+   "min": 4,
+   "desc": "每条新语法独立说一句，和例句对照"
   },
   {
    "type": "练习",
-   "min": 5,
-   "desc": "6 题即时自评"
+   "min": 13,
+   "desc": "优先做当天必学词与语法，答完重练错题"
   },
   {
    "type": "会话",
@@ -2320,1411 +2320,1329 @@
  ],
  "questions": [
   {
-   "id": "Q-104-K0-7a0a5815cd2e",
-   "qid": "Q-104-K0-7a0a5815cd2e",
+   "id": "D13-104-V2314-meaning",
+   "qid": "D13-104-V2314-meaning",
    "type": "mcq",
-   "prompt": "汉字「余」的一个常用读音是？",
+   "day": 104,
+   "prompt": "「備える」的中文释义？",
    "options": [
-    "つち",
-    "はな",
-    "かさ.ねる",
-    "ヨ"
+    "成长；长大",
+    "注入；倾注",
+    "具备；准备",
+    "轻轻地；悄悄地"
    ],
-   "h": "6d249dd7",
+   "h": "46621977",
    "oh": [
-    "7fdc8856",
-    "8cc1961c",
-    "99ef3035",
-    "6d249dd7"
+    "5a897817",
+    "ba3edab9",
+    "46621977",
+    "87edf822"
    ],
    "knowledge_ids": [
-    "K0516"
-   ]
+    "V2314"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
   },
   {
-   "id": "Q-104-K1-04b4eb8ac414",
-   "qid": "Q-104-K1-04b4eb8ac414",
+   "id": "D13-104-V2304-meaning",
+   "qid": "D13-104-V2304-meaning",
    "type": "mcq",
-   "prompt": "汉字「王」的一个常用读音是？",
+   "day": 104,
+   "prompt": "「相当」的中文释义？",
    "options": [
-    "-と.ばす",
-    "-ぞ.め",
-    "はら",
-    "オウ"
-   ],
-   "h": "d2929981",
-   "oh": [
-    "f72b50a5",
-    "b7fe592f",
-    "afc03a35",
-    "d2929981"
-   ],
-   "knowledge_ids": [
-    "K0517"
-   ]
-  },
-  {
-   "id": "Q-104-G-79ee7a04ea73",
-   "qid": "Q-104-G-79ee7a04ea73",
-   "type": "mcq",
-   "prompt": "句型「〜おかげで」的意思是？",
-   "options": [
-    "…的…；所属/修饰",
-    "…完；…不了",
-    "…（过去）是…",
-    "多亏…；托…的福"
-   ],
-   "h": "90862f16",
-   "oh": [
-    "49c98541",
-    "578a5a51",
-    "575da125",
-    "90862f16"
-   ],
-   "knowledge_ids": [
-    "G0155"
-   ]
-  },
-  {
-   "id": "A130-1-c818a3564add",
-   "qid": "A130-1-c818a3564add",
-   "type": "mcq",
-   "prompt": "返却日を延長できないのはなぜですか。",
-   "options": [
-    "図書館が閉まるから",
-    "返却日が過ぎたから",
-    "次に予約している人がいるから",
-    "本がなくなったから"
-   ],
-   "h": "9c18a5ba",
-   "oh": [
-    "6b20835e",
-    "9a851ec1",
-    "9c18a5ba",
-    "58d453d2"
-   ],
-   "passage": "図書館から：借りている本は来週水曜日までに返してください。次に予約している人がいるため、今回は返却日の延長ができません。",
-   "knowledge_ids": []
-  },
-  {
-   "id": "A130-2-d2074c3232e6",
-   "qid": "A130-2-d2074c3232e6",
-   "type": "mcq",
-   "prompt": "本はいつまでに返しますか。",
-   "options": [
-    "いつでもよい",
-    "来週水曜日",
-    "来月水曜日",
-    "今週月曜日"
-   ],
-   "h": "e55f930a",
-   "oh": [
-    "af2d5ce8",
-    "e55f930a",
-    "555ea8b7",
-    "3163c0f7"
-   ],
-   "passage": "図書館から：借りている本は来週水曜日までに返してください。次に予約している人がいるため、今回は返却日の延長ができません。",
-   "knowledge_ids": []
-  },
-  {
-   "id": "A130-3-37a05982ea2c",
-   "qid": "A130-3-37a05982ea2c",
-   "type": "mcq",
-   "prompt": "雨がやむのを待ってから出かける文に合うものはどれですか。",
-   "options": [
-    "まで",
-    "たら",
-    "ながら",
-    "ばかり"
-   ],
-   "h": "4ffee6a5",
-   "oh": [
-    "61b84072",
-    "4ffee6a5",
-    "64649c9e",
-    "a7821652"
-   ],
-   "passage": "雨がやむ___、出かけましょう。",
-   "knowledge_ids": []
-  },
-  {
-   "id": "L-104-0-8375a8458739",
-   "qid": "L-104-0-8375a8458739",
-   "type": "mcq",
-   "prompt": "いつ休館しますか。",
-   "options": [
-    "月曜日",
-    "木曜日",
-    "金曜日",
-    "水曜日"
-   ],
-   "h": "914654df",
-   "oh": [
-    "ab1845fc",
-    "7da6f79c",
-    "914654df",
-    "b2ad1458"
-   ],
-   "knowledge_ids": []
-  },
-  {
-   "id": "L-104-1-f0fdcb9adc00",
-   "qid": "L-104-1-f0fdcb9adc00",
-   "type": "mcq",
-   "prompt": "本を返すとき、どこに置きますか。",
-   "options": [
-    "二階の学習室",
-    "一階のカウンター",
-    "正面入口の横の返却箱",
-    "外の休憩所"
-   ],
-   "h": "2771e625",
-   "oh": [
-    "31919ec9",
-    "d4c24b34",
-    "2771e625",
-    "37ba395d"
-   ],
-   "knowledge_ids": []
-  },
-  {
-   "id": "L-104-2-e291ab19be55",
-   "qid": "L-104-2-e291ab19be55",
-   "type": "mcq",
-   "prompt": "飲み物は何に入れて持ってきますか。",
-   "options": [
-    "ビン",
-    "袋",
-    "ふたのある容器",
-    "紙のコップ"
-   ],
-   "h": "b44fade7",
-   "oh": [
-    "ec1f6a83",
-    "8d3589ca",
-    "b44fade7",
-    "b2cdc881"
-   ],
-   "knowledge_ids": []
-  },
-  {
-   "id": "P-104-00-ae032f863974",
-   "qid": "P-104-00-ae032f863974",
-   "type": "mcq",
-   "prompt": "那头大象被带到了动物园。",
-   "options": [
-    "その広間は日本画で飾られていた。",
-    "こ、こら！ナニやっとるかぁぁ！！",
-    "これらの語をノートに書きなさい。",
-    "その象は動物園に連れてこられた。"
-   ],
-   "h": "f9632f0f",
-   "oh": [
-    "6d732f36",
-    "1b91f40",
-    "7a4a4062",
-    "f9632f0f"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-104-01-63a6579f00fc",
-   "qid": "P-104-01-63a6579f00fc",
-   "type": "mcq",
-   "prompt": "她不顾噪音继续说下去。",
-   "options": [
-    "彼女は騒音にかまわず話しつづけた。",
-    "あなたの名前と住所を記入しなさい。",
-    "彼は心理学博士の学位を持っている。",
-    "その金は体育館の建設に当てられた。"
-   ],
-   "h": "9e21196",
-   "oh": [
-    "9e21196",
-    "52eeffa0",
-    "316eb7ce",
-    "6527799c"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-104-02-0bf1fcf05593",
-   "qid": "P-104-02-0bf1fcf05593",
-   "type": "mcq",
-   "prompt": "你根本想象不到吧？",
-   "options": [
-    "あなたがここに居たのは幸いでした。",
-    "このトーストはよく焼けていません。",
-    "さっきなぜかマイクが入らなかった。",
-    "あなたには想像もつかない、でしょ？"
-   ],
-   "h": "6c1152da",
-   "oh": [
-    "6aab53b9",
-    "fe788abc",
-    "f6bd6b75",
-    "6c1152da"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-104-V2302-m-399affe44fd0",
-   "qid": "P-104-V2302-m-399affe44fd0",
-   "type": "mcq",
-   "prompt": "本课词条「相続」（例句语境：他继承了父亲的大片土地。）的释义是哪一项？",
-   "options": [
-    "烦恼；苦恼",
     "继承",
-    "正中间",
-    "外国人"
+    "相当；合适",
+    "成长；长大",
+    "粗糙；简慢"
+   ],
+   "h": "9e880d2f",
+   "oh": [
+    "fef00bfb",
+    "9e880d2f",
+    "5a897817",
+    "1a96215c"
+   ],
+   "knowledge_ids": [
+    "V2304"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-V2306-meaning",
+   "qid": "D13-104-V2306-meaning",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「底」的中文释义？",
+   "options": [
+    "继承",
+    "损害；损失",
+    "亏损；吃亏",
+    "底部；底"
+   ],
+   "h": "a486314",
+   "oh": [
+    "fef00bfb",
+    "9f8ef620",
+    "fb6955ca",
+    "a486314"
+   ],
+   "knowledge_ids": [
+    "V2306"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-V2307-meaning",
+   "qid": "D13-104-V2307-meaning",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「そこで」的中文释义？",
+   "options": [
+    "另外；还有",
+    "成长；长大",
+    "损害；损失",
+    "于是；因此"
+   ],
+   "h": "ba0b1977",
+   "oh": [
+    "a633bb95",
+    "5a897817",
+    "9f8ef620",
+    "ba0b1977"
+   ],
+   "knowledge_ids": [
+    "V2307"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-V2306-recall",
+   "qid": "D13-104-V2306-recall",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「底部；底」对应哪个日语词？",
+   "options": [
+    "そうぞく",
+    "そん",
+    "そこ",
+    "そんがい"
+   ],
+   "h": "5df8ec81",
+   "oh": [
+    "542c1909",
+    "1dfa1ac1",
+    "5df8ec81",
+    "82b0aac9"
+   ],
+   "knowledge_ids": [
+    "V2306"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-V2317-recall",
+   "qid": "D13-104-V2317-recall",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「沙发」对应哪个日语词？",
+   "options": [
+    "そしき",
+    "ソファー",
+    "そんけい",
+    "そこ"
+   ],
+   "h": "d99e51ea",
+   "oh": [
+    "ba9a2f80",
+    "d99e51ea",
+    "7d50101c",
+    "5df8ec81"
+   ],
+   "knowledge_ids": [
+    "V2317"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-V2308-meaning",
+   "qid": "D13-104-V2308-meaning",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「組織」的中文释义？",
+   "options": [
+    "尊敬",
+    "亏损；吃亏",
+    "组织",
+    "继承"
+   ],
+   "h": "65b4303c",
+   "oh": [
+    "bb64dda3",
+    "fb6955ca",
+    "65b4303c",
+    "fef00bfb"
+   ],
+   "knowledge_ids": [
+    "V2308"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-V2302-meaning",
+   "qid": "D13-104-V2302-meaning",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「相続」的中文释义？",
+   "options": [
+    "速度",
+    "尊敬",
+    "损害；损失",
+    "继承"
    ],
    "h": "fef00bfb",
    "oh": [
-    "e78c2f06",
-    "fef00bfb",
-    "21044c5b",
-    "d681e472"
+    "246e8618",
+    "bb64dda3",
+    "9f8ef620",
+    "fef00bfb"
    ],
-   "day": 104,
-   "group": "vocab",
+   "knowledge_ids": [
+    "V2302"
+   ],
    "capability": "meaning",
-   "knowledge_ids": [
-    "V2302"
-   ],
-   "source_day": 104,
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "P-104-V2302-r-f8184a263b53",
-   "qid": "P-104-V2302-r-f8184a263b53",
+   "id": "D13-104-V2316-meaning",
+   "qid": "D13-104-V2316-meaning",
    "type": "mcq",
-   "prompt": "本课词条「相続」（继承）的假名读音是哪一项？",
-   "options": [
-    "そうぞく",
-    "つかまえる",
-    "たいせつ",
-    "ぜい"
-   ],
-   "h": "542c1909",
-   "oh": [
-    "542c1909",
-    "6e8deb8f",
-    "d3c33421",
-    "74fb4f4d"
-   ],
    "day": 104,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V2302"
+   "prompt": "「そのまま」的中文释义？",
+   "options": [
+    "轻轻地；悄悄地",
+    "原样；就那样",
+    "一模一样；完全",
+    "各自；分别"
    ],
-   "source_day": 104,
-   "optional": true
+   "h": "c671d2b5",
+   "oh": [
+    "87edf822",
+    "c671d2b5",
+    "30ca8884",
+    "ade4e9b"
+   ],
+   "knowledge_ids": [
+    "V2316"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
   },
   {
-   "id": "P-104-V2303-m-2db648c31bfd",
-   "qid": "P-104-V2303-m-2db648c31bfd",
+   "id": "D13-104-V2303-meaning",
+   "qid": "D13-104-V2303-meaning",
    "type": "mcq",
-   "prompt": "本课词条「装置」（例句语境：大家都对那个装置很佩服。）的释义是哪一项？",
+   "day": 104,
+   "prompt": "「装置」的中文释义？",
    "options": [
-    "失望；沮丧",
-    "夺取；抢走",
-    "因为",
+    "继承",
+    "沙发",
+    "组织",
     "装置；设备"
    ],
    "h": "cff8cf40",
    "oh": [
-    "5139b121",
-    "15ef1efc",
-    "877a66df",
+    "fef00bfb",
+    "7b18e7df",
+    "65b4303c",
     "cff8cf40"
    ],
-   "day": 104,
-   "group": "vocab",
-   "capability": "meaning",
    "knowledge_ids": [
     "V2303"
    ],
-   "source_day": 104,
-   "optional": true
-  },
-  {
-   "id": "P-104-V2303-r-ab6278a3903b",
-   "qid": "P-104-V2303-r-ab6278a3903b",
-   "type": "mcq",
-   "prompt": "本课词条「装置」（装置；设备）的假名读音是哪一项？",
-   "options": [
-    "ぜんこく",
-    "く",
-    "そうち",
-    "こわす"
-   ],
-   "h": "e2d5e071",
-   "oh": [
-    "405f083a",
-    "ca25303e",
-    "e2d5e071",
-    "faefa10a"
-   ],
-   "day": 104,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V2303"
-   ],
-   "source_day": 104,
-   "optional": true
-  },
-  {
-   "id": "P-104-V2304-m-6b812672c873",
-   "qid": "P-104-V2304-m-6b812672c873",
-   "type": "mcq",
-   "prompt": "本课词条「相当」（例句语境：那个地方现在建得相当密集。）的释义是哪一项？",
-   "options": [
-    "请；拜托",
-    "出口",
-    "相当；合适",
-    "关系；关联"
-   ],
-   "h": "9e880d2f",
-   "oh": [
-    "1c7754cb",
-    "421e004a",
-    "9e880d2f",
-    "13575727"
-   ],
-   "day": 104,
-   "group": "vocab",
    "capability": "meaning",
-   "knowledge_ids": [
-    "V2304"
-   ],
-   "source_day": 104,
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "P-104-V2304-r-8f8f4bcc2e0d",
-   "qid": "P-104-V2304-r-8f8f4bcc2e0d",
+   "id": "D13-104-G0155-context",
+   "qid": "D13-104-G0155-context",
    "type": "mcq",
-   "prompt": "本课词条「相当」（相当；合适）的假名读音是哪一项？",
-   "options": [
-    "あいする",
-    "うつす",
-    "そうとう",
-    "おいしい"
-   ],
-   "h": "ebb2c600",
-   "oh": [
-    "211e67ef",
-    "8604a49a",
-    "ebb2c600",
-    "fd2d59a0"
-   ],
    "day": 104,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V2304"
+   "prompt": "请选择「駅が近いおかげで、雨の日も楽に通勤できる。」的中文意思。",
+   "options": [
+    "幸好离车站近，下雨天通勤也轻松。",
+    "这间公寓离车站远，但房租便宜。",
+    "这家宾馆离车站近，却意外地安静，睡得很好。",
+    "这个房间又宽敞，离车站又近，我很喜欢。"
    ],
-   "source_day": 104,
-   "optional": true
+   "h": "ca304fab",
+   "oh": [
+    "ca304fab",
+    "e44735a0",
+    "b7675201",
+    "90961de8"
+   ],
+   "knowledge_ids": [
+    "G0155"
+   ],
+   "capability": "usage",
+   "group": "grammar"
   },
   {
-   "id": "P-104-V2305-m-480ba1322707",
-   "qid": "P-104-V2305-m-480ba1322707",
+   "id": "D13-104-V2305-meaning",
+   "qid": "D13-104-V2305-meaning",
    "type": "mcq",
-   "prompt": "本课词条「速度」（例句语境：那个男人以稳定的速度开车。）的释义是哪一项？",
+   "day": 104,
+   "prompt": "「そくど」的中文释义？",
    "options": [
-    "同伴；同行者（〜連れ＝带着…同行）",
-    "外国",
-    "速度",
-    "影响"
+    "沙发",
+    "组织",
+    "亏损；吃亏",
+    "速度"
    ],
    "h": "246e8618",
    "oh": [
-    "1bde7c8e",
-    "30cbd7bc",
-    "246e8618",
-    "1c823343"
-   ],
-   "day": 104,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2305"
-   ],
-   "source_day": 104,
-   "optional": true
-  },
-  {
-   "id": "P-104-V2305-r-40bbc867d53f",
-   "qid": "P-104-V2305-r-40bbc867d53f",
-   "type": "mcq",
-   "prompt": "本课词条「速度」（速度）的假名读音是哪一项？",
-   "options": [
-    "そくど",
-    "じょうし",
-    "もくようび",
-    "かいしゃいん"
-   ],
-   "h": "def6f104",
-   "oh": [
-    "def6f104",
-    "c3a7e3df",
-    "2fafd46d",
-    "cbf34131"
-   ],
-   "day": 104,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V2305"
-   ],
-   "source_day": 104,
-   "optional": true
-  },
-  {
-   "id": "P-104-V2306-m-e38e04ebed02",
-   "qid": "P-104-V2306-m-e38e04ebed02",
-   "type": "mcq",
-   "prompt": "本课词条「底」（例句语境：鞋底磨薄了。）的释义是哪一项？",
-   "options": [
-    "底部；底",
-    "缘由；道理",
-    "硬币",
-    "练习"
-   ],
-   "h": "a486314",
-   "oh": [
-    "a486314",
-    "5f10007a",
-    "9b1984be",
-    "2c06056"
-   ],
-   "day": 104,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2306"
-   ],
-   "source_day": 104,
-   "optional": true
-  },
-  {
-   "id": "P-104-V2306-r-6a17cdd51de4",
-   "qid": "P-104-V2306-r-6a17cdd51de4",
-   "type": "mcq",
-   "prompt": "本课词条「底」（底部；底）的假名读音是哪一项？",
-   "options": [
-    "がくもん",
-    "あの",
-    "くび",
-    "そこ"
-   ],
-   "h": "5df8ec81",
-   "oh": [
-    "8d8cba3b",
-    "6a6af2f1",
-    "853f7937",
-    "5df8ec81"
-   ],
-   "day": 104,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V2306"
-   ],
-   "source_day": 104,
-   "optional": true
-  },
-  {
-   "id": "P-104-V2307-m-327b7655b728",
-   "qid": "P-104-V2307-m-327b7655b728",
-   "type": "mcq",
-   "prompt": "本课词条「そこで」（例句语境：因此，与他人的互动就变得重要了。）的释义是哪一项？",
-   "options": [
-    "于是；因此",
-    "贴；撑起",
-    "禁止",
-    "建筑；建设"
-   ],
-   "h": "ba0b1977",
-   "oh": [
-    "ba0b1977",
-    "b07f8044",
-    "fc00212a",
-    "7e4ade01"
-   ],
-   "day": 104,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2307"
-   ],
-   "source_day": 104,
-   "optional": true
-  },
-  {
-   "id": "P-104-V2307-r-eeeaa4915177",
-   "qid": "P-104-V2307-r-eeeaa4915177",
-   "type": "mcq",
-   "prompt": "本课词条「そこで」（于是；因此）的假名读音是哪一项？",
-   "options": [
-    "そこで",
-    "こんかい",
-    "あさって",
-    "ちゃわん"
-   ],
-   "h": "d4c3be12",
-   "oh": [
-    "d4c3be12",
-    "661c7134",
-    "f589d01d",
-    "4ac3c0ff"
-   ],
-   "day": 104,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V2307"
-   ],
-   "source_day": 104,
-   "optional": true
-  },
-  {
-   "id": "P-104-V2308-m-ae1085c9faae",
-   "qid": "P-104-V2308-m-ae1085c9faae",
-   "type": "mcq",
-   "prompt": "本课词条「組織」（例句语境：他们会组织工会吧。）的释义是哪一项？",
-   "options": [
-    "组织",
-    "变干",
-    "维持",
-    "懂；明白"
-   ],
-   "h": "65b4303c",
-   "oh": [
+    "7b18e7df",
     "65b4303c",
-    "c6c9da4f",
-    "c4b15486",
-    "b7d2ad13"
+    "fb6955ca",
+    "246e8618"
    ],
-   "day": 104,
-   "group": "vocab",
-   "capability": "meaning",
    "knowledge_ids": [
-    "V2308"
+    "V2305"
    ],
-   "source_day": 104,
-   "optional": true
+   "capability": "meaning",
+   "group": "vocab"
   },
   {
-   "id": "P-104-V2308-r-de02b51782d9",
-   "qid": "P-104-V2308-r-de02b51782d9",
+   "id": "D13-104-V2308-reading",
+   "qid": "D13-104-V2308-reading",
    "type": "mcq",
-   "prompt": "本课词条「組織」（组织）的假名读音是哪一项？",
+   "day": 104,
+   "prompt": "「組織」（组织）的假名读音是哪一项？",
    "options": [
     "そしき",
-    "うごく",
-    "あかんぼう",
-    "なる"
+    "そん",
+    "そんけい",
+    "そうぞく"
    ],
    "h": "ba9a2f80",
    "oh": [
     "ba9a2f80",
-    "4ffa9208",
-    "e52eba59",
-    "6dce3142"
+    "1dfa1ac1",
+    "7d50101c",
+    "542c1909"
    ],
-   "day": 104,
-   "group": "vocab",
-   "capability": "reading",
    "knowledge_ids": [
     "V2308"
    ],
-   "source_day": 104,
-   "optional": true
-  },
-  {
-   "id": "P-104-V2309-m-d4ff7c831b1a",
-   "qid": "P-104-V2309-m-d4ff7c831b1a",
-   "type": "mcq",
-   "prompt": "本课词条「注ぐ」（例句语境：他把全力倾注在帮助朋友上。）的释义是哪一项？",
-   "options": [
-    "注入；倾注",
-    "冷（天气/体感）",
-    "钱",
-    "反倒；反而"
-   ],
-   "h": "ba3edab9",
-   "oh": [
-    "ba3edab9",
-    "9d591f79",
-    "b322e19c",
-    "c8fee4ae"
-   ],
-   "day": 104,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2309"
-   ],
-   "source_day": 104,
-   "optional": true
-  },
-  {
-   "id": "P-104-V2309-r-8fa2f4a45745",
-   "qid": "P-104-V2309-r-8fa2f4a45745",
-   "type": "mcq",
-   "prompt": "本课词条「注ぐ」（注入；倾注）的假名读音是哪一项？",
-   "options": [
-    "あに",
-    "あした",
-    "そそぐ",
-    "ぎろん"
-   ],
-   "h": "dbb4be8d",
-   "oh": [
-    "6d6af7aa",
-    "f46a5d6b",
-    "dbb4be8d",
-    "127158c5"
-   ],
-   "day": 104,
-   "group": "vocab",
    "capability": "reading",
-   "knowledge_ids": [
-    "V2309"
-   ],
-   "source_day": 104,
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "P-104-V2310-m-04760f9f7b5e",
-   "qid": "P-104-V2310-m-04760f9f7b5e",
+   "id": "D13-104-V2312-meaning",
+   "qid": "D13-104-V2312-meaning",
    "type": "mcq",
-   "prompt": "本课词条「育つ」（例句语境：孩子放着不管也会长大。）的释义是哪一项？",
-   "options": [
-    "急；陡",
-    "成长；长大",
-    "询问",
-    "上等；高档"
-   ],
-   "h": "5a897817",
-   "oh": [
-    "105cf420",
-    "5a897817",
-    "727758d1",
-    "52d16c0c"
-   ],
    "day": 104,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2310"
-   ],
-   "source_day": 104,
-   "optional": true
-  },
-  {
-   "id": "P-104-V2310-r-c5e9b9097b87",
-   "qid": "P-104-V2310-r-c5e9b9097b87",
-   "type": "mcq",
-   "prompt": "本课词条「育つ」（成长；长大）的假名读音是哪一项？",
+   "prompt": "「そっと」的中文释义？",
    "options": [
-    "はいしゃ",
-    "すいどう",
-    "かわく",
-    "そだつ"
-   ],
-   "h": "2478594",
-   "oh": [
-    "65b49568",
-    "9809c5a7",
-    "accbcdb0",
-    "2478594"
-   ],
-   "day": 104,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V2310"
-   ],
-   "source_day": 104,
-   "optional": true
-  },
-  {
-   "id": "P-104-V2311-m-2f236b59adc2",
-   "qid": "P-104-V2311-m-2f236b59adc2",
-   "type": "mcq",
-   "prompt": "本课词条「そっくり」（例句语境：你和你妈妈长得一模一样呢。）的释义是哪一项？",
-   "options": [
-    "尝试",
-    "星期日",
-    "后年",
-    "一模一样；完全"
-   ],
-   "h": "30ca8884",
-   "oh": [
-    "12af1fe7",
-    "628c24b2",
-    "b704847f",
-    "30ca8884"
-   ],
-   "day": 104,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2311"
-   ],
-   "source_day": 104,
-   "optional": true
-  },
-  {
-   "id": "P-104-V2311-r-8064ec86843b",
-   "qid": "P-104-V2311-r-8064ec86843b",
-   "type": "mcq",
-   "prompt": "本课词条「そっくり」（一模一样；完全）的假名读音是哪一项？",
-   "options": [
-    "そっくり",
-    "ストーブ",
-    "するどい",
-    "くも"
-   ],
-   "h": "74a1c7f0",
-   "oh": [
-    "74a1c7f0",
-    "c7c11c8a",
-    "b847adb8",
-    "f44027f4"
-   ],
-   "day": 104,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V2311"
-   ],
-   "source_day": 104,
-   "optional": true
-  },
-  {
-   "id": "P-104-V2312-m-139dce2d4304",
-   "qid": "P-104-V2312-m-139dce2d4304",
-   "type": "mcq",
-   "prompt": "本课词条「そっと」（例句语境：她轻轻地把孩子放下哄睡了。）的释义是哪一项？",
-   "options": [
-    "桌子",
-    "轻轻地；悄悄地",
-    "玩；游玩",
-    "护照"
+    "各自；分别",
+    "一模一样；完全",
+    "原样；就那样",
+    "轻轻地；悄悄地"
    ],
    "h": "87edf822",
    "oh": [
-    "537f7221",
-    "87edf822",
-    "be03da52",
-    "4d09e9bc"
+    "ade4e9b",
+    "30ca8884",
+    "c671d2b5",
+    "87edf822"
    ],
-   "day": 104,
-   "group": "vocab",
-   "capability": "meaning",
    "knowledge_ids": [
     "V2312"
    ],
-   "source_day": 104,
-   "optional": true
+   "capability": "meaning",
+   "group": "vocab"
   },
   {
-   "id": "P-104-V2312-r-c28694eb800c",
-   "qid": "P-104-V2312-r-c28694eb800c",
+   "id": "D13-104-V2302-reading",
+   "qid": "D13-104-V2302-reading",
    "type": "mcq",
-   "prompt": "本课词条「そっと」（轻轻地；悄悄地）的假名读音是哪一项？",
-   "options": [
-    "そっと",
-    "たば",
-    "ほん",
-    "あける"
-   ],
-   "h": "f84fc49b",
-   "oh": [
-    "f84fc49b",
-    "86fdaa3a",
-    "9e580dab",
-    "886e3095"
-   ],
    "day": 104,
-   "group": "vocab",
+   "prompt": "「相続」（继承）的假名读音是哪一项？",
+   "options": [
+    "そうぞく",
+    "そくど",
+    "そんけい",
+    "そんがい"
+   ],
+   "h": "542c1909",
+   "oh": [
+    "542c1909",
+    "def6f104",
+    "7d50101c",
+    "82b0aac9"
+   ],
+   "knowledge_ids": [
+    "V2302"
+   ],
    "capability": "reading",
-   "knowledge_ids": [
-    "V2312"
-   ],
-   "source_day": 104,
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "P-104-V2313-m-b471a4e6b3cd",
-   "qid": "P-104-V2313-m-b471a4e6b3cd",
+   "id": "D13-104-V2313-recall",
+   "qid": "D13-104-V2313-recall",
    "type": "mcq",
-   "prompt": "本课词条「袖」（例句语境：父亲在袖子上划了一道长口子。）的释义是哪一项？",
-   "options": [
-    "住宅；住房",
-    "日语",
-    "难吃；糟糕",
-    "袖子"
-   ],
-   "h": "23ae85fb",
-   "oh": [
-    "c71baee4",
-    "9f89a0f7",
-    "1fa0e2e7",
-    "23ae85fb"
-   ],
    "day": 104,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2313"
-   ],
-   "source_day": 104,
-   "optional": true
-  },
-  {
-   "id": "P-104-V2313-r-44af4540b207",
-   "qid": "P-104-V2313-r-44af4540b207",
-   "type": "mcq",
-   "prompt": "本课词条「袖」（袖子）的假名读音是哪一项？",
+   "prompt": "「袖子」对应哪个日语词？",
    "options": [
-    "わたる",
-    "ならべる",
-    "この",
-    "そで"
+    "そんけい",
+    "そこ",
+    "そで",
+    "そうぞく"
    ],
    "h": "71f90bfd",
    "oh": [
-    "aa3328e8",
-    "21e8ee9c",
-    "68f480a4",
-    "71f90bfd"
+    "7d50101c",
+    "5df8ec81",
+    "71f90bfd",
+    "542c1909"
    ],
-   "day": 104,
-   "group": "vocab",
-   "capability": "reading",
    "knowledge_ids": [
     "V2313"
    ],
-   "source_day": 104,
-   "optional": true
+   "capability": "meaning",
+   "group": "vocab"
   },
   {
-   "id": "P-104-V2314-m-9b4a654e669a",
-   "qid": "P-104-V2314-m-9b4a654e669a",
+   "id": "D13-104-G0153-form",
+   "qid": "D13-104-G0153-form",
    "type": "mcq",
-   "prompt": "本课词条「備える」（例句语境：这栋楼配有紧急楼梯。）的释义是哪一项？",
+   "day": 104,
+   "prompt": "选出符合下列意思的日语句子。\n正开重要会议时，手机响了。",
+   "options": [
+    "明日は大事な会議があるから、休むわけにはいかない。",
+    "大事な会議の最中に、携帯電話が鳴ってしまった。",
+    "会議の最中に、電話が鳴りました。",
+    "授業中にスマホを見ているところを、先生に見られてしまった。"
+   ],
+   "h": "6e8687a7",
+   "oh": [
+    "59358c3b",
+    "6e8687a7",
+    "b4023ce8",
+    "7db50a4a"
+   ],
+   "knowledge_ids": [
+    "G0153"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-104-G0153-context",
+   "qid": "D13-104-G0153-context",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "请选择「今、試験の最中だから、廊下では静かにしてください。」的中文意思。",
+   "options": [
+    "现在正在考试，请在走廊保持安静。",
+    "父亲现在正在打电话。",
+    "现在正是努力的时候。",
+    "这个房间非常安静。"
+   ],
+   "h": "146b6153",
+   "oh": [
+    "146b6153",
+    "ef244525",
+    "f8d5a359",
+    "31b473b9"
+   ],
+   "knowledge_ids": [
+    "G0153"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-104-V2310-meaning",
+   "qid": "D13-104-V2310-meaning",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「育つ」的中文释义？",
    "options": [
     "具备；准备",
-    "姐姐",
-    "骨折",
-    "你好（白天问候）"
+    "注入；倾注",
+    "亏损；吃亏",
+    "成长；长大"
    ],
-   "h": "46621977",
+   "h": "5a897817",
    "oh": [
     "46621977",
-    "20d97b0d",
-    "517ad9d",
-    "538e3734"
+    "ba3edab9",
+    "fb6955ca",
+    "5a897817"
    ],
-   "day": 104,
-   "group": "vocab",
-   "capability": "meaning",
    "knowledge_ids": [
-    "V2314"
+    "V2310"
    ],
-   "source_day": 104,
-   "optional": true
+   "capability": "meaning",
+   "group": "vocab"
   },
   {
-   "id": "P-104-V2314-r-52efd92b271e",
-   "qid": "P-104-V2314-r-52efd92b271e",
+   "id": "D13-104-V2304-recall",
+   "qid": "D13-104-V2304-recall",
    "type": "mcq",
-   "prompt": "本课词条「備える」（具备；准备）的假名读音是哪一项？",
-   "options": [
-    "とうあん",
-    "かせぐ",
-    "シャツ",
-    "そなえる"
-   ],
-   "h": "942a6ad3",
-   "oh": [
-    "41ca180",
-    "95c653a9",
-    "1e0e0e11",
-    "942a6ad3"
-   ],
    "day": 104,
-   "group": "vocab",
+   "prompt": "「相当；合适」对应哪个日语词？",
+   "options": [
+    "そまつ",
+    "そうとう",
+    "そうぞく",
+    "そだつ"
+   ],
+   "h": "ebb2c600",
+   "oh": [
+    "d6390592",
+    "ebb2c600",
+    "542c1909",
+    "2478594"
+   ],
+   "knowledge_ids": [
+    "V2304"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-G0154-form",
+   "qid": "D13-104-G0154-form",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "选出符合下列意思的日语句子。\n你去邮局的话，顺便帮我把这封信寄了好吗？",
+   "options": [
+    "郵便局へ行くついでに、この手紙も出してきてくれる？",
+    "この手紙の字は、父の字に違いない。",
+    "日本語で手紙を書きたいんですが、手伝ってくれませんか。",
+    "時間があるなら、お茶を飲んでいきませんか。"
+   ],
+   "h": "dba0074f",
+   "oh": [
+    "dba0074f",
+    "873fc814",
+    "960df36",
+    "d9f85797"
+   ],
+   "knowledge_ids": [
+    "G0154"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-104-V2307-recall",
+   "qid": "D13-104-V2307-recall",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「于是；因此」对应哪个日语词？",
+   "options": [
+    "そんがい",
+    "そだつ",
+    "そこで",
+    "それと"
+   ],
+   "h": "d4c3be12",
+   "oh": [
+    "82b0aac9",
+    "2478594",
+    "d4c3be12",
+    "df3418ec"
+   ],
+   "knowledge_ids": [
+    "V2307"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-V2303-recall",
+   "qid": "D13-104-V2303-recall",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「装置；设备」对应哪个日语词？",
+   "options": [
+    "そしき",
+    "そうち",
+    "そうぞく",
+    "ソファー"
+   ],
+   "h": "e2d5e071",
+   "oh": [
+    "ba9a2f80",
+    "e2d5e071",
+    "542c1909",
+    "d99e51ea"
+   ],
+   "knowledge_ids": [
+    "V2303"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-V2309-reading",
+   "qid": "D13-104-V2309-reading",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「注ぐ」（注入；倾注）的假名读音是哪一项？",
+   "options": [
+    "そなえる",
+    "そそぐ",
+    "そのまま",
+    "そだつ"
+   ],
+   "h": "dbb4be8d",
+   "oh": [
+    "942a6ad3",
+    "dbb4be8d",
+    "b9b3d3ce",
+    "2478594"
+   ],
+   "knowledge_ids": [
+    "V2309"
+   ],
    "capability": "reading",
-   "knowledge_ids": [
-    "V2314"
-   ],
-   "source_day": 104,
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "P-104-V2315-m-c6e00e4f09ef",
-   "qid": "P-104-V2315-m-c6e00e4f09ef",
+   "id": "D13-104-V2315-recall",
+   "qid": "D13-104-V2315-recall",
    "type": "mcq",
-   "prompt": "本课词条「そのうち」（例句语境：我想，希望不久能一起工作。）的释义是哪一项？",
-   "options": [
-    "拿；持有",
-    "腻；厌倦",
-    "不久；改天",
-    "星期六"
-   ],
-   "h": "941751da",
-   "oh": [
-    "11031dd9",
-    "bc8eff91",
-    "941751da",
-    "ea398bca"
-   ],
    "day": 104,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2315"
-   ],
-   "source_day": 104,
-   "optional": true
-  },
-  {
-   "id": "P-104-V2315-r-900fed00aad8",
-   "qid": "P-104-V2315-r-900fed00aad8",
-   "type": "mcq",
-   "prompt": "本课词条「そのうち」（不久；改天）的假名读音是哪一项？",
+   "prompt": "「不久；改天」对应哪个日语词？",
    "options": [
-    "なぜ",
-    "じょうほう",
+    "ソファー",
     "そのうち",
-    "マッチ"
+    "そだつ",
+    "そで"
    ],
    "h": "d4457427",
    "oh": [
-    "98cce1f3",
-    "7abe86b7",
+    "d99e51ea",
     "d4457427",
-    "4e548b65"
+    "2478594",
+    "71f90bfd"
    ],
-   "day": 104,
-   "group": "vocab",
-   "capability": "reading",
    "knowledge_ids": [
     "V2315"
    ],
-   "source_day": 104,
-   "optional": true
-  },
-  {
-   "id": "P-104-V2316-m-4cb86c4bb243",
-   "qid": "P-104-V2316-m-4cb86c4bb243",
-   "type": "mcq",
-   "prompt": "本课词条「そのまま」（例句语境：不能就让门那样开着。）的释义是哪一项？",
-   "options": [
-    "原样；就那样",
-    "男子；男生",
-    "音信；信",
-    "供给"
-   ],
-   "h": "c671d2b5",
-   "oh": [
-    "c671d2b5",
-    "a5da7bb1",
-    "e345f4e5",
-    "73162c19"
-   ],
-   "day": 104,
-   "group": "vocab",
    "capability": "meaning",
-   "knowledge_ids": [
-    "V2316"
-   ],
-   "source_day": 104,
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "P-104-V2316-r-e7a2ac59c6e2",
-   "qid": "P-104-V2316-r-e7a2ac59c6e2",
+   "id": "D13-104-G0155-meaning",
+   "qid": "D13-104-G0155-meaning",
    "type": "mcq",
-   "prompt": "本课词条「そのまま」（原样；就那样）的假名读音是哪一项？",
-   "options": [
-    "あんぜん",
-    "あてさき",
-    "か",
-    "そのまま"
-   ],
-   "h": "b9b3d3ce",
-   "oh": [
-    "e3844aeb",
-    "809f960b",
-    "ce25368a",
-    "b9b3d3ce"
-   ],
    "day": 104,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V2316"
-   ],
-   "source_day": 104,
-   "optional": true
-  },
-  {
-   "id": "P-104-V2317-m-25693572c486",
-   "qid": "P-104-V2317-m-25693572c486",
-   "type": "mcq",
-   "prompt": "本课词条「ソファー」（例句语境：少年躺在沙发上。）的释义是哪一项？",
+   "prompt": "请选择「〜おかげで」所用句型的主要含义。",
    "options": [
-    "配送；投递",
-    "沙发",
-    "烤好；烧",
-    "合作"
-   ],
-   "h": "7b18e7df",
-   "oh": [
-    "9c3d6647",
-    "7b18e7df",
-    "cc4b250c",
-    "e2e837f1"
-   ],
-   "day": 104,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2317"
-   ],
-   "source_day": 104,
-   "optional": true
-  },
-  {
-   "id": "P-104-V2317-r-da6f8be49971",
-   "qid": "P-104-V2317-r-da6f8be49971",
-   "type": "mcq",
-   "prompt": "本课词条「ソファー」（沙发）的假名读音是哪一项？",
-   "options": [
-    "げんいん",
-    "しょうじょう",
-    "ソファー",
-    "すみ"
-   ],
-   "h": "d99e51ea",
-   "oh": [
-    "947f89a3",
-    "ccfa8ce0",
-    "d99e51ea",
-    "7a03a5f1"
-   ],
-   "day": 104,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V2317"
-   ],
-   "source_day": 104,
-   "optional": true
-  },
-  {
-   "id": "P-104-G0153-m-a38e7aa54d4e",
-   "qid": "P-104-G0153-m-a38e7aa54d4e",
-   "type": "mcq",
-   "prompt": "本课句型「〜最中に」在以下语境中的释义是哪一项？ 例句：大事な会議の最中に、携帯電話が鳴ってしまった。（正开重要会议时，手机响了。）",
-   "options": [
-    "是否…",
-    "向…（动作的对象）",
-    "正当…的时候",
-    "变成…／使…变得…"
-   ],
-   "h": "69f0cec4",
-   "oh": [
-    "5d0b8bce",
-    "dfc1a123",
-    "69f0cec4",
-    "c4614480"
-   ],
-   "day": 104,
-   "group": "grammar",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "G0153"
-   ],
-   "source_day": 104,
-   "optional": true
-  },
-  {
-   "id": "P-104-G0153-u-ebd0b40471ab",
-   "qid": "P-104-G0153-u-ebd0b40471ab",
-   "type": "mcq",
-   "prompt": "课程中「〜最中に」的接续说明是哪一项？ 例句：大事な会議の最中に、携帯電話が鳴ってしまった。（正开重要会议时，手机响了。）",
-   "options": [
-    "普通形 + ほど；名词 + ほど",
-    "高い→高くない／高かった／高くて",
-    "动词辞书形／动词ない形 + ようになる",
-    "动词ている + 最中に；名词 + の + 最中に"
-   ],
-   "h": "faed9f43",
-   "oh": [
-    "4fe547e",
-    "dfdaab7e",
-    "47adc5e5",
-    "faed9f43"
-   ],
-   "day": 104,
-   "group": "grammar",
-   "capability": "usage",
-   "knowledge_ids": [
-    "G0153"
-   ],
-   "source_day": 104,
-   "optional": true
-  },
-  {
-   "id": "P-104-G0154-m-794b55cd004e",
-   "qid": "P-104-G0154-m-794b55cd004e",
-   "type": "mcq",
-   "prompt": "本课句型「〜ついでに」在以下语境中的释义是哪一项？ 例句：郵便局へ行くついでに、この手紙も出してきてくれる？（你去邮局的话，顺便帮我把这封信寄了好吗？）",
-   "options": [
-    "动词て形（连接/中顿/请求基础）",
-    "如果是…的话",
-    "顺便…",
-    "…去；从现在起继续…"
-   ],
-   "h": "9f195e94",
-   "oh": [
-    "7a23ce01",
-    "4306bead",
-    "9f195e94",
-    "5531fe22"
-   ],
-   "day": 104,
-   "group": "grammar",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "G0154"
-   ],
-   "source_day": 104,
-   "optional": true
-  },
-  {
-   "id": "P-104-G0154-u-cf2a6764103f",
-   "qid": "P-104-G0154-u-cf2a6764103f",
-   "type": "mcq",
-   "prompt": "课程中「〜ついでに」的接续说明是哪一项？ 例句：郵便局へ行くついでに、この手紙も出してきてくれる？（你去邮局的话，顺便帮我把这封信寄了好吗？）",
-   "options": [
-    "名词 + の + 名词",
-    "动词辞书形/た形 + ついでに；名词 + の + ついでに",
-    "名词 + や + 名词（部分列举）",
-    "普通形 + ばかりでなく；ナ形容词 + な + ばかりでなく；名词 + ばかりでなく"
-   ],
-   "h": "fbefefd6",
-   "oh": [
-    "11e8e539",
-    "fbefefd6",
-    "916e38a9",
-    "88e9f674"
-   ],
-   "day": 104,
-   "group": "grammar",
-   "capability": "usage",
-   "knowledge_ids": [
-    "G0154"
-   ],
-   "source_day": 104,
-   "optional": true
-  },
-  {
-   "id": "P-104-G0155-m-64086b7d1618",
-   "qid": "P-104-G0155-m-64086b7d1618",
-   "type": "mcq",
-   "prompt": "本课句型「〜おかげで」在以下语境中的释义是哪一项？ 例句：先輩が手伝ってくれたおかげで、仕事が早く終わった。（多亏前辈帮忙，工作很快就做完了。）",
-   "options": [
-    "变成…／使…变得…",
-    "希望（别人）做…／希望别…",
-    "好像…；据说…",
+    "感觉…；总觉得…",
+    "难怪…；也就是说…",
+    "都怪…；因为…",
     "多亏…；托…的福"
    ],
    "h": "90862f16",
    "oh": [
-    "c4614480",
-    "577ca39",
-    "3f84481a",
+    "3b212103",
+    "98b9e285",
+    "ae961413",
     "90862f16"
    ],
-   "day": 104,
-   "group": "grammar",
-   "capability": "meaning",
    "knowledge_ids": [
     "G0155"
    ],
-   "source_day": 104,
-   "optional": true
+   "capability": "meaning",
+   "group": "grammar"
   },
   {
-   "id": "X-104-V2318-c",
-   "qid": "X-104-V2318-c",
+   "id": "D13-104-V2315-meaning",
+   "qid": "D13-104-V2315-meaning",
    "type": "mcq",
    "day": 104,
-   "prompt": "「粗末」的假名读音是？",
+   "prompt": "「そのうち」的中文释义？",
    "options": [
-    "はってん",
-    "まいねん",
-    "そまつ",
-    "わかれる"
+    "袖子",
+    "不久；改天",
+    "沙发",
+    "成长；长大"
    ],
-   "h": "d6390592",
+   "h": "941751da",
    "oh": [
-    "28256420",
-    "b871bd5f",
-    "d6390592",
-    "16fa9d96"
+    "23ae85fb",
+    "941751da",
+    "7b18e7df",
+    "5a897817"
+   ],
+   "knowledge_ids": [
+    "V2315"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-V2310-reading",
+   "qid": "D13-104-V2310-reading",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「育つ」（成长；长大）的假名读音是哪一项？",
+   "options": [
+    "そなえる",
+    "そん",
+    "そそぐ",
+    "そだつ"
+   ],
+   "h": "2478594",
+   "oh": [
+    "942a6ad3",
+    "1dfa1ac1",
+    "dbb4be8d",
+    "2478594"
+   ],
+   "knowledge_ids": [
+    "V2310"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-V2317-meaning",
+   "qid": "D13-104-V2317-meaning",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「ソファー」的中文释义？",
+   "options": [
+    "沙发",
+    "尊敬",
+    "组织",
+    "底部；底"
+   ],
+   "h": "7b18e7df",
+   "oh": [
+    "7b18e7df",
+    "bb64dda3",
+    "65b4303c",
+    "a486314"
+   ],
+   "knowledge_ids": [
+    "V2317"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-G0154-meaning",
+   "qid": "D13-104-G0154-meaning",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "请选择「〜ついでに」所用句型的主要含义。",
+   "options": [
+    "顺便…",
+    "正当…的时候",
+    "一方面…；同时…",
+    "不仅…而且…"
+   ],
+   "h": "9f195e94",
+   "oh": [
+    "9f195e94",
+    "69f0cec4",
+    "cb455c29",
+    "cdb11d97"
+   ],
+   "knowledge_ids": [
+    "G0154"
+   ],
+   "capability": "meaning",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-104-V2305-recall",
+   "qid": "D13-104-V2305-recall",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「速度」对应哪个日语词？",
+   "options": [
+    "そくど",
+    "そしき",
+    "そん",
+    "ソファー"
+   ],
+   "h": "def6f104",
+   "oh": [
+    "def6f104",
+    "ba9a2f80",
+    "1dfa1ac1",
+    "d99e51ea"
+   ],
+   "knowledge_ids": [
+    "V2305"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-V2316-recall",
+   "qid": "D13-104-V2316-recall",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「原样；就那样」对应哪个日语词？",
+   "options": [
+    "そっと",
+    "そのまま",
+    "そっくり",
+    "それぞれ"
+   ],
+   "h": "b9b3d3ce",
+   "oh": [
+    "f84fc49b",
+    "b9b3d3ce",
+    "74a1c7f0",
+    "228a4cee"
+   ],
+   "knowledge_ids": [
+    "V2316"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-V2311-meaning",
+   "qid": "D13-104-V2311-meaning",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「そっくり」的中文释义？",
+   "options": [
+    "各自；分别",
+    "一模一样；完全",
+    "轻轻地；悄悄地",
+    "原样；就那样"
+   ],
+   "h": "30ca8884",
+   "oh": [
+    "ade4e9b",
+    "30ca8884",
+    "87edf822",
+    "c671d2b5"
+   ],
+   "knowledge_ids": [
+    "V2311"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-V2309-meaning",
+   "qid": "D13-104-V2309-meaning",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「注ぐ」的中文释义？",
+   "options": [
+    "原样；就那样",
+    "注入；倾注",
+    "具备；准备",
+    "成长；长大"
+   ],
+   "h": "ba3edab9",
+   "oh": [
+    "c671d2b5",
+    "ba3edab9",
+    "46621977",
+    "5a897817"
+   ],
+   "knowledge_ids": [
+    "V2309"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-G0154-context",
+   "qid": "D13-104-G0154-context",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "请选择「買い物のついでに、図書館に本を返した。」的中文意思。",
+   "options": [
+    "不得在图书馆的书上画线。",
+    "买东西时顺便把书还给了图书馆。",
+    "送资料时顺便向部长打了招呼。",
+    "去车站时顺便买了车票。"
+   ],
+   "h": "b8a89f3e",
+   "oh": [
+    "fa4f1273",
+    "b8a89f3e",
+    "aa64920e",
+    "90a024ee"
+   ],
+   "knowledge_ids": [
+    "G0154"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-104-V2313-meaning",
+   "qid": "D13-104-V2313-meaning",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「袖」的中文释义？",
+   "options": [
+    "尊敬",
+    "底部；底",
+    "继承",
+    "袖子"
+   ],
+   "h": "23ae85fb",
+   "oh": [
+    "bb64dda3",
+    "a486314",
+    "fef00bfb",
+    "23ae85fb"
+   ],
+   "knowledge_ids": [
+    "V2313"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-G0153-meaning",
+   "qid": "D13-104-G0153-meaning",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "请选择「〜最中に」所用句型的主要含义。",
+   "options": [
+    "趁着…；在…过程中",
+    "从…到…期间",
+    "正当…的时候",
+    "顺便…"
+   ],
+   "h": "69f0cec4",
+   "oh": [
+    "40fa71ae",
+    "de2c4028",
+    "69f0cec4",
+    "9f195e94"
+   ],
+   "knowledge_ids": [
+    "G0153"
+   ],
+   "capability": "meaning",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-104-G0155-form",
+   "qid": "D13-104-G0155-form",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "选出符合下列意思的日语句子。\n多亏前辈帮忙，工作很快就做完了。",
+   "options": [
+    "先輩が手伝ってくれたおかげで、仕事が早く終わった。",
+    "技術の進歩に伴って、仕事のやり方が変わりました。",
+    "新入社員の仕事ぶりを見て、部長は安心したようだ。",
+    "先生のおかげで、日本語が上手になりました。"
+   ],
+   "h": "216980a1",
+   "oh": [
+    "216980a1",
+    "90bb136b",
+    "94d969db",
+    "59a28550"
+   ],
+   "knowledge_ids": [
+    "G0155"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-104-V2312-recall",
+   "qid": "D13-104-V2312-recall",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「轻轻地；悄悄地」对应哪个日语词？",
+   "options": [
+    "それぞれ",
+    "そっくり",
+    "そのまま",
+    "そっと"
+   ],
+   "h": "f84fc49b",
+   "oh": [
+    "228a4cee",
+    "74a1c7f0",
+    "b9b3d3ce",
+    "f84fc49b"
+   ],
+   "knowledge_ids": [
+    "V2312"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-V2314-reading",
+   "qid": "D13-104-V2314-reading",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「備える」（具备；准备）的假名读音是哪一项？",
+   "options": [
+    "そそぐ",
+    "そだつ",
+    "そっと",
+    "そなえる"
+   ],
+   "h": "942a6ad3",
+   "oh": [
+    "dbb4be8d",
+    "2478594",
+    "f84fc49b",
+    "942a6ad3"
+   ],
+   "knowledge_ids": [
+    "V2314"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-V2311-recall",
+   "qid": "D13-104-V2311-recall",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「一模一样；完全」对应哪个日语词？",
+   "options": [
+    "そっくり",
+    "それぞれ",
+    "そのまま",
+    "そっと"
+   ],
+   "h": "74a1c7f0",
+   "oh": [
+    "74a1c7f0",
+    "228a4cee",
+    "b9b3d3ce",
+    "f84fc49b"
+   ],
+   "knowledge_ids": [
+    "V2311"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-V2319-recall",
+   "qid": "D13-104-V2319-recall",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「各自；分别」对应哪个日语词？",
+   "options": [
+    "そっくり",
+    "それぞれ",
+    "そっと",
+    "そのまま"
+   ],
+   "h": "228a4cee",
+   "oh": [
+    "74a1c7f0",
+    "228a4cee",
+    "f84fc49b",
+    "b9b3d3ce"
+   ],
+   "knowledge_ids": [
+    "V2319"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-V2318-meaning",
+   "qid": "D13-104-V2318-meaning",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「粗末」的中文释义？",
+   "options": [
+    "粗糙；简慢",
+    "相当；合适",
+    "不久；改天",
+    "一模一样；完全"
+   ],
+   "h": "1a96215c",
+   "oh": [
+    "1a96215c",
+    "9e880d2f",
+    "941751da",
+    "30ca8884"
    ],
    "knowledge_ids": [
     "V2318"
    ],
-   "capability": "reading",
-   "group": "vocab",
-   "optional": true
+   "capability": "meaning",
+   "group": "vocab"
   },
   {
-   "id": "X-104-V2319-c",
-   "qid": "X-104-V2319-c",
+   "id": "D13-104-V2319-meaning",
+   "qid": "D13-104-V2319-meaning",
    "type": "mcq",
    "day": 104,
-   "prompt": "「それぞれ」的意思是？",
+   "prompt": "「それぞれ」的中文释义？",
    "options": [
-    "蓝色的；不成熟",
-    "典型",
-    "刺激",
+    "一模一样；完全",
+    "轻轻地；悄悄地",
+    "原样；就那样",
     "各自；分别"
    ],
    "h": "ade4e9b",
    "oh": [
-    "3f387d7",
-    "da8b00e4",
-    "6943a357",
+    "30ca8884",
+    "87edf822",
+    "c671d2b5",
     "ade4e9b"
    ],
    "knowledge_ids": [
     "V2319"
    ],
    "capability": "meaning",
-   "group": "vocab",
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "X-104-V2320-c",
-   "qid": "X-104-V2320-c",
+   "id": "D13-104-V2320-meaning",
+   "qid": "D13-104-V2320-meaning",
    "type": "mcq",
    "day": 104,
-   "prompt": "「それと」的假名读音是？",
+   "prompt": "「それと」的中文释义？",
    "options": [
-    "それと",
-    "かむ",
-    "グラス",
-    "しはらう"
+    "粗糙；简慢",
+    "另外；还有",
+    "轻轻地；悄悄地",
+    "于是；因此"
    ],
-   "h": "df3418ec",
+   "h": "a633bb95",
    "oh": [
-    "df3418ec",
-    "8e4881be",
-    "491d4d51",
-    "10f7d750"
+    "1a96215c",
+    "a633bb95",
+    "87edf822",
+    "ba0b1977"
    ],
    "knowledge_ids": [
     "V2320"
    ],
-   "capability": "reading",
-   "group": "vocab",
-   "optional": true
+   "capability": "meaning",
+   "group": "vocab"
   },
   {
-   "id": "X-104-V2321-c",
-   "qid": "X-104-V2321-c",
+   "id": "D13-104-V2321-reading",
+   "qid": "D13-104-V2321-reading",
    "type": "mcq",
    "day": 104,
-   "prompt": "「損」的意思是？",
+   "prompt": "「損」（亏损；吃亏）的假名读音是哪一项？",
    "options": [
-    "触摸",
-    "男人；男性",
-    "亏损；吃亏",
-    "盐"
+    "そん",
+    "そで",
+    "そくど",
+    "そしき"
    ],
-   "h": "fb6955ca",
+   "h": "1dfa1ac1",
    "oh": [
-    "f89c0db3",
-    "7b5c2c8b",
-    "fb6955ca",
-    "5586120f"
+    "1dfa1ac1",
+    "71f90bfd",
+    "def6f104",
+    "ba9a2f80"
    ],
    "knowledge_ids": [
     "V2321"
    ],
-   "capability": "meaning",
-   "group": "vocab",
-   "optional": true
-  },
-  {
-   "id": "X-104-V2322-c",
-   "qid": "X-104-V2322-c",
-   "type": "mcq",
-   "day": 104,
-   "prompt": "「損害」的假名读音是？",
-   "options": [
-    "まいあさ",
-    "そんがい",
-    "うつす",
-    "ねる"
-   ],
-   "h": "82b0aac9",
-   "oh": [
-    "76db4ad6",
-    "82b0aac9",
-    "8604a49a",
-    "65ef3b89"
-   ],
-   "knowledge_ids": [
-    "V2322"
-   ],
    "capability": "reading",
-   "group": "vocab",
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "X-104-V2323-c",
-   "qid": "X-104-V2323-c",
+   "id": "D13-104-V2323-meaning",
+   "qid": "D13-104-V2323-meaning",
    "type": "mcq",
    "day": 104,
-   "prompt": "「尊敬」的意思是？",
+   "prompt": "「そんけい」的中文释义？",
    "options": [
-    "离开；分开",
-    "敲；打",
-    "不在家",
+    "速度",
+    "组织",
+    "亏损；吃亏",
     "尊敬"
    ],
    "h": "bb64dda3",
    "oh": [
-    "7a470131",
-    "60787fbb",
-    "6288aa92",
+    "246e8618",
+    "65b4303c",
+    "fb6955ca",
     "bb64dda3"
    ],
    "knowledge_ids": [
     "V2323"
    ],
    "capability": "meaning",
-   "group": "vocab",
-   "optional": true
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-V2320-recall",
+   "qid": "D13-104-V2320-recall",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「另外；还有」对应哪个日语词？",
+   "options": [
+    "そこで",
+    "そっと",
+    "それと",
+    "そまつ"
+   ],
+   "h": "df3418ec",
+   "oh": [
+    "d4c3be12",
+    "f84fc49b",
+    "df3418ec",
+    "d6390592"
+   ],
+   "knowledge_ids": [
+    "V2320"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-V2322-meaning",
+   "qid": "D13-104-V2322-meaning",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「損害」的中文释义？",
+   "options": [
+    "装置；设备",
+    "尊敬",
+    "损害；损失",
+    "亏损；吃亏"
+   ],
+   "h": "9f8ef620",
+   "oh": [
+    "cff8cf40",
+    "bb64dda3",
+    "9f8ef620",
+    "fb6955ca"
+   ],
+   "knowledge_ids": [
+    "V2322"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-V2318-reading",
+   "qid": "D13-104-V2318-reading",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「粗末」（粗糙；简慢）的假名读音是哪一项？",
+   "options": [
+    "そうとう",
+    "そっくり",
+    "そのうち",
+    "そまつ"
+   ],
+   "h": "d6390592",
+   "oh": [
+    "ebb2c600",
+    "74a1c7f0",
+    "d4457427",
+    "d6390592"
+   ],
+   "knowledge_ids": [
+    "V2318"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-V2323-recall",
+   "qid": "D13-104-V2323-recall",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「尊敬」对应哪个日语词？",
+   "options": [
+    "そくど",
+    "そしき",
+    "そんけい",
+    "そん"
+   ],
+   "h": "7d50101c",
+   "oh": [
+    "def6f104",
+    "ba9a2f80",
+    "7d50101c",
+    "1dfa1ac1"
+   ],
+   "knowledge_ids": [
+    "V2323"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-V2322-reading",
+   "qid": "D13-104-V2322-reading",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「損害」（损害；损失）的假名读音是哪一项？",
+   "options": [
+    "そくど",
+    "そんけい",
+    "そんがい",
+    "そうち"
+   ],
+   "h": "82b0aac9",
+   "oh": [
+    "def6f104",
+    "7d50101c",
+    "82b0aac9",
+    "e2d5e071"
+   ],
+   "knowledge_ids": [
+    "V2322"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-104-V2321-meaning",
+   "qid": "D13-104-V2321-meaning",
+   "type": "mcq",
+   "day": 104,
+   "prompt": "「損」的中文释义？",
+   "options": [
+    "袖子",
+    "亏损；吃亏",
+    "速度",
+    "组织"
+   ],
+   "h": "fb6955ca",
+   "oh": [
+    "23ae85fb",
+    "fb6955ca",
+    "246e8618",
+    "65b4303c"
+   ],
+   "knowledge_ids": [
+    "V2321"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
   }
  ],
  "listening_material": {

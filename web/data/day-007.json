@@ -2,17 +2,17 @@
  "day": 7,
  "phase": "P1",
  "theme": "から ～ まで、（场所）に ～ がある / いる",
- "can_do": "用「から ～ まで、（场所）に ～ がある / いる」造两句自己的话，表达：从…到…；（某地）有…",
+ "can_do": "用「から ～ まで、（场所）に ～ がある / いる」各造一句自己的话，表达：从…到…；（某地）有…",
  "minutes": 60,
  "blocks": [
   {
    "type": "复习",
-   "min": 10,
+   "min": 6,
    "desc": "到期项优先；未完成顺延，不追赶"
   },
   {
    "type": "新词",
-   "min": 14,
+   "min": 11,
    "desc": "20 个必学词；4 个选学拓展"
   },
   {
@@ -22,13 +22,13 @@
   },
   {
    "type": "句子输出",
-   "min": 6,
-   "desc": "3道选句必做，7道拓展；答后核对"
+   "min": 4,
+   "desc": "每条新语法独立说一句，和例句对照"
   },
   {
    "type": "练习",
-   "min": 6,
-   "desc": "6 题即时自评"
+   "min": 15,
+   "desc": "优先做当天必学词与语法，答完重练错题"
   },
   {
    "type": "会话",
@@ -2205,1410 +2205,1354 @@
  ],
  "questions": [
   {
-   "id": "Q-007-K0-da8d88bc3a3b",
-   "qid": "Q-007-K0-da8d88bc3a3b",
+   "id": "D13-007-V0128-meaning",
+   "qid": "D13-007-V0128-meaning",
    "type": "mcq",
-   "prompt": "汉字「時」的一个常用读音是？",
-   "options": [
-    "あいて",
-    "う.まれる",
-    "おさ.める",
-    "ジ"
-   ],
-   "h": "bd251bc7",
-   "oh": [
-    "1ca89cef",
-    "1be19ac4",
-    "9fee8bf6",
-    "bd251bc7"
-   ],
-   "knowledge_ids": [
-    "K0021"
-   ]
-  },
-  {
-   "id": "Q-007-K1-9f536efbd27a",
-   "qid": "Q-007-K1-9f536efbd27a",
-   "type": "mcq",
-   "prompt": "汉字「間」的一个常用读音是？",
-   "options": [
-    "ミョウ",
-    "カン",
-    "か.わす",
-    "あや.める"
-   ],
-   "h": "fd92319b",
-   "oh": [
-    "9c881ef7",
-    "fd92319b",
-    "82a7b240",
-    "778ab9fb"
-   ],
-   "knowledge_ids": [
-    "K0022"
-   ]
-  },
-  {
-   "id": "Q-007-G-dcbee073a9af",
-   "qid": "Q-007-G-dcbee073a9af",
-   "type": "mcq",
-   "prompt": "句型「（场所）に ～ がある / いる」的意思是？",
-   "options": [
-    "与其说…不如说…",
-    "想（做）…／（第三人称）想…",
-    "…来；一直…到现在；开始…",
-    "（某地）有…"
-   ],
-   "h": "80fed725",
-   "oh": [
-    "500588ae",
-    "67e38dd",
-    "834ce429",
-    "80fed725"
-   ],
-   "knowledge_ids": [
-    "G0014"
-   ]
-  },
-  {
-   "id": "Q-007-V0-1e85805bffc0",
-   "qid": "Q-007-V0-1e85805bffc0",
-   "type": "mcq",
-   "prompt": "「起きる」是什么意思？",
-   "options": [
-    "之间；期间",
-    "这次；下次",
-    "终于；好不容易",
-    "起床；起来"
-   ],
-   "h": "9ac0ba21",
-   "oh": [
-    "83615490",
-    "f784525c",
-    "9f39b0a2",
-    "9ac0ba21"
-   ],
-   "knowledge_ids": [
-    "V0119"
-   ]
-  },
-  {
-   "id": "Q-007-V1-e16910f52fae",
-   "qid": "Q-007-V1-e16910f52fae",
-   "type": "mcq",
-   "prompt": "「借りる」是什么意思？",
-   "options": [
-    "洗澡；浴室",
-    "自豪；自夸",
-    "男孩",
-    "借（入）；向人借"
-   ],
-   "h": "1cce165f",
-   "oh": [
-    "5127bb3a",
-    "6322adc8",
-    "231f374d",
-    "1cce165f"
-   ],
-   "knowledge_ids": [
-    "V0120"
-   ]
-  },
-  {
-   "id": "Q-007-R-4273dc06c24e",
-   "qid": "Q-007-R-4273dc06c24e",
-   "type": "mcq",
-   "prompt": "复习：句型「へ（移动方向）」的意思是？",
-   "options": [
-    "不可能…／不能…（わけにはいかない）",
-    "有点…；稍有…迹象",
-    "这/那/那是…",
-    "往／向…"
-   ],
-   "h": "bcb6033f",
-   "oh": [
-    "a7dcf4a9",
-    "2d8b0ebe",
-    "6fe352c9",
-    "bcb6033f"
-   ],
-   "knowledge_ids": [
-    "G0011"
-   ]
-  },
-  {
-   "id": "P-007-00-76d3aae3fa98",
-   "qid": "P-007-00-76d3aae3fa98",
-   "type": "mcq",
-   "prompt": "房间里有猫。",
-   "options": [
-    "えっ嘘でしょ。",
-    "部屋に猫がいます。",
-    "田中さんは先生です。",
-    "私は泳げません。"
-   ],
-   "h": "dcb9e3b7",
-   "oh": [
-    "cceb1ad7",
-    "dcb9e3b7",
-    "8e0bbf88",
-    "1319ae82"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-007-01-9ef61bbaea36",
-   "qid": "P-007-01-9ef61bbaea36",
-   "type": "mcq",
-   "prompt": "当上医生了。",
-   "options": [
-    "医者になりました。",
-    "お茶を飲みます。",
-    "これは何ですか。",
-    "八日から休みます。"
-   ],
-   "h": "89a7fc5c",
-   "oh": [
-    "89a7fc5c",
-    "d303d227",
-    "c31f804f",
-    "4d6dbc76"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-007-02-d0ff786abd89",
-   "qid": "P-007-02-d0ff786abd89",
-   "type": "mcq",
-   "prompt": "请写名字。",
-   "options": [
-    "毎日、学校へ行きます。",
-    "名前を書いてください。",
-    "話す機会がありません。",
-    "ご協力に感謝します。"
-   ],
-   "h": "68ad7811",
-   "oh": [
-    "53ed5616",
-    "68ad7811",
-    "30d4fb48",
-    "fab0a215"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-007-V0119-m-c0f3099bfde5",
-   "qid": "P-007-V0119-m-c0f3099bfde5",
-   "type": "mcq",
-   "prompt": "本课词条「起きる」（例句语境：七点起床。）的释义是哪一项？",
-   "options": [
-    "起床；起来",
-    "环境",
-    "合适；相符",
-    "生活"
-   ],
-   "h": "9ac0ba21",
-   "oh": [
-    "9ac0ba21",
-    "d5de2a67",
-    "e17fe21e",
-    "d109e70f"
-   ],
    "day": 7,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0119"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0120-m-5ce81d03a46a",
-   "qid": "P-007-V0120-m-5ce81d03a46a",
-   "type": "mcq",
-   "prompt": "本课词条「借りる」（例句语境：在图书馆借书。）的释义是哪一项？",
-   "options": [
-    "某物；什么",
-    "篮子",
-    "闪耀；发光",
-    "借（入）；向人借"
-   ],
-   "h": "1cce165f",
-   "oh": [
-    "6373299b",
-    "18716c33",
-    "a92eb702",
-    "1cce165f"
-   ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0120"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0121-m-8e8611d5b81c",
-   "qid": "P-007-V0121-m-8e8611d5b81c",
-   "type": "mcq",
-   "prompt": "本课词条「教える」（例句语境：教日语。）的释义是哪一项？",
-   "options": [
-    "棉；棉布",
-    "累",
-    "饲料；诱饵",
-    "教；告诉"
-   ],
-   "h": "7682a1d4",
-   "oh": [
-    "e872d51d",
-    "2a76105e",
-    "5b653353",
-    "7682a1d4"
-   ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0121"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0121-r-6ac04b99af6b",
-   "qid": "P-007-V0121-r-6ac04b99af6b",
-   "type": "mcq",
-   "prompt": "本课词条「教える」（教；告诉）的假名读音是哪一项？",
-   "options": [
-    "しゅんかん",
-    "おしえる",
-    "ごらんになる",
-    "はち"
-   ],
-   "h": "40aed2ab",
-   "oh": [
-    "8e90c1a4",
-    "40aed2ab",
-    "b4053563",
-    "97c1a76d"
-   ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0121"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0122-m-a8cd0d833bfc",
-   "qid": "P-007-V0122-m-a8cd0d833bfc",
-   "type": "mcq",
-   "prompt": "本课词条「帰る」（例句语境：回家。）的释义是哪一项？",
-   "options": [
-    "于是；因此",
-    "回；回家",
-    "一次；同时",
-    "可以；好"
-   ],
-   "h": "e41c2df2",
-   "oh": [
-    "ba0b1977",
-    "e41c2df2",
-    "ce4c081",
-    "cb367d69"
-   ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0122"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0122-r-90dfa0ceb0ad",
-   "qid": "P-007-V0122-r-90dfa0ceb0ad",
-   "type": "mcq",
-   "prompt": "本课词条「帰る」（回；回家）的假名读音是哪一项？",
-   "options": [
-    "かしゅ",
-    "かえる",
-    "いし",
-    "ひらく"
-   ],
-   "h": "92d3de17",
-   "oh": [
-    "8979e146",
-    "92d3de17",
-    "515bc10c",
-    "205796c1"
-   ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0122"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0123-m-35ca32773326",
-   "qid": "P-007-V0123-m-35ca32773326",
-   "type": "mcq",
-   "prompt": "本课词条「休む」（例句语境：向公司请假。）的释义是哪一项？",
-   "options": [
-    "发光；闪耀",
-    "刀",
-    "休息；请假；睡",
-    "意识；顾及"
-   ],
-   "h": "d355e08c",
-   "oh": [
-    "1d3603c6",
-    "55b131f",
-    "d355e08c",
-    "3ecfcaed"
-   ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0123"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0123-r-28806a5292b4",
-   "qid": "P-007-V0123-r-28806a5292b4",
-   "type": "mcq",
-   "prompt": "本课词条「休む」（休息；请假；睡）的假名读音是哪一项？",
-   "options": [
-    "やすむ",
-    "まける",
-    "つかう",
-    "かがく"
-   ],
-   "h": "7993639a",
-   "oh": [
-    "7993639a",
-    "ec06081",
-    "88d4c92a",
-    "eedd6947"
-   ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0123"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0124-m-cf3c2beafcbd",
-   "qid": "P-007-V0124-m-cf3c2beafcbd",
-   "type": "mcq",
-   "prompt": "本课词条「分かる」（例句语境：懂日语。）的释义是哪一项？",
-   "options": [
-    "懂；明白",
-    "持续；继续",
-    "逐渐",
-    "开关"
-   ],
-   "h": "b7d2ad13",
-   "oh": [
-    "b7d2ad13",
-    "67411680",
-    "1c940d8d",
-    "ba756104"
-   ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0124"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0124-r-78b92322df73",
-   "qid": "P-007-V0124-r-78b92322df73",
-   "type": "mcq",
-   "prompt": "本课词条「分かる」（懂；明白）的假名读音是哪一项？",
-   "options": [
-    "ばん",
-    "せいかく",
-    "ちいさな",
-    "わかる"
-   ],
-   "h": "920172ec",
-   "oh": [
-    "65a93c34",
-    "4b51bae4",
-    "ffddd1c7",
-    "920172ec"
-   ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0124"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0125-m-0f7d047e64b3",
-   "qid": "P-007-V0125-m-0f7d047e64b3",
-   "type": "mcq",
-   "prompt": "本课词条「高い」（例句语境：这本书贵。）的释义是哪一项？",
-   "options": [
-    "报纸",
-    "贵；高",
-    "记号；标志",
-    "药"
-   ],
-   "h": "599528b",
-   "oh": [
-    "7e12fd48",
-    "599528b",
-    "9128cfa7",
-    "e944459e"
-   ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0125"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0125-r-c92d17eef6ed",
-   "qid": "P-007-V0125-r-c92d17eef6ed",
-   "type": "mcq",
-   "prompt": "本课词条「高い」（贵；高）的假名读音是哪一项？",
-   "options": [
-    "たいざい",
-    "おめにかかる",
-    "たかい",
-    "ぞう"
-   ],
-   "h": "11920a1",
-   "oh": [
-    "adc9b414",
-    "a34c58f0",
-    "11920a1",
-    "430110c5"
-   ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0125"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0126-m-2a188856fdc0",
-   "qid": "P-007-V0126-m-2a188856fdc0",
-   "type": "mcq",
-   "prompt": "本课词条「安い」（例句语境：公交比电车便宜。）的释义是哪一项？",
-   "options": [
-    "现状",
-    "便宜",
-    "小山；丘陵",
-    "出口"
-   ],
-   "h": "f5a25cd6",
-   "oh": [
-    "62eb20db",
-    "f5a25cd6",
-    "b6ef97d1",
-    "421e004a"
-   ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0126"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0126-r-2d25dd506b0c",
-   "qid": "P-007-V0126-r-2d25dd506b0c",
-   "type": "mcq",
-   "prompt": "本课词条「安い」（便宜）的假名读音是哪一项？",
-   "options": [
-    "やすい",
-    "こころ",
-    "えいえん",
-    "もん"
-   ],
-   "h": "35948b8e",
-   "oh": [
-    "35948b8e",
-    "e5f5eb2a",
-    "23b46780",
-    "152fc962"
-   ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0126"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0127-m-9de033c8afc5",
-   "qid": "P-007-V0127-m-9de033c8afc5",
-   "type": "mcq",
-   "prompt": "本课词条「大きい」（例句语境：大房子。）的释义是哪一项？",
-   "options": [
-    "互相",
-    "海上；洋面",
-    "星期四",
-    "大"
-   ],
-   "h": "2249efc6",
-   "oh": [
-    "5a595977",
-    "d70ed700",
-    "943c2a68",
-    "2249efc6"
-   ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0127"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0127-r-04f852b2f1bd",
-   "qid": "P-007-V0127-r-04f852b2f1bd",
-   "type": "mcq",
-   "prompt": "本课词条「大きい」（大）的假名读音是哪一项？",
-   "options": [
-    "かくれる",
-    "はんたい",
-    "ぜんぜん",
-    "おおきい"
-   ],
-   "h": "32b42684",
-   "oh": [
-    "9df330c6",
-    "70783bf4",
-    "fc81470d",
-    "32b42684"
-   ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0127"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0128-m-cbd38867807a",
-   "qid": "P-007-V0128-m-cbd38867807a",
-   "type": "mcq",
-   "prompt": "本课词条「小さい」（例句语境：小房间。）的释义是哪一项？",
+   "prompt": "「ちいさい」的中文释义？",
    "options": [
     "小",
-    "位置",
-    "然而；可是",
-    "逮捕"
+    "大",
+    "忙",
+    "贵；高"
    ],
    "h": "a4510fe",
    "oh": [
     "a4510fe",
-    "e3aba2c2",
-    "faf287a2",
-    "366d32c"
-   ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0128"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0128-r-391086803aba",
-   "qid": "P-007-V0128-r-391086803aba",
-   "type": "mcq",
-   "prompt": "本课词条「小さい」（小）的假名读音是哪一项？",
-   "options": [
-    "なか",
-    "かんり",
-    "ちいさい",
-    "アフリカ"
-   ],
-   "h": "d5dd8fa9",
-   "oh": [
-    "adcd0302",
-    "6a635403",
-    "d5dd8fa9",
-    "6899cd7f"
-   ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0128"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0129-m-99a3b3809008",
-   "qid": "P-007-V0129-m-99a3b3809008",
-   "type": "mcq",
-   "prompt": "本课词条「新しい」（例句语境：想要新电脑。）的释义是哪一项？",
-   "options": [
-    "兔子",
-    "冷（天气/体感）",
-    "某物；什么",
-    "新"
-   ],
-   "h": "b59b202f",
-   "oh": [
-    "9de4c6e9",
-    "9d591f79",
-    "6373299b",
-    "b59b202f"
-   ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0129"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0129-r-d133ba155a9c",
-   "qid": "P-007-V0129-r-d133ba155a9c",
-   "type": "mcq",
-   "prompt": "本课词条「新しい」（新）的假名读音是哪一项？",
-   "options": [
-    "あたらしい",
-    "はやし",
-    "うえる",
-    "ネクタイ"
-   ],
-   "h": "9d7e0976",
-   "oh": [
-    "9d7e0976",
-    "1d572d3b",
-    "2c9a73b8",
-    "e05b21ce"
-   ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0129"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0130-m-537c971a643f",
-   "qid": "P-007-V0130-m-537c971a643f",
-   "type": "mcq",
-   "prompt": "本课词条「美味しい」（例句语境：这道菜好吃。）的释义是哪一项？",
-   "options": [
-    "森林",
-    "好吃；美味",
-    "县",
-    "批准；认可"
-   ],
-   "h": "2c306a59",
-   "oh": [
-    "8279cad2",
-    "2c306a59",
-    "ba590a0e",
-    "decf6232"
-   ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0130"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0130-r-ddadbdf7e537",
-   "qid": "P-007-V0130-r-ddadbdf7e537",
-   "type": "mcq",
-   "prompt": "本课词条「美味しい」（好吃；美味）的假名读音是哪一项？",
-   "options": [
-    "おいしい",
-    "けいけん",
-    "あね",
-    "かたち"
-   ],
-   "h": "fd2d59a0",
-   "oh": [
-    "fd2d59a0",
-    "bd1696b8",
-    "676aee38",
-    "bd66ab6a"
-   ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0130"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0131-m-ed098b0a5fc8",
-   "qid": "P-007-V0131-m-ed098b0a5fc8",
-   "type": "mcq",
-   "prompt": "本课词条「忙しい」（例句语境：这周很忙。）的释义是哪一项？",
-   "options": [
-    "单纯；简单",
-    "市",
-    "忙",
-    "责备；训斥"
-   ],
-   "h": "5c459214",
-   "oh": [
-    "bd194849",
-    "7483245",
+    "2249efc6",
     "5c459214",
-    "cb882632"
+    "599528b"
    ],
-   "day": 7,
-   "group": "vocab",
+   "knowledge_ids": [
+    "V0128"
+   ],
    "capability": "meaning",
-   "knowledge_ids": [
-    "V0131"
-   ],
-   "source_day": 7,
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "P-007-V0131-r-d15138380efd",
-   "qid": "P-007-V0131-r-d15138380efd",
+   "id": "D13-007-V0139-recall",
+   "qid": "D13-007-V0139-recall",
    "type": "mcq",
-   "prompt": "本课词条「忙しい」（忙）的假名读音是哪一项？",
-   "options": [
-    "より",
-    "たいき",
-    "いそがしい",
-    "おそい"
-   ],
-   "h": "84812621",
-   "oh": [
-    "ee0dc987",
-    "b82579a9",
-    "84812621",
-    "f052f3cc"
-   ],
    "day": 7,
-   "group": "vocab",
-   "capability": "reading",
+   "prompt": "「非常；很」对应哪个日语词？",
+   "options": [
+    "すこし",
+    "とても",
+    "もう",
+    "いつも"
+   ],
+   "h": "828c7373",
+   "oh": [
+    "794b8356",
+    "828c7373",
+    "42301039",
+    "34094575"
+   ],
    "knowledge_ids": [
-    "V0131"
+    "V0139"
    ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0133-m-13724651ffda",
-   "qid": "P-007-V0133-m-13724651ffda",
-   "type": "mcq",
-   "prompt": "本课词条「寒い」（例句语境：今天没昨天冷。）的释义是哪一项？",
-   "options": [
-    "味道；口味",
-    "医生",
-    "闪耀；发光",
-    "冷（天气/体感）"
-   ],
-   "h": "9d591f79",
-   "oh": [
-    "68f603c6",
-    "ec2afa1f",
-    "a92eb702",
-    "9d591f79"
-   ],
-   "day": 7,
-   "group": "vocab",
    "capability": "meaning",
-   "knowledge_ids": [
-    "V0133"
-   ],
-   "source_day": 7,
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "P-007-V0133-r-62a5e9776c45",
-   "qid": "P-007-V0133-r-62a5e9776c45",
+   "id": "D13-007-G0013-context",
+   "qid": "D13-007-G0013-context",
    "type": "mcq",
-   "prompt": "本课词条「寒い」（冷（天气/体感））的假名读音是哪一项？",
-   "options": [
-    "さむい",
-    "じゃま",
-    "たがい",
-    "きょういく"
-   ],
-   "h": "7ba67fbc",
-   "oh": [
-    "7ba67fbc",
-    "e1c8516",
-    "8f11b166",
-    "1c3ebc0"
-   ],
    "day": 7,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0133"
+   "prompt": "请选择「駅から学校まで行きます。」的中文意思。",
+   "options": [
+    "我从学校走到车站。",
+    "从车站走到学校。",
+    "每天坐公交车去学校。",
+    "去学校。"
    ],
-   "source_day": 7,
-   "optional": true
+   "h": "a1609a05",
+   "oh": [
+    "3f15a308",
+    "a1609a05",
+    "78df0689",
+    "b5f010b7"
+   ],
+   "knowledge_ids": [
+    "G0013"
+   ],
+   "capability": "usage",
+   "group": "grammar"
   },
   {
-   "id": "P-007-V0134-m-24cd8860539a",
-   "qid": "P-007-V0134-m-24cd8860539a",
+   "id": "D13-007-V0121-meaning",
+   "qid": "D13-007-V0121-meaning",
    "type": "mcq",
-   "prompt": "本课词条「好き」（例句语境：喜欢鱼。）的释义是哪一项？",
-   "options": [
-    "附近",
-    "九个",
-    "喜欢",
-    "资料；材料"
-   ],
-   "h": "9074f6bb",
-   "oh": [
-    "3eba9a66",
-    "33afc46",
-    "9074f6bb",
-    "5a3d8cc"
-   ],
    "day": 7,
-   "group": "vocab",
+   "prompt": "「教える」的中文释义？",
+   "options": [
+    "教；告诉",
+    "借（入）；向人借",
+    "休息；请假；睡",
+    "起床；起来"
+   ],
+   "h": "7682a1d4",
+   "oh": [
+    "7682a1d4",
+    "1cce165f",
+    "d355e08c",
+    "9ac0ba21"
+   ],
+   "knowledge_ids": [
+    "V0121"
+   ],
    "capability": "meaning",
-   "knowledge_ids": [
-    "V0134"
-   ],
-   "source_day": 7,
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "P-007-V0134-r-d43d5136077d",
-   "qid": "P-007-V0134-r-d43d5136077d",
+   "id": "D13-007-V0123-reading",
+   "qid": "D13-007-V0123-reading",
    "type": "mcq",
-   "prompt": "本课词条「好き」（喜欢）的假名读音是哪一项？",
-   "options": [
-    "すき",
-    "おか",
-    "そう",
-    "うけとる"
-   ],
-   "h": "6803899b",
-   "oh": [
-    "6803899b",
-    "6d4c1f62",
-    "50f8d80a",
-    "29747221"
-   ],
    "day": 7,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0134"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0135-m-49d74e8cd446",
-   "qid": "P-007-V0135-m-49d74e8cd446",
-   "type": "mcq",
-   "prompt": "本课词条「元気」（例句语境：她很精神。）的释义是哪一项？",
+   "prompt": "「休む」（休息；请假；睡）的假名读音是哪一项？",
    "options": [
-    "比赛",
-    "奢侈；奢华",
-    "精神；健康；有活力",
-    "学校"
-   ],
-   "h": "b4f4a4f8",
-   "oh": [
-    "9fef248",
-    "c6a03914",
-    "b4f4a4f8",
-    "89fc4fa8"
-   ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0135"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0135-r-525027e3a680",
-   "qid": "P-007-V0135-r-525027e3a680",
-   "type": "mcq",
-   "prompt": "本课词条「元気」（精神；健康；有活力）的假名读音是哪一项？",
-   "options": [
-    "ため",
     "やすい",
-    "チャンス",
-    "げんき"
+    "やせる",
+    "やる",
+    "やすむ"
    ],
-   "h": "711b9f4d",
+   "h": "7993639a",
    "oh": [
-    "57fef33d",
     "35948b8e",
-    "64661749",
-    "711b9f4d"
+    "288e66e9",
+    "248b4b08",
+    "7993639a"
    ],
-   "day": 7,
-   "group": "vocab",
+   "knowledge_ids": [
+    "V0123"
+   ],
    "capability": "reading",
-   "knowledge_ids": [
-    "V0135"
-   ],
-   "source_day": 7,
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "P-007-V0136-m-fc672c1de18f",
-   "qid": "P-007-V0136-m-fc672c1de18f",
+   "id": "D13-007-V0137-recall",
+   "qid": "D13-007-V0137-recall",
    "type": "mcq",
-   "prompt": "本课词条「静か」（例句语境：这个房间安静。）的释义是哪一项？",
-   "options": [
-    "安静；宁静",
-    "使用",
-    "集中",
-    "手续费"
-   ],
-   "h": "67f74f82",
-   "oh": [
-    "67f74f82",
-    "ad44712",
-    "b46a69fc",
-    "9cc27b14"
-   ],
    "day": 7,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0136"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0136-r-6e2818b12fb1",
-   "qid": "P-007-V0136-r-6e2818b12fb1",
-   "type": "mcq",
-   "prompt": "本课词条「静か」（安静；宁静）的假名读音是哪一项？",
-   "options": [
-    "しずか",
-    "しっかり",
-    "さしあげる",
-    "せき"
-   ],
-   "h": "859019fd",
-   "oh": [
-    "859019fd",
-    "87af0b52",
-    "b4d3a4fa",
-    "ac0871d5"
-   ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0136"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0137-m-5a5c0745aeef",
-   "qid": "P-007-V0137-m-5a5c0745aeef",
-   "type": "mcq",
-   "prompt": "本课词条「便利」（例句语境：这张地图很方便。）的释义是哪一项？",
-   "options": [
-    "拔出；胜过",
-    "两天；二号",
-    "方便；便利",
-    "五天；五号"
-   ],
-   "h": "b421d9ee",
-   "oh": [
-    "6ef10e9",
-    "cf9a20a",
-    "b421d9ee",
-    "622cb32"
-   ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0137"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0137-r-f40919459231",
-   "qid": "P-007-V0137-r-f40919459231",
-   "type": "mcq",
-   "prompt": "本课词条「便利」（方便；便利）的假名读音是哪一项？",
+   "prompt": "「方便；便利」对应哪个日语词？",
    "options": [
     "べんり",
-    "ボタン",
-    "げいじゅつ",
-    "あの"
+    "すき",
+    "しずか",
+    "げんき"
    ],
    "h": "a35fe77d",
    "oh": [
     "a35fe77d",
-    "85f830cd",
-    "5e19c98",
-    "6a6af2f1"
+    "6803899b",
+    "859019fd",
+    "711b9f4d"
    ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "reading",
    "knowledge_ids": [
     "V0137"
    ],
-   "source_day": 7,
-   "optional": true
+   "capability": "meaning",
+   "group": "vocab"
   },
   {
-   "id": "P-007-V0139-m-18a0c2da5f0a",
-   "qid": "P-007-V0139-m-18a0c2da5f0a",
+   "id": "D13-007-V0123-meaning",
+   "qid": "D13-007-V0123-meaning",
    "type": "mcq",
-   "prompt": "本课词条「とても」（例句语境：这本书很贵。）的释义是哪一项？",
+   "day": 7,
+   "prompt": "「休む」的中文释义？",
    "options": [
-    "感觉；感到",
-    "因此；为此",
-    "非常；很",
-    "宾馆；酒店"
+    "借（入）；向人借",
+    "休息；请假；睡",
+    "起床；起来",
+    "回；回家"
+   ],
+   "h": "d355e08c",
+   "oh": [
+    "1cce165f",
+    "d355e08c",
+    "9ac0ba21",
+    "e41c2df2"
+   ],
+   "knowledge_ids": [
+    "V0123"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0121-reading",
+   "qid": "D13-007-V0121-reading",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「教える」（教；告诉）的假名读音是哪一项？",
+   "options": [
+    "おいしい",
+    "おおきい",
+    "おしえる",
+    "おきる"
+   ],
+   "h": "40aed2ab",
+   "oh": [
+    "fd2d59a0",
+    "32b42684",
+    "40aed2ab",
+    "17df00a1"
+   ],
+   "knowledge_ids": [
+    "V0121"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0137-meaning",
+   "qid": "D13-007-V0137-meaning",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「便利」的中文释义？",
+   "options": [
+    "喜欢",
+    "方便；便利",
+    "精神；健康；有活力",
+    "安静；宁静"
+   ],
+   "h": "b421d9ee",
+   "oh": [
+    "9074f6bb",
+    "b421d9ee",
+    "b4f4a4f8",
+    "67f74f82"
+   ],
+   "knowledge_ids": [
+    "V0137"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0131-meaning",
+   "qid": "D13-007-V0131-meaning",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「いそがしい」的中文释义？",
+   "options": [
+    "忙",
+    "冷（天气/体感）",
+    "便宜",
+    "新"
+   ],
+   "h": "5c459214",
+   "oh": [
+    "5c459214",
+    "9d591f79",
+    "f5a25cd6",
+    "b59b202f"
+   ],
+   "knowledge_ids": [
+    "V0131"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0135-meaning",
+   "qid": "D13-007-V0135-meaning",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「元気」的中文释义？",
+   "options": [
+    "精神；健康；有活力",
+    "喜欢",
+    "方便；便利",
+    "安静；宁静"
+   ],
+   "h": "b4f4a4f8",
+   "oh": [
+    "b4f4a4f8",
+    "9074f6bb",
+    "b421d9ee",
+    "67f74f82"
+   ],
+   "knowledge_ids": [
+    "V0135"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0127-meaning",
+   "qid": "D13-007-V0127-meaning",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「おおきい」的中文释义？",
+   "options": [
+    "小",
+    "贵；高",
+    "便宜",
+    "大"
+   ],
+   "h": "2249efc6",
+   "oh": [
+    "a4510fe",
+    "599528b",
+    "f5a25cd6",
+    "2249efc6"
+   ],
+   "knowledge_ids": [
+    "V0127"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0125-meaning",
+   "qid": "D13-007-V0125-meaning",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「高い」的中文释义？",
+   "options": [
+    "便宜",
+    "好吃；美味",
+    "贵；高",
+    "大"
+   ],
+   "h": "599528b",
+   "oh": [
+    "f5a25cd6",
+    "2c306a59",
+    "599528b",
+    "2249efc6"
+   ],
+   "knowledge_ids": [
+    "V0125"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0122-meaning",
+   "qid": "D13-007-V0122-meaning",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「帰る」的中文释义？",
+   "options": [
+    "教；告诉",
+    "懂；明白",
+    "回；回家",
+    "起床；起来"
+   ],
+   "h": "e41c2df2",
+   "oh": [
+    "7682a1d4",
+    "b7d2ad13",
+    "e41c2df2",
+    "9ac0ba21"
+   ],
+   "knowledge_ids": [
+    "V0122"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-G0013-form",
+   "qid": "D13-007-G0013-form",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "选出符合下列意思的日语句子。\n从九点学习到五点。",
+   "options": [
+    "九時から五時まで勉強します。",
+    "授業は9時からです。",
+    "今から出発するとすれば、向こうに着くのは夜の九時ごろになる。",
+    "きのうは夜11時まで勉強しました。"
+   ],
+   "h": "3d71ffe1",
+   "oh": [
+    "3d71ffe1",
+    "8b730e4e",
+    "bc530aba",
+    "9c8caa55"
+   ],
+   "knowledge_ids": [
+    "G0013"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-007-V0130-meaning",
+   "qid": "D13-007-V0130-meaning",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「美味しい」的中文释义？",
+   "options": [
+    "忙",
+    "冷（天气/体感）",
+    "好吃；美味",
+    "大"
+   ],
+   "h": "2c306a59",
+   "oh": [
+    "5c459214",
+    "9d591f79",
+    "2c306a59",
+    "2249efc6"
+   ],
+   "knowledge_ids": [
+    "V0130"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0139-meaning",
+   "qid": "D13-007-V0139-meaning",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「とても」的中文释义？",
+   "options": [
+    "总是；平时",
+    "已经；再（一次）",
+    "稍微；一点",
+    "非常；很"
    ],
    "h": "89034998",
    "oh": [
-    "b953ba1d",
-    "198a84a8",
-    "89034998",
-    "fbacb33d"
-   ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0139"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0139-r-228dffdfdaa3",
-   "qid": "P-007-V0139-r-228dffdfdaa3",
-   "type": "mcq",
-   "prompt": "本课词条「とても」（非常；很）的假名读音是哪一项？",
-   "options": [
-    "とても",
-    "おちゃ",
-    "きんし",
-    "いつつ"
-   ],
-   "h": "828c7373",
-   "oh": [
-    "828c7373",
-    "984d9115",
-    "59ae75f2",
-    "8e084023"
-   ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0139"
-   ],
-   "source_day": 7,
-   "optional": true
-  },
-  {
-   "id": "P-007-V0140-m-1bd8926cf849",
-   "qid": "P-007-V0140-m-1bd8926cf849",
-   "type": "mcq",
-   "prompt": "本课词条「少し」（例句语境：稍微休息一下。）的释义是哪一项？",
-   "options": [
-    "稍微；一点",
-    "理发店",
-    "收银台",
-    "考试"
-   ],
-   "h": "98aebc48",
-   "oh": [
+    "2026a0f1",
+    "6954846c",
     "98aebc48",
-    "f5cb70bd",
-    "2e9c57a7",
-    "ae6c7125"
+    "89034998"
    ],
-   "day": 7,
-   "group": "vocab",
-   "capability": "meaning",
    "knowledge_ids": [
-    "V0140"
+    "V0139"
    ],
-   "source_day": 7,
-   "optional": true
+   "capability": "meaning",
+   "group": "vocab"
   },
   {
-   "id": "P-007-V0140-r-828e3158650a",
-   "qid": "P-007-V0140-r-828e3158650a",
+   "id": "D13-007-V0134-reading",
+   "qid": "D13-007-V0134-reading",
    "type": "mcq",
-   "prompt": "本课词条「少し」（稍微；一点）的假名读音是哪一项？",
+   "day": 7,
+   "prompt": "「好き」（喜欢）的假名读音是哪一项？",
    "options": [
-    "たくさん",
+    "すぐ",
+    "すき",
     "すこし",
-    "こうしゃ",
-    "だいどころ"
+    "すてき"
    ],
-   "h": "794b8356",
+   "h": "6803899b",
    "oh": [
-    "c6a24cd3",
+    "5303688c",
+    "6803899b",
     "794b8356",
-    "e3136446",
-    "fd65c954"
+    "d383a661"
    ],
-   "day": 7,
-   "group": "vocab",
+   "knowledge_ids": [
+    "V0134"
+   ],
    "capability": "reading",
-   "knowledge_ids": [
-    "V0140"
-   ],
-   "source_day": 7,
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "P-007-G0013-m-c7fe85c66b71",
-   "qid": "P-007-G0013-m-c7fe85c66b71",
+   "id": "D13-007-V0124-reading",
+   "qid": "D13-007-V0124-reading",
    "type": "mcq",
-   "prompt": "本课句型「から ～ まで」在以下语境中的释义是哪一项？ 例句：九時から五時まで勉強します。（从九点学习到五点。）",
-   "options": [
-    "从…到…",
-    "在／于／向…",
-    "老是…；一味…",
-    "甚至…／只要…就／正是…／连…都"
-   ],
-   "h": "1a214d9b",
-   "oh": [
-    "1a214d9b",
-    "fb7936b0",
-    "42d9f6bb",
-    "34b1c1be"
-   ],
    "day": 7,
-   "group": "grammar",
+   "prompt": "「分かる」（懂；明白）的假名读音是哪一项？",
+   "options": [
+    "わたる",
+    "わすれる",
+    "わかる",
+    "わたす"
+   ],
+   "h": "920172ec",
+   "oh": [
+    "aa3328e8",
+    "a181dcc0",
+    "920172ec",
+    "dc33779e"
+   ],
+   "knowledge_ids": [
+    "V0124"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0127-reading",
+   "qid": "D13-007-V0127-reading",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「大きい」（大）的假名读音是哪一项？",
+   "options": [
+    "おいしい",
+    "おきる",
+    "おしえる",
+    "おおきい"
+   ],
+   "h": "32b42684",
+   "oh": [
+    "fd2d59a0",
+    "17df00a1",
+    "40aed2ab",
+    "32b42684"
+   ],
+   "knowledge_ids": [
+    "V0127"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0133-reading",
+   "qid": "D13-007-V0133-reading",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「寒い」（冷）的假名读音是哪一项？",
+   "options": [
+    "さす",
+    "さむい",
+    "さかな",
+    "さびしい"
+   ],
+   "h": "7ba67fbc",
+   "oh": [
+    "934e99cb",
+    "7ba67fbc",
+    "859d6811",
+    "a8b259ea"
+   ],
+   "knowledge_ids": [
+    "V0133"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0122-reading",
+   "qid": "D13-007-V0122-reading",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「帰る」（回；回家）的假名读音是哪一项？",
+   "options": [
+    "かく",
+    "かける",
+    "かりる",
+    "かえる"
+   ],
+   "h": "92d3de17",
+   "oh": [
+    "4949a81f",
+    "4b75027e",
+    "c8c0c0d1",
+    "92d3de17"
+   ],
+   "knowledge_ids": [
+    "V0122"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0120-meaning",
+   "qid": "D13-007-V0120-meaning",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「借りる」的中文释义？",
+   "options": [
+    "懂；明白",
+    "借（入）；向人借",
+    "休息；请假；睡",
+    "回；回家"
+   ],
+   "h": "1cce165f",
+   "oh": [
+    "b7d2ad13",
+    "1cce165f",
+    "d355e08c",
+    "e41c2df2"
+   ],
+   "knowledge_ids": [
+    "V0120"
+   ],
    "capability": "meaning",
-   "knowledge_ids": [
-    "G0013"
-   ],
-   "source_day": 7,
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "P-007-G0013-u-e8998e156ca8",
-   "qid": "P-007-G0013-u-e8998e156ca8",
+   "id": "D13-007-V0129-reading",
+   "qid": "D13-007-V0129-reading",
    "type": "mcq",
-   "prompt": "课程中「から ～ まで」的接续说明是哪一项？ 例句：九時から五時まで勉強します。（从九点学习到五点。）",
-   "options": [
-    "五段动词词尾改お段+う；一段动词去る+よう；する→しよう；来る→来よう",
-    "五段 う段→あ段+せる；一段 去る+させる；カ変 来させる；サ変 させる",
-    "普通形/丁寧形 + から；普通形 + ので（名/な形 + なので）",
-    "名詞（时/处） + から + 名詞 + まで"
-   ],
-   "h": "cf19cdbb",
-   "oh": [
-    "e94522cd",
-    "1667df32",
-    "e5a90cb3",
-    "cf19cdbb"
-   ],
    "day": 7,
-   "group": "grammar",
-   "capability": "usage",
-   "knowledge_ids": [
-    "G0013"
+   "prompt": "「新しい」（新）的假名读音是哪一项？",
+   "options": [
+    "あかるい",
+    "あたたかい",
+    "あぶない",
+    "あたらしい"
    ],
-   "source_day": 7,
-   "optional": true
+   "h": "9d7e0976",
+   "oh": [
+    "f9797b5",
+    "cc774",
+    "eaf2a3a7",
+    "9d7e0976"
+   ],
+   "knowledge_ids": [
+    "V0129"
+   ],
+   "capability": "reading",
+   "group": "vocab"
   },
   {
-   "id": "P-007-G0014-m-c98c51a3728a",
-   "qid": "P-007-G0014-m-c98c51a3728a",
+   "id": "D13-007-G0014-context",
+   "qid": "D13-007-G0014-context",
    "type": "mcq",
-   "prompt": "本课句型「（场所）に ～ がある / いる」在以下语境中的释义是哪一项？ 例句：部屋に猫がいます。（房间里有猫。）",
-   "options": [
-    "正要…／正在…／刚…；在…时候；…之际",
-    "正当…的时候",
-    "有时会…／有时不…（泛指倾向）",
-    "（某地）有…"
-   ],
-   "h": "80fed725",
-   "oh": [
-    "2bcac3c9",
-    "69f0cec4",
-    "90596785",
-    "80fed725"
-   ],
    "day": 7,
-   "group": "grammar",
-   "capability": "meaning",
+   "prompt": "请选择「駅の前に店があります。」的中文意思。",
+   "options": [
+    "车站前有店。",
+    "我在车站前等朋友。",
+    "车站附近好像新开了一家咖啡店。",
+    "听说车站前的书店下个月要关门。"
+   ],
+   "h": "fce6736f",
+   "oh": [
+    "fce6736f",
+    "5dcca321",
+    "4d2eb8f1",
+    "b8c10faf"
+   ],
    "knowledge_ids": [
     "G0014"
    ],
-   "source_day": 7,
-   "optional": true
+   "capability": "usage",
+   "group": "grammar"
   },
   {
-   "id": "X-007-V0141-c",
-   "qid": "X-007-V0141-c",
+   "id": "D13-007-G0013-meaning",
+   "qid": "D13-007-G0013-meaning",
    "type": "mcq",
    "day": 7,
-   "prompt": "「いつも」的假名读音是？",
+   "prompt": "请选择「から ～ まで」所用句型的主要含义。",
    "options": [
-    "いつも",
-    "くろ",
-    "ばんぐみ",
-    "カー"
+    "…的…",
+    "从…到…",
+    "和…一起",
+    "…和…（全部列举）"
    ],
-   "h": "34094575",
+   "h": "1a214d9b",
    "oh": [
-    "34094575",
-    "eb4019c9",
-    "da50c0e9",
-    "fa922ce2"
+    "3fcba563",
+    "1a214d9b",
+    "5a007d86",
+    "9035b957"
    ],
    "knowledge_ids": [
-    "V0141"
-   ],
-   "capability": "reading",
-   "group": "vocab",
-   "optional": true
-  },
-  {
-   "id": "X-007-V0142-c",
-   "qid": "X-007-V0142-c",
-   "type": "mcq",
-   "day": 7,
-   "prompt": "「時々」的意思是？",
-   "options": [
-    "有时；时常",
-    "结束；了事",
-    "各位；诸位",
-    "无聊"
-   ],
-   "h": "16beb411",
-   "oh": [
-    "16beb411",
-    "366b5287",
-    "a9caef4",
-    "66a43e2f"
-   ],
-   "knowledge_ids": [
-    "V0142"
+    "G0013"
    ],
    "capability": "meaning",
-   "group": "vocab",
-   "optional": true
+   "group": "grammar"
   },
   {
-   "id": "X-007-V0143-c",
-   "qid": "X-007-V0143-c",
+   "id": "D13-007-V0119-reading",
+   "qid": "D13-007-V0119-reading",
    "type": "mcq",
    "day": 7,
-   "prompt": "「まだ」的假名读音是？",
+   "prompt": "「起きる」（起床；起来）的假名读音是哪一项？",
    "options": [
-    "ちょうさ",
-    "ゆき",
+    "おおきい",
+    "おいしい",
+    "おしえる",
+    "おきる"
+   ],
+   "h": "17df00a1",
+   "oh": [
+    "32b42684",
+    "fd2d59a0",
+    "40aed2ab",
+    "17df00a1"
+   ],
+   "knowledge_ids": [
+    "V0119"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0140-reading",
+   "qid": "D13-007-V0140-reading",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「少し」（稍微；一点）的假名读音是哪一项？",
+   "options": [
+    "すぐに",
+    "すぐ",
+    "すこし",
+    "すき"
+   ],
+   "h": "794b8356",
+   "oh": [
+    "9544f3a5",
+    "5303688c",
+    "794b8356",
+    "6803899b"
+   ],
+   "knowledge_ids": [
+    "V0140"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0124-meaning",
+   "qid": "D13-007-V0124-meaning",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「分かる」的中文释义？",
+   "options": [
+    "懂；明白",
+    "借（入）；向人借",
+    "回；回家",
+    "教；告诉"
+   ],
+   "h": "b7d2ad13",
+   "oh": [
+    "b7d2ad13",
+    "1cce165f",
+    "e41c2df2",
+    "7682a1d4"
+   ],
+   "knowledge_ids": [
+    "V0124"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0125-reading",
+   "qid": "D13-007-V0125-reading",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「高い」（贵；高）的假名读音是哪一项？",
+   "options": [
+    "たのしい",
+    "たかい",
+    "たのむ",
+    "ただしい"
+   ],
+   "h": "11920a1",
+   "oh": [
+    "29221a3",
+    "11920a1",
+    "c6bdda80",
+    "79f2a619"
+   ],
+   "knowledge_ids": [
+    "V0125"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0128-reading",
+   "qid": "D13-007-V0128-reading",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「小さい」（小）的假名读音是哪一项？",
+   "options": [
+    "ちがう",
+    "ちいさい",
+    "ちゃわん",
+    "ちかい"
+   ],
+   "h": "d5dd8fa9",
+   "oh": [
+    "c0373692",
+    "d5dd8fa9",
+    "4ac3c0ff",
+    "c0487fb3"
+   ],
+   "knowledge_ids": [
+    "V0128"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0126-meaning",
+   "qid": "D13-007-V0126-meaning",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「安い」的中文释义？",
+   "options": [
+    "冷（天气/体感）",
+    "便宜",
+    "贵；高",
+    "小"
+   ],
+   "h": "f5a25cd6",
+   "oh": [
+    "9d591f79",
+    "f5a25cd6",
+    "599528b",
+    "a4510fe"
+   ],
+   "knowledge_ids": [
+    "V0126"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0136-reading",
+   "qid": "D13-007-V0136-reading",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「静か」（安静；宁静）的假名读音是哪一项？",
+   "options": [
+    "しずか",
+    "しんけん",
+    "しんせん",
+    "しんせつ"
+   ],
+   "h": "859019fd",
+   "oh": [
+    "859019fd",
+    "e56f919b",
+    "6d879ccd",
+    "3688d938"
+   ],
+   "knowledge_ids": [
+    "V0136"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0129-meaning",
+   "qid": "D13-007-V0129-meaning",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「あたらしい」的中文释义？",
+   "options": [
+    "冷（天气/体感）",
+    "忙",
+    "新",
+    "大"
+   ],
+   "h": "b59b202f",
+   "oh": [
+    "9d591f79",
+    "5c459214",
+    "b59b202f",
+    "2249efc6"
+   ],
+   "knowledge_ids": [
+    "V0129"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0131-reading",
+   "qid": "D13-007-V0131-reading",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「忙しい」（忙）的假名读音是哪一项？",
+   "options": [
+    "いっしょ",
+    "いそがしい",
+    "いろいろ",
+    "いちばん"
+   ],
+   "h": "84812621",
+   "oh": [
+    "4febd3a6",
+    "84812621",
+    "8c5723f5",
+    "f5587e33"
+   ],
+   "knowledge_ids": [
+    "V0131"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0133-meaning",
+   "qid": "D13-007-V0133-meaning",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「寒い」的中文释义？",
+   "options": [
+    "好吃；美味",
+    "小",
+    "冷（天气/体感）",
+    "贵；高"
+   ],
+   "h": "9d591f79",
+   "oh": [
+    "2c306a59",
+    "a4510fe",
+    "9d591f79",
+    "599528b"
+   ],
+   "knowledge_ids": [
+    "V0133"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-G0014-form",
+   "qid": "D13-007-G0014-form",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "选出符合下列意思的日语句子。\n房间里有猫。",
+   "options": [
+    "引っ越したばかりで、部屋はまだ段ボールだらけだ。",
+    "部屋に猫がいます。",
+    "この部屋はとても静かです。",
+    "かばんの中にペンとノートがあります。"
+   ],
+   "h": "dcb9e3b7",
+   "oh": [
+    "b0ed2e24",
+    "dcb9e3b7",
+    "497e6f2c",
+    "3c1c4147"
+   ],
+   "knowledge_ids": [
+    "G0014"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-007-V0130-reading",
+   "qid": "D13-007-V0130-reading",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「美味しい」（好吃；美味）的假名读音是哪一项？",
+   "options": [
+    "おいしい",
+    "おしえる",
+    "おきる",
+    "おおきい"
+   ],
+   "h": "fd2d59a0",
+   "oh": [
+    "fd2d59a0",
+    "40aed2ab",
+    "17df00a1",
+    "32b42684"
+   ],
+   "knowledge_ids": [
+    "V0130"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0136-meaning",
+   "qid": "D13-007-V0136-meaning",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「静か」的中文释义？",
+   "options": [
+    "安静；宁静",
+    "精神；健康；有活力",
+    "方便；便利",
+    "喜欢"
+   ],
+   "h": "67f74f82",
+   "oh": [
+    "67f74f82",
+    "b4f4a4f8",
+    "b421d9ee",
+    "9074f6bb"
+   ],
+   "knowledge_ids": [
+    "V0136"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0140-meaning",
+   "qid": "D13-007-V0140-meaning",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「少し」的中文释义？",
+   "options": [
+    "总是；平时",
+    "稍微；一点",
+    "有时；时常",
+    "非常；很"
+   ],
+   "h": "98aebc48",
+   "oh": [
+    "2026a0f1",
+    "98aebc48",
+    "16beb411",
+    "89034998"
+   ],
+   "knowledge_ids": [
+    "V0140"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0134-meaning",
+   "qid": "D13-007-V0134-meaning",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「好き」的中文释义？",
+   "options": [
+    "安静；宁静",
+    "精神；健康；有活力",
+    "方便；便利",
+    "喜欢"
+   ],
+   "h": "9074f6bb",
+   "oh": [
+    "67f74f82",
+    "b4f4a4f8",
+    "b421d9ee",
+    "9074f6bb"
+   ],
+   "knowledge_ids": [
+    "V0134"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-G0014-meaning",
+   "qid": "D13-007-G0014-meaning",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "请选择「（场所）に ～ がある / いる」所用句型的主要含义。",
+   "options": [
+    "…是…",
+    "（某地）有…",
+    "…不是…",
+    "…（过去）是…"
+   ],
+   "h": "80fed725",
+   "oh": [
+    "bb8e19d0",
+    "80fed725",
+    "f19f34cd",
+    "575da125"
+   ],
+   "knowledge_ids": [
+    "G0014"
+   ],
+   "capability": "meaning",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-007-V0135-reading",
+   "qid": "D13-007-V0135-reading",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「元気」（精神；健康；有活力）的假名读音是哪一项？",
+   "options": [
+    "げんご",
+    "げんかん",
+    "げんきん",
+    "げんき"
+   ],
+   "h": "711b9f4d",
+   "oh": [
+    "581b77f2",
+    "e4853058",
+    "ec95da7a",
+    "711b9f4d"
+   ],
+   "knowledge_ids": [
+    "V0135"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0120-reading",
+   "qid": "D13-007-V0120-reading",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「借りる」（借；向人借）的假名读音是哪一项？",
+   "options": [
+    "かす",
+    "かえす",
+    "かえる",
+    "かりる"
+   ],
+   "h": "c8c0c0d1",
+   "oh": [
+    "5749be29",
+    "e4d2cc2d",
+    "92d3de17",
+    "c8c0c0d1"
+   ],
+   "knowledge_ids": [
+    "V0120"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0126-reading",
+   "qid": "D13-007-V0126-reading",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「安い」（便宜）的假名读音是哪一项？",
+   "options": [
+    "やすむ",
+    "やすい",
+    "やま",
+    "やさしい"
+   ],
+   "h": "35948b8e",
+   "oh": [
+    "7993639a",
+    "35948b8e",
+    "798a3dd7",
+    "d0354fa1"
+   ],
+   "knowledge_ids": [
+    "V0126"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0119-meaning",
+   "qid": "D13-007-V0119-meaning",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「起きる」的中文释义？",
+   "options": [
+    "借（入）；向人借",
+    "起床；起来",
+    "回；回家",
+    "教；告诉"
+   ],
+   "h": "9ac0ba21",
+   "oh": [
+    "1cce165f",
+    "9ac0ba21",
+    "e41c2df2",
+    "7682a1d4"
+   ],
+   "knowledge_ids": [
+    "V0119"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0143-recall",
+   "qid": "D13-007-V0143-recall",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「还；尚未」对应哪个日语词？",
+   "options": [
     "まだ",
-    "よる"
+    "もう",
+    "とても",
+    "いつも"
    ],
    "h": "5cb83893",
    "oh": [
-    "90827900",
-    "a72621dc",
     "5cb83893",
-    "ed0dc7f4"
+    "42301039",
+    "828c7373",
+    "34094575"
    ],
    "knowledge_ids": [
     "V0143"
    ],
-   "capability": "reading",
-   "group": "vocab",
-   "optional": true
+   "capability": "meaning",
+   "group": "vocab"
   },
   {
-   "id": "X-007-V0144-c",
-   "qid": "X-007-V0144-c",
+   "id": "D13-007-V0144-recall",
+   "qid": "D13-007-V0144-recall",
    "type": "mcq",
    "day": 7,
-   "prompt": "「もう」的意思是？",
+   "prompt": "「已经；再」对应哪个日语词？",
    "options": [
-    "家庭",
-    "已经；再（一次）",
-    "自杀",
-    "每天早上"
+    "いつも",
+    "とても",
+    "すこし",
+    "もう"
    ],
-   "h": "6954846c",
+   "h": "42301039",
    "oh": [
-    "e4febd2c",
-    "6954846c",
-    "4c1c7787",
-    "740cb77a"
+    "34094575",
+    "828c7373",
+    "794b8356",
+    "42301039"
    ],
    "knowledge_ids": [
     "V0144"
    ],
    "capability": "meaning",
-   "group": "vocab",
-   "optional": true
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0143-meaning",
+   "qid": "D13-007-V0143-meaning",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「まだ」的中文释义？",
+   "options": [
+    "已经；再（一次）",
+    "还；尚未",
+    "总是；平时",
+    "非常；很"
+   ],
+   "h": "cea2b1e0",
+   "oh": [
+    "6954846c",
+    "cea2b1e0",
+    "2026a0f1",
+    "89034998"
+   ],
+   "knowledge_ids": [
+    "V0143"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0141-meaning",
+   "qid": "D13-007-V0141-meaning",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「いつも」的中文释义？",
+   "options": [
+    "稍微；一点",
+    "有时；时常",
+    "还；尚未",
+    "总是；平时"
+   ],
+   "h": "2026a0f1",
+   "oh": [
+    "98aebc48",
+    "16beb411",
+    "cea2b1e0",
+    "2026a0f1"
+   ],
+   "knowledge_ids": [
+    "V0141"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0142-meaning",
+   "qid": "D13-007-V0142-meaning",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「時々」的中文释义？",
+   "options": [
+    "总是；平时",
+    "稍微；一点",
+    "非常；很",
+    "有时；时常"
+   ],
+   "h": "16beb411",
+   "oh": [
+    "2026a0f1",
+    "98aebc48",
+    "89034998",
+    "16beb411"
+   ],
+   "knowledge_ids": [
+    "V0142"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0141-recall",
+   "qid": "D13-007-V0141-recall",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「总是；平时」对应哪个日语词？",
+   "options": [
+    "いつも",
+    "ときどき",
+    "すこし",
+    "まだ"
+   ],
+   "h": "34094575",
+   "oh": [
+    "34094575",
+    "42c23bd8",
+    "794b8356",
+    "5cb83893"
+   ],
+   "knowledge_ids": [
+    "V0141"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0142-reading",
+   "qid": "D13-007-V0142-reading",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「時々」（有时；时常）的假名读音是哪一项？",
+   "options": [
+    "ともに",
+    "とても",
+    "とくに",
+    "ときどき"
+   ],
+   "h": "42c23bd8",
+   "oh": [
+    "3321d4ac",
+    "828c7373",
+    "291b1e99",
+    "42c23bd8"
+   ],
+   "knowledge_ids": [
+    "V0142"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-007-V0144-meaning",
+   "qid": "D13-007-V0144-meaning",
+   "type": "mcq",
+   "day": 7,
+   "prompt": "「もう」的中文释义？",
+   "options": [
+    "非常；很",
+    "已经；再（一次）",
+    "稍微；一点",
+    "总是；平时"
+   ],
+   "h": "6954846c",
+   "oh": [
+    "89034998",
+    "6954846c",
+    "98aebc48",
+    "2026a0f1"
+   ],
+   "knowledge_ids": [
+    "V0144"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
   }
  ],
  "listening_material": null

@@ -38,26 +38,98 @@ function showAll(btn){
  },1000);
  PEEK=state;
 }
-var RESULTS={},RATINGS={},STARTED=Date.now();
-function saveLocal(){try{localStorage.setItem(STORE+'state.'+DAY,JSON.stringify({results:RESULTS,ratings:RATINGS}))}catch(e){}}
-function restore(){try{var s=JSON.parse(localStorage.getItem(STORE+'state.'+DAY)||'null');
- if(s&&s.results)RESULTS=s.results||{};if(s&&s.ratings)RATINGS=s.ratings||{};}catch(e){}
- Object.keys(RESULTS).forEach(function(qid){
-  var wrap=$('.q[data-qid="'+qid+'"]');if(!wrap)return;
-  var r=RESULTS[qid];wrap.setAttribute('data-done','1');
-  $$('.opt',wrap).forEach(function(x){x.querySelector('input').disabled=true;
-   if(x.getAttribute('data-oh')===wrap.getAttribute('data-h'))x.classList.add('correct');
-   if(!r.correct&&x.querySelector('span').textContent===r.answer)x.classList.add('wrong')});
-  var fb=document.createElement('div');fb.className='fb '+(r.correct?'ok':'bad');
-  fb.textContent=r.correct?'答对了。':'本题未答对，正确项已标绿。';wrap.appendChild(fb);
- });
+var QUESTIONS=$$('.q'), RESULTS={}, RATINGS={}, RETRY=null, STARTED=Date.now();
+function saveLocal(){try{localStorage.setItem(STORE+'state.'+DAY,JSON.stringify({
+ results:RESULTS,ratings:RATINGS,retry:RETRY}))}catch(e){}}
+function restore(){
+ try{
+  var saved=JSON.parse(localStorage.getItem(STORE+'state.'+DAY)||'null');
+  if(saved){
+   RATINGS=saved.ratings||{};
+   QUESTIONS.forEach(function(q){
+    var id=q.dataset.qid, r=(saved.results||{})[id];
+    if(r&&$$('.opt',q).some(function(opt){return $('span',opt).textContent===r.answer})){
+     RESULTS[id]=r;
+    }
+   });
+   if(saved.retry&&Array.isArray(saved.retry.ids)&&saved.retry.ids.length&&
+      saved.retry.ids.every(function(id){return RESULTS[id]&&!RESULTS[id].correct})){
+    RETRY=saved.retry;
+   }
+  }
+ }catch(e){}
  Object.keys(RATINGS).forEach(function(kid){$$('[data-rate][data-kid="'+kid+'"]').forEach(function(b){
   b.setAttribute('aria-pressed',String(b.getAttribute('data-rate')===RATINGS[kid]))})});
+ renderQuestions();
+}
+function activeResults(){return RETRY?RETRY.results:RESULTS}
+function wrongIds(){return Object.values(activeResults()).filter(function(r){return !r.correct})
+ .map(function(r){return r.qid})}
+function renderQuestion(q,r){
+ q.toggleAttribute('data-done',!!r);
+ $$('.opt',q).forEach(function(opt){
+  var input=$('input',opt), selected=!!r&&$('span',opt).textContent===r.answer;
+  input.disabled=!!r;
+  input.checked=selected;
+  opt.classList.toggle('correct',!!r&&opt.dataset.oh===q.dataset.h);
+  opt.classList.toggle('wrong',selected&&!r.correct);
+ });
+ var fb=$('.fb',q);
+ fb.hidden=!r;
+ fb.classList.toggle('ok',!!r&&r.correct);
+ fb.classList.toggle('bad',!!r&&!r.correct);
+ fb.textContent=r?(r.correct?'答对了。':'答错了，正确项已标绿。'):'';
+}
+function renderQuestions(){
+ var results=activeResults(), visible=0;
+ QUESTIONS.forEach(function(q){
+  q.hidden=!!RETRY&&!RETRY.ids.includes(q.dataset.qid);
+  if(q.hidden)return;
+  $('.q-number',q).textContent=++visible+'. ';
+  renderQuestion(q,results[q.dataset.qid]);
+ });
  updateScore();
 }
-function updateScore(){var all=$$('.q'),done=Object.keys(RESULTS).length,
- right=Object.keys(RESULTS).filter(function(k){return RESULTS[k].correct}).length;
- var el=$('#qscore');if(el)el.textContent='已答 '+done+' / '+all.length+'　答对 '+right}
+function updateScore(){
+ var el=$('#qscore'), button=$('#retryWrong');
+ if(!el||!button)return;
+ var wrong=wrongIds().length, done=Object.keys(activeResults()).length;
+ var total=RETRY?RETRY.ids.length:QUESTIONS.length;
+ el.textContent=(RETRY?'错题重练 · ':'')+'已答 '+done+' / '+total+'　答对 '+(done-wrong)
+  +(RETRY&&done===total&&!wrong?' · 本轮错题已全部答对':'');
+ button.disabled=!wrong||(!!RETRY&&done<total);
+ button.textContent=wrong?'错题重练（'+wrong+'）':'错题重练';
+ $('#showAllQuestions').hidden=!RETRY;
+}
+function startRetry(){
+ var ids=wrongIds();if(!ids.length)return;
+ RETRY={ids:ids,results:{}};
+ STARTED=Date.now();
+ QUESTIONS.forEach(function(q){
+  if(!ids.includes(q.dataset.qid))return;
+  var options=$$('.opt',q);
+  // Rotate by a random nonzero offset so the previous correct position always changes.
+  var shift=1+Math.floor(Math.random()*(options.length-1));
+  var list=$('.opts',q);
+  options.slice(shift).concat(options.slice(0,shift)).forEach(function(opt){list.appendChild(opt)});
+ });
+ saveLocal();renderQuestions();$('#qscore').focus();
+}
+var retryButton=$('#retryWrong'), allQuestionsButton=$('#showAllQuestions');
+if(retryButton)retryButton.addEventListener('click',startRetry);
+if(allQuestionsButton)allQuestionsButton.addEventListener('click',function(){
+ RETRY=null;saveLocal();renderQuestions();$('#qscore').focus();
+});
+document.addEventListener('change',function(e){
+ var input=e.target, lab=input.closest('.q .opt');
+ if(!lab||!input.checked)return;
+ var q=lab.closest('.q');if(q.hasAttribute('data-done'))return;
+ var answer=$('span',lab).textContent, id=q.dataset.qid;
+ var result={qid:id,answer:answer,correct:fnv(answer)===q.dataset.h,
+  hinted:false,revealed:false,seconds:Math.min(86400,Math.round((Date.now()-STARTED)/1000))};
+ activeResults()[id]=result;
+ renderQuestion(q,result);saveLocal();updateScore();
+});
 function speak(text,btn){
  if(!window.speechSynthesis){if(btn)btn.textContent='此设备不支持朗读';return}
  var u=new SpeechSynthesisUtterance(text);u.lang='ja-JP';u.rate=.95;
@@ -77,20 +149,6 @@ document.addEventListener('click',function(e){
  if(rt){var kid=rt.getAttribute('data-kid'),v=rt.getAttribute('data-rate');RATINGS[kid]=v;
   $$('[data-rate][data-kid="'+kid+'"]').forEach(function(b){b.setAttribute('aria-pressed',String(b===rt))});
   saveLocal();return}
- var lab=e.target.closest('.q .opt');
- if(lab){
-  var wrap=lab.closest('.q');if(wrap.getAttribute('data-done'))return;
-  wrap.setAttribute('data-done','1');
-  var answer=lab.querySelector('span').textContent;
-  var ok=fnv(answer)===wrap.getAttribute('data-h');
-  lab.classList.add(ok?'correct':'wrong');
-  $$('.opt',wrap).forEach(function(x){x.querySelector('input').disabled=true;
-   if(x.getAttribute('data-oh')===wrap.getAttribute('data-h'))x.classList.add('correct')});
-  var fb=document.createElement('div');fb.className='fb '+(ok?'ok':'bad');
-  fb.textContent=ok?'答对了。':'本题未答对，正确项已标绿。';wrap.appendChild(fb);
-  RESULTS[wrap.getAttribute('data-qid')]={qid:wrap.getAttribute('data-qid'),answer:answer,
-   correct:ok,hinted:false,revealed:false,seconds:Math.round((Date.now()-STARTED)/1000)};
-  saveLocal();updateScore();return}
 });
 document.addEventListener('keydown',function(e){
  if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('mask')){

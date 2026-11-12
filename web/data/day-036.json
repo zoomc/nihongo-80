@@ -2,12 +2,12 @@
  "day": 36,
  "phase": "P2",
  "theme": "受身形（～られる）、使役形（～せる／させる）、～てみる / ～てしまう / ～ておく",
- "can_do": "用「受身形（～られる）、使役形（～せる／させる）、～てみる / ～てしまう / ～ておく」造两句自己的话，表达：被…／（迷惑）遭遇…；让／使…（做）；试着…／…完了／事先…",
+ "can_do": "用「受身形（～られる）、使役形（～せる／させる）、～てみる / ～てしまう / ～ておく」各造一句自己的话，表达：被…／（迷惑）遭遇…；让／使…（做）；试着…／…完了／事先…",
  "minutes": 60,
  "blocks": [
   {
    "type": "复习",
-   "min": 10,
+   "min": 5,
    "desc": "到期项优先；未完成顺延，不追赶"
   },
   {
@@ -17,23 +17,23 @@
   },
   {
    "type": "语法",
-   "min": 6,
+   "min": 5,
    "desc": "受身形（～られる）、使役形（～せる／させる）、～てみる / ～てしまう / ～ておく"
   },
   {
    "type": "听力",
-   "min": 8,
-   "desc": "原创 TTS + 3 道理解题；时长为估计，非真人音频"
+   "min": 7,
+   "desc": "先听并复述主旨，再找两个细节，最后核对脚本（原创合成语音）"
   },
   {
    "type": "句子输出",
-   "min": 5,
-   "desc": "3道选句必做，7道拓展；答后核对"
+   "min": 4,
+   "desc": "每条新语法独立说一句，和例句对照"
   },
   {
    "type": "练习",
-   "min": 5,
-   "desc": "6 题即时自评"
+   "min": 13,
+   "desc": "优先做当天必学词与语法，答完重练错题"
   },
   {
    "type": "会话",
@@ -2291,1359 +2291,1229 @@
  ],
  "questions": [
   {
-   "id": "Q-036-K0-8486e768bbc0",
-   "qid": "Q-036-K0-8486e768bbc0",
+   "id": "D13-036-V0939-meaning",
+   "qid": "D13-036-V0939-meaning",
    "type": "mcq",
-   "prompt": "汉字「朝」的一个常用读音是？",
-   "options": [
-    "よろこ.ぶ",
-    "チョウ",
-    "そ.る",
-    "は.る"
-   ],
-   "h": "f271e9b5",
-   "oh": [
-    "2798d767",
-    "f271e9b5",
-    "a2baed5b",
-    "4ad76501"
-   ],
-   "knowledge_ids": [
-    "K0096"
-   ]
-  },
-  {
-   "id": "Q-036-K1-4e5418d8cab2",
-   "qid": "Q-036-K1-4e5418d8cab2",
-   "type": "mcq",
-   "prompt": "汉字「飯」的一个常用读音是？",
-   "options": [
-    "-たち",
-    "くら.い",
-    "ハン",
-    "やっつ"
-   ],
-   "h": "433db37",
-   "oh": [
-    "25a2450c",
-    "76d367bf",
-    "433db37",
-    "1f2f61c"
-   ],
-   "knowledge_ids": [
-    "K0097"
-   ]
-  },
-  {
-   "id": "Q-036-G-e8afac202132",
-   "qid": "Q-036-G-e8afac202132",
-   "type": "mcq",
-   "prompt": "句型「受身形（～られる）」的意思是？",
-   "options": [
-    "大概…吧",
-    "被…／（迷惑）遭遇…",
-    "试着做…（看看效果）",
-    "打算…；计划…"
-   ],
-   "h": "33a03308",
-   "oh": [
-    "c608c99f",
-    "33a03308",
-    "5cf05d55",
-    "847458af"
-   ],
-   "knowledge_ids": [
-    "G0049"
-   ]
-  },
-  {
-   "id": "A045-1-95e0cfc2adbf",
-   "qid": "A045-1-95e0cfc2adbf",
-   "type": "mcq",
-   "prompt": "水曜日は何時に開きますか。",
-   "options": [
-    "九時",
-    "八時",
-    "十時",
-    "開かない"
-   ],
-   "h": "ab7969be",
-   "oh": [
-    "ab7969be",
-    "d9e5b178",
-    "a6e3cc8a",
-    "d212b62d"
-   ],
-   "passage": "駅前の図書館は月曜日が休みです。火曜日から金曜日は九時に開きます。",
-   "knowledge_ids": []
-  },
-  {
-   "id": "A045-2-4056d30a2f89",
-   "qid": "A045-2-4056d30a2f89",
-   "type": "mcq",
-   "prompt": "先に何をしますか。",
-   "options": [
-    "友達に本を借りる",
-    "家へ帰る",
-    "映画を見る",
-    "駅で友達を待つ"
-   ],
-   "h": "5cc99339",
-   "oh": [
-    "22fe68fd",
-    "b9cacb06",
-    "659ab78",
-    "5cc99339"
-   ],
-   "passage": "友達と映画を見ます。映画の前に、駅で友達を待ちます。",
-   "knowledge_ids": []
-  },
-  {
-   "id": "A045-3-0ac0bfb3d191",
-   "qid": "A045-3-0ac0bfb3d191",
-   "type": "mcq",
-   "prompt": "文に合うものはどれですか。",
-   "options": [
-    "飲みで",
-    "飲むて",
-    "飲んだて",
-    "飲んで"
-   ],
-   "h": "5cd5290f",
-   "oh": [
-    "6f6f46bb",
-    "4e60354b",
-    "9a6ec790",
-    "5cd5290f"
-   ],
-   "passage": "毎朝コーヒーを___から、会社へ行きます。",
-   "knowledge_ids": []
-  },
-  {
-   "id": "L-036-0-2ea4c3d87d7f",
-   "qid": "L-036-0-2ea4c3d87d7f",
-   "type": "mcq",
-   "prompt": "予約は何時ですか。",
-   "options": [
-    "午後四時",
-    "午後二時",
-    "午前九時",
-    "午後三時"
-   ],
-   "h": "dee7e18f",
-   "oh": [
-    "9e488a4",
-    "dee7e18f",
-    "1cb7bb1",
-    "26dbec4e"
-   ],
-   "knowledge_ids": []
-  },
-  {
-   "id": "L-036-1-badeec9a5786",
-   "qid": "L-036-1-badeec9a5786",
-   "type": "mcq",
-   "prompt": "何で病院へ行きますか。",
-   "options": [
-    "バス",
-    "自分の車",
-    "電車",
-    "タクシー"
-   ],
-   "h": "be1e7682",
-   "oh": [
-    "be1e7682",
-    "2511ebb5",
-    "519df1f0",
-    "dfabbe50"
-   ],
-   "knowledge_ids": []
-  },
-  {
-   "id": "L-036-2-290616c48eee",
-   "qid": "L-036-2-290616c48eee",
-   "type": "mcq",
-   "prompt": "入口で名前を伝えた後、何を書きますか。",
-   "options": [
-    "住所",
-    "予約表",
-    "問診票",
-    "お礼の手紙"
-   ],
-   "h": "a233f2ac",
-   "oh": [
-    "11a23d5a",
-    "503c82f3",
-    "a233f2ac",
-    "fd468fa7"
-   ],
-   "knowledge_ids": []
-  },
-  {
-   "id": "P-036-00-f589b3749975",
-   "qid": "P-036-00-f589b3749975",
-   "type": "mcq",
-   "prompt": "为什么没跟他跳舞？",
-   "options": [
-    "なぜ彼と踊らなかったの？",
-    "彼は１０年級に在学中だ。",
-    "トムとフランクは親友だ。",
-    "新聞の記事を読みました。"
-   ],
-   "h": "afc9d668",
-   "oh": [
-    "afc9d668",
-    "bf462547",
-    "75bb8c2d",
-    "54f405f6"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-036-01-d5675c582e3e",
-   "qid": "P-036-01-d5675c582e3e",
-   "type": "mcq",
-   "prompt": "母亲听到那个消息很吃惊。",
-   "options": [
-    "それは翼の全長が約４インチある。",
-    "スケートはとてもおもしろかった。",
-    "その城は１６１０年に建てられた。",
-    "母はそのニュースを聞いて驚いた。"
-   ],
-   "h": "23a363a8",
-   "oh": [
-    "18490b8d",
-    "ebd819a3",
-    "6b28f1e6",
-    "23a363a8"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-036-02-acbd7ada0064",
-   "qid": "P-036-02-acbd7ada0064",
-   "type": "mcq",
-   "prompt": "在庙会上吃了龙虾。",
-   "options": [
-    "その町はロンドンのすぐ北にある。",
-    "お祭りでロブスターを食べました。",
-    "ムーリエルは２０歳になりました。",
-    "こ、こら！ナニやっとるかぁぁ！！"
-   ],
-   "h": "6e738748",
-   "oh": [
-    "efe3c905",
-    "6e738748",
-    "18597f07",
-    "1b91f40"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-036-V0926-m-6e82667bd83b",
-   "qid": "P-036-V0926-m-6e82667bd83b",
-   "type": "mcq",
-   "prompt": "本课词条「腕」（例句语境：请让我看看受伤的胳膊。）的释义是哪一项？",
-   "options": [
-    "胳膊；本事",
-    "祈祷；祝愿",
-    "事态",
-    "地区"
-   ],
-   "h": "f06b26ec",
-   "oh": [
-    "f06b26ec",
-    "2dc09b11",
-    "ed543891",
-    "86ef2e8f"
-   ],
    "day": 36,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0926"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0926-r-e44d852dc7bf",
-   "qid": "P-036-V0926-r-e44d852dc7bf",
-   "type": "mcq",
-   "prompt": "本课词条「腕」（胳膊；本事）的假名读音是哪一项？",
-   "options": [
-    "あん",
-    "しょくじ",
-    "トップ",
-    "うで"
-   ],
-   "h": "9160a2fa",
-   "oh": [
-    "9569a3a2",
-    "2e32f134",
-    "961eded1",
-    "9160a2fa"
-   ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0926"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0927-m-50acb66a30f8",
-   "qid": "P-036-V0927-m-50acb66a30f8",
-   "type": "mcq",
-   "prompt": "本课词条「うまい」（例句语境：这话也太美了，不像是真的。）的释义是哪一项？",
-   "options": [
-    "稍微；少许",
-    "好吃；擅长",
-    "给（敬）",
-    "自杀"
-   ],
-   "h": "47c5a7a",
-   "oh": [
-    "4fc65d12",
-    "47c5a7a",
-    "feb03933",
-    "4c1c7787"
-   ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0927"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0927-r-02a6ff61a345",
-   "qid": "P-036-V0927-r-02a6ff61a345",
-   "type": "mcq",
-   "prompt": "本课词条「うまい」（好吃；擅长）的假名读音是哪一项？",
-   "options": [
-    "カーテン",
-    "ねずみ",
-    "うまい",
-    "ガス"
-   ],
-   "h": "269b9513",
-   "oh": [
-    "aae9c98d",
-    "6b49edfb",
-    "269b9513",
-    "36eea0f6"
-   ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0927"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0928-m-a16d75eda3b5",
-   "qid": "P-036-V0928-m-a16d75eda3b5",
-   "type": "mcq",
-   "prompt": "本课词条「裏」（例句语境：鞋底粘上了口香糖。）的释义是哪一项？",
-   "options": [
-    "背面；里面",
-    "重要；宝贵",
-    "研究",
-    "以下"
-   ],
-   "h": "b8054e22",
-   "oh": [
-    "b8054e22",
-    "eb777a36",
-    "fddfee2f",
-    "2241b771"
-   ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0928"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0928-r-ab76f3ef982b",
-   "qid": "P-036-V0928-r-ab76f3ef982b",
-   "type": "mcq",
-   "prompt": "本课词条「裏」（背面；里面）的假名读音是哪一项？",
-   "options": [
-    "うら",
-    "おつり",
-    "きぶん",
-    "となり"
-   ],
-   "h": "e3612410",
-   "oh": [
-    "e3612410",
-    "19460d63",
-    "e5358f3b",
-    "5277dcf7"
-   ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0928"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0929-m-d680996ab283",
-   "qid": "P-036-V0929-m-d680996ab283",
-   "type": "mcq",
-   "prompt": "本课词条「売り場」（例句语境：零食区在哪儿？）的释义是哪一项？",
-   "options": [
-    "十字路口",
-    "卖场；柜台",
-    "裸体；光着",
-    "扣子；按钮"
-   ],
-   "h": "4daa10ca",
-   "oh": [
-    "db519aeb",
-    "4daa10ca",
-    "1d0c80ec",
-    "5693860c"
-   ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0929"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0929-r-2e8c43bd96cb",
-   "qid": "P-036-V0929-r-2e8c43bd96cb",
-   "type": "mcq",
-   "prompt": "本课词条「売り場」（卖场；柜台）的假名读音是哪一项？",
-   "options": [
-    "みる",
-    "きし",
-    "こんばん",
-    "うりば"
-   ],
-   "h": "63d9eb3b",
-   "oh": [
-    "db57d9f",
-    "616d235d",
-    "954d9fce",
-    "63d9eb3b"
-   ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0929"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0930-m-67baef44c882",
-   "qid": "P-036-V0930-m-67baef44c882",
-   "type": "mcq",
-   "prompt": "本课词条「うれしい」（例句语境：能再见到你我很高兴。）的释义是哪一项？",
-   "options": [
-    "鸡肉",
-    "高兴；开心",
-    "兴盛",
-    "非洲"
-   ],
-   "h": "b0276173",
-   "oh": [
-    "a7e8ebff",
-    "b0276173",
-    "62da60e8",
-    "9b0b5d49"
-   ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0930"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0930-r-ec4e698b091c",
-   "qid": "P-036-V0930-r-ec4e698b091c",
-   "type": "mcq",
-   "prompt": "本课词条「うれしい」（高兴；开心）的假名读音是哪一项？",
-   "options": [
-    "はいゆう",
-    "じどう",
-    "うれしい",
-    "きつい"
-   ],
-   "h": "62614984",
-   "oh": [
-    "a927ee9a",
-    "e546c864",
-    "62614984",
-    "a6255e50"
-   ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0930"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0931-m-10f1e4f6665e",
-   "qid": "P-036-V0931-m-10f1e4f6665e",
-   "type": "mcq",
-   "prompt": "本课词条「うん」（例句语境：嗯，到假期结束就行。）的释义是哪一项？",
-   "options": [
-    "奖；奖项",
-    "或者；也许",
-    "嗯；对",
-    "身高；背"
-   ],
-   "h": "86a840b2",
-   "oh": [
-    "a366323b",
-    "43de378a",
-    "86a840b2",
-    "a88687a1"
-   ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0931"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0931-r-44c8e2edd5ef",
-   "qid": "P-036-V0931-r-44c8e2edd5ef",
-   "type": "mcq",
-   "prompt": "本课词条「うん」（嗯；对）的假名读音是哪一项？",
-   "options": [
-    "かいけい",
-    "うん",
-    "しょくたく",
-    "しょうひ"
-   ],
-   "h": "dd611a9e",
-   "oh": [
-    "1c607a1f",
-    "dd611a9e",
-    "151683aa",
-    "1a53e897"
-   ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0931"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0932-m-f4a0f54e7328",
-   "qid": "P-036-V0932-m-f4a0f54e7328",
-   "type": "mcq",
-   "prompt": "本课词条「運転手」（例句语境：司机提高了车速。）的释义是哪一项？",
-   "options": [
-    "司机",
-    "冷气",
-    "适合",
-    "梅；梅子"
-   ],
-   "h": "8fcb1707",
-   "oh": [
-    "8fcb1707",
-    "1ef5fb46",
-    "f26537",
-    "42f9fa34"
-   ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0932"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0932-r-b2610fd1ff5b",
-   "qid": "P-036-V0932-r-b2610fd1ff5b",
-   "type": "mcq",
-   "prompt": "本课词条「運転手」（司机）的假名读音是哪一项？",
-   "options": [
-    "のき",
-    "うんてんしゅ",
-    "のこり",
-    "ちゅうがっこう"
-   ],
-   "h": "cdfc49c5",
-   "oh": [
-    "a7c3ff34",
-    "cdfc49c5",
-    "f7645324",
-    "a135c58b"
-   ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0932"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0933-m-7ff65b60b422",
-   "qid": "P-036-V0933-m-7ff65b60b422",
-   "type": "mcq",
-   "prompt": "本课词条「運動」（例句语境：一周一次也行，要运动。）的释义是哪一项？",
-   "options": [
-    "极其",
-    "运动；锻炼",
-    "角；犄角",
-    "负责人员"
-   ],
-   "h": "1a1e4b3d",
-   "oh": [
-    "3e30380e",
-    "1a1e4b3d",
-    "d68a1088",
-    "35b11e3d"
-   ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0933"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0933-r-a17f38805cb4",
-   "qid": "P-036-V0933-r-a17f38805cb4",
-   "type": "mcq",
-   "prompt": "本课词条「運動」（运动；锻炼）的假名读音是哪一项？",
-   "options": [
-    "しょうねん",
-    "けいじ",
-    "うんどう",
-    "いち"
-   ],
-   "h": "d928bd69",
-   "oh": [
-    "35d8a87f",
-    "63d603d0",
-    "d928bd69",
-    "7f5c0976"
-   ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0933"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0934-m-03337f4dba18",
-   "qid": "P-036-V0934-m-03337f4dba18",
-   "type": "mcq",
-   "prompt": "本课词条「エスカレーター」（例句语境：上行的自动扶梯在哪里？）的释义是哪一项？",
-   "options": [
-    "大部分",
-    "延期",
-    "下午",
-    "自动扶梯"
-   ],
-   "h": "d272b9fc",
-   "oh": [
-    "eb6bcf04",
-    "cf0df162",
-    "a5149d26",
-    "d272b9fc"
-   ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0934"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0934-r-c5c7597397be",
-   "qid": "P-036-V0934-r-c5c7597397be",
-   "type": "mcq",
-   "prompt": "本课词条「エスカレーター」（自动扶梯）的假名读音是哪一项？",
-   "options": [
-    "エスカレーター",
-    "いちどに",
-    "えらぶ",
-    "くん"
-   ],
-   "h": "2f7fec98",
-   "oh": [
-    "2f7fec98",
-    "1530c652",
-    "5767cb44",
-    "e5401057"
-   ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0934"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0935-m-e4947fdc60e0",
-   "qid": "P-036-V0935-m-e4947fdc60e0",
-   "type": "mcq",
-   "prompt": "本课词条「枝」（例句语境：许多鸟停在树枝上。）的释义是哪一项？",
-   "options": [
-    "树枝",
-    "自己",
-    "好久不见",
-    "杯子"
-   ],
-   "h": "8a1634f3",
-   "oh": [
-    "8a1634f3",
-    "9ac012e4",
-    "85d83cfd",
-    "25ecaa4a"
-   ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0935"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0935-r-7c3e9599cab0",
-   "qid": "P-036-V0935-r-7c3e9599cab0",
-   "type": "mcq",
-   "prompt": "本课词条「枝」（树枝）的假名读音是哪一项？",
-   "options": [
-    "か",
-    "あがる",
-    "これ",
-    "えだ"
-   ],
-   "h": "884639b5",
-   "oh": [
-    "ce25368a",
-    "dfbd57a0",
-    "caf51aea",
-    "884639b5"
-   ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0935"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0936-m-e2f65b0bd490",
-   "qid": "P-036-V0936-m-e2f65b0bd490",
-   "type": "mcq",
-   "prompt": "本课词条「選ぶ」（例句语境：请从这和那里面选一个。）的释义是哪一项？",
-   "options": [
-    "图书馆",
-    "孩子；小孩",
-    "架子；搁板",
-    "选择"
-   ],
-   "h": "5fe370b7",
-   "oh": [
-    "411e20b9",
-    "a9bd0935",
-    "56426424",
-    "5fe370b7"
-   ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0936"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0936-r-3a5a7fd5ca1f",
-   "qid": "P-036-V0936-r-3a5a7fd5ca1f",
-   "type": "mcq",
-   "prompt": "本课词条「選ぶ」（选择）的假名读音是哪一项？",
-   "options": [
-    "えらぶ",
-    "もどる",
-    "きんせん",
-    "しゅんかん"
-   ],
-   "h": "5767cb44",
-   "oh": [
-    "5767cb44",
-    "c279c5d",
-    "2662b457",
-    "8e90c1a4"
-   ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0936"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0937-m-f5381b8fb52e",
-   "qid": "P-036-V0937-m-f5381b8fb52e",
-   "type": "mcq",
-   "prompt": "本课词条「おいでになる」（例句语境：您什么时候去旅行？）的释义是哪一项？",
-   "options": [
-    "这么",
-    "来；在（敬）",
-    "结果；终究",
-    "会；团体"
-   ],
-   "h": "c157ed32",
-   "oh": [
-    "e9d1b4d4",
-    "c157ed32",
-    "43e25635",
-    "b6283989"
-   ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0937"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0937-r-b7d0c3f2fa85",
-   "qid": "P-036-V0937-r-b7d0c3f2fa85",
-   "type": "mcq",
-   "prompt": "本课词条「おいでになる」（来；在（敬））的假名读音是哪一项？",
-   "options": [
-    "かんたん",
-    "えがお",
-    "きぶん",
-    "おいでになる"
-   ],
-   "h": "318dbb6a",
-   "oh": [
-    "a07b520d",
-    "5d9a29b1",
-    "e5358f3b",
-    "318dbb6a"
-   ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0937"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0938-m-d058ec3efb42",
-   "qid": "P-036-V0938-m-d058ec3efb42",
-   "type": "mcq",
-   "prompt": "本课词条「お祝い」（例句语境：衷心向您表示祝贺。）的释义是哪一项？",
-   "options": [
-    "结账；计算",
-    "祝贺",
-    "战斗；斗争",
-    "架子；搁板"
-   ],
-   "h": "3c291576",
-   "oh": [
-    "42818451",
-    "3c291576",
-    "990bd801",
-    "56426424"
-   ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0938"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0938-r-f89bf1b9299e",
-   "qid": "P-036-V0938-r-f89bf1b9299e",
-   "type": "mcq",
-   "prompt": "本课词条「お祝い」（祝贺）的假名读音是哪一项？",
-   "options": [
-    "まいしゅう",
-    "ぞうか",
-    "せんたく",
-    "おいわい"
-   ],
-   "h": "2e115da8",
-   "oh": [
-    "ff1bec53",
-    "8c63f8a",
-    "5f7f0a89",
-    "2e115da8"
-   ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0938"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0939-m-1698bb2199b5",
-   "qid": "P-036-V0939-m-1698bb2199b5",
-   "type": "mcq",
-   "prompt": "本课词条「オートバイ」（例句语境：骑摩托车很开心。）的释义是哪一项？",
+   "prompt": "「オートバイ」的中文释义？",
    "options": [
     "摩托车",
-    "裸体；光着",
-    "音响",
-    "意外；出乎意料"
+    "礼物",
+    "有钱人",
+    "司机"
    ],
    "h": "6fe047f6",
    "oh": [
     "6fe047f6",
-    "1d0c80ec",
-    "371d0add",
-    "ad7711d5"
+    "103678d6",
+    "201d526f",
+    "8fcb1707"
    ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "meaning",
    "knowledge_ids": [
     "V0939"
    ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0939-r-822c962ca706",
-   "qid": "P-036-V0939-r-822c962ca706",
-   "type": "mcq",
-   "prompt": "本课词条「オートバイ」（摩托车）的假名读音是哪一项？",
-   "options": [
-    "およそ",
-    "オートバイ",
-    "どりょく",
-    "もっとも"
-   ],
-   "h": "6c32fce5",
-   "oh": [
-    "ebd8096",
-    "6c32fce5",
-    "fa1c48e8",
-    "a1dbc124"
-   ],
-   "day": 36,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0939"
-   ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0940-m-a386b01e62f8",
-   "qid": "P-036-V0940-m-a386b01e62f8",
-   "type": "mcq",
-   "prompt": "本课词条「おかげ」（例句语境：我今天的成就多亏了父母。）的释义是哪一项？",
-   "options": [
-    "多亏；托福",
-    "摩托车",
-    "护照",
-    "营业；销售"
-   ],
-   "h": "4ae8ae46",
-   "oh": [
-    "4ae8ae46",
-    "6fe047f6",
-    "4d09e9bc",
-    "d13491a9"
-   ],
-   "day": 36,
-   "group": "vocab",
    "capability": "meaning",
-   "knowledge_ids": [
-    "V0940"
-   ],
-   "source_day": 36,
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "P-036-V0940-r-79742cb31b60",
-   "qid": "P-036-V0940-r-79742cb31b60",
+   "id": "D13-036-V0937-meaning",
+   "qid": "D13-036-V0937-meaning",
    "type": "mcq",
-   "prompt": "本课词条「おかげ」（多亏；托福）的假名读音是哪一项？",
-   "options": [
-    "じこ",
-    "おかげ",
-    "かいしゃ",
-    "あそび"
-   ],
-   "h": "3eee4890",
-   "oh": [
-    "9606109c",
-    "3eee4890",
-    "a16435ac",
-    "184740a1"
-   ],
    "day": 36,
-   "group": "vocab",
-   "capability": "reading",
+   "prompt": "「おいでになる」的中文释义？",
+   "options": [
+    "背面；里面",
+    "楼顶；屋顶",
+    "来；在（敬）",
+    "司机"
+   ],
+   "h": "c157ed32",
+   "oh": [
+    "b8054e22",
+    "871251",
+    "c157ed32",
+    "8fcb1707"
+   ],
    "knowledge_ids": [
-    "V0940"
+    "V0937"
    ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-V0941-m-ed1abb797ade",
-   "qid": "P-036-V0941-m-ed1abb797ade",
-   "type": "mcq",
-   "prompt": "本课词条「おかしい」（例句语境：你的笑话听多少次都好笑。）的释义是哪一项？",
-   "options": [
-    "签名",
-    "奇怪；可笑",
-    "交易对象；客户公司",
-    "今后"
-   ],
-   "h": "6337b9f5",
-   "oh": [
-    "5597ae04",
-    "6337b9f5",
-    "f1bdfdf4",
-    "87406369"
-   ],
-   "day": 36,
-   "group": "vocab",
    "capability": "meaning",
-   "knowledge_ids": [
-    "V0941"
-   ],
-   "source_day": 36,
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "P-036-V0941-r-0a2c04035241",
-   "qid": "P-036-V0941-r-0a2c04035241",
+   "id": "D13-036-V0934-meaning",
+   "qid": "D13-036-V0934-meaning",
    "type": "mcq",
-   "prompt": "本课词条「おかしい」（奇怪；可笑）的假名读音是哪一项？",
-   "options": [
-    "ごご",
-    "はさみ",
-    "あそび",
-    "おかしい"
-   ],
-   "h": "1b4163b1",
-   "oh": [
-    "54507535",
-    "f77375aa",
-    "184740a1",
-    "1b4163b1"
-   ],
    "day": 36,
-   "group": "vocab",
-   "capability": "reading",
+   "prompt": "「エスカレーター」的中文释义？",
+   "options": [
+    "运动；锻炼",
+    "背面；里面",
+    "自动扶梯",
+    "司机"
+   ],
+   "h": "d272b9fc",
+   "oh": [
+    "1a1e4b3d",
+    "b8054e22",
+    "d272b9fc",
+    "8fcb1707"
+   ],
    "knowledge_ids": [
-    "V0941"
+    "V0934"
    ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-G0049-m-db69d559405e",
-   "qid": "P-036-G0049-m-db69d559405e",
-   "type": "mcq",
-   "prompt": "本课句型「受身形（～られる）」在以下语境中的释义是哪一项？ 例句：雨に降られました。（被雨淋了（真倒霉）。）",
-   "options": [
-    "…了之后发现…",
-    "（人为地）已经…着；事先做好了…",
-    "被…／（迷惑）遭遇…",
-    "（尊长）为我做…；蒙…为我做"
-   ],
-   "h": "33a03308",
-   "oh": [
-    "5cc86091",
-    "35d20238",
-    "33a03308",
-    "d9803281"
-   ],
-   "day": 36,
-   "group": "grammar",
    "capability": "meaning",
-   "knowledge_ids": [
-    "G0049"
-   ],
-   "source_day": 36,
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "P-036-G0050-m-92f3c7c1acc2",
-   "qid": "P-036-G0050-m-92f3c7c1acc2",
+   "id": "D13-036-V0933-reading",
+   "qid": "D13-036-V0933-reading",
    "type": "mcq",
-   "prompt": "本课句型「使役形（～せる／させる）」在以下语境中的释义是哪一项？ 例句：先生は学生に本を読ませました。（老师让学生读书。）",
+   "day": 36,
+   "prompt": "「運動」（运动；锻炼）的假名读音是哪一项？",
    "options": [
-    "…的…",
+    "うまい",
+    "うれしい",
+    "うりば",
+    "うんどう"
+   ],
+   "h": "d928bd69",
+   "oh": [
+    "269b9513",
+    "62614984",
+    "63d9eb3b",
+    "d928bd69"
+   ],
+   "knowledge_ids": [
+    "V0933"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-V0930-meaning",
+   "qid": "D13-036-V0930-meaning",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「うれしい」的中文释义？",
+   "options": [
+    "胳膊；本事",
+    "好吃；擅长",
+    "高兴；开心",
+    "奇怪；可笑"
+   ],
+   "h": "b0276173",
+   "oh": [
+    "f06b26ec",
+    "47c5a7a",
+    "b0276173",
+    "6337b9f5"
+   ],
+   "knowledge_ids": [
+    "V0930"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-V0936-reading",
+   "qid": "D13-036-V0936-reading",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「選ぶ」（选择）的假名读音是哪一项？",
+   "options": [
+    "えがく",
+    "えらぶ",
+    "える",
+    "えだ"
+   ],
+   "h": "5767cb44",
+   "oh": [
+    "609a2e6a",
+    "5767cb44",
+    "6d460f34",
+    "884639b5"
+   ],
+   "knowledge_ids": [
+    "V0936"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-V0931-recall",
+   "qid": "D13-036-V0931-recall",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「嗯；对」对应哪个日语词？",
+   "options": [
+    "おくじょう",
+    "えらぶ",
+    "おく",
+    "うん"
+   ],
+   "h": "dd611a9e",
+   "oh": [
+    "3beab9e3",
+    "5767cb44",
+    "694c1916",
+    "dd611a9e"
+   ],
+   "knowledge_ids": [
+    "V0931"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-V0933-meaning",
+   "qid": "D13-036-V0933-meaning",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「運動」的中文释义？",
+   "options": [
+    "运动；锻炼",
+    "自动扶梯",
+    "背面；里面",
+    "司机"
+   ],
+   "h": "1a1e4b3d",
+   "oh": [
+    "1a1e4b3d",
+    "d272b9fc",
+    "b8054e22",
+    "8fcb1707"
+   ],
+   "knowledge_ids": [
+    "V0933"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-V0935-recall",
+   "qid": "D13-036-V0935-recall",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「树枝」对应哪个日语词？",
+   "options": [
+    "うんてんしゅ",
+    "うら",
+    "えだ",
+    "おくじょう"
+   ],
+   "h": "884639b5",
+   "oh": [
+    "cdfc49c5",
+    "e3612410",
+    "884639b5",
+    "3beab9e3"
+   ],
+   "knowledge_ids": [
+    "V0935"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-V0934-recall",
+   "qid": "D13-036-V0934-recall",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「自动扶梯」对应哪个日语词？",
+   "options": [
+    "うんてんしゅ",
+    "うんどう",
+    "うら",
+    "エスカレーター"
+   ],
+   "h": "2f7fec98",
+   "oh": [
+    "cdfc49c5",
+    "d928bd69",
+    "e3612410",
+    "2f7fec98"
+   ],
+   "knowledge_ids": [
+    "V0934"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-G0050-meaning",
+   "qid": "D13-036-G0050-meaning",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "请选择「使役形（～せる／させる）」所用句型的主要含义。",
+   "options": [
+    "被迫做…",
     "让／使…（做）",
-    "本来就…；应当…；过去常…",
-    "越…越…"
+    "被…；遭受…",
+    "让…做；使…做"
    ],
    "h": "c2c77835",
    "oh": [
-    "3fcba563",
+    "793643b7",
     "c2c77835",
-    "b4c365d8",
-    "33bedf05"
+    "589b5f95",
+    "a12d61b6"
    ],
-   "day": 36,
-   "group": "grammar",
+   "knowledge_ids": [
+    "G0050"
+   ],
    "capability": "meaning",
-   "knowledge_ids": [
-    "G0050"
-   ],
-   "source_day": 36,
-   "optional": true
+   "group": "grammar"
   },
   {
-   "id": "P-036-G0050-u-5f12d81548b2",
-   "qid": "P-036-G0050-u-5f12d81548b2",
+   "id": "D13-036-V0940-meaning",
+   "qid": "D13-036-V0940-meaning",
    "type": "mcq",
-   "prompt": "课程中「使役形（～せる／させる）」的接续说明是哪一项？ 例句：先生は学生に本を読ませました。（老师让学生读书。）",
-   "options": [
-    "名詞 + によって／について／にとって",
-    "五段 う段→あ段+せる；一段 去る+させる；カ変 来させる；サ変 させる",
-    "动词普通形/い形容词/ナ形容词な/名词の + わりに（は）",
-    "動詞辞書形 + ことが + できる"
-   ],
-   "h": "1667df32",
-   "oh": [
-    "67e8137e",
-    "1667df32",
-    "b89a0340",
-    "5f58b73e"
-   ],
    "day": 36,
-   "group": "grammar",
-   "capability": "usage",
-   "knowledge_ids": [
-    "G0050"
+   "prompt": "「おかげ」的中文释义？",
+   "options": [
+    "树枝",
+    "多亏；托福",
+    "胳膊；本事",
+    "司机"
    ],
-   "source_day": 36,
-   "optional": true
+   "h": "4ae8ae46",
+   "oh": [
+    "8a1634f3",
+    "4ae8ae46",
+    "f06b26ec",
+    "8fcb1707"
+   ],
+   "knowledge_ids": [
+    "V0940"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
   },
   {
-   "id": "P-036-G0051-m-f8907a3d2fd9",
-   "qid": "P-036-G0051-m-f8907a3d2fd9",
+   "id": "D13-036-G0051-context",
+   "qid": "D13-036-G0051-context",
    "type": "mcq",
-   "prompt": "本课句型「～てみる / ～てしまう / ～ておく」在以下语境中的释义是哪一项？ 例句：この料理を食べてみます。（尝尝这道菜。）",
+   "day": 36,
+   "prompt": "请选择「本を読んでしまいました。」的中文意思。",
    "options": [
-    "对…来说",
+    "这本书太有趣，我一晚上就读完了。",
+    "多亏前辈帮忙，工作很快就做完了。",
+    "花了三个小时，把那本长篇小说读完了。",
+    "把书看完了。"
+   ],
+   "h": "c55f6cb6",
+   "oh": [
+    "4cce4c5f",
+    "be76920f",
+    "f1e0c85b",
+    "c55f6cb6"
+   ],
+   "knowledge_ids": [
+    "G0051"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-036-V0938-reading",
+   "qid": "D13-036-V0938-reading",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「お祝い」（祝贺）的假名读音是哪一项？",
+   "options": [
+    "おいわい",
+    "おくじょう",
+    "おかねもち",
+    "おかげ"
+   ],
+   "h": "2e115da8",
+   "oh": [
+    "2e115da8",
+    "3beab9e3",
+    "853a92c4",
+    "3eee4890"
+   ],
+   "knowledge_ids": [
+    "V0938"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-V0927-meaning",
+   "qid": "D13-036-V0927-meaning",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「うまい」的中文释义？",
+   "options": [
+    "好吃；擅长",
+    "亿",
+    "高兴；开心",
+    "奇怪；可笑"
+   ],
+   "h": "47c5a7a",
+   "oh": [
+    "47c5a7a",
+    "ba60e90e",
+    "b0276173",
+    "6337b9f5"
+   ],
+   "knowledge_ids": [
+    "V0927"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-V0941-meaning",
+   "qid": "D13-036-V0941-meaning",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「おかしい」的中文释义？",
+   "options": [
+    "好吃；擅长",
+    "奇怪；可笑",
+    "高兴；开心",
+    "多亏；托福"
+   ],
+   "h": "6337b9f5",
+   "oh": [
+    "47c5a7a",
+    "6337b9f5",
+    "b0276173",
+    "4ae8ae46"
+   ],
+   "knowledge_ids": [
+    "V0941"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-V0926-reading",
+   "qid": "D13-036-V0926-reading",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「腕」（胳膊；本事）的假名读音是哪一项？",
+   "options": [
+    "うまい",
+    "うら",
+    "うりば",
+    "うで"
+   ],
+   "h": "9160a2fa",
+   "oh": [
+    "269b9513",
+    "e3612410",
+    "63d9eb3b",
+    "9160a2fa"
+   ],
+   "knowledge_ids": [
+    "V0926"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-V0936-meaning",
+   "qid": "D13-036-V0936-meaning",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「選ぶ」的中文释义？",
+   "options": [
+    "高兴；开心",
+    "选择",
+    "亿",
+    "多亏；托福"
+   ],
+   "h": "5fe370b7",
+   "oh": [
+    "b0276173",
+    "5fe370b7",
+    "ba60e90e",
+    "4ae8ae46"
+   ],
+   "knowledge_ids": [
+    "V0936"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-V0932-meaning",
+   "qid": "D13-036-V0932-meaning",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「運転手」的中文释义？",
+   "options": [
+    "司机",
+    "树枝",
+    "多亏；托福",
+    "卖场；柜台"
+   ],
+   "h": "8fcb1707",
+   "oh": [
+    "8fcb1707",
+    "8a1634f3",
+    "4ae8ae46",
+    "4daa10ca"
+   ],
+   "knowledge_ids": [
+    "V0932"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-G0049-context",
+   "qid": "D13-036-G0049-context",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "请选择「この本は多くの人に読まれています。」的中文意思。",
+   "options": [
+    "读过这本书。",
+    "这本书被很多人读。",
+    "这本书太有趣，我一晚上就读完了。",
+    "这本书好读。"
+   ],
+   "h": "f34cba64",
+   "oh": [
+    "caca7a2a",
+    "f34cba64",
+    "4cce4c5f",
+    "270ea178"
+   ],
+   "knowledge_ids": [
+    "G0049"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-036-V0941-recall",
+   "qid": "D13-036-V0941-recall",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「奇怪；可笑」对应哪个日语词？",
+   "options": [
+    "おかしい",
+    "おかげ",
+    "うまい",
+    "うれしい"
+   ],
+   "h": "1b4163b1",
+   "oh": [
+    "1b4163b1",
+    "3eee4890",
+    "269b9513",
+    "62614984"
+   ],
+   "knowledge_ids": [
+    "V0941"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-G0051-meaning",
+   "qid": "D13-036-G0051-meaning",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "请选择「～てみる / ～てしまう / ～ておく」所用句型的主要含义。",
+   "options": [
     "试着…／…完了／事先…",
-    "不该…；不可以…",
-    "动词た形（简体过去）"
+    "…吧；我要…",
+    "希望（别人）做…／希望别…",
+    "给（别人）做…／给（我）做…／请（人）做…"
    ],
    "h": "5071a249",
    "oh": [
-    "36ecd6cb",
     "5071a249",
-    "1b8577ab",
-    "1c02ffe9"
+    "ccf6fb99",
+    "577ca39",
+    "4cd65e05"
    ],
-   "day": 36,
-   "group": "grammar",
+   "knowledge_ids": [
+    "G0051"
+   ],
    "capability": "meaning",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-036-V0932-reading",
+   "qid": "D13-036-V0932-reading",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「運転手」（司机）的假名读音是哪一项？",
+   "options": [
+    "うつくしい",
+    "うんきゅう",
+    "うんてんしゅ",
+    "うちあわせ"
+   ],
+   "h": "cdfc49c5",
+   "oh": [
+    "47ac4bbb",
+    "694d30a6",
+    "cdfc49c5",
+    "40352ca8"
+   ],
+   "knowledge_ids": [
+    "V0932"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-G0051-form",
+   "qid": "D13-036-G0051-form",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "选出符合下列意思的日语句子。\n尝尝这道菜。",
+   "options": [
+    "母は毎日弟に野菜を食べさせる。",
+    "この料理は作り方が簡単なので、初心者向きだ。",
+    "この料理を食べてみます。",
+    "日本の料理を自分で作ってみたいです。"
+   ],
+   "h": "d725bad5",
+   "oh": [
+    "44b31cd3",
+    "42082279",
+    "d725bad5",
+    "32ccca23"
+   ],
    "knowledge_ids": [
     "G0051"
    ],
-   "source_day": 36,
-   "optional": true
-  },
-  {
-   "id": "P-036-G0051-u-f2a385aa513d",
-   "qid": "P-036-G0051-u-f2a385aa513d",
-   "type": "mcq",
-   "prompt": "课程中「～てみる / ～てしまう / ～ておく」的接续说明是哪一项？ 例句：この料理を食べてみます。（尝尝这道菜。）",
-   "options": [
-    "动词ます形词干/名词 + がち",
-    "動詞て形 + みる／しまう／おく",
-    "さえ/すら 取代 が・を 或接在助词后（にさえ／でさえ）；さえ…ば 用 条件形(ば)；こそ 强调主语/原因（〜からこそ）",
-    "动词辞书形 + ことはない"
-   ],
-   "h": "8d018927",
-   "oh": [
-    "1e9b2db",
-    "8d018927",
-    "295bddb5",
-    "c3aa8d11"
-   ],
-   "day": 36,
-   "group": "grammar",
    "capability": "usage",
-   "knowledge_ids": [
-    "G0051"
-   ],
-   "source_day": 36,
-   "optional": true
+   "group": "grammar"
   },
   {
-   "id": "X-036-V0942-c",
-   "qid": "X-036-V0942-c",
+   "id": "D13-036-V0929-meaning",
+   "qid": "D13-036-V0929-meaning",
    "type": "mcq",
    "day": 36,
-   "prompt": "「お金持ち」的假名读音是？",
+   "prompt": "「売り場」的中文释义？",
    "options": [
-    "おかねもち",
-    "くるしむ",
-    "そして",
-    "じゅうぶん"
+    "卖场；柜台",
+    "多亏；托福",
+    "司机",
+    "楼顶；屋顶"
    ],
-   "h": "853a92c4",
+   "h": "4daa10ca",
    "oh": [
+    "4daa10ca",
+    "4ae8ae46",
+    "8fcb1707",
+    "871251"
+   ],
+   "knowledge_ids": [
+    "V0929"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-V0938-meaning",
+   "qid": "D13-036-V0938-meaning",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「お祝い」的中文释义？",
+   "options": [
+    "树枝",
+    "运动；锻炼",
+    "有钱人",
+    "祝贺"
+   ],
+   "h": "3c291576",
+   "oh": [
+    "8a1634f3",
+    "1a1e4b3d",
+    "201d526f",
+    "3c291576"
+   ],
+   "knowledge_ids": [
+    "V0938"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-V0930-recall",
+   "qid": "D13-036-V0930-recall",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「高兴；开心」对应哪个日语词？",
+   "options": [
+    "おかしい",
+    "うまい",
+    "うれしい",
+    "うで"
+   ],
+   "h": "62614984",
+   "oh": [
+    "1b4163b1",
+    "269b9513",
+    "62614984",
+    "9160a2fa"
+   ],
+   "knowledge_ids": [
+    "V0930"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-G0050-form",
+   "qid": "D13-036-G0050-form",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "选出符合下列意思的日语句子。\n老师让学生读书。",
+   "options": [
+    "明日、本を読む。",
+    "私は先生ではありません。学生です。",
+    "先生は学生に本を読ませました。",
+    "本を読んでいます。"
+   ],
+   "h": "8ad22a45",
+   "oh": [
+    "97acc842",
+    "67776e07",
+    "8ad22a45",
+    "c0d94d89"
+   ],
+   "knowledge_ids": [
+    "G0050"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-036-V0931-meaning",
+   "qid": "D13-036-V0931-meaning",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「うん」的中文释义？",
+   "options": [
+    "楼顶；屋顶",
+    "亿",
+    "嗯；对",
+    "选择"
+   ],
+   "h": "86a840b2",
+   "oh": [
+    "871251",
+    "ba60e90e",
+    "86a840b2",
+    "5fe370b7"
+   ],
+   "knowledge_ids": [
+    "V0931"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-V0929-reading",
+   "qid": "D13-036-V0929-reading",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「売り場」（卖场；柜台）的假名读音是哪一项？",
+   "options": [
+    "うで",
+    "うんどう",
+    "うりば",
+    "うら"
+   ],
+   "h": "63d9eb3b",
+   "oh": [
+    "9160a2fa",
+    "d928bd69",
+    "63d9eb3b",
+    "e3612410"
+   ],
+   "knowledge_ids": [
+    "V0929"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-V0926-meaning",
+   "qid": "D13-036-V0926-meaning",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「腕」的中文释义？",
+   "options": [
+    "楼顶；屋顶",
+    "树枝",
+    "胳膊；本事",
+    "运动；锻炼"
+   ],
+   "h": "f06b26ec",
+   "oh": [
+    "871251",
+    "8a1634f3",
+    "f06b26ec",
+    "1a1e4b3d"
+   ],
+   "knowledge_ids": [
+    "V0926"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-G0049-form",
+   "qid": "D13-036-G0049-form",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "选出符合下列意思的日语句子。\n被雨淋了（真倒霉）。",
+   "options": [
+    "先生は学生に本を読ませました。",
+    "雨に降られました。",
+    "先生に作文をほめられました。",
+    "電車の中で足を踏まれた。"
+   ],
+   "h": "43dc4304",
+   "oh": [
+    "8ad22a45",
+    "43dc4304",
+    "1c822031",
+    "25a63b77"
+   ],
+   "knowledge_ids": [
+    "G0049"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-036-V0928-meaning",
+   "qid": "D13-036-V0928-meaning",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「裏」的中文释义？",
+   "options": [
+    "祝贺",
+    "自动扶梯",
+    "楼顶；屋顶",
+    "背面；里面"
+   ],
+   "h": "b8054e22",
+   "oh": [
+    "3c291576",
+    "d272b9fc",
+    "871251",
+    "b8054e22"
+   ],
+   "knowledge_ids": [
+    "V0928"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-V0928-reading",
+   "qid": "D13-036-V0928-reading",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「裏」（背面；里面）的假名读音是哪一项？",
+   "options": [
+    "うら",
+    "うで",
+    "うまい",
+    "うりば"
+   ],
+   "h": "e3612410",
+   "oh": [
+    "e3612410",
+    "9160a2fa",
+    "269b9513",
+    "63d9eb3b"
+   ],
+   "knowledge_ids": [
+    "V0928"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-G0050-context",
+   "qid": "D13-036-G0050-context",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "请选择「先生は学生に本を読ませました。」的中文意思。",
+   "options": [
+    "老师让学生读书。",
+    "我不是老师，是学生。",
+    "明天读书。",
+    "正在读书。"
+   ],
+   "h": "1ce91d11",
+   "oh": [
+    "1ce91d11",
+    "b80d73f3",
+    "eebcef0d",
+    "9547f54b"
+   ],
+   "knowledge_ids": [
+    "G0050"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-036-V0939-recall",
+   "qid": "D13-036-V0939-recall",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「摩托车」对应哪个日语词？",
+   "options": [
+    "うんてんしゅ",
+    "おくりもの",
+    "おかねもち",
+    "オートバイ"
+   ],
+   "h": "6c32fce5",
+   "oh": [
+    "cdfc49c5",
+    "30006724",
     "853a92c4",
-    "df80df8",
-    "e59a7331",
-    "e41f5bc3"
+    "6c32fce5"
+   ],
+   "knowledge_ids": [
+    "V0939"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-G0049-meaning",
+   "qid": "D13-036-G0049-meaning",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "请选择「受身形（～られる）」所用句型的主要含义。",
+   "options": [
+    "让／使…（做）",
+    "被迫做…",
+    "被…／（迷惑）遭遇…",
+    "让…做；使…做"
+   ],
+   "h": "33a03308",
+   "oh": [
+    "c2c77835",
+    "793643b7",
+    "33a03308",
+    "a12d61b6"
+   ],
+   "knowledge_ids": [
+    "G0049"
+   ],
+   "capability": "meaning",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-036-V0935-meaning",
+   "qid": "D13-036-V0935-meaning",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「枝」的中文释义？",
+   "options": [
+    "楼顶；屋顶",
+    "司机",
+    "背面；里面",
+    "树枝"
+   ],
+   "h": "8a1634f3",
+   "oh": [
+    "871251",
+    "8fcb1707",
+    "b8054e22",
+    "8a1634f3"
+   ],
+   "knowledge_ids": [
+    "V0935"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-V0940-recall",
+   "qid": "D13-036-V0940-recall",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「多亏；托福」对应哪个日语词？",
+   "options": [
+    "おかげ",
+    "えだ",
+    "うんてんしゅ",
+    "うで"
+   ],
+   "h": "3eee4890",
+   "oh": [
+    "3eee4890",
+    "884639b5",
+    "cdfc49c5",
+    "9160a2fa"
+   ],
+   "knowledge_ids": [
+    "V0940"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-V0937-recall",
+   "qid": "D13-036-V0937-recall",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「来；在」对应哪个日语词？",
+   "options": [
+    "おいでになる",
+    "おくじょう",
+    "うんてんしゅ",
+    "うら"
+   ],
+   "h": "318dbb6a",
+   "oh": [
+    "318dbb6a",
+    "3beab9e3",
+    "cdfc49c5",
+    "e3612410"
+   ],
+   "knowledge_ids": [
+    "V0937"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-V0927-recall",
+   "qid": "D13-036-V0927-recall",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「好吃；擅长」对应哪个日语词？",
+   "options": [
+    "おく",
+    "うまい",
+    "おかしい",
+    "うれしい"
+   ],
+   "h": "269b9513",
+   "oh": [
+    "694c1916",
+    "269b9513",
+    "1b4163b1",
+    "62614984"
+   ],
+   "knowledge_ids": [
+    "V0927"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-V0944-meaning",
+   "qid": "D13-036-V0944-meaning",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「屋上」的中文释义？",
+   "options": [
+    "运动；锻炼",
+    "祝贺",
+    "楼顶；屋顶",
+    "自动扶梯"
+   ],
+   "h": "871251",
+   "oh": [
+    "1a1e4b3d",
+    "3c291576",
+    "871251",
+    "d272b9fc"
+   ],
+   "knowledge_ids": [
+    "V0944"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-V0942-meaning",
+   "qid": "D13-036-V0942-meaning",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「お金持ち」的中文释义？",
+   "options": [
+    "司机",
+    "运动；锻炼",
+    "有钱人",
+    "祝贺"
+   ],
+   "h": "201d526f",
+   "oh": [
+    "8fcb1707",
+    "1a1e4b3d",
+    "201d526f",
+    "3c291576"
    ],
    "knowledge_ids": [
     "V0942"
    ],
-   "capability": "reading",
-   "group": "vocab",
-   "optional": true
+   "capability": "meaning",
+   "group": "vocab"
   },
   {
-   "id": "X-036-V0943-c",
-   "qid": "X-036-V0943-c",
+   "id": "D13-036-V0943-reading",
+   "qid": "D13-036-V0943-reading",
    "type": "mcq",
    "day": 36,
-   "prompt": "「億」的意思是？",
+   "prompt": "「億」（亿）的假名读音是哪一项？",
    "options": [
-    "外国",
-    "拍摄",
-    "自己",
-    "亿"
+    "おく",
+    "おかげ",
+    "おどる",
+    "おどり"
    ],
-   "h": "ba60e90e",
+   "h": "694c1916",
    "oh": [
-    "30cbd7bc",
-    "37ee0154",
-    "9ac012e4",
-    "ba60e90e"
+    "694c1916",
+    "3eee4890",
+    "606a7e35",
+    "5f6a7ca2"
    ],
    "knowledge_ids": [
     "V0943"
    ],
-   "capability": "meaning",
-   "group": "vocab",
-   "optional": true
+   "capability": "reading",
+   "group": "vocab"
   },
   {
-   "id": "X-036-V0944-c",
-   "qid": "X-036-V0944-c",
+   "id": "D13-036-V0945-reading",
+   "qid": "D13-036-V0945-reading",
    "type": "mcq",
    "day": 36,
-   "prompt": "「屋上」的假名读音是？",
+   "prompt": "「贈り物」（礼物）的假名读音是哪一项？",
    "options": [
-    "しょうがくきん",
-    "はる",
-    "おくじょう",
-    "つうこう"
+    "おくりもの",
+    "おいわい",
+    "おかねもち",
+    "おくじょう"
+   ],
+   "h": "30006724",
+   "oh": [
+    "30006724",
+    "2e115da8",
+    "853a92c4",
+    "3beab9e3"
+   ],
+   "knowledge_ids": [
+    "V0945"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-V0944-reading",
+   "qid": "D13-036-V0944-reading",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「屋上」（楼顶；屋顶）的假名读音是哪一项？",
+   "options": [
+    "おかねもち",
+    "おくりもの",
+    "おいわい",
+    "おくじょう"
    ],
    "h": "3beab9e3",
    "oh": [
-    "f9559d3a",
-    "adc0370f",
-    "3beab9e3",
-    "ace55fb6"
+    "853a92c4",
+    "30006724",
+    "2e115da8",
+    "3beab9e3"
    ],
    "knowledge_ids": [
     "V0944"
    ],
    "capability": "reading",
-   "group": "vocab",
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "X-036-V0945-c",
-   "qid": "X-036-V0945-c",
+   "id": "D13-036-V0945-meaning",
+   "qid": "D13-036-V0945-meaning",
    "type": "mcq",
    "day": 36,
-   "prompt": "「贈り物」的意思是？",
+   "prompt": "「贈り物」的中文释义？",
    "options": [
-    "女人",
     "礼物",
-    "出身；毕业",
-    "请；拜托"
+    "多亏；托福",
+    "背面；里面",
+    "运动；锻炼"
    ],
    "h": "103678d6",
    "oh": [
-    "ee524428",
     "103678d6",
-    "4d6d700",
-    "1c7754cb"
+    "4ae8ae46",
+    "b8054e22",
+    "1a1e4b3d"
    ],
    "knowledge_ids": [
     "V0945"
    ],
    "capability": "meaning",
-   "group": "vocab",
-   "optional": true
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-V0943-meaning",
+   "qid": "D13-036-V0943-meaning",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「億」的中文释义？",
+   "options": [
+    "多亏；托福",
+    "亿",
+    "胳膊；本事",
+    "选择"
+   ],
+   "h": "ba60e90e",
+   "oh": [
+    "4ae8ae46",
+    "ba60e90e",
+    "f06b26ec",
+    "5fe370b7"
+   ],
+   "knowledge_ids": [
+    "V0943"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-036-V0942-reading",
+   "qid": "D13-036-V0942-reading",
+   "type": "mcq",
+   "day": 36,
+   "prompt": "「お金持ち」（有钱人）的假名读音是哪一项？",
+   "options": [
+    "おくじょう",
+    "おいわい",
+    "おくりもの",
+    "おかねもち"
+   ],
+   "h": "853a92c4",
+   "oh": [
+    "3beab9e3",
+    "2e115da8",
+    "30006724",
+    "853a92c4"
+   ],
+   "knowledge_ids": [
+    "V0942"
+   ],
+   "capability": "reading",
+   "group": "vocab"
   }
  ],
  "listening_material": {

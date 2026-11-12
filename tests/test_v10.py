@@ -79,11 +79,13 @@ class TestMergedQuestions(unittest.TestCase):
                 self.assertEqual(len(q["options"]), 4)
                 self.assertIn(q["h"], q["oh"])
 
-    def test_no_more_than_two_questions_per_knowledge_point(self):
+    def test_daily_question_quota_per_knowledge_point(self):
         from collections import Counter
         for day in (1, 47, 120):
             c = Counter(k for q in data(day)["questions"] for k in (q.get("knowledge_ids") or []))
-            self.assertLessEqual(max(c.values()), 2, "Day %d 同考点重复过多" % day)
+            d = data(day)
+            expected = {**{v["id"]: 2 for v in d["vocab"]}, **{g["id"]: 3 for g in d["grammar"]}}
+            self.assertEqual(c, expected, "Day %d 每个考点题数" % day)
 
     def test_questions_are_one_flat_block_in_html(self):
         h = page(47)
@@ -139,7 +141,7 @@ class TestProgressChain(unittest.TestCase):
 
     def test_service_worker_bumped(self):
         sw = (ROOT / "web/sw.js").read_text(encoding="utf-8")
-        self.assertIn("nh80-v11-", sw)
+        self.assertRegex(sw, r"nh80-v13-[0-9a-f]{12}")
         self.assertNotIn("nh80-v5.1-", sw)
         self.assertIn("/api/", sw)
 

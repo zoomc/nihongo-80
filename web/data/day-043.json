@@ -2,12 +2,12 @@
  "day": 43,
  "phase": "P2",
  "theme": "〜てしまう / 〜ちゃう、〜ておく、〜てみる",
- "can_do": "用「〜てしまう / 〜ちゃう、〜ておく、〜てみる」造两句自己的话，表达：…完了；不小心…；结果…；预先…好；…着（保持状态）；试着做…（看看效果）",
+ "can_do": "用「〜てしまう / 〜ちゃう、〜ておく、〜てみる」各造一句自己的话，表达：…完了；不小心…；结果…；预先…好；…着（保持状态）；试着做…（看看效果）",
  "minutes": 60,
  "blocks": [
   {
    "type": "复习",
-   "min": 10,
+   "min": 5,
    "desc": "到期项优先；未完成顺延，不追赶"
   },
   {
@@ -17,23 +17,23 @@
   },
   {
    "type": "语法",
-   "min": 6,
+   "min": 5,
    "desc": "〜てしまう / 〜ちゃう、〜ておく、〜てみる"
   },
   {
    "type": "听力",
-   "min": 8,
-   "desc": "原创 TTS + 3 道理解题；时长为估计，非真人音频"
+   "min": 7,
+   "desc": "先听并复述主旨，再找两个细节，最后核对脚本（原创合成语音）"
   },
   {
    "type": "句子输出",
-   "min": 5,
-   "desc": "3道选句必做，7道拓展；答后核对"
+   "min": 4,
+   "desc": "每条新语法独立说一句，和例句对照"
   },
   {
    "type": "练习",
-   "min": 5,
-   "desc": "6 题即时自评"
+   "min": 13,
+   "desc": "优先做当天必学词与语法，答完重练错题"
   },
   {
    "type": "会话",
@@ -2055,1308 +2055,1229 @@
  ],
  "questions": [
   {
-   "id": "Q-043-K0-5075263bda15",
-   "qid": "Q-043-K0-5075263bda15",
+   "id": "D13-043-V1080-recall",
+   "qid": "D13-043-V1080-recall",
    "type": "mcq",
-   "prompt": "汉字「世」的一个常用读音是？",
-   "options": [
-    "つ.む",
-    "セイ",
-    "に.がす",
-    "ゴン"
-   ],
-   "h": "528766da",
-   "oh": [
-    "198a45a5",
-    "528766da",
-    "ef745d5b",
-    "ed974130"
-   ],
-   "knowledge_ids": [
-    "K0193"
-   ]
-  },
-  {
-   "id": "Q-043-K1-9fc5b70e4d40",
-   "qid": "Q-043-K1-9fc5b70e4d40",
-   "type": "mcq",
-   "prompt": "汉字「多」的一个常用读音是？",
-   "options": [
-    "あい",
-    "タ",
-    "-そ.める",
-    "バツ"
-   ],
-   "h": "ba25170e",
-   "oh": [
-    "406ab0d3",
-    "ba25170e",
-    "224809d7",
-    "d31e9791"
-   ],
-   "knowledge_ids": [
-    "K0194"
-   ]
-  },
-  {
-   "id": "Q-043-G-ab59453e6f38",
-   "qid": "Q-043-G-ab59453e6f38",
-   "type": "mcq",
-   "prompt": "句型「〜ておく」的意思是？",
-   "options": [
-    "…了之后发现…",
-    "不仅…而且…",
-    "想要（某物）",
-    "预先…好；…着（保持状态）"
-   ],
-   "h": "dbdf0cd9",
-   "oh": [
-    "5cc86091",
-    "cdb11d97",
-    "6f151a0b",
-    "dbdf0cd9"
-   ],
-   "knowledge_ids": [
-    "G0195"
-   ]
-  },
-  {
-   "id": "Q-043-V0-b8008183230c",
-   "qid": "Q-043-V0-b8008183230c",
-   "type": "mcq",
-   "prompt": "「このごろ」是什么意思？",
-   "options": [
-    "可怜；过意不去",
-    "近来",
-    "参考",
-    "非常"
-   ],
-   "h": "dac7d5b",
-   "oh": [
-    "97bde71",
-    "dac7d5b",
-    "56d75872",
-    "a11fddbb"
-   ],
-   "knowledge_ids": [
-    "V1070"
-   ]
-  },
-  {
-   "id": "Q-043-V1-bdc2e91f16e0",
-   "qid": "Q-043-V1-bdc2e91f16e0",
-   "type": "mcq",
-   "prompt": "「細かい」是什么意思？",
-   "options": [
-    "笑容；笑脸",
-    "水果",
-    "细小；琐碎",
-    "安静；宁静"
-   ],
-   "h": "ecd7f62d",
-   "oh": [
-    "d30af8ed",
-    "5d4cc6d",
-    "ecd7f62d",
-    "67f74f82"
-   ],
-   "knowledge_ids": [
-    "V1071"
-   ]
-  },
-  {
-   "id": "Q-043-R-02c2839ea85a",
-   "qid": "Q-043-R-02c2839ea85a",
-   "type": "mcq",
-   "prompt": "复习：句型「〜てくださる / 〜ていただく」的意思是？",
-   "options": [
-    "（尊长）为我做…；蒙…为我做",
-    "可能…、会有…／不得不…",
-    "向…（动作的对象）",
-    "从…到…"
-   ],
-   "h": "d9803281",
-   "oh": [
-    "d9803281",
-    "db8172b1",
-    "dfc1a123",
-    "1a214d9b"
-   ],
-   "knowledge_ids": [
-    "G0191"
-   ]
-  },
-  {
-   "id": "L-043-0-fad1795199e9",
-   "qid": "L-043-0-fad1795199e9",
-   "type": "mcq",
-   "prompt": "燃えるごみはいつ出しますか。",
-   "options": [
-    "火曜日と金曜日",
-    "月曜日と木曜日",
-    "月曜日と金曜日",
-    "水曜日と土曜日"
-   ],
-   "h": "1c921d1f",
-   "oh": [
-    "a70858fd",
-    "1c921d1f",
-    "7a00455c",
-    "888b3802"
-   ],
-   "knowledge_ids": []
-  },
-  {
-   "id": "L-043-1-ba32bd4a4d28",
-   "qid": "L-043-1-ba32bd4a4d28",
-   "type": "mcq",
-   "prompt": "ごみはどこに置きますか。",
-   "options": [
-    "駐車場横のごみ置き場",
-    "中庭のごみ置き場",
-    "建物の裏のごみ置き場",
-    "入口右のごみ置き場"
-   ],
-   "h": "49cdc325",
-   "oh": [
-    "96ee520f",
-    "ceb69779",
-    "49cdc325",
-    "3d58ae84"
-   ],
-   "knowledge_ids": []
-  },
-  {
-   "id": "L-043-2-9a5c5b85d0e2",
-   "qid": "L-043-2-9a5c5b85d0e2",
-   "type": "mcq",
-   "prompt": "ごみは何時までに出しますか。",
-   "options": [
-    "朝九時まで",
-    "朝七時まで",
-    "朝八時まで",
-    "昼十二時まで"
-   ],
-   "h": "62f6283e",
-   "oh": [
-    "2b292024",
-    "99eeb796",
-    "62f6283e",
-    "4ebec0e3"
-   ],
-   "knowledge_ids": []
-  },
-  {
-   "id": "P-043-00-55513f70ac4f",
-   "qid": "P-043-00-55513f70ac4f",
-   "type": "mcq",
-   "prompt": "这家公司的社长是谁？",
-   "options": [
-    "この会社の社長は誰ですか。",
-    "それを言われると弱いなあ。",
-    "私もまた、議員の一人です。",
-    "どの科目が一番好きですか。"
-   ],
-   "h": "4c5bf5fb",
-   "oh": [
-    "4c5bf5fb",
-    "84412a13",
-    "71ef590d",
-    "8bb3e7ce"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-043-01-f1a7ce428fe5",
-   "qid": "P-043-01-f1a7ce428fe5",
-   "type": "mcq",
-   "prompt": "那辆车挡路了，请挪开。",
-   "options": [
-    "その車がじゃまです。動かしてください。",
-    "そこの乞食が泥棒である事がわかった。",
-    "こんな余計な機能なんでつけたんだろう。",
-    "あのおいしいワインをなぜ飲まないんだい。"
-   ],
-   "h": "4b3d262c",
-   "oh": [
-    "4b3d262c",
-    "cc176d6c",
-    "33aba312",
-    "5ebf955f"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-043-02-9115f2dcc6ce",
-   "qid": "P-043-02-9115f2dcc6ce",
-   "type": "mcq",
-   "prompt": "草莓被做成了果酱。",
-   "options": [
-    "心理学は人間の感情を扱う。",
-    "どの科目が一番好きですか。",
-    "私もまた、議員の一人です。",
-    "イチゴはジャムに作られる。"
-   ],
-   "h": "fc94d29",
-   "oh": [
-    "40ba6b43",
-    "8bb3e7ce",
-    "71ef590d",
-    "fc94d29"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-043-V1070-m-b7a604634306",
-   "qid": "P-043-V1070-m-b7a604634306",
-   "type": "mcq",
-   "prompt": "本课词条「このごろ」（例句语境：近来多少有点读书的时间。）的释义是哪一项？",
-   "options": [
-    "茶",
-    "近来",
-    "到达",
-    "盐"
-   ],
-   "h": "dac7d5b",
-   "oh": [
-    "3244b889",
-    "dac7d5b",
-    "108a1dc3",
-    "5586120f"
-   ],
    "day": 43,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1070"
-   ],
-   "source_day": 43,
-   "optional": true
-  },
-  {
-   "id": "P-043-V1071-m-0c5766086491",
-   "qid": "P-043-V1071-m-0c5766086491",
-   "type": "mcq",
-   "prompt": "本课词条「細かい」（例句语境：他在钱上斤斤计较。）的释义是哪一项？",
+   "prompt": "「音乐会」对应哪个日语词？",
    "options": [
-    "说；叫做（谦让语）",
-    "重要；宝贵",
-    "代理；代理人",
-    "细小；琐碎"
-   ],
-   "h": "ecd7f62d",
-   "oh": [
-    "9c944b9c",
-    "eb777a36",
-    "651b5332",
-    "ecd7f62d"
-   ],
-   "day": 43,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1071"
-   ],
-   "source_day": 43,
-   "optional": true
-  },
-  {
-   "id": "P-043-V1072-m-3e3f78055286",
-   "qid": "P-043-V1072-m-3e3f78055286",
-   "type": "mcq",
-   "prompt": "本课词条「ごみ」（例句语境：每周一来收垃圾。）的释义是哪一项？",
-   "options": [
-    "垃圾",
-    "发放；支付",
-    "发光；闪耀",
-    "怎样"
-   ],
-   "h": "7f72f3e4",
-   "oh": [
-    "7f72f3e4",
-    "6218b100",
-    "1d3603c6",
-    "f910af52"
-   ],
-   "day": 43,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1072"
-   ],
-   "source_day": 43,
-   "optional": true
-  },
-  {
-   "id": "P-043-V1072-r-0fe965de95ee",
-   "qid": "P-043-V1072-r-0fe965de95ee",
-   "type": "mcq",
-   "prompt": "本课词条「ごみ」（垃圾）的假名读音是哪一项？",
-   "options": [
-    "さいちゅう",
-    "シャツ",
-    "みっつ",
-    "ごみ"
-   ],
-   "h": "7950af74",
-   "oh": [
-    "c1d0cde0",
-    "1e0e0e11",
-    "809d1349",
-    "7950af74"
-   ],
-   "day": 43,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1072"
-   ],
-   "source_day": 43,
-   "optional": true
-  },
-  {
-   "id": "P-043-V1073-m-305f2eb00c61",
-   "qid": "P-043-V1073-m-305f2eb00c61",
-   "type": "mcq",
-   "prompt": "本课词条「込む」（例句语境：今晚列车非常拥挤。）的释义是哪一项？",
-   "options": [
-    "科长",
-    "拥挤",
-    "祖父；外祖父",
-    "食物；粮食"
-   ],
-   "h": "694c1f0c",
-   "oh": [
-    "199beb9",
-    "694c1f0c",
-    "a6535f78",
-    "9977ef39"
-   ],
-   "day": 43,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1073"
-   ],
-   "source_day": 43,
-   "optional": true
-  },
-  {
-   "id": "P-043-V1073-r-a17d644c6799",
-   "qid": "P-043-V1073-r-a17d644c6799",
-   "type": "mcq",
-   "prompt": "本课词条「込む」（拥挤）的假名读音是哪一项？",
-   "options": [
-    "ざっと",
-    "こむ",
-    "だん",
-    "はんぶん"
-   ],
-   "h": "bef50806",
-   "oh": [
-    "f310dbe2",
-    "bef50806",
-    "e5e62344",
-    "4f170d00"
-   ],
-   "day": 43,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1073"
-   ],
-   "source_day": 43,
-   "optional": true
-  },
-  {
-   "id": "P-043-V1074-m-8ed95d423b6d",
-   "qid": "P-043-V1074-m-8ed95d423b6d",
-   "type": "mcq",
-   "prompt": "本课词条「米」（例句语境：日本人靠吃米生活。）的释义是哪一项？",
-   "options": [
-    "文章；文笔",
-    "放心；安心",
-    "米",
-    "十"
-   ],
-   "h": "f6775182",
-   "oh": [
-    "96805d30",
-    "affa30ab",
-    "f6775182",
-    "c45919cc"
-   ],
-   "day": 43,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1074"
-   ],
-   "source_day": 43,
-   "optional": true
-  },
-  {
-   "id": "P-043-V1074-r-695400e5f93a",
-   "qid": "P-043-V1074-r-695400e5f93a",
-   "type": "mcq",
-   "prompt": "本课词条「米」（米）的假名读音是哪一项？",
-   "options": [
-    "けんさ",
-    "かげ",
-    "さい",
-    "こめ"
-   ],
-   "h": "bff50999",
-   "oh": [
-    "70b80e38",
-    "5c49c608",
-    "9e4eab1c",
-    "bff50999"
-   ],
-   "day": 43,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1074"
-   ],
-   "source_day": 43,
-   "optional": true
-  },
-  {
-   "id": "P-043-V1075-m-1a591337c84e",
-   "qid": "P-043-V1075-m-1a591337c84e",
-   "type": "mcq",
-   "prompt": "本课词条「ごらんになる」（例句语境：您来看看我们的新居怎么样？）的释义是哪一项？",
-   "options": [
-    "看（敬）",
-    "涂；抹",
-    "下；下车",
-    "国际"
-   ],
-   "h": "9e290995",
-   "oh": [
-    "9e290995",
-    "210815d9",
-    "473383fa",
-    "d8719897"
-   ],
-   "day": 43,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1075"
-   ],
-   "source_day": 43,
-   "optional": true
-  },
-  {
-   "id": "P-043-V1075-r-5ff16de62347",
-   "qid": "P-043-V1075-r-5ff16de62347",
-   "type": "mcq",
-   "prompt": "本课词条「ごらんになる」（看（敬））的假名读音是哪一项？",
-   "options": [
-    "ごらんになる",
-    "うけつけ",
-    "だいじん",
-    "こうへい"
-   ],
-   "h": "b4053563",
-   "oh": [
-    "b4053563",
-    "17f597df",
-    "89933838",
-    "544a3b28"
-   ],
-   "day": 43,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1075"
-   ],
-   "source_day": 43,
-   "optional": true
-  },
-  {
-   "id": "P-043-V1076-m-710a87733bce",
-   "qid": "P-043-V1076-m-710a87733bce",
-   "type": "mcq",
-   "prompt": "本课词条「これから」（例句语境：今后也请享受人生。）的释义是哪一项？",
-   "options": [
-    "低；矮",
-    "那边",
-    "今后",
-    "代表"
-   ],
-   "h": "87406369",
-   "oh": [
-    "d5bb2a10",
-    "2b7a8bb1",
-    "87406369",
-    "e494a8ce"
-   ],
-   "day": 43,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1076"
-   ],
-   "source_day": 43,
-   "optional": true
-  },
-  {
-   "id": "P-043-V1076-r-a36f5536bce6",
-   "qid": "P-043-V1076-r-a36f5536bce6",
-   "type": "mcq",
-   "prompt": "本课词条「これから」（今后）的假名读音是哪一项？",
-   "options": [
-    "じょうず",
-    "これから",
-    "でんき",
-    "くらし"
-   ],
-   "h": "d73b3a8e",
-   "oh": [
-    "c6a7e898",
-    "d73b3a8e",
-    "b218d566",
-    "e3d997e6"
-   ],
-   "day": 43,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1076"
-   ],
-   "source_day": 43,
-   "optional": true
-  },
-  {
-   "id": "P-043-V1077-m-d510b2f16ba7",
-   "qid": "P-043-V1077-m-d510b2f16ba7",
-   "type": "mcq",
-   "prompt": "本课词条「怖い」（例句语境：我与其说害怕，不如说吓了一跳。）的释义是哪一项？",
-   "options": [
-    "鼓掌；掌声",
-    "通；通晓",
-    "颜色",
-    "可怕"
-   ],
-   "h": "74fb9551",
-   "oh": [
-    "40e62157",
-    "ccebf801",
-    "de83704b",
-    "74fb9551"
-   ],
-   "day": 43,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1077"
-   ],
-   "source_day": 43,
-   "optional": true
-  },
-  {
-   "id": "P-043-V1077-r-58b611f383a4",
-   "qid": "P-043-V1077-r-58b611f383a4",
-   "type": "mcq",
-   "prompt": "本课词条「怖い」（可怕）的假名读音是哪一项？",
-   "options": [
-    "こわい",
-    "た",
-    "しゅうかん",
-    "スプーン"
-   ],
-   "h": "ffefa8e9",
-   "oh": [
-    "ffefa8e9",
-    "da25496e",
-    "15eee483",
-    "eacd2ba4"
-   ],
-   "day": 43,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1077"
-   ],
-   "source_day": 43,
-   "optional": true
-  },
-  {
-   "id": "P-043-V1078-m-ff354a7eedce",
-   "qid": "P-043-V1078-m-ff354a7eedce",
-   "type": "mcq",
-   "prompt": "本课词条「壊す」（例句语境：那件事打碎了他所有的梦想。）的释义是哪一项？",
-   "options": [
-    "岛",
-    "学习；用功",
-    "点心；糕点",
-    "弄坏"
-   ],
-   "h": "9e645b94",
-   "oh": [
-    "9e4466fa",
-    "3ed99665",
-    "77c4243c",
-    "9e645b94"
-   ],
-   "day": 43,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1078"
-   ],
-   "source_day": 43,
-   "optional": true
-  },
-  {
-   "id": "P-043-V1078-r-0784e7501b5a",
-   "qid": "P-043-V1078-r-0784e7501b5a",
-   "type": "mcq",
-   "prompt": "本课词条「壊す」（弄坏）的假名读音是哪一项？",
-   "options": [
-    "たんじゅん",
-    "こわす",
-    "てぶくろ",
-    "でかける"
-   ],
-   "h": "faefa10a",
-   "oh": [
-    "b6556591",
-    "faefa10a",
-    "81d1d921",
-    "ef5dca5b"
-   ],
-   "day": 43,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1078"
-   ],
-   "source_day": 43,
-   "optional": true
-  },
-  {
-   "id": "P-043-V1079-m-16c445d359b5",
-   "qid": "P-043-V1079-m-16c445d359b5",
-   "type": "mcq",
-   "prompt": "本课词条「壊れる」（例句语境：这副耳机坏了。）的释义是哪一项？",
-   "options": [
-    "高中",
-    "坏掉",
-    "就职；就业",
-    "中心；中心站"
-   ],
-   "h": "37327c15",
-   "oh": [
-    "8f910d3e",
-    "37327c15",
-    "cb563d8e",
-    "756369b5"
-   ],
-   "day": 43,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1079"
-   ],
-   "source_day": 43,
-   "optional": true
-  },
-  {
-   "id": "P-043-V1079-r-038db2650fcc",
-   "qid": "P-043-V1079-r-038db2650fcc",
-   "type": "mcq",
-   "prompt": "本课词条「壊れる」（坏掉）的假名读音是哪一项？",
-   "options": [
-    "こわれる",
-    "じてんしゃ",
-    "おいでになる",
-    "あれ"
-   ],
-   "h": "a1c9d7e",
-   "oh": [
-    "a1c9d7e",
-    "ea221882",
-    "318dbb6a",
-    "88698f2b"
-   ],
-   "day": 43,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1079"
-   ],
-   "source_day": 43,
-   "optional": true
-  },
-  {
-   "id": "P-043-V1080-m-20f99f00c18b",
-   "qid": "P-043-V1080-m-20f99f00c18b",
-   "type": "mcq",
-   "prompt": "本课词条「コンサート」（例句语境：音乐会怎么样？）的释义是哪一项？",
-   "options": [
-    "月亮；月",
-    "音乐会",
-    "刀",
-    "出租车"
-   ],
-   "h": "3ca0f7e4",
-   "oh": [
-    "c45895f8",
-    "3ca0f7e4",
-    "55b131f",
-    "ba767db0"
-   ],
-   "day": 43,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1080"
-   ],
-   "source_day": 43,
-   "optional": true
-  },
-  {
-   "id": "P-043-V1080-r-69f4dc3101be",
-   "qid": "P-043-V1080-r-69f4dc3101be",
-   "type": "mcq",
-   "prompt": "本课词条「コンサート」（音乐会）的假名读音是哪一项？",
-   "options": [
+    "さいきん",
     "コンサート",
-    "コピー",
-    "つくえ",
-    "しょうらい"
+    "こんど",
+    "ごみ"
    ],
    "h": "336a4a36",
    "oh": [
+    "2e2f2930",
     "336a4a36",
-    "a6fbc9fa",
-    "a2ddec74",
-    "6363fb92"
+    "2fa3afe",
+    "7950af74"
    ],
-   "day": 43,
-   "group": "vocab",
-   "capability": "reading",
    "knowledge_ids": [
     "V1080"
    ],
-   "source_day": 43,
-   "optional": true
-  },
-  {
-   "id": "P-043-V1081-m-6a35ba714281",
-   "qid": "P-043-V1081-m-6a35ba714281",
-   "type": "mcq",
-   "prompt": "本课词条「今度」（例句语境：这个星期六去打网球吧？）的释义是哪一项？",
-   "options": [
-    "预定；计划（日程）",
-    "三",
-    "前者",
-    "这次；下次"
-   ],
-   "h": "f784525c",
-   "oh": [
-    "f1475ab4",
-    "c616a24",
-    "82fe76a7",
-    "f784525c"
-   ],
-   "day": 43,
-   "group": "vocab",
    "capability": "meaning",
-   "knowledge_ids": [
-    "V1081"
-   ],
-   "source_day": 43,
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "P-043-V1081-r-db70e308467f",
-   "qid": "P-043-V1081-r-db70e308467f",
+   "id": "D13-043-G0194-context",
+   "qid": "D13-043-G0194-context",
    "type": "mcq",
-   "prompt": "本课词条「今度」（这次；下次）的假名读音是哪一项？",
-   "options": [
-    "だいきん",
-    "たいせん",
-    "こんど",
-    "ひえる"
-   ],
-   "h": "2fa3afe",
-   "oh": [
-    "c1a59cb5",
-    "e4c1bbe4",
-    "2fa3afe",
-    "4209884"
-   ],
    "day": 43,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1081"
+   "prompt": "请选择「あ、ケーキを全部食べちゃった。」的中文意思。",
+   "options": [
+    "蛋糕我全吃光了。因为实在太好吃了嘛。",
+    "啊，我把蛋糕全吃光了。",
+    "隔壁房间好像有人来了。",
+    "这个蛋糕简直像店里卖的一样！"
    ],
-   "source_day": 43,
-   "optional": true
+   "h": "1e4e9da0",
+   "oh": [
+    "7bb3f5d",
+    "1e4e9da0",
+    "6dcdfd1",
+    "f97a6be"
+   ],
+   "knowledge_ids": [
+    "G0194"
+   ],
+   "capability": "usage",
+   "group": "grammar"
   },
   {
-   "id": "P-043-V1082-m-f853d518586e",
-   "qid": "P-043-V1082-m-f853d518586e",
+   "id": "D13-043-V1085-meaning",
+   "qid": "D13-043-V1085-meaning",
    "type": "mcq",
-   "prompt": "本课词条「コンピュータ」（例句语境：那台电脑是新的。）的释义是哪一项？",
+   "day": 43,
+   "prompt": "「最後」的中文释义？",
    "options": [
-    "医院",
+    "今晚",
+    "这次；下次",
+    "最近",
+    "最后"
+   ],
+   "h": "e99ccac3",
+   "oh": [
+    "bb5d0b45",
+    "f784525c",
+    "a631554a",
+    "e99ccac3"
+   ],
+   "knowledge_ids": [
+    "V1085"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-V1076-meaning",
+   "qid": "D13-043-V1076-meaning",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「これから」的中文释义？",
+   "options": [
+    "细小；琐碎",
+    "弄坏",
+    "今后",
+    "看（敬）"
+   ],
+   "h": "87406369",
+   "oh": [
+    "ecd7f62d",
+    "9e645b94",
+    "87406369",
+    "9e290995"
+   ],
+   "knowledge_ids": [
+    "V1076"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-V1074-meaning",
+   "qid": "D13-043-V1074-meaning",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「こめ」的中文释义？",
+   "options": [
+    "今晚",
     "电脑",
-    "之后；以后",
-    "大使"
+    "米",
+    "最后"
    ],
-   "h": "1df2bfd3",
+   "h": "f6775182",
    "oh": [
-    "de987ea8",
+    "bb5d0b45",
     "1df2bfd3",
-    "7560d8ba",
-    "b2e8033b"
+    "f6775182",
+    "e99ccac3"
    ],
-   "day": 43,
-   "group": "vocab",
-   "capability": "meaning",
    "knowledge_ids": [
-    "V1082"
+    "V1074"
    ],
-   "source_day": 43,
-   "optional": true
+   "capability": "meaning",
+   "group": "vocab"
   },
   {
-   "id": "P-043-V1082-r-bab4c1de44e2",
-   "qid": "P-043-V1082-r-bab4c1de44e2",
+   "id": "D13-043-V1082-recall",
+   "qid": "D13-043-V1082-recall",
    "type": "mcq",
-   "prompt": "本课词条「コンピュータ」（电脑）的假名读音是哪一项？",
+   "day": 43,
+   "prompt": "「电脑」对应哪个日语词？",
    "options": [
-    "ジェットき",
-    "きぼう",
-    "おたがい",
-    "コンピュータ"
+    "コンピュータ",
+    "コンサート",
+    "こめ",
+    "こんや"
    ],
    "h": "f0add061",
    "oh": [
-    "e762170a",
-    "984dde1e",
-    "d84a5f2e",
-    "f0add061"
+    "f0add061",
+    "336a4a36",
+    "bff50999",
+    "5ff93a65"
    ],
-   "day": 43,
-   "group": "vocab",
-   "capability": "reading",
    "knowledge_ids": [
     "V1082"
    ],
-   "source_day": 43,
-   "optional": true
+   "capability": "meaning",
+   "group": "vocab"
   },
   {
-   "id": "P-043-V1083-m-6272d28ca453",
-   "qid": "P-043-V1083-m-6272d28ca453",
+   "id": "D13-043-V1071-meaning",
+   "qid": "D13-043-V1071-meaning",
    "type": "mcq",
-   "prompt": "本课词条「今夜」（例句语境：今晚举行派对。）的释义是哪一项？",
+   "day": 43,
+   "prompt": "「細かい」的中文释义？",
    "options": [
-    "下下周",
-    "历史",
-    "今晚",
-    "放弃"
+    "坏掉",
+    "可怕",
+    "细小；琐碎",
+    "弄坏"
+   ],
+   "h": "ecd7f62d",
+   "oh": [
+    "37327c15",
+    "74fb9551",
+    "ecd7f62d",
+    "9e645b94"
+   ],
+   "knowledge_ids": [
+    "V1071"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-V1081-reading",
+   "qid": "D13-043-V1081-reading",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「今度」（这次；下次）的假名读音是哪一项？",
+   "options": [
+    "こわす",
+    "こんや",
+    "こんど",
+    "こめ"
+   ],
+   "h": "2fa3afe",
+   "oh": [
+    "faefa10a",
+    "5ff93a65",
+    "2fa3afe",
+    "bff50999"
+   ],
+   "knowledge_ids": [
+    "V1081"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-V1083-meaning",
+   "qid": "D13-043-V1083-meaning",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「今夜」的中文释义？",
+   "options": [
+    "这次；下次",
+    "米",
+    "最后",
+    "今晚"
    ],
    "h": "bb5d0b45",
    "oh": [
-    "4a20de1",
-    "4fe97ad1",
-    "bb5d0b45",
-    "f80ff986"
+    "f784525c",
+    "f6775182",
+    "e99ccac3",
+    "bb5d0b45"
    ],
-   "day": 43,
-   "group": "vocab",
-   "capability": "meaning",
    "knowledge_ids": [
     "V1083"
    ],
-   "source_day": 43,
-   "optional": true
+   "capability": "meaning",
+   "group": "vocab"
   },
   {
-   "id": "P-043-V1083-r-3af71b385812",
-   "qid": "P-043-V1083-r-3af71b385812",
+   "id": "D13-043-G0195-context",
+   "qid": "D13-043-G0195-context",
    "type": "mcq",
-   "prompt": "本课词条「今夜」（今晚）的假名读音是哪一项？",
+   "day": 43,
+   "prompt": "请选择「エアコンはつけておいてください。」的中文意思。",
    "options": [
-    "むら",
+    "请让空调一直开着。",
+    "我明明锁好了，门不可能开着。",
+    "开着空调就睡着了，结果感冒了。",
+    "即使是星期天，这家店也开着。"
+   ],
+   "h": "547d56ac",
+   "oh": [
+    "547d56ac",
+    "db1285c7",
+    "3781c484",
+    "52e36da4"
+   ],
+   "knowledge_ids": [
+    "G0195"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-043-V1073-meaning",
+   "qid": "D13-043-V1073-meaning",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「込む」的中文释义？",
+   "options": [
+    "弄坏",
+    "寻找",
+    "坏掉",
+    "拥挤"
+   ],
+   "h": "694c1f0c",
+   "oh": [
+    "9e645b94",
+    "b65749ec",
+    "37327c15",
+    "694c1f0c"
+   ],
+   "knowledge_ids": [
+    "V1073"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-V1072-recall",
+   "qid": "D13-043-V1072-recall",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「垃圾」对应哪个日语词？",
+   "options": [
+    "さか",
+    "ごみ",
+    "こんど",
+    "コンピュータ"
+   ],
+   "h": "7950af74",
+   "oh": [
+    "a54eb621",
+    "7950af74",
+    "2fa3afe",
+    "f0add061"
+   ],
+   "knowledge_ids": [
+    "V1072"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-V1075-meaning",
+   "qid": "D13-043-V1075-meaning",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「ごらんになる」的中文释义？",
+   "options": [
+    "今后",
+    "看（敬）",
+    "寻找",
+    "拥挤"
+   ],
+   "h": "9e290995",
+   "oh": [
+    "87406369",
+    "9e290995",
+    "b65749ec",
+    "694c1f0c"
+   ],
+   "knowledge_ids": [
+    "V1075"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-V1073-reading",
+   "qid": "D13-043-V1073-reading",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「込む」（拥挤）的假名读音是哪一项？",
+   "options": [
+    "こわす",
+    "こむ",
     "こんや",
-    "たび",
-    "から"
+    "こんど"
+   ],
+   "h": "bef50806",
+   "oh": [
+    "faefa10a",
+    "bef50806",
+    "5ff93a65",
+    "2fa3afe"
+   ],
+   "knowledge_ids": [
+    "V1073"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-V1074-recall",
+   "qid": "D13-043-V1074-recall",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「米」对应哪个日语词？",
+   "options": [
+    "こめ",
+    "こんや",
+    "さいご",
+    "コンピュータ"
+   ],
+   "h": "bff50999",
+   "oh": [
+    "bff50999",
+    "5ff93a65",
+    "7dbe7258",
+    "f0add061"
+   ],
+   "knowledge_ids": [
+    "V1074"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-G0195-meaning",
+   "qid": "D13-043-G0195-meaning",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "请选择「〜ておく」所用句型的主要含义。",
+   "options": [
+    "预先…好；…着（保持状态）",
+    "为了…；以便…",
+    "为了…；因为…",
+    "用于…；做…需要"
+   ],
+   "h": "dbdf0cd9",
+   "oh": [
+    "dbdf0cd9",
+    "f157d5a4",
+    "6323c4a2",
+    "65d0744b"
+   ],
+   "knowledge_ids": [
+    "G0195"
+   ],
+   "capability": "meaning",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-043-G0195-form",
+   "qid": "D13-043-G0195-form",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "选出符合下列意思的日语句子。\n旅行前我会先把酒店订好。",
+   "options": [
+    "ホテルの予約がしてあります。",
+    "旅行の前に、ホテルを予約しておきます。",
+    "このかばんは旅行に行くのに便利です。",
+    "若いうちに、いろいろな国を旅行したほうがいい。"
+   ],
+   "h": "e05d55d6",
+   "oh": [
+    "d7fd3ecf",
+    "e05d55d6",
+    "3b9a02b",
+    "ee6fa95a"
+   ],
+   "knowledge_ids": [
+    "G0195"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-043-G0196-meaning",
+   "qid": "D13-043-G0196-meaning",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "请选择「〜てみる」所用句型的主要含义。",
+   "options": [
+    "（命令）做！",
+    "试着做…（看看效果）",
+    "（第三人称）想做…",
+    "但是…；虽然…"
+   ],
+   "h": "5cf05d55",
+   "oh": [
+    "95428124",
+    "5cf05d55",
+    "d20d98a",
+    "b83da374"
+   ],
+   "knowledge_ids": [
+    "G0196"
+   ],
+   "capability": "meaning",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-043-V1083-reading",
+   "qid": "D13-043-V1083-reading",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「今夜」（今晚）的假名读音是哪一项？",
+   "options": [
+    "こんや",
+    "こわい",
+    "こんど",
+    "こめ"
    ],
    "h": "5ff93a65",
    "oh": [
-    "af2aaba2",
     "5ff93a65",
-    "85fda8a7",
-    "874876b9"
+    "ffefa8e9",
+    "2fa3afe",
+    "bff50999"
    ],
-   "day": 43,
-   "group": "vocab",
-   "capability": "reading",
    "knowledge_ids": [
     "V1083"
    ],
-   "source_day": 43,
-   "optional": true
+   "capability": "reading",
+   "group": "vocab"
   },
   {
-   "id": "P-043-V1084-m-cd5f64493259",
-   "qid": "P-043-V1084-m-cd5f64493259",
+   "id": "D13-043-V1078-reading",
+   "qid": "D13-043-V1078-reading",
    "type": "mcq",
-   "prompt": "本课词条「最近」（例句语境：最近几乎没有读书的时间。）的释义是哪一项？",
-   "options": [
-    "旁边；横向",
-    "各位；诸位",
-    "金融",
-    "最近"
-   ],
-   "h": "a631554a",
-   "oh": [
-    "a61a2889",
-    "a9caef4",
-    "d8364763",
-    "a631554a"
-   ],
    "day": 43,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1084"
+   "prompt": "「壊す」（弄坏）的假名读音是哪一项？",
+   "options": [
+    "こわい",
+    "こむ",
+    "こわれる",
+    "こわす"
    ],
-   "source_day": 43,
-   "optional": true
+   "h": "faefa10a",
+   "oh": [
+    "ffefa8e9",
+    "bef50806",
+    "a1c9d7e",
+    "faefa10a"
+   ],
+   "knowledge_ids": [
+    "V1078"
+   ],
+   "capability": "reading",
+   "group": "vocab"
   },
   {
-   "id": "P-043-V1084-r-b0dcb436f608",
-   "qid": "P-043-V1084-r-b0dcb436f608",
+   "id": "D13-043-V1084-recall",
+   "qid": "D13-043-V1084-recall",
    "type": "mcq",
-   "prompt": "本课词条「最近」（最近）的假名读音是哪一项？",
+   "day": 43,
+   "prompt": "「最近」对应哪个日语词？",
    "options": [
-    "きょだい",
-    "しゃちょう",
-    "いちばん",
+    "こんど",
+    "こめ",
+    "さか",
     "さいきん"
    ],
    "h": "2e2f2930",
    "oh": [
-    "89c52269",
-    "bd016603",
-    "f5587e33",
+    "2fa3afe",
+    "bff50999",
+    "a54eb621",
     "2e2f2930"
    ],
-   "day": 43,
-   "group": "vocab",
-   "capability": "reading",
    "knowledge_ids": [
     "V1084"
    ],
-   "source_day": 43,
-   "optional": true
-  },
-  {
-   "id": "P-043-V1085-m-45f4178d11cd",
-   "qid": "P-043-V1085-m-45f4178d11cd",
-   "type": "mcq",
-   "prompt": "本课词条「最後」（例句语境：最后一场考试大概会拖到下个月。）的释义是哪一项？",
-   "options": [
-    "期限；到期日",
-    "最后",
-    "机场",
-    "发明"
-   ],
-   "h": "e99ccac3",
-   "oh": [
-    "337ac95",
-    "e99ccac3",
-    "7ebee0f5",
-    "38a05076"
-   ],
-   "day": 43,
-   "group": "vocab",
    "capability": "meaning",
-   "knowledge_ids": [
-    "V1085"
-   ],
-   "source_day": 43,
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "P-043-V1085-r-70456e7e03de",
-   "qid": "P-043-V1085-r-70456e7e03de",
+   "id": "D13-043-V1070-meaning",
+   "qid": "D13-043-V1070-meaning",
    "type": "mcq",
-   "prompt": "本课词条「最後」（最后）的假名读音是哪一项？",
-   "options": [
-    "さいご",
-    "じゅうよう",
-    "じどうしゃ",
-    "くもり"
-   ],
-   "h": "7dbe7258",
-   "oh": [
-    "7dbe7258",
-    "c5dcb93a",
-    "df7f55fe",
-    "fee4fb5a"
-   ],
    "day": 43,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1085"
+   "prompt": "「このごろ」的中文释义？",
+   "options": [
+    "米",
+    "近来",
+    "音乐会",
+    "最后"
    ],
-   "source_day": 43,
-   "optional": true
+   "h": "dac7d5b",
+   "oh": [
+    "f6775182",
+    "dac7d5b",
+    "3ca0f7e4",
+    "e99ccac3"
+   ],
+   "knowledge_ids": [
+    "V1070"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
   },
   {
-   "id": "P-043-G0194-m-948e10c00337",
-   "qid": "P-043-G0194-m-948e10c00337",
+   "id": "D13-043-V1075-recall",
+   "qid": "D13-043-V1075-recall",
    "type": "mcq",
-   "prompt": "本课句型「〜てしまう / 〜ちゃう」在以下语境中的释义是哪一项？ 例句：電車に傘を忘れてしまいました。（我把伞忘在电车上了。）",
+   "day": 43,
+   "prompt": "「看」对应哪个日语词？",
    "options": [
-    "动词辞书形（简体非过去）与简体形",
-    "到…地步；至少…",
+    "さがす",
+    "こむ",
+    "これから",
+    "ごらんになる"
+   ],
+   "h": "b4053563",
+   "oh": [
+    "ba9ffa17",
+    "bef50806",
+    "d73b3a8e",
+    "b4053563"
+   ],
+   "knowledge_ids": [
+    "V1075"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-V1079-reading",
+   "qid": "D13-043-V1079-reading",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「壊れる」（坏掉）的假名读音是哪一项？",
+   "options": [
+    "これから",
+    "こわす",
+    "こわれる",
+    "このごろ"
+   ],
+   "h": "a1c9d7e",
+   "oh": [
+    "d73b3a8e",
+    "faefa10a",
+    "a1c9d7e",
+    "37d9cd67"
+   ],
+   "knowledge_ids": [
+    "V1079"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-V1076-recall",
+   "qid": "D13-043-V1076-recall",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「今后」对应哪个日语词？",
+   "options": [
+    "こわす",
+    "これから",
+    "ごらんになる",
+    "こまかい"
+   ],
+   "h": "d73b3a8e",
+   "oh": [
+    "faefa10a",
+    "d73b3a8e",
+    "b4053563",
+    "deb87d2b"
+   ],
+   "knowledge_ids": [
+    "V1076"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-V1082-meaning",
+   "qid": "D13-043-V1082-meaning",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「コンピュータ」的中文释义？",
+   "options": [
+    "音乐会",
+    "今晚",
+    "电脑",
+    "米"
+   ],
+   "h": "1df2bfd3",
+   "oh": [
+    "3ca0f7e4",
+    "bb5d0b45",
+    "1df2bfd3",
+    "f6775182"
+   ],
+   "knowledge_ids": [
+    "V1082"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-V1079-meaning",
+   "qid": "D13-043-V1079-meaning",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「壊れる」的中文释义？",
+   "options": [
+    "坏掉",
+    "寻找",
+    "弄坏",
+    "下降"
+   ],
+   "h": "37327c15",
+   "oh": [
+    "37327c15",
+    "b65749ec",
+    "9e645b94",
+    "ab3e2c05"
+   ],
+   "knowledge_ids": [
+    "V1079"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-V1077-reading",
+   "qid": "D13-043-V1077-reading",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「怖い」（可怕）的假名读音是哪一项？",
+   "options": [
+    "こまかい",
+    "こわい",
+    "こんど",
+    "こめ"
+   ],
+   "h": "ffefa8e9",
+   "oh": [
+    "deb87d2b",
+    "ffefa8e9",
+    "2fa3afe",
+    "bff50999"
+   ],
+   "knowledge_ids": [
+    "V1077"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-V1080-meaning",
+   "qid": "D13-043-V1080-meaning",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「コンサート」的中文释义？",
+   "options": [
+    "垃圾",
+    "这次；下次",
+    "最近",
+    "音乐会"
+   ],
+   "h": "3ca0f7e4",
+   "oh": [
+    "7f72f3e4",
+    "f784525c",
+    "a631554a",
+    "3ca0f7e4"
+   ],
+   "knowledge_ids": [
+    "V1080"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-V1072-meaning",
+   "qid": "D13-043-V1072-meaning",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「ごみ」的中文释义？",
+   "options": [
+    "垃圾",
+    "这次；下次",
+    "坡道",
+    "电脑"
+   ],
+   "h": "7f72f3e4",
+   "oh": [
+    "7f72f3e4",
+    "f784525c",
+    "ee8c77ed",
+    "1df2bfd3"
+   ],
+   "knowledge_ids": [
+    "V1072"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-G0194-form",
+   "qid": "D13-043-G0194-form",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "选出符合下列意思的日语句子。\n我把伞忘在电车上了。",
+   "options": [
+    "大雪のために、電車が止まりました。",
+    "遅くなってすみません。電車が遅れたんです。",
+    "かぎがない。電車の中で落としたかもしれない。",
+    "電車に傘を忘れてしまいました。"
+   ],
+   "h": "d5084554",
+   "oh": [
+    "ce927c1b",
+    "2a6baa58",
+    "7681a694",
+    "d5084554"
+   ],
+   "knowledge_ids": [
+    "G0194"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-043-V1081-meaning",
+   "qid": "D13-043-V1081-meaning",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「今度」的中文释义？",
+   "options": [
+    "米",
+    "垃圾",
+    "这次；下次",
+    "坡道"
+   ],
+   "h": "f784525c",
+   "oh": [
+    "f6775182",
+    "7f72f3e4",
+    "f784525c",
+    "ee8c77ed"
+   ],
+   "knowledge_ids": [
+    "V1081"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-G0194-meaning",
+   "qid": "D13-043-G0194-meaning",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "请选择「〜てしまう / 〜ちゃう」所用句型的主要含义。",
+   "options": [
+    "好像…；像…一样",
     "…完了；不小心…；结果…",
-    "为了…；以便…"
+    "试着做…（看看效果）",
+    "但是…；虽然…"
    ],
    "h": "36a55b89",
    "oh": [
-    "d8e64e9d",
-    "4a4da33d",
+    "2fc68a26",
     "36a55b89",
-    "f157d5a4"
-   ],
-   "day": 43,
-   "group": "grammar",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "G0194"
-   ],
-   "source_day": 43,
-   "optional": true
-  },
-  {
-   "id": "P-043-G0194-u-a028e38a5845",
-   "qid": "P-043-G0194-u-a028e38a5845",
-   "type": "mcq",
-   "prompt": "课程中「〜てしまう / 〜ちゃう」的接续说明是哪一项？ 例句：電車に傘を忘れてしまいました。（我把伞忘在电车上了。）",
-   "options": [
-    "名詞 + によって／について／にとって",
-    "動詞て形 + から",
-    "动词て形 + しまう（口语缩约 ちゃう／じゃう）",
-    "動詞ます形（去ます） + ましょう／ませんか"
-   ],
-   "h": "d12600f4",
-   "oh": [
-    "67e8137e",
-    "c45f01bb",
-    "d12600f4",
-    "aaf5b4b3"
-   ],
-   "day": 43,
-   "group": "grammar",
-   "capability": "usage",
-   "knowledge_ids": [
-    "G0194"
-   ],
-   "source_day": 43,
-   "optional": true
-  },
-  {
-   "id": "P-043-G0195-m-7ee5708bd54e",
-   "qid": "P-043-G0195-m-7ee5708bd54e",
-   "type": "mcq",
-   "prompt": "本课句型「〜ておく」在以下语境中的释义是哪一项？ 例句：旅行の前に、ホテルを予約しておきます。（旅行前我会先把酒店订好。）",
-   "options": [
-    "如果／要是／一…就（四条件辨析）",
-    "比…／不如…",
-    "预先…好；…着（保持状态）",
-    "…或…"
-   ],
-   "h": "dbdf0cd9",
-   "oh": [
-    "b039e6b",
-    "61fb32eb",
-    "dbdf0cd9",
-    "efb2a7d1"
-   ],
-   "day": 43,
-   "group": "grammar",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "G0195"
-   ],
-   "source_day": 43,
-   "optional": true
-  },
-  {
-   "id": "P-043-G0196-m-0b437ca10315",
-   "qid": "P-043-G0196-m-0b437ca10315",
-   "type": "mcq",
-   "prompt": "本课句型「〜てみる」在以下语境中的释义是哪一项？ 例句：このシャツ、着てみてもいいですか。（这件衬衫可以试穿一下吗？）",
-   "options": [
-    "（解释）是…的；因为…",
-    "试着做…（看看效果）",
-    "到…地步；至少…",
-    "从…到…"
-   ],
-   "h": "5cf05d55",
-   "oh": [
-    "58814e33",
     "5cf05d55",
-    "4a4da33d",
-    "1a214d9b"
+    "b83da374"
    ],
-   "day": 43,
-   "group": "grammar",
+   "knowledge_ids": [
+    "G0194"
+   ],
    "capability": "meaning",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-043-V1077-meaning",
+   "qid": "D13-043-V1077-meaning",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「怖い」的中文释义？",
+   "options": [
+    "米",
+    "可怕",
+    "细小；琐碎",
+    "电脑"
+   ],
+   "h": "74fb9551",
+   "oh": [
+    "f6775182",
+    "74fb9551",
+    "ecd7f62d",
+    "1df2bfd3"
+   ],
+   "knowledge_ids": [
+    "V1077"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-V1070-recall",
+   "qid": "D13-043-V1070-recall",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「近来」对应哪个日语词？",
+   "options": [
+    "このごろ",
+    "コンサート",
+    "こめ",
+    "さいご"
+   ],
+   "h": "37d9cd67",
+   "oh": [
+    "37d9cd67",
+    "336a4a36",
+    "bff50999",
+    "7dbe7258"
+   ],
+   "knowledge_ids": [
+    "V1070"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-G0196-form",
+   "qid": "D13-043-G0196-form",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "选出符合下列意思的日语句子。\n这件衬衫可以试穿一下吗？",
+   "options": [
+    "この服が似合うかどうか、ちょっと着てみます。",
+    "少し待っていただけませんか。",
+    "暑かったら、窓を開けてもいいですよ。",
+    "このシャツ、着てみてもいいですか。"
+   ],
+   "h": "8d2de359",
+   "oh": [
+    "f5ff537a",
+    "b37ee108",
+    "c793d6c6",
+    "8d2de359"
+   ],
    "knowledge_ids": [
     "G0196"
    ],
-   "source_day": 43,
-   "optional": true
-  },
-  {
-   "id": "P-043-G0196-u-74a11900179e",
-   "qid": "P-043-G0196-u-74a11900179e",
-   "type": "mcq",
-   "prompt": "课程中「〜てみる」的接续说明是哪一项？ 例句：このシャツ、着てみてもいいですか。（这件衬衫可以试穿一下吗？）",
-   "options": [
-    "動詞 て形 + ほしい；否定 ない形 + で + ほしい；动作主体用 に（或 が）",
-    "动词て形+も；い形容词去い+くても；な形容词・名词+でも",
-    "动词て形 + みる",
-    "五段动词词尾改え段+る；一段动词去る+られる；する→できる；来る→来られる"
-   ],
-   "h": "1d25e1d1",
-   "oh": [
-    "50e1a426",
-    "fc1a949d",
-    "1d25e1d1",
-    "e2d405f6"
-   ],
-   "day": 43,
-   "group": "grammar",
    "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-043-V1084-meaning",
+   "qid": "D13-043-V1084-meaning",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「さいきん」的中文释义？",
+   "options": [
+    "最近",
+    "这次；下次",
+    "坡道",
+    "米"
+   ],
+   "h": "a631554a",
+   "oh": [
+    "a631554a",
+    "f784525c",
+    "ee8c77ed",
+    "f6775182"
+   ],
+   "knowledge_ids": [
+    "V1084"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-G0196-context",
+   "qid": "D13-043-G0196-context",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "请选择「日本の料理を自分で作ってみたいです。」的中文意思。",
+   "options": [
+    "我想自己试着做日本菜。",
+    "今年夏天我想去海边。",
+    "我想尝尝日本传统式的料理。",
+    "不好意思，我想去车站，请问怎么走？"
+   ],
+   "h": "c9114542",
+   "oh": [
+    "c9114542",
+    "d3620ad2",
+    "69fab4bb",
+    "973f316f"
+   ],
    "knowledge_ids": [
     "G0196"
    ],
-   "source_day": 43,
-   "optional": true
+   "capability": "usage",
+   "group": "grammar"
   },
   {
-   "id": "X-043-V1086-c",
-   "qid": "X-043-V1086-c",
+   "id": "D13-043-V1085-reading",
+   "qid": "D13-043-V1085-reading",
    "type": "mcq",
    "day": 43,
-   "prompt": "「最初」的意思是？",
+   "prompt": "「最後」（最后）的假名读音是哪一项？",
    "options": [
-    "最初",
-    "训练",
-    "扩大",
-    "搬家"
+    "さがる",
+    "さいご",
+    "さか",
+    "さいきん"
    ],
-   "h": "daa62526",
+   "h": "7dbe7258",
    "oh": [
-    "daa62526",
-    "b6f2a2a1",
-    "6c88eb59",
-    "ff767ac7"
+    "c9ee82d",
+    "7dbe7258",
+    "a54eb621",
+    "2e2f2930"
    ],
    "knowledge_ids": [
-    "V1086"
-   ],
-   "capability": "meaning",
-   "group": "vocab",
-   "optional": true
-  },
-  {
-   "id": "X-043-V1087-c",
-   "qid": "X-043-V1087-c",
-   "type": "mcq",
-   "day": 43,
-   "prompt": "「坂」的假名读音是？",
-   "options": [
-    "げんざい",
-    "ねる",
-    "ドラマ",
-    "さか"
-   ],
-   "h": "a54eb621",
-   "oh": [
-    "14ece218",
-    "65ef3b89",
-    "5f59d70b",
-    "a54eb621"
-   ],
-   "knowledge_ids": [
-    "V1087"
+    "V1085"
    ],
    "capability": "reading",
-   "group": "vocab",
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "X-043-V1088-c",
-   "qid": "X-043-V1088-c",
+   "id": "D13-043-V1071-reading",
+   "qid": "D13-043-V1071-reading",
    "type": "mcq",
    "day": 43,
-   "prompt": "「探す」的意思是？",
+   "prompt": "「細かい」（细小；琐碎）的假名读音是哪一项？",
    "options": [
-    "经验；经历",
-    "被褥",
-    "寻找",
-    "时期"
+    "こわす",
+    "こわれる",
+    "こわい",
+    "こまかい"
+   ],
+   "h": "deb87d2b",
+   "oh": [
+    "faefa10a",
+    "a1c9d7e",
+    "ffefa8e9",
+    "deb87d2b"
+   ],
+   "knowledge_ids": [
+    "V1071"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-V1078-meaning",
+   "qid": "D13-043-V1078-meaning",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「壊す」的中文释义？",
+   "options": [
+    "弄坏",
+    "拥挤",
+    "坏掉",
+    "寻找"
+   ],
+   "h": "9e645b94",
+   "oh": [
+    "9e645b94",
+    "694c1f0c",
+    "37327c15",
+    "b65749ec"
+   ],
+   "knowledge_ids": [
+    "V1078"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-V1088-reading",
+   "qid": "D13-043-V1088-reading",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「探す」（寻找）的假名读音是哪一项？",
+   "options": [
+    "さか",
+    "さいきん",
+    "さがす",
+    "さがる"
+   ],
+   "h": "ba9ffa17",
+   "oh": [
+    "a54eb621",
+    "2e2f2930",
+    "ba9ffa17",
+    "c9ee82d"
+   ],
+   "knowledge_ids": [
+    "V1088"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-V1088-meaning",
+   "qid": "D13-043-V1088-meaning",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「探す」的中文释义？",
+   "options": [
+    "坏掉",
+    "拥挤",
+    "下降",
+    "寻找"
    ],
    "h": "b65749ec",
    "oh": [
-    "81ca0bea",
-    "b9c2869d",
-    "b65749ec",
-    "52cd9462"
+    "37327c15",
+    "694c1f0c",
+    "ab3e2c05",
+    "b65749ec"
    ],
    "knowledge_ids": [
     "V1088"
    ],
    "capability": "meaning",
-   "group": "vocab",
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "X-043-V1089-c",
-   "qid": "X-043-V1089-c",
+   "id": "D13-043-V1089-reading",
+   "qid": "D13-043-V1089-reading",
    "type": "mcq",
    "day": 43,
-   "prompt": "「下がる」的假名读音是？",
+   "prompt": "「下がる」（下降）的假名读音是哪一项？",
    "options": [
-    "タオル",
-    "すぐに",
+    "さがす",
     "さがる",
-    "みつける"
+    "さいご",
+    "さいきん"
    ],
    "h": "c9ee82d",
    "oh": [
-    "50512e45",
-    "9544f3a5",
+    "ba9ffa17",
     "c9ee82d",
-    "6afbc262"
+    "7dbe7258",
+    "2e2f2930"
    ],
    "knowledge_ids": [
     "V1089"
    ],
    "capability": "reading",
-   "group": "vocab",
-   "optional": true
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-V1086-recall",
+   "qid": "D13-043-V1086-recall",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「最初」对应哪个日语词？",
+   "options": [
+    "さいしょ",
+    "こめ",
+    "こわれる",
+    "コンピュータ"
+   ],
+   "h": "418ab122",
+   "oh": [
+    "418ab122",
+    "bff50999",
+    "a1c9d7e",
+    "f0add061"
+   ],
+   "knowledge_ids": [
+    "V1086"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-V1087-reading",
+   "qid": "D13-043-V1087-reading",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「坂」（坡道）的假名读音是哪一项？",
+   "options": [
+    "さか",
+    "さいご",
+    "さがす",
+    "さがる"
+   ],
+   "h": "a54eb621",
+   "oh": [
+    "a54eb621",
+    "7dbe7258",
+    "ba9ffa17",
+    "c9ee82d"
+   ],
+   "knowledge_ids": [
+    "V1087"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-V1087-meaning",
+   "qid": "D13-043-V1087-meaning",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「坂」的中文释义？",
+   "options": [
+    "这次；下次",
+    "音乐会",
+    "坡道",
+    "电脑"
+   ],
+   "h": "ee8c77ed",
+   "oh": [
+    "f784525c",
+    "3ca0f7e4",
+    "ee8c77ed",
+    "1df2bfd3"
+   ],
+   "knowledge_ids": [
+    "V1087"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-V1089-meaning",
+   "qid": "D13-043-V1089-meaning",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「下がる」的中文释义？",
+   "options": [
+    "寻找",
+    "下降",
+    "坏掉",
+    "拥挤"
+   ],
+   "h": "ab3e2c05",
+   "oh": [
+    "b65749ec",
+    "ab3e2c05",
+    "37327c15",
+    "694c1f0c"
+   ],
+   "knowledge_ids": [
+    "V1089"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-043-V1086-meaning",
+   "qid": "D13-043-V1086-meaning",
+   "type": "mcq",
+   "day": 43,
+   "prompt": "「さいしょ」的中文释义？",
+   "options": [
+    "最初",
+    "电脑",
+    "米",
+    "坏掉"
+   ],
+   "h": "daa62526",
+   "oh": [
+    "daa62526",
+    "1df2bfd3",
+    "f6775182",
+    "37327c15"
+   ],
+   "knowledge_ids": [
+    "V1086"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
   }
  ],
  "listening_material": {

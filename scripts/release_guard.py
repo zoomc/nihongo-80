@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Fail closed before publishing the personal free-tier build."""
+from collections import Counter
 import hashlib
 import json
 from pathlib import Path
@@ -43,20 +44,29 @@ def check():
         if name=='vocabulary' and any(not x.get('ko_hint') for x in rows):
             raise ValueError('incomplete Korean hints')
     from curriculum_v5 import DAYS, core_vocab_limit
-    for p in (ROOT/'web/data').glob('day-*.json'):
-        d=json.loads(p.read_text())
-        merged=d.get('questions',[])
-        public_questions=(d['quiz']+d['sentences']+d.get('practice',[])+d.get('unit_questions',[])
-                          +(d.get('listening_material') or {}).get('questions',[])+merged)
+    from daily_questions import compact
+    from quiz_v5 import fnv
+    for day in range(1, DAYS + 1):
+        p = ROOT / f"web/data/day-{day:03d}.json"
+        d = json.loads(p.read_text())
+        daily = d['questions']
+        public_questions = (d['quiz'] + d['sentences'] + d.get('practice', [])
+                            + d.get('unit_questions', [])
+                            + (d.get('listening_material') or {}).get('questions', []) + daily)
         if any('answer' in q or 'rationale' in q for q in public_questions):
-            raise ValueError('public reference answer: '+p.name)
-        if merged:
-            if len({q['qid'] for q in merged})!=len(merged):
-                raise ValueError('duplicate merged qid: '+p.name)
-            if any(len(q.get('options',[]))!=4 or len(q.get('oh',[]))!=4 or q.get('h') not in q.get('oh',[]) for q in merged):
-                raise ValueError('merged question contract broken: '+p.name)
-            if len(merged)>60:
-                raise ValueError('merged questions exceed progress API limit: '+p.name)
+            raise ValueError('public reference answer: ' + p.name)
+        expected = {**{v['id']: 2 for v in d['vocab']}, **{g['id']: 3 for g in d['grammar']}}
+        if Counter(k for q in daily for k in q['knowledge_ids']) != expected:
+            raise ValueError('daily question quotas: ' + p.name)
+        if len({q['qid'] for q in daily}) != len(daily) or len(daily) > 60:
+            raise ValueError('invalid question count or duplicate ID: ' + p.name)
+        for q in daily:
+            hashes = [fnv(o) for o in q['options']]
+            if len(q['knowledge_ids']) != 1 or len(hashes) != 4 or len(set(hashes)) != 4 or hashes != q['oh'] or q['h'] not in hashes:
+                raise ValueError('invalid daily question: ' + q['qid'])
+            answer = q['options'][hashes.index(q['h'])]
+            if not answer or compact(answer) in compact(q['prompt'] + q.get('passage', '')):
+                raise ValueError('answer visible in prompt: ' + q['qid'])
         core=d['core_vocab_ids'];extra=d['extension_vocab_ids']
         if len(core)>core_vocab_limit(d['listening']) or set(core)&set(extra) or len(core)+len(extra)!=len(d['vocab']):
             raise ValueError('daily workload split broken')

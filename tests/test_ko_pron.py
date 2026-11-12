@@ -221,12 +221,13 @@ class TestSentenceReading(unittest.TestCase):
 
 
 class TestPageLayout(unittest.TestCase):
-    def test_kana_then_word_then_korean_then_chinese(self):
-        """新词区顺序：平假 → 单词 → 韩语发音 → 中文，且不再有「读音提示」重复行。"""
+    def test_vocab_has_japanese_and_translation_columns(self):
+        """新词左列日语，右列中文与韩语读音。"""
         h = page(47)
         self.assertRegex(
-            h, r'<div class="kana-line"[^>]*>[^<]+</div><div class="jp"[^>]*>.*?</div>'
-               r'<div class="ko-read"[^>]*>.*?</div><div class="zh"')
+            h, r'<div class="vocab-pair"><div lang="ja"><div class="kana-line"[^>]*>[^<]+</div>'
+               r'<div class="jp"[^>]*>[^<]+</div></div><div><div class="zh"[^>]*>.*?</div>'
+               r'<div class="ko-read"[^>]*>')
         self.assertNotIn("读音提示", h)
         self.assertNotIn("ex-kana", h)
 
@@ -313,7 +314,7 @@ class TestShowAll(unittest.TestCase):
         for m in re.finditer(r'<div class="(?:item|gcard)">(.*?)</div></div>', h, re.S):
             block = m.group(0)
             if "data-show-all" in block:
-                # 按钮必须是条目的第一个子节点，不能在会被遮住的元素里
+                # 按钮不能放进会被遮住的元素里
                 self.assertTrue(block.split("data-show-all")[0].count("<div class=\"mask") == 0)
 
     def test_script_implements_ten_second_peek(self):

@@ -2,12 +2,12 @@
  "day": 64,
  "phase": "P3",
  "theme": "V意志形 + と 思う / と する、N / Vた形 / V辞書形 / Vて + ばかり、V辞書形/Vている/Vた形 + ところ(だ/に/を/で)",
- "can_do": "用「V意志形 + と 思う / と する、N / Vた形 / V辞書形 / Vて + ばかり、V辞書形/Vている/Vた形 + ところ(だ/に/を/で)」造两句自己的话，表达：打算…／正要…、试图…；刚…；净是…、只…；一味…；正要…／正在…／刚…；在…时候；…之际",
+ "can_do": "用「V意志形 + と 思う / と する、N / Vた形 / V辞書形 / Vて + ばかり、V辞書形/Vている/Vた形 + ところ(だ/に/を/で)」各造一句自己的话，表达：打算…／正要…、试图…；刚…；净是…、只…；一味…；正要…／正在…／刚…；在…时候；…之际",
  "minutes": 60,
  "blocks": [
   {
    "type": "复习",
-   "min": 10,
+   "min": 5,
    "desc": "到期项优先；未完成顺延，不追赶"
   },
   {
@@ -17,23 +17,23 @@
   },
   {
    "type": "语法",
-   "min": 6,
+   "min": 5,
    "desc": "V意志形 + と 思う / と する、N / Vた形 / V辞書形 / Vて + ばかり、V辞書形/Vている/Vた形 + ところ(だ/に/を/で)"
   },
   {
    "type": "听力",
-   "min": 8,
-   "desc": "原创 TTS + 3 道理解题；时长为估计，非真人音频"
+   "min": 7,
+   "desc": "先听并复述主旨，再找两个细节，最后核对脚本（原创合成语音）"
   },
   {
    "type": "句子输出",
-   "min": 5,
-   "desc": "3道选句必做，7道拓展；答后核对"
+   "min": 4,
+   "desc": "每条新语法独立说一句，和例句对照"
   },
   {
    "type": "练习",
-   "min": 5,
-   "desc": "6 题即时自评"
+   "min": 13,
+   "desc": "优先做当天必学词与语法，答完重练错题"
   },
   {
    "type": "会话",
@@ -2382,1360 +2382,1329 @@
  ],
  "questions": [
   {
-   "id": "Q-064-K0-f71ecc65b618",
-   "qid": "Q-064-K0-f71ecc65b618",
+   "id": "D13-064-G0067-context",
+   "qid": "D13-064-G0067-context",
    "type": "mcq",
-   "prompt": "汉字「操」的一个常用读音是？",
+   "day": 64,
+   "prompt": "请选择「出かけようとしたら、雨が降ってきました。」的中文意思。",
    "options": [
-    "うし",
-    "つよい",
-    "ソウ",
-    "も.しくわ"
+    "正要出门时，朋友打来了电话。",
+    "刚一出门就下起雨来。",
+    "下起雨来了。",
+    "正要出门时下起雨来了。"
    ],
-   "h": "307693ca",
+   "h": "24df66e2",
    "oh": [
-    "a160bc2a",
-    "7a20e3ff",
-    "307693ca",
-    "48b9f3f8"
+    "45a3b79",
+    "b7ebf455",
+    "e311b598",
+    "24df66e2"
    ],
    "knowledge_ids": [
-    "K0124"
-   ]
+    "G0067"
+   ],
+   "capability": "usage",
+   "group": "grammar"
   },
   {
-   "id": "Q-064-K1-cc007f2aa6cb",
-   "qid": "Q-064-K1-cc007f2aa6cb",
+   "id": "D13-064-G0068-meaning",
+   "qid": "D13-064-G0068-meaning",
    "type": "mcq",
-   "prompt": "汉字「作」的一个常用读音是？",
+   "day": 64,
+   "prompt": "请选择「N / Vた形 / V辞書形 / Vて + ばかり」所用句型的主要含义。",
    "options": [
-    "さけ",
-    "-か.ける",
-    "サク",
-    "その"
-   ],
-   "h": "4997266d",
-   "oh": [
-    "8b4e8d33",
-    "15c77bf5",
-    "4997266d",
-    "68f8fdd2"
-   ],
-   "knowledge_ids": [
-    "K0125"
-   ]
-  },
-  {
-   "id": "Q-064-G-119743a53739",
-   "qid": "Q-064-G-119743a53739",
-   "type": "mcq",
-   "prompt": "句型「N / Vた形 / V辞書形 / Vて + ばかり」的意思是？",
-   "options": [
-    "未必…；不一定…；不见得…",
-    "越…越…",
-    "简直像…一样",
+    "说是…；所谓…",
+    "即使…也…（口语）",
+    "即使…也（不会有预期结果）",
     "刚…；净是…、只…；一味…"
    ],
    "h": "db59f6b4",
    "oh": [
-    "db4a40a4",
-    "33bedf05",
-    "97eb837d",
+    "72524cec",
+    "82e4102d",
+    "e90bd9a7",
     "db59f6b4"
    ],
    "knowledge_ids": [
     "G0068"
-   ]
-  },
-  {
-   "id": "Q-064-V0-17d855f732ee",
-   "qid": "Q-064-V0-17d855f732ee",
-   "type": "mcq",
-   "prompt": "「承認」是什么意思？",
-   "options": [
-    "批准；认可",
-    "空闲；余暇",
-    "产品；制品",
-    "反抗；违抗"
    ],
-   "h": "decf6232",
-   "oh": [
-    "decf6232",
-    "861cca32",
-    "ec8f705f",
-    "78f37b3e"
-   ],
-   "knowledge_ids": [
-    "V0263"
-   ]
-  },
-  {
-   "id": "Q-064-V1-98da5313e5fe",
-   "qid": "Q-064-V1-98da5313e5fe",
-   "type": "mcq",
-   "prompt": "「提出」是什么意思？",
-   "options": [
-    "送达；申报",
-    "材料",
-    "内衣",
-    "提交；交出"
-   ],
-   "h": "54b2e97c",
-   "oh": [
-    "665e248b",
-    "5de7c9a2",
-    "a8d00099",
-    "54b2e97c"
-   ],
-   "knowledge_ids": [
-    "V0264"
-   ]
-  },
-  {
-   "id": "Q-064-R-7737cbb8b1af",
-   "qid": "Q-064-R-7737cbb8b1af",
-   "type": "mcq",
-   "prompt": "复习：句型「V辞書形/Vない形 + ことに する / なる」的意思是？",
-   "options": [
-    "我想…；打算…",
-    "（自己）决定…／（结果）定为…、将要…",
-    "难保不会…、恐怕会…／难以…、不便…",
-    "…（な形容词谓语）"
-   ],
-   "h": "ccb70769",
-   "oh": [
-    "fc475e6",
-    "ccb70769",
-    "3bcca7b0",
-    "aaf59d58"
-   ],
-   "knowledge_ids": [
-    "G0065"
-   ]
-  },
-  {
-   "id": "L-064-0-433ec1275dc5",
-   "qid": "L-064-0-433ec1275dc5",
-   "type": "mcq",
-   "prompt": "いつ休館しますか。",
-   "options": [
-    "木曜日",
-    "月曜日",
-    "火曜日",
-    "水曜日"
-   ],
-   "h": "b2ad1458",
-   "oh": [
-    "7da6f79c",
-    "ab1845fc",
-    "45fc79a5",
-    "b2ad1458"
-   ],
-   "knowledge_ids": []
-  },
-  {
-   "id": "L-064-1-492776a172f1",
-   "qid": "L-064-1-492776a172f1",
-   "type": "mcq",
-   "prompt": "予約した本は、メールが届いてからいつまでに取りに行きますか。",
-   "options": [
-    "三日以内",
-    "二週間以内",
-    "一週間以内",
-    "一か月以内"
-   ],
-   "h": "27bd2dad",
-   "oh": [
-    "e1737285",
-    "6125f1f9",
-    "27bd2dad",
-    "7280d49a"
-   ],
-   "knowledge_ids": []
-  },
-  {
-   "id": "L-064-2-75b8bc6b3c28",
-   "qid": "L-064-2-75b8bc6b3c28",
-   "type": "mcq",
-   "prompt": "借りた物を返却箱に入れないのはなぜですか。",
-   "options": [
-    "壊れるおそれがあるから",
-    "予約が必要だから",
-    "箱がいっぱいだから",
-    "重すぎるから"
-   ],
-   "h": "40124aba",
-   "oh": [
-    "40124aba",
-    "aa95b237",
-    "b9544338",
-    "293695fc"
-   ],
-   "knowledge_ids": []
-  },
-  {
-   "id": "P-064-00-c4050ff5a427",
-   "qid": "P-064-00-c4050ff5a427",
-   "type": "mcq",
-   "prompt": "女性比例超过一半。",
-   "options": [
-    "事故の原因を調べています。",
-    "女性の割合は半分以上です。",
-    "でも、これで１つ貸しだね。",
-    "彼は一時ここに住んでいた。"
-   ],
-   "h": "d31fa855",
-   "oh": [
-    "820e254f",
-    "d31fa855",
-    "8347f85c",
-    "3732accd"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-064-01-45aab78ca1eb",
-   "qid": "P-064-01-45aab78ca1eb",
-   "type": "mcq",
-   "prompt": "市里对居民进行了调查。",
-   "options": [
-    "昨夜はぐっすり眠れなかった。",
-    "彼は仕事の上では私の先輩だ。",
-    "最近、物価が上がっています。",
-    "市が住民に調査を行いました。"
-   ],
-   "h": "2b753e0a",
-   "oh": [
-    "c36eaddd",
-    "4452aac8",
-    "bc6a316f",
-    "2b753e0a"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-064-02-a704d59f157a",
-   "qid": "P-064-02-a704d59f157a",
-   "type": "mcq",
-   "prompt": "结果明天公布。",
-   "options": [
-    "彼は旗を上下に動かした。",
-    "結果は明日発表されます。",
-    "人は意識のある生き物だ。",
-    "私は読書に集中していた。"
-   ],
-   "h": "7ba95219",
-   "oh": [
-    "9fda0a9d",
-    "7ba95219",
-    "5eb9d09f",
-    "625b4282"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-064-V0263-m-fe4a2fd86f3c",
-   "qid": "P-064-V0263-m-fe4a2fd86f3c",
-   "type": "mcq",
-   "prompt": "本课词条「承認」（例句语境：部长批准了申请。）的释义是哪一项？",
-   "options": [
-    "批准；认可",
-    "开；打开",
-    "达到",
-    "发行；出版"
-   ],
-   "h": "decf6232",
-   "oh": [
-    "decf6232",
-    "f3215797",
-    "ac908343",
-    "7be09e9b"
-   ],
-   "day": 64,
-   "group": "vocab",
    "capability": "meaning",
-   "knowledge_ids": [
-    "V0263"
-   ],
-   "source_day": 64,
-   "optional": true
+   "group": "grammar"
   },
   {
-   "id": "P-064-V0264-m-b01d3ac52f30",
-   "qid": "P-064-V0264-m-b01d3ac52f30",
+   "id": "D13-064-V0275-meaning",
+   "qid": "D13-064-V0275-meaning",
    "type": "mcq",
-   "prompt": "本课词条「提出」（例句语境：请在明天之前提交报告。）的释义是哪一项？",
-   "options": [
-    "生物",
-    "提交；交出",
-    "现在；目前",
-    "生活"
-   ],
-   "h": "54b2e97c",
-   "oh": [
-    "334b6c5",
-    "54b2e97c",
-    "5aaec203",
-    "d109e70f"
-   ],
    "day": 64,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0264"
-   ],
-   "source_day": 64,
-   "optional": true
-  },
-  {
-   "id": "P-064-V0265-m-eabaf76f937c",
-   "qid": "P-064-V0265-m-eabaf76f937c",
-   "type": "mcq",
-   "prompt": "本课词条「締め切り」（例句语境：报名截止日期是本周五。）的释义是哪一项？",
+   "prompt": "「件名」的中文释义？",
    "options": [
-    "年末；傍晚",
-    "截止日期；截止",
-    "高中",
-    "到达"
-   ],
-   "h": "c868a0d6",
-   "oh": [
-    "79443c52",
-    "c868a0d6",
-    "8f910d3e",
-    "108a1dc3"
-   ],
-   "day": 64,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0265"
-   ],
-   "source_day": 64,
-   "optional": true
-  },
-  {
-   "id": "P-064-V0265-r-232c9145a6db",
-   "qid": "P-064-V0265-r-232c9145a6db",
-   "type": "mcq",
-   "prompt": "本课词条「締め切り」（截止日期；截止）的假名读音是哪一项？",
-   "options": [
-    "しめきり",
-    "じゅよう",
-    "きんだい",
-    "つらい"
-   ],
-   "h": "e41b5486",
-   "oh": [
-    "e41b5486",
-    "9df22f24",
-    "c5c316a5",
-    "4c1e5cfe"
-   ],
-   "day": 64,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0265"
-   ],
-   "source_day": 64,
-   "optional": true
-  },
-  {
-   "id": "P-064-V0266-m-23128bea10de",
-   "qid": "P-064-V0266-m-23128bea10de",
-   "type": "mcq",
-   "prompt": "本课词条「担当」（例句语境：这位客户由田中负责。）的释义是哪一项？",
-   "options": [
-    "城市；都市",
-    "负责；担任",
-    "寄；送",
-    "贡献"
-   ],
-   "h": "ceddf258",
-   "oh": [
-    "e3b0cc9",
-    "ceddf258",
-    "3318117b",
-    "24d3b066"
-   ],
-   "day": 64,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0266"
-   ],
-   "source_day": 64,
-   "optional": true
-  },
-  {
-   "id": "P-064-V0266-r-f38c91075d22",
-   "qid": "P-064-V0266-r-f38c91075d22",
-   "type": "mcq",
-   "prompt": "本课词条「担当」（负责；担任）的假名读音是哪一项？",
-   "options": [
-    "さくもつ",
-    "けんぶつ",
-    "ざせき",
-    "たんとう"
-   ],
-   "h": "a1980261",
-   "oh": [
-    "9059101b",
-    "bf5df1af",
-    "10744321",
-    "a1980261"
-   ],
-   "day": 64,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0266"
-   ],
-   "source_day": 64,
-   "optional": true
-  },
-  {
-   "id": "P-064-V0267-m-01551132cc2a",
-   "qid": "P-064-V0267-m-01551132cc2a",
-   "type": "mcq",
-   "prompt": "本课词条「上司」（例句语境：和上司商量后再决定。）的释义是哪一项？",
-   "options": [
-    "上司",
-    "游泳",
-    "仅仅；只是",
-    "学问；学识"
-   ],
-   "h": "5b13413f",
-   "oh": [
-    "5b13413f",
-    "a4bebc5c",
-    "a31e8ba7",
-    "7127b046"
-   ],
-   "day": 64,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0267"
-   ],
-   "source_day": 64,
-   "optional": true
-  },
-  {
-   "id": "P-064-V0267-r-644bf9dbd358",
-   "qid": "P-064-V0267-r-644bf9dbd358",
-   "type": "mcq",
-   "prompt": "本课词条「上司」（上司）的假名读音是哪一项？",
-   "options": [
-    "じょうけん",
-    "しゅうり",
-    "わるい",
-    "じょうし"
-   ],
-   "h": "c3a7e3df",
-   "oh": [
-    "52cb21e",
-    "5c2b7e15",
-    "db0f47f1",
-    "c3a7e3df"
-   ],
-   "day": 64,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0267"
-   ],
-   "source_day": 64,
-   "optional": true
-  },
-  {
-   "id": "P-064-V0268-m-3a4d5cf6d649",
-   "qid": "P-064-V0268-m-3a4d5cf6d649",
-   "type": "mcq",
-   "prompt": "本课词条「部下」（例句语境：把工作交给了下属。）的释义是哪一项？",
-   "options": [
-    "拥挤",
-    "机场",
-    "你；您",
-    "部下；下属"
-   ],
-   "h": "82d62954",
-   "oh": [
-    "694c1f0c",
-    "7ebee0f5",
-    "6989b6c",
-    "82d62954"
-   ],
-   "day": 64,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0268"
-   ],
-   "source_day": 64,
-   "optional": true
-  },
-  {
-   "id": "P-064-V0268-r-4c865a078e21",
-   "qid": "P-064-V0268-r-4c865a078e21",
-   "type": "mcq",
-   "prompt": "本课词条「部下」（部下；下属）的假名读音是哪一项？",
-   "options": [
-    "ぶか",
-    "かつよう",
-    "ぜんぶ",
-    "トン"
-   ],
-   "h": "45a48ca6",
-   "oh": [
-    "45a48ca6",
-    "742a540",
-    "60118a6a",
-    "f43c10cc"
-   ],
-   "day": 64,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0268"
-   ],
-   "source_day": 64,
-   "optional": true
-  },
-  {
-   "id": "P-064-V0269-m-4c91ed1872ef",
-   "qid": "P-064-V0269-m-4c91ed1872ef",
-   "type": "mcq",
-   "prompt": "本课词条「同僚」（例句语境：和同事一起吃了午饭。）的释义是哪一项？",
-   "options": [
-    "孩子",
-    "同事",
-    "汽车",
-    "特快列车"
-   ],
-   "h": "8bf32ba0",
-   "oh": [
-    "9098e9fc",
-    "8bf32ba0",
-    "18c2954a",
-    "e0e7fe58"
-   ],
-   "day": 64,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0269"
-   ],
-   "source_day": 64,
-   "optional": true
-  },
-  {
-   "id": "P-064-V0269-r-91cc82f720c0",
-   "qid": "P-064-V0269-r-91cc82f720c0",
-   "type": "mcq",
-   "prompt": "本课词条「同僚」（同事）的假名读音是哪一项？",
-   "options": [
-    "かける",
-    "けんこう",
-    "どうりょう",
-    "どりょく"
-   ],
-   "h": "cc4e68ad",
-   "oh": [
-    "4b75027e",
-    "cfe6d884",
-    "cc4e68ad",
-    "fa1c48e8"
-   ],
-   "day": 64,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0269"
-   ],
-   "source_day": 64,
-   "optional": true
-  },
-  {
-   "id": "P-064-V0270-m-c3830ab33a0b",
-   "qid": "P-064-V0270-m-c3830ab33a0b",
-   "type": "mcq",
-   "prompt": "本课词条「取引先」（例句语境：和客户公司的会议在下周。）的释义是哪一项？",
-   "options": [
-    "小气；寒酸",
-    "你",
-    "悠闲；从容",
-    "交易对象；客户公司"
-   ],
-   "h": "f1bdfdf4",
-   "oh": [
-    "34e5db7d",
-    "e55f99bf",
-    "20ecf425",
-    "f1bdfdf4"
-   ],
-   "day": 64,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0270"
-   ],
-   "source_day": 64,
-   "optional": true
-  },
-  {
-   "id": "P-064-V0270-r-80f94ddd1f8d",
-   "qid": "P-064-V0270-r-80f94ddd1f8d",
-   "type": "mcq",
-   "prompt": "本课词条「取引先」（交易对象；客户公司）的假名读音是哪一项？",
-   "options": [
-    "しる",
-    "かご",
-    "とりひきさき",
-    "つめたい"
-   ],
-   "h": "4ec82d4c",
-   "oh": [
-    "2d527667",
-    "6249cf7a",
-    "4ec82d4c",
-    "16aa025d"
-   ],
-   "day": 64,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0270"
-   ],
-   "source_day": 64,
-   "optional": true
-  },
-  {
-   "id": "P-064-V0271-m-d684e4b2c21b",
-   "qid": "P-064-V0271-m-d684e4b2c21b",
-   "type": "mcq",
-   "prompt": "本课词条「打ち合わせ」（例句语境：明天的碰头会三点开始。）的释义是哪一项？",
-   "options": [
-    "附近",
-    "大大地；非常",
-    "职责；义务",
-    "碰头商量；事前协调"
-   ],
-   "h": "45bd8245",
-   "oh": [
-    "3eba9a66",
-    "60fc51f0",
-    "d1be4a83",
-    "45bd8245"
-   ],
-   "day": 64,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0271"
-   ],
-   "source_day": 64,
-   "optional": true
-  },
-  {
-   "id": "P-064-V0271-r-972733745869",
-   "qid": "P-064-V0271-r-972733745869",
-   "type": "mcq",
-   "prompt": "本课词条「打ち合わせ」（碰头商量；事前协调）的假名读音是哪一项？",
-   "options": [
-    "うちあわせ",
-    "しあい",
-    "かわ",
-    "ぐっすり"
-   ],
-   "h": "40352ca8",
-   "oh": [
-    "40352ca8",
-    "a6a3d5a8",
-    "894879df",
-    "7119297"
-   ],
-   "day": 64,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0271"
-   ],
-   "source_day": 64,
-   "optional": true
-  },
-  {
-   "id": "P-064-V0272-m-e5f08a58e4de",
-   "qid": "P-064-V0272-m-e5f08a58e4de",
-   "type": "mcq",
-   "prompt": "本课词条「資料」（例句语境：复印了会议资料。）的释义是哪一项？",
-   "options": [
+    "印章；图章",
+    "（邮件）主题",
     "资料；材料",
-    "谷物",
-    "初中",
-    "能乐"
-   ],
-   "h": "5a3d8cc",
-   "oh": [
-    "5a3d8cc",
-    "e0a314d",
-    "7d09273f",
-    "346a5fe8"
-   ],
-   "day": 64,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0272"
-   ],
-   "source_day": 64,
-   "optional": true
-  },
-  {
-   "id": "P-064-V0272-r-c76aecb268f0",
-   "qid": "P-064-V0272-r-c76aecb268f0",
-   "type": "mcq",
-   "prompt": "本课词条「資料」（资料；材料）的假名读音是哪一项？",
-   "options": [
-    "こっかい",
-    "しりょう",
-    "いみ",
-    "いきおい"
-   ],
-   "h": "833f923d",
-   "oh": [
-    "10708264",
-    "833f923d",
-    "795c0004",
-    "e57f043c"
-   ],
-   "day": 64,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0272"
-   ],
-   "source_day": 64,
-   "optional": true
-  },
-  {
-   "id": "P-064-V0273-m-d5b4d7f18a78",
-   "qid": "P-064-V0273-m-d5b4d7f18a78",
-   "type": "mcq",
-   "prompt": "本课词条「書類」（例句语境：请把必要文件交到窗口。）的释义是哪一项？",
-   "options": [
-    "无聊",
-    "客人",
-    "文件；书面材料",
-    "那么"
-   ],
-   "h": "889b54b2",
-   "oh": [
-    "66a43e2f",
-    "fbcde84d",
-    "889b54b2",
-    "da18722e"
-   ],
-   "day": 64,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0273"
-   ],
-   "source_day": 64,
-   "optional": true
-  },
-  {
-   "id": "P-064-V0273-r-dfe6b9a6f6de",
-   "qid": "P-064-V0273-r-dfe6b9a6f6de",
-   "type": "mcq",
-   "prompt": "本课词条「書類」（文件；书面材料）的假名读音是哪一项？",
-   "options": [
-    "きぬ",
-    "ほんとう",
-    "しょるい",
-    "たまご"
-   ],
-   "h": "1ab954",
-   "oh": [
-    "866d5d9c",
-    "32da57ad",
-    "1ab954",
-    "db49c96c"
-   ],
-   "day": 64,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0273"
-   ],
-   "source_day": 64,
-   "optional": true
-  },
-  {
-   "id": "P-064-V0274-m-1e9820831ad9",
-   "qid": "P-064-V0274-m-1e9820831ad9",
-   "type": "mcq",
-   "prompt": "本课词条「宛先」（例句语境：把邮件收件人弄错了。）的释义是哪一项？",
-   "options": [
-    "眼看就要",
-    "睡眠",
-    "收件地址；收件人",
-    "希望"
-   ],
-   "h": "748076c4",
-   "oh": [
-    "d4b57e36",
-    "c98347e4",
-    "748076c4",
-    "cd9c650"
-   ],
-   "day": 64,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0274"
-   ],
-   "source_day": 64,
-   "optional": true
-  },
-  {
-   "id": "P-064-V0274-r-b4a63bc5de6c",
-   "qid": "P-064-V0274-r-b4a63bc5de6c",
-   "type": "mcq",
-   "prompt": "本课词条「宛先」（收件地址；收件人）的假名读音是哪一项？",
-   "options": [
-    "じぶん",
-    "あてさき",
-    "しょもつ",
-    "たいし"
-   ],
-   "h": "809f960b",
-   "oh": [
-    "224de430",
-    "809f960b",
-    "163bf2d5",
-    "ae2569eb"
-   ],
-   "day": 64,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0274"
-   ],
-   "source_day": 64,
-   "optional": true
-  },
-  {
-   "id": "P-064-V0275-m-f1e51cbe5754",
-   "qid": "P-064-V0275-m-f1e51cbe5754",
-   "type": "mcq",
-   "prompt": "本课词条「件名」（例句语境：主题栏请写会议名称。）的释义是哪一项？",
-   "options": [
-    "互相",
-    "叉子",
-    "气味",
-    "（邮件）主题"
+    "收件地址；收件人"
    ],
    "h": "c6930cd1",
    "oh": [
-    "5a595977",
-    "e294205c",
-    "17371850",
-    "c6930cd1"
+    "16b1f4ac",
+    "c6930cd1",
+    "5a3d8cc",
+    "748076c4"
    ],
-   "day": 64,
-   "group": "vocab",
-   "capability": "meaning",
    "knowledge_ids": [
     "V0275"
    ],
-   "source_day": 64,
-   "optional": true
+   "capability": "meaning",
+   "group": "vocab"
   },
   {
-   "id": "P-064-V0275-r-8877234b9407",
-   "qid": "P-064-V0275-r-8877234b9407",
+   "id": "D13-064-V0277-reading",
+   "qid": "D13-064-V0277-reading",
    "type": "mcq",
-   "prompt": "本课词条「件名」（（邮件）主题）的假名读音是哪一项？",
+   "day": 64,
+   "prompt": "「返信」（回信；回复）的假名读音是哪一项？",
+   "options": [
+    "へんしん",
+    "へや",
+    "へん",
+    "へた"
+   ],
+   "h": "d0c99586",
+   "oh": [
+    "d0c99586",
+    "855414b9",
+    "96542f7c",
+    "5a556408"
+   ],
+   "knowledge_ids": [
+    "V0277"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0265-meaning",
+   "qid": "D13-064-V0265-meaning",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「締め切り」的中文释义？",
+   "options": [
+    "接待处；受理",
+    "批准；认可",
+    "同事",
+    "截止日期；截止"
+   ],
+   "h": "c868a0d6",
+   "oh": [
+    "3146e2c7",
+    "decf6232",
+    "8bf32ba0",
+    "c868a0d6"
+   ],
+   "knowledge_ids": [
+    "V0265"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0272-reading",
+   "qid": "D13-064-V0272-reading",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「資料」（资料；材料）的假名读音是哪一项？",
+   "options": [
+    "しめきり",
+    "しょうにん",
+    "しりょう",
+    "しょるい"
+   ],
+   "h": "833f923d",
+   "oh": [
+    "e41b5486",
+    "85dc109d",
+    "833f923d",
+    "1ab954"
+   ],
+   "knowledge_ids": [
+    "V0272"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0265-reading",
+   "qid": "D13-064-V0265-reading",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「締め切り」（截止日期；截止）的假名读音是哪一项？",
+   "options": [
+    "しょるい",
+    "しりょう",
+    "しょうにん",
+    "しめきり"
+   ],
+   "h": "e41b5486",
+   "oh": [
+    "1ab954",
+    "833f923d",
+    "85dc109d",
+    "e41b5486"
+   ],
+   "knowledge_ids": [
+    "V0265"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0276-reading",
+   "qid": "D13-064-V0276-reading",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「添付」（附件；附加）的假名读音是哪一项？",
+   "options": [
+    "てんぷ",
+    "てんそう",
+    "てつだい",
+    "てんけい"
+   ],
+   "h": "523a886b",
+   "oh": [
+    "523a886b",
+    "7f1943cd",
+    "eb6a65f3",
+    "bdceda7b"
+   ],
+   "knowledge_ids": [
+    "V0276"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0270-meaning",
+   "qid": "D13-064-V0270-meaning",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「取引先」的中文释义？",
+   "options": [
+    "负责；担任",
+    "批准；认可",
+    "交易对象；客户公司",
+    "部下；下属"
+   ],
+   "h": "f1bdfdf4",
+   "oh": [
+    "ceddf258",
+    "decf6232",
+    "f1bdfdf4",
+    "82d62954"
+   ],
+   "knowledge_ids": [
+    "V0270"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0268-meaning",
+   "qid": "D13-064-V0268-meaning",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「部下」的中文释义？",
+   "options": [
+    "截止日期；截止",
+    "（邮件）主题",
+    "部下；下属",
+    "工作；任职"
+   ],
+   "h": "82d62954",
+   "oh": [
+    "c868a0d6",
+    "c6930cd1",
+    "82d62954",
+    "d6754b3a"
+   ],
+   "knowledge_ids": [
+    "V0268"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-G0068-context",
+   "qid": "D13-064-G0068-context",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "请选择「この店は値段ばかり高くて、味は普通です。」的中文意思。",
+   "options": [
+    "这家店光价格贵，味道一般。",
+    "这家店不仅菜好吃，价格也便宜。",
+    "这家店不仅便宜，味道也好。",
+    "这家店相对价格来说，量多又好吃。"
+   ],
+   "h": "a550444",
+   "oh": [
+    "a550444",
+    "a212d37e",
+    "1ef336b2",
+    "7578ccc9"
+   ],
+   "knowledge_ids": [
+    "G0068"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-064-V0270-reading",
+   "qid": "D13-064-V0270-reading",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「取引先」（交易对象；客户公司）的假名读音是哪一项？",
+   "options": [
+    "とくちょう",
+    "とりひきさき",
+    "とうちゃく",
+    "とうひょう"
+   ],
+   "h": "4ec82d4c",
+   "oh": [
+    "f2ce3186",
+    "4ec82d4c",
+    "c12f6830",
+    "e63e535e"
+   ],
+   "knowledge_ids": [
+    "V0270"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0276-meaning",
+   "qid": "D13-064-V0276-meaning",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「添付」的中文释义？",
+   "options": [
+    "出差",
+    "负责；担任",
+    "转发；转送",
+    "附件；附加"
+   ],
+   "h": "ef7dde68",
+   "oh": [
+    "372760f9",
+    "ceddf258",
+    "42164308",
+    "ef7dde68"
+   ],
+   "knowledge_ids": [
+    "V0276"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0278-meaning",
+   "qid": "D13-064-V0278-meaning",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「転送」的中文释义？",
+   "options": [
+    "同事",
+    "转发；转送",
+    "部下；下属",
+    "印章；图章"
+   ],
+   "h": "42164308",
+   "oh": [
+    "8bf32ba0",
+    "42164308",
+    "82d62954",
+    "16b1f4ac"
+   ],
+   "knowledge_ids": [
+    "V0278"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0267-recall",
+   "qid": "D13-064-V0267-recall",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「上司」对应哪个日语词？",
+   "options": [
+    "どうりょう",
+    "じょうし",
+    "うけつけ",
+    "あてさき"
+   ],
+   "h": "c3a7e3df",
+   "oh": [
+    "cc4e68ad",
+    "c3a7e3df",
+    "17f597df",
+    "809f960b"
+   ],
+   "knowledge_ids": [
+    "V0267"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0275-reading",
+   "qid": "D13-064-V0275-reading",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「件名」（主题）的假名读音是哪一项？",
    "options": [
     "けんめい",
-    "いのち",
-    "うまい",
-    "て"
+    "けんとう",
+    "けっせき",
+    "けしょう"
    ],
    "h": "dbc82890",
    "oh": [
     "dbc82890",
-    "75172352",
-    "269b9513",
-    "e3255799"
+    "91434e2b",
+    "e60c0d3d",
+    "6861288c"
    ],
-   "day": 64,
-   "group": "vocab",
-   "capability": "reading",
    "knowledge_ids": [
     "V0275"
    ],
-   "source_day": 64,
-   "optional": true
-  },
-  {
-   "id": "P-064-V0276-m-8915a98dfe3d",
-   "qid": "P-064-V0276-m-8915a98dfe3d",
-   "type": "mcq",
-   "prompt": "本课词条「添付」（例句语境：把报价单附在邮件里了。）的释义是哪一项？",
-   "options": [
-    "明年",
-    "附件；附加",
-    "语言",
-    "那么"
-   ],
-   "h": "ef7dde68",
-   "oh": [
-    "3243027f",
-    "ef7dde68",
-    "72aa6468",
-    "da18722e"
-   ],
-   "day": 64,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0276"
-   ],
-   "source_day": 64,
-   "optional": true
-  },
-  {
-   "id": "P-064-V0276-r-1b22f1fa7fa4",
-   "qid": "P-064-V0276-r-1b22f1fa7fa4",
-   "type": "mcq",
-   "prompt": "本课词条「添付」（附件；附加）的假名读音是哪一项？",
-   "options": [
-    "こんなに",
-    "もん",
-    "てんぷ",
-    "あした"
-   ],
-   "h": "523a886b",
-   "oh": [
-    "1c9c2b00",
-    "152fc962",
-    "523a886b",
-    "f46a5d6b"
-   ],
-   "day": 64,
-   "group": "vocab",
    "capability": "reading",
-   "knowledge_ids": [
-    "V0276"
-   ],
-   "source_day": 64,
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "P-064-V0277-m-c0eb33c8e663",
-   "qid": "P-064-V0277-m-c0eb33c8e663",
+   "id": "D13-064-V0273-meaning",
+   "qid": "D13-064-V0273-meaning",
    "type": "mcq",
-   "prompt": "本课词条「返信」（例句语境：在等邮件回复。）的释义是哪一项？",
-   "options": [
-    "回信；回复",
-    "石头",
-    "海上；洋面",
-    "爱"
-   ],
-   "h": "a4a54080",
-   "oh": [
-    "a4a54080",
-    "c93cb302",
-    "d70ed700",
-    "348dbd1c"
-   ],
    "day": 64,
-   "group": "vocab",
+   "prompt": "「書類」的中文释义？",
+   "options": [
+    "负责；担任",
+    "（邮件）主题",
+    "工作；任职",
+    "文件；书面材料"
+   ],
+   "h": "889b54b2",
+   "oh": [
+    "ceddf258",
+    "c6930cd1",
+    "d6754b3a",
+    "889b54b2"
+   ],
+   "knowledge_ids": [
+    "V0273"
+   ],
    "capability": "meaning",
-   "knowledge_ids": [
-    "V0277"
-   ],
-   "source_day": 64,
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "P-064-V0277-r-85973f1820ae",
-   "qid": "P-064-V0277-r-85973f1820ae",
+   "id": "D13-064-V0273-reading",
+   "qid": "D13-064-V0273-reading",
    "type": "mcq",
-   "prompt": "本课词条「返信」（回信；回复）的假名读音是哪一项？",
-   "options": [
-    "テニス",
-    "どなた",
-    "かす",
-    "へんしん"
-   ],
-   "h": "d0c99586",
-   "oh": [
-    "efc1dd",
-    "f0678cef",
-    "5749be29",
-    "d0c99586"
-   ],
    "day": 64,
-   "group": "vocab",
+   "prompt": "「書類」（文件；书面材料）的假名读音是哪一项？",
+   "options": [
+    "しょうにん",
+    "しりょう",
+    "しめきり",
+    "しょるい"
+   ],
+   "h": "1ab954",
+   "oh": [
+    "85dc109d",
+    "833f923d",
+    "e41b5486",
+    "1ab954"
+   ],
+   "knowledge_ids": [
+    "V0273"
+   ],
    "capability": "reading",
-   "knowledge_ids": [
-    "V0277"
-   ],
-   "source_day": 64,
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "P-064-V0278-m-9d9857c3ef11",
-   "qid": "P-064-V0278-m-9d9857c3ef11",
+   "id": "D13-064-G0067-form",
+   "qid": "D13-064-G0067-form",
    "type": "mcq",
-   "prompt": "本课词条「転送」（例句语境：请把这封邮件转发给营业部。）的释义是哪一项？",
-   "options": [
-    "转发；转送",
-    "抵抗；阻力",
-    "戏剧",
-    "流动；漂流"
-   ],
-   "h": "42164308",
-   "oh": [
-    "42164308",
-    "5a10ef8",
-    "5dd958db",
-    "6391f0fc"
-   ],
    "day": 64,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V0278"
-   ],
-   "source_day": 64,
-   "optional": true
-  },
-  {
-   "id": "P-064-V0278-r-d18eb23cd6d9",
-   "qid": "P-064-V0278-r-d18eb23cd6d9",
-   "type": "mcq",
-   "prompt": "本课词条「転送」（转发；转送）的假名读音是哪一项？",
+   "prompt": "选出符合下列意思的日语句子。\n周日打算看电影。",
    "options": [
-    "つうじる",
-    "てんそう",
-    "こわい",
-    "にち"
+    "映画を見に行きます。",
+    "日曜日は映画を見ようと思っています。",
+    "映画が見たいです。",
+    "友達と映画を見ます。"
    ],
-   "h": "7f1943cd",
+   "h": "80c74903",
    "oh": [
-    "b9d8a83a",
-    "7f1943cd",
-    "ffefa8e9",
-    "6fca62d1"
+    "a23cf648",
+    "80c74903",
+    "bf6e4ed8",
+    "6c96baa1"
    ],
-   "day": 64,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V0278"
-   ],
-   "source_day": 64,
-   "optional": true
-  },
-  {
-   "id": "P-064-G0067-m-5a62f3eb6fee",
-   "qid": "P-064-G0067-m-5a62f3eb6fee",
-   "type": "mcq",
-   "prompt": "本课句型「V意志形 + と 思う / と する」在以下语境中的释义是哪一项？ 例句：日曜日は映画を見ようと思っています。（周日打算看电影。）",
-   "options": [
-    "与…相比",
-    "打算…／正要…、试图…",
-    "感觉…；总觉得…",
-    "必然…；肯定…"
-   ],
-   "h": "3d8c81f4",
-   "oh": [
-    "e95a9ad9",
-    "3d8c81f4",
-    "3b212103",
-    "b515ea6"
-   ],
-   "day": 64,
-   "group": "grammar",
-   "capability": "meaning",
    "knowledge_ids": [
     "G0067"
    ],
-   "source_day": 64,
-   "optional": true
-  },
-  {
-   "id": "P-064-G0067-u-2d75dbc49fd8",
-   "qid": "P-064-G0067-u-2d75dbc49fd8",
-   "type": "mcq",
-   "prompt": "课程中「V意志形 + と 思う / と する」的接续说明是哪一项？ 例句：日曜日は映画を見ようと思っています。（周日打算看电影。）",
-   "options": [
-    "动词辞书形 + ものではない",
-    "動詞 意志形（五段 お段+う／一段 よう／する→しよう／来る→こよう）+ と 思う／と する",
-    "普通形 + とか（句末，或用「とかで」表原因）",
-    "目的：意志动词 辞書形 + ため(に)；原因：普通形（多为 た形/ている/ない）或 名詞 + の + ため(に)"
-   ],
-   "h": "a6030a1",
-   "oh": [
-    "e9e94f55",
-    "a6030a1",
-    "d81e2e50",
-    "bd2e5c6b"
-   ],
-   "day": 64,
-   "group": "grammar",
    "capability": "usage",
-   "knowledge_ids": [
-    "G0067"
-   ],
-   "source_day": 64,
-   "optional": true
+   "group": "grammar"
   },
   {
-   "id": "P-064-G0068-m-b019f39e75eb",
-   "qid": "P-064-G0068-m-b019f39e75eb",
+   "id": "D13-064-G0068-form",
+   "qid": "D13-064-G0068-form",
    "type": "mcq",
-   "prompt": "本课句型「N / Vた形 / V辞書形 / Vて + ばかり」在以下语境中的释义是哪一项？ 例句：日本に来たばかりです。（刚来日本不久。）",
-   "options": [
-    "据…说",
-    "本来就…；应当…；过去常…",
-    "过于…；…过头",
-    "刚…；净是…、只…；一味…"
-   ],
-   "h": "db59f6b4",
-   "oh": [
-    "cd179173",
-    "b4c365d8",
-    "60403ee0",
-    "db59f6b4"
-   ],
    "day": 64,
-   "group": "grammar",
-   "capability": "meaning",
+   "prompt": "选出符合下列意思的日语句子。\n刚来日本不久。",
+   "options": [
+    "日本に来てから、朝ご飯を食べるようになった。",
+    "日本に来たばかりです。",
+    "彼は日本の歴史に関する本をたくさん持っている。",
+    "来月、姉が日本に来ます。"
+   ],
+   "h": "6328fa10",
+   "oh": [
+    "b8858f6f",
+    "6328fa10",
+    "e2b97d2d",
+    "fbafb218"
+   ],
    "knowledge_ids": [
     "G0068"
    ],
-   "source_day": 64,
-   "optional": true
+   "capability": "usage",
+   "group": "grammar"
   },
   {
-   "id": "P-064-G0069-m-01c026a07eab",
-   "qid": "P-064-G0069-m-01c026a07eab",
+   "id": "D13-064-V0267-meaning",
+   "qid": "D13-064-V0267-meaning",
    "type": "mcq",
-   "prompt": "本课句型「V辞書形/Vている/Vた形 + ところ(だ/に/を/で)」在以下语境中的释义是哪一项？ 例句：今から出かけるところです。（正要出门。）",
+   "day": 64,
+   "prompt": "「じょうし」的中文释义？",
    "options": [
+    "接待处；受理",
+    "同事",
+    "上司",
+    "收件地址；收件人"
+   ],
+   "h": "5b13413f",
+   "oh": [
+    "3146e2c7",
+    "8bf32ba0",
+    "5b13413f",
+    "748076c4"
+   ],
+   "knowledge_ids": [
+    "V0267"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0264-reading",
+   "qid": "D13-064-V0264-reading",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「提出」（提交；交出）的假名读音是哪一项？",
+   "options": [
+    "てすうりょう",
+    "てんそう",
+    "ていしゅつ",
+    "てつがく"
+   ],
+   "h": "e56cdcf1",
+   "oh": [
+    "1fa625a1",
+    "7f1943cd",
+    "e56cdcf1",
+    "d4bc3d3a"
+   ],
+   "knowledge_ids": [
+    "V0264"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0274-meaning",
+   "qid": "D13-064-V0274-meaning",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「宛先」的中文释义？",
+   "options": [
+    "截止日期；截止",
+    "窗口；柜台",
+    "文件；书面材料",
+    "收件地址；收件人"
+   ],
+   "h": "748076c4",
+   "oh": [
+    "c868a0d6",
+    "342426b0",
+    "889b54b2",
+    "748076c4"
+   ],
+   "knowledge_ids": [
+    "V0274"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0266-meaning",
+   "qid": "D13-064-V0266-meaning",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「担当」的中文释义？",
+   "options": [
+    "资料；材料",
+    "转发；转送",
+    "文件；书面材料",
+    "负责；担任"
+   ],
+   "h": "ceddf258",
+   "oh": [
+    "5a3d8cc",
+    "42164308",
+    "889b54b2",
+    "ceddf258"
+   ],
+   "knowledge_ids": [
+    "V0266"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0277-meaning",
+   "qid": "D13-064-V0277-meaning",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「返信」的中文释义？",
+   "options": [
+    "（邮件）主题",
+    "回信；回复",
+    "碰头商量；事前协调",
+    "资料；材料"
+   ],
+   "h": "a4a54080",
+   "oh": [
+    "c6930cd1",
+    "a4a54080",
+    "45bd8245",
+    "5a3d8cc"
+   ],
+   "knowledge_ids": [
+    "V0277"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0269-reading",
+   "qid": "D13-064-V0269-reading",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「同僚」（同事）的假名读音是哪一项？",
+   "options": [
+    "どりょく",
+    "どうとく",
+    "どくとく",
+    "どうりょう"
+   ],
+   "h": "cc4e68ad",
+   "oh": [
+    "fa1c48e8",
+    "6b43a6df",
+    "4f75009c",
+    "cc4e68ad"
+   ],
+   "knowledge_ids": [
+    "V0269"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0271-meaning",
+   "qid": "D13-064-V0271-meaning",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「打ち合わせ」的中文释义？",
+   "options": [
+    "截止日期；截止",
+    "资料；材料",
+    "碰头商量；事前协调",
+    "工作；任职"
+   ],
+   "h": "45bd8245",
+   "oh": [
+    "c868a0d6",
+    "5a3d8cc",
+    "45bd8245",
+    "d6754b3a"
+   ],
+   "knowledge_ids": [
+    "V0271"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0268-recall",
+   "qid": "D13-064-V0268-recall",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「部下；下属」对应哪个日语词？",
+   "options": [
+    "きんむ",
+    "けんめい",
+    "ぶか",
+    "しめきり"
+   ],
+   "h": "45a48ca6",
+   "oh": [
+    "24ae2283",
+    "dbc82890",
+    "45a48ca6",
+    "e41b5486"
+   ],
+   "knowledge_ids": [
+    "V0268"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0272-meaning",
+   "qid": "D13-064-V0272-meaning",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「資料」的中文释义？",
+   "options": [
+    "部下；下属",
+    "附件；附加",
+    "资料；材料",
+    "收件地址；收件人"
+   ],
+   "h": "5a3d8cc",
+   "oh": [
+    "82d62954",
+    "ef7dde68",
+    "5a3d8cc",
+    "748076c4"
+   ],
+   "knowledge_ids": [
+    "V0272"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0263-meaning",
+   "qid": "D13-064-V0263-meaning",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「承認」的中文释义？",
+   "options": [
+    "批准；认可",
+    "文件；书面材料",
+    "出差",
+    "上司"
+   ],
+   "h": "decf6232",
+   "oh": [
+    "decf6232",
+    "889b54b2",
+    "372760f9",
+    "5b13413f"
+   ],
+   "knowledge_ids": [
+    "V0263"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0269-meaning",
+   "qid": "D13-064-V0269-meaning",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「同僚」的中文释义？",
+   "options": [
+    "负责；担任",
+    "截止日期；截止",
+    "同事",
+    "窗口；柜台"
+   ],
+   "h": "8bf32ba0",
+   "oh": [
+    "ceddf258",
+    "c868a0d6",
+    "8bf32ba0",
+    "342426b0"
+   ],
+   "knowledge_ids": [
+    "V0269"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-G0069-meaning",
+   "qid": "D13-064-G0069-meaning",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "请选择「V辞書形/Vている/Vた形 + ところ(だ/に/を/で)」所用句型的主要含义。",
+   "options": [
+    "因为…（所以…）；由于…",
     "正要…／正在…／刚…；在…时候；…之际",
-    "不可能…；不会…",
-    "看起来…；好像要…",
-    "既…又…；而且…"
+    "明明…却（责备）／虽然…但是／虽说…然而",
+    "不可能…／不能…（わけにはいかない）"
    ],
    "h": "2bcac3c9",
    "oh": [
+    "c2086a0b",
     "2bcac3c9",
-    "f41d393a",
-    "58127cba",
-    "35e50be2"
+    "4e87a2b9",
+    "a7dcf4a9"
    ],
-   "day": 64,
-   "group": "grammar",
-   "capability": "meaning",
    "knowledge_ids": [
     "G0069"
    ],
-   "source_day": 64,
-   "optional": true
+   "capability": "meaning",
+   "group": "grammar"
   },
   {
-   "id": "P-064-G0069-u-3a702ff65b42",
-   "qid": "P-064-G0069-u-3a702ff65b42",
+   "id": "D13-064-V0271-reading",
+   "qid": "D13-064-V0271-reading",
    "type": "mcq",
-   "prompt": "课程中「V辞書形/Vている/Vた形 + ところ(だ/に/を/で)」的接续说明是哪一项？ 例句：今から出かけるところです。（正要出门。）",
-   "options": [
-    "名词 + が",
-    "名词（场所）+ で",
-    "辞書形 + ところだ（正要）；ている + ところだ（正在）；た形 + ところだ（刚做完）；ところに/を/で 后接外部动作或发现",
-    "動詞た形 + ことが + ある"
-   ],
-   "h": "7add6681",
-   "oh": [
-    "25f1ba0",
-    "78b3f4ac",
-    "7add6681",
-    "3ccf1e0d"
-   ],
    "day": 64,
-   "group": "grammar",
+   "prompt": "「打ち合わせ」（碰头商量；事前协调）的假名读音是哪一项？",
+   "options": [
+    "うちあわせ",
+    "うんてん",
+    "うけつけ",
+    "うんきゅう"
+   ],
+   "h": "40352ca8",
+   "oh": [
+    "40352ca8",
+    "d42c8721",
+    "17f597df",
+    "694d30a6"
+   ],
+   "knowledge_ids": [
+    "V0271"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-G0069-form",
+   "qid": "D13-064-G0069-form",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "选出符合下列意思的日语句子。\n正要出门。",
+   "options": [
+    "出かけようとしているところに、友達から電話がかかってきた。",
+    "出かけようとしたら、雨が降ってきました。",
+    "今から出かけるところです。",
+    "家を出ようとしたとき、急に雨が降り出した。"
+   ],
+   "h": "ec977fcc",
+   "oh": [
+    "dcf70adf",
+    "faa7add2",
+    "ec977fcc",
+    "a8d83bf2"
+   ],
+   "knowledge_ids": [
+    "G0069"
+   ],
    "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-064-V0263-reading",
+   "qid": "D13-064-V0263-reading",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「承認」（批准；认可）的假名读音是哪一项？",
+   "options": [
+    "しめきり",
+    "しゅっちょう",
+    "しょるい",
+    "しょうにん"
+   ],
+   "h": "85dc109d",
+   "oh": [
+    "e41b5486",
+    "8cb0d7a8",
+    "1ab954",
+    "85dc109d"
+   ],
+   "knowledge_ids": [
+    "V0263"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0264-meaning",
+   "qid": "D13-064-V0264-meaning",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「提出」的中文释义？",
+   "options": [
+    "附件；附加",
+    "印章；图章",
+    "转发；转送",
+    "提交；交出"
+   ],
+   "h": "54b2e97c",
+   "oh": [
+    "ef7dde68",
+    "16b1f4ac",
+    "42164308",
+    "54b2e97c"
+   ],
+   "knowledge_ids": [
+    "V0264"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0266-reading",
+   "qid": "D13-064-V0266-reading",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「担当」（负责；担任）的假名读音是哪一项？",
+   "options": [
+    "ためし",
+    "たんとう",
+    "たとえ",
+    "たいかい"
+   ],
+   "h": "a1980261",
+   "oh": [
+    "f00d9fde",
+    "a1980261",
+    "f362b74e",
+    "93b77ed1"
+   ],
+   "knowledge_ids": [
+    "V0266"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0274-reading",
+   "qid": "D13-064-V0274-reading",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「宛先」（收件地址；收件人）的假名读音是哪一项？",
+   "options": [
+    "あやまり",
+    "あらし",
+    "あいじょう",
+    "あてさき"
+   ],
+   "h": "809f960b",
+   "oh": [
+    "2460f827",
+    "2a4cb2c9",
+    "245307ac",
+    "809f960b"
+   ],
+   "knowledge_ids": [
+    "V0274"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-G0067-meaning",
+   "qid": "D13-064-G0067-meaning",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "请选择「V意志形 + と 思う / と する」所用句型的主要含义。",
+   "options": [
+    "为了…（目的）／因为…、由于…（原因）",
+    "打算…／正要…、试图…",
+    "明明…却（责备）／虽然…但是／虽说…然而",
+    "（相较…）却…；按…来说倒是…"
+   ],
+   "h": "3d8c81f4",
+   "oh": [
+    "fea88f37",
+    "3d8c81f4",
+    "4e87a2b9",
+    "1931fcef"
+   ],
+   "knowledge_ids": [
+    "G0067"
+   ],
+   "capability": "meaning",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-064-G0069-context",
+   "qid": "D13-064-G0069-context",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "请选择「駅に着いたところです。」的中文意思。",
+   "options": [
+    "沿着这条路一直走，就会到车站。",
+    "到车站走路五分钟，用不着打车。",
+    "我从学校走到车站。",
+    "刚到车站。"
+   ],
+   "h": "fa593154",
+   "oh": [
+    "c98002b3",
+    "dba51044",
+    "3f15a308",
+    "fa593154"
+   ],
    "knowledge_ids": [
     "G0069"
    ],
-   "source_day": 64,
-   "optional": true
+   "capability": "usage",
+   "group": "grammar"
   },
   {
-   "id": "X-064-V0279-c",
-   "qid": "X-064-V0279-c",
+   "id": "D13-064-V0278-reading",
+   "qid": "D13-064-V0278-reading",
    "type": "mcq",
    "day": 64,
-   "prompt": "「出張」的意思是？",
+   "prompt": "「転送」（转发；转送）的假名读音是哪一项？",
    "options": [
-    "看（敬）",
-    "出差",
-    "无论如何；一定",
-    "煤气；气体"
+    "てんそう",
+    "てつだい",
+    "てんぷ",
+    "ていしゅつ"
    ],
-   "h": "372760f9",
+   "h": "7f1943cd",
    "oh": [
-    "9e290995",
-    "372760f9",
-    "8f8ef6dd",
-    "15708bb"
+    "7f1943cd",
+    "eb6a65f3",
+    "523a886b",
+    "e56cdcf1"
    ],
    "knowledge_ids": [
-    "V0279"
+    "V0278"
    ],
-   "capability": "meaning",
-   "group": "vocab",
-   "optional": true
+   "capability": "reading",
+   "group": "vocab"
   },
   {
-   "id": "X-064-V0280-c",
-   "qid": "X-064-V0280-c",
+   "id": "D13-064-V0284-meaning",
+   "qid": "D13-064-V0284-meaning",
    "type": "mcq",
    "day": 64,
-   "prompt": "「勤務」的假名读音是？",
+   "prompt": "「印鑑」的中文释义？",
    "options": [
-    "どうぶつえん",
-    "くうき",
-    "きんむ",
-    "こうさてん"
+    "工作；任职",
+    "（邮件）主题",
+    "印章；图章",
+    "资料；材料"
+   ],
+   "h": "16b1f4ac",
+   "oh": [
+    "d6754b3a",
+    "c6930cd1",
+    "16b1f4ac",
+    "5a3d8cc"
+   ],
+   "knowledge_ids": [
+    "V0284"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0282-reading",
+   "qid": "D13-064-V0282-reading",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「窓口」（窗口；柜台）的假名读音是哪一项？",
+   "options": [
+    "まいにち",
+    "まどぐち",
+    "まいしゅう",
+    "まんぞく"
+   ],
+   "h": "46b02c3b",
+   "oh": [
+    "b6763767",
+    "46b02c3b",
+    "ff1bec53",
+    "703995"
+   ],
+   "knowledge_ids": [
+    "V0282"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0284-reading",
+   "qid": "D13-064-V0284-reading",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「印鑑」（印章；图章）的假名读音是哪一项？",
+   "options": [
+    "いきおい",
+    "いぜん",
+    "いんかん",
+    "いはん"
+   ],
+   "h": "dbdfe726",
+   "oh": [
+    "e57f043c",
+    "32a60a4a",
+    "dbdfe726",
+    "e31591e5"
+   ],
+   "knowledge_ids": [
+    "V0284"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0280-reading",
+   "qid": "D13-064-V0280-reading",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「勤務」（工作；任职）的假名读音是哪一项？",
+   "options": [
+    "きゅう",
+    "きげん",
+    "きんがく",
+    "きんむ"
    ],
    "h": "24ae2283",
    "oh": [
-    "e9144e5d",
-    "190a67bf",
-    "24ae2283",
-    "b42e8a9c"
+    "8aa982b3",
+    "6cdc2617",
+    "caf641b8",
+    "24ae2283"
    ],
    "knowledge_ids": [
     "V0280"
    ],
    "capability": "reading",
-   "group": "vocab",
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "X-064-V0281-c",
-   "qid": "X-064-V0281-c",
+   "id": "D13-064-V0281-recall",
+   "qid": "D13-064-V0281-recall",
    "type": "mcq",
    "day": 64,
-   "prompt": "「期限」的意思是？",
+   "prompt": "「期限；到期日」对应哪个日语词？",
    "options": [
-    "道路；路",
-    "球；硬币",
-    "注目；关注",
+    "きげん",
+    "へんしん",
+    "うけつけ",
+    "たんとう"
+   ],
+   "h": "6cdc2617",
+   "oh": [
+    "6cdc2617",
+    "d0c99586",
+    "17f597df",
+    "a1980261"
+   ],
+   "knowledge_ids": [
+    "V0281"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0283-reading",
+   "qid": "D13-064-V0283-reading",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「受付」（接待处；受理）的假名读音是哪一项？",
+   "options": [
+    "うちあわせ",
+    "うんちん",
+    "うけつけ",
+    "うまれ"
+   ],
+   "h": "17f597df",
+   "oh": [
+    "40352ca8",
+    "dc3ddcda",
+    "17f597df",
+    "ee9b3ceb"
+   ],
+   "knowledge_ids": [
+    "V0283"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0283-meaning",
+   "qid": "D13-064-V0283-meaning",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「受付」的中文释义？",
+   "options": [
+    "部下；下属",
+    "印章；图章",
+    "资料；材料",
+    "接待处；受理"
+   ],
+   "h": "3146e2c7",
+   "oh": [
+    "82d62954",
+    "16b1f4ac",
+    "5a3d8cc",
+    "3146e2c7"
+   ],
+   "knowledge_ids": [
+    "V0283"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0279-reading",
+   "qid": "D13-064-V0279-reading",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「出張」（出差）的假名读音是哪一项？",
+   "options": [
+    "しゅうにゅう",
+    "しゅっちょう",
+    "しょうにん",
+    "しゅっぱつ"
+   ],
+   "h": "8cb0d7a8",
+   "oh": [
+    "a204a359",
+    "8cb0d7a8",
+    "85dc109d",
+    "d9f7e87b"
+   ],
+   "knowledge_ids": [
+    "V0279"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0282-meaning",
+   "qid": "D13-064-V0282-meaning",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「窓口」的中文释义？",
+   "options": [
+    "提交；交出",
+    "碰头商量；事前协调",
+    "窗口；柜台",
+    "印章；图章"
+   ],
+   "h": "342426b0",
+   "oh": [
+    "54b2e97c",
+    "45bd8245",
+    "342426b0",
+    "16b1f4ac"
+   ],
+   "knowledge_ids": [
+    "V0282"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-064-V0281-meaning",
+   "qid": "D13-064-V0281-meaning",
+   "type": "mcq",
+   "day": 64,
+   "prompt": "「期限」的中文释义？",
+   "options": [
+    "接待处；受理",
+    "负责；担任",
+    "回信；回复",
     "期限；到期日"
    ],
    "h": "337ac95",
    "oh": [
-    "bce3f1d1",
-    "a9b51d0c",
-    "7f9e88b3",
+    "3146e2c7",
+    "ceddf258",
+    "a4a54080",
     "337ac95"
    ],
    "knowledge_ids": [
     "V0281"
    ],
    "capability": "meaning",
-   "group": "vocab",
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "X-064-V0282-c",
-   "qid": "X-064-V0282-c",
+   "id": "D13-064-V0279-meaning",
+   "qid": "D13-064-V0279-meaning",
    "type": "mcq",
    "day": 64,
-   "prompt": "「窓口」的假名读音是？",
+   "prompt": "「出張」的中文释义？",
    "options": [
-    "ていこう",
-    "まどぐち",
-    "おえる",
-    "うつ"
+    "转发；转送",
+    "碰头商量；事前协调",
+    "收件地址；收件人",
+    "出差"
    ],
-   "h": "46b02c3b",
+   "h": "372760f9",
    "oh": [
-    "2c7ea9ee",
-    "46b02c3b",
-    "bfeb420c",
-    "9060a167"
+    "42164308",
+    "45bd8245",
+    "748076c4",
+    "372760f9"
    ],
    "knowledge_ids": [
-    "V0282"
-   ],
-   "capability": "reading",
-   "group": "vocab",
-   "optional": true
-  },
-  {
-   "id": "X-064-V0283-c",
-   "qid": "X-064-V0283-c",
-   "type": "mcq",
-   "day": 64,
-   "prompt": "「受付」的意思是？",
-   "options": [
-    "沙拉",
-    "为难；困扰",
-    "接待处；受理",
-    "这里"
-   ],
-   "h": "3146e2c7",
-   "oh": [
-    "930170a7",
-    "5148f886",
-    "3146e2c7",
-    "64af3d08"
-   ],
-   "knowledge_ids": [
-    "V0283"
+    "V0279"
    ],
    "capability": "meaning",
-   "group": "vocab",
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "X-064-V0284-c",
-   "qid": "X-064-V0284-c",
+   "id": "D13-064-V0280-meaning",
+   "qid": "D13-064-V0280-meaning",
    "type": "mcq",
    "day": 64,
-   "prompt": "「印鑑」的假名读音是？",
+   "prompt": "「勤務」的中文释义？",
    "options": [
-    "いんかん",
-    "かんじ",
-    "ながす",
-    "まん"
+    "窗口；柜台",
+    "资料；材料",
+    "工作；任职",
+    "碰头商量；事前协调"
    ],
-   "h": "dbdfe726",
+   "h": "d6754b3a",
    "oh": [
-    "dbdfe726",
-    "9c620fb9",
-    "3464510e",
-    "4db9b3f6"
+    "342426b0",
+    "5a3d8cc",
+    "d6754b3a",
+    "45bd8245"
    ],
    "knowledge_ids": [
-    "V0284"
+    "V0280"
    ],
-   "capability": "reading",
-   "group": "vocab",
-   "optional": true
+   "capability": "meaning",
+   "group": "vocab"
   }
  ],
  "listening_material": {

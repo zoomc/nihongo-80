@@ -2,12 +2,12 @@
  "day": 50,
  "phase": "P2",
  "theme": "〜せる / 〜させる、〜せられる / 〜させられる",
- "can_do": "用「〜せる / 〜させる、〜せられる / 〜させられる」造两句自己的话，表达：让…做；使…做；被迫做…",
+ "can_do": "用「〜せる / 〜させる、〜せられる / 〜させられる」各造一句自己的话，表达：让…做；使…做；被迫做…",
  "minutes": 60,
  "blocks": [
   {
    "type": "复习",
-   "min": 10,
+   "min": 5,
    "desc": "到期项优先；未完成顺延，不追赶"
   },
   {
@@ -17,23 +17,23 @@
   },
   {
    "type": "语法",
-   "min": 6,
+   "min": 5,
    "desc": "〜せる / 〜させる、〜せられる / 〜させられる"
   },
   {
    "type": "听力",
-   "min": 8,
-   "desc": "原创 TTS + 3 道理解题；时长为估计，非真人音频"
+   "min": 7,
+   "desc": "先听并复述主旨，再找两个细节，最后核对脚本（原创合成语音）"
   },
   {
    "type": "句子输出",
-   "min": 5,
-   "desc": "3道选句必做，7道拓展；答后核对"
+   "min": 4,
+   "desc": "每条新语法独立说一句，和例句对照"
   },
   {
    "type": "练习",
-   "min": 5,
-   "desc": "6 题即时自评"
+   "min": 13,
+   "desc": "优先做当天必学词与语法，答完重练错题"
   },
   {
    "type": "会话",
@@ -2471,1228 +2471,1104 @@
  ],
  "questions": [
   {
-   "id": "Q-050-K0-4a5ee8fe960a",
-   "qid": "Q-050-K0-4a5ee8fe960a",
+   "id": "D13-050-G0215-form",
+   "qid": "D13-050-G0215-form",
    "type": "mcq",
-   "prompt": "汉字「急」的一个常用读音是？",
+   "day": 50,
+   "prompt": "选出符合下列意思的日语句子。\n小时候母亲每天逼我练钢琴。",
    "options": [
-    "よぎ.る",
-    "キュウ",
-    "エツ",
-    "はな.つ"
+    "母は毎日弟に野菜を食べさせる。",
+    "子どものころ、母に毎日ピアノを練習させられた。",
+    "子どものとき、よく川で泳ぎました。",
+    "母が毎朝お弁当を作ってくれます。"
    ],
-   "h": "3c5b0fd3",
+   "h": "ee98dc54",
    "oh": [
-    "edcdc80c",
-    "3c5b0fd3",
-    "e48e38a9",
-    "b1130a96"
+    "44b31cd3",
+    "ee98dc54",
+    "303e5b02",
+    "849daca6"
    ],
    "knowledge_ids": [
-    "K0229"
-   ]
+    "G0215"
+   ],
+   "capability": "usage",
+   "group": "grammar"
   },
   {
-   "id": "Q-050-K1-fcd57ae1b877",
-   "qid": "Q-050-K1-fcd57ae1b877",
+   "id": "D13-050-G0215-context",
+   "qid": "D13-050-G0215-context",
    "type": "mcq",
-   "prompt": "汉字「止」的一个常用读音是？",
+   "day": 50,
+   "prompt": "请选择「会社の飲み会で歌を歌わされた。」的中文意思。",
    "options": [
-    "とお",
-    "-ほど",
-    "-ぐみ",
-    "シ"
+    "公司聚会上我被逼着唱了歌。",
+    "你能来明天的聚会吗？",
+    "为了聚会，我提前把饮料冰好了。",
+    "明明是星期天，却必须去公司。"
    ],
-   "h": "b2250a76",
+   "h": "3832bd94",
    "oh": [
-    "6ec822a7",
-    "4515d830",
-    "3ba4a645",
-    "b2250a76"
+    "3832bd94",
+    "44d69a7a",
+    "f365dddf",
+    "c4859016"
    ],
    "knowledge_ids": [
-    "K0230"
-   ]
+    "G0215"
+   ],
+   "capability": "usage",
+   "group": "grammar"
   },
   {
-   "id": "Q-050-G-e47eb0ed3ded",
-   "qid": "Q-050-G-e47eb0ed3ded",
+   "id": "D13-050-V1217-recall",
+   "qid": "D13-050-V1217-recall",
    "type": "mcq",
-   "prompt": "句型「〜せる / 〜させる」的意思是？",
+   "day": 50,
+   "prompt": "「力量；力气」对应哪个日语词？",
    "options": [
-    "即使…也（不会有预期结果）",
+    "ちから",
+    "ちり",
+    "ちゅうしゃじょう",
+    "つごう"
+   ],
+   "h": "b48f5c4",
+   "oh": [
+    "b48f5c4",
+    "cce55052",
+    "30a7720e",
+    "7a451219"
+   ],
+   "knowledge_ids": [
+    "V1217"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-G0215-meaning",
+   "qid": "D13-050-G0215-meaning",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "请选择「〜せられる / 〜させられる」所用句型的主要含义。",
+   "options": [
+    "被…；遭受…",
+    "能／会…（动词可能形）",
     "让…做；使…做",
-    "不仅…而且…",
-    "…了一半；刚要…"
+    "被迫做…"
+   ],
+   "h": "793643b7",
+   "oh": [
+    "589b5f95",
+    "beb41409",
+    "a12d61b6",
+    "793643b7"
+   ],
+   "knowledge_ids": [
+    "G0215"
+   ],
+   "capability": "meaning",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-050-G0214-meaning",
+   "qid": "D13-050-G0214-meaning",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "请选择「〜せる / 〜させる」所用句型的主要含义。",
+   "options": [
+    "能…；会…",
+    "被迫做…",
+    "让…做；使…做",
+    "被…；遭受…"
    ],
    "h": "a12d61b6",
    "oh": [
-    "e90bd9a7",
+    "c2cff48b",
+    "793643b7",
     "a12d61b6",
-    "cdb11d97",
-    "82743b15"
+    "589b5f95"
    ],
    "knowledge_ids": [
     "G0214"
-   ]
+   ],
+   "capability": "meaning",
+   "group": "grammar"
   },
   {
-   "id": "Q-050-V0-35b4b99eb40a",
-   "qid": "Q-050-V0-35b4b99eb40a",
+   "id": "D13-050-V1214-meaning",
+   "qid": "D13-050-V1214-meaning",
    "type": "mcq",
-   "prompt": "「暖房」是什么意思？",
+   "day": 50,
+   "prompt": "「暖房」的中文释义？",
    "options": [
-    "通勤；上学",
-    "碰头商量；事前协调",
+    "方便；情况",
     "暖气；取暖",
-    "装置；设备"
+    "月亮；月",
+    "注意；提醒"
    ],
    "h": "c195e830",
    "oh": [
-    "f4d78c58",
-    "45bd8245",
+    "b0e46c5c",
     "c195e830",
-    "cff8cf40"
+    "c45895f8",
+    "8243aeeb"
    ],
    "knowledge_ids": [
     "V1214"
-   ]
-  },
-  {
-   "id": "Q-050-V1-a6e51343ef3b",
-   "qid": "Q-050-V1-a6e51343ef3b",
-   "type": "mcq",
-   "prompt": "假名「ち」对应的词形是？",
-   "options": [
-    "感謝",
-    "血",
-    "美味しい",
-    "収穫"
    ],
-   "h": "c435e05f",
-   "oh": [
-    "20cfd049",
-    "c435e05f",
-    "9e58c485",
-    "d5bc4e4e"
-   ],
-   "knowledge_ids": [
-    "V1215"
-   ]
-  },
-  {
-   "id": "Q-050-R-501f6715b961",
-   "qid": "Q-050-R-501f6715b961",
-   "type": "mcq",
-   "prompt": "复习：汉字「少」的读音是？",
-   "options": [
-    "あぶ.ない",
-    "ゲ",
-    "キョウ",
-    "ショウ"
-   ],
-   "h": "6c058e7f",
-   "oh": [
-    "78756a1b",
-    "b7251255",
-    "cc5edcb1",
-    "6c058e7f"
-   ],
-   "knowledge_ids": [
-    "K0224"
-   ]
-  },
-  {
-   "id": "L-050-0-2fef57a628c5",
-   "qid": "L-050-0-2fef57a628c5",
-   "type": "mcq",
-   "prompt": "セールはいつから始まりますか。",
-   "options": [
-    "火曜日",
-    "月曜日",
-    "水曜日",
-    "木曜日"
-   ],
-   "h": "45fc79a5",
-   "oh": [
-    "45fc79a5",
-    "ab1845fc",
-    "b2ad1458",
-    "7da6f79c"
-   ],
-   "knowledge_ids": []
-  },
-  {
-   "id": "L-050-1-ba677ee7761d",
-   "qid": "L-050-1-ba677ee7761d",
-   "type": "mcq",
-   "prompt": "どうしてシャツを交換しましたか。",
-   "options": [
-    "少し小さかったから",
-    "色が嫌だったから",
-    "値段が高かったから",
-    "汚れていたから"
-   ],
-   "h": "a62f4fdc",
-   "oh": [
-    "a62f4fdc",
-    "cb322095",
-    "b6fe72ed",
-    "be22654e"
-   ],
-   "knowledge_ids": []
-  },
-  {
-   "id": "L-050-2-9adfe0606fc7",
-   "qid": "L-050-2-9adfe0606fc7",
-   "type": "mcq",
-   "prompt": "交換したシャツの色は何ですか。",
-   "options": [
-    "黒",
-    "赤",
-    "白",
-    "青"
-   ],
-   "h": "f88712a8",
-   "oh": [
-    "5618dd35",
-    "e02e2d73",
-    "f88712a8",
-    "d624abb5"
-   ],
-   "knowledge_ids": []
-  },
-  {
-   "id": "P-050-00-f3f992b00258",
-   "qid": "P-050-00-f3f992b00258",
-   "type": "mcq",
-   "prompt": "这咖啡有苦味。",
-   "options": [
-    "この地域は雨が続くでしょう。",
-    "このコーヒーは苦い味がする。",
-    "この手の本はあまり読まない。",
-    "大人はしばしば変化を恐れる。"
-   ],
-   "h": "6c7fed0f",
-   "oh": [
-    "f3e64d08",
-    "6c7fed0f",
-    "771de503",
-    "6a18603d"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-050-01-45c126714552",
-   "qid": "P-050-01-45c126714552",
-   "type": "mcq",
-   "prompt": "我住在两层楼的房子里。",
-   "options": [
-    "私は２階建ての家に住んでいる。",
-    "その仕事以外ならなんでもやる。",
-    "キリスト教を信仰していますか。",
-    "どんぐりからオークが生まれる。"
-   ],
-   "h": "50095cb6",
-   "oh": [
-    "50095cb6",
-    "b9ada927",
-    "bd6a6e0c",
-    "13cc23d0"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-050-02-d69934f21406",
-   "qid": "P-050-02-d69934f21406",
-   "type": "mcq",
-   "prompt": "人无法逃避现实。",
-   "options": [
-    "もっと易しい事を聞いて下さい。",
-    "現実から逃げることはできない。",
-    "主婦は節約に努めるべきである。",
-    "どちらの新聞社にお勤めですか。"
-   ],
-   "h": "f6d1168c",
-   "oh": [
-    "84e4e179",
-    "f6d1168c",
-    "ce74be3a",
-    "d5ea31b"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-050-V1214-m-6312db4d854a",
-   "qid": "P-050-V1214-m-6312db4d854a",
-   "type": "mcq",
-   "prompt": "本课词条「暖房」（例句语境：您家的取暖是怎么弄的？）的释义是哪一项？",
-   "options": [
-    "具体",
-    "迟到",
-    "果汁；饮料",
-    "暖气；取暖"
-   ],
-   "h": "c195e830",
-   "oh": [
-    "e317a7ff",
-    "44d6a17a",
-    "9f5f469e",
-    "c195e830"
-   ],
-   "day": 50,
-   "group": "vocab",
    "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-G0214-form",
+   "qid": "D13-050-G0214-form",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "选出符合下列意思的日语句子。\n母亲每天让弟弟吃蔬菜。",
+   "options": [
+    "母は毎日弟に野菜を食べさせる。",
+    "子どものころ、母に毎日ピアノを練習させられた。",
+    "毎日野菜を食べるようにしています。",
+    "母が毎朝お弁当を作ってくれます。"
+   ],
+   "h": "44b31cd3",
+   "oh": [
+    "44b31cd3",
+    "ee98dc54",
+    "cf5eb068",
+    "849daca6"
+   ],
+   "knowledge_ids": [
+    "G0214"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-050-V1227-meaning",
+   "qid": "D13-050-V1227-meaning",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "「付く」的中文释义？",
+   "options": [
+    "附带；沾上",
+    "持续；继续",
+    "传达；转告",
+    "包；包裹"
+   ],
+   "h": "177eefc4",
+   "oh": [
+    "177eefc4",
+    "67411680",
+    "3a50edc2",
+    "94fd174f"
+   ],
+   "knowledge_ids": [
+    "V1227"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-V1214-reading",
+   "qid": "D13-050-V1214-reading",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "「暖房」（暖气；取暖）的假名读音是哪一项？",
+   "options": [
+    "だいじん",
+    "だいがく",
+    "だんぼう",
+    "だんせい"
+   ],
+   "h": "ad42902a",
+   "oh": [
+    "89933838",
+    "95a79608",
+    "ad42902a",
+    "6cd162ab"
+   ],
    "knowledge_ids": [
     "V1214"
    ],
-   "source_day": 50,
-   "optional": true
+   "capability": "reading",
+   "group": "vocab"
   },
   {
-   "id": "P-050-V1215-m-0065e30d7ab8",
-   "qid": "P-050-V1215-m-0065e30d7ab8",
+   "id": "D13-050-V1216-recall",
+   "qid": "D13-050-V1216-recall",
    "type": "mcq",
-   "prompt": "本课词条「血」（例句语境：我们是有血缘关系的。）的释义是哪一项？",
-   "options": [
-    "血",
-    "排队",
-    "今后",
-    "词典"
-   ],
-   "h": "c435e05f",
-   "oh": [
-    "c435e05f",
-    "a2ad8c5e",
-    "87406369",
-    "fb94cda0"
-   ],
    "day": 50,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1215"
-   ],
-   "source_day": 50,
-   "optional": true
-  },
-  {
-   "id": "P-050-V1216-m-7106f6f9b097",
-   "qid": "P-050-V1216-m-7106f6f9b097",
-   "type": "mcq",
-   "prompt": "本课词条「チェックする」（例句语境：我每完成一项工作，就在清单上打勾。）的释义是哪一项？",
-   "options": [
-    "顺利",
-    "检查；核对",
-    "可爱",
-    "红色"
-   ],
-   "h": "92006c24",
-   "oh": [
-    "8c33eacc",
-    "92006c24",
-    "991823fd",
-    "fb3a03f5"
-   ],
-   "day": 50,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1216"
-   ],
-   "source_day": 50,
-   "optional": true
-  },
-  {
-   "id": "P-050-V1216-r-863bc4828d5c",
-   "qid": "P-050-V1216-r-863bc4828d5c",
-   "type": "mcq",
-   "prompt": "本课词条「チェックする」（检查；核对）的假名读音是哪一项？",
+   "prompt": "「检查；核对」对应哪个日语词？",
    "options": [
     "チェックする",
-    "ところが",
-    "なくす",
-    "しはらう"
+    "ちゅうしゃじょう",
+    "つごう",
+    "ちゅうい"
    ],
    "h": "16556a57",
    "oh": [
     "16556a57",
-    "6fd9ca4d",
-    "3c669c3d",
-    "10f7d750"
+    "30a7720e",
+    "7a451219",
+    "bac0d09"
    ],
-   "day": 50,
-   "group": "vocab",
-   "capability": "reading",
    "knowledge_ids": [
     "V1216"
    ],
-   "source_day": 50,
-   "optional": true
-  },
-  {
-   "id": "P-050-V1217-m-969c12e94271",
-   "qid": "P-050-V1217-m-969c12e94271",
-   "type": "mcq",
-   "prompt": "本课词条「力」（例句语境：你已经失去了集中注意力的能力。）的释义是哪一项？",
-   "options": [
-    "上等；高档",
-    "取决于；一…就",
-    "力量；力气",
-    "附带；沾上"
-   ],
-   "h": "a854f563",
-   "oh": [
-    "52d16c0c",
-    "b08aa6ca",
-    "a854f563",
-    "177eefc4"
-   ],
-   "day": 50,
-   "group": "vocab",
    "capability": "meaning",
-   "knowledge_ids": [
-    "V1217"
-   ],
-   "source_day": 50,
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "P-050-V1217-r-a529708dd2ab",
-   "qid": "P-050-V1217-r-a529708dd2ab",
+   "id": "D13-050-V1226-recall",
+   "qid": "D13-050-V1226-recall",
    "type": "mcq",
-   "prompt": "本课词条「力」（力量；力气）的假名读音是哪一项？",
-   "options": [
-    "きょうりょく",
-    "なやむ",
-    "こううん",
-    "ちから"
-   ],
-   "h": "b48f5c4",
-   "oh": [
-    "ef7c92c7",
-    "f52a0a1",
-    "4b1d19f7",
-    "b48f5c4"
-   ],
    "day": 50,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1217"
-   ],
-   "source_day": 50,
-   "optional": true
-  },
-  {
-   "id": "P-050-V1218-m-4a19bc387063",
-   "qid": "P-050-V1218-m-4a19bc387063",
-   "type": "mcq",
-   "prompt": "本课词条「ちっとも」（例句语境：最近完全没见到伊丽莎白。）的释义是哪一项？",
+   "prompt": "「月亮；月」对应哪个日语词？",
    "options": [
-    "碰；照；中",
-    "完成",
-    "收集；召集",
-    "一点也不"
-   ],
-   "h": "707020e",
-   "oh": [
-    "9da8b859",
-    "1e13bd21",
-    "bca40c94",
-    "707020e"
-   ],
-   "day": 50,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1218"
-   ],
-   "source_day": 50,
-   "optional": true
-  },
-  {
-   "id": "P-050-V1218-r-ffdfaabd72c1",
-   "qid": "P-050-V1218-r-ffdfaabd72c1",
-   "type": "mcq",
-   "prompt": "本课词条「ちっとも」（一点也不）的假名读音是哪一项？",
-   "options": [
-    "さべつ",
-    "うちゅう",
-    "ちっとも",
-    "しはらう"
-   ],
-   "h": "c30a3d17",
-   "oh": [
-    "93530c9d",
-    "35684a23",
-    "c30a3d17",
-    "10f7d750"
-   ],
-   "day": 50,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1218"
-   ],
-   "source_day": 50,
-   "optional": true
-  },
-  {
-   "id": "P-050-V1219-m-27bcb23c1e37",
-   "qid": "P-050-V1219-m-27bcb23c1e37",
-   "type": "mcq",
-   "prompt": "本课词条「ちゃん」（例句语境：哎呀，你家女儿小春真开朗啊。）的释义是哪一项？",
-   "options": [
-    "小…（昵称）",
-    "冰箱",
-    "出局",
-    "五"
-   ],
-   "h": "d892a0f8",
-   "oh": [
-    "d892a0f8",
-    "13d6ddba",
-    "e1286c97",
-    "9160a883"
-   ],
-   "day": 50,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1219"
-   ],
-   "source_day": 50,
-   "optional": true
-  },
-  {
-   "id": "P-050-V1219-r-0e1da7526bae",
-   "qid": "P-050-V1219-r-0e1da7526bae",
-   "type": "mcq",
-   "prompt": "本课词条「ちゃん」（小…（昵称））的假名读音是哪一项？",
-   "options": [
-    "あたま",
-    "もっとも",
-    "きり",
-    "ちゃん"
-   ],
-   "h": "a62da0aa",
-   "oh": [
-    "134bb5f0",
-    "a1dbc124",
-    "a46d8cd6",
-    "a62da0aa"
-   ],
-   "day": 50,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1219"
-   ],
-   "source_day": 50,
-   "optional": true
-  },
-  {
-   "id": "P-050-V1220-m-c58faf0143da",
-   "qid": "P-050-V1220-m-c58faf0143da",
-   "type": "mcq",
-   "prompt": "本课词条「注意」（例句语境：我提醒他别迟到。）的释义是哪一项？",
-   "options": [
-    "鞋",
-    "句；俳句",
-    "注意；提醒",
-    "石头"
-   ],
-   "h": "8243aeeb",
-   "oh": [
-    "8d2438ca",
-    "b7f54929",
-    "8243aeeb",
-    "c93cb302"
-   ],
-   "day": 50,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1220"
-   ],
-   "source_day": 50,
-   "optional": true
-  },
-  {
-   "id": "P-050-V1220-r-d1b4f5859cd9",
-   "qid": "P-050-V1220-r-d1b4f5859cd9",
-   "type": "mcq",
-   "prompt": "本课词条「注意」（注意；提醒）的假名读音是哪一项？",
-   "options": [
-    "きた",
-    "けす",
-    "インク",
-    "ちゅうい"
-   ],
-   "h": "bac0d09",
-   "oh": [
-    "596d16c5",
-    "9b57a0bf",
-    "97b801bd",
-    "bac0d09"
-   ],
-   "day": 50,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1220"
-   ],
-   "source_day": 50,
-   "optional": true
-  },
-  {
-   "id": "P-050-V1221-m-2f2d1a31974e",
-   "qid": "P-050-V1221-m-2f2d1a31974e",
-   "type": "mcq",
-   "prompt": "本课词条「中学校」（例句语境：听到这首歌就想起我的初中时代。）的释义是哪一项？",
-   "options": [
-    "做（谦让语）",
-    "初中",
-    "给予",
-    "睡眠"
-   ],
-   "h": "7d09273f",
-   "oh": [
-    "93a1d8b8",
-    "7d09273f",
-    "2fbb8694",
-    "c98347e4"
-   ],
-   "day": 50,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1221"
-   ],
-   "source_day": 50,
-   "optional": true
-  },
-  {
-   "id": "P-050-V1221-r-ebd671db7881",
-   "qid": "P-050-V1221-r-ebd671db7881",
-   "type": "mcq",
-   "prompt": "本课词条「中学校」（初中）的假名读音是哪一项？",
-   "options": [
-    "くせ",
-    "さかん",
+    "チェックする",
+    "つき",
     "ちゅうがっこう",
-    "しめる"
-   ],
-   "h": "a135c58b",
-   "oh": [
-    "9d3f9eff",
-    "ec9e0a36",
-    "a135c58b",
-    "64a79a5a"
-   ],
-   "day": 50,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1221"
-   ],
-   "source_day": 50,
-   "optional": true
-  },
-  {
-   "id": "P-050-V1222-m-a44e7e825842",
-   "qid": "P-050-V1222-m-a44e7e825842",
-   "type": "mcq",
-   "prompt": "本课词条「注射」（例句语境：打一针吧。）的释义是哪一项？",
-   "options": [
-    "最低；最差",
-    "牛仔裤",
-    "打针；注射",
-    "技术"
-   ],
-   "h": "121f5c63",
-   "oh": [
-    "c37aa122",
-    "a473f64a",
-    "121f5c63",
-    "13eb2f10"
-   ],
-   "day": 50,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1222"
-   ],
-   "source_day": 50,
-   "optional": true
-  },
-  {
-   "id": "P-050-V1222-r-13c12750abd3",
-   "qid": "P-050-V1222-r-13c12750abd3",
-   "type": "mcq",
-   "prompt": "本课词条「注射」（打针；注射）的假名读音是哪一项？",
-   "options": [
-    "べんきょう",
-    "ちゅうしゃ",
-    "ちょうき",
-    "いつか"
-   ],
-   "h": "19910d99",
-   "oh": [
-    "716d7071",
-    "19910d99",
-    "a8829ec8",
-    "7b08223a"
-   ],
-   "day": 50,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1222"
-   ],
-   "source_day": 50,
-   "optional": true
-  },
-  {
-   "id": "P-050-V1223-m-caba26240267",
-   "qid": "P-050-V1223-m-caba26240267",
-   "type": "mcq",
-   "prompt": "本课词条「駐車場」（例句语境：停车场里一个人也看不见。）的释义是哪一项？",
-   "options": [
-    "停车场",
-    "美国；美洲",
-    "精神",
-    "祈祷；祝愿"
-   ],
-   "h": "4429eb87",
-   "oh": [
-    "4429eb87",
-    "6bb341b1",
-    "1aa1886d",
-    "2dc09b11"
-   ],
-   "day": 50,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1223"
-   ],
-   "source_day": 50,
-   "optional": true
-  },
-  {
-   "id": "P-050-V1223-r-701ce7669992",
-   "qid": "P-050-V1223-r-701ce7669992",
-   "type": "mcq",
-   "prompt": "本课词条「駐車場」（停车场）的假名读音是哪一项？",
-   "options": [
-    "しろ",
-    "まんねんひつ",
-    "あさって",
-    "ちゅうしゃじょう"
-   ],
-   "h": "30a7720e",
-   "oh": [
-    "2b527341",
-    "3afc2358",
-    "f589d01d",
-    "30a7720e"
-   ],
-   "day": 50,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1223"
-   ],
-   "source_day": 50,
-   "optional": true
-  },
-  {
-   "id": "P-050-V1224-m-e4893081817c",
-   "qid": "P-050-V1224-m-e4893081817c",
-   "type": "mcq",
-   "prompt": "本课词条「地理」（例句语境：我很熟悉这个镇的地理。）的释义是哪一项？",
-   "options": [
-    "仅仅的；单纯的",
-    "可怜；过意不去",
-    "避开",
-    "地理"
-   ],
-   "h": "9abb5b0b",
-   "oh": [
-    "afbab5aa",
-    "97bde71",
-    "ac0d04a",
-    "9abb5b0b"
-   ],
-   "day": 50,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1224"
-   ],
-   "source_day": 50,
-   "optional": true
-  },
-  {
-   "id": "P-050-V1224-r-46acdf88eece",
-   "qid": "P-050-V1224-r-46acdf88eece",
-   "type": "mcq",
-   "prompt": "本课词条「地理」（地理）的假名读音是哪一项？",
-   "options": [
-    "たおれる",
-    "ダイヤ",
-    "がくせい",
-    "ちり"
-   ],
-   "h": "cce55052",
-   "oh": [
-    "f59fb2f1",
-    "7b742d9f",
-    "11411f83",
-    "cce55052"
-   ],
-   "day": 50,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1224"
-   ],
-   "source_day": 50,
-   "optional": true
-  },
-  {
-   "id": "P-050-V1225-m-662dc57cf6de",
-   "qid": "P-050-V1225-m-662dc57cf6de",
-   "type": "mcq",
-   "prompt": "本课词条「捕まえる」（例句语境：那个男人抓住了男孩的手。）的释义是哪一项？",
-   "options": [
-    "恭喜",
-    "皮；表皮",
-    "抓住；逮住",
-    "我"
-   ],
-   "h": "1b500d03",
-   "oh": [
-    "1cc354ec",
-    "23f0d5e4",
-    "1b500d03",
-    "14a6babc"
-   ],
-   "day": 50,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1225"
-   ],
-   "source_day": 50,
-   "optional": true
-  },
-  {
-   "id": "P-050-V1225-r-44c605603aa0",
-   "qid": "P-050-V1225-r-44c605603aa0",
-   "type": "mcq",
-   "prompt": "本课词条「捕まえる」（抓住；逮住）的假名读音是哪一项？",
-   "options": [
-    "さんぎょう",
-    "とんでもない",
-    "つかまえる",
-    "いがく"
-   ],
-   "h": "6e8deb8f",
-   "oh": [
-    "b0dea290",
-    "191de927",
-    "6e8deb8f",
-    "569af266"
-   ],
-   "day": 50,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1225"
-   ],
-   "source_day": 50,
-   "optional": true
-  },
-  {
-   "id": "P-050-V1226-m-652b4f70645d",
-   "qid": "P-050-V1226-m-652b4f70645d",
-   "type": "mcq",
-   "prompt": "本课词条「つき」（例句语境：用不了多久就能去月球旅行了吧。）的释义是哪一项？",
-   "options": [
-    "书房",
-    "月亮；月",
-    "可怜",
-    "移动；打动"
-   ],
-   "h": "c45895f8",
-   "oh": [
-    "982a1652",
-    "c45895f8",
-    "6bfb8726",
-    "4cef7bcc"
-   ],
-   "day": 50,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1226"
-   ],
-   "source_day": 50,
-   "optional": true
-  },
-  {
-   "id": "P-050-V1226-r-f18d93300a30",
-   "qid": "P-050-V1226-r-f18d93300a30",
-   "type": "mcq",
-   "prompt": "本课词条「つき」（月亮；月）的假名读音是哪一项？",
-   "options": [
-    "ぐたい",
-    "いんたい",
-    "なぞ",
-    "つき"
+    "つごう"
    ],
    "h": "abdccd9a",
    "oh": [
-    "cc1f3fdc",
-    "9f7776eb",
-    "9acce519",
-    "abdccd9a"
+    "16556a57",
+    "abdccd9a",
+    "a135c58b",
+    "7a451219"
    ],
-   "day": 50,
-   "group": "vocab",
-   "capability": "reading",
    "knowledge_ids": [
     "V1226"
    ],
-   "source_day": 50,
-   "optional": true
-  },
-  {
-   "id": "P-050-V1227-m-4928a62ddd24",
-   "qid": "P-050-V1227-m-4928a62ddd24",
-   "type": "mcq",
-   "prompt": "本课词条「付く」（例句语境：我们家的车装有空调。）的释义是哪一项？",
-   "options": [
-    "定期地；周期性的",
-    "让下车；放下",
-    "附带；沾上",
-    "可爱"
-   ],
-   "h": "177eefc4",
-   "oh": [
-    "3f160fd1",
-    "bfbd1ea1",
-    "177eefc4",
-    "991823fd"
-   ],
-   "day": 50,
-   "group": "vocab",
    "capability": "meaning",
-   "knowledge_ids": [
-    "V1227"
-   ],
-   "source_day": 50,
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "P-050-V1227-r-bae143ec03ae",
-   "qid": "P-050-V1227-r-bae143ec03ae",
+   "id": "D13-050-V1228-meaning",
+   "qid": "D13-050-V1228-meaning",
    "type": "mcq",
-   "prompt": "本课词条「付く」（附带；沾上）的假名读音是哪一项？",
-   "options": [
-    "てってい",
-    "のうぎょう",
-    "つく",
-    "ねったい"
-   ],
-   "h": "a9dcca74",
-   "oh": [
-    "2364f834",
-    "5716a3dc",
-    "a9dcca74",
-    "f742279a"
-   ],
    "day": 50,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1227"
-   ],
-   "source_day": 50,
-   "optional": true
-  },
-  {
-   "id": "P-050-V1228-m-7672c10239ab",
-   "qid": "P-050-V1228-m-7672c10239ab",
-   "type": "mcq",
-   "prompt": "本课词条「漬ける」（例句语境：他把勺子浸到汤里。）的释义是哪一项？",
+   "prompt": "「漬ける」的中文释义？",
    "options": [
+    "抓住；逮住",
+    "持续；继续",
     "腌；浸泡",
-    "亚洲",
-    "报纸",
-    "保险箱"
+    "附带；沾上"
    ],
    "h": "501e81bb",
    "oh": [
+    "1b500d03",
+    "67411680",
     "501e81bb",
-    "a46d55ad",
-    "7e12fd48",
-    "b067ae66"
+    "177eefc4"
    ],
-   "day": 50,
-   "group": "vocab",
-   "capability": "meaning",
    "knowledge_ids": [
     "V1228"
    ],
-   "source_day": 50,
-   "optional": true
+   "capability": "meaning",
+   "group": "vocab"
   },
   {
-   "id": "P-050-V1228-r-e201cbfb766b",
-   "qid": "P-050-V1228-r-e201cbfb766b",
+   "id": "D13-050-V1224-meaning",
+   "qid": "D13-050-V1224-meaning",
    "type": "mcq",
-   "prompt": "本课词条「漬ける」（腌；浸泡）的假名读音是哪一项？",
+   "day": 50,
+   "prompt": "「ちり」的中文释义？",
+   "options": [
+    "方便；情况",
+    "地理",
+    "注意；提醒",
+    "停车场"
+   ],
+   "h": "9abb5b0b",
+   "oh": [
+    "b0e46c5c",
+    "9abb5b0b",
+    "8243aeeb",
+    "4429eb87"
+   ],
+   "knowledge_ids": [
+    "V1224"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-V1228-reading",
+   "qid": "D13-050-V1228-reading",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "「漬ける」（腌；浸泡）的假名读音是哪一项？",
    "options": [
     "つける",
-    "しゅっせき",
-    "にんき",
-    "ちゅうこ"
+    "つづく",
+    "つく",
+    "つたえる"
    ],
    "h": "85385777",
    "oh": [
     "85385777",
-    "f5608cf6",
-    "dbb81702",
-    "fcabf56c"
+    "81808f17",
+    "a9dcca74",
+    "85eebdbd"
    ],
-   "day": 50,
-   "group": "vocab",
-   "capability": "reading",
    "knowledge_ids": [
     "V1228"
    ],
-   "source_day": 50,
-   "optional": true
+   "capability": "reading",
+   "group": "vocab"
   },
   {
-   "id": "P-050-V1229-m-9dbc414fb576",
-   "qid": "P-050-V1229-m-9dbc414fb576",
+   "id": "D13-050-V1221-reading",
+   "qid": "D13-050-V1221-reading",
    "type": "mcq",
-   "prompt": "本课词条「都合」（例句语境：您几点方便？）的释义是哪一项？",
-   "options": [
-    "报告；汇报",
-    "准备；备好（东西）",
-    "方便；情况",
-    "比较"
-   ],
-   "h": "b0e46c5c",
-   "oh": [
-    "11075f7",
-    "3bc432f3",
-    "b0e46c5c",
-    "b2018dc0"
-   ],
    "day": 50,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1229"
+   "prompt": "「中学校」（初中）的假名读音是哪一项？",
+   "options": [
+    "ちゅうがっこう",
+    "ちゅうしゃじょう",
+    "ちゅうしょく",
+    "ちょうじょう"
    ],
-   "source_day": 50,
-   "optional": true
+   "h": "a135c58b",
+   "oh": [
+    "a135c58b",
+    "30a7720e",
+    "357b249e",
+    "cb4f7c22"
+   ],
+   "knowledge_ids": [
+    "V1221"
+   ],
+   "capability": "reading",
+   "group": "vocab"
   },
   {
-   "id": "P-050-V1229-r-a3efd392aed6",
-   "qid": "P-050-V1229-r-a3efd392aed6",
+   "id": "D13-050-V1220-meaning",
+   "qid": "D13-050-V1220-meaning",
    "type": "mcq",
-   "prompt": "本课词条「都合」（方便；情况）的假名读音是哪一项？",
+   "day": 50,
+   "prompt": "「注意」的中文释义？",
    "options": [
-    "つごう",
-    "しるし",
-    "おべんとう",
-    "けいじ"
+    "注意；提醒",
+    "停车场",
+    "血",
+    "打针；注射"
+   ],
+   "h": "8243aeeb",
+   "oh": [
+    "8243aeeb",
+    "4429eb87",
+    "c435e05f",
+    "121f5c63"
+   ],
+   "knowledge_ids": [
+    "V1220"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-V1221-meaning",
+   "qid": "D13-050-V1221-meaning",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "「中学校」的中文释义？",
+   "options": [
+    "初中",
+    "地理",
+    "血",
+    "打针；注射"
+   ],
+   "h": "7d09273f",
+   "oh": [
+    "7d09273f",
+    "9abb5b0b",
+    "c435e05f",
+    "121f5c63"
+   ],
+   "knowledge_ids": [
+    "V1221"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-V1219-meaning",
+   "qid": "D13-050-V1219-meaning",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "「ちゃん」的中文释义？",
+   "options": [
+    "包；包裹",
+    "抓住；逮住",
+    "注意；提醒",
+    "小…（昵称）"
+   ],
+   "h": "d892a0f8",
+   "oh": [
+    "94fd174f",
+    "1b500d03",
+    "8243aeeb",
+    "d892a0f8"
+   ],
+   "knowledge_ids": [
+    "V1219"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-V1229-reading",
+   "qid": "D13-050-V1229-reading",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "「都合」（方便；情况）的假名读音是哪一项？",
+   "options": [
+    "つづく",
+    "つたえる",
+    "つき",
+    "つごう"
    ],
    "h": "7a451219",
    "oh": [
-    "7a451219",
-    "88847d90",
-    "3ee6c5db",
-    "63d603d0"
+    "81808f17",
+    "85eebdbd",
+    "abdccd9a",
+    "7a451219"
    ],
-   "day": 50,
-   "group": "vocab",
-   "capability": "reading",
    "knowledge_ids": [
     "V1229"
    ],
-   "source_day": 50,
-   "optional": true
+   "capability": "reading",
+   "group": "vocab"
   },
   {
-   "id": "P-050-G0214-m-a09fa2fc427c",
-   "qid": "P-050-G0214-m-a09fa2fc427c",
+   "id": "D13-050-V1222-meaning",
+   "qid": "D13-050-V1222-meaning",
    "type": "mcq",
-   "prompt": "本课句型「〜せる / 〜させる」在以下语境中的释义是哪一项？ 例句：母は毎日弟に野菜を食べさせる。（母亲每天让弟弟吃蔬菜。）",
-   "options": [
-    "（人为地）已经…着；事先做好了…",
-    "…和…等（部分列举）",
-    "即使…也…",
-    "让…做；使…做"
-   ],
-   "h": "a12d61b6",
-   "oh": [
-    "35d20238",
-    "395a5d08",
-    "f4b0654a",
-    "a12d61b6"
-   ],
    "day": 50,
-   "group": "grammar",
+   "prompt": "「注射」的中文释义？",
+   "options": [
+    "月亮；月",
+    "初中",
+    "力量；力气",
+    "打针；注射"
+   ],
+   "h": "121f5c63",
+   "oh": [
+    "c45895f8",
+    "7d09273f",
+    "a854f563",
+    "121f5c63"
+   ],
+   "knowledge_ids": [
+    "V1222"
+   ],
    "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-V1223-meaning",
+   "qid": "D13-050-V1223-meaning",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "「駐車場」的中文释义？",
+   "options": [
+    "停车场",
+    "注意；提醒",
+    "暖气；取暖",
+    "血"
+   ],
+   "h": "4429eb87",
+   "oh": [
+    "4429eb87",
+    "8243aeeb",
+    "c195e830",
+    "c435e05f"
+   ],
+   "knowledge_ids": [
+    "V1223"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-V1215-meaning",
+   "qid": "D13-050-V1215-meaning",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "「ち」的中文释义？",
+   "options": [
+    "力量；力气",
+    "血",
+    "方便；情况",
+    "检查；核对"
+   ],
+   "h": "c435e05f",
+   "oh": [
+    "a854f563",
+    "c435e05f",
+    "b0e46c5c",
+    "92006c24"
+   ],
+   "knowledge_ids": [
+    "V1215"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-V1218-recall",
+   "qid": "D13-050-V1218-recall",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "「一点也不」对应哪个日语词？",
+   "options": [
+    "ちっとも",
+    "つく",
+    "ちゃん",
+    "ちゅうしゃ"
+   ],
+   "h": "c30a3d17",
+   "oh": [
+    "c30a3d17",
+    "a9dcca74",
+    "a62da0aa",
+    "19910d99"
+   ],
+   "knowledge_ids": [
+    "V1218"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-V1217-meaning",
+   "qid": "D13-050-V1217-meaning",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "「力」的中文释义？",
+   "options": [
+    "方便；情况",
+    "力量；力气",
+    "地理",
+    "停车场"
+   ],
+   "h": "a854f563",
+   "oh": [
+    "b0e46c5c",
+    "a854f563",
+    "9abb5b0b",
+    "4429eb87"
+   ],
+   "knowledge_ids": [
+    "V1217"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-V1220-recall",
+   "qid": "D13-050-V1220-recall",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "「注意；提醒」对应哪个日语词？",
+   "options": [
+    "ち",
+    "ちゅうい",
+    "ちゅうしゃじょう",
+    "ちゅうしゃ"
+   ],
+   "h": "bac0d09",
+   "oh": [
+    "e425592c",
+    "bac0d09",
+    "30a7720e",
+    "19910d99"
+   ],
+   "knowledge_ids": [
+    "V1220"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-V1227-reading",
+   "qid": "D13-050-V1227-reading",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "「付く」（附带；沾上）的假名读音是哪一项？",
+   "options": [
+    "つける",
+    "つつむ",
+    "つく",
+    "つづく"
+   ],
+   "h": "a9dcca74",
+   "oh": [
+    "85385777",
+    "dc50fcef",
+    "a9dcca74",
+    "81808f17"
+   ],
+   "knowledge_ids": [
+    "V1227"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-V1218-meaning",
+   "qid": "D13-050-V1218-meaning",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "「ちっとも」的中文释义？",
+   "options": [
+    "小…（昵称）",
+    "一点也不",
+    "打针；注射",
+    "附带；沾上"
+   ],
+   "h": "707020e",
+   "oh": [
+    "d892a0f8",
+    "707020e",
+    "121f5c63",
+    "177eefc4"
+   ],
+   "knowledge_ids": [
+    "V1218"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-V1226-meaning",
+   "qid": "D13-050-V1226-meaning",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "「つき」的中文释义？",
+   "options": [
+    "月亮；月",
+    "检查；核对",
+    "方便；情况",
+    "初中"
+   ],
+   "h": "c45895f8",
+   "oh": [
+    "c45895f8",
+    "92006c24",
+    "b0e46c5c",
+    "7d09273f"
+   ],
+   "knowledge_ids": [
+    "V1226"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-G0214-context",
+   "qid": "D13-050-G0214-context",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "请选择「息子が行きたいと言ったので、一人で旅行に行かせました。」的中文意思。",
+   "options": [
+    "一个人住在国外，比想象中更难。",
+    "隔壁好几天没亮灯，一家人肯定出去旅行了。",
+    "儿子说想去，我就让他一个人去旅行了。",
+    "一个人去爬富士山，妈妈肯定担心。"
+   ],
+   "h": "d39a95f9",
+   "oh": [
+    "375f2fea",
+    "250a82fd",
+    "d39a95f9",
+    "c5e2c3c9"
+   ],
    "knowledge_ids": [
     "G0214"
    ],
-   "source_day": 50,
-   "optional": true
-  },
-  {
-   "id": "P-050-G0215-m-63ec636719f1",
-   "qid": "P-050-G0215-m-63ec636719f1",
-   "type": "mcq",
-   "prompt": "本课句型「〜せられる / 〜させられる」在以下语境中的释义是哪一项？ 例句：子どものころ、母に毎日ピアノを練習させられた。（小时候母亲每天逼我练钢琴。）",
-   "options": [
-    "…或…",
-    "被迫做…",
-    "…来着？（回忆确认）",
-    "未必…；不一定…；不见得…"
-   ],
-   "h": "793643b7",
-   "oh": [
-    "efb2a7d1",
-    "793643b7",
-    "d904b750",
-    "db4a40a4"
-   ],
-   "day": 50,
-   "group": "grammar",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "G0215"
-   ],
-   "source_day": 50,
-   "optional": true
-  },
-  {
-   "id": "P-050-G0215-u-631173dc7d20",
-   "qid": "P-050-G0215-u-631173dc7d20",
-   "type": "mcq",
-   "prompt": "课程中「〜せられる / 〜させられる」的接续说明是哪一项？ 例句：子どものころ、母に毎日ピアノを練習させられた。（小时候母亲每天逼我练钢琴。）",
-   "options": [
-    "名词 + と + 名词 + とどちらが + 形容词 + か",
-    "普通形 + わけがない（强烈否定可能性）；辞書形 + わけにはいかない（因情理/规则不能做）",
-    "五段动词未然形 + せられる（部分动词常缩约为 される）；一段动词未然形 + させられる",
-    "动词普通形／い形容词 + んです；な形容词+な／名词+な + んです"
-   ],
-   "h": "5d3adbf6",
-   "oh": [
-    "39338e3a",
-    "a8c782b5",
-    "5d3adbf6",
-    "b8dc8bc9"
-   ],
-   "day": 50,
-   "group": "grammar",
    "capability": "usage",
-   "knowledge_ids": [
-    "G0215"
-   ],
-   "source_day": 50,
-   "optional": true
+   "group": "grammar"
   },
   {
-   "id": "X-050-V1230-c",
-   "qid": "X-050-V1230-c",
+   "id": "D13-050-V1215-recall",
+   "qid": "D13-050-V1215-recall",
    "type": "mcq",
    "day": 50,
-   "prompt": "「伝える」的假名读音是？",
+   "prompt": "「血」对应哪个日语词？",
    "options": [
-    "こたえ",
-    "かがやく",
-    "つたえる",
-    "のむ"
+    "つごう",
+    "ち",
+    "ちから",
+    "チェックする"
    ],
-   "h": "85eebdbd",
+   "h": "e425592c",
    "oh": [
-    "ebab281d",
-    "c547937",
-    "85eebdbd",
-    "dcc452a3"
+    "7a451219",
+    "e425592c",
+    "b48f5c4",
+    "16556a57"
    ],
    "knowledge_ids": [
-    "V1230"
+    "V1215"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-V1225-meaning",
+   "qid": "D13-050-V1225-meaning",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "「捕まえる」的中文释义？",
+   "options": [
+    "抓住；逮住",
+    "持续；继续",
+    "附带；沾上",
+    "腌；浸泡"
+   ],
+   "h": "1b500d03",
+   "oh": [
+    "1b500d03",
+    "67411680",
+    "177eefc4",
+    "501e81bb"
+   ],
+   "knowledge_ids": [
+    "V1225"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-V1229-meaning",
+   "qid": "D13-050-V1229-meaning",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "「都合」的中文释义？",
+   "options": [
+    "血",
+    "方便；情况",
+    "停车场",
+    "打针；注射"
+   ],
+   "h": "b0e46c5c",
+   "oh": [
+    "c435e05f",
+    "b0e46c5c",
+    "4429eb87",
+    "121f5c63"
+   ],
+   "knowledge_ids": [
+    "V1229"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-V1222-recall",
+   "qid": "D13-050-V1222-recall",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "「打针；注射」对应哪个日语词？",
+   "options": [
+    "ちゅうがっこう",
+    "ちゅうしゃ",
+    "ちから",
+    "つき"
+   ],
+   "h": "19910d99",
+   "oh": [
+    "a135c58b",
+    "19910d99",
+    "b48f5c4",
+    "abdccd9a"
+   ],
+   "knowledge_ids": [
+    "V1222"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-V1216-meaning",
+   "qid": "D13-050-V1216-meaning",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "「チェックする」的中文释义？",
+   "options": [
+    "检查；核对",
+    "方便；情况",
+    "注意；提醒",
+    "停车场"
+   ],
+   "h": "92006c24",
+   "oh": [
+    "92006c24",
+    "b0e46c5c",
+    "8243aeeb",
+    "4429eb87"
+   ],
+   "knowledge_ids": [
+    "V1216"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-V1224-recall",
+   "qid": "D13-050-V1224-recall",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "「地理」对应哪个日语词？",
+   "options": [
+    "ちゅうしゃじょう",
+    "ちゅうい",
+    "ちり",
+    "つごう"
+   ],
+   "h": "cce55052",
+   "oh": [
+    "30a7720e",
+    "bac0d09",
+    "cce55052",
+    "7a451219"
+   ],
+   "knowledge_ids": [
+    "V1224"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-V1223-reading",
+   "qid": "D13-050-V1223-reading",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "「駐車場」（停车场）的假名读音是哪一项？",
+   "options": [
+    "ちゅうがっこう",
+    "ちゅうしゃじょう",
+    "ちゅうい",
+    "ち"
+   ],
+   "h": "30a7720e",
+   "oh": [
+    "a135c58b",
+    "30a7720e",
+    "bac0d09",
+    "e425592c"
+   ],
+   "knowledge_ids": [
+    "V1223"
    ],
    "capability": "reading",
-   "group": "vocab",
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "X-050-V1231-c",
-   "qid": "X-050-V1231-c",
+   "id": "D13-050-V1225-reading",
+   "qid": "D13-050-V1225-reading",
    "type": "mcq",
    "day": 50,
-   "prompt": "「続く」的意思是？",
+   "prompt": "「捕まえる」（抓住；逮住）的假名读音是哪一项？",
    "options": [
-    "问题；提问",
-    "做完；办完",
-    "商店；店铺",
-    "持续；继续"
+    "つとめる",
+    "つづける",
+    "つかまえる",
+    "つたえる"
    ],
-   "h": "67411680",
+   "h": "6e8deb8f",
    "oh": [
-    "b78ed7ea",
-    "b94d317a",
-    "c9dd6f72",
-    "67411680"
+    "20b620d1",
+    "51887b26",
+    "6e8deb8f",
+    "85eebdbd"
    ],
    "knowledge_ids": [
-    "V1231"
+    "V1225"
    ],
-   "capability": "meaning",
-   "group": "vocab",
-   "optional": true
+   "capability": "reading",
+   "group": "vocab"
   },
   {
-   "id": "X-050-V1232-c",
-   "qid": "X-050-V1232-c",
+   "id": "D13-050-V1219-recall",
+   "qid": "D13-050-V1219-recall",
    "type": "mcq",
    "day": 50,
-   "prompt": "「包む」的假名读音是？",
+   "prompt": "「小…」对应哪个日语词？",
    "options": [
-    "うちあわせ",
     "つつむ",
-    "おおい",
-    "せいき"
+    "ちゅうい",
+    "つかまえる",
+    "ちゃん"
+   ],
+   "h": "a62da0aa",
+   "oh": [
+    "dc50fcef",
+    "bac0d09",
+    "6e8deb8f",
+    "a62da0aa"
+   ],
+   "knowledge_ids": [
+    "V1219"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-V1232-reading",
+   "qid": "D13-050-V1232-reading",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "「包む」（包；包裹）的假名读音是哪一项？",
+   "options": [
+    "つく",
+    "つつむ",
+    "つける",
+    "つづく"
    ],
    "h": "dc50fcef",
    "oh": [
-    "40352ca8",
+    "a9dcca74",
     "dc50fcef",
-    "52be46a3",
-    "6d1091b5"
+    "85385777",
+    "81808f17"
    ],
    "knowledge_ids": [
     "V1232"
    ],
    "capability": "reading",
-   "group": "vocab",
-   "optional": true
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-V1230-meaning",
+   "qid": "D13-050-V1230-meaning",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "「伝える」的中文释义？",
+   "options": [
+    "包；包裹",
+    "传达；转告",
+    "腌；浸泡",
+    "抓住；逮住"
+   ],
+   "h": "3a50edc2",
+   "oh": [
+    "94fd174f",
+    "3a50edc2",
+    "501e81bb",
+    "1b500d03"
+   ],
+   "knowledge_ids": [
+    "V1230"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-V1231-reading",
+   "qid": "D13-050-V1231-reading",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "「続く」（持续；继续）的假名读音是哪一项？",
+   "options": [
+    "つたえる",
+    "つづく",
+    "つつむ",
+    "つける"
+   ],
+   "h": "81808f17",
+   "oh": [
+    "85eebdbd",
+    "81808f17",
+    "dc50fcef",
+    "85385777"
+   ],
+   "knowledge_ids": [
+    "V1231"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-V1231-meaning",
+   "qid": "D13-050-V1231-meaning",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "「続く」的中文释义？",
+   "options": [
+    "持续；继续",
+    "传达；转告",
+    "腌；浸泡",
+    "包；包裹"
+   ],
+   "h": "67411680",
+   "oh": [
+    "67411680",
+    "3a50edc2",
+    "501e81bb",
+    "94fd174f"
+   ],
+   "knowledge_ids": [
+    "V1231"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-V1232-meaning",
+   "qid": "D13-050-V1232-meaning",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "「包む」的中文释义？",
+   "options": [
+    "持续；继续",
+    "附带；沾上",
+    "腌；浸泡",
+    "包；包裹"
+   ],
+   "h": "94fd174f",
+   "oh": [
+    "67411680",
+    "177eefc4",
+    "501e81bb",
+    "94fd174f"
+   ],
+   "knowledge_ids": [
+    "V1232"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-050-V1230-reading",
+   "qid": "D13-050-V1230-reading",
+   "type": "mcq",
+   "day": 50,
+   "prompt": "「伝える」（传达；转告）的假名读音是哪一项？",
+   "options": [
+    "つかまえる",
+    "つたえる",
+    "つつむ",
+    "つける"
+   ],
+   "h": "85eebdbd",
+   "oh": [
+    "6e8deb8f",
+    "85eebdbd",
+    "dc50fcef",
+    "85385777"
+   ],
+   "knowledge_ids": [
+    "V1230"
+   ],
+   "capability": "reading",
+   "group": "vocab"
   }
  ],
  "listening_material": {

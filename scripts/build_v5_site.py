@@ -4,8 +4,8 @@
 设计口径（2026-11-08，用户明确要求）：
 - 顶部不要模式按钮 / 分钟数 / 分段导航 / 站点链接 / 提示文案；
 - 新词与语法各自一个局部遮挡开关；
-- 所有题合成一整块，直接列出，不翻页、不分段，按知识点去重并覆盖当天全部新词与语法；
-- 中文上方给小号日语文字（假名 + ruby 注音），例句可发音；
+- 当天新词两题、语法三题，洗牌后一次列出，支持错题重练；
+- 新词分日语、中文与韩语读音两列，例句可展开朗读；
 - 底部只有一个「完成」按钮，上报当天学习情况到 /api/progress。
 
 构建期生成全部 HTML；前端 app.js 只负责遮挡 / 朗读 / 判分 / 完成上报。
@@ -15,13 +15,11 @@ from __future__ import annotations
 
 import hashlib
 import json
-import random
 import re
-import unicodedata
-from collections import defaultdict
 from pathlib import Path
 
 import ko_pron
+from daily_questions import build_daily_questions, vocabulary_display
 
 ROOT = Path(__file__).resolve().parent.parent
 SEED = ROOT / "knowledge/seeds"
@@ -36,15 +34,6 @@ def read(name):
 def esc(s):
     return (str(s or "").replace("&", "&amp;").replace("<", "&lt;")
             .replace(">", "&gt;").replace('"', "&quot;"))
-
-
-def fnv(text):
-    """与前端一致的 FNV-1a（按 Unicode 码点），答案只以哈希出现在公开页。"""
-    h = 2166136261
-    for ch in re.sub(r"\s+", "", unicodedata.normalize("NFKC", str(text))):
-        h ^= ord(ch)
-        h = (h * 16777619) & 0xFFFFFFFF
-    return format(h, "x")
 
 
 CSS = r"""
@@ -83,6 +72,11 @@ border:1px solid var(--line);border-radius:999px;background:var(--surface);color
 .item{border-top:1px dashed var(--line);padding:14px 0}
 .item:first-of-type{border-top:0;padding-top:2px}
 .jp{font-size:23px;font-weight:700;overflow-wrap:anywhere;line-height:1.4}
+.vocab-pair{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);
+column-gap:clamp(16px,5vw,48px);align-items:start;text-align:left}
+.vocab-pair .zh{margin-top:0}
+.vocab-example{margin-top:6px}
+.vocab-example summary{display:list-item;width:fit-content;padding:4px 0}
 .jp.small-jp{font-size:15px;font-weight:600}
 .kana-line{font-size:12px;color:var(--muted);letter-spacing:.04em;margin-bottom:1px}
 .ko-read{font-size:14px;color:var(--accent);margin-top:2px;letter-spacing:.02em;overflow-wrap:anywhere}
@@ -109,7 +103,7 @@ audio{width:100%;margin:6px 0}
 .passage{white-space:pre-line;padding:12px;background:var(--bg);border-radius:8px;margin-bottom:10px}
 .q{border-top:1px dashed var(--line);padding:14px 0}
 .q:first-child{border-top:0;padding-top:2px}
-.q .prompt{font-size:15px;overflow-wrap:anywhere}
+.q .prompt{font-size:15px;white-space:pre-line;overflow-wrap:anywhere}
 .q .opts{display:grid;gap:6px;margin-top:8px}
 .opt{display:flex;gap:8px;align-items:flex-start;border:1px solid var(--line);border-radius:8px;
 padding:8px;cursor:pointer;font-size:15px}
@@ -117,6 +111,7 @@ padding:8px;cursor:pointer;font-size:15px}
 .opt.correct{border-color:var(--ok);background:rgba(46,125,79,.08)}
 .opt.wrong{border-color:var(--bad)}
 .fb{font-size:13px;margin-top:6px}.fb.ok{color:var(--ok)}.fb.bad{color:var(--bad)}
+.q-actions{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
 .qscore{font-size:13px;color:var(--muted);margin-bottom:8px}
 .foot{position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);
 padding:10px 14px;display:flex;gap:10px;align-items:center;justify-content:center;z-index:30}
@@ -174,26 +169,98 @@ function showAll(btn){
  },1000);
  PEEK=state;
 }
-var RESULTS={},RATINGS={},STARTED=Date.now();
-function saveLocal(){try{localStorage.setItem(STORE+'state.'+DAY,JSON.stringify({results:RESULTS,ratings:RATINGS}))}catch(e){}}
-function restore(){try{var s=JSON.parse(localStorage.getItem(STORE+'state.'+DAY)||'null');
- if(s&&s.results)RESULTS=s.results||{};if(s&&s.ratings)RATINGS=s.ratings||{};}catch(e){}
- Object.keys(RESULTS).forEach(function(qid){
-  var wrap=$('.q[data-qid="'+qid+'"]');if(!wrap)return;
-  var r=RESULTS[qid];wrap.setAttribute('data-done','1');
-  $$('.opt',wrap).forEach(function(x){x.querySelector('input').disabled=true;
-   if(x.getAttribute('data-oh')===wrap.getAttribute('data-h'))x.classList.add('correct');
-   if(!r.correct&&x.querySelector('span').textContent===r.answer)x.classList.add('wrong')});
-  var fb=document.createElement('div');fb.className='fb '+(r.correct?'ok':'bad');
-  fb.textContent=r.correct?'答对了。':'本题未答对，正确项已标绿。';wrap.appendChild(fb);
- });
+var QUESTIONS=$$('.q'), RESULTS={}, RATINGS={}, RETRY=null, STARTED=Date.now();
+function saveLocal(){try{localStorage.setItem(STORE+'state.'+DAY,JSON.stringify({
+ results:RESULTS,ratings:RATINGS,retry:RETRY}))}catch(e){}}
+function restore(){
+ try{
+  var saved=JSON.parse(localStorage.getItem(STORE+'state.'+DAY)||'null');
+  if(saved){
+   RATINGS=saved.ratings||{};
+   QUESTIONS.forEach(function(q){
+    var id=q.dataset.qid, r=(saved.results||{})[id];
+    if(r&&$$('.opt',q).some(function(opt){return $('span',opt).textContent===r.answer})){
+     RESULTS[id]=r;
+    }
+   });
+   if(saved.retry&&Array.isArray(saved.retry.ids)&&saved.retry.ids.length&&
+      saved.retry.ids.every(function(id){return RESULTS[id]&&!RESULTS[id].correct})){
+    RETRY=saved.retry;
+   }
+  }
+ }catch(e){}
  Object.keys(RATINGS).forEach(function(kid){$$('[data-rate][data-kid="'+kid+'"]').forEach(function(b){
   b.setAttribute('aria-pressed',String(b.getAttribute('data-rate')===RATINGS[kid]))})});
+ renderQuestions();
+}
+function activeResults(){return RETRY?RETRY.results:RESULTS}
+function wrongIds(){return Object.values(activeResults()).filter(function(r){return !r.correct})
+ .map(function(r){return r.qid})}
+function renderQuestion(q,r){
+ q.toggleAttribute('data-done',!!r);
+ $$('.opt',q).forEach(function(opt){
+  var input=$('input',opt), selected=!!r&&$('span',opt).textContent===r.answer;
+  input.disabled=!!r;
+  input.checked=selected;
+  opt.classList.toggle('correct',!!r&&opt.dataset.oh===q.dataset.h);
+  opt.classList.toggle('wrong',selected&&!r.correct);
+ });
+ var fb=$('.fb',q);
+ fb.hidden=!r;
+ fb.classList.toggle('ok',!!r&&r.correct);
+ fb.classList.toggle('bad',!!r&&!r.correct);
+ fb.textContent=r?(r.correct?'答对了。':'答错了，正确项已标绿。'):'';
+}
+function renderQuestions(){
+ var results=activeResults(), visible=0;
+ QUESTIONS.forEach(function(q){
+  q.hidden=!!RETRY&&!RETRY.ids.includes(q.dataset.qid);
+  if(q.hidden)return;
+  $('.q-number',q).textContent=++visible+'. ';
+  renderQuestion(q,results[q.dataset.qid]);
+ });
  updateScore();
 }
-function updateScore(){var all=$$('.q'),done=Object.keys(RESULTS).length,
- right=Object.keys(RESULTS).filter(function(k){return RESULTS[k].correct}).length;
- var el=$('#qscore');if(el)el.textContent='已答 '+done+' / '+all.length+'　答对 '+right}
+function updateScore(){
+ var el=$('#qscore'), button=$('#retryWrong');
+ if(!el||!button)return;
+ var wrong=wrongIds().length, done=Object.keys(activeResults()).length;
+ var total=RETRY?RETRY.ids.length:QUESTIONS.length;
+ el.textContent=(RETRY?'错题重练 · ':'')+'已答 '+done+' / '+total+'　答对 '+(done-wrong)
+  +(RETRY&&done===total&&!wrong?' · 本轮错题已全部答对':'');
+ button.disabled=!wrong||(!!RETRY&&done<total);
+ button.textContent=wrong?'错题重练（'+wrong+'）':'错题重练';
+ $('#showAllQuestions').hidden=!RETRY;
+}
+function startRetry(){
+ var ids=wrongIds();if(!ids.length)return;
+ RETRY={ids:ids,results:{}};
+ STARTED=Date.now();
+ QUESTIONS.forEach(function(q){
+  if(!ids.includes(q.dataset.qid))return;
+  var options=$$('.opt',q);
+  // Rotate by a random nonzero offset so the previous correct position always changes.
+  var shift=1+Math.floor(Math.random()*(options.length-1));
+  var list=$('.opts',q);
+  options.slice(shift).concat(options.slice(0,shift)).forEach(function(opt){list.appendChild(opt)});
+ });
+ saveLocal();renderQuestions();$('#qscore').focus();
+}
+var retryButton=$('#retryWrong'), allQuestionsButton=$('#showAllQuestions');
+if(retryButton)retryButton.addEventListener('click',startRetry);
+if(allQuestionsButton)allQuestionsButton.addEventListener('click',function(){
+ RETRY=null;saveLocal();renderQuestions();$('#qscore').focus();
+});
+document.addEventListener('change',function(e){
+ var input=e.target, lab=input.closest('.q .opt');
+ if(!lab||!input.checked)return;
+ var q=lab.closest('.q');if(q.hasAttribute('data-done'))return;
+ var answer=$('span',lab).textContent, id=q.dataset.qid;
+ var result={qid:id,answer:answer,correct:fnv(answer)===q.dataset.h,
+  hinted:false,revealed:false,seconds:Math.min(86400,Math.round((Date.now()-STARTED)/1000))};
+ activeResults()[id]=result;
+ renderQuestion(q,result);saveLocal();updateScore();
+});
 function speak(text,btn){
  if(!window.speechSynthesis){if(btn)btn.textContent='此设备不支持朗读';return}
  var u=new SpeechSynthesisUtterance(text);u.lang='ja-JP';u.rate=.95;
@@ -213,20 +280,6 @@ document.addEventListener('click',function(e){
  if(rt){var kid=rt.getAttribute('data-kid'),v=rt.getAttribute('data-rate');RATINGS[kid]=v;
   $$('[data-rate][data-kid="'+kid+'"]').forEach(function(b){b.setAttribute('aria-pressed',String(b===rt))});
   saveLocal();return}
- var lab=e.target.closest('.q .opt');
- if(lab){
-  var wrap=lab.closest('.q');if(wrap.getAttribute('data-done'))return;
-  wrap.setAttribute('data-done','1');
-  var answer=lab.querySelector('span').textContent;
-  var ok=fnv(answer)===wrap.getAttribute('data-h');
-  lab.classList.add(ok?'correct':'wrong');
-  $$('.opt',wrap).forEach(function(x){x.querySelector('input').disabled=true;
-   if(x.getAttribute('data-oh')===wrap.getAttribute('data-h'))x.classList.add('correct')});
-  var fb=document.createElement('div');fb.className='fb '+(ok?'ok':'bad');
-  fb.textContent=ok?'答对了。':'本题未答对，正确项已标绿。';wrap.appendChild(fb);
-  RESULTS[wrap.getAttribute('data-qid')]={qid:wrap.getAttribute('data-qid'),answer:answer,
-   correct:ok,hinted:false,revealed:false,seconds:Math.round((Date.now()-STARTED)/1000)};
-  saveLocal();updateScore();return}
 });
 document.addEventListener('keydown',function(e){
  if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('mask')){
@@ -486,19 +539,18 @@ def build_vocab_html(day, vocab, kanji, reader):
     for vid in day["new_vocab_ids"]:
         v = vocab[vid]
         surface, kana = v["surface"], v.get("kana") or ""
+        meaning, readings = vocabulary_display(v)
         ex = (v.get("examples") or [{}])[0]
         ko = v.get("ko_hint") or v.get("ko_hanja") or ""
         tag = "" if vid in core else '<span class="small"> · 选学</span>'
         out.append(
             '<div class="item">'
+            '<div class="vocab-pair"><div lang="ja">%s<div class="jp" data-role="ja">%s</div></div>'
+            '<div><div class="zh" data-role="zh">%s%s</div>%s</div></div>'
             '<button class="show-all" type="button" data-show-all aria-label="临时显示三种语言 10 秒" hidden>显示</button>'
-            '%s'
-            '<div class="jp" data-role="ja">%s</div>'
-            '%s'
-            '<div class="zh" data-role="zh">%s%s</div>'
-            '%s%s%s</div>'
-            % (kana_line(surface, kana), jp_word(surface, kana),
-               ko_read_line(ko_pron.pron(kana)), esc(v["meaning_zh"]), tag,
+            '<details class="vocab-example"><summary>例句</summary>%s%s</details>%s</div>'
+            % (kana_line(surface, "／".join(readings)), jp_word(surface, kana),
+               esc(meaning), tag, ko_read_line(ko_pron.pron("／".join(readings))),
                ('<div class="ko" data-role="zh">韩语参考：%s</div>' % esc(ko)) if ko else "",
                example_html(ex, mapping, reader.hangul(ex.get("ja", ""))), rates_html(vid)))
     character_rows = []
@@ -556,95 +608,6 @@ def build_grammar_html(day, grammar, reader):
 # ---------------------------------------------------------------------------
 # 一整块练习：以必做骨架为准，按知识点去重，补齐当天全部新词 + 新语法
 # ---------------------------------------------------------------------------
-def coverage_question(day, kid, vocab, grammar, all_rows):
-    """为没有任何题覆盖的知识点补 1 题；只出「释义」或「假名」，不再叠加同考点。"""
-    n = day
-    rnd = random.Random(20261108 * 100 + n + int(kid[1:]))
-    if kid.startswith("V"):
-        v = vocab[kid]
-        answer = v["meaning_zh"] if (n + int(kid[1:])) % 2 else v["kana"]
-        cap = "meaning" if answer == v["meaning_zh"] else "reading"
-        others = [x["meaning_zh"] if cap == "meaning" else x["kana"] for x in all_rows
-                  if x["id"] != kid]
-        stem = "「%s」的%s是？" % (v["surface"], "意思" if cap == "meaning" else "假名读音")
-    else:
-        g = grammar[kid]
-        answer = g["meaning_zh"]
-        cap = "meaning"
-        others = [x["meaning_zh"] for x in grammar.values() if x["id"] != kid]
-        stem = "句型「%s」的意思是？" % g["pattern"]
-    rnd.shuffle(others)
-    opts, seen = [answer], {answer}
-    for o in others:
-        if o and o not in seen and fnv(o) != fnv(answer):
-            opts.append(o)
-            seen.add(o)
-        if len(opts) == 4:
-            break
-    if len(opts) < 4:
-        return None
-    rnd.shuffle(opts)
-    qid = "X-%03d-%s-c" % (n, kid)
-    return {"id": qid, "qid": qid, "type": "mcq", "day": n, "prompt": stem,
-            "options": opts, "h": fnv(answer), "oh": [fnv(o) for o in opts],
-            "knowledge_ids": [kid], "capability": cap, "group": "vocab" if kid.startswith("V") else "grammar",
-            "optional": True}
-
-
-def merge_questions(day, vocab, grammar, kanji, materials, sentence_rows):
-    from quiz_v5 import day_questions, public_question
-    from sentence_choices import build_for_day as sentence_questions
-    from practice_v9 import build_daily
-
-    n = day["day"]
-    private = day_questions(day, vocab, grammar, kanji, materials)
-    sentences = sentence_questions(day, sentence_rows)
-    practice = build_daily(day, vocab, grammar, kanji)
-    pool = {}
-    for q in private + sentences + practice:
-        pool.setdefault(q["qid"], public_question(q))
-
-    required = list(day.get("question_ids") or [])
-    selected, seen, kid_count = [], set(), defaultdict(int)
-
-    def take(q):
-        if not q or q["qid"] in seen:
-            return
-        assert "answer" not in q and "rationale" not in q, "公开题含明文答案 " + q["qid"]
-        assert len(q["options"]) == 4 and q["h"] in q["oh"], q["qid"]
-        selected.append(q)
-        seen.add(q["qid"])
-        for kid in q.get("knowledge_ids") or []:
-            kid_count[kid] += 1
-
-    # 1) 必做骨架（与 finish-day 门控一致）全部列出
-    for qid in required:
-        take(pool.get(qid))
-    # 2) 其余题按知识点去重，每个知识点最多再补 1 题
-    ordered = [pool[q["qid"]] for q in private + sentences + practice if q["qid"] in pool]
-    for q in ordered:
-        kids = q.get("knowledge_ids") or []
-        if not kids:
-            continue
-        if any(kid_count[k] >= 2 for k in kids):
-            continue
-        take(q)
-    # 3) 覆盖兜底：当天所有新词（含选学）与所有新语法都必须有题
-    all_vocab = sorted(vocab.values(), key=lambda x: x["id"])
-    targets = list(day["new_vocab_ids"]) + list(day["new_grammar_ids"])
-    for kid in targets:
-        if kid_count[kid]:
-            continue
-        q = coverage_question(n, kid, vocab, grammar, all_vocab)
-        if q:
-            take(q)
-    missing = [k for k in targets if not kid_count[k]]
-    assert not missing, "Day %d 缺少题目覆盖：%s" % (n, missing[:5])
-    assert len({q["qid"] for q in selected}) == len(selected), "Day %d 题目重复" % n
-    assert len(selected) <= 60, "Day %d 题量超出上报上限：%d" % (n, len(selected))
-    return selected
-
-
 def build_questions_html(questions):
     rows = []
     for i, q in enumerate(questions, 1):
@@ -652,9 +615,10 @@ def build_questions_html(questions):
         opts = "".join(
             '<label class="opt" data-oh="%s"><input type="radio" name="q%d"><span>%s</span></label>'
             % (esc(q["oh"][j]), i, esc(o)) for j, o in enumerate(q["options"]))
-        rows.append('<div class="q" data-qid="%s" data-h="%s">%s<div class="prompt">%d. %s</div>'
-                    '<div class="opts">%s</div></div>'
-                    % (esc(q["qid"]), esc(q["h"]), passage, i, esc(q["prompt"]), opts))
+        rows.append('<div class="q" data-qid="%s" data-h="%s">%s<div class="prompt" id="prompt-%d"><span class="q-number">%d. </span>%s</div>'
+                    '<div class="opts" role="group" aria-labelledby="prompt-%d">%s</div>'
+                    '<div class="fb" role="status" hidden></div></div>'
+                    % (esc(q["qid"]), esc(q["h"]), passage, i, i, esc(q["prompt"]), i, opts))
     return "".join(rows)
 
 
@@ -665,6 +629,7 @@ def build_listen_html(listen_json, audio_manifest, materials):
     m = materials[listen_json["id"]]
     return ('<div id="listening" class="listen-box">'
             '<div class="small">今日听力 · 原创合成语音 · %s 秒</div>'
+            '<p class="small">先听一遍，用一句话概括内容。再听一遍，记下两个细节后核对脚本。</p>'
             '<audio controls preload="metadata" src="%s" aria-label="当天听力"></audio>'
             '<details><summary>核对听力脚本</summary><p lang="ja" class="passage">%s</p></details>'
             '<button class="speak" type="button" data-speak="%s">设备朗读全文</button>'
@@ -693,7 +658,10 @@ def day_page(d, review_html, vocab_html, grammar_html, listen_html, questions_ht
             '<section class="card" id="vocab"><h2>今日新词 <span class="count">%d 个</span></h2>%s%s</section>'
             '<section class="card" id="grammar"><h2>今日语法 <span class="count">%d 条</span></h2>%s%s</section>'
             '<section class="card" id="questions"><h2>练习 <span class="count">%d 题</span></h2>'
-            '<p class="small">先完成前 %d 道基础题，余题按薄弱项练习。</p>%s<div class="qscore" id="qscore"></div>%s</section>'
+            '<p class="small">前 %d 题练必学词和语法，时间充裕再做选学词。答题后可集中重练错题。</p>'
+            '%s<div class="qscore" id="qscore" role="status" tabindex="-1"></div>%s'
+            '<div class="q-actions"><button class="btn" id="retryWrong" type="button" disabled>错题重练</button>'
+            '<button class="btn" id="showAllQuestions" type="button" hidden>返回全部练习</button></div></section>'
             '<div class="foot"><button class="btn primary" id="finish" type="button">完成</button>'
             '<span class="status" id="finishStatus" role="status" aria-live="polite"></span></div>'
             '</main></div>'
@@ -702,7 +670,7 @@ def day_page(d, review_html, vocab_html, grammar_html, listen_html, questions_ht
             % (d["day"], esc(d["theme"]), d["day"], d["day"], esc(d["theme"]),
                review_html, len(d["new_vocab_ids"]), mask_switch("新词"), vocab_html,
                len(d["new_grammar_ids"]), mask_switch("语法"), grammar_html,
-               page_meta["total"], len(d["question_ids"]), listen_html, questions_html,
+               page_meta["total"], page_meta["total"] - 2 * len(d["extension_vocab_ids"]), listen_html, questions_html,
                json.dumps(page_meta, ensure_ascii=False)))
 
 
@@ -792,9 +760,10 @@ def main():
             study_page("Day %d–%d · 五日复习" % (end - 4, end), body, end, unit), encoding="utf-8")
 
     totals = []
+    lesson_revision = hashlib.sha256()
     for d in cur["days"]:
         n = d["day"]
-        merged = merge_questions(d, vocab, grammar, kanji, materials, sentence_rows)
+        merged = build_daily_questions(d, vocab, grammar)
         totals.append(len(merged))
         practice = [public_question(q) for q in build_daily(d, vocab, grammar, kanji)]
         sentences = [dict(public_question(q), direction=q["direction"], optional=q["optional"],
@@ -873,6 +842,7 @@ def main():
                         build_vocab_html(d, vocab, kanji, reader), build_grammar_html(d, grammar, reader),
                         "".join(lesson_tasks) + listen_html, build_questions_html(merged), page_meta)
         (OUT / ("day-%03d.html" % n)).write_text(page, encoding="utf-8")
+        lesson_revision.update(page.encode())
         (DATA / ("day-%03d.json" % n)).write_text(json.dumps({
             "day": n, "phase": d["phase"], "theme": d["theme"], "can_do": d["can_do"],
             "minutes": d["minutes"], "blocks": d["blocks"], "listening": bool(d.get("listening")),
@@ -1004,9 +974,9 @@ def main():
 
     # HTML 模板必须进 revision，否则只改模板时 SW 不更新，用户会一直看到旧页面。
     revision = hashlib.sha256((CSS + JS + study_ui.CSS + study_ui.JS
-                               + json.dumps(cur, ensure_ascii=False)).encode()).hexdigest()[:12]
+                               + lesson_revision.hexdigest() + json.dumps(cur, ensure_ascii=False)).encode()).hexdigest()[:12]
     (OUT / "sw.js").write_text(
-        "const C='nh80-v11-" + revision + "';self.addEventListener('install',e=>self.skipWaiting());"
+        "const C='nh80-v13-" + revision + "';self.addEventListener('install',e=>self.skipWaiting());"
         "self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(ks=>Promise.all("
         "ks.filter(k=>k!==C).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));"
         "self.addEventListener('fetch',e=>{if(e.request.method!=='GET'||new URL(e.request.url).origin!==location.origin||new URL(e.request.url).pathname.startsWith('/api/'))return;"

@@ -2,17 +2,17 @@
  "day": 105,
  "phase": "P4",
  "theme": "〜せいで、〜たとたん / 〜たとたんに",
- "can_do": "用「〜せいで、〜たとたん / 〜たとたんに」造两句自己的话，表达：都怪…；因为…；刚一…就…",
+ "can_do": "用「〜せいで、〜たとたん / 〜たとたんに」各造一句自己的话，表达：都怪…；因为…；刚一…就…",
  "minutes": 60,
  "blocks": [
   {
    "type": "复习",
-   "min": 10,
+   "min": 6,
    "desc": "到期项优先；未完成顺延，不追赶"
   },
   {
    "type": "新词",
-   "min": 14,
+   "min": 11,
    "desc": "20 个必学词；4 个选学拓展"
   },
   {
@@ -22,13 +22,13 @@
   },
   {
    "type": "句子输出",
-   "min": 6,
-   "desc": "3道选句必做，7道拓展；答后核对"
+   "min": 4,
+   "desc": "每条新语法独立说一句，和例句对照"
   },
   {
    "type": "练习",
-   "min": 6,
-   "desc": "6 题即时自评"
+   "min": 15,
+   "desc": "优先做当天必学词与语法，答完重练错题"
   },
   {
    "type": "会话",
@@ -2773,1410 +2773,1354 @@
  ],
  "questions": [
   {
-   "id": "Q-105-K0-9e0264e97da5",
-   "qid": "Q-105-K0-9e0264e97da5",
+   "id": "D13-105-V2342-reading",
+   "qid": "D13-105-V2342-reading",
    "type": "mcq",
-   "prompt": "汉字「険」的一个常用读音是？",
-   "options": [
-    "あ.てる",
-    "とり",
-    "ケン",
-    "あま.り"
-   ],
-   "h": "59fb5bd",
-   "oh": [
-    "b1914c5a",
-    "2ec950e7",
-    "59fb5bd",
-    "578b535"
-   ],
-   "knowledge_ids": [
-    "K0522"
-   ]
-  },
-  {
-   "id": "Q-105-K1-4dfca5034b5c",
-   "qid": "Q-105-K1-4dfca5034b5c",
-   "type": "mcq",
-   "prompt": "汉字「頼」的一个常用读音是？",
-   "options": [
-    "とも.す",
-    "ライ",
-    "さかしま",
-    "おく.らす"
-   ],
-   "h": "1dbc24a0",
-   "oh": [
-    "f8cc6c5e",
-    "1dbc24a0",
-    "c41c28f4",
-    "7e29b41e"
-   ],
-   "knowledge_ids": [
-    "K0523"
-   ]
-  },
-  {
-   "id": "Q-105-G-7cf05df7aed6",
-   "qid": "Q-105-G-7cf05df7aed6",
-   "type": "mcq",
-   "prompt": "句型「〜たとたん / 〜たとたんに」的意思是？",
-   "options": [
-    "（第三人称）想做…",
-    "随着…",
-    "刚一…就…",
-    "难怪…；也就是说…"
-   ],
-   "h": "a4cc94e4",
-   "oh": [
-    "d20d98a",
-    "eeaaa388",
-    "a4cc94e4",
-    "98b9e285"
-   ],
-   "knowledge_ids": [
-    "G0157"
-   ]
-  },
-  {
-   "id": "Q-105-V0-c7c1cfecd693",
-   "qid": "Q-105-V0-c7c1cfecd693",
-   "type": "mcq",
-   "prompt": "假名「そんざい」对应的词形是？",
-   "options": [
-    "音",
-    "トランプ",
-    "存在",
-    "経済"
-   ],
-   "h": "6f33f19d",
-   "oh": [
-    "75241302",
-    "acb6b574",
-    "6f33f19d",
-    "c6575b99"
-   ],
-   "knowledge_ids": [
-    "V2324"
-   ]
-  },
-  {
-   "id": "Q-105-V1-40557ad03917",
-   "qid": "Q-105-V1-40557ad03917",
-   "type": "mcq",
-   "prompt": "假名「そんちょう」对应的词形是？",
-   "options": [
-    "尊重",
-    "締める",
-    "現在",
-    "障害"
-   ],
-   "h": "1a76c430",
-   "oh": [
-    "1a76c430",
-    "d59b1f43",
-    "4551bf6b",
-    "2b12fa78"
-   ],
-   "knowledge_ids": [
-    "V2325"
-   ]
-  },
-  {
-   "id": "Q-105-R-21f5972a24da",
-   "qid": "Q-105-R-21f5972a24da",
-   "type": "mcq",
-   "prompt": "复习：「相続」是什么意思？",
-   "options": [
-    "继承",
-    "候选；候选人",
-    "管子；烟斗",
-    "打；敲"
-   ],
-   "h": "fef00bfb",
-   "oh": [
-    "fef00bfb",
-    "7da7fde0",
-    "ec3f7a23",
-    "86b7a58b"
-   ],
-   "knowledge_ids": [
-    "V2302"
-   ]
-  },
-  {
-   "id": "P-105-00-1a31048814c2",
-   "qid": "P-105-00-1a31048814c2",
-   "type": "mcq",
-   "prompt": "来，给你量一下体温吧。",
-   "options": [
-    "何としても海をひと目みたいものだ。",
-    "さあ、あなたの体温を計りましょう。",
-    "彼女は騒音にかまわず話しつづけた。",
-    "住民の半数以上はその計画に反対だ。"
-   ],
-   "h": "f1eef958",
-   "oh": [
-    "b98e7d3c",
-    "f1eef958",
-    "9e21196",
-    "7667272d"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-105-01-def73a46f0ed",
-   "qid": "P-105-01-def73a46f0ed",
-   "type": "mcq",
-   "prompt": "他或我总得有一个出席大会。",
-   "options": [
-    "これは父が私に残してくれたものの一つです。",
-    "このコートいいですね。試着してもいいですか。",
-    "たとえどんなことがあってもあきらめません。",
-    "彼か私のどちらかが大会に出席しなければならない。"
-   ],
-   "h": "4e3ac675",
-   "oh": [
-    "67d2fba1",
-    "b3553c30",
-    "282967bb",
-    "4e3ac675"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-105-02-f384e4c31886",
-   "qid": "P-105-02-f384e4c31886",
-   "type": "mcq",
-   "prompt": "大气正在受到污染。",
-   "options": [
-    "大気が汚染されつつある。",
-    "ここに鋭い痛みがあります。",
-    "まもなく雨が降りそうだ。",
-    "お話し中、ごめんなさい。"
-   ],
-   "h": "c8a57526",
-   "oh": [
-    "c8a57526",
-    "be78df4e",
-    "ff08c000",
-    "18f2084e"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-105-V2324-m-5aec3897a5b1",
-   "qid": "P-105-V2324-m-5aec3897a5b1",
-   "type": "mcq",
-   "prompt": "本课词条「存在」（例句语境：你认为神存在吗？）的释义是哪一项？",
-   "options": [
-    "存在",
-    "实际",
-    "什么都；任何",
-    "杯子"
-   ],
-   "h": "6f33f19d",
-   "oh": [
-    "6f33f19d",
-    "7df67b4c",
-    "96071f29",
-    "25ecaa4a"
-   ],
    "day": 105,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2324"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2325-m-7bba1e6c0de6",
-   "qid": "P-105-V2325-m-7bba1e6c0de6",
-   "type": "mcq",
-   "prompt": "本课词条「尊重」（例句语境：我尊重你的判断。）的释义是哪一项？",
+   "prompt": "「対する」（面对；对于）的假名读音是哪一项？",
    "options": [
-    "尊重",
-    "隐藏；遮掩",
-    "观察",
-    "委员"
-   ],
-   "h": "1a76c430",
-   "oh": [
-    "1a76c430",
-    "98546a5c",
-    "5da4ab2e",
-    "90d5ea01"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2325"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2326-m-7db13b274d4e",
-   "qid": "P-105-V2326-m-7db13b274d4e",
-   "type": "mcq",
-   "prompt": "本课词条「他」（例句语境：她把他错认成了别人。）的释义是哪一项？",
-   "options": [
-    "其他；别的",
-    "相遇；邂逅",
-    "帮忙；搭把手",
-    "吸收"
-   ],
-   "h": "bc0e52dd",
-   "oh": [
-    "bc0e52dd",
-    "eb7a7594",
-    "81eb31eb",
-    "f87945e3"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2326"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2326-r-30c3c4dfae8a",
-   "qid": "P-105-V2326-r-30c3c4dfae8a",
-   "type": "mcq",
-   "prompt": "本课词条「他」（其他；别的）的假名读音是哪一项？",
-   "options": [
-    "じき",
-    "ねんだい",
-    "じょうきょう",
-    "た"
-   ],
-   "h": "da25496e",
-   "oh": [
-    "8c0600de",
-    "2df7505",
-    "45366028",
-    "da25496e"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V2326"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2327-m-bf02dc0032a0",
-   "qid": "P-105-V2327-m-bf02dc0032a0",
-   "type": "mcq",
-   "prompt": "本课词条「田」（例句语境：她朝稻田那边走去。）的释义是哪一项？",
-   "options": [
-    "田地",
-    "时代",
-    "这些",
-    "星期五"
-   ],
-   "h": "dc1da44d",
-   "oh": [
-    "dc1da44d",
-    "a6f24d9e",
-    "1cd2051d",
-    "53485c15"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2327"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2327-r-195c1146ca07",
-   "qid": "P-105-V2327-r-195c1146ca07",
-   "type": "mcq",
-   "prompt": "本课词条「田」（田地）的假名读音是哪一项？",
-   "options": [
-    "おかし",
-    "た",
-    "すく",
-    "ひとつき"
-   ],
-   "h": "da25496e",
-   "oh": [
-    "43ee506f",
-    "da25496e",
-    "6a038cc1",
-    "52859ebc"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V2327"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2328-m-10344127912d",
-   "qid": "P-105-V2328-m-10344127912d",
-   "type": "mcq",
-   "prompt": "本课词条「対」（例句语境：比赛以6比6打成平局。）的释义是哪一项？",
-   "options": [
-    "演员",
-    "对；比",
-    "意见；看法",
-    "超过；过度"
-   ],
-   "h": "41c11cab",
-   "oh": [
-    "47f0041",
-    "41c11cab",
-    "2d3b6b7a",
-    "7d31f9d3"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2328"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2328-r-b9167e65d534",
-   "qid": "P-105-V2328-r-b9167e65d534",
-   "type": "mcq",
-   "prompt": "本课词条「対」（对；比）的假名读音是哪一项？",
-   "options": [
-    "ぜん",
-    "さげる",
-    "たい",
-    "よわい"
-   ],
-   "h": "92fdbd1e",
-   "oh": [
-    "1dfac658",
-    "2cf59337",
-    "92fdbd1e",
-    "ccf3d684"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V2328"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2329-m-ba869bf2011d",
-   "qid": "P-105-V2329-m-ba869bf2011d",
-   "type": "mcq",
-   "prompt": "本课词条「台」（例句语境：不要在这个台子上放花瓶。）的释义是哪一项？",
-   "options": [
-    "贡献",
-    "开；打开",
-    "台；架子",
-    "动词"
-   ],
-   "h": "1e6fff2a",
-   "oh": [
-    "24d3b066",
-    "f3215797",
-    "1e6fff2a",
-    "3eb346ae"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2329"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2329-r-3e627d593592",
-   "qid": "P-105-V2329-r-3e627d593592",
-   "type": "mcq",
-   "prompt": "本课词条「台」（台；架子）的假名读音是哪一项？",
-   "options": [
-    "だい",
-    "サイン",
-    "じゅうぶん",
-    "みこみ"
-   ],
-   "h": "b4e76921",
-   "oh": [
-    "b4e76921",
-    "76f0b73d",
-    "e41f5bc3",
-    "75dab288"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V2329"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2330-m-f8fca2dc42d7",
-   "qid": "P-105-V2330-m-f8fca2dc42d7",
-   "type": "mcq",
-   "prompt": "本课词条「大」（例句语境：她考进了哈佛大学。）的释义是哪一项？",
-   "options": [
-    "负责；担任",
-    "交往",
-    "大",
-    "继承"
-   ],
-   "h": "2249efc6",
-   "oh": [
-    "ceddf258",
-    "3e190a49",
-    "2249efc6",
-    "fef00bfb"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2330"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2330-r-3963d39dc227",
-   "qid": "P-105-V2330-r-3963d39dc227",
-   "type": "mcq",
-   "prompt": "本课词条「大」（大）的假名读音是哪一项？",
-   "options": [
-    "だめ",
-    "せいげん",
-    "かいけつ",
-    "だい"
-   ],
-   "h": "b4e76921",
-   "oh": [
-    "f7e63f9a",
-    "9ea558d1",
-    "3c60ac7f",
-    "b4e76921"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V2330"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2331-m-34a6a7b7bfa5",
-   "qid": "P-105-V2331-m-34a6a7b7bfa5",
-   "type": "mcq",
-   "prompt": "本课词条「題」（例句语境：请以《友情》为题写一篇作文。）的释义是哪一项？",
-   "options": [
-    "细小；琐碎",
-    "题目；标题",
-    "场地；运动场",
-    "国家"
-   ],
-   "h": "a2c483f7",
-   "oh": [
-    "ecd7f62d",
-    "a2c483f7",
-    "7b9500e2",
-    "9c22eba"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2331"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2331-r-884a2089ad13",
-   "qid": "P-105-V2331-r-884a2089ad13",
-   "type": "mcq",
-   "prompt": "本课词条「題」（题目；标题）的假名读音是哪一项？",
-   "options": [
-    "だい",
-    "みせ",
-    "てき",
-    "かんごふ"
-   ],
-   "h": "b4e76921",
-   "oh": [
-    "b4e76921",
-    "5db5fb8f",
-    "67e272bc",
-    "fa63c338"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V2331"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2332-m-b79a491abdf4",
-   "qid": "P-105-V2332-m-b79a491abdf4",
-   "type": "mcq",
-   "prompt": "本课词条「体育」（例句语境：体育是必修科目吗？）的释义是哪一项？",
-   "options": [
-    "体育",
-    "锅",
-    "腻；厌倦",
-    "传真"
-   ],
-   "h": "79108b0",
-   "oh": [
-    "79108b0",
-    "ff21c640",
-    "bc8eff91",
-    "35654220"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2332"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2332-r-a002c0e40bc6",
-   "qid": "P-105-V2332-r-a002c0e40bc6",
-   "type": "mcq",
-   "prompt": "本课词条「体育」（体育）的假名读音是哪一项？",
-   "options": [
-    "たいいく",
-    "それでも",
-    "グラム",
-    "せいかつ"
-   ],
-   "h": "c95bbe33",
-   "oh": [
-    "c95bbe33",
-    "d6fa9e09",
-    "901dbd16",
-    "6651e565"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V2332"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2333-m-252b0310e72c",
-   "qid": "P-105-V2333-m-252b0310e72c",
-   "type": "mcq",
-   "prompt": "本课词条「体温」（例句语境：来，给你量一下体温吧。）的释义是哪一项？",
-   "options": [
-    "体温",
-    "瑕疵",
-    "达到",
-    "温柔"
-   ],
-   "h": "84009551",
-   "oh": [
-    "84009551",
-    "448d0fdf",
-    "ac908343",
-    "7c5d7ef0"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2333"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2333-r-50617a2f5302",
-   "qid": "P-105-V2333-r-50617a2f5302",
-   "type": "mcq",
-   "prompt": "本课词条「体温」（体温）的假名读音是哪一项？",
-   "options": [
-    "にがて",
-    "くるま",
-    "とくに",
-    "たいおん"
-   ],
-   "h": "24b6247d",
-   "oh": [
-    "b127d8dc",
-    "d062843",
-    "291b1e99",
-    "24b6247d"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V2333"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2334-m-8490d4c150b7",
-   "qid": "P-105-V2334-m-8490d4c150b7",
-   "type": "mcq",
-   "prompt": "本课词条「大会」（例句语境：他或我总得有一个出席大会。）的释义是哪一项？",
-   "options": [
-    "入口",
-    "结果；终究",
-    "大会；锦标赛",
-    "电影"
-   ],
-   "h": "f1f4498b",
-   "oh": [
-    "2ad9a8b9",
-    "43e25635",
-    "f1f4498b",
-    "ff1da773"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2334"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2334-r-f3976d091679",
-   "qid": "P-105-V2334-r-f3976d091679",
-   "type": "mcq",
-   "prompt": "本课词条「大会」（大会；锦标赛）的假名读音是哪一项？",
-   "options": [
-    "たいかい",
-    "しめす",
-    "そうして",
-    "どうじ"
-   ],
-   "h": "93b77ed1",
-   "oh": [
-    "93b77ed1",
-    "92a7e2c4",
-    "dd88f93",
-    "f52dc0da"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V2334"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2335-m-30a5a209347c",
-   "qid": "P-105-V2335-m-30a5a209347c",
-   "type": "mcq",
-   "prompt": "本课词条「大気」（例句语境：大气正在受到污染。）的释义是哪一项？",
-   "options": [
-    "玩；游玩",
-    "大气",
-    "城镇；街道",
-    "感谢"
-   ],
-   "h": "cbba8396",
-   "oh": [
-    "be03da52",
-    "cbba8396",
-    "680b6295",
-    "f9da97e4"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2335"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2335-r-25c7f910328c",
-   "qid": "P-105-V2335-r-25c7f910328c",
-   "type": "mcq",
-   "prompt": "本课词条「大気」（大气）的假名读音是哪一项？",
-   "options": [
-    "こんにちは",
-    "たいき",
-    "へん",
-    "ぎむ"
-   ],
-   "h": "b82579a9",
-   "oh": [
-    "2c944c3c",
-    "b82579a9",
-    "96542f7c",
-    "1c411283"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V2335"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2336-m-3814ebaaf1e1",
-   "qid": "P-105-V2336-m-3814ebaaf1e1",
-   "type": "mcq",
-   "prompt": "本课词条「代金」（例句语境：书的钱可以用支票付吗？）的释义是哪一项？",
-   "options": [
-    "几乎",
-    "好吃；擅长",
-    "类型；款式",
-    "货款；费用"
-   ],
-   "h": "38774f48",
-   "oh": [
-    "f5e8e1e3",
-    "47c5a7a",
-    "2aa19017",
-    "38774f48"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2336"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2336-r-a92e11c36842",
-   "qid": "P-105-V2336-r-a92e11c36842",
-   "type": "mcq",
-   "prompt": "本课词条「代金」（货款；费用）的假名读音是哪一项？",
-   "options": [
-    "ため",
-    "だいきん",
-    "なく",
-    "あわれ"
-   ],
-   "h": "c1a59cb5",
-   "oh": [
-    "57fef33d",
-    "c1a59cb5",
-    "a9ccfcb6",
-    "83472eb6"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V2336"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2337-m-3f497807baa2",
-   "qid": "P-105-V2337-m-3f497807baa2",
-   "type": "mcq",
-   "prompt": "本课词条「退屈」（例句语境：鸡尾酒会有时也很无聊。）的释义是哪一项？",
-   "options": [
-    "股票；股份",
-    "无聊；厌倦",
-    "损害；损失",
-    "加班"
-   ],
-   "h": "5f8e0842",
-   "oh": [
-    "1001ca33",
-    "5f8e0842",
-    "9f8ef620",
-    "5ebab456"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2337"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2337-r-7527e7bd70a8",
-   "qid": "P-105-V2337-r-7527e7bd70a8",
-   "type": "mcq",
-   "prompt": "本课词条「退屈」（无聊；厌倦）的假名读音是哪一项？",
-   "options": [
-    "たいくつ",
-    "つぎつぎ",
-    "まち",
-    "つもる"
-   ],
-   "h": "a3ae9da5",
-   "oh": [
-    "a3ae9da5",
-    "cdfbdab5",
-    "5bb83700",
-    "3f3ae238"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V2337"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2338-m-23fd9e9ed4df",
-   "qid": "P-105-V2338-m-23fd9e9ed4df",
-   "type": "mcq",
-   "prompt": "本课词条「滞在」（例句语境：我现在住在叔叔家。）的释义是哪一项？",
-   "options": [
-    "达到",
-    "助手",
-    "多谢款待",
-    "停留；逗留"
-   ],
-   "h": "48d6b16b",
-   "oh": [
-    "ac908343",
-    "a216fb5d",
-    "767b8d34",
-    "48d6b16b"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2338"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2338-r-054a1d5a4d3a",
-   "qid": "P-105-V2338-r-054a1d5a4d3a",
-   "type": "mcq",
-   "prompt": "本课词条「滞在」（停留；逗留）的假名读音是哪一项？",
-   "options": [
-    "かわいそう",
-    "げんだい",
-    "これら",
-    "たいざい"
-   ],
-   "h": "adc9b414",
-   "oh": [
-    "d7ba2cd6",
-    "695faa76",
-    "e2f1b9d9",
-    "adc9b414"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V2338"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2339-m-0b2e67132c9d",
-   "qid": "P-105-V2339-m-0b2e67132c9d",
-   "type": "mcq",
-   "prompt": "本课词条「大使」（例句语境：大使对那项任务负有责任。）的释义是哪一项？",
-   "options": [
-    "终于；到底",
-    "给…看；展示",
-    "失望",
-    "大使"
-   ],
-   "h": "b2e8033b",
-   "oh": [
-    "cbd1641f",
-    "271f4517",
-    "58267c05",
-    "b2e8033b"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2339"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2339-r-fe01b0913c08",
-   "qid": "P-105-V2339-r-fe01b0913c08",
-   "type": "mcq",
-   "prompt": "本课词条「大使」（大使）的假名读音是哪一项？",
-   "options": [
-    "どの",
-    "おんな",
-    "たいし",
-    "いっぱん"
-   ],
-   "h": "ae2569eb",
-   "oh": [
-    "68c5da9e",
-    "171525a0",
-    "ae2569eb",
-    "1b937620"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V2339"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2340-m-a03b9d10e370",
-   "qid": "P-105-V2340-m-a03b9d10e370",
-   "type": "mcq",
-   "prompt": "本课词条「大した」（例句语境：他成不了什么大人物啊。）的释义是哪一项？",
-   "options": [
-    "责备",
-    "办公室",
-    "了不起；严重",
-    "似乎；那样"
-   ],
-   "h": "92f070e4",
-   "oh": [
-    "9d9d1a0f",
-    "7d2d5709",
-    "92f070e4",
-    "1691ed8e"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2340"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2340-r-780ace04dbfb",
-   "qid": "P-105-V2340-r-780ace04dbfb",
-   "type": "mcq",
-   "prompt": "本课词条「大した」（了不起；严重）的假名读音是哪一项？",
-   "options": [
-    "ちかく",
-    "あらわれる",
-    "たいした",
-    "そんがい"
-   ],
-   "h": "d8cc365c",
-   "oh": [
-    "c9488dde",
-    "365c9424",
-    "d8cc365c",
-    "82b0aac9"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V2340"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2341-m-c32fd92ddb45",
-   "qid": "P-105-V2341-m-c32fd92ddb45",
-   "type": "mcq",
-   "prompt": "本课词条「大臣」（例句语境：我和大臣本人谈过了。）的释义是哪一项？",
-   "options": [
-    "柔道",
-    "讲述；谈论",
-    "大臣；部长",
-    "城市；都市"
-   ],
-   "h": "a4ebe9a9",
-   "oh": [
-    "a800ab0",
-    "4f5e4c02",
-    "a4ebe9a9",
-    "e3b0cc9"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2341"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2341-r-f3f200f3890f",
-   "qid": "P-105-V2341-r-f3f200f3890f",
-   "type": "mcq",
-   "prompt": "本课词条「大臣」（大臣；部长）的假名读音是哪一项？",
-   "options": [
-    "ひろう",
-    "か",
-    "よこ",
-    "だいじん"
-   ],
-   "h": "89933838",
-   "oh": [
-    "74ce20a",
-    "ce25368a",
-    "950d3d6c",
-    "89933838"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V2341"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2342-m-008aeaba99e7",
-   "qid": "P-105-V2342-m-008aeaba99e7",
-   "type": "mcq",
-   "prompt": "本课词条「対する」（例句语境：我们正为应对核事故竭尽全力。）的释义是哪一项？",
-   "options": [
-    "提议；建议",
-    "遇见；邂逅",
-    "面对；对于",
-    "烦恼；苦恼"
-   ],
-   "h": "284cd866",
-   "oh": [
-    "645a0678",
-    "7df0ea57",
-    "284cd866",
-    "e78c2f06"
-   ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V2342"
-   ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-V2342-r-d389f8f36971",
-   "qid": "P-105-V2342-r-d389f8f36971",
-   "type": "mcq",
-   "prompt": "本课词条「対する」（面对；对于）的假名读音是哪一项？",
-   "options": [
+    "たいはん",
+    "たいど",
     "たいする",
-    "かえる",
-    "ふつう",
-    "うけとる"
+    "たいし"
    ],
    "h": "4cc6dcca",
    "oh": [
+    "8d2ef850",
+    "dc25b255",
     "4cc6dcca",
-    "92d3de17",
-    "7c96252e",
-    "29747221"
+    "ae2569eb"
    ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "reading",
    "knowledge_ids": [
     "V2342"
    ],
-   "source_day": 105,
-   "optional": true
+   "capability": "reading",
+   "group": "vocab"
   },
   {
-   "id": "P-105-V2343-m-e1a1b153ad1e",
-   "qid": "P-105-V2343-m-e1a1b153ad1e",
+   "id": "D13-105-V2343-meaning",
+   "qid": "D13-105-V2343-meaning",
    "type": "mcq",
-   "prompt": "本课词条「大戦」（例句语境：那个家族的兴旺是从大战时期开始的。）的释义是哪一项？",
+   "day": 105,
+   "prompt": "「大戦」的中文释义？",
    "options": [
-    "恩情",
-    "邀请；引诱",
-    "后年",
+    "田地",
+    "大使",
+    "大会；锦标赛",
     "大战"
    ],
    "h": "d7ca547a",
    "oh": [
-    "85ec7093",
-    "494a36ef",
-    "b704847f",
+    "dc1da44d",
+    "b2e8033b",
+    "f1f4498b",
     "d7ca547a"
    ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "meaning",
    "knowledge_ids": [
     "V2343"
    ],
-   "source_day": 105,
-   "optional": true
+   "capability": "meaning",
+   "group": "vocab"
   },
   {
-   "id": "P-105-V2343-r-9ca2d78bc928",
-   "qid": "P-105-V2343-r-9ca2d78bc928",
+   "id": "D13-105-G0156-form",
+   "qid": "D13-105-G0156-form",
    "type": "mcq",
-   "prompt": "本课词条「大戦」（大战）的假名读音是哪一项？",
+   "day": 105,
+   "prompt": "选出符合下列意思的日语句子。\n因为电车晚点，面试迟到了。",
+   "options": [
+    "電車が遅れたせいで、面接に遅刻してしまった。",
+    "すみません、遅れました。電車が止まっていたんです。",
+    "渋滞のために、会議に遅れました。",
+    "遅くなってすみません。電車が遅れたんです。"
+   ],
+   "h": "916f235f",
+   "oh": [
+    "916f235f",
+    "a1f4946d",
+    "2b59fbe",
+    "2a6baa58"
+   ],
+   "knowledge_ids": [
+    "G0156"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-105-V2326-meaning",
+   "qid": "D13-105-V2326-meaning",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「他」的中文释义？",
+   "options": [
+    "大战",
+    "大",
+    "货款；费用",
+    "其他；别的"
+   ],
+   "h": "bc0e52dd",
+   "oh": [
+    "d7ca547a",
+    "2249efc6",
+    "38774f48",
+    "bc0e52dd"
+   ],
+   "knowledge_ids": [
+    "V2326"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2338-meaning",
+   "qid": "D13-105-V2338-meaning",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「滞在」的中文释义？",
+   "options": [
+    "停留；逗留",
+    "货款；费用",
+    "代表",
+    "题目；标题"
+   ],
+   "h": "48d6b16b",
+   "oh": [
+    "48d6b16b",
+    "38774f48",
+    "e494a8ce",
+    "a2c483f7"
+   ],
+   "knowledge_ids": [
+    "V2338"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2340-reading",
+   "qid": "D13-105-V2340-reading",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「大した」（了不起；严重）的假名读音是哪一项？",
    "options": [
     "たいせん",
-    "すじ",
-    "つもる",
-    "ばしょ"
+    "たいかい",
+    "たいした",
+    "たいする"
+   ],
+   "h": "d8cc365c",
+   "oh": [
+    "e4c1bbe4",
+    "93b77ed1",
+    "d8cc365c",
+    "4cc6dcca"
+   ],
+   "knowledge_ids": [
+    "V2340"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2333-meaning",
+   "qid": "D13-105-V2333-meaning",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「たいおん」的中文释义？",
+   "options": [
+    "存在",
+    "大会；锦标赛",
+    "体温",
+    "大半；大部分"
+   ],
+   "h": "84009551",
+   "oh": [
+    "6f33f19d",
+    "f1f4498b",
+    "84009551",
+    "7c07408c"
+   ],
+   "knowledge_ids": [
+    "V2333"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2334-meaning",
+   "qid": "D13-105-V2334-meaning",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「大会」的中文释义？",
+   "options": [
+    "对；比",
+    "大会；锦标赛",
+    "题目；标题",
+    "台；架子"
+   ],
+   "h": "f1f4498b",
+   "oh": [
+    "41c11cab",
+    "f1f4498b",
+    "a2c483f7",
+    "1e6fff2a"
+   ],
+   "knowledge_ids": [
+    "V2334"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2324-recall",
+   "qid": "D13-105-V2324-recall",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「存在」对应哪个日语词？",
+   "options": [
+    "たいし",
+    "たいおん",
+    "そんざい",
+    "たいざい"
+   ],
+   "h": "7f615c63",
+   "oh": [
+    "ae2569eb",
+    "24b6247d",
+    "7f615c63",
+    "adc9b414"
+   ],
+   "knowledge_ids": [
+    "V2324"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2333-recall",
+   "qid": "D13-105-V2333-recall",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「体温」对应哪个日语词？",
+   "options": [
+    "たいかい",
+    "そんざい",
+    "たいはん",
+    "たいおん"
+   ],
+   "h": "24b6247d",
+   "oh": [
+    "93b77ed1",
+    "7f615c63",
+    "8d2ef850",
+    "24b6247d"
+   ],
+   "knowledge_ids": [
+    "V2333"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2337-reading",
+   "qid": "D13-105-V2337-reading",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「退屈」（无聊；厌倦）的假名读音是哪一项？",
+   "options": [
+    "たいくつ",
+    "たいはん",
+    "たいかい",
+    "たいする"
+   ],
+   "h": "a3ae9da5",
+   "oh": [
+    "a3ae9da5",
+    "8d2ef850",
+    "93b77ed1",
+    "4cc6dcca"
+   ],
+   "knowledge_ids": [
+    "V2337"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2330-recall",
+   "qid": "D13-105-V2330-recall",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「大」对应哪个日语词？",
+   "options": [
+    "たいかい",
+    "そんちょう",
+    "だい",
+    "たい"
+   ],
+   "h": "b4e76921",
+   "oh": [
+    "93b77ed1",
+    "2e3a42d9",
+    "b4e76921",
+    "92fdbd1e"
+   ],
+   "knowledge_ids": [
+    "V2330"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2336-meaning",
+   "qid": "D13-105-V2336-meaning",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「代金」的中文释义？",
+   "options": [
+    "货款；费用",
+    "尊重",
+    "大半；大部分",
+    "态度"
+   ],
+   "h": "38774f48",
+   "oh": [
+    "38774f48",
+    "1a76c430",
+    "7c07408c",
+    "76d3811e"
+   ],
+   "knowledge_ids": [
+    "V2336"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2327-meaning",
+   "qid": "D13-105-V2327-meaning",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「田」的中文释义？",
+   "options": [
+    "体育",
+    "田地",
+    "体温",
+    "大会；锦标赛"
+   ],
+   "h": "dc1da44d",
+   "oh": [
+    "79108b0",
+    "dc1da44d",
+    "84009551",
+    "f1f4498b"
+   ],
+   "knowledge_ids": [
+    "V2327"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2341-meaning",
+   "qid": "D13-105-V2341-meaning",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「大臣」的中文释义？",
+   "options": [
+    "大战",
+    "大臣；部长",
+    "存在",
+    "体育"
+   ],
+   "h": "a4ebe9a9",
+   "oh": [
+    "d7ca547a",
+    "a4ebe9a9",
+    "6f33f19d",
+    "79108b0"
+   ],
+   "knowledge_ids": [
+    "V2341"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2330-meaning",
+   "qid": "D13-105-V2330-meaning",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「だい」的中文释义？",
+   "options": [
+    "大",
+    "尊重",
+    "大会；锦标赛",
+    "对；比"
+   ],
+   "h": "2249efc6",
+   "oh": [
+    "2249efc6",
+    "1a76c430",
+    "f1f4498b",
+    "41c11cab"
+   ],
+   "knowledge_ids": [
+    "V2330"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2331-reading",
+   "qid": "D13-105-V2331-reading",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「題」（题目；标题）的假名读音是哪一项？",
+   "options": [
+    "だんし",
+    "だん",
+    "だい",
+    "だいり"
+   ],
+   "h": "b4e76921",
+   "oh": [
+    "fc3006e9",
+    "e5e62344",
+    "b4e76921",
+    "73322831"
+   ],
+   "knowledge_ids": [
+    "V2331"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2340-meaning",
+   "qid": "D13-105-V2340-meaning",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「大した」的中文释义？",
+   "options": [
+    "存在",
+    "大战",
+    "大会；锦标赛",
+    "了不起；严重"
+   ],
+   "h": "92f070e4",
+   "oh": [
+    "6f33f19d",
+    "d7ca547a",
+    "f1f4498b",
+    "92f070e4"
+   ],
+   "knowledge_ids": [
+    "V2340"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2325-recall",
+   "qid": "D13-105-V2325-recall",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「尊重」对应哪个日语词？",
+   "options": [
+    "そんちょう",
+    "だいひょう",
+    "だいとうりょう",
+    "たいかい"
+   ],
+   "h": "2e3a42d9",
+   "oh": [
+    "2e3a42d9",
+    "c45cc244",
+    "153a1592",
+    "93b77ed1"
+   ],
+   "knowledge_ids": [
+    "V2325"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2338-reading",
+   "qid": "D13-105-V2338-reading",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「滞在」（停留；逗留）的假名读音是哪一项？",
+   "options": [
+    "たいおん",
+    "たいど",
+    "たいざい",
+    "たいき"
+   ],
+   "h": "adc9b414",
+   "oh": [
+    "24b6247d",
+    "dc25b255",
+    "adc9b414",
+    "b82579a9"
+   ],
+   "knowledge_ids": [
+    "V2338"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2329-recall",
+   "qid": "D13-105-V2329-recall",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「台；架子」对应哪个日语词？",
+   "options": [
+    "たいいく",
+    "たい",
+    "だい",
+    "そんざい"
+   ],
+   "h": "b4e76921",
+   "oh": [
+    "c95bbe33",
+    "92fdbd1e",
+    "b4e76921",
+    "7f615c63"
+   ],
+   "knowledge_ids": [
+    "V2329"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2339-recall",
+   "qid": "D13-105-V2339-recall",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「大使」对应哪个日语词？",
+   "options": [
+    "たいし",
+    "た",
+    "たいおん",
+    "そんざい"
+   ],
+   "h": "ae2569eb",
+   "oh": [
+    "ae2569eb",
+    "da25496e",
+    "24b6247d",
+    "7f615c63"
+   ],
+   "knowledge_ids": [
+    "V2339"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2332-meaning",
+   "qid": "D13-105-V2332-meaning",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「たいいく」的中文释义？",
+   "options": [
+    "大战",
+    "田地",
+    "代表",
+    "体育"
+   ],
+   "h": "79108b0",
+   "oh": [
+    "d7ca547a",
+    "dc1da44d",
+    "e494a8ce",
+    "79108b0"
+   ],
+   "knowledge_ids": [
+    "V2332"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2324-meaning",
+   "qid": "D13-105-V2324-meaning",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「そんざい」的中文释义？",
+   "options": [
+    "停留；逗留",
+    "存在",
+    "体温",
+    "大使"
+   ],
+   "h": "6f33f19d",
+   "oh": [
+    "48d6b16b",
+    "6f33f19d",
+    "84009551",
+    "b2e8033b"
+   ],
+   "knowledge_ids": [
+    "V2324"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2335-reading",
+   "qid": "D13-105-V2335-reading",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「大気」（大气）的假名读音是哪一项？",
+   "options": [
+    "たいかい",
+    "たいはん",
+    "たいき",
+    "たいど"
+   ],
+   "h": "b82579a9",
+   "oh": [
+    "93b77ed1",
+    "8d2ef850",
+    "b82579a9",
+    "dc25b255"
+   ],
+   "knowledge_ids": [
+    "V2335"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2343-reading",
+   "qid": "D13-105-V2343-reading",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「大戦」（大战）的假名读音是哪一项？",
+   "options": [
+    "たいかい",
+    "たいいく",
+    "たいし",
+    "たいせん"
    ],
    "h": "e4c1bbe4",
    "oh": [
-    "e4c1bbe4",
-    "5b037524",
-    "3f3ae238",
-    "ad16e7fd"
+    "93b77ed1",
+    "c95bbe33",
+    "ae2569eb",
+    "e4c1bbe4"
    ],
-   "day": 105,
-   "group": "vocab",
-   "capability": "reading",
    "knowledge_ids": [
     "V2343"
    ],
-   "source_day": 105,
-   "optional": true
+   "capability": "reading",
+   "group": "vocab"
   },
   {
-   "id": "P-105-G0156-m-8987582d5405",
-   "qid": "P-105-G0156-m-8987582d5405",
+   "id": "D13-105-G0156-context",
+   "qid": "D13-105-G0156-context",
    "type": "mcq",
-   "prompt": "本课句型「〜せいで」在以下语境中的释义是哪一项？ 例句：電車が遅れたせいで、面接に遅刻してしまった。（因为电车晚点，面试迟到了。）",
-   "options": [
-    "不许…；别…",
-    "都怪…；因为…",
-    "基于…／以…为依据／按照…",
-    "连…都…"
-   ],
-   "h": "ae961413",
-   "oh": [
-    "4a2e19fa",
-    "ae961413",
-    "7958b323",
-    "72e51bce"
-   ],
    "day": 105,
-   "group": "grammar",
-   "capability": "meaning",
+   "prompt": "请选择「私が道を間違えたせいで、みんなを待たせてしまった。」的中文意思。",
+   "options": [
+    "所谓“割り勘”，就是大家平摊饭钱。",
+    "是我带错路，让大家等了很久。",
+    "刚来日本不久。",
+    "大家都赞成，也就是说可以按这个方案推进。"
+   ],
+   "h": "fc6391eb",
+   "oh": [
+    "e16cbeb",
+    "fc6391eb",
+    "96a2b413",
+    "1e03de4a"
+   ],
    "knowledge_ids": [
     "G0156"
    ],
-   "source_day": 105,
-   "optional": true
-  },
-  {
-   "id": "P-105-G0156-u-5a6f081a0e60",
-   "qid": "P-105-G0156-u-5a6f081a0e60",
-   "type": "mcq",
-   "prompt": "课程中「〜せいで」的接续说明是哪一项？ 例句：電車が遅れたせいで、面接に遅刻してしまった。（因为电车晚点，面试迟到了。）",
-   "options": [
-    "五段动词未然形+れる；一段动词未然形+られる；する→される；来る→来られる",
-    "名詞 + が + ほしい（です）",
-    "动词普通形/い形容词/ナ形容词な/名词の + せいで",
-    "普通形 + 一方で；ナ形容词 + な + 一方で；名词 + である + 一方で"
-   ],
-   "h": "6b38d876",
-   "oh": [
-    "aedbab96",
-    "c1f91b77",
-    "6b38d876",
-    "8356ab44"
-   ],
-   "day": 105,
-   "group": "grammar",
    "capability": "usage",
-   "knowledge_ids": [
-    "G0156"
-   ],
-   "source_day": 105,
-   "optional": true
+   "group": "grammar"
   },
   {
-   "id": "P-105-G0157-m-99e46aeb79c2",
-   "qid": "P-105-G0157-m-99e46aeb79c2",
+   "id": "D13-105-G0157-form",
+   "qid": "D13-105-G0157-form",
    "type": "mcq",
-   "prompt": "本课句型「〜たとたん / 〜たとたんに」在以下语境中的释义是哪一项？ 例句：立ち上がったとたんに、めまいがした。（刚一起身就头晕。）",
-   "options": [
-    "往…；朝…",
-    "（尊长）为我做…；蒙…为我做",
-    "被…／（迷惑）遭遇…",
-    "刚一…就…"
-   ],
-   "h": "a4cc94e4",
-   "oh": [
-    "4b603e03",
-    "d9803281",
-    "33a03308",
-    "a4cc94e4"
-   ],
    "day": 105,
-   "group": "grammar",
-   "capability": "meaning",
+   "prompt": "选出符合下列意思的日语句子。\n刚一起身就头晕。",
+   "options": [
+    "駅までいっしょに行きましょう。",
+    "社長は、社員とともに新しい工場の完成を喜んだ。",
+    "週末、一緒に映画を見ようよ。",
+    "立ち上がったとたんに、めまいがした。"
+   ],
+   "h": "c903a066",
+   "oh": [
+    "af4ae47a",
+    "c1a01c59",
+    "9d66ce71",
+    "c903a066"
+   ],
    "knowledge_ids": [
     "G0157"
    ],
-   "source_day": 105,
-   "optional": true
+   "capability": "usage",
+   "group": "grammar"
   },
   {
-   "id": "X-105-V2344-c",
-   "qid": "X-105-V2344-c",
+   "id": "D13-105-V2332-recall",
+   "qid": "D13-105-V2332-recall",
    "type": "mcq",
    "day": 105,
-   "prompt": "「態度」的意思是？",
+   "prompt": "「体育」对应哪个日语词？",
    "options": [
-    "卡车",
-    "谷物",
-    "态度",
-    "继续；续篇"
+    "たいいく",
+    "た",
+    "たいせん",
+    "だいひょう"
    ],
-   "h": "76d3811e",
+   "h": "c95bbe33",
    "oh": [
-    "c34e6d7e",
-    "e0a314d",
-    "76d3811e",
-    "8c71b3ea"
+    "c95bbe33",
+    "da25496e",
+    "e4c1bbe4",
+    "c45cc244"
    ],
    "knowledge_ids": [
-    "V2344"
+    "V2332"
    ],
    "capability": "meaning",
-   "group": "vocab",
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "X-105-V2345-c",
-   "qid": "X-105-V2345-c",
+   "id": "D13-105-V2325-meaning",
+   "qid": "D13-105-V2325-meaning",
    "type": "mcq",
    "day": 105,
-   "prompt": "「大統領」的假名读音是？",
+   "prompt": "「そんちょう」的中文释义？",
    "options": [
-    "だいとうりょう",
-    "パン",
-    "ワープロ",
-    "こんにち"
+    "尊重",
+    "代表",
+    "大会；锦标赛",
+    "总统"
    ],
-   "h": "153a1592",
+   "h": "1a76c430",
    "oh": [
-    "153a1592",
-    "41b131d",
-    "7c43f46a",
-    "429a283b"
+    "1a76c430",
+    "e494a8ce",
+    "f1f4498b",
+    "a0a17fdf"
    ],
    "knowledge_ids": [
-    "V2345"
+    "V2325"
    ],
-   "capability": "reading",
-   "group": "vocab",
-   "optional": true
+   "capability": "meaning",
+   "group": "vocab"
   },
   {
-   "id": "X-105-V2346-c",
-   "qid": "X-105-V2346-c",
+   "id": "D13-105-V2336-reading",
+   "qid": "D13-105-V2336-reading",
    "type": "mcq",
    "day": 105,
-   "prompt": "「大半」的意思是？",
+   "prompt": "「代金」（货款；费用）的假名读音是哪一项？",
    "options": [
+    "だいじん",
+    "だいひょう",
+    "だいきん",
+    "だいり"
+   ],
+   "h": "c1a59cb5",
+   "oh": [
+    "89933838",
+    "c45cc244",
+    "c1a59cb5",
+    "73322831"
+   ],
+   "knowledge_ids": [
+    "V2336"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2341-recall",
+   "qid": "D13-105-V2341-recall",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「大臣；部长」对应哪个日语词？",
+   "options": [
+    "だいじん",
+    "たいいく",
+    "そんざい",
+    "たいせん"
+   ],
+   "h": "89933838",
+   "oh": [
+    "89933838",
+    "c95bbe33",
+    "7f615c63",
+    "e4c1bbe4"
+   ],
+   "knowledge_ids": [
+    "V2341"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-G0157-meaning",
+   "qid": "D13-105-G0157-meaning",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "请选择「〜たとたん / 〜たとたんに」所用句型的主要含义。",
+   "options": [
+    "正当…的时候",
+    "…了之后发现…",
+    "刚一…就…",
+    "只有…之后才…"
+   ],
+   "h": "a4cc94e4",
+   "oh": [
+    "69f0cec4",
+    "5cc86091",
+    "a4cc94e4",
+    "2f0d9e84"
+   ],
+   "knowledge_ids": [
+    "G0157"
+   ],
+   "capability": "meaning",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-105-V2329-meaning",
+   "qid": "D13-105-V2329-meaning",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「台」的中文释义？",
+   "options": [
+    "题目；标题",
+    "存在",
+    "台；架子",
+    "对；比"
+   ],
+   "h": "1e6fff2a",
+   "oh": [
+    "a2c483f7",
+    "6f33f19d",
+    "1e6fff2a",
+    "41c11cab"
+   ],
+   "knowledge_ids": [
+    "V2329"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2331-meaning",
+   "qid": "D13-105-V2331-meaning",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「題」的中文释义？",
+   "options": [
+    "题目；标题",
     "大半；大部分",
-    "报社",
-    "周；星期",
-    "四"
+    "大臣；部长",
+    "尊重"
+   ],
+   "h": "a2c483f7",
+   "oh": [
+    "a2c483f7",
+    "7c07408c",
+    "a4ebe9a9",
+    "1a76c430"
+   ],
+   "knowledge_ids": [
+    "V2331"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2335-meaning",
+   "qid": "D13-105-V2335-meaning",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「大気」的中文释义？",
+   "options": [
+    "大气",
+    "大半；大部分",
+    "大会；锦标赛",
+    "态度"
+   ],
+   "h": "cbba8396",
+   "oh": [
+    "cbba8396",
+    "7c07408c",
+    "f1f4498b",
+    "76d3811e"
+   ],
+   "knowledge_ids": [
+    "V2335"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2337-meaning",
+   "qid": "D13-105-V2337-meaning",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「退屈」的中文释义？",
+   "options": [
+    "货款；费用",
+    "总统",
+    "大半；大部分",
+    "无聊；厌倦"
+   ],
+   "h": "5f8e0842",
+   "oh": [
+    "38774f48",
+    "a0a17fdf",
+    "7c07408c",
+    "5f8e0842"
+   ],
+   "knowledge_ids": [
+    "V2337"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-G0157-context",
+   "qid": "D13-105-G0157-context",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "请选择「その歌手がステージに現れたとたん、会場から大きな拍手が起こった。」的中文意思。",
+   "options": [
+    "那位歌手刚一登台，会场就响起热烈掌声。",
+    "生病之后，才懂得健康的可贵。",
+    "实际用过之后，才发现这台机器多方便。",
+    "一个人生活之后，才明白父母的辛苦。"
+   ],
+   "h": "5a96335f",
+   "oh": [
+    "5a96335f",
+    "148d6996",
+    "d96427a5",
+    "a38c66e6"
+   ],
+   "knowledge_ids": [
+    "G0157"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-105-V2326-recall",
+   "qid": "D13-105-V2326-recall",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「其他；别的」对应哪个日语词？",
+   "options": [
+    "だいきん",
+    "だい",
+    "た",
+    "たいせん"
+   ],
+   "h": "da25496e",
+   "oh": [
+    "c1a59cb5",
+    "b4e76921",
+    "da25496e",
+    "e4c1bbe4"
+   ],
+   "knowledge_ids": [
+    "V2326"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2327-recall",
+   "qid": "D13-105-V2327-recall",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「田地」对应哪个日语词？",
+   "options": [
+    "たいおん",
+    "たいかい",
+    "たいいく",
+    "た"
+   ],
+   "h": "da25496e",
+   "oh": [
+    "24b6247d",
+    "93b77ed1",
+    "c95bbe33",
+    "da25496e"
+   ],
+   "knowledge_ids": [
+    "V2327"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-G0156-meaning",
+   "qid": "D13-105-G0156-meaning",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "请选择「〜せいで」所用句型的主要含义。",
+   "options": [
+    "多亏…；托…的福",
+    "难怪…；也就是说…",
+    "明明…却（责备）／虽然…但是／虽说…然而",
+    "都怪…；因为…"
+   ],
+   "h": "ae961413",
+   "oh": [
+    "90862f16",
+    "98b9e285",
+    "4e87a2b9",
+    "ae961413"
+   ],
+   "knowledge_ids": [
+    "G0156"
+   ],
+   "capability": "meaning",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-105-V2328-meaning",
+   "qid": "D13-105-V2328-meaning",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「対」的中文释义？",
+   "options": [
+    "停留；逗留",
+    "代表",
+    "体温",
+    "对；比"
+   ],
+   "h": "41c11cab",
+   "oh": [
+    "48d6b16b",
+    "e494a8ce",
+    "84009551",
+    "41c11cab"
+   ],
+   "knowledge_ids": [
+    "V2328"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2339-meaning",
+   "qid": "D13-105-V2339-meaning",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「たいし」的中文释义？",
+   "options": [
+    "体温",
+    "大使",
+    "田地",
+    "存在"
+   ],
+   "h": "b2e8033b",
+   "oh": [
+    "84009551",
+    "b2e8033b",
+    "dc1da44d",
+    "6f33f19d"
+   ],
+   "knowledge_ids": [
+    "V2339"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2328-reading",
+   "qid": "D13-105-V2328-reading",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「対」（对；比）的假名读音是哪一项？",
+   "options": [
+    "たいき",
+    "たいし",
+    "たいど",
+    "たい"
+   ],
+   "h": "92fdbd1e",
+   "oh": [
+    "b82579a9",
+    "ae2569eb",
+    "dc25b255",
+    "92fdbd1e"
+   ],
+   "knowledge_ids": [
+    "V2328"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2334-recall",
+   "qid": "D13-105-V2334-recall",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「大会；锦标赛」对应哪个日语词？",
+   "options": [
+    "たい",
+    "たいかい",
+    "だいひょう",
+    "だい"
+   ],
+   "h": "93b77ed1",
+   "oh": [
+    "92fdbd1e",
+    "93b77ed1",
+    "c45cc244",
+    "b4e76921"
+   ],
+   "knowledge_ids": [
+    "V2334"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2342-meaning",
+   "qid": "D13-105-V2342-meaning",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「対する」的中文释义？",
+   "options": [
+    "总统",
+    "态度",
+    "面对；对于",
+    "大"
+   ],
+   "h": "284cd866",
+   "oh": [
+    "a0a17fdf",
+    "76d3811e",
+    "284cd866",
+    "2249efc6"
+   ],
+   "knowledge_ids": [
+    "V2342"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2346-meaning",
+   "qid": "D13-105-V2346-meaning",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「大半」的中文释义？",
+   "options": [
+    "题目；标题",
+    "大半；大部分",
+    "存在",
+    "对；比"
    ],
    "h": "7c07408c",
    "oh": [
+    "a2c483f7",
     "7c07408c",
-    "416f63a",
-    "c8b38aba",
-    "5e53c03a"
+    "6f33f19d",
+    "41c11cab"
    ],
    "knowledge_ids": [
     "V2346"
    ],
    "capability": "meaning",
-   "group": "vocab",
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "X-105-V2347-c",
-   "qid": "X-105-V2347-c",
+   "id": "D13-105-V2347-meaning",
+   "qid": "D13-105-V2347-meaning",
    "type": "mcq",
    "day": 105,
-   "prompt": "「代表」的假名读音是？",
+   "prompt": "「だいひょう」的中文释义？",
    "options": [
-    "どようび",
-    "たちば",
-    "こうせい",
-    "だいひょう"
+    "态度",
+    "代表",
+    "大臣；部长",
+    "大气"
    ],
-   "h": "c45cc244",
+   "h": "e494a8ce",
    "oh": [
-    "ee502bef",
-    "d1477b17",
-    "60aa103",
-    "c45cc244"
+    "76d3811e",
+    "e494a8ce",
+    "a4ebe9a9",
+    "cbba8396"
    ],
    "knowledge_ids": [
     "V2347"
    ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2345-reading",
+   "qid": "D13-105-V2345-reading",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「大統領」（总统）的假名读音是哪一项？",
+   "options": [
+    "だいがくせい",
+    "だいきん",
+    "だいじょうぶ",
+    "だいとうりょう"
+   ],
+   "h": "153a1592",
+   "oh": [
+    "29c66117",
+    "c1a59cb5",
+    "26c90c80",
+    "153a1592"
+   ],
+   "knowledge_ids": [
+    "V2345"
+   ],
    "capability": "reading",
-   "group": "vocab",
-   "optional": true
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2346-recall",
+   "qid": "D13-105-V2346-recall",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「大半；大部分」对应哪个日语词？",
+   "options": [
+    "たいはん",
+    "たい",
+    "だい",
+    "そんざい"
+   ],
+   "h": "8d2ef850",
+   "oh": [
+    "8d2ef850",
+    "92fdbd1e",
+    "b4e76921",
+    "7f615c63"
+   ],
+   "knowledge_ids": [
+    "V2346"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2344-meaning",
+   "qid": "D13-105-V2344-meaning",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「態度」的中文释义？",
+   "options": [
+    "题目；标题",
+    "总统",
+    "尊重",
+    "态度"
+   ],
+   "h": "76d3811e",
+   "oh": [
+    "a2c483f7",
+    "a0a17fdf",
+    "1a76c430",
+    "76d3811e"
+   ],
+   "knowledge_ids": [
+    "V2344"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2347-recall",
+   "qid": "D13-105-V2347-recall",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「代表」对应哪个日语词？",
+   "options": [
+    "たいど",
+    "だいじん",
+    "だいひょう",
+    "たいき"
+   ],
+   "h": "c45cc244",
+   "oh": [
+    "dc25b255",
+    "89933838",
+    "c45cc244",
+    "b82579a9"
+   ],
+   "knowledge_ids": [
+    "V2347"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2344-reading",
+   "qid": "D13-105-V2344-reading",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「態度」（态度）的假名读音是哪一项？",
+   "options": [
+    "たいき",
+    "たいかい",
+    "たいど",
+    "たい"
+   ],
+   "h": "dc25b255",
+   "oh": [
+    "b82579a9",
+    "93b77ed1",
+    "dc25b255",
+    "92fdbd1e"
+   ],
+   "knowledge_ids": [
+    "V2344"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-105-V2345-meaning",
+   "qid": "D13-105-V2345-meaning",
+   "type": "mcq",
+   "day": 105,
+   "prompt": "「大統領」的中文释义？",
+   "options": [
+    "尊重",
+    "大战",
+    "总统",
+    "对；比"
+   ],
+   "h": "a0a17fdf",
+   "oh": [
+    "1a76c430",
+    "d7ca547a",
+    "a0a17fdf",
+    "41c11cab"
+   ],
+   "knowledge_ids": [
+    "V2345"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
   }
  ],
  "listening_material": null

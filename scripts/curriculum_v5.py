@@ -159,16 +159,16 @@ def build():
         scene_key = "grammar-" + "-".join(g["id"] for g in ng)
         scene_zh = patterns or "词句复习"
         can_do_scene = meanings or "用当天新词组织句子"
-        can_do = "用「%s」造两句自己的话，表达：%s" % (scene_zh, can_do_scene)
-        budgets = [("复习", 10), ("新词", 14 if not listening else 8),
-                   ("语法", 6), ("听力", 8 if listening else 0),
-                   ("句子输出", 6 if not listening else 5), ("练习", 6 if not listening else 5),
+        can_do = "用「%s」各造一句自己的话，表达：%s" % (scene_zh, can_do_scene)
+        budgets = [("复习", 5 if listening else 6), ("新词", 8 if listening else 11),
+                   ("语法", 5 if listening else 6), ("听力", 7 if listening else 0),
+                   ("句子输出", 4), ("练习", 13 if listening else 15),
                    ("会话", 18)]
         blocks = [{"type": kind, "min": minutes, "desc": {
             "复习": "到期项优先；未完成顺延，不追赶",
             "新词": "%d 个必学词；%d 个选学拓展" % (len(essential), len(extension)),
-            "语法": patterns, "听力": "原创 TTS + 3 道理解题；时长为估计，非真人音频",
-            "句子输出": "3道选句必做，7道拓展；答后核对", "练习": "6 题即时自评",
+            "语法": patterns, "听力": "先听并复述主旨，再找两个细节，最后核对脚本（原创合成语音）",
+            "句子输出": "每条新语法独立说一句，和例句对照", "练习": "优先做当天必学词与语法，答完重练错题",
             "会话": "抽词、造句、批改"}[kind]} for kind, minutes in budgets if minutes]
         days.append({
             "day": d, "phase": ph, "phase_name": next(name for code, _, _, name in PHASES if code == ph),

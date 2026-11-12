@@ -2,12 +2,12 @@
  "day": 40,
  "phase": "P2",
  "theme": "あげる / くれる / もらう、〜てあげる、〜てくれる",
- "can_do": "用「あげる / くれる / もらう、〜てあげる、〜てくれる」造两句自己的话，表达：给…；别人给我…；从…得到；为别人做…（施惠）；（别人）为我做…",
+ "can_do": "用「あげる / くれる / もらう、〜てあげる、〜てくれる」各造一句自己的话，表达：给…；别人给我…；从…得到；为别人做…（施惠）；（别人）为我做…",
  "minutes": 60,
  "blocks": [
   {
    "type": "复习",
-   "min": 10,
+   "min": 5,
    "desc": "到期项优先；未完成顺延，不追赶"
   },
   {
@@ -17,23 +17,23 @@
   },
   {
    "type": "语法",
-   "min": 6,
+   "min": 5,
    "desc": "あげる / くれる / もらう、〜てあげる、〜てくれる"
   },
   {
    "type": "听力",
-   "min": 8,
-   "desc": "原创 TTS + 3 道理解题；时长为估计，非真人音频"
+   "min": 7,
+   "desc": "先听并复述主旨，再找两个细节，最后核对脚本（原创合成语音）"
   },
   {
    "type": "句子输出",
-   "min": 5,
-   "desc": "3道选句必做，7道拓展；答后核对"
+   "min": 4,
+   "desc": "每条新语法独立说一句，和例句对照"
   },
   {
    "type": "练习",
-   "min": 5,
-   "desc": "6 题即时自评"
+   "min": 13,
+   "desc": "优先做当天必学词与语法，答完重练错题"
   },
   {
    "type": "会话",
@@ -2827,1307 +2827,1229 @@
  ],
  "questions": [
   {
-   "id": "Q-040-K0-14c511dfcf29",
-   "qid": "Q-040-K0-14c511dfcf29",
+   "id": "D13-040-G0188-form",
+   "qid": "D13-040-G0188-form",
    "type": "mcq",
-   "prompt": "汉字「代」的一个常用读音是？",
+   "day": 40,
+   "prompt": "选出符合下列意思的日语句子。\n我帮妹妹做了作业。",
    "options": [
-    "はず.れる",
-    "お.きる",
-    "たま",
-    "ダイ"
+    "先生が私の作文を直してくださいました。",
+    "宿題をしなければなりません。",
+    "妹の宿題を手伝ってあげました。",
+    "妹は暗い所を怖がる。"
    ],
-   "h": "5359eba1",
+   "h": "f499e8ee",
    "oh": [
-    "36c97cef",
-    "53806345",
-    "78fd9430",
-    "5359eba1"
-   ],
-   "knowledge_ids": [
-    "K0177"
-   ]
-  },
-  {
-   "id": "Q-040-K1-30aea2d1a39a",
-   "qid": "Q-040-K1-30aea2d1a39a",
-   "type": "mcq",
-   "prompt": "汉字「明」的一个常用读音是？",
-   "options": [
-    "かな.しむ",
-    "メイ",
-    "ほ.しい",
-    "わり"
-   ],
-   "h": "add8b998",
-   "oh": [
-    "eafba025",
-    "add8b998",
-    "881be78f",
-    "6c38a11c"
-   ],
-   "knowledge_ids": [
-    "K0178"
-   ]
-  },
-  {
-   "id": "Q-040-G-b41e3cebeb9b",
-   "qid": "Q-040-G-b41e3cebeb9b",
-   "type": "mcq",
-   "prompt": "句型「〜てあげる」的意思是？",
-   "options": [
-    "希望（别人）做…",
-    "为别人做…（施惠）",
-    "容易…／难以…",
-    "好像…；像…一样"
-   ],
-   "h": "fff1d78",
-   "oh": [
-    "1693445c",
-    "fff1d78",
-    "74dd50af",
-    "2fc68a26"
+    "4d2fde31",
+    "21ef838e",
+    "f499e8ee",
+    "8eef042f"
    ],
    "knowledge_ids": [
     "G0188"
-   ]
+   ],
+   "capability": "usage",
+   "group": "grammar"
   },
   {
-   "id": "Q-040-V0-1a36d57b51f6",
-   "qid": "Q-040-V0-1a36d57b51f6",
+   "id": "D13-040-V1024-reading",
+   "qid": "D13-040-V1024-reading",
    "type": "mcq",
-   "prompt": "「聞こえる」是什么意思？",
+   "day": 40,
+   "prompt": "「競争」（竞争）的假名读音是哪一项？",
    "options": [
-    "体育",
+    "きょうかい",
+    "きょうそう",
+    "きゅうこう",
+    "きんじょ"
+   ],
+   "h": "3815c906",
+   "oh": [
+    "4a9d379e",
+    "3815c906",
+    "aab2bc12",
+    "125ec344"
+   ],
+   "knowledge_ids": [
+    "V1024"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-G0189-form",
+   "qid": "D13-040-G0189-form",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "选出符合下列意思的日语句子。\n朋友帮我搬了家。",
+   "options": [
+    "友達から旅行のおみやげをもらった。",
+    "友達が引っ越しを手伝ってくれた。",
+    "先輩にレポートを見てもらった。",
+    "友達に写真を撮ってもらった。"
+   ],
+   "h": "45aa073e",
+   "oh": [
+    "af45c4c3",
+    "45aa073e",
+    "170f80b2",
+    "29bc6d01"
+   ],
+   "knowledge_ids": [
+    "G0189"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-040-V1020-meaning",
+   "qid": "D13-040-V1020-meaning",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「急」的中文释义？",
+   "options": [
+    "季节",
     "听得见",
     "教堂",
-    "班级"
-   ],
-   "h": "c173720f",
-   "oh": [
-    "79108b0",
-    "c173720f",
-    "de09cb22",
-    "f12ab78d"
-   ],
-   "knowledge_ids": [
-    "V1009"
-   ]
-  },
-  {
-   "id": "Q-040-V1-320414db78db",
-   "qid": "Q-040-V1-320414db78db",
-   "type": "mcq",
-   "prompt": "「汽車」是什么意思？",
-   "options": [
-    "沸腾；热闹",
-    "火车",
-    "作家",
-    "重要"
-   ],
-   "h": "1045c164",
-   "oh": [
-    "a76e2baa",
-    "1045c164",
-    "9ee99297",
-    "1a90a25b"
-   ],
-   "knowledge_ids": [
-    "V1010"
-   ]
-  },
-  {
-   "id": "A049-1-566d4385ce3b",
-   "qid": "A049-1-566d4385ce3b",
-   "type": "mcq",
-   "prompt": "メールはいつまでに送りますか。",
-   "options": [
-    "土曜日",
-    "金曜日",
-    "月曜日",
-    "日曜日"
-   ],
-   "h": "914654df",
-   "oh": [
-    "e389fde9",
-    "914654df",
-    "ab1845fc",
-    "7a4c34c3"
-   ],
-   "passage": "金曜日までにメールを送ってください。土曜日は担当者が休みです。",
-   "knowledge_ids": []
-  },
-  {
-   "id": "L-040-0-3e28ffcf781e",
-   "qid": "L-040-0-3e28ffcf781e",
-   "type": "mcq",
-   "prompt": "何時までにチェックアウトしますか。",
-   "options": [
-    "午前九時",
-    "午前十時",
-    "正午",
-    "午前十一時"
-   ],
-   "h": "1cb7bb1",
-   "oh": [
-    "1cb7bb1",
-    "a0c91a8d",
-    "1b67a4ee",
-    "7e478c7f"
-   ],
-   "knowledge_ids": []
-  },
-  {
-   "id": "L-040-1-08cbd3ae1ac2",
-   "qid": "L-040-1-08cbd3ae1ac2",
-   "type": "mcq",
-   "prompt": "荷物はどこへ持っていきますか。",
-   "options": [
-    "二階のフロント",
-    "泊まった部屋",
-    "一階のフロント",
-    "駅のホーム"
-   ],
-   "h": "f872288a",
-   "oh": [
-    "1d2a3b06",
-    "dbf6b48e",
-    "f872288a",
-    "c4572c57"
-   ],
-   "knowledge_ids": []
-  },
-  {
-   "id": "L-040-2-db16e35fab9a",
-   "qid": "L-040-2-db16e35fab9a",
-   "type": "mcq",
-   "prompt": "チェックアウトした日の荷物預かりは、いくらですか。",
-   "options": [
-    "千円",
-    "五百円",
-    "無料",
-    "二千円"
-   ],
-   "h": "f7f9d52f",
-   "oh": [
-    "b294ed9c",
-    "917a4ad3",
-    "f7f9d52f",
-    "7f5932da"
-   ],
-   "knowledge_ids": []
-  },
-  {
-   "id": "P-040-00-0ee1bc1793a9",
-   "qid": "P-040-00-0ee1bc1793a9",
-   "type": "mcq",
-   "prompt": "我儿子上了高中。",
-   "options": [
-    "クリスマスが近くなってきた。",
-    "私の息子は、高校に入学した。",
-    "市が住民に調査を行いました。",
-    "勢いに流されているんですよ。"
-   ],
-   "h": "c79bbb7c",
-   "oh": [
-    "173e2429",
-    "c79bbb7c",
-    "2b753e0a",
-    "75832468"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-040-01-f8033d0637e6",
-   "qid": "P-040-01-f8033d0637e6",
-   "type": "mcq",
-   "prompt": "我在和美国的高中生通信。",
-   "options": [
-    "「大丈夫ですか」「はい、大丈夫です」",
-    "私はアメリカの高校生と文通をしている。",
-    "ここでお買い上げの品は無料で配達します。",
-    "それは、おまえの声をよく聞くためだよ。"
-   ],
-   "h": "48cfd48e",
-   "oh": [
-    "c3fb9c88",
-    "48cfd48e",
-    "108078d3",
-    "19802e2c"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-040-02-c46b2d99994b",
-   "qid": "P-040-02-c46b2d99994b",
-   "type": "mcq",
-   "prompt": "那家工厂下个月起停工。",
-   "options": [
-    "彼女その瞬間にカッとなったんだね。",
-    "その工場は来月から作業を中止する。",
-    "ルーシーは電灯のスイッチをつけた。",
-    "人類だけが火の使い方を知っている。"
-   ],
-   "h": "82b575bb",
-   "oh": [
-    "b90b4381",
-    "82b575bb",
-    "28480d99",
-    "802a2f24"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-040-V1009-m-f76b8d2e407d",
-   "qid": "P-040-V1009-m-f76b8d2e407d",
-   "type": "mcq",
-   "prompt": "本课词条「聞こえる」（例句语境：听到了车停在门前的声响。）的释义是哪一项？",
-   "options": [
-    "听得见",
-    "时刻表；钻石",
-    "门；大门",
-    "敲；打"
-   ],
-   "h": "c173720f",
-   "oh": [
-    "c173720f",
-    "d3f95951",
-    "ff3f1ce3",
-    "60787fbb"
-   ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1009"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-V1010-m-9dd33ab96e78",
-   "qid": "P-040-V1010-m-9dd33ab96e78",
-   "type": "mcq",
-   "prompt": "本课词条「汽車」（例句语境：火车还没到。）的释义是哪一项？",
-   "options": [
-    "火车",
-    "餐厅",
-    "身高",
-    "法律"
-   ],
-   "h": "1045c164",
-   "oh": [
-    "1045c164",
-    "71bd15fe",
-    "97ca60f6",
-    "8c553f61"
-   ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1010"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-V1011-m-81f3112c97bb",
-   "qid": "P-040-V1011-m-81f3112c97bb",
-   "type": "mcq",
-   "prompt": "本课词条「季節」（例句语境：秋天正是读书的好季节。）的释义是哪一项？",
-   "options": [
-    "游泳池",
-    "季节",
-    "牛",
-    "布料；面料"
-   ],
-   "h": "59f8b670",
-   "oh": [
-    "9461ce74",
-    "59f8b670",
-    "de8d35ba",
-    "f707e037"
-   ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1011"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-V1011-r-01d5af72961c",
-   "qid": "P-040-V1011-r-01d5af72961c",
-   "type": "mcq",
-   "prompt": "本课词条「季節」（季节）的假名读音是哪一项？",
-   "options": [
-    "かん",
-    "しゅう",
-    "きせつ",
-    "かいわ"
-   ],
-   "h": "97c98da7",
-   "oh": [
-    "9d48995b",
-    "899eda3d",
-    "97c98da7",
-    "4ebf281f"
-   ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1011"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-V1012-m-dac31c0a6f07",
-   "qid": "P-040-V1012-m-dac31c0a6f07",
-   "type": "mcq",
-   "prompt": "本课词条「規則」（例句语境：这条规则对你也适用。）的释义是哪一项？",
-   "options": [
-    "动物",
-    "其他；其余",
-    "准备；备好（东西）",
-    "规则"
-   ],
-   "h": "9a93d63e",
-   "oh": [
-    "e4391dda",
-    "9f4245f",
-    "3bc432f3",
-    "9a93d63e"
-   ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1012"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-V1012-r-ce6ca1e1ac3f",
-   "qid": "P-040-V1012-r-ce6ca1e1ac3f",
-   "type": "mcq",
-   "prompt": "本课词条「規則」（规则）的假名读音是哪一项？",
-   "options": [
-    "けっせき",
-    "よろしい",
-    "きそく",
-    "かえり"
-   ],
-   "h": "70cf6070",
-   "oh": [
-    "e60c0d3d",
-    "72c76e4d",
-    "70cf6070",
-    "91d3dc84"
-   ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1012"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-V1013-m-624e9ce99cfb",
-   "qid": "P-040-V1013-m-624e9ce99cfb",
-   "type": "mcq",
-   "prompt": "本课词条「きっと」（例句语境：可是啊，俺爹肯定不高兴。）的释义是哪一项？",
-   "options": [
-    "害怕；担心",
-    "一定",
-    "鬼；妖怪",
-    "整体；全部"
-   ],
-   "h": "fcba1d5f",
-   "oh": [
-    "5b6252fa",
-    "fcba1d5f",
-    "d7cd7ad8",
-    "7ffb4449"
-   ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1013"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-V1013-r-672c8f5da1f7",
-   "qid": "P-040-V1013-r-672c8f5da1f7",
-   "type": "mcq",
-   "prompt": "本课词条「きっと」（一定）的假名读音是哪一项？",
-   "options": [
-    "きっと",
-    "なやみ",
-    "かんこう",
-    "しんさつ"
-   ],
-   "h": "6c22c46b",
-   "oh": [
-    "6c22c46b",
-    "1852aecc",
-    "eb84c27a",
-    "5a96896e"
-   ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1013"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-V1014-m-5d9a49b4fd3e",
-   "qid": "P-040-V1014-m-5d9a49b4fd3e",
-   "type": "mcq",
-   "prompt": "本课词条「絹」（例句语境：这条漂亮的裙子是丝绸做的。）的释义是哪一项？",
-   "options": [
-    "化学",
-    "首先",
-    "好朋友；挚友",
-    "丝绸"
-   ],
-   "h": "50b932d0",
-   "oh": [
-    "c55e335d",
-    "e0e9af33",
-    "bbaa4134",
-    "50b932d0"
-   ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1014"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-V1014-r-56656d0cc586",
-   "qid": "P-040-V1014-r-56656d0cc586",
-   "type": "mcq",
-   "prompt": "本课词条「絹」（丝绸）的假名读音是哪一项？",
-   "options": [
-    "おさけ",
-    "ながい",
-    "じんるい",
-    "きぬ"
-   ],
-   "h": "866d5d9c",
-   "oh": [
-    "dfdc92b",
-    "21643325",
-    "f73d2023",
-    "866d5d9c"
-   ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1014"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-V1015-m-c16a12fd390e",
-   "qid": "P-040-V1015-m-c16a12fd390e",
-   "type": "mcq",
-   "prompt": "本课词条「厳しい」（例句语境：听说今年冬天会很冷。）的释义是哪一项？",
-   "options": [
-    "听；问",
-    "悲伤；难过",
-    "严厉；严酷",
-    "希望；期望"
-   ],
-   "h": "45890ac8",
-   "oh": [
-    "b6f9749a",
-    "cc50a59f",
-    "45890ac8",
-    "84f77623"
-   ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1015"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-V1015-r-b69334a542b5",
-   "qid": "P-040-V1015-r-b69334a542b5",
-   "type": "mcq",
-   "prompt": "本课词条「厳しい」（严厉；严酷）的假名读音是哪一项？",
-   "options": [
-    "きびしい",
-    "ただ",
-    "くりかえす",
-    "こっかい"
-   ],
-   "h": "6b3b422",
-   "oh": [
-    "6b3b422",
-    "76fd910a",
-    "d3c01ba",
-    "10708264"
-   ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1015"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-V1016-m-51e582bf1bb8",
-   "qid": "P-040-V1016-m-51e582bf1bb8",
-   "type": "mcq",
-   "prompt": "本课词条「決まる」（例句语境：什么时候开始还没定。）的释义是哪一项？",
-   "options": [
-    "决定",
-    "出租车",
-    "氏；先生",
-    "回答"
-   ],
-   "h": "60a27c88",
-   "oh": [
-    "60a27c88",
-    "ba767db0",
-    "1e9e985e",
-    "99d88f4f"
-   ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1016"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-V1016-r-309b50bd9bb0",
-   "qid": "P-040-V1016-r-309b50bd9bb0",
-   "type": "mcq",
-   "prompt": "本课词条「決まる」（决定）的假名读音是哪一项？",
-   "options": [
-    "すみ",
-    "ガス",
-    "つかまえる",
-    "きまる"
-   ],
-   "h": "ad527c5b",
-   "oh": [
-    "7a03a5f1",
-    "36eea0f6",
-    "6e8deb8f",
-    "ad527c5b"
-   ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1016"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-V1017-m-4f922dfde2f8",
-   "qid": "P-040-V1017-m-4f922dfde2f8",
-   "type": "mcq",
-   "prompt": "本课词条「君」（例句语境：忘带作业，你太不小心了。）的释义是哪一项？",
-   "options": [
-    "礼物",
-    "你",
-    "捡；接人",
-    "逃跑；逃避"
-   ],
-   "h": "e55f99bf",
-   "oh": [
-    "103678d6",
-    "e55f99bf",
-    "86ede6be",
-    "69643020"
-   ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1017"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-V1017-r-b0cbadf5000d",
-   "qid": "P-040-V1017-r-b0cbadf5000d",
-   "type": "mcq",
-   "prompt": "本课词条「君」（你）的假名读音是哪一项？",
-   "options": [
-    "かかる",
-    "きた",
-    "ひ",
-    "きみ"
-   ],
-   "h": "796d4925",
-   "oh": [
-    "6acfcd88",
-    "596d16c5",
-    "f7257715",
-    "796d4925"
-   ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1017"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-V1018-m-4cf8dd08c26a",
-   "qid": "P-040-V1018-m-4cf8dd08c26a",
-   "type": "mcq",
-   "prompt": "本课词条「着物」（例句语境：她穿上那件和服看着很奇怪。）的释义是哪一项？",
-   "options": [
-    "到底；究竟",
-    "控诉；呼吁",
-    "和服",
-    "赞成"
-   ],
-   "h": "10163812",
-   "oh": [
-    "7029e18c",
-    "9fccb1f1",
-    "10163812",
-    "87d84cc3"
-   ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1018"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-V1018-r-b289bb657b04",
-   "qid": "P-040-V1018-r-b289bb657b04",
-   "type": "mcq",
-   "prompt": "本课词条「着物」（和服）的假名读音是哪一项？",
-   "options": [
-    "ぬる",
-    "きもの",
-    "しまう",
-    "かがやく"
-   ],
-   "h": "70a10b00",
-   "oh": [
-    "85bf4c80",
-    "70a10b00",
-    "a870b59a",
-    "c547937"
-   ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1018"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-V1019-m-815a42849bed",
-   "qid": "P-040-V1019-m-815a42849bed",
-   "type": "mcq",
-   "prompt": "本课词条「客」（例句语境：因为刚开春，客人也不太多。）的释义是哪一项？",
-   "options": [
-    "迎接；接",
-    "工夫；劳力",
-    "温暖",
-    "客人"
-   ],
-   "h": "fbcde84d",
-   "oh": [
-    "d7465440",
-    "246f5824",
-    "3e5b8a56",
-    "fbcde84d"
-   ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1019"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-V1019-r-7bf0475522bc",
-   "qid": "P-040-V1019-r-7bf0475522bc",
-   "type": "mcq",
-   "prompt": "本课词条「客」（客人）的假名读音是哪一项？",
-   "options": [
-    "きゃく",
-    "ドア",
-    "おる",
-    "せんせい"
-   ],
-   "h": "51a4abca",
-   "oh": [
-    "51a4abca",
-    "23388932",
-    "ad4c8422",
-    "54a6cbdc"
-   ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1019"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-V1020-m-083f0f4242d4",
-   "qid": "P-040-V1020-m-083f0f4242d4",
-   "type": "mcq",
-   "prompt": "本课词条「急」（例句语境：这条河的水流很急。）的释义是哪一项？",
-   "options": [
-    "躲藏；隐藏",
-    "一种",
-    "学",
     "急；陡"
    ],
    "h": "105cf420",
    "oh": [
-    "a62811e6",
-    "49f01c96",
-    "e34cb299",
+    "59f8b670",
+    "c173720f",
+    "de09cb22",
     "105cf420"
    ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "meaning",
    "knowledge_ids": [
     "V1020"
    ],
-   "source_day": 40,
-   "optional": true
+   "capability": "meaning",
+   "group": "vocab"
   },
   {
-   "id": "P-040-V1020-r-4e2624b383b2",
-   "qid": "P-040-V1020-r-4e2624b383b2",
+   "id": "D13-040-V1009-reading",
+   "qid": "D13-040-V1009-reading",
    "type": "mcq",
-   "prompt": "本课词条「急」（急；陡）的假名读音是哪一项？",
+   "day": 40,
+   "prompt": "「聞こえる」（听得见）的假名读音是哪一项？",
    "options": [
-    "とこや",
-    "カップ",
-    "さん",
-    "きゅう"
+    "きまる",
+    "きそく",
+    "きこえる",
+    "きゅうこう"
+   ],
+   "h": "5efd8bb0",
+   "oh": [
+    "ad527c5b",
+    "70cf6070",
+    "5efd8bb0",
+    "aab2bc12"
+   ],
+   "knowledge_ids": [
+    "V1009"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-G0189-meaning",
+   "qid": "D13-040-G0189-meaning",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "请选择「〜てくれる」所用句型的主要含义。",
+   "options": [
+    "（别人）为我做…",
+    "为别人做…（施惠）",
+    "请别人为我做…；得到…",
+    "给…；别人给我…；从…得到"
+   ],
+   "h": "2782aac4",
+   "oh": [
+    "2782aac4",
+    "fff1d78",
+    "833b1f0e",
+    "33e948d4"
+   ],
+   "knowledge_ids": [
+    "G0189"
+   ],
+   "capability": "meaning",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-040-V1014-meaning",
+   "qid": "D13-040-V1014-meaning",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「絹」的中文释义？",
+   "options": [
+    "附近",
+    "教堂",
+    "竞争",
+    "丝绸"
+   ],
+   "h": "50b932d0",
+   "oh": [
+    "3eba9a66",
+    "de09cb22",
+    "11b81f98",
+    "50b932d0"
+   ],
+   "knowledge_ids": [
+    "V1014"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-V1011-reading",
+   "qid": "D13-040-V1011-reading",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「季節」（季节）的假名读音是哪一项？",
+   "options": [
+    "きぬ",
+    "きもの",
+    "きゃく",
+    "きせつ"
+   ],
+   "h": "97c98da7",
+   "oh": [
+    "866d5d9c",
+    "70a10b00",
+    "51a4abca",
+    "97c98da7"
+   ],
+   "knowledge_ids": [
+    "V1011"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-V1011-meaning",
+   "qid": "D13-040-V1011-meaning",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「季節」的中文释义？",
+   "options": [
+    "状况；身体",
+    "季节",
+    "和服",
+    "客人"
+   ],
+   "h": "59f8b670",
+   "oh": [
+    "aba18343",
+    "59f8b670",
+    "10163812",
+    "fbcde84d"
+   ],
+   "knowledge_ids": [
+    "V1011"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-G0187-context",
+   "qid": "D13-040-G0187-context",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "请选择「友達から旅行のおみやげをもらった。」的中文意思。",
+   "options": [
+    "我教了朋友日语。",
+    "姐姐每次出差都会给我带特产。",
+    "我收到了朋友旅行带回来的特产。",
+    "朋友帮我搬了家。"
+   ],
+   "h": "f0018218",
+   "oh": [
+    "463a75c3",
+    "e130d110",
+    "f0018218",
+    "b168647c"
+   ],
+   "knowledge_ids": [
+    "G0187"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-040-V1012-meaning",
+   "qid": "D13-040-V1012-meaning",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「規則」的中文释义？",
+   "options": [
+    "客人",
+    "规则",
+    "附近",
+    "竞争"
+   ],
+   "h": "9a93d63e",
+   "oh": [
+    "fbcde84d",
+    "9a93d63e",
+    "3eba9a66",
+    "11b81f98"
+   ],
+   "knowledge_ids": [
+    "V1012"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-V1018-reading",
+   "qid": "D13-040-V1018-reading",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「着物」（和服）的假名读音是哪一项？",
+   "options": [
+    "きせつ",
+    "きもの",
+    "きそく",
+    "きしゃ"
+   ],
+   "h": "70a10b00",
+   "oh": [
+    "97c98da7",
+    "70a10b00",
+    "70cf6070",
+    "3cb6467a"
+   ],
+   "knowledge_ids": [
+    "V1018"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-G0187-form",
+   "qid": "D13-040-G0187-form",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "选出符合下列意思的日语句子。\n我把旧的游戏机给了弟弟。",
+   "options": [
+    "私は弟に古いゲームをあげた。",
+    "弟は休みの日、ゲームをしてばかりいる。",
+    "弟はいつも私のゲームをやりたがる。",
+    "妹に本を貸しました。"
+   ],
+   "h": "e7edc6de",
+   "oh": [
+    "e7edc6de",
+    "2be0d4ce",
+    "b15a6ec4",
+    "5d4cfe0"
+   ],
+   "knowledge_ids": [
+    "G0187"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-040-V1015-meaning",
+   "qid": "D13-040-V1015-meaning",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「厳しい」的中文释义？",
+   "options": [
+    "一定",
+    "严厉；严酷",
+    "火车",
+    "空气"
+   ],
+   "h": "45890ac8",
+   "oh": [
+    "fcba1d5f",
+    "45890ac8",
+    "1045c164",
+    "f0aaaa3b"
+   ],
+   "knowledge_ids": [
+    "V1015"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-V1024-meaning",
+   "qid": "D13-040-V1024-meaning",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「競争」的中文释义？",
+   "options": [
+    "机场",
+    "和服",
+    "竞争",
+    "附近"
+   ],
+   "h": "11b81f98",
+   "oh": [
+    "7ebee0f5",
+    "10163812",
+    "11b81f98",
+    "3eba9a66"
+   ],
+   "knowledge_ids": [
+    "V1024"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-V1010-reading",
+   "qid": "D13-040-V1010-reading",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「汽車」（火车）的假名读音是哪一项？",
+   "options": [
+    "きゃく",
+    "きしゃ",
+    "きもの",
+    "きそく"
+   ],
+   "h": "3cb6467a",
+   "oh": [
+    "51a4abca",
+    "3cb6467a",
+    "70a10b00",
+    "70cf6070"
+   ],
+   "knowledge_ids": [
+    "V1010"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-V1012-reading",
+   "qid": "D13-040-V1012-reading",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「規則」（规则）的假名读音是哪一项？",
+   "options": [
+    "きそく",
+    "きゃく",
+    "きんじょ",
+    "きしゃ"
+   ],
+   "h": "70cf6070",
+   "oh": [
+    "70cf6070",
+    "51a4abca",
+    "125ec344",
+    "3cb6467a"
+   ],
+   "knowledge_ids": [
+    "V1012"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-G0189-context",
+   "qid": "D13-040-G0189-context",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "请选择「母が毎朝お弁当を作ってくれます。」的中文意思。",
+   "options": [
+    "母亲每天让弟弟吃蔬菜。",
+    "小时候母亲每天逼我练钢琴。",
+    "母亲每天早上给我做便当。",
+    "为了健康，我决定每天早上散步。"
+   ],
+   "h": "95135629",
+   "oh": [
+    "5b3434e",
+    "74ad67e4",
+    "95135629",
+    "df21f71a"
+   ],
+   "knowledge_ids": [
+    "G0189"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-040-V1013-meaning",
+   "qid": "D13-040-V1013-meaning",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「きっと」的中文释义？",
+   "options": [
+    "急；陡",
+    "状况；身体",
+    "严厉；严酷",
+    "一定"
+   ],
+   "h": "fcba1d5f",
+   "oh": [
+    "105cf420",
+    "aba18343",
+    "45890ac8",
+    "fcba1d5f"
+   ],
+   "knowledge_ids": [
+    "V1013"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-V1016-reading",
+   "qid": "D13-040-V1016-reading",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「決まる」（决定）的假名读音是哪一项？",
+   "options": [
+    "きせつ",
+    "きこえる",
+    "きびしい",
+    "きまる"
+   ],
+   "h": "ad527c5b",
+   "oh": [
+    "97c98da7",
+    "5efd8bb0",
+    "6b3b422",
+    "ad527c5b"
+   ],
+   "knowledge_ids": [
+    "V1016"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-V1019-recall",
+   "qid": "D13-040-V1019-recall",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「客人」对应哪个日语词？",
+   "options": [
+    "きゃく",
+    "きもの",
+    "きぬ",
+    "きしゃ"
+   ],
+   "h": "51a4abca",
+   "oh": [
+    "51a4abca",
+    "70a10b00",
+    "866d5d9c",
+    "3cb6467a"
+   ],
+   "knowledge_ids": [
+    "V1019"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-V1018-meaning",
+   "qid": "D13-040-V1018-meaning",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「着物」的中文释义？",
+   "options": [
+    "状况；身体",
+    "空气",
+    "和服",
+    "规则"
+   ],
+   "h": "10163812",
+   "oh": [
+    "aba18343",
+    "f0aaaa3b",
+    "10163812",
+    "9a93d63e"
+   ],
+   "knowledge_ids": [
+    "V1018"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-V1022-recall",
+   "qid": "D13-040-V1022-recall",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「教育」对应哪个日语词？",
+   "options": [
+    "きんじょ",
+    "きょういく",
+    "くうこう",
+    "きそく"
+   ],
+   "h": "1c3ebc0",
+   "oh": [
+    "125ec344",
+    "1c3ebc0",
+    "34e30b65",
+    "70cf6070"
+   ],
+   "knowledge_ids": [
+    "V1022"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-V1009-meaning",
+   "qid": "D13-040-V1009-meaning",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「聞こえる」的中文释义？",
+   "options": [
+    "状况；身体",
+    "决定",
+    "规则",
+    "听得见"
+   ],
+   "h": "c173720f",
+   "oh": [
+    "aba18343",
+    "60a27c88",
+    "9a93d63e",
+    "c173720f"
+   ],
+   "knowledge_ids": [
+    "V1009"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-V1019-meaning",
+   "qid": "D13-040-V1019-meaning",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「客」的中文释义？",
+   "options": [
+    "丝绸",
+    "火车",
+    "和服",
+    "客人"
+   ],
+   "h": "fbcde84d",
+   "oh": [
+    "50b932d0",
+    "1045c164",
+    "10163812",
+    "fbcde84d"
+   ],
+   "knowledge_ids": [
+    "V1019"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-V1020-recall",
+   "qid": "D13-040-V1020-recall",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「急；陡」对应哪个日语词？",
+   "options": [
+    "きこえる",
+    "きゅう",
+    "きせつ",
+    "きょうかい"
    ],
    "h": "8aa982b3",
    "oh": [
-    "d185cbd8",
-    "79963a14",
-    "cd4d6219",
-    "8aa982b3"
+    "5efd8bb0",
+    "8aa982b3",
+    "97c98da7",
+    "4a9d379e"
    ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "reading",
    "knowledge_ids": [
     "V1020"
    ],
-   "source_day": 40,
-   "optional": true
+   "capability": "meaning",
+   "group": "vocab"
   },
   {
-   "id": "P-040-V1021-m-31c69061f42c",
-   "qid": "P-040-V1021-m-31c69061f42c",
+   "id": "D13-040-V1014-reading",
+   "qid": "D13-040-V1014-reading",
    "type": "mcq",
-   "prompt": "本课词条「急行」（例句语境：快车票价多少钱？）的释义是哪一项？",
+   "day": 40,
+   "prompt": "「絹」（丝绸）的假名读音是哪一项？",
    "options": [
-    "茶",
-    "快车",
-    "票；券",
-    "吵；烦人"
+    "きそく",
+    "きゃく",
+    "きせつ",
+    "きぬ"
+   ],
+   "h": "866d5d9c",
+   "oh": [
+    "70cf6070",
+    "51a4abca",
+    "97c98da7",
+    "866d5d9c"
+   ],
+   "knowledge_ids": [
+    "V1014"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-V1023-reading",
+   "qid": "D13-040-V1023-reading",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「教会」（教堂）的假名读音是哪一项？",
+   "options": [
+    "きょうかい",
+    "きゅうこう",
+    "きんじょ",
+    "きょうそう"
+   ],
+   "h": "4a9d379e",
+   "oh": [
+    "4a9d379e",
+    "aab2bc12",
+    "125ec344",
+    "3815c906"
+   ],
+   "knowledge_ids": [
+    "V1023"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-V1013-recall",
+   "qid": "D13-040-V1013-recall",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「一定」对应哪个日语词？",
+   "options": [
+    "きびしい",
+    "きっと",
+    "ぐあい",
+    "きゅう"
+   ],
+   "h": "6c22c46b",
+   "oh": [
+    "6b3b422",
+    "6c22c46b",
+    "d2188d89",
+    "8aa982b3"
+   ],
+   "knowledge_ids": [
+    "V1013"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-V1010-meaning",
+   "qid": "D13-040-V1010-meaning",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「汽車」的中文释义？",
+   "options": [
+    "教育",
+    "火车",
+    "教堂",
+    "客人"
+   ],
+   "h": "1045c164",
+   "oh": [
+    "6f5d22d2",
+    "1045c164",
+    "de09cb22",
+    "fbcde84d"
+   ],
+   "knowledge_ids": [
+    "V1010"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-V1017-reading",
+   "qid": "D13-040-V1017-reading",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「君」（你）的假名读音是哪一项？",
+   "options": [
+    "きゅう",
+    "きもの",
+    "きみ",
+    "きまる"
+   ],
+   "h": "796d4925",
+   "oh": [
+    "8aa982b3",
+    "70a10b00",
+    "796d4925",
+    "ad527c5b"
+   ],
+   "knowledge_ids": [
+    "V1017"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-G0188-meaning",
+   "qid": "D13-040-G0188-meaning",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "请选择「〜てあげる」所用句型的主要含义。",
+   "options": [
+    "为别人做…（施惠）",
+    "请别人为我做…；得到…",
+    "（尊长）为我做…；蒙…为我做",
+    "（别人）为我做…"
+   ],
+   "h": "fff1d78",
+   "oh": [
+    "fff1d78",
+    "833b1f0e",
+    "d9803281",
+    "2782aac4"
+   ],
+   "knowledge_ids": [
+    "G0188"
+   ],
+   "capability": "meaning",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-040-V1016-meaning",
+   "qid": "D13-040-V1016-meaning",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「決まる」的中文释义？",
+   "options": [
+    "教育",
+    "听得见",
+    "决定",
+    "季节"
+   ],
+   "h": "60a27c88",
+   "oh": [
+    "6f5d22d2",
+    "c173720f",
+    "60a27c88",
+    "59f8b670"
+   ],
+   "knowledge_ids": [
+    "V1016"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-V1015-reading",
+   "qid": "D13-040-V1015-reading",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「厳しい」（严厉；严酷）的假名读音是哪一项？",
+   "options": [
+    "きこえる",
+    "きっと",
+    "きしゃ",
+    "きびしい"
+   ],
+   "h": "6b3b422",
+   "oh": [
+    "5efd8bb0",
+    "6c22c46b",
+    "3cb6467a",
+    "6b3b422"
+   ],
+   "knowledge_ids": [
+    "V1015"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-G0187-meaning",
+   "qid": "D13-040-G0187-meaning",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "请选择「あげる / くれる / もらう」所用句型的主要含义。",
+   "options": [
+    "（尊长）为我做…；蒙…为我做",
+    "给…；别人给我…；从…得到",
+    "（别人）为我做…",
+    "为别人做…（施惠）"
+   ],
+   "h": "33e948d4",
+   "oh": [
+    "d9803281",
+    "33e948d4",
+    "2782aac4",
+    "fff1d78"
+   ],
+   "knowledge_ids": [
+    "G0187"
+   ],
+   "capability": "meaning",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-040-V1017-meaning",
+   "qid": "D13-040-V1017-meaning",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「君」的中文释义？",
+   "options": [
+    "空气",
+    "机场",
+    "你",
+    "状况；身体"
+   ],
+   "h": "e55f99bf",
+   "oh": [
+    "f0aaaa3b",
+    "7ebee0f5",
+    "e55f99bf",
+    "aba18343"
+   ],
+   "knowledge_ids": [
+    "V1017"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-V1023-meaning",
+   "qid": "D13-040-V1023-meaning",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「教会」的中文释义？",
+   "options": [
+    "机场",
+    "教堂",
+    "客人",
+    "季节"
+   ],
+   "h": "de09cb22",
+   "oh": [
+    "7ebee0f5",
+    "de09cb22",
+    "fbcde84d",
+    "59f8b670"
+   ],
+   "knowledge_ids": [
+    "V1023"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-V1021-meaning",
+   "qid": "D13-040-V1021-meaning",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「急行」的中文释义？",
+   "options": [
+    "空气",
+    "教堂",
+    "和服",
+    "快车"
    ],
    "h": "a2d305e4",
    "oh": [
-    "3244b889",
-    "a2d305e4",
-    "b67d4274",
-    "84b2d01d"
+    "f0aaaa3b",
+    "de09cb22",
+    "10163812",
+    "a2d305e4"
    ],
-   "day": 40,
-   "group": "vocab",
+   "knowledge_ids": [
+    "V1021"
+   ],
    "capability": "meaning",
-   "knowledge_ids": [
-    "V1021"
-   ],
-   "source_day": 40,
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "P-040-V1021-r-e81595415ebd",
-   "qid": "P-040-V1021-r-e81595415ebd",
+   "id": "D13-040-G0188-context",
+   "qid": "D13-040-G0188-context",
    "type": "mcq",
-   "prompt": "本课词条「急行」（快车）的假名读音是哪一项？",
-   "options": [
-    "きゅうこう",
-    "なぞ",
-    "うで",
-    "はがき"
-   ],
-   "h": "aab2bc12",
-   "oh": [
-    "aab2bc12",
-    "9acce519",
-    "9160a2fa",
-    "e95248c1"
-   ],
    "day": 40,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1021"
+   "prompt": "请选择「重そうだね。持ってあげようか。」的中文意思。",
+   "options": [
+    "看起来要下雨。",
+    "那个咖喱看起来好辣啊。",
+    "好久不见的爷爷看起来很健康。",
+    "看起来好重啊，要我帮你拿吗？"
    ],
-   "source_day": 40,
-   "optional": true
+   "h": "a22a1731",
+   "oh": [
+    "372274cc",
+    "b9eb397e",
+    "db3167d0",
+    "a22a1731"
+   ],
+   "knowledge_ids": [
+    "G0188"
+   ],
+   "capability": "usage",
+   "group": "grammar"
   },
   {
-   "id": "P-040-V1022-m-e4611358ed90",
-   "qid": "P-040-V1022-m-e4611358ed90",
+   "id": "D13-040-V1022-meaning",
+   "qid": "D13-040-V1022-meaning",
    "type": "mcq",
-   "prompt": "本课词条「教育」（例句语境：这个世界的教育让人失望。）的释义是哪一项？",
+   "day": 40,
+   "prompt": "「きょういく」的中文释义？",
    "options": [
-    "牛奶",
-    "春天",
-    "暗；阴沉",
+    "机场",
+    "附近",
+    "规则",
     "教育"
    ],
    "h": "6f5d22d2",
    "oh": [
-    "24a24524",
-    "e634dfab",
-    "cd46b470",
+    "7ebee0f5",
+    "3eba9a66",
+    "9a93d63e",
     "6f5d22d2"
    ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "meaning",
    "knowledge_ids": [
     "V1022"
    ],
-   "source_day": 40,
-   "optional": true
+   "capability": "meaning",
+   "group": "vocab"
   },
   {
-   "id": "P-040-V1022-r-6a1776c888ce",
-   "qid": "P-040-V1022-r-6a1776c888ce",
+   "id": "D13-040-V1021-reading",
+   "qid": "D13-040-V1021-reading",
    "type": "mcq",
-   "prompt": "本课词条「教育」（教育）的假名读音是哪一项？",
-   "options": [
-    "ちゅうしゃじょう",
-    "きょういく",
-    "スタイル",
-    "ちょきん"
-   ],
-   "h": "1c3ebc0",
-   "oh": [
-    "30a7720e",
-    "1c3ebc0",
-    "73c7148c",
-    "169017e5"
-   ],
    "day": 40,
-   "group": "vocab",
+   "prompt": "「急行」（快车）的假名读音是哪一项？",
+   "options": [
+    "きょうそう",
+    "きんじょ",
+    "きゅうこう",
+    "きょうかい"
+   ],
+   "h": "aab2bc12",
+   "oh": [
+    "3815c906",
+    "125ec344",
+    "aab2bc12",
+    "4a9d379e"
+   ],
+   "knowledge_ids": [
+    "V1021"
+   ],
    "capability": "reading",
-   "knowledge_ids": [
-    "V1022"
-   ],
-   "source_day": 40,
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "P-040-V1023-m-91cce16d9ade",
-   "qid": "P-040-V1023-m-91cce16d9ade",
-   "type": "mcq",
-   "prompt": "本课词条「教会」（例句语境：那座教堂的历史可追溯到1173年。）的释义是哪一项？",
-   "options": [
-    "教堂",
-    "咖啡馆",
-    "结实；健壮",
-    "搬家"
-   ],
-   "h": "de09cb22",
-   "oh": [
-    "de09cb22",
-    "8b1834fa",
-    "56fc4db2",
-    "ff767ac7"
-   ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1023"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-V1023-r-5e02c1098ddd",
-   "qid": "P-040-V1023-r-5e02c1098ddd",
-   "type": "mcq",
-   "prompt": "本课词条「教会」（教堂）的假名读音是哪一项？",
-   "options": [
-    "げつようび",
-    "きょうかい",
-    "せんそう",
-    "はやし"
-   ],
-   "h": "4a9d379e",
-   "oh": [
-    "31981fb2",
-    "4a9d379e",
-    "3683472c",
-    "1d572d3b"
-   ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1023"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-V1024-m-439157f6db89",
-   "qid": "P-040-V1024-m-439157f6db89",
-   "type": "mcq",
-   "prompt": "本课词条「競争」（例句语境：大家让独角仙比了一场。）的释义是哪一项？",
-   "options": [
-    "地铁",
-    "扒手",
-    "再一次",
-    "竞争"
-   ],
-   "h": "11b81f98",
-   "oh": [
-    "611b9e2a",
-    "78abb7da",
-    "bd2b6a0b",
-    "11b81f98"
-   ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1024"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-V1024-r-ae63f6a7a287",
-   "qid": "P-040-V1024-r-ae63f6a7a287",
-   "type": "mcq",
-   "prompt": "本课词条「競争」（竞争）的假名读音是哪一项？",
-   "options": [
-    "すいじゅん",
-    "ひろい",
-    "テープ",
-    "きょうそう"
-   ],
-   "h": "3815c906",
-   "oh": [
-    "19ea973c",
-    "54cdee4",
-    "a2b18858",
-    "3815c906"
-   ],
-   "day": 40,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1024"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-G0187-m-f67745db4865",
-   "qid": "P-040-G0187-m-f67745db4865",
-   "type": "mcq",
-   "prompt": "本课句型「あげる / くれる / もらう」在以下语境中的释义是哪一项？ 例句：私は弟に古いゲームをあげた。（我把旧的游戏机给了弟弟。）",
-   "options": [
-    "一定…；肯定…",
-    "既…又…；也…也…",
-    "给…；别人给我…；从…得到",
-    "可以…／不许…"
-   ],
-   "h": "33e948d4",
-   "oh": [
-    "389ecbd9",
-    "37943044",
-    "33e948d4",
-    "77bf852f"
-   ],
-   "day": 40,
-   "group": "grammar",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "G0187"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-G0187-u-f0f376a81686",
-   "qid": "P-040-G0187-u-f0f376a81686",
-   "type": "mcq",
-   "prompt": "课程中「あげる / くれる / もらう」的接续说明是哪一项？ 例句：私は弟に古いゲームをあげた。（我把旧的游戏机给了弟弟。）",
-   "options": [
-    "名詞 + で",
-    "名词 + によって；名词 + による + 名词",
-    "动词普通形／い形容词 + ようだ；な形容词+な／名词+の + ようだ",
-    "给予者 は/が 接受者 に 物 を あげる；给予者 が 我方 に 物 を くれる；接受者 は 给予者 に/から 物 を もらう"
-   ],
-   "h": "818e083d",
-   "oh": [
-    "4deb2b4",
-    "492ad6e5",
-    "995215",
-    "818e083d"
-   ],
-   "day": 40,
-   "group": "grammar",
-   "capability": "usage",
-   "knowledge_ids": [
-    "G0187"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-G0188-m-d189d8c9edd9",
-   "qid": "P-040-G0188-m-d189d8c9edd9",
-   "type": "mcq",
-   "prompt": "本课句型「〜てあげる」在以下语境中的释义是哪一项？ 例句：妹の宿題を手伝ってあげました。（我帮妹妹做了作业。）",
-   "options": [
-    "如果…；…之后",
-    "为别人做…（施惠）",
-    "因为…（造成某种状态）",
-    "有点…；稍有…迹象"
-   ],
-   "h": "fff1d78",
-   "oh": [
-    "b7f7907",
-    "fff1d78",
-    "17d28b2",
-    "2d8b0ebe"
-   ],
-   "day": 40,
-   "group": "grammar",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "G0188"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-G0189-m-5d060643523b",
-   "qid": "P-040-G0189-m-5d060643523b",
-   "type": "mcq",
-   "prompt": "本课句型「〜てくれる」在以下语境中的释义是哪一项？ 例句：友達が引っ越しを手伝ってくれた。（朋友帮我搬了家。）",
-   "options": [
-    "关于…；就…",
-    "（别人）为我做…",
-    "…吧；我要…",
-    "被…／（迷惑）遭遇…"
-   ],
-   "h": "2782aac4",
-   "oh": [
-    "7bb0c864",
-    "2782aac4",
-    "ccf6fb99",
-    "33a03308"
-   ],
-   "day": 40,
-   "group": "grammar",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "G0189"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "P-040-G0189-u-8f0b6e1ffdd5",
-   "qid": "P-040-G0189-u-8f0b6e1ffdd5",
-   "type": "mcq",
-   "prompt": "课程中「〜てくれる」的接续说明是哪一项？ 例句：友達が引っ越しを手伝ってくれた。（朋友帮我搬了家。）",
-   "options": [
-    "样态：ます形词干/い形去い/な形词干 + そう；传闻：普通形 + そうです",
-    "普通形 + わけがない（强烈否定可能性）；辞書形 + わけにはいかない（因情理/规则不能做）",
-    "动词て形 + くれる（对长辈用 くださる）",
-    "動詞/い形 普通形 + かどうか；名詞・な形 词干 + かどうか（不加 だ/な）；疑问词问句不用 かどうか"
-   ],
-   "h": "d42018ef",
-   "oh": [
-    "6331afe1",
-    "a8c782b5",
-    "d42018ef",
-    "d17b6854"
-   ],
-   "day": 40,
-   "group": "grammar",
-   "capability": "usage",
-   "knowledge_ids": [
-    "G0189"
-   ],
-   "source_day": 40,
-   "optional": true
-  },
-  {
-   "id": "X-040-V1025-c",
-   "qid": "X-040-V1025-c",
+   "id": "D13-040-V1025-reading",
+   "qid": "D13-040-V1025-reading",
    "type": "mcq",
    "day": 40,
-   "prompt": "「近所」的意思是？",
+   "prompt": "「近所」（附近）的假名读音是哪一项？",
    "options": [
-    "摇晃",
-    "附近",
-    "那样的",
-    "重"
+    "きもの",
+    "きしゃ",
+    "きゃく",
+    "きんじょ"
    ],
-   "h": "3eba9a66",
+   "h": "125ec344",
    "oh": [
-    "4192db7f",
-    "3eba9a66",
-    "7d7c4ee1",
-    "4726f098"
+    "70a10b00",
+    "3cb6467a",
+    "51a4abca",
+    "125ec344"
    ],
    "knowledge_ids": [
     "V1025"
    ],
-   "capability": "meaning",
-   "group": "vocab",
-   "optional": true
-  },
-  {
-   "id": "X-040-V1026-c",
-   "qid": "X-040-V1026-c",
-   "type": "mcq",
-   "day": 40,
-   "prompt": "「具合」的假名读音是？",
-   "options": [
-    "さくら",
-    "けれど",
-    "ぐあい",
-    "きゅうしゅう"
-   ],
-   "h": "d2188d89",
-   "oh": [
-    "6aa7caec",
-    "54ba20bb",
-    "d2188d89",
-    "aeed2f77"
-   ],
-   "knowledge_ids": [
-    "V1026"
-   ],
    "capability": "reading",
-   "group": "vocab",
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "X-040-V1027-c",
-   "qid": "X-040-V1027-c",
+   "id": "D13-040-V1028-reading",
+   "qid": "D13-040-V1028-reading",
    "type": "mcq",
    "day": 40,
-   "prompt": "「空気」的意思是？",
-   "options": [
-    "父亲",
-    "游泳池",
-    "空气",
-    "奇怪"
-   ],
-   "h": "f0aaaa3b",
-   "oh": [
-    "63790be1",
-    "9461ce74",
-    "f0aaaa3b",
-    "65440464"
-   ],
-   "knowledge_ids": [
-    "V1027"
-   ],
-   "capability": "meaning",
-   "group": "vocab",
-   "optional": true
-  },
-  {
-   "id": "X-040-V1028-c",
-   "qid": "X-040-V1028-c",
-   "type": "mcq",
-   "day": 40,
-   "prompt": "「空港」的假名读音是？",
+   "prompt": "「空港」（机场）的假名读音是哪一项？",
    "options": [
     "くうこう",
-    "しつもん",
-    "それ",
-    "けが"
+    "くみあい",
+    "くうき",
+    "くさり"
    ],
    "h": "34e30b65",
    "oh": [
     "34e30b65",
-    "ada0e2dd",
-    "6f9f68c",
-    "a657b210"
+    "dfd47885",
+    "190a67bf",
+    "f81dd321"
    ],
    "knowledge_ids": [
     "V1028"
    ],
    "capability": "reading",
-   "group": "vocab",
-   "optional": true
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-V1025-meaning",
+   "qid": "D13-040-V1025-meaning",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「近所」的中文释义？",
+   "options": [
+    "机场",
+    "状况；身体",
+    "附近",
+    "和服"
+   ],
+   "h": "3eba9a66",
+   "oh": [
+    "7ebee0f5",
+    "aba18343",
+    "3eba9a66",
+    "10163812"
+   ],
+   "knowledge_ids": [
+    "V1025"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-V1027-meaning",
+   "qid": "D13-040-V1027-meaning",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「空気」的中文释义？",
+   "options": [
+    "季节",
+    "教育",
+    "客人",
+    "空气"
+   ],
+   "h": "f0aaaa3b",
+   "oh": [
+    "59f8b670",
+    "6f5d22d2",
+    "fbcde84d",
+    "f0aaaa3b"
+   ],
+   "knowledge_ids": [
+    "V1027"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-V1027-reading",
+   "qid": "D13-040-V1027-reading",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「空気」（空气）的假名读音是哪一项？",
+   "options": [
+    "くうき",
+    "くび",
+    "くうこう",
+    "くさ"
+   ],
+   "h": "190a67bf",
+   "oh": [
+    "190a67bf",
+    "853f7937",
+    "34e30b65",
+    "a33fa871"
+   ],
+   "knowledge_ids": [
+    "V1027"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-V1026-meaning",
+   "qid": "D13-040-V1026-meaning",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「具合」的中文释义？",
+   "options": [
+    "状况；身体",
+    "空气",
+    "火车",
+    "机场"
+   ],
+   "h": "aba18343",
+   "oh": [
+    "aba18343",
+    "f0aaaa3b",
+    "1045c164",
+    "7ebee0f5"
+   ],
+   "knowledge_ids": [
+    "V1026"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-V1026-reading",
+   "qid": "D13-040-V1026-reading",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「具合」（状况；身体）的假名读音是哪一项？",
+   "options": [
+    "ぐあい",
+    "ぐたい",
+    "ぐんたい",
+    "ぐん"
+   ],
+   "h": "d2188d89",
+   "oh": [
+    "d2188d89",
+    "cc1f3fdc",
+    "ec99eecf",
+    "a5f10f14"
+   ],
+   "knowledge_ids": [
+    "V1026"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-040-V1028-meaning",
+   "qid": "D13-040-V1028-meaning",
+   "type": "mcq",
+   "day": 40,
+   "prompt": "「空港」的中文释义？",
+   "options": [
+    "火车",
+    "丝绸",
+    "教育",
+    "机场"
+   ],
+   "h": "7ebee0f5",
+   "oh": [
+    "1045c164",
+    "50b932d0",
+    "6f5d22d2",
+    "7ebee0f5"
+   ],
+   "knowledge_ids": [
+    "V1028"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
   }
  ],
  "listening_material": {

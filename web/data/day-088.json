@@ -2,12 +2,12 @@
  "day": 88,
  "phase": "P3",
  "theme": "〜ばかりでなく、〜も〜ば〜も",
- "can_do": "用「〜ばかりでなく、〜も〜ば〜も」造两句自己的话，表达：不仅…而且…；既…又…；也…也…",
+ "can_do": "用「〜ばかりでなく、〜も〜ば〜も」各造一句自己的话，表达：不仅…而且…；既…又…；也…也…",
  "minutes": 60,
  "blocks": [
   {
    "type": "复习",
-   "min": 10,
+   "min": 5,
    "desc": "到期项优先；未完成顺延，不追赶"
   },
   {
@@ -17,23 +17,23 @@
   },
   {
    "type": "语法",
-   "min": 6,
+   "min": 5,
    "desc": "〜ばかりでなく、〜も〜ば〜も"
   },
   {
    "type": "听力",
-   "min": 8,
-   "desc": "原创 TTS + 3 道理解题；时长为估计，非真人音频"
+   "min": 7,
+   "desc": "先听并复述主旨，再找两个细节，最后核对脚本（原创合成语音）"
   },
   {
    "type": "句子输出",
-   "min": 5,
-   "desc": "3道选句必做，7道拓展；答后核对"
+   "min": 4,
+   "desc": "每条新语法独立说一句，和例句对照"
   },
   {
    "type": "练习",
-   "min": 5,
-   "desc": "6 题即时自评"
+   "min": 13,
+   "desc": "优先做当天必学词与语法，答完重练错题"
   },
   {
    "type": "会话",
@@ -2208,1357 +2208,1254 @@
  ],
  "questions": [
   {
-   "id": "Q-088-K0-c5e77fd1c664",
-   "qid": "Q-088-K0-c5e77fd1c664",
+   "id": "D13-088-V1931-meaning",
+   "qid": "D13-088-V1931-meaning",
    "type": "mcq",
-   "prompt": "汉字「育」的一个常用读音是？",
-   "options": [
-    "イク",
-    "た.てる",
-    "-ふる.す",
-    "はなし"
-   ],
-   "h": "c90b3914",
-   "oh": [
-    "c90b3914",
-    "6c0cbb9b",
-    "c2018655",
-    "dfd8c811"
-   ],
-   "knowledge_ids": [
-    "K0417"
-   ]
-  },
-  {
-   "id": "Q-088-K1-fd0ab1f5fd93",
-   "qid": "Q-088-K1-fd0ab1f5fd93",
-   "type": "mcq",
-   "prompt": "汉字「席」的一个常用读音是？",
-   "options": [
-    "しず.まる",
-    "セキ",
-    "いそ.ぐ",
-    "せき"
-   ],
-   "h": "4b875bd5",
-   "oh": [
-    "f64e8ed1",
-    "4b875bd5",
-    "841639f4",
-    "ac0871d5"
-   ],
-   "knowledge_ids": [
-    "K0418"
-   ]
-  },
-  {
-   "id": "Q-088-G-85a6e5f837f1",
-   "qid": "Q-088-G-85a6e5f837f1",
-   "type": "mcq",
-   "prompt": "句型「〜ばかりでなく」的意思是？",
-   "options": [
-    "连…都…",
-    "不仅…而且…",
-    "给…；别人给我…；从…得到",
-    "明明…却…"
-   ],
-   "h": "cdb11d97",
-   "oh": [
-    "72e51bce",
-    "cdb11d97",
-    "33e948d4",
-    "b00784ab"
-   ],
-   "knowledge_ids": [
-    "G0119"
-   ]
-  },
-  {
-   "id": "A110-1-221cf5e46428",
-   "qid": "A110-1-221cf5e46428",
-   "type": "mcq",
-   "prompt": "交流会はいつ行われますか。",
-   "options": [
-    "日曜日の午前",
-    "日曜日の午後",
-    "土曜日の午後",
-    "月曜日の午後"
-   ],
-   "h": "793e3c53",
-   "oh": [
-    "b8531680",
-    "793e3c53",
-    "508e6be1",
-    "e19d1b02"
-   ],
-   "passage": "市民会館のお知らせ：土曜日の日本語交流会は、会場の工事のため日曜日に変更します。時間は午後一時から三時までで、予約は必要ありません。",
-   "knowledge_ids": []
-  },
-  {
-   "id": "A110-2-fb84111df315",
-   "qid": "A110-2-fb84111df315",
-   "type": "mcq",
-   "prompt": "参加する前に予約は必要ですか。",
-   "options": [
-    "会場で前日に予約する",
-    "必ず電話予約する",
-    "必要ない",
-    "一週間前に必要"
-   ],
-   "h": "86b1452d",
-   "oh": [
-    "c34ec6eb",
-    "2d59bd62",
-    "86b1452d",
-    "633371d1"
-   ],
-   "passage": "市民会館のお知らせ：土曜日の日本語交流会は、会場の工事のため日曜日に変更します。時間は午後一時から三時までで、予約は必要ありません。",
-   "knowledge_ids": []
-  },
-  {
-   "id": "A110-3-a3842561e341",
-   "qid": "A110-3-a3842561e341",
-   "type": "mcq",
-   "prompt": "文の意味が自然になるものはどれですか。",
-   "options": [
-    "ながら",
-    "ため",
-    "ように",
-    "まで"
-   ],
-   "h": "57fef33d",
-   "oh": [
-    "64649c9e",
-    "57fef33d",
-    "a3108918",
-    "61b84072"
-   ],
-   "passage": "鍵を忘れた___、家に入れませんでした。",
-   "knowledge_ids": []
-  },
-  {
-   "id": "L-088-0-7aad8bf29067",
-   "qid": "L-088-0-7aad8bf29067",
-   "type": "mcq",
-   "prompt": "何で病院へ行きますか。",
-   "options": [
-    "電車",
-    "バス",
-    "路面電車",
-    "地下鉄"
-   ],
-   "h": "7cf5b8b8",
-   "oh": [
-    "519df1f0",
-    "be1e7682",
-    "c57e4135",
-    "7cf5b8b8"
-   ],
-   "knowledge_ids": []
-  },
-  {
-   "id": "L-088-1-998128e3d1f2",
-   "qid": "L-088-1-998128e3d1f2",
-   "type": "mcq",
-   "prompt": "受付では、どんな物を見せますか。",
-   "options": [
-    "予約のメール",
-    "問診票",
-    "保険の資格を確認できる物",
-    "運転免許証"
-   ],
-   "h": "849386fa",
-   "oh": [
-    "8cce05a1",
-    "a233f2ac",
-    "849386fa",
-    "374ab9f2"
-   ],
-   "knowledge_ids": []
-  },
-  {
-   "id": "L-088-2-51abfbabc168",
-   "qid": "L-088-2-51abfbabc168",
-   "type": "mcq",
-   "prompt": "診察が終わったら、どうするつもりですか。",
-   "options": [
-    "友達に会う",
-    "仕事に行く",
-    "買い物に行く",
-    "そのまま家に帰って休む"
-   ],
-   "h": "cdc84683",
-   "oh": [
-    "98a5f867",
-    "200b443b",
-    "117a596f",
-    "cdc84683"
-   ],
-   "knowledge_ids": []
-  },
-  {
-   "id": "P-088-00-d355ac0c73f4",
-   "qid": "P-088-00-d355ac0c73f4",
-   "type": "mcq",
-   "prompt": "有钱人不一定幸福。",
-   "options": [
-    "金持ちが必ずしも幸福とは限らない。",
-    "スイッチは時間通りに働かなかった。",
-    "同じ事が国家についても当てはまる。",
-    "彼は世間でいう音楽の真の愛好者だ。"
-   ],
-   "h": "b584ae09",
-   "oh": [
-    "b584ae09",
-    "e8b6d63c",
-    "1bbb6c5b",
-    "3e786b72"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-088-01-e253c63421d6",
-   "qid": "P-088-01-e253c63421d6",
-   "type": "mcq",
-   "prompt": "法律未必总是公平的。",
-   "options": [
-    "法が常に公平であるとは限らない。",
-    "インドの人口はどのくらいですか。",
-    "それはホテルから遠くありません。",
-    "その計画では彼に同調できました。"
-   ],
-   "h": "d663334c",
-   "oh": [
-    "d663334c",
-    "4c5d8293",
-    "2d083832",
-    "9c573687"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-088-02-b450916e89b7",
-   "qid": "P-088-02-b450916e89b7",
-   "type": "mcq",
-   "prompt": "史密斯先生是市长候选人。",
-   "options": [
-    "スミス氏は市長候補である。",
-    "この紙はインクを吸わない。",
-    "われわれは体力を自慢した。",
-    "彼の語学力が羨ましいです。"
-   ],
-   "h": "d7451ff4",
-   "oh": [
-    "d7451ff4",
-    "1efc66f7",
-    "3ab0055a",
-    "51b280e9"
-   ],
-   "knowledge_ids": [],
-   "optional": false
-  },
-  {
-   "id": "P-088-V1924-m-d6998f6c9bed",
-   "qid": "P-088-V1924-m-d6998f6c9bed",
-   "type": "mcq",
-   "prompt": "本课词条「恋」（例句语境：那是一场单相思。）的释义是哪一项？",
-   "options": [
-    "恋爱",
-    "公务员",
-    "西",
-    "搬运；运送"
-   ],
-   "h": "61e6261",
-   "oh": [
-    "61e6261",
-    "497ba8b2",
-    "f934a0ce",
-    "3d9e78e1"
-   ],
    "day": 88,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1924"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1924-r-215346678889",
-   "qid": "P-088-V1924-r-215346678889",
-   "type": "mcq",
-   "prompt": "本课词条「恋」（恋爱）的假名读音是哪一项？",
+   "prompt": "「豪華」的中文释义？",
    "options": [
-    "ぎむ",
-    "さらに",
-    "こい",
-    "おえる"
-   ],
-   "h": "82f4a992",
-   "oh": [
-    "1c411283",
-    "a353a370",
-    "82f4a992",
-    "bfeb420c"
-   ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1924"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1925-m-8f9e063b3dc7",
-   "qid": "P-088-V1925-m-8f9e063b3dc7",
-   "type": "mcq",
-   "prompt": "本课词条「恋人」（例句语境：我叫我的恋人「达令」。）的释义是哪一项？",
-   "options": [
-    "雨",
-    "事务；总务",
-    "正中间",
-    "恋人"
-   ],
-   "h": "7b3d0390",
-   "oh": [
-    "6c2597d7",
-    "82b7dc9a",
-    "21044c5b",
-    "7b3d0390"
-   ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1925"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1925-r-e2ce948d568d",
-   "qid": "P-088-V1925-r-e2ce948d568d",
-   "type": "mcq",
-   "prompt": "本课词条「恋人」（恋人）的假名读音是哪一项？",
-   "options": [
-    "せんしゅう",
-    "ぜんたい",
-    "ぐん",
-    "こいびと"
-   ],
-   "h": "91f0641",
-   "oh": [
-    "69af409f",
-    "17882d53",
-    "a5f10f14",
-    "91f0641"
-   ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1925"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1926-m-463a25f9e7f2",
-   "qid": "P-088-V1926-m-463a25f9e7f2",
-   "type": "mcq",
-   "prompt": "本课词条「幸運」（例句语境：我运气好，弄到了好座位。）的释义是哪一项？",
-   "options": [
-    "樱花",
-    "关上",
-    "开花",
-    "幸运"
-   ],
-   "h": "1068dff5",
-   "oh": [
-    "7cc18557",
-    "5175ba18",
-    "fb624bea",
-    "1068dff5"
-   ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1926"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1926-r-fd38ff009f34",
-   "qid": "P-088-V1926-r-fd38ff009f34",
-   "type": "mcq",
-   "prompt": "本课词条「幸運」（幸运）的假名读音是哪一项？",
-   "options": [
-    "あやまる",
-    "せつ",
-    "こううん",
-    "ばあい"
-   ],
-   "h": "4b1d19f7",
-   "oh": [
-    "2360f694",
-    "93084a7a",
-    "4b1d19f7",
-    "402e58e9"
-   ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1926"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1927-m-efd0039fec08",
-   "qid": "P-088-V1927-m-efd0039fec08",
-   "type": "mcq",
-   "prompt": "本课词条「講演」（例句语境：今晚的演讲是谁讲？）的释义是哪一项？",
-   "options": [
-    "违反",
+    "高价；昂贵",
     "演讲；报告",
-    "下；下车",
-    "逐渐"
-   ],
-   "h": "cbe6fc67",
-   "oh": [
-    "45ceffdf",
-    "cbe6fc67",
-    "473383fa",
-    "1c940d8d"
-   ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1927"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1927-r-8f4860f75959",
-   "qid": "P-088-V1927-r-8f4860f75959",
-   "type": "mcq",
-   "prompt": "本课词条「講演」（演讲；报告）的假名读音是哪一项？",
-   "options": [
-    "いつつ",
-    "こうえん",
-    "たんご",
-    "すてる"
-   ],
-   "h": "8b3f412d",
-   "oh": [
-    "8e084023",
-    "8b3f412d",
-    "a3c6d8e9",
-    "958344c7"
-   ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1927"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1928-m-2a7bc8993a41",
-   "qid": "P-088-V1928-m-2a7bc8993a41",
-   "type": "mcq",
-   "prompt": "本课词条「効果」（例句语境：那种新药很快就见效了。）的释义是哪一项？",
-   "options": [
-    "裤子",
-    "道歉",
-    "效果",
-    "责备"
-   ],
-   "h": "16372e71",
-   "oh": [
-    "16975b99",
-    "fa984071",
-    "16372e71",
-    "9d9d1a0f"
-   ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1928"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1928-r-389aeb3e4fe8",
-   "qid": "P-088-V1928-r-389aeb3e4fe8",
-   "type": "mcq",
-   "prompt": "本课词条「効果」（效果）的假名读音是哪一项？",
-   "options": [
-    "とても",
-    "こうか",
-    "しらべる",
-    "たたかい"
-   ],
-   "h": "28085f65",
-   "oh": [
-    "828c7373",
-    "28085f65",
-    "e6ce2eb5",
-    "d6a86db4"
-   ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1928"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1929-m-5fe24d3dd483",
-   "qid": "P-088-V1929-m-5fe24d3dd483",
-   "type": "mcq",
-   "prompt": "本课词条「硬貨」（例句语境：这些硬币几乎没什么价值。）的释义是哪一项？",
-   "options": [
-    "战斗；斗争",
-    "管子；烟斗",
-    "硬币",
-    "最近"
-   ],
-   "h": "9b1984be",
-   "oh": [
-    "990bd801",
-    "ec3f7a23",
-    "9b1984be",
-    "a631554a"
-   ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1929"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1929-r-3abd0df9040d",
-   "qid": "P-088-V1929-r-3abd0df9040d",
-   "type": "mcq",
-   "prompt": "本课词条「硬貨」（硬币）的假名读音是哪一项？",
-   "options": [
-    "こうか",
-    "さいこう",
-    "かける",
-    "かれ"
-   ],
-   "h": "28085f65",
-   "oh": [
-    "28085f65",
-    "12936181",
-    "4b75027e",
-    "8a487b72"
-   ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1929"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1930-m-c03a55db8bed",
-   "qid": "P-088-V1930-m-c03a55db8bed",
-   "type": "mcq",
-   "prompt": "本课词条「高価」（例句语境：那么贵的书我可买不起。）的释义是哪一项？",
-   "options": [
-    "上个月",
-    "书架",
-    "歧视；区别",
-    "高价；昂贵"
-   ],
-   "h": "79712ad4",
-   "oh": [
-    "8be194e7",
-    "212e13fd",
-    "5a7c741e",
-    "79712ad4"
-   ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1930"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1930-r-d0a9289e915b",
-   "qid": "P-088-V1930-r-d0a9289e915b",
-   "type": "mcq",
-   "prompt": "本课词条「高価」（高价；昂贵）的假名读音是哪一项？",
-   "options": [
-    "ちゅうこ",
-    "さいしゅう",
-    "ちく",
-    "こうか"
-   ],
-   "h": "28085f65",
-   "oh": [
-    "fcabf56c",
-    "c1364bce",
-    "89e4e6d9",
-    "28085f65"
-   ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1930"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1931-m-34d9c32a083d",
-   "qid": "P-088-V1931-m-34d9c32a083d",
-   "type": "mcq",
-   "prompt": "本课词条「豪華」（例句语境：那家酒店豪华得无法用语言形容。）的释义是哪一项？",
-   "options": [
-    "大半；大部分",
-    "人物",
-    "深的",
+    "高速",
     "豪华"
    ],
    "h": "27ceaf49",
    "oh": [
-    "7c07408c",
-    "c8ed75cc",
-    "d4137f88",
+    "79712ad4",
+    "cbe6fc67",
+    "bdcd27a8",
     "27ceaf49"
    ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "meaning",
    "knowledge_ids": [
     "V1931"
    ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1931-r-d22bc735434e",
-   "qid": "P-088-V1931-r-d22bc735434e",
-   "type": "mcq",
-   "prompt": "本课词条「豪華」（豪华）的假名读音是哪一项？",
-   "options": [
-    "きほん",
-    "したしい",
-    "ごうか",
-    "あく"
-   ],
-   "h": "f894a0fc",
-   "oh": [
-    "254aea7e",
-    "b5a310d0",
-    "f894a0fc",
-    "496abefe"
-   ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1931"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1932-m-bd4afde557f4",
-   "qid": "P-088-V1932-m-bd4afde557f4",
-   "type": "mcq",
-   "prompt": "本课词条「合格」（例句语境：我哥哥没能通过考试。）的释义是哪一项？",
-   "options": [
-    "合格；考上",
-    "一定",
-    "邀请；引诱",
-    "神"
-   ],
-   "h": "a81d6297",
-   "oh": [
-    "a81d6297",
-    "fcba1d5f",
-    "494a36ef",
-    "db7be001"
-   ],
-   "day": 88,
-   "group": "vocab",
    "capability": "meaning",
-   "knowledge_ids": [
-    "V1932"
-   ],
-   "source_day": 88,
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "P-088-V1932-r-e9136c6a8504",
-   "qid": "P-088-V1932-r-e9136c6a8504",
+   "id": "D13-088-V1936-reading",
+   "qid": "D13-088-V1936-reading",
    "type": "mcq",
-   "prompt": "本课词条「合格」（合格；考上）的假名读音是哪一项？",
-   "options": [
-    "しんせつ",
-    "あける",
-    "ごうかく",
-    "はつおん"
-   ],
-   "h": "4dfc9c9",
-   "oh": [
-    "3688d938",
-    "886e3095",
-    "4dfc9c9",
-    "897043cd"
-   ],
    "day": 88,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1932"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1933-m-11d2388273e9",
-   "qid": "P-088-V1933-m-11d2388273e9",
-   "type": "mcq",
-   "prompt": "本课词条「交換」（例句语境：跟你换个座位吧。）的释义是哪一项？",
-   "options": [
-    "吃饭；用餐",
-    "自由",
-    "迟到",
-    "交换"
-   ],
-   "h": "dc204f03",
-   "oh": [
-    "1198370a",
-    "5b003924",
-    "44d6a17a",
-    "dc204f03"
-   ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1933"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1933-r-d1dc0aa99870",
-   "qid": "P-088-V1933-r-d1dc0aa99870",
-   "type": "mcq",
-   "prompt": "本课词条「交換」（交换）的假名读音是哪一项？",
-   "options": [
-    "こうかん",
-    "かない",
-    "かみなり",
-    "じっさい"
-   ],
-   "h": "fb484042",
-   "oh": [
-    "fb484042",
-    "c4502cec",
-    "21feb78f",
-    "13c4e68d"
-   ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1933"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1934-m-878d3cc43b65",
-   "qid": "P-088-V1934-m-878d3cc43b65",
-   "type": "mcq",
-   "prompt": "本课词条「航空」（例句语境：机票比火车票贵。）的释义是哪一项？",
-   "options": [
-    "航空",
-    "音响",
-    "柔道",
-    "脱落；漏掉"
-   ],
-   "h": "1f959cc5",
-   "oh": [
-    "1f959cc5",
-    "371d0add",
-    "a800ab0",
-    "54ff0bb4"
-   ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1934"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1934-r-fb76cea3a2a6",
-   "qid": "P-088-V1934-r-fb76cea3a2a6",
-   "type": "mcq",
-   "prompt": "本课词条「航空」（航空）的假名读音是哪一项？",
-   "options": [
-    "レストラン",
-    "しょくもつ",
-    "こうくう",
-    "なるほど"
-   ],
-   "h": "183de08d",
-   "oh": [
-    "89b38d4e",
-    "e4e0e02",
-    "183de08d",
-    "c56c9e96"
-   ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1934"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1935-m-c84824f66117",
-   "qid": "P-088-V1935-m-c84824f66117",
-   "type": "mcq",
-   "prompt": "本课词条「光景」（例句语境：看到那番景象，我吓了一跳。）的释义是哪一项？",
-   "options": [
-    "寄存；托付",
-    "大致；大概",
-    "景象",
-    "使用"
-   ],
-   "h": "59dd716d",
-   "oh": [
-    "5abb8fde",
-    "2868b2f6",
-    "59dd716d",
-    "ad44712"
-   ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1935"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1935-r-d30a3158758e",
-   "qid": "P-088-V1935-r-d30a3158758e",
-   "type": "mcq",
-   "prompt": "本课词条「光景」（景象）的假名读音是哪一项？",
-   "options": [
-    "あらう",
-    "わたる",
-    "ひらく",
-    "こうけい"
-   ],
-   "h": "eab09f79",
-   "oh": [
-    "194c9806",
-    "aa3328e8",
-    "205796c1",
-    "eab09f79"
-   ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1935"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1936-m-a3cc5b6c88db",
-   "qid": "P-088-V1936-m-a3cc5b6c88db",
-   "type": "mcq",
-   "prompt": "本课词条「合計」（例句语境：把这一列数字加起来。）的释义是哪一项？",
-   "options": [
-    "合计",
-    "撑（伞）；照射",
-    "背诵",
-    "楼顶；屋顶"
-   ],
-   "h": "cbef4a2",
-   "oh": [
-    "cbef4a2",
-    "c4032ad1",
-    "9cb5f77a",
-    "871251"
-   ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1936"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1936-r-6504e710b015",
-   "qid": "P-088-V1936-r-6504e710b015",
-   "type": "mcq",
-   "prompt": "本课词条「合計」（合计）的假名读音是哪一项？",
+   "prompt": "「合計」（合计）的假名读音是哪一项？",
    "options": [
     "ごうけい",
-    "ちじ",
-    "だけど",
-    "さまざま"
+    "ごうかく",
+    "ごうか",
+    "ごうとう"
    ],
    "h": "ae04294a",
    "oh": [
     "ae04294a",
-    "9ae5019c",
-    "14439ef9",
-    "ed6551de"
+    "4dfc9c9",
+    "f894a0fc",
+    "be69baa9"
    ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "reading",
    "knowledge_ids": [
     "V1936"
    ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1937-m-6bee587f1e92",
-   "qid": "P-088-V1937-m-6bee587f1e92",
-   "type": "mcq",
-   "prompt": "本课词条「攻撃」（例句语境：除要害部位外，其他攻击都允许。）的释义是哪一项？",
-   "options": [
-    "攻击",
-    "除去；除外",
-    "公司",
-    "什么时候"
-   ],
-   "h": "b00685f3",
-   "oh": [
-    "b00685f3",
-    "218d63c3",
-    "46284589",
-    "b75b4420"
-   ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1937"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1937-r-a65779b44753",
-   "qid": "P-088-V1937-r-a65779b44753",
-   "type": "mcq",
-   "prompt": "本课词条「攻撃」（攻击）的假名读音是哪一项？",
-   "options": [
-    "こうりょ",
-    "おぼれる",
-    "コンピュータ",
-    "こうげき"
-   ],
-   "h": "11b31b75",
-   "oh": [
-    "4953de8f",
-    "62afae52",
-    "f0add061",
-    "11b31b75"
-   ],
-   "day": 88,
-   "group": "vocab",
    "capability": "reading",
-   "knowledge_ids": [
-    "V1937"
-   ],
-   "source_day": 88,
-   "optional": true
+   "group": "vocab"
   },
   {
-   "id": "P-088-V1938-m-fdc795131a34",
-   "qid": "P-088-V1938-m-fdc795131a34",
+   "id": "D13-088-G0119-meaning",
+   "qid": "D13-088-G0119-meaning",
    "type": "mcq",
-   "prompt": "本课词条「貢献」（例句语境：她为公司做出了很大贡献。）的释义是哪一项？",
-   "options": [
-    "贡献",
-    "小的",
-    "淋浴；沐浴",
-    "词典"
-   ],
-   "h": "24d3b066",
-   "oh": [
-    "24d3b066",
-    "a540520e",
-    "a4707097",
-    "fb94cda0"
-   ],
    "day": 88,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1938"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1938-r-31ea99e4ce32",
-   "qid": "P-088-V1938-r-31ea99e4ce32",
-   "type": "mcq",
-   "prompt": "本课词条「貢献」（贡献）的假名读音是哪一项？",
+   "prompt": "请选择「〜ばかりでなく」所用句型的主要含义。",
    "options": [
-    "せんたく",
-    "こうけん",
-    "カメラ",
-    "にんき"
-   ],
-   "h": "3bb11efc",
-   "oh": [
-    "5f7f0a89",
-    "3bb11efc",
-    "9b1a6de8",
-    "dbb81702"
-   ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1938"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1939-m-6a7a81ad7120",
-   "qid": "P-088-V1939-m-6a7a81ad7120",
-   "type": "mcq",
-   "prompt": "本课词条「広告」（例句语境：那件商品在电视上做了广告。）的释义是哪一项？",
-   "options": [
-    "广告",
-    "借（入）；向人借",
-    "解开；解除",
-    "粮食"
-   ],
-   "h": "83cbbacc",
-   "oh": [
-    "83cbbacc",
-    "1cce165f",
-    "4e7bd228",
-    "992c8aea"
-   ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "meaning",
-   "knowledge_ids": [
-    "V1939"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-V1939-r-ceb638529215",
-   "qid": "P-088-V1939-r-ceb638529215",
-   "type": "mcq",
-   "prompt": "本课词条「広告」（广告）的假名读音是哪一项？",
-   "options": [
-    "こうこく",
-    "かみのけ",
-    "ひろい",
-    "あくま"
-   ],
-   "h": "2fb58946",
-   "oh": [
-    "2fb58946",
-    "c2f394a6",
-    "54cdee4",
-    "12be5380"
-   ],
-   "day": 88,
-   "group": "vocab",
-   "capability": "reading",
-   "knowledge_ids": [
-    "V1939"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-G0119-m-c7cd509c6263",
-   "qid": "P-088-G0119-m-c7cd509c6263",
-   "type": "mcq",
-   "prompt": "本课句型「〜ばかりでなく」在以下语境中的释义是哪一项？ 例句：この映画は子どもばかりでなく、大人も楽しめる。（这部电影不仅孩子爱看，大人也能享受。）",
-   "options": [
-    "正当…的时候",
-    "我认为…",
-    "不仅…而且…",
-    "因为…嘛（撒娇辩解）"
+    "既…又…；也…也…",
+    "多亏…／都怪…",
+    "顺便…",
+    "不仅…而且…"
    ],
    "h": "cdb11d97",
    "oh": [
-    "69f0cec4",
-    "671e9bb4",
-    "cdb11d97",
-    "2d438b52"
+    "37943044",
+    "a166a758",
+    "9f195e94",
+    "cdb11d97"
    ],
-   "day": 88,
-   "group": "grammar",
-   "capability": "meaning",
    "knowledge_ids": [
     "G0119"
    ],
-   "source_day": 88,
-   "optional": true
+   "capability": "meaning",
+   "group": "grammar"
   },
   {
-   "id": "P-088-G0121-m-d37d678c4486",
-   "qid": "P-088-G0121-m-d37d678c4486",
+   "id": "D13-088-V1938-meaning",
+   "qid": "D13-088-V1938-meaning",
    "type": "mcq",
-   "prompt": "本课句型「〜も〜ば〜も」在以下语境中的释义是哪一项？ 例句：彼女は歌も歌えば、ピアノも弾く。（她既会唱歌，也会弹钢琴。）",
+   "day": 88,
+   "prompt": "「貢献」的中文释义？",
    "options": [
-    "…的方法；…的方式",
-    "动词辞书形（简体非过去）与简体形",
-    "不是…",
+    "广告",
+    "攻击",
+    "合计",
+    "贡献"
+   ],
+   "h": "24d3b066",
+   "oh": [
+    "83cbbacc",
+    "b00685f3",
+    "cbef4a2",
+    "24d3b066"
+   ],
+   "knowledge_ids": [
+    "V1938"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1939-reading",
+   "qid": "D13-088-V1939-reading",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「広告」（广告）的假名读音是哪一项？",
+   "options": [
+    "こううん",
+    "こうしゃ",
+    "こうげき",
+    "こうこく"
+   ],
+   "h": "2fb58946",
+   "oh": [
+    "4b1d19f7",
+    "e3136446",
+    "11b31b75",
+    "2fb58946"
+   ],
+   "knowledge_ids": [
+    "V1939"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1924-meaning",
+   "qid": "D13-088-V1924-meaning",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「恋」的中文释义？",
+   "options": [
+    "交换",
+    "航空",
+    "恋爱",
+    "幸运"
+   ],
+   "h": "61e6261",
+   "oh": [
+    "dc204f03",
+    "1f959cc5",
+    "61e6261",
+    "1068dff5"
+   ],
+   "knowledge_ids": [
+    "V1924"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1934-meaning",
+   "qid": "D13-088-V1934-meaning",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「こうくう」的中文释义？",
+   "options": [
+    "航空",
+    "合格；考上",
+    "贡献",
+    "恋爱"
+   ],
+   "h": "1f959cc5",
+   "oh": [
+    "1f959cc5",
+    "a81d6297",
+    "24d3b066",
+    "61e6261"
+   ],
+   "knowledge_ids": [
+    "V1934"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1929-reading",
+   "qid": "D13-088-V1929-reading",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「硬貨」（硬币）的假名读音是哪一项？",
+   "options": [
+    "こうか",
+    "こうどう",
+    "こうけい",
+    "こうこく"
+   ],
+   "h": "28085f65",
+   "oh": [
+    "28085f65",
+    "17c04bdb",
+    "eab09f79",
+    "2fb58946"
+   ],
+   "knowledge_ids": [
+    "V1929"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1931-reading",
+   "qid": "D13-088-V1931-reading",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「豪華」（豪华）的假名读音是哪一项？",
+   "options": [
+    "ごうかく",
+    "ごうとう",
+    "ごうけい",
+    "ごうか"
+   ],
+   "h": "f894a0fc",
+   "oh": [
+    "4dfc9c9",
+    "be69baa9",
+    "ae04294a",
+    "f894a0fc"
+   ],
+   "knowledge_ids": [
+    "V1931"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1930-meaning",
+   "qid": "D13-088-V1930-meaning",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「高価」的中文释义？",
+   "options": [
+    "豪华",
+    "交往",
+    "高速",
+    "高价；昂贵"
+   ],
+   "h": "79712ad4",
+   "oh": [
+    "27ceaf49",
+    "3e190a49",
+    "bdcd27a8",
+    "79712ad4"
+   ],
+   "knowledge_ids": [
+    "V1930"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1936-meaning",
+   "qid": "D13-088-V1936-meaning",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「合計」的中文释义？",
+   "options": [
+    "合计",
+    "构成",
+    "合格；考上",
+    "航空"
+   ],
+   "h": "cbef4a2",
+   "oh": [
+    "cbef4a2",
+    "4e138b79",
+    "a81d6297",
+    "1f959cc5"
+   ],
+   "knowledge_ids": [
+    "V1936"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-G0121-context",
+   "qid": "D13-088-G0121-context",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "请选择「人生には、いいときもあれば悪いときもある。」的中文意思。",
+   "options": [
+    "一个人生活之后，才明白父母的辛苦。",
+    "现在正是努力的时候。",
+    "互联网很方便，另一方面也有危险的一面。",
+    "人生既有好时候，也有坏时候。"
+   ],
+   "h": "300e1073",
+   "oh": [
+    "a38c66e6",
+    "f8d5a359",
+    "45de1ff1",
+    "300e1073"
+   ],
+   "knowledge_ids": [
+    "G0121"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-088-V1932-meaning",
+   "qid": "D13-088-V1932-meaning",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「合格」的中文释义？",
+   "options": [
+    "合格；考上",
+    "合计",
+    "交换",
+    "行动"
+   ],
+   "h": "a81d6297",
+   "oh": [
+    "a81d6297",
+    "cbef4a2",
+    "dc204f03",
+    "2f8a60b9"
+   ],
+   "knowledge_ids": [
+    "V1932"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1937-reading",
+   "qid": "D13-088-V1937-reading",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「攻撃」（攻击）的假名读音是哪一项？",
+   "options": [
+    "こうどう",
+    "こうかん",
+    "こうげき",
+    "こうさい"
+   ],
+   "h": "11b31b75",
+   "oh": [
+    "17c04bdb",
+    "fb484042",
+    "11b31b75",
+    "5a0fa26d"
+   ],
+   "knowledge_ids": [
+    "V1937"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1932-recall",
+   "qid": "D13-088-V1932-recall",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「合格；考上」对应哪个日语词？",
+   "options": [
+    "こうかん",
+    "こうどう",
+    "ごうけい",
+    "ごうかく"
+   ],
+   "h": "4dfc9c9",
+   "oh": [
+    "fb484042",
+    "17c04bdb",
+    "ae04294a",
+    "4dfc9c9"
+   ],
+   "knowledge_ids": [
+    "V1932"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1935-meaning",
+   "qid": "D13-088-V1935-meaning",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「光景」的中文释义？",
+   "options": [
+    "景象",
+    "行动",
+    "演讲；报告",
+    "硬币"
+   ],
+   "h": "59dd716d",
+   "oh": [
+    "59dd716d",
+    "2f8a60b9",
+    "cbe6fc67",
+    "9b1984be"
+   ],
+   "knowledge_ids": [
+    "V1935"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1935-reading",
+   "qid": "D13-088-V1935-reading",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「光景」（景象）的假名读音是哪一项？",
+   "options": [
+    "こうどう",
+    "こうけい",
+    "こうか",
+    "こうえん"
+   ],
+   "h": "eab09f79",
+   "oh": [
+    "17c04bdb",
+    "eab09f79",
+    "28085f65",
+    "8b3f412d"
+   ],
+   "knowledge_ids": [
+    "V1935"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1926-reading",
+   "qid": "D13-088-V1926-reading",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「幸運」（幸运）的假名读音是哪一项？",
+   "options": [
+    "こうえん",
+    "こうせい",
+    "こうけい",
+    "こううん"
+   ],
+   "h": "4b1d19f7",
+   "oh": [
+    "8b3f412d",
+    "60aa103",
+    "eab09f79",
+    "4b1d19f7"
+   ],
+   "knowledge_ids": [
+    "V1926"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1930-reading",
+   "qid": "D13-088-V1930-reading",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「高価」（高价；昂贵）的假名读音是哪一项？",
+   "options": [
+    "こうせい",
+    "こうそく",
+    "こうさい",
+    "こうか"
+   ],
+   "h": "28085f65",
+   "oh": [
+    "60aa103",
+    "2f2e3704",
+    "5a0fa26d",
+    "28085f65"
+   ],
+   "knowledge_ids": [
+    "V1930"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-G0121-form",
+   "qid": "D13-088-G0121-form",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "选出符合下列意思的日语句子。\n她既会唱歌，也会弹钢琴。",
+   "options": [
+    "この店は料理がおいしいだけでなく、値段も安い。",
+    "彼女は歌も歌えば、ピアノも弾く。",
+    "子どものころ、母に毎日ピアノを練習させられた。",
+    "これからも日本語を勉強していきます。"
+   ],
+   "h": "a38cfbe5",
+   "oh": [
+    "f931fe98",
+    "a38cfbe5",
+    "ee98dc54",
+    "2b76b2e0"
+   ],
+   "knowledge_ids": [
+    "G0121"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-088-V1934-recall",
+   "qid": "D13-088-V1934-recall",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「航空」对应哪个日语词？",
+   "options": [
+    "こうくう",
+    "こうけん",
+    "こい",
+    "ごうかく"
+   ],
+   "h": "183de08d",
+   "oh": [
+    "183de08d",
+    "3bb11efc",
+    "82f4a992",
+    "4dfc9c9"
+   ],
+   "knowledge_ids": [
+    "V1934"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1926-meaning",
+   "qid": "D13-088-V1926-meaning",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「幸運」的中文释义？",
+   "options": [
+    "构成",
+    "景象",
+    "演讲；报告",
+    "幸运"
+   ],
+   "h": "1068dff5",
+   "oh": [
+    "4e138b79",
+    "59dd716d",
+    "cbe6fc67",
+    "1068dff5"
+   ],
+   "knowledge_ids": [
+    "V1926"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1925-meaning",
+   "qid": "D13-088-V1925-meaning",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「こいびと」的中文释义？",
+   "options": [
+    "恋人",
+    "行动",
+    "后者",
+    "演讲；报告"
+   ],
+   "h": "7b3d0390",
+   "oh": [
+    "7b3d0390",
+    "2f8a60b9",
+    "64c606fc",
+    "cbe6fc67"
+   ],
+   "knowledge_ids": [
+    "V1925"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1928-meaning",
+   "qid": "D13-088-V1928-meaning",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「効果」的中文释义？",
+   "options": [
+    "恋爱",
+    "合格；考上",
+    "硬币",
+    "效果"
+   ],
+   "h": "16372e71",
+   "oh": [
+    "61e6261",
+    "a81d6297",
+    "9b1984be",
+    "16372e71"
+   ],
+   "knowledge_ids": [
+    "V1928"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1927-meaning",
+   "qid": "D13-088-V1927-meaning",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「講演」的中文释义？",
+   "options": [
+    "效果",
+    "演讲；报告",
+    "贡献",
+    "幸运"
+   ],
+   "h": "cbe6fc67",
+   "oh": [
+    "16372e71",
+    "cbe6fc67",
+    "24d3b066",
+    "1068dff5"
+   ],
+   "knowledge_ids": [
+    "V1927"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1933-meaning",
+   "qid": "D13-088-V1933-meaning",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「交換」的中文释义？",
+   "options": [
+    "交换",
+    "贡献",
+    "广告",
+    "幸运"
+   ],
+   "h": "dc204f03",
+   "oh": [
+    "dc204f03",
+    "24d3b066",
+    "83cbbacc",
+    "1068dff5"
+   ],
+   "knowledge_ids": [
+    "V1933"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-G0121-meaning",
+   "qid": "D13-088-G0121-meaning",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "请选择「〜も〜ば〜も」所用句型的主要含义。",
+   "options": [
+    "不仅…而且…",
+    "顺便…",
+    "…完；…不了",
     "既…又…；也…也…"
    ],
    "h": "37943044",
    "oh": [
-    "ae311340",
-    "d8e64e9d",
-    "656f52c9",
+    "cdb11d97",
+    "9f195e94",
+    "578a5a51",
     "37943044"
    ],
-   "day": 88,
-   "group": "grammar",
-   "capability": "meaning",
    "knowledge_ids": [
     "G0121"
    ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "P-088-G0121-u-81b86eaebf02",
-   "qid": "P-088-G0121-u-81b86eaebf02",
-   "type": "mcq",
-   "prompt": "课程中「〜も〜ば〜も」的接续说明是哪一项？ 例句：彼女は歌も歌えば、ピアノも弾く。（她既会唱歌，也会弹钢琴。）",
-   "options": [
-    "名词 + が",
-    "名词 + によって；名词 + による + 名词",
-    "名词 + も + ば形 + 名词 + も；名词 + も + い形容词ければ + 名词 + も",
-    "名词 + や + 名词（部分列举）"
-   ],
-   "h": "9574a17d",
-   "oh": [
-    "25f1ba0",
-    "492ad6e5",
-    "9574a17d",
-    "916e38a9"
-   ],
-   "day": 88,
-   "group": "grammar",
-   "capability": "usage",
-   "knowledge_ids": [
-    "G0121"
-   ],
-   "source_day": 88,
-   "optional": true
-  },
-  {
-   "id": "X-088-V1940-c",
-   "qid": "X-088-V1940-c",
-   "type": "mcq",
-   "day": 88,
-   "prompt": "「交際」的假名读音是？",
-   "options": [
-    "タイプ",
-    "こうさい",
-    "がか",
-    "かんごふ"
-   ],
-   "h": "5a0fa26d",
-   "oh": [
-    "442c32eb",
-    "5a0fa26d",
-    "856f9aa0",
-    "fa63c338"
-   ],
-   "knowledge_ids": [
-    "V1940"
-   ],
-   "capability": "reading",
-   "group": "vocab",
-   "optional": true
-  },
-  {
-   "id": "X-088-V1941-c",
-   "qid": "X-088-V1941-c",
-   "type": "mcq",
-   "day": 88,
-   "prompt": "「後者」的意思是？",
-   "options": [
-    "衬衫",
-    "接连不断",
-    "懂；明白",
-    "后者"
-   ],
-   "h": "64c606fc",
-   "oh": [
-    "ede6da20",
-    "586aea08",
-    "b7d2ad13",
-    "64c606fc"
-   ],
-   "knowledge_ids": [
-    "V1941"
-   ],
    "capability": "meaning",
-   "group": "vocab",
-   "optional": true
+   "group": "grammar"
   },
   {
-   "id": "X-088-V1942-c",
-   "qid": "X-088-V1942-c",
+   "id": "D13-088-V1938-reading",
+   "qid": "D13-088-V1938-reading",
    "type": "mcq",
    "day": 88,
-   "prompt": "「構成」的假名读音是？",
+   "prompt": "「貢献」（贡献）的假名读音是哪一项？",
    "options": [
-    "こうせい",
-    "きしゃ",
-    "いちどに",
-    "うちゅう"
-   ],
-   "h": "60aa103",
-   "oh": [
-    "60aa103",
-    "3cb6467a",
-    "1530c652",
-    "35684a23"
-   ],
-   "knowledge_ids": [
-    "V1942"
-   ],
-   "capability": "reading",
-   "group": "vocab",
-   "optional": true
-  },
-  {
-   "id": "X-088-V1943-c",
-   "qid": "X-088-V1943-c",
-   "type": "mcq",
-   "day": 88,
-   "prompt": "「高速」的意思是？",
-   "options": [
-    "奶油",
-    "正式",
-    "偷；盗窃",
-    "高速"
-   ],
-   "h": "bdcd27a8",
-   "oh": [
-    "6d281b50",
-    "5e6e5a67",
-    "24a329d9",
-    "bdcd27a8"
-   ],
-   "knowledge_ids": [
-    "V1943"
-   ],
-   "capability": "meaning",
-   "group": "vocab",
-   "optional": true
-  },
-  {
-   "id": "X-088-V1944-c",
-   "qid": "X-088-V1944-c",
-   "type": "mcq",
-   "day": 88,
-   "prompt": "「行動」的假名读音是？",
-   "options": [
-    "たいら",
-    "おか",
+    "こうこく",
+    "こうげき",
     "こうどう",
-    "ゆっくり"
+    "こうけん"
    ],
-   "h": "17c04bdb",
+   "h": "3bb11efc",
    "oh": [
-    "fc25e4b5",
-    "6d4c1f62",
+    "2fb58946",
+    "11b31b75",
     "17c04bdb",
-    "e37806fb"
+    "3bb11efc"
+   ],
+   "knowledge_ids": [
+    "V1938"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1929-meaning",
+   "qid": "D13-088-V1929-meaning",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「硬貨」的中文释义？",
+   "options": [
+    "硬币",
+    "广告",
+    "行动",
+    "景象"
+   ],
+   "h": "9b1984be",
+   "oh": [
+    "9b1984be",
+    "83cbbacc",
+    "2f8a60b9",
+    "59dd716d"
+   ],
+   "knowledge_ids": [
+    "V1929"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1925-recall",
+   "qid": "D13-088-V1925-recall",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「恋人」对应哪个日语词？",
+   "options": [
+    "こうえん",
+    "こうどう",
+    "こいびと",
+    "こうしゃ"
+   ],
+   "h": "91f0641",
+   "oh": [
+    "8b3f412d",
+    "17c04bdb",
+    "91f0641",
+    "e3136446"
+   ],
+   "knowledge_ids": [
+    "V1925"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1939-meaning",
+   "qid": "D13-088-V1939-meaning",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「広告」的中文释义？",
+   "options": [
+    "广告",
+    "幸运",
+    "后者",
+    "强盗；抢劫"
+   ],
+   "h": "83cbbacc",
+   "oh": [
+    "83cbbacc",
+    "1068dff5",
+    "64c606fc",
+    "cf692054"
+   ],
+   "knowledge_ids": [
+    "V1939"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1927-reading",
+   "qid": "D13-088-V1927-reading",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「講演」（演讲；报告）的假名读音是哪一项？",
+   "options": [
+    "こうか",
+    "こうけん",
+    "こうえん",
+    "こううん"
+   ],
+   "h": "8b3f412d",
+   "oh": [
+    "28085f65",
+    "3bb11efc",
+    "8b3f412d",
+    "4b1d19f7"
+   ],
+   "knowledge_ids": [
+    "V1927"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1928-reading",
+   "qid": "D13-088-V1928-reading",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「効果」（效果）的假名读音是哪一项？",
+   "options": [
+    "こうけん",
+    "こうか",
+    "こいびと",
+    "こい"
+   ],
+   "h": "28085f65",
+   "oh": [
+    "3bb11efc",
+    "28085f65",
+    "91f0641",
+    "82f4a992"
+   ],
+   "knowledge_ids": [
+    "V1928"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1933-reading",
+   "qid": "D13-088-V1933-reading",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「交換」（交换）的假名读音是哪一项？",
+   "options": [
+    "こうかん",
+    "こううん",
+    "こうけん",
+    "こうこく"
+   ],
+   "h": "fb484042",
+   "oh": [
+    "fb484042",
+    "4b1d19f7",
+    "3bb11efc",
+    "2fb58946"
+   ],
+   "knowledge_ids": [
+    "V1933"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1937-meaning",
+   "qid": "D13-088-V1937-meaning",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「攻撃」的中文释义？",
+   "options": [
+    "行动",
+    "交换",
+    "合计",
+    "攻击"
+   ],
+   "h": "b00685f3",
+   "oh": [
+    "2f8a60b9",
+    "dc204f03",
+    "cbef4a2",
+    "b00685f3"
+   ],
+   "knowledge_ids": [
+    "V1937"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-G0119-context",
+   "qid": "D13-088-G0119-context",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "请选择「運動は体にいいばかりでなく、ストレスを減らす効果もある。」的中文意思。",
+   "options": [
+    "运动不仅对身体好，还有减压的效果。",
+    "这家店不仅菜好吃，价格也便宜。",
+    "这家店不仅便宜，味道也好。",
+    "他不仅工作，还经常帮忙做家务。"
+   ],
+   "h": "4ff549e6",
+   "oh": [
+    "4ff549e6",
+    "a212d37e",
+    "1ef336b2",
+    "869cd4e7"
+   ],
+   "knowledge_ids": [
+    "G0119"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-088-V1924-recall",
+   "qid": "D13-088-V1924-recall",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「恋爱」对应哪个日语词？",
+   "options": [
+    "こい",
+    "こううん",
+    "こうくう",
+    "こうかん"
+   ],
+   "h": "82f4a992",
+   "oh": [
+    "82f4a992",
+    "4b1d19f7",
+    "183de08d",
+    "fb484042"
+   ],
+   "knowledge_ids": [
+    "V1924"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-G0119-form",
+   "qid": "D13-088-G0119-form",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "选出符合下列意思的日语句子。\n这部电影不仅孩子爱看，大人也能享受。",
+   "options": [
+    "子ども向けの番組だが、大人が見ても十分楽しめる。",
+    "この店は安いばかりか、味も美味しいです。",
+    "この映画は子どもばかりでなく、大人も楽しめる。",
+    "この映画はきっと人気が出ると思う。"
+   ],
+   "h": "c7f5853a",
+   "oh": [
+    "fbd5c6d0",
+    "2757fc19",
+    "c7f5853a",
+    "9ad9732b"
+   ],
+   "knowledge_ids": [
+    "G0119"
+   ],
+   "capability": "usage",
+   "group": "grammar"
+  },
+  {
+   "id": "D13-088-V1944-meaning",
+   "qid": "D13-088-V1944-meaning",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「行動」的中文释义？",
+   "options": [
+    "交往",
+    "行动",
+    "强盗；抢劫",
+    "广告"
+   ],
+   "h": "2f8a60b9",
+   "oh": [
+    "3e190a49",
+    "2f8a60b9",
+    "cf692054",
+    "83cbbacc"
    ],
    "knowledge_ids": [
     "V1944"
    ],
-   "capability": "reading",
-   "group": "vocab",
-   "optional": true
+   "capability": "meaning",
+   "group": "vocab"
   },
   {
-   "id": "X-088-V1945-c",
-   "qid": "X-088-V1945-c",
+   "id": "D13-088-V1945-reading",
+   "qid": "D13-088-V1945-reading",
    "type": "mcq",
    "day": 88,
-   "prompt": "「強盗」的意思是？",
+   "prompt": "「強盗」（强盗；抢劫）的假名读音是哪一项？",
    "options": [
-    "入口",
-    "景色",
+    "ごうかく",
+    "ごうとう",
+    "ごうか",
+    "ごうけい"
+   ],
+   "h": "be69baa9",
+   "oh": [
+    "4dfc9c9",
+    "be69baa9",
+    "f894a0fc",
+    "ae04294a"
+   ],
+   "knowledge_ids": [
+    "V1945"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1942-meaning",
+   "qid": "D13-088-V1942-meaning",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「構成」的中文释义？",
+   "options": [
+    "构成",
+    "后者",
+    "交换",
+    "幸运"
+   ],
+   "h": "4e138b79",
+   "oh": [
+    "4e138b79",
+    "64c606fc",
+    "dc204f03",
+    "1068dff5"
+   ],
+   "knowledge_ids": [
+    "V1942"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1945-meaning",
+   "qid": "D13-088-V1945-meaning",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「強盗」的中文释义？",
+   "options": [
     "强盗；抢劫",
-    "自豪；自夸"
+    "景象",
+    "构成",
+    "演讲；报告"
    ],
    "h": "cf692054",
    "oh": [
-    "2ad9a8b9",
-    "46f35d84",
     "cf692054",
-    "6322adc8"
+    "59dd716d",
+    "4e138b79",
+    "cbe6fc67"
    ],
    "knowledge_ids": [
     "V1945"
    ],
    "capability": "meaning",
-   "group": "vocab",
-   "optional": true
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1943-meaning",
+   "qid": "D13-088-V1943-meaning",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「こうそく」的中文释义？",
+   "options": [
+    "航空",
+    "豪华",
+    "高速",
+    "高价；昂贵"
+   ],
+   "h": "bdcd27a8",
+   "oh": [
+    "1f959cc5",
+    "27ceaf49",
+    "bdcd27a8",
+    "79712ad4"
+   ],
+   "knowledge_ids": [
+    "V1943"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1940-meaning",
+   "qid": "D13-088-V1940-meaning",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「交際」的中文释义？",
+   "options": [
+    "广告",
+    "交往",
+    "构成",
+    "演讲；报告"
+   ],
+   "h": "3e190a49",
+   "oh": [
+    "83cbbacc",
+    "3e190a49",
+    "4e138b79",
+    "cbe6fc67"
+   ],
+   "knowledge_ids": [
+    "V1940"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1941-reading",
+   "qid": "D13-088-V1941-reading",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「後者」（后者）的假名读音是哪一项？",
+   "options": [
+    "こうさい",
+    "こうしゃ",
+    "こいびと",
+    "こうせい"
+   ],
+   "h": "e3136446",
+   "oh": [
+    "5a0fa26d",
+    "e3136446",
+    "91f0641",
+    "60aa103"
+   ],
+   "knowledge_ids": [
+    "V1941"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1940-reading",
+   "qid": "D13-088-V1940-reading",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「交際」（交往）的假名读音是哪一项？",
+   "options": [
+    "こうせい",
+    "こうこく",
+    "こうさい",
+    "こうえん"
+   ],
+   "h": "5a0fa26d",
+   "oh": [
+    "60aa103",
+    "2fb58946",
+    "5a0fa26d",
+    "8b3f412d"
+   ],
+   "knowledge_ids": [
+    "V1940"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1942-reading",
+   "qid": "D13-088-V1942-reading",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「構成」（构成）的假名读音是哪一项？",
+   "options": [
+    "こうかん",
+    "こうしゃ",
+    "こうせい",
+    "こううん"
+   ],
+   "h": "60aa103",
+   "oh": [
+    "fb484042",
+    "e3136446",
+    "60aa103",
+    "4b1d19f7"
+   ],
+   "knowledge_ids": [
+    "V1942"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1944-reading",
+   "qid": "D13-088-V1944-reading",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「行動」（行动）的假名读音是哪一项？",
+   "options": [
+    "こうこく",
+    "こうどう",
+    "こうか",
+    "こうさい"
+   ],
+   "h": "17c04bdb",
+   "oh": [
+    "2fb58946",
+    "17c04bdb",
+    "28085f65",
+    "5a0fa26d"
+   ],
+   "knowledge_ids": [
+    "V1944"
+   ],
+   "capability": "reading",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1941-meaning",
+   "qid": "D13-088-V1941-meaning",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「後者」的中文释义？",
+   "options": [
+    "强盗；抢劫",
+    "构成",
+    "后者",
+    "交往"
+   ],
+   "h": "64c606fc",
+   "oh": [
+    "cf692054",
+    "4e138b79",
+    "64c606fc",
+    "3e190a49"
+   ],
+   "knowledge_ids": [
+    "V1941"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
+  },
+  {
+   "id": "D13-088-V1943-recall",
+   "qid": "D13-088-V1943-recall",
+   "type": "mcq",
+   "day": 88,
+   "prompt": "「高速」对应哪个日语词？",
+   "options": [
+    "こうそく",
+    "ごうか",
+    "こうくう",
+    "こうか"
+   ],
+   "h": "2f2e3704",
+   "oh": [
+    "2f2e3704",
+    "f894a0fc",
+    "183de08d",
+    "28085f65"
+   ],
+   "knowledge_ids": [
+    "V1943"
+   ],
+   "capability": "meaning",
+   "group": "vocab"
   }
  ],
  "listening_material": {

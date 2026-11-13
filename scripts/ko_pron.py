@@ -28,6 +28,7 @@
 from __future__ import annotations
 
 import re
+from functools import cached_property
 
 # 汉字 / 假名判定
 KANJI_RE = re.compile(r"[\u3005\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")  # 々 也算汉字
@@ -507,17 +508,19 @@ class ReadingIndex:
             return hit
         return None
 
-    def reading(self, text: str):
-        """整句假名读音；有汉字解析不出来时返回 None。
+    @cached_property
+    def _tokenizer(self):
+        from janome.tokenizer import Tokenizer
 
-        顺带按词边界修正助词读音：独立成拍的「は/へ」读 わ/え（わたしは→わたしわ、
-        がっこうへ→がっこうえ）。词内部的 は/へ 不受影响（おはよう 的 は 前面是「お」，
-        不在 PARTICLE_PREV 里，不会被误改）。
-        """
+        return Tokenizer()
+
+    def _segments(self, text: str):
         text = str(text or "")
         segments: list[list] = []
+        offsets: list[int] = []
         i, n = 0, len(text)
         while i < n:
+            offsets.append(i)
             hit = self._match(text, i)
             if hit == ("", ""):      # 数词命中但停在汉字串中间 → 整句判失败
                 return None
@@ -553,11 +556,50 @@ class ReadingIndex:
                 ok = prev[1]
             if ok:
                 seg[0] = PARTICLE_READING[seg[0]]
-        # 固定说法按段精确替换，不做整串 replace（否则「ので＋話す」会被改成「のでわなし」）
-        kana = "".join(FIXED_READING.get(seg[0], seg[0]) for seg in segments)
-        return kana
+        return [(offset, FIXED_READING.get(seg[0], seg[0]))
+                for offset, seg in zip(offsets, segments)]
+
+    def reading(self, text: str):
+        """Return the original continuous kana reading, or None if unresolved."""
+        segments = self._segments(text)
+        return None if segments is None else "".join(kana for _, kana in segments)
 
     def hangul(self, text: str) -> str:
-        """整句韩语读音；解析失败返回空串。"""
-        kana = self.reading(text)
-        return to_hangul(kana) if kana else ""
+        """Space particles and conjunctions in sentence readings without splitting inflections."""
+        segments = self._segments(text)
+        if not segments:
+            return ""
+        tokens = list(self._tokenizer.tokenize(text))
+        if "".join(token.surface for token in tokens) != text:
+            return to_hangul("".join(kana for _, kana in segments))
+
+        boundaries = set()
+        particles = {}
+        offset = 0
+        for token in tokens:
+            end = offset + len(token.surface)
+            pos, subtype, *_ = token.part_of_speech.split(",")
+            if pos == "接続詞" or (pos == "助詞" and subtype != "接続助詞"):
+                boundaries.update((offset, end))
+                if pos == "助詞" and token.surface in PARTICLE_READING:
+                    particles[offset] = PARTICLE_READING[token.surface]
+            offset = end
+
+        chunks: list[str] = []
+        chunk: list[str] = []
+        for index, (offset, kana) in enumerate(segments):
+            end = segments[index + 1][0] if index + 1 < len(segments) else len(text)
+            surface = text[offset:end]
+            # Some entries include a particle (e.g. では). Split only when each
+            # source kana aligns with one reading kana.
+            aligned = len(surface) == len(kana) and kana_only(surface)
+            pieces = enumerate(kana, offset) if aligned else [(offset, kana)]
+            for position, piece in pieces:
+                if position in boundaries and chunk:
+                    chunks.append(to_hangul("".join(chunk)))
+                    chunk = []
+                chunk.append(particles.get(position, piece) if aligned else piece)
+        chunks.append(to_hangul("".join(chunk)))
+        spaced = " ".join(chunks)
+        spaced = re.sub(r" +([,.!?」』）)])", r"\1", spaced)
+        return re.sub(r"([,.!?])(?=[가-힣])", r"\1 ", spaced)

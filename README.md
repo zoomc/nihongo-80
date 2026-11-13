@@ -43,6 +43,7 @@ Skill 规范在 [`skills/nh80-progress/SKILL.md`](skills/nh80-progress/SKILL.md)
 - [数据来源与许可](DATA_LICENSES.md) · [外部资源与免费额度](docs/RESOURCE_POLICY.md)
 
 ```sh
+python3 -m pip install -r requirements.txt  # 在项目虚拟环境中安装构建依赖
 python3 scripts/nh80.py init
 python3 scripts/nh80.py validate
 python3 scripts/release_guard.py

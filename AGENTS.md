@@ -21,6 +21,7 @@
 ## 构建与验证
 
 ```sh
+python3 -m pip install -r requirements.txt  # 使用项目虚拟环境
 python3 scripts/nh80.py init
 python3 scripts/nh80.py validate
 python3 -m unittest discover -s tests -p test_v5.py

@@ -87,6 +87,16 @@ details summary{cursor:pointer;color:var(--muted);font-size:13px}
 .kstrip{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .kchip{font-size:13px;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:4px 8px}
 .resource-link{display:block;padding:8px 0}.week-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px}
+.home-start{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.home-start .btn{text-decoration:none}
+.home-stage{margin-top:16px}
+.home-stage h2{margin-bottom:4px}
+.home-weeks details{border-top:1px solid var(--line);padding:8px 0}
+.home-weeks summary{padding:4px 0;font-size:14px}
+.home-lessons{list-style:none;padding:0;margin:8px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(78px,1fr));gap:6px}
+.home-lessons a{display:block;text-align:center;padding:5px;border:1px solid var(--line);border-radius:8px;text-decoration:none}
+.home-resources{display:flex;gap:8px 18px;flex-wrap:wrap}
+.listen-box .q:last-of-type{padding-bottom:8px}
 .lesson-nav{display:flex;justify-content:space-between;gap:16px;margin-top:28px;font-size:14px}
 @media(min-width:1024px){.wrap{max-width:820px}.foot{position:static;background:none;border:0;margin-top:12px}}
 @media(max-width:480px){.jp{font-size:21px}.q .opt{font-size:14px}}

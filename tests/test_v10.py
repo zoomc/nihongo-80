@@ -140,7 +140,7 @@ class TestProgressChain(unittest.TestCase):
 
     def test_service_worker_bumped(self):
         sw = (ROOT / "web/sw.js").read_text(encoding="utf-8")
-        self.assertRegex(sw, r"nh80-v16-[0-9a-f]{12}")
+        self.assertRegex(sw, r"nh80-v17-[0-9a-f]{12}")
         self.assertNotIn("nh80-v5.1-", sw)
         self.assertIn("/api/", sw)
 

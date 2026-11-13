@@ -39,6 +39,8 @@ function showAll(btn){
  PEEK=state;
 }
 var QUESTIONS=$$('.q'), RESULTS={}, RATINGS={}, RETRY=null, STARTED=Date.now();
+var TRANSCRIPT=$('#listenTranscript'), SEEN_TRANSCRIPT=false;
+if(TRANSCRIPT)TRANSCRIPT.addEventListener('toggle',function(){if(TRANSCRIPT.open)SEEN_TRANSCRIPT=true});
 function saveLocal(){try{localStorage.setItem(STORE+'state.'+DAY,JSON.stringify({
  results:RESULTS,ratings:RATINGS,retry:RETRY}))}catch(e){}}
 function restore(){
@@ -49,7 +51,7 @@ function restore(){
    QUESTIONS.forEach(function(q){
     var id=q.dataset.qid, r=(saved.results||{})[id];
     if(r&&$$('.opt',q).some(function(opt){return $('span',opt).textContent===r.answer})){
-     RESULTS[id]=r;
+     RESULTS[id]=Object.assign({},r,{correct:fnv(r.answer)===q.dataset.h});
     }
    });
    if(saved.retry&&Array.isArray(saved.retry.ids)&&saved.retry.ids.length&&
@@ -88,6 +90,7 @@ function renderQuestions(){
   $('.q-number',q).textContent=++visible+'. ';
   renderQuestion(q,results[q.dataset.qid]);
  });
+ var listening=$('#lessonListening');if(listening)listening.hidden=!!RETRY&&!$('.q:not([hidden])',listening);
  updateScore();
 }
 function updateScore(){
@@ -126,7 +129,7 @@ document.addEventListener('change',function(e){
  var q=lab.closest('.q');if(q.hasAttribute('data-done'))return;
  var answer=$('span',lab).textContent, id=q.dataset.qid;
  var result={qid:id,answer:answer,correct:fnv(answer)===q.dataset.h,
-  hinted:false,revealed:false,seconds:Math.min(86400,Math.round((Date.now()-STARTED)/1000))};
+  hinted:id.startsWith('L-')&&(SEEN_TRANSCRIPT||!!TRANSCRIPT?.open),revealed:false,seconds:Math.min(86400,Math.round((Date.now()-STARTED)/1000))};
  activeResults()[id]=result;
  renderQuestion(q,result);saveLocal();updateScore();
  if(!RETRY)updateReviewLink();
@@ -188,7 +191,7 @@ if(f)f.addEventListener('click',function(){
  fetch('/api/progress',{method:'POST',headers:{'content-type':'application/json'},
   body:JSON.stringify(payload)}).then(function(r){return r.json().then(function(d){
    if(!r.ok||d.ok!==true)throw new Error(d.reason||('HTTP '+r.status));return d})})
-  .then(function(){saveLocal();try{localStorage.setItem('nh80.v16.lastDay',String(DAY))}catch(e){}
+  .then(function(){saveLocal();try{localStorage.setItem('nh80.completed.'+DAY,'1')}catch(e){}
    f.textContent='已完成';if(status)status.textContent='学习情况已保存，会话可读取。'})
   .catch(function(e){f.disabled=false;f.textContent='完成';
    if(status)status.textContent='云端暂不可用（'+e.message+'）；记录已留在本机。'});

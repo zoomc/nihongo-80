@@ -125,6 +125,16 @@ details summary{cursor:pointer;color:var(--muted);font-size:13px}
 .kstrip{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .kchip{font-size:13px;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:4px 8px}
 .resource-link{display:block;padding:8px 0}.week-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px}
+.home-start{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.home-start .btn{text-decoration:none}
+.home-stage{margin-top:16px}
+.home-stage h2{margin-bottom:4px}
+.home-weeks details{border-top:1px solid var(--line);padding:8px 0}
+.home-weeks summary{padding:4px 0;font-size:14px}
+.home-lessons{list-style:none;padding:0;margin:8px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(78px,1fr));gap:6px}
+.home-lessons a{display:block;text-align:center;padding:5px;border:1px solid var(--line);border-radius:8px;text-decoration:none}
+.home-resources{display:flex;gap:8px 18px;flex-wrap:wrap}
+.listen-box .q:last-of-type{padding-bottom:8px}
 .lesson-nav{display:flex;justify-content:space-between;gap:16px;margin-top:28px;font-size:14px}
 @media(min-width:1024px){.wrap{max-width:820px}.foot{position:static;background:none;border:0;margin-top:12px}}
 @media(max-width:480px){.jp{font-size:21px}.q .opt{font-size:14px}}
@@ -174,6 +184,8 @@ function showAll(btn){
  PEEK=state;
 }
 var QUESTIONS=$$('.q'), RESULTS={}, RATINGS={}, RETRY=null, STARTED=Date.now();
+var TRANSCRIPT=$('#listenTranscript'), SEEN_TRANSCRIPT=false;
+if(TRANSCRIPT)TRANSCRIPT.addEventListener('toggle',function(){if(TRANSCRIPT.open)SEEN_TRANSCRIPT=true});
 function saveLocal(){try{localStorage.setItem(STORE+'state.'+DAY,JSON.stringify({
  results:RESULTS,ratings:RATINGS,retry:RETRY}))}catch(e){}}
 function restore(){
@@ -184,7 +196,7 @@ function restore(){
    QUESTIONS.forEach(function(q){
     var id=q.dataset.qid, r=(saved.results||{})[id];
     if(r&&$$('.opt',q).some(function(opt){return $('span',opt).textContent===r.answer})){
-     RESULTS[id]=r;
+     RESULTS[id]=Object.assign({},r,{correct:fnv(r.answer)===q.dataset.h});
     }
    });
    if(saved.retry&&Array.isArray(saved.retry.ids)&&saved.retry.ids.length&&
@@ -223,6 +235,7 @@ function renderQuestions(){
   $('.q-number',q).textContent=++visible+'. ';
   renderQuestion(q,results[q.dataset.qid]);
  });
+ var listening=$('#lessonListening');if(listening)listening.hidden=!!RETRY&&!$('.q:not([hidden])',listening);
  updateScore();
 }
 function updateScore(){
@@ -261,7 +274,7 @@ document.addEventListener('change',function(e){
  var q=lab.closest('.q');if(q.hasAttribute('data-done'))return;
  var answer=$('span',lab).textContent, id=q.dataset.qid;
  var result={qid:id,answer:answer,correct:fnv(answer)===q.dataset.h,
-  hinted:false,revealed:false,seconds:Math.min(86400,Math.round((Date.now()-STARTED)/1000))};
+  hinted:id.startsWith('L-')&&(SEEN_TRANSCRIPT||!!TRANSCRIPT?.open),revealed:false,seconds:Math.min(86400,Math.round((Date.now()-STARTED)/1000))};
  activeResults()[id]=result;
  renderQuestion(q,result);saveLocal();updateScore();
  if(!RETRY)updateReviewLink();
@@ -323,7 +336,7 @@ if(f)f.addEventListener('click',function(){
  fetch('/api/progress',{method:'POST',headers:{'content-type':'application/json'},
   body:JSON.stringify(payload)}).then(function(r){return r.json().then(function(d){
    if(!r.ok||d.ok!==true)throw new Error(d.reason||('HTTP '+r.status));return d})})
-  .then(function(){saveLocal();try{localStorage.setItem('nh80.v16.lastDay',String(DAY))}catch(e){}
+  .then(function(){saveLocal();try{localStorage.setItem('nh80.completed.'+DAY,'1')}catch(e){}
    f.textContent='已完成';if(status)status.textContent='学习情况已保存，会话可读取。'})
   .catch(function(e){f.disabled=false;f.textContent='完成';
    if(status)status.textContent='云端暂不可用（'+e.message+'）；记录已留在本机。'});
@@ -626,9 +639,9 @@ def build_grammar_html(day, grammar, reader):
 # ---------------------------------------------------------------------------
 # 一整块练习：以必做骨架为准，按知识点去重，补齐当天全部新词 + 新语法
 # ---------------------------------------------------------------------------
-def build_questions_html(questions):
+def build_questions_html(questions, start=1):
     rows = []
-    for i, q in enumerate(questions, 1):
+    for i, q in enumerate(questions, start):
         passage = ('<div class="passage" lang="ja">%s</div>' % esc(q["passage"])) if q.get("passage") else ""
         opts = "".join(
             '<label class="opt" data-oh="%s"><input type="radio" name="q%d"><span>%s</span></label>'
@@ -661,8 +674,7 @@ def day_page(d, review_html, vocab_html, grammar_html, questions_html, page_meta
             '<section class="card" id="vocab"><h2>今日新词 <span class="count">%d 个</span></h2>%s%s</section>'
             '<section class="card" id="grammar"><h2>今日语法 <span class="count">%d 条</span></h2>%s%s</section>'
             '<section class="card" id="questions"><h2>练习 <span class="count">%d 题</span></h2>'
-            '<p class="small">每题选一个答案，答完可集中重练错题。</p>'
-            '%s<div class="qscore" id="qscore" role="status" tabindex="-1"></div>%s'
+            '<div class="qscore" id="qscore" role="status" tabindex="-1"></div>%s%s'
             '<div class="q-actions"><button class="btn" id="retryWrong" type="button" disabled>错题重练</button>'
             '<button class="btn" id="showAllQuestions" type="button" hidden>返回全部练习</button></div></section>'
             '<div class="foot"><button class="btn primary" id="finish" type="button">完成</button>'
@@ -671,9 +683,9 @@ def day_page(d, review_html, vocab_html, grammar_html, questions_html, page_meta
             '<script>window.__PAGE__=%s;</script><script src="assets/review_schedule.js"></script><script src="assets/app.js"></script>'
             '</body></html>'
             % (d["day"], esc(d["theme"]), d["day"], d["day"], esc(d["theme"]),
-               review_html, len(d["new_vocab_ids"]), mask_switch("新词"), vocab_html,
+               ('<details><summary>回看往日词句与汉字</summary>%s</details>' % review_html) if d.get("review_knowledge_ids") else "", len(d["new_vocab_ids"]), mask_switch("新词"), vocab_html,
                len(d["new_grammar_ids"]), mask_switch("语法"), grammar_html,
-               page_meta["total"], listening_html, questions_html,
+               page_meta["total"], questions_html, listening_html,
                json.dumps(page_meta, ensure_ascii=False)))
 
 
@@ -824,9 +836,11 @@ def main(daily_by_day=None):
             player = ('<audio controls preload="none" src="%s"></audio>' % esc(audio["url"]) if audio else
                       '<button class="btn" type="button" data-speak="%s">播放日语合成朗读</button>' % esc(material["audio_text"]))
             listening = {"id": material["id"], "title": material["title"], "questions": audio_questions}
-            listening_html = ('<div class="listen-box"><h3>听力 · %s</h3><p class="small">先听，再答最后 %d 道听力单选。</p>%s'
-                              '<details><summary>核对原文</summary><p lang="ja">%s</p></details></div>'
-                              % (esc(material["title"]), len(audio_questions), player, esc(material["text_ja"])))
+            listening_html = ('<div class="listen-box" id="lessonListening"><h3>听力 · %s</h3>'
+                              '<p class="small">先听一遍再答题。答后核对原文，找出漏听的条件和转折。</p>%s%s'
+                              '<details id="listenTranscript"><summary>核对原文</summary><p lang="ja">%s</p></details></div>'
+                              % (esc(material["title"]), player, build_questions_html(audio_questions, len(merged)+1),
+                                 esc(material["text_ja"])))
         if d.get("practice_note"):
             listening_html += '<p>%s <a href="n2.html#official">打开 N2 官方练习</a></p>' % esc(d["practice_note"])
         lesson_questions = merged + audio_questions
@@ -840,7 +854,7 @@ def main(daily_by_day=None):
         }
         page = day_page(d, build_review_html(d, vocab, grammar, kanji, reader),
                         build_vocab_html(d, vocab, kanji, reader), build_grammar_html(d, grammar, reader),
-                        build_questions_html(lesson_questions), page_meta, listening_html)
+                        build_questions_html(merged), page_meta, listening_html)
         (OUT / ("day-%03d.html" % n)).write_text(page, encoding="utf-8")
         lesson_revision.update(page.encode())
         (DATA / ("day-%03d.json" % n)).write_text(json.dumps({
@@ -892,30 +906,42 @@ def main(daily_by_day=None):
         "选学词库", '<p><a href="/">课程目录</a></p><ul>' + "".join(optional_rows) + '</ul>'),
         encoding="utf-8")
 
-    links = ('<p><a id="resume" class="btn primary" href="day-001.html">开始或继续学习</a></p>'
-             '<p><a href="review.html">错题与个人复习集</a> · '
-             '<a href="n2.html">N2 冲刺</a> · '
-             '<a href="optional-vocab.html">选学词库</a> · '
-             '<a href="resources.html">N3 官方样题与资源</a> · '
-             '<a href="library.html">原创听读资料</a></p>')
-    for start in range(1, len(cur["days"]) + 1, 7):
-        chunk = [d for d in cur["days"] if start <= d["day"] < start + 7]
-        links += '<details%s><summary>第 %d 周 · Day %d–%d</summary><ul class="week-grid">%s</ul></details>' % (
-            ' open' if start == 1 else '', (start - 1) // 7 + 1, start, chunk[-1]["day"],
-            ''.join('<li><a href="day-%03d.html">Day %03d · %s</a></li>'
-                    % (d["day"], d["day"], esc(d["theme"])) for d in chunk))
-    links += ('<details><summary>五日复习单元 · 每5天一组</summary><ul class="week-grid">'
-              + ''.join('<li><a href="unit-%03d.html">Day %d–%d · 完整复习</a></li>' % (n, n - 4, n)
-                        for n in range(5, len(cur["days"]) + 1, 5)) + '</ul></details>')
+    links = ('<nav class="home-start" aria-label="学习入口">'
+             '<a id="resume" class="btn primary" href="day-001.html">开始 Day 001</a>'
+             '<a class="btn" href="review.html">到期复习与错题</a></nav>')
+    for label, start, end in (("N3 基础", 1, 90), ("N2 冲刺", 91, 150)):
+        weeks = []
+        for first in range(start, end + 1, 7):
+            last = min(first + 6, end)
+            days = "".join('<li><a href="day-%03d.html">Day %03d</a></li>' % (n, n)
+                           for n in range(first, last + 1))
+            weeks.append('<details data-start="%d" data-end="%d"><summary>Day %03d–%03d</summary>'
+                         '<ul class="home-lessons">%s</ul></details>' % (first,last,first,last,days))
+        guide = '<p><a href="n2.html">冲刺安排与官方练习</a></p>' if start == 91 else ""
+        links += ('<section class="card home-stage"><h2>%s</h2>%s<div class="home-weeks">%s</div></section>'
+                  % (label, guide, "".join(weeks)))
+    links += ('<section class="card"><h2>学习资源</h2><nav class="home-resources" aria-label="学习资源">'
+              '<a href="optional-vocab.html">选学词库</a><a href="resources.html">N3 官方练习</a>'
+              '<a href="library.html">听读资料</a></nav>'
+              '<details><summary>五日复习单元</summary><ul class="home-lessons">'
+              + "".join('<li><a href="unit-%03d.html">%03d–%03d</a></li>' % (n,n-4,n)
+                        for n in range(5, len(cur["days"]) + 1, 5)) + '</ul></details></section>')
     (OUT / "index.html").write_text(
         '<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width,initial-scale=1">'
         '<title>Nihongo 150</title><link rel="stylesheet" href="assets/app.css"></head>'
         '<body><div class="wrap"><main><h1>Nihongo 150</h1>'
-        '<p class="small">150 天 · Day 001–090 为 N3 基础，Day 091–150 为 N2 冲刺。</p>'
-        + links + '</main></div><script>var n=Number(localStorage.getItem("nh80.v16.lastDay")||localStorage.getItem("nh80.v11.lastDay")||0);if(n>=0&&n<=150){'
-                  'document.getElementById("resume").href="day-"+String(Math.min(n+1,150)).padStart(3,"0")+".html";}'
-                  '</script></body></html>', encoding="utf-8")
+        '<p class="small">词汇与读音 · 韩日语法对照 · 后段听解</p>'
+        + links + '</main></div><script>'
+        'try{var old=Number(localStorage.getItem("nh80.v16.lastDay")||localStorage.getItem("nh80.v15.lastDay")||localStorage.getItem("nh80.v11.lastDay")||0);'
+        'var n=Number.isInteger(old)&&old>=0&&old<=150?Math.min(old+1,150):1;'
+        'while(n<150&&localStorage.getItem("nh80.completed."+n)==="1")n++;'
+        'var day=String(n).padStart(3,"0"),resume=document.getElementById("resume");'
+        'resume.href="day-"+day+".html";resume.textContent=(n===1?"开始 Day ":"继续 Day ")+day;'
+        'document.querySelectorAll(".home-weeks details").forEach(function(group){'
+        'group.open=n>=Number(group.dataset.start)&&n<=Number(group.dataset.end)});'
+        '}catch(e){}</script></body></html>', encoding="utf-8")
+
 
     rdata = resource_sources()
     sources = rdata["sources"]
@@ -1002,7 +1028,7 @@ def main(daily_by_day=None):
     revision = hashlib.sha256((CSS + JS + study_ui.CSS + study_ui.JS + schedule_js
                                + lesson_revision.hexdigest() + json.dumps(cur, ensure_ascii=False)).encode()).hexdigest()[:12]
     (OUT / "sw.js").write_text(
-        "const C='nh80-v16-" + revision + "';self.addEventListener('install',e=>self.skipWaiting());"
+        "const C='nh80-v17-" + revision + "';self.addEventListener('install',e=>self.skipWaiting());"
         "self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(ks=>Promise.all("
         "ks.filter(k=>k!==C).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));"
         "self.addEventListener('fetch',e=>{if(e.request.method!=='GET'||new URL(e.request.url).origin!==location.origin||new URL(e.request.url).pathname.startsWith('/api/'))return;"

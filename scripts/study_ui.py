@@ -32,7 +32,7 @@ CSS = r"""
 
 JS = r"""
 (function(){'use strict';
-var PREFIX='nh80.v9.pending.', LOCAL='nh80.v9.latest', SNAP='nh80.v9.study.snapshot', CATALOG='nh80.v16.catalog', study=read(SNAP,null),catalog=read(CATALOG,[]),busy=false,timer=null;
+var PREFIX='nh80.v9.pending.', LOCAL='nh80.v9.latest', SNAP='nh80.v9.study.snapshot', CATALOG='nh80.v17.catalog', study=read(SNAP,null),catalog=read(CATALOG,[]),busy=false,timer=null;
 var $=function(s,r){return (r||document).querySelector(s)};
 function esc(x){return String(x==null?'':x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;')}
 function uid(){return (crypto.randomUUID?crypto.randomUUID():Date.now()+'-'+Math.random().toString(36).slice(2))}
@@ -98,9 +98,14 @@ function renderScheduled(message){
   var next=queue[0], card=index.get(next.kid);
   var variants=card.review_questions;
   var question=variants[(Math.max(0,next.step+1))%variants.length];
+ var options=question.options.slice();
+ for(var i=options.length-1;i>0;i--){
+  var j=Math.floor(Math.random()*(i+1));
+  [options[i],options[j]]=[options[j],options[i]];
+ }
   root.innerHTML=heading+status+'<p class="small">答题结果用于更新当前浏览器的复习排期。</p>'
    +'<div class="study-deck"><p class="recall-prompt">'+esc(question.prompt)+'</p>'
-   +'<div class="study-choices">'+question.options.map(function(option,i){
+   +'<div class="study-choices">'+options.map(function(option,i){
      return '<button type="button" class="study-choice" data-recall-choice="'+i+'">'+esc(option)+'</button>';
    }).join('')+'</div><p id="recallFeedback" role="status"></p>'
    +'<button type="button" class="btn" id="nextRecall" hidden>下一张</button></div>';
@@ -112,12 +117,12 @@ function renderScheduled(message){
   };
   choices.forEach(function(button){
    button.onclick=function(){
-    var correct=fnv(question.options[Number(button.dataset.recallChoice)])===question.h;
+    var correct=fnv(options[Number(button.dataset.recallChoice)])===question.h;
     try{
      var interval=NHReview.rate(card.kid,correct?'good':'again');
      choices.forEach(function(choice){
       choice.disabled=true;
-      if(fnv(question.options[Number(choice.dataset.recallChoice)])===question.h)choice.classList.add('is-right');
+      if(fnv(options[Number(choice.dataset.recallChoice)])===question.h)choice.classList.add('is-right');
      });
      if(!correct)button.classList.add('is-wrong');
      feedback.textContent=interval?(correct?'答对了。':'答错了，正确选项已标出。')+' 下次复习在 '+interval+' 天后。':'这张卡已复习。';

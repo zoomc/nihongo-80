@@ -125,6 +125,31 @@ def grammar_forms(pattern):
     return set(re.findall(r"[ぁ-ゖァ-ヶ]{2,}", compact(pattern)))
 
 
+# Original contexts isolate the construction and give plausible alternatives.
+N2_CONTEXT = {
+    "G0284": ("参加人数が変われば、部屋の広さも変えます。参加人数（　）、会場を選びます。",
+              "に応じて", ["に先立って", "に反して", "にもかかわらず"]),
+    "G0287": ("工事は春に始まり、冬に終わった。工事は九か月（　）行われた。",
+              "にわたって", ["に先立って", "に限らず", "を除いて"]),
+    "G0303": ("現物の確認が必要です。実際に見（　）、買うかどうか決められません。",
+              "ないことには", ["たところで", "て以来", "たばかりに"]),
+    "G0314": ("もう投票は締め切られた。今から連絡し（　）、結果は変わらない。",
+              "たところで", ["てこそ", "て以来", "たところ"]),
+    "G0321": ("高齢者だけだった利用者に、最近は若者も少しずつ加わり（　）。",
+              "つつある", ["かねる", "がたい", "ようがない"]),
+    "G0327": ("説明を読むだけでは、使いにくい点は分からない。自分で使っ（　）、問題に気づく。",
+              "てこそ", ["たところで", "たばかりに", "てはいられず"]),
+    "G0330": ("実施はまだ決まっていない。この資料は、検討中の一案（　）。",
+              "に過ぎない", ["に限らない", "に反する", "に応じる"]),
+    "G0331": ("学生だけでなく、会社員や地域の住民も参加できます。学生（　）、どなたでも参加できます。",
+              "に限らず", ["に限り", "を除いて", "に先立って"]),
+    "G0333": ("この割引は会員専用です。会員の方（　）、入場料が半額になります。",
+              "に限り", ["に限らず", "を除いて", "に反して"]),
+    "G0337": ("何度も改善を求めた。それ（　）、対応は一度も変わらなかった。",
+              "にもかかわらず", ["に応じて", "に先立って", "を踏まえて"]),
+}
+
+
 def grammar_questions(day, item, grammar):
     kid = item["id"]
     pattern, meaning = item["pattern"], item["meaning_zh"]
@@ -138,8 +163,12 @@ def grammar_questions(day, item, grammar):
     glosses = meanings(meaning)
     contrasts = (g["meaning_zh"] for g in peers
                  if not glosses & meanings(g["meaning_zh"]) and not forms & grammar_forms(g["pattern"]))
-    yield question(day, kid, "meaning", f"请选择「{cue}」所用句型的主要含义。", meaning,
-                   contrasts, "meaning")
+    if kid in N2_CONTEXT:
+        context, answer, options = N2_CONTEXT[kid]
+        yield question(day, kid, "gap", context, answer, options, "usage")
+    else:
+        yield question(day, kid, "meaning", f"请选择「{cue}」所用句型的主要含义。", meaning,
+                       contrasts, "meaning")
 
     if day > 1 and item.get("ko_equiv"):
         ko = item["ko_equiv"]

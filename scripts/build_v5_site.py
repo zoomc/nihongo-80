@@ -95,6 +95,9 @@ ruby rt{font-size:.55em;color:var(--muted);font-weight:400}
 border-radius:999px;background:var(--surface);color:var(--muted);cursor:pointer}
 .rates button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
 .pattern{font-size:21px;font-weight:700;overflow-wrap:anywhere}
+.grammar-transfer{margin:0 0 10px;padding:8px 12px;border-left:3px solid var(--accent);background:var(--bg);overflow-wrap:anywhere}
+.grammar-transfer strong{display:block;font-size:1.13rem;line-height:1.5}
+.grammar-transfer .small{margin-top:3px}
 .conn{font-size:13px;color:var(--muted);overflow-wrap:anywhere}
 .ko-box{background:var(--bg);border:1px solid var(--line);padding:8px 10px;margin:8px 0;font-size:13px}
 .gcard{border-top:1px dashed var(--line);padding:14px 0}
@@ -309,7 +312,7 @@ if(f)f.addEventListener('click',function(){
  var right=qs.filter(function(x){return x.correct}).length;
  var wrong=qs.filter(function(x){return !x.correct}).map(function(x){
   return {qid:x.qid,knowledge_ids:(meta.q_kids||{})[x.qid]||[]}});
- var payload={v:3,day:DAY,completed_at:new Date().toISOString(),
+ var payload={v:4,day:DAY,completed_at:new Date().toISOString(),
   required_ids:meta.required_ids||[],extra_ids:meta.extra_ids||[],grammar_ids:meta.grammar_ids||[],
   questions:qs,accuracy:qs.length?right/qs.length:0,self_rating:RATINGS,
   wrong_summary:wrong,
@@ -320,7 +323,7 @@ if(f)f.addEventListener('click',function(){
  fetch('/api/progress',{method:'POST',headers:{'content-type':'application/json'},
   body:JSON.stringify(payload)}).then(function(r){return r.json().then(function(d){
    if(!r.ok||d.ok!==true)throw new Error(d.reason||('HTTP '+r.status));return d})})
-  .then(function(){saveLocal();try{localStorage.setItem('nh80.v15.lastDay',String(DAY))}catch(e){}
+  .then(function(){saveLocal();try{localStorage.setItem('nh80.v16.lastDay',String(DAY))}catch(e){}
    f.textContent='已完成';if(status)status.textContent='学习情况已保存，会话可读取。'})
   .catch(function(e){f.disabled=false;f.textContent='完成';
    if(status)status.textContent='云端暂不可用（'+e.message+'）；记录已留在本机。'});
@@ -482,7 +485,7 @@ def example_html(ex, mapping, ko=""):
     return ('<div class="ex">%s'
             '<div class="ex-ja" data-role="ja">%s</div>'
             '<div class="ex-zh" data-role="zh">%s</div>'
-            '</div>' % (ko_html, ruby_text(ja, mapping), esc(ex.get("zh") or "")))
+            '</div>' % (ko_html, ruby_text(ja, mapping), esc(ex.get("zh") or ex.get("en") or "")))
 
 
 def kana_map(day, vocab):
@@ -560,11 +563,13 @@ def build_vocab_html(day, vocab, kanji, reader):
             '<div class="vocab-pair"><div lang="ja">%s<div class="jp" data-role="ja">%s</div></div>'
             '<div><div class="zh" data-role="zh">%s%s</div>%s</div></div>'
             '<button class="show-all" type="button" data-show-all aria-label="临时显示三种语言 10 秒" hidden>显示</button>'
-            '<details class="vocab-example"><summary>例句</summary>%s%s</details>%s</div>'
+            '%s%s</div>'
             % (kana_line(surface, "／".join(readings)), jp_word(surface, kana),
                esc(meaning), tag, ko_read_line(ko_pron.pron("／".join(readings))),
-               ('<div class="ko" data-role="zh">韩语参考：%s</div>' % esc(ko)) if ko else "",
-               example_html(ex, mapping, reader.hangul(ex.get("ja", ""))), rates_html(vid)))
+               ('<details class="vocab-example"><summary>例句</summary>%s%s</details>'
+                % (('<div class="ko" data-role="zh">韩语参考：%s</div>' % esc(ko)) if ko else "",
+                   example_html(ex, mapping, reader.hangul(ex.get("ja", ""))))) if ex.get("ja") else "",
+               rates_html(vid)))
     character_rows = []
     for kid in day["new_kanji_ids"]:
         item = kanji[kid]
@@ -595,9 +600,10 @@ def build_grammar_html(day, grammar, reader):
         exs = "".join(example_html(e, [], reader.hangul(e.get("ja", "")))
                       for e in (g.get("examples") or [])[:3])
         err = (g.get("common_errors") or [{}])[0]
-        ko = ('<div class="ko-box" data-role="zh"><strong>朝鲜语：</strong>%s<br>'
-              '<span class="small">%s</span></div>'
-              % (esc(g["ko_equiv"]), esc(g.get("ko_diff", "")))) if g.get("ko_equiv") else ""
+        ko = ('<div class="grammar-transfer ko-box" data-role="zh">'
+              '<span class="small">韩语对应</span><strong lang="ko">%s</strong>%s</div>'
+              % (esc(g["ko_equiv"]), '<div class="small">%s</div>' % esc(g["ko_diff"]) if g.get("ko_diff") else "")
+              ) if g.get("ko_equiv") else ""
         usage = ('<div class="small" data-role="zh">%s</div>' % esc(g.get("usage", ""))) if g.get("usage") else ""
         trap = ('<details><summary>易错点</summary><p class="small">'
                 '<span data-role="ja">%s → %s</span>'
@@ -606,14 +612,14 @@ def build_grammar_html(day, grammar, reader):
         out.append(
             '<div class="gcard">'
             '<button class="show-all" type="button" data-show-all aria-label="临时显示三种语言 10 秒" hidden>显示</button>'
-            '<div class="pattern" data-role="ja">%s</div>'
+            '%s<div class="pattern" data-role="ja">%s</div>'
             '%s'
             '<div class="zh" data-role="zh">%s</div>'
             '<div class="conn" data-role="ja">%s</div>'
-            '%s%s%s%s%s</div>'
-            % (esc(pattern), ko_read_line(pattern_ko(g, reader)),
+            '%s%s%s%s</div>'
+            % (ko, esc(pattern), ko_read_line(pattern_ko(g, reader)),
                esc(g["meaning_zh"]), esc(g.get("connection", "")),
-               usage, exs, ko, trap, rates_html(gid)))
+               usage, exs, trap, rates_html(gid)))
     return "".join(out) or '<p class="small">今天没有新语法。</p>'
 
 
@@ -642,11 +648,11 @@ def mask_switch(scope):
             '<button type="button" data-mask="both">双向</button></div>' % scope)
 
 
-def day_page(d, review_html, vocab_html, grammar_html, questions_html, page_meta):
+def day_page(d, review_html, vocab_html, grammar_html, questions_html, page_meta, listening_html):
     return ('<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">'
             '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
             '<meta name="color-scheme" content="light dark">'
-            '<title>Day %03d · %s | Nihongo 100</title>'
+            '<title>Day %03d · %s | Nihongo 150</title>'
             '<link rel="icon" href="data:,"><link rel="stylesheet" href="assets/app.css"></head>'
             '<body data-day="%03d"><div class="wrap"><main>'
             '<h1 class="lesson">Day <b>%03d</b> · %s</h1>'
@@ -656,7 +662,7 @@ def day_page(d, review_html, vocab_html, grammar_html, questions_html, page_meta
             '<section class="card" id="grammar"><h2>今日语法 <span class="count">%d 条</span></h2>%s%s</section>'
             '<section class="card" id="questions"><h2>练习 <span class="count">%d 题</span></h2>'
             '<p class="small">每题选一个答案，答完可集中重练错题。</p>'
-            '<div class="qscore" id="qscore" role="status" tabindex="-1"></div>%s'
+            '%s<div class="qscore" id="qscore" role="status" tabindex="-1"></div>%s'
             '<div class="q-actions"><button class="btn" id="retryWrong" type="button" disabled>错题重练</button>'
             '<button class="btn" id="showAllQuestions" type="button" hidden>返回全部练习</button></div></section>'
             '<div class="foot"><button class="btn primary" id="finish" type="button">完成</button>'
@@ -667,7 +673,7 @@ def day_page(d, review_html, vocab_html, grammar_html, questions_html, page_meta
             % (d["day"], esc(d["theme"]), d["day"], d["day"], esc(d["theme"]),
                review_html, len(d["new_vocab_ids"]), mask_switch("新词"), vocab_html,
                len(d["new_grammar_ids"]), mask_switch("语法"), grammar_html,
-               page_meta["total"], questions_html,
+               page_meta["total"], listening_html, questions_html,
                json.dumps(page_meta, ensure_ascii=False)))
 
 
@@ -679,7 +685,7 @@ def study_page(title, body, day=0, unit=None):
     return ('<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">'
             '<meta name="viewport" content="width=device-width,initial-scale=1">'
             '<meta name="color-scheme" content="light dark"><title>' + esc(title) +
-            ' · Nihongo 100</title><link rel="stylesheet" href="assets/app.css"></head>'
+            ' · Nihongo 150</title><link rel="stylesheet" href="assets/app.css"></head>'
             '<body data-day="' + str(day) + '"><div class="wrap" style="max-width:920px"><main>'
             '<h1>' + esc(title) + '</h1>' + body + '</main></div>'
             '<script>window.__UNIT__=' + json.dumps(unit, ensure_ascii=False) +
@@ -687,9 +693,9 @@ def study_page(title, body, day=0, unit=None):
             '</script><script src="assets/review_schedule.js"></script><script src="assets/study.js"></script></body></html>')
 
 
-def main():
+def main(daily_by_day=None):
     import study_ui
-    from quiz_v5 import public_question, day_questions
+    from quiz_v5 import public_question, day_questions, listening_quiz
     from practice_v9 import build_daily, build_unit
     from sentence_choices import build_for_day as sentence_questions
 
@@ -728,7 +734,8 @@ def main():
     schedule_js = (ROOT / "scripts/review_schedule.js").read_text(encoding="utf-8")
     (OUT / "assets/review_schedule.js").write_text(schedule_js, encoding="utf-8")
 
-    daily_by_day = {d["day"]: build_daily_questions(d, vocab, grammar) for d in cur["days"]}
+    if daily_by_day is None:
+        daily_by_day = {d["day"]: build_daily_questions(d, vocab, grammar) for d in cur["days"]}
     review_questions = {}
     for questions in daily_by_day.values():
         for q in questions:
@@ -807,17 +814,33 @@ def main():
                                "kana": "、".join((k.get("onyomi") or []) + (k.get("kunyomi") or [])),
                                "ko_pron": kanji_ko_read(k)})
 
+        listening = None
+        listening_html = ""
+        audio_questions = []
+        if d["material_ids"]:
+            material = materials[d["material_ids"][0]]
+            audio_questions = [public_question(q) for q in listening_quiz(d, material)]
+            audio = audio_manifest.get("items", {}).get(material["id"])
+            player = ('<audio controls preload="none" src="%s"></audio>' % esc(audio["url"]) if audio else
+                      '<button class="btn" type="button" data-speak="%s">播放日语合成朗读</button>' % esc(material["audio_text"]))
+            listening = {"id": material["id"], "title": material["title"], "questions": audio_questions}
+            listening_html = ('<div class="listen-box"><h3>听力 · %s</h3><p class="small">先听，再答最后 %d 道听力单选。</p>%s'
+                              '<details><summary>核对原文</summary><p lang="ja">%s</p></details></div>'
+                              % (esc(material["title"]), len(audio_questions), player, esc(material["text_ja"])))
+        if d.get("practice_note"):
+            listening_html += '<p>%s <a href="n2.html#official">打开 N2 官方练习</a></p>' % esc(d["practice_note"])
+        lesson_questions = merged + audio_questions
         page_meta = {
             "day": n,
             "required_ids": d.get("core_vocab_ids") or [],
             "extra_ids": d.get("extension_vocab_ids") or [],
             "grammar_ids": d.get("new_grammar_ids") or [],
-            "q_kids": {q["qid"]: q.get("knowledge_ids") or [] for q in merged},
-            "total": len(merged),
+            "q_kids": {q["qid"]: q.get("knowledge_ids") or [] for q in lesson_questions},
+            "total": len(lesson_questions),
         }
         page = day_page(d, build_review_html(d, vocab, grammar, kanji, reader),
                         build_vocab_html(d, vocab, kanji, reader), build_grammar_html(d, grammar, reader),
-                        build_questions_html(merged), page_meta)
+                        build_questions_html(lesson_questions), page_meta, listening_html)
         (OUT / ("day-%03d.html" % n)).write_text(page, encoding="utf-8")
         lesson_revision.update(page.encode())
         (DATA / ("day-%03d.json" % n)).write_text(json.dumps({
@@ -830,7 +853,7 @@ def main():
             "unit_questions": [public_question(q) for q in build_unit(n, cur["days"], vocab, grammar, kanji)["questions"]]
             if n % 5 == 0 else [],
             "practice": practice, "sentences": sentences, "quiz": qs,
-            "questions": merged, "listening_material": None,
+            "questions": merged, "listening_material": listening,
         }, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
     (OUT / "n3-mock.html").write_text(
@@ -839,10 +862,25 @@ def main():
         '<p>使用官方样题，答后对照答案。本站阶段练习不换算官方分数。</p>'
         '<a href="resources.html">打开官方听力、阅读与样题</a></html>', encoding="utf-8")
     (OUT / "manifest.webmanifest").write_text(json.dumps({
-        "name": "Nihongo 100", "short_name": "Nihongo", "start_url": "/", "display": "standalone",
+        "name": "Nihongo 150", "short_name": "Nihongo", "start_url": "/", "display": "standalone",
         "background_color": "#fbfaf7", "theme_color": "#b4472e",
         "icons": [{"src": "/icon.svg", "sizes": "any", "type": "image/svg+xml"}]},
         ensure_ascii=False), encoding="utf-8")
+
+    n2_body = ('<p><a href="/">课程目录</a> · <a href="review.html">到期复习</a></p>'
+               '<p>先复习到期词，学新词时先认日语读音。语法用韩语提示选日语句型，重点看助词、接续和语体。</p>'
+               '<h2>Day 091–108 · 词汇与句型</h2><p>每天 25 个词。把容易望文生义的汉字词和不同读音放进错题复习。</p>'
+               '<h2>Day 109–132 · 场景听解</h2><p>先听一次抓人物、条件和行动，再答题。答完打开原文找漏听的转折与否定。</p>'
+               '<h2>Day 133–150 · 综合与模考</h2><p>从 Day 139 起每天 20 词。按官方卷做语言知识、阅读和听力，复盘两套题的时间和错因。</p>'
+               '<h2 id="official">官方题型与原声</h2><ul>'
+               '<li><a href="https://www.jlpt.jp/e/samples/forlearners.html">JLPT 官方样题</a> · 先熟悉题型</li>'
+               '<li><a href="https://www.jlpt.jp/e/samples/sampleindex.html">JLPT 官方练习册两册</a> · N2 语言知识与阅读 105 分钟，听力 50 分钟</li>'
+               '<li><a href="https://www.jlpt.jp/e/guideline/pdf/n2_e.pdf">N2 各题型说明</a></li></ul>'
+               '<p class="small">每日原创听力由设备日语语音合成。正式计时使用官方原声。</p>'
+               '<h2>60 天课程</h2><ul class="week-grid">'
+               + "".join('<li><a href="day-%03d.html">Day %03d</a></li>' % (d, d) for d in range(91,151))
+               + '</ul>')
+    (OUT / "n2.html").write_text(study_page("N2 冲刺", n2_body), encoding="utf-8")
 
     optional_rows = []
     for kid in cur["optional_vocab_ids"]:
@@ -856,6 +894,7 @@ def main():
 
     links = ('<p><a id="resume" class="btn primary" href="day-001.html">开始或继续学习</a></p>'
              '<p><a href="review.html">错题与个人复习集</a> · '
+             '<a href="n2.html">N2 冲刺</a> · '
              '<a href="optional-vocab.html">选学词库</a> · '
              '<a href="resources.html">N3 官方样题与资源</a> · '
              '<a href="library.html">原创听读资料</a></p>')
@@ -871,11 +910,11 @@ def main():
     (OUT / "index.html").write_text(
         '<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width,initial-scale=1">'
-        '<title>Nihongo 100</title><link rel="stylesheet" href="assets/app.css"></head>'
-        '<body><div class="wrap"><main><h1>Nihongo 100</h1>'
-        '<p class="small">100 天 · 从 Day 002 起每天 25 个新词。Day 1–26 N5，27–50 N4，51–100 N3，后段含 N2 衔接。</p>'
-        + links + '</main></div><script>var n=Number(localStorage.getItem("nh80.v15.lastDay")||localStorage.getItem("nh80.v11.lastDay")||0);if(n>=0&&n<=100){'
-                  'document.getElementById("resume").href="day-"+String(Math.min(n+1,100)).padStart(3,"0")+".html";}'
+        '<title>Nihongo 150</title><link rel="stylesheet" href="assets/app.css"></head>'
+        '<body><div class="wrap"><main><h1>Nihongo 150</h1>'
+        '<p class="small">150 天 · Day 001–090 为 N3 基础，Day 091–150 为 N2 冲刺。</p>'
+        + links + '</main></div><script>var n=Number(localStorage.getItem("nh80.v16.lastDay")||localStorage.getItem("nh80.v11.lastDay")||0);if(n>=0&&n<=150){'
+                  'document.getElementById("resume").href="day-"+String(Math.min(n+1,150)).padStart(3,"0")+".html";}'
                   '</script></body></html>', encoding="utf-8")
 
     rdata = resource_sources()
@@ -910,7 +949,7 @@ def main():
     (OUT / "listening.html").write_text(
         '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width,initial-scale=1">'
-        '<title>真人听力 · Nihongo 100</title><link rel="stylesheet" href="assets/app.css"></head>'
+        '<title>真人听力 · Nihongo 150</title><link rel="stylesheet" href="assets/app.css"></head>'
         '<body><div class="wrap" style="max-width:760px">' + lhtml + '</div></body></html>',
         encoding="utf-8")
 
@@ -937,7 +976,7 @@ def main():
         + rhtml + '</div></body></html>', encoding="utf-8")
 
     library = '<h1>原创听读资料</h1><p class="small">按级别选一篇。先理解大意，再看译文。</p>'
-    for level in ("N5", "N4", "N3"):
+    for level in ("N5", "N4", "N3", "N2"):
         library += '<h2>' + level + '</h2>'
         for m in materials.values():
             if m.get("level") != level or m.get("license") != "original" or not m.get("text_ja"):
@@ -963,7 +1002,7 @@ def main():
     revision = hashlib.sha256((CSS + JS + study_ui.CSS + study_ui.JS + schedule_js
                                + lesson_revision.hexdigest() + json.dumps(cur, ensure_ascii=False)).encode()).hexdigest()[:12]
     (OUT / "sw.js").write_text(
-        "const C='nh80-v15-" + revision + "';self.addEventListener('install',e=>self.skipWaiting());"
+        "const C='nh80-v16-" + revision + "';self.addEventListener('install',e=>self.skipWaiting());"
         "self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(ks=>Promise.all("
         "ks.filter(k=>k!==C).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));"
         "self.addEventListener('fetch',e=>{if(e.request.method!=='GET'||new URL(e.request.url).origin!==location.origin||new URL(e.request.url).pathname.startsWith('/api/'))return;"

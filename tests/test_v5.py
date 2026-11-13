@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""v5 验收：100 天 / 2489 词 / 286 语法 / 620 汉字 / 四块网页 / 会话协议。"""
+"""v5 验收：150 天 / 3679 词 / 355 语法 / 620 汉字 / 四块网页 / 会话协议。"""
 from __future__ import annotations
 
 import json
@@ -37,7 +37,7 @@ class TestSeeds(unittest.TestCase):
         self.assertGreaterEqual(sum(1 for x in g if x.get("ko_equiv")), 180)
         for x in g:
             self.assertTrue(x.get("pattern") and x.get("meaning_zh"), x.get("id"))
-            self.assertTrue(x.get("common_errors"), "%s 缺易错点" % x.get("id"))
+            self.assertTrue(x.get("common_errors") or x.get("ko_diff"), "%s 缺对照提醒" % x.get("id"))
         # 不允许 wrong == fix 的自相矛盾
         for x in g:
             for ce in x.get("common_errors") or []:
@@ -57,9 +57,9 @@ class TestCurriculum(unittest.TestCase):
         cls.cur = json.loads((ROOT / "curriculum/curriculum.json").read_text(encoding="utf-8"))
         cls.days = cls.cur["days"]
 
-    def test_100_days(self):
-        self.assertEqual(len(self.days), 100)
-        self.assertEqual([d["day"] for d in self.days], list(range(1, 101)))
+    def test_150_days(self):
+        self.assertEqual(len(self.days), 150)
+        self.assertEqual([d["day"] for d in self.days], list(range(1, 151)))
 
     def test_blocks_sum_60(self):
         for d in self.days:
@@ -70,15 +70,17 @@ class TestCurriculum(unittest.TestCase):
         v = sum(len(d["new_vocab_ids"]) for d in self.days)
         g = sum(len(d["new_grammar_ids"]) for d in self.days)
         k = sum(len(d["new_kanji_ids"]) for d in self.days)
-        self.assertEqual(v, 2489)
-        self.assertEqual([len(d["new_vocab_ids"]) for d in self.days], [14] + [25] * 99)
-        self.assertEqual(len(self.cur["optional_vocab_ids"]), 211)
-        self.assertEqual(g, 286)
+        self.assertEqual(v, 3679)
+        self.assertEqual([len(d["new_vocab_ids"]) for d in self.days], [14] + [25] * 137 + [20] * 12)
+        self.assertEqual(len(self.cur["optional_vocab_ids"]), 461)
+        self.assertEqual(g, 355)
         self.assertEqual(k, 620)
 
     def test_listening_schedule(self):
         days = [d["day"] for d in self.days if d.get("listening")]
-        self.assertEqual(days, [])
+        self.assertEqual(len(days), 18)
+        self.assertGreaterEqual(min(days), 79)
+        self.assertEqual(sum(d >= 91 for d in days), 12)
 
     def test_no_duplicate_new_ids(self):
         seen_v, seen_g, seen_k = set(), set(), set()
@@ -95,9 +97,9 @@ class TestCurriculum(unittest.TestCase):
 
 
 class TestWeb(unittest.TestCase):
-    def test_100_pages(self):
+    def test_150_pages(self):
         pages = sorted((ROOT / "web").glob("day-*.html"))
-        self.assertEqual(len(pages), 100)
+        self.assertEqual(len(pages), 150)
 
     def test_no_dashboard_junk(self):
         for p in list((ROOT / "web").glob("day-*.html"))[:20]:
@@ -143,8 +145,8 @@ class TestCli(unittest.TestCase):
         r = subprocess.run([sys.executable, str(ROOT / "scripts/nh80.py"), "validate"],
                            capture_output=True, text=True)
         self.assertEqual(r.returncode, 0, r.stderr)
-        self.assertIn('"days": 100', r.stdout)
-        self.assertIn('"v": 2489', r.stdout)
+        self.assertIn('"days": 150', r.stdout)
+        self.assertIn('"v": 3679', r.stdout)
 
 
 class TestSessionProtocol(unittest.TestCase):

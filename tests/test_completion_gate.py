@@ -27,7 +27,7 @@ class CompletionGate(unittest.TestCase):
             src.backup(dst); src.close(); dst.close()
             key = json.loads((ROOT / 'deploy/worker/src/generated-key.json').read_text())['answers']
             payload = {'v': 1, 'day': 97, 'session': 'objective-only-gate', 'ts': '2026-11-07T00:00:00Z',
-                       'results': [{'qid': q, 'answer': x['answer']} for q, x in key.items() if x['day'] == 97 and q.startswith("D15-")],
+                       'results': [{'qid': q, 'answer': x['answer']} for q, x in key.items() if x['day'] == 97 and q.startswith("D16-")],
                        'minutes': None, 'source': 'test'}
             with contextlib.redirect_stdout(io.StringIO()):
                 results = payload["results"][:-1]

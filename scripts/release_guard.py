@@ -41,7 +41,7 @@ def check():
             raise ValueError('invalid audio or changed script: '+mid)
     for name in ('vocabulary','grammar','kanji'):
         rows=list(map(json.loads,(ROOT/'knowledge/seeds'/(name+'.jsonl')).read_text().splitlines()))
-        if name=='vocabulary' and any(not x.get('ko_hint') for x in rows):
+        if name=='vocabulary' and any(not x.get('ko_hint') and x.get('jlpt') != 'N2' for x in rows):
             raise ValueError('incomplete Korean hints')
     from curriculum_v5 import DAYS, DAILY_VOCAB
     from daily_questions import compact
@@ -50,15 +50,16 @@ def check():
         p = ROOT / f"web/data/day-{day:03d}.json"
         d = json.loads(p.read_text())
         daily = d['questions']
+        public_daily = daily + (d.get('listening_material') or {}).get('questions', [])
         public_questions = (d['quiz'] + d['sentences'] + d.get('practice', [])
                             + d.get('unit_questions', [])
                             + (d.get('listening_material') or {}).get('questions', []) + daily)
         if any('answer' in q or 'rationale' in q for q in public_questions):
             raise ValueError('public reference answer: ' + p.name)
-        expected = {**{v['id']: 2 for v in d['vocab']}, **{g['id']: 3 for g in d['grammar']}}
+        expected = {**{v['id']: 2 for v in d['vocab']}, **{g['id']: 2 if g.get('provenance') == 'openjlpt_adapted' else 3 for g in d['grammar']}}
         if Counter(k for q in daily for k in q['knowledge_ids']) != expected:
             raise ValueError('daily question quotas: ' + p.name)
-        if len({q['qid'] for q in daily}) != len(daily) or len(daily) > 62:
+        if len({q['qid'] for q in daily}) != len(daily) or len(public_daily) > 65:
             raise ValueError('invalid question count or duplicate ID: ' + p.name)
         for q in daily:
             hashes = [fnv(o) for o in q['options']]
@@ -68,7 +69,7 @@ def check():
             if not answer or compact(answer) in compact(q['prompt'] + q.get('passage', '')):
                 raise ValueError('answer visible in prompt: ' + q['qid'])
         core=d['core_vocab_ids'];extra=d['extension_vocab_ids']
-        if len(core) != (14 if day == 1 else DAILY_VOCAB) or extra or len(core) != len(d['vocab']) or d['listening']:
+        if len(core) != (14 if day == 1 else 20 if day >= 139 else DAILY_VOCAB) or extra or len(core) != len(d['vocab']):
             raise ValueError('daily workload split broken')
     shards=list((ROOT/'web/data/grade').glob('day-*.json'))
     if len(shards)!=DAYS or any('answer' in q or not re.fullmatch('[a-f0-9]{64}',q.get('answer_hash','')) for p in shards for q in json.loads(p.read_text())['answers'].values()):

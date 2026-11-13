@@ -213,7 +213,7 @@ class TestSentenceReading(unittest.TestCase):
                 ok = idx.reading(ja) is not None
                 stat["all"][0] += ok
                 stat["all"][1] += 1
-                if d["day"] <= 30:
+                if d["day"] <= 24:
                     stat["n5"][0] += ok
                     stat["n5"][1] += 1
         self.assertGreaterEqual(stat["n5"][0] / stat["n5"][1], 0.92, stat["n5"])
@@ -247,7 +247,7 @@ class TestPageLayout(unittest.TestCase):
     def test_korean_elements_are_masked_with_chinese(self):
         for day in (1, 47, 99, 100):
             h = page(day)
-            for cls in ('class="ko-read"', 'class="ex-ko"', 'class="ko"', 'class="ko-box"',
+            for cls in ('class="ko-read"', 'class="ex-ko"', 'class="ko"', 'class="grammar-transfer ko-box"',
                         'class="small ko-read"'):
                 for m in re.finditer(re.escape(cls), h):
                     tail = h[m.start():m.start() + 120]
@@ -260,7 +260,7 @@ class TestPageLayout(unittest.TestCase):
 
     def test_grammar_cards_get_korean_reading(self):
         grammar_html = []
-        for day in range(1, 101):
+        for day in range(1, 151):
             h = page(day)
             grammar_html.append(h[h.index('id="grammar"'):h.index('id="questions"')])
         grammar = "".join(grammar_html)

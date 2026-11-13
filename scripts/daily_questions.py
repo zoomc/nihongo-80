@@ -32,7 +32,7 @@ def hiragana(text):
 
 
 def question(day, kid, kind, prompt, answer, distractors, capability):
-    version = 13 if day == 1 else 15
+    version = 13 if day == 1 else 16
     qid = f"D{version}-{day:03d}-{kid}-{kind}"
     options = [answer]
     seen = {fnv(answer)}
@@ -141,11 +141,21 @@ def grammar_questions(day, item, grammar):
     yield question(day, kid, "meaning", f"请选择「{cue}」所用句型的主要含义。", meaning,
                    contrasts, "meaning")
 
+    if day > 1 and item.get("ko_equiv"):
+        ko = item["ko_equiv"]
+        yield question(day, kid, "ko", f"한국어 「{ko}」에 해당하는 일본어 문형은?", pattern,
+                       (g["pattern"] for g in peers if g.get("ko_equiv") != ko
+                        and not forms & grammar_forms(g["pattern"])
+                        and not glosses & meanings(g["meaning_zh"])), "usage")
+        if item.get("provenance") == "openjlpt_adapted":
+            return
+
     if kid in INTRO:
         prompt, answer, distractors, sentence, translations = INTRO[kid]
         yield question(day, kid, "form", prompt, answer, distractors, "usage")
-        yield question(day, kid, "context", f"请选择「{sentence}」的中文意思。", INTRO_TRANSLATIONS[kid],
-                       [t for t in translations if t != INTRO_TRANSLATIONS[kid]], "usage")
+        if day == 1 or not item.get("ko_equiv"):
+            yield question(day, kid, "context", f"请选择「{sentence}」的中文意思。", INTRO_TRANSLATIONS[kid],
+                           [t for t in translations if t != INTRO_TRANSLATIONS[kid]], "usage")
         return
 
     example = examples[-1]
@@ -153,7 +163,7 @@ def grammar_questions(day, item, grammar):
     # distractors, excluding entries that share the target's explicit examples.
     own_examples = {compact(e["ja"]) for e in examples}
     other_examples = [e for g in peers if not own_examples & {compact(e["ja"]) for e in g["examples"]}
-                      for e in g["examples"]]
+                      for e in g["examples"] if e.get("zh")]
     def nearby_examples(example):
         # Favor lexical overlap so a familiar noun alone is less useful as a clue.
         text = compact(example["zh"])
@@ -164,8 +174,9 @@ def grammar_questions(day, item, grammar):
                    for k in ("ja", "zh")):
                 yield candidate
 
-    yield question(day, kid, "context", f"请选择「{example['ja']}」的中文意思。", example["zh"],
-                   (e["zh"] for e in nearby_examples(example)), "usage")
+    if day == 1 or not item.get("ko_equiv"):
+        yield question(day, kid, "context", f"请选择「{example['ja']}」的中文意思。", example["zh"],
+                       (e["zh"] for e in nearby_examples(example)), "usage")
     example = examples[0]
     yield question(day, kid, "form", f"选出符合下列意思的日语句子。\n{example['zh']}", example["ja"],
                    (e["ja"] for e in nearby_examples(example) if compact(e["zh"]) != compact(example["zh"])), "usage")
@@ -176,11 +187,12 @@ def build_daily_questions(day, vocab, grammar):
     core, extra = [], []
     optional = set(day["extension_vocab_ids"])
     today = set(day["new_vocab_ids"])
+    word_pool = [word for word in vocab.values() if (word["jlpt"] == "N2") == (number >= 91)]
     for kid in day["new_vocab_ids"]:
         bucket = extra if kid in optional else core
-        bucket.extend(vocabulary_questions(number, vocab[kid], vocab.values(), today))
+        bucket.extend(vocabulary_questions(number, vocab[kid], word_pool, today))
     for kid in day["new_grammar_ids"]:
-        peers = (g for g in grammar.values() if number != 1 or g["jlpt"] != "N2")
+        peers = (g for g in grammar.values() if number >= 91 or (g["jlpt"] != "N2" if number == 1 else int(g["id"][1:]) <= 286))
         core.extend(grammar_questions(number, grammar[kid], peers))
     rng = random.Random(f"daily-v13-{number}")
     for bucket in (core, extra):

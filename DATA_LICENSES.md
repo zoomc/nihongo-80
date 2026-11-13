@@ -47,3 +47,9 @@ CC BY-SA 文件仅播放、未改编；署名与许可链接已随音频卡片�
 这里**只是引用 Wikimedia 官方 CDN 上已有的转码 URL**：项目没有下载、没有自行转码、没有改编音频文件，
 因此不产生新的衍生作品，也不改变上表逐文件的作者与许可要求。页面卡片仍给出原作者、文件页与许可全文链接；
 CC BY-SA / PD 的署名义务按原文件履行。
+
+## N2 课程数据
+
+- N2 词形、假名、词性与语法例句来自 [OpenJLPT 数据快照](https://github.com/wjdartmouth/JLPT/tree/0d1d3410bec90bd4098a7c72de820543cb4f707c)，使用 CC BY-SA 4.0，词表以 Waller JLPT 与 EDRDG JMdict 为基础。N2 新词未转存其 Tatoeba 例句。
+- N2 中文词义来自 [Tomoshi 日语词典 v2026-11-06](https://github.com/tomoshi-app/tomoshi-dict-data/releases/tag/v2026-11-06) 的 `zh_defs`，© Y1Z，CC BY-SA 4.0。按 JMdict ID 匹配，节选并合并词义，词频顺序使用同一快照的 JMdict 优先度衍生排名。衍生词汇和语法数据沿用 CC BY-SA 4.0。
+- N2 韩语对应、对比注释、听力脚本及选项为本项目草稿。JLPT 官方样题、练习册、脚本与原声链接到官方站点。

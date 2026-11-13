@@ -1,6 +1,6 @@
 
 (function(){'use strict';
-var PREFIX='nh80.v9.pending.', LOCAL='nh80.v9.latest', SNAP='nh80.v9.study.snapshot', CATALOG='nh80.v15.catalog', study=read(SNAP,null),catalog=read(CATALOG,[]),busy=false,timer=null;
+var PREFIX='nh80.v9.pending.', LOCAL='nh80.v9.latest', SNAP='nh80.v9.study.snapshot', CATALOG='nh80.v16.catalog', study=read(SNAP,null),catalog=read(CATALOG,[]),busy=false,timer=null;
 var $=function(s,r){return (r||document).querySelector(s)};
 function esc(x){return String(x==null?'':x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;')}
 function uid(){return (crypto.randomUUID?crypto.randomUUID():Date.now()+'-'+Math.random().toString(36).slice(2))}

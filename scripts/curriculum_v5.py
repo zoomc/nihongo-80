@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the 100-day course and its lesson notes from the knowledge seeds."""
+"""Build the 150-day course and its lesson notes from the knowledge seeds."""
 from __future__ import annotations
 
 import json
@@ -10,16 +10,25 @@ ROOT = Path(__file__).resolve().parent.parent
 SEED = ROOT / "knowledge/seeds"
 OUT = ROOT / "curriculum"
 
-DAYS = 100
+DAYS = 150
 DAILY_VOCAB = 25
 PHASES = [
     ("P0", 1, 3, "N5 入门"),
-    ("P1", 4, 26, "N5 核心"),
-    ("P2", 27, 50, "N4 主体"),
-    ("P3", 51, 84, "N3 词汇与语法"),
-    ("P4", 85, 100, "N3 综合与 N2 衔接"),
+    ("P1", 4, 24, "N5 核心"),
+    ("P2", 25, 46, "N4 主体"),
+    ("P3", 47, 78, "N3 词汇与语法"),
+    ("P4", 79, 90, "N3 听力与题型"),
+    ("P5", 91, 108, "N2 词汇与句型"),
+    ("P6", 109, 132, "N2 场景听解"),
+    ("P7", 133, 150, "N2 综合与模考"),
 ]
-LEVEL_RANGES = {"N5": (1, 26), "N4": (27, 50), "N3": (51, DAYS)}
+LEVEL_RANGES = {"N5": (1, 24), "N4": (25, 46), "N3": (47, 90), "N2": (91, 150)}
+N2_MOCK_DAYS = {135: "做官方卷第 1 册语言知识与阅读，记录超时题型。",
+                140: "完成第 1 册听力，再核对脚本与选项。",
+                145: "做官方卷第 2 册语言知识与阅读，比较两次失分原因。",
+                150: "完成第 2 册听力，整理词义、读音和听解三类错题。"}
+N2_AUDIO_DAYS = (109, 112, 115, 118, 121, 124, 127, 130, 133, 137, 142, 147)
+N3_AUDIO_DAYS = (79, 81, 83, 85, 87, 89)
 LEGACY_RANGES = {"N5": (1, 30, 0), "N4": (31, 60, 18), "N3": (61, 120, 27)}
 
 
@@ -71,8 +80,8 @@ def build():
     selected_ids = set()
     for level, (start, end) in LEVEL_RANGES.items():
         level_words = [v for v in vocab if v["jlpt"] == level]
-        mandatory = legacy_core(level_words, level)
-        weights = {d: (14 if d == 1 else DAILY_VOCAB) for d in range(start, end + 1)}
+        mandatory = legacy_core(level_words, level) if level != "N2" else {v["id"] for v in level_words}
+        weights = {d: (14 if d == 1 else 20 if d >= 139 else DAILY_VOCAB) for d in range(start, end + 1)}
         capacity = sum(weights.values())
         if not len(mandatory) <= capacity <= len(level_words):
             raise ValueError(f"{level}: invalid vocabulary capacity {capacity}")
@@ -105,14 +114,16 @@ def build():
         if pending:
             raise ValueError("语法排课缺少先修或课时：" + ", ".join(g["id"] for g in pending))
 
-    bridge = [g for g in grammar if g["jlpt"] == "N2"]
-    bridge_days = list(range(85, 101))
-    for i, g in enumerate(bridge):
-        gby[bridge_days[i * len(bridge_days) // len(bridge)]].append(g)
+    audio = [m for m in read("materials.jsonl") if m.get("id", "").startswith("N2L")]
+    manifest = json.loads((ROOT / "web/audio/manifest.json").read_text())["items"]
+    n3_audio = [m for m in read("materials.jsonl")
+                if m["id"] in manifest and m.get("level") == "N3"]
+    audio_by_day = {**dict(zip(N3_AUDIO_DAYS, n3_audio[:6], strict=True)),
+                    **dict(zip(N2_AUDIO_DAYS, audio, strict=True))}
 
     days = []
     for d in range(1, DAYS + 1):
-        ph, a, b = phase_of(d)
+        ph, _, _ = phase_of(d)
         nv = vby.get(d, [])
         ng = gby.get(d, [])
         nk = kby.get(d, [])
@@ -124,17 +135,20 @@ def build():
                 words, grammar_items, characters = vby[previous], gby[previous], kby[previous]
                 rev.extend(words[(offset + i) % len(words)]["id"] for i in range(2))
                 rev.append(grammar_items[offset % len(grammar_items)]["id"])
-                rev.append(characters[offset % len(characters)]["id"])
+                if characters:
+                    rev.append(characters[offset % len(characters)]["id"])
         patterns = "、".join(g["pattern"] for g in ng)
         scene_key = "grammar-" + "-".join(g["id"] for g in ng)
         can_do_scene = "；".join(g["meaning_zh"] for g in ng)
         can_do = "在单选题中辨认今天的词义、读音和句型用法。"
         blocks = [
             {"type": "记忆曲线复习", "min": 10, "desc": "先做已到期的复习题"},
-            {"type": "新词", "min": 16, "desc": f"{len(nv)} 个新词"},
-            {"type": "语法", "min": 9, "desc": patterns},
+            {"type": "新词", "min": 20, "desc": f"{len(nv)} 个新词"},
+            {"type": "语法", "min": 5, "desc": "先看韩语对应，再核对日语接续和语体"},
             {"type": "练习", "min": 25, "desc": "单选题，答完可重练错题"},
         ]
+        if d in audio_by_day or d in N2_MOCK_DAYS:
+            blocks[-1]["desc"] += "。预留 10–15 分钟听力或官方题型，整卷另计时"
         days.append({
             "day": d, "phase": ph, "phase_name": next(name for code, _, _, name in PHASES if code == ph),
             "theme": patterns,
@@ -149,10 +163,11 @@ def build():
             "new_kanji_ids": [k["id"] for k in nk],
             "review_knowledge_ids": rev,
             "review_snapshot_note": "静态预览；权威 FSRS 到期队列见 learning.due_queue()",
-            "material_ids": [],
+            "material_ids": [audio_by_day[d]["id"]] if d in audio_by_day else [],
+            "practice_note": N2_MOCK_DAYS.get(d, ""),
             "question_ids": [],
             "practice_mode": "choice",
-            "listening": False,
+            "listening": d in audio_by_day,
             "assessment": "none",
             "objectives": [can_do],
             "lesson_core": [
@@ -167,10 +182,10 @@ def build():
 
     data = {
         "meta": {
-            "version": "15.0", "days": DAYS, "minutes_per_day": 60,
+            "version": "16.0", "days": DAYS, "minutes_per_day": 60,
             "total_hours": DAYS,
-            "target": "N3 词汇与语法，后段增加 N2 衔接",
-            "honesty": "主课 2489 词，选学词单独查阅；N2 条目为衔接练习。",
+            "target": "90 天 N3 基础与 60 天 N2 冲刺",
+            "honesty": "按词汇、假名读音、韩日句型和后段听解组织。官方模拟练习用于检验实际水平。",
             "generated_at": "2026-11-08",
             "generator": "scripts/curriculum_v5.py",
             "license_note": "词/语法/汉字骨架来自 OpenJLPT（CC-BY-SA-4.0），中文释义与例句翻译为 AI 草稿。",
@@ -233,7 +248,7 @@ def build():
             md.append("- **%s** %s｜音：%s｜训：%s" % (x["char"], x["meaning_zh"],
                                                       "、".join(x.get("onyomi") or []),
                                                       "、".join(x.get("kunyomi") or [])))
-        (OUT / ("day-%03d.md" % d["day"])).write_text("\n".join(md) + "\n", encoding="utf-8")
+        (OUT / ("day-%03d.md" % d["day"])).write_text("\n".join(md).rstrip() + "\n", encoding="utf-8")
 
     print(json.dumps({
         "days": len(days), "new_vocab": c["vocab"], "new_grammar": c["grammar"],

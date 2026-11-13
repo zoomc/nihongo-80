@@ -1,10 +1,10 @@
-# Nihongo 100 · 当前项目入口（v15）
+# Nihongo 150 · 当前项目入口（v16）
 
-先读 `HANDOFF.md`、`reports/v6_completion.md`、`CONTRACTS.md`（末尾 v15 修订优先于旧版示例）。当前目录名 nihongo-80 是历史名称，课程是 100 天。
+先读 `HANDOFF.md`、`reports/v6_completion.md`、`CONTRACTS.md`（末尾 v16 修订优先于旧版示例）。当前目录名 nihongo-80 是历史名称，课程是 150 天。
 
 ## 产品与学习者
 
-中文母语、朝鲜族、韩语母语级；语法可迁移，重点是词汇和句型单选。网页是资源，会话是教师。不要改成仪表盘、多用户或题库平台。
+中文母语、朝鲜族、韩语母语级；语法可迁移，重点是词汇、假名读音与后段听力。语法从韩语对应切入，重点辨析日语接续、助词、语体。网页是资源，会话是教师。不要改成仪表盘、多用户或题库平台。
 
 ## 真源与唯一写入通道
 
@@ -42,7 +42,7 @@ python3 scripts/today.py
 - 补课/回看：`--day N`。
 - 机器可读：`--json`；只看不写：`--no-write`。
 
-`session_v5.py daily` 仍可用（调 brief/state），但不再是入口；`study-sync` 只用于私有复习上下文，不是每日必经步骤。显式读取 `data/review/CONTEXT.md`（若存在）、STATE、当天 brief 与数据库（只读）。先给页面链接，等学生看完；答疑只讲他没懂的，逐题问错因。每天按记忆曲线复习、新词、语法、单选推进。Day 001 保留原课，从 Day 002 起每天 25 词。选学词库和独立听力资源按需使用。页面不显示时间块，当天精确内容只取课程 blocks。
+`session_v5.py daily` 仍可用（调 brief/state），但不再是入口；`study-sync` 只用于私有复习上下文，不是每日必经步骤。显式读取 `data/review/CONTEXT.md`（若存在）、STATE、当天 brief 与数据库（只读）。先给页面链接，等学生看完；答疑只讲他没懂的，逐题问错因。每天按记忆曲线复习、新词、语法、单选推进。Day 001 保留原课，Day 002–138 每天 25 词，最后 12 天每天 20 词。N3 从 Day 079、N2 从 Day 109 开始安排听解，官方原声从 N2 冲刺页进入。页面不显示时间块，当天精确内容只取课程 blocks。
 
 网页提交只代表原始作答保存。同步使用 `deploy/.sync-key` 本机密钥（禁止显示或提交）。choice模式导入后，CLI自动按必做题完整性及70%正确率计算完成，无需手写验收；未达标记录incomplete，不降低难度。旧教师输出接口仅兼容历史会话。
 
@@ -57,7 +57,7 @@ python3 scripts/today.py
 
 ## 角色
 
-agents/teacher.md / examiner.md / reviewer.md / director.md 仅作为教师、考官、复习官、总监职责参考。其旧时间块和回传码流程不覆盖本文件与 v15 契约。数据评分继续按 CONTRACTS 的掌握门控执行。
+agents/teacher.md / examiner.md / reviewer.md / director.md 仅作为教师、考官、复习官、总监职责参考。其旧时间块和回传码流程不覆盖本文件与 v16 契约。数据评分继续按 CONTRACTS 的掌握门控执行。
 
 ## 通过 skill 读取学习进度
 

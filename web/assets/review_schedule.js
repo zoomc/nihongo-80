@@ -5,7 +5,7 @@
   const KEY = 'nh80.review.v1';
   const LESSON = 'nh80.v11.state.';
   const INTERVALS = [1, 3, 7, 14, 30, 60];
-  const QUESTION = /^D(?:13|15)-(\d{3})-([VG]\d{4})-[a-z]+$/;
+  const QUESTION = /^D(?:13|15|16)-(\d{3})-([VG]\d{4})-[a-z]+$/;
 
   function today(date = new Date()) {
     return Math.floor(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) / 86400000);
@@ -58,7 +58,7 @@
     const cards = read(KEY);
     if (cards._history) return;
     const date = today();
-    for (let day = 1; day <= 120; day++) {
+    for (let day = 1; day <= 150; day++) {
       addLesson(cards, day, read(LESSON + day).results, date, true);
     }
     cards._history = true;
@@ -97,7 +97,7 @@
 
   function wrongQuestions() {
     const questions = [];
-    for (let day = 120; day >= 1; day--) {
+    for (let day = 150; day >= 1; day--) {
       const { results, retry } = read(LESSON + day);
       for (const [qid, result] of Object.entries(results || {})) {
         const kid = parseAnswer(qid, day);

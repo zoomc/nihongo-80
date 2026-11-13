@@ -2,7 +2,7 @@
 """nh80.py — Nihongo 80 唯一状态写入入口 / 命令行。
 
 用法速查：
-  python3 scripts/nh80.py init      # 100 天课程
+  python3 scripts/nh80.py init      # 150 天课程
   python3 scripts/nh80.py build
   python3 scripts/nh80.py start-day 1
   python3 scripts/nh80.py answer --day 1 --q Q0001 --answer "です"
@@ -241,12 +241,12 @@ def cmd_init(args):
          "site": site})
 
 
-def _build_v5(root, conn):
-    """v5 生成 100 天课程并写入 DB；返回 curriculum data。"""
+def _build_v5(root, conn, daily_by_day=None):
+    """v5 生成 150 天课程并写入 DB；返回 curriculum data。"""
     import hashlib
     import curriculum_v5 as c5
     data = c5.build()
-    from quiz_v5 import day_questions
+    from quiz_v5 import day_questions, listening_quiz
     from daily_questions import build_daily_questions
     from quiz_v5 import fnv
     from sentence_choices import build_for_day as sentence_questions
@@ -257,13 +257,22 @@ def _build_v5(root, conn):
     keys = {}
     grade_shards = {}
     with conn:
-        for grammar in tables["grammar"].values():
-            core._insert_kind(conn, "grammar", grammar)
+        for name in ("grammar", "vocabulary", "materials"):
+            for item in tables[name].values():
+                if item.get("jlpt") == "N2" or item.get("level") == "N2":
+                    core._insert_kind(conn, name, item)
+                    conn.execute("DELETE FROM search_fts WHERE kid=? AND kind=?", (item["id"], name))
+                    conn.execute("INSERT INTO search_fts(kid,kind,body) VALUES(?,?,?)",
+                                 (item["id"], name, core._search_body(name, item)))
         for day in data["days"]:
             qs = day_questions(day, tables["vocabulary"], tables["grammar"], tables["kanji"], tables["materials"])
             sqs = sentence_questions(day, sentence_rows)
             daily = build_daily_questions(day, tables["vocabulary"], tables["grammar"])
-            day["question_ids"] = [q["qid"] for q in daily]
+            if daily_by_day is not None:
+                daily_by_day[day["day"]] = [dict(q) for q in daily]
+            audio_questions = [q for mid in day["material_ids"]
+                               for q in listening_quiz(day, tables["materials"][mid])]
+            day["question_ids"] = [q["qid"] for q in daily + audio_questions]
             for q in daily:
                 q["answer"] = next(option for option in q["options"] if fnv(option) == q["h"])
             practice = build_daily(day, tables["vocabulary"], tables["grammar"], tables["kanji"])
@@ -272,7 +281,7 @@ def _build_v5(root, conn):
                                        tables["grammar"], tables["kanji"])["questions"]
             shard = {}
             grade_shards[day["day"]] = shard
-            for q in daily + qs + sqs + practice:
+            for q in daily + audio_questions + qs + sqs + practice:
                 q["prompt_ja"] = q["prompt"]
                 q["source"] = "v5-generated"
                 q["review_status"] = "ai_draft"
@@ -311,13 +320,14 @@ def _build_v5(root, conn):
 def cmd_build(args, quiet=False):
     r = root_of(args.root)
     conn = connect(r)
+    daily_by_day = {}
     try:
         ensure_session_schema(conn)
-        data = _build_v5(r, conn)
+        data = _build_v5(r, conn, daily_by_day)
     finally:
         conn.close()
     import build_v5_site as s5
-    s5.main()
+    s5.main(daily_by_day)
     if not quiet:
         out({"ok": True, "curriculum_days": len(data["days"]), "validation_errors": 0,
              "site_output": "v5: %d 天页面" % len(data["days"])})
@@ -830,7 +840,7 @@ def cmd_finish_day(args):
              "completed_days": completed, "incomplete_days": incomplete,
              "pending_open": pending, "output_confirmed": output_confirmed, "practice_mode": "choice" if choice_mode else "teacher",
              "summary": summary, "backup": bk["backup"] if bk else None,
-             "next": ("python3 scripts/nh80.py start-day %d" % (day + 1)) if day < COURSE_DAYS else "打开 resources.html 进行 N3 官方自测与薄弱项复习"})
+             "next": ("python3 scripts/nh80.py start-day %d" % (day + 1)) if day < COURSE_DAYS else "打开 n2.html 进行 N2 官方自测与薄弱项复习"})
     finally:
         conn.close()
 
@@ -966,16 +976,18 @@ def cmd_validate(args):
             errs.append("Day %s 时间块不等于 60" % d.get("day"))
         if [b["type"] for b in d["blocks"]] != ["记忆曲线复习", "新词", "语法", "练习"]:
             errs.append("Day %s 课程模块不正确" % d["day"])
-        if len(d["new_vocab_ids"]) != (14 if d["day"] == 1 else DAILY_VOCAB):
+        if len(d["new_vocab_ids"]) != (14 if d["day"] == 1 else 20 if d["day"] >= 139 else DAILY_VOCAB):
             errs.append("Day %s 词数不正确" % d["day"])
-        if not 2 <= len(d["new_grammar_ids"]) <= 4:
+        if not 1 <= len(d["new_grammar_ids"]) <= 4:
             errs.append("Day %s 语法量不正确" % d["day"])
         for gid in d["new_grammar_ids"]:
             for pre in seeds["grammar"].get(gid, {}).get("prerequisites", []):
                 if pre not in grammar_days or grammar_days[pre] >= d["day"]:
                     errs.append("Day %s 先修未满足 %s -> %s" % (d["day"], gid, pre))
-        if d.get("listening") or d.get("material_ids"):
-            errs.append("主课包含听力材料")
+        for mid in d.get("material_ids", []):
+            material = seeds["materials"].get(mid, {})
+            if d["day"] < 79 or material.get("kind") != "listening" or not material.get("questions"):
+                errs.append(f"Day {d['day']} 听力安排无效")
         for key, field in (("v", "new_vocab_ids"), ("g", "new_grammar_ids"), ("k", "new_kanji_ids")):
             for kid in d.get(field) or []:
                 table = {"v": "vocabulary", "g": "grammar", "k": "kanji"}[key]

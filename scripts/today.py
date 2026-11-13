@@ -67,7 +67,7 @@ def local_done() -> set[int]:
         conn = sqlite3.connect("file:%s?mode=ro" % DB, uri=True)
         try:
             rows = conn.execute(
-                "SELECT day FROM sessions s WHERE status='finished' AND passed=1 AND (day=1 OR EXISTS (SELECT 1 FROM attempts a WHERE a.day=s.day AND a.qid LIKE 'D15-%'))").fetchall()
+                "SELECT day FROM sessions s WHERE status='finished' AND passed=1 AND (day=1 OR EXISTS (SELECT 1 FROM attempts a WHERE a.day=s.day AND a.qid LIKE 'D16-%'))").fetchall()
         finally:
             conn.close()
         return {int(r[0]) for r in rows}
@@ -101,12 +101,12 @@ def cloud_items(total: int, base: str = BASE):
     if not key:
         return [], "no_key"
     try:
-        data = progress_read.fetch(base, key, {"latest": 1, "limit": 120})
+        data = progress_read.fetch(base, key, {"latest": 1, "limit": 150})
     except progress_read.ProgressError as e:
         return [], e.reason
     except Exception as e:  # 网络异常不能阻塞学习
         return [], "error:%s" % type(e).__name__
-    items = [x for x in (data.get("items") or []) if isinstance(x, dict) and (x.get("v") == 3 or x.get("day") == 1) and 1 <= int(x.get("day", 0)) <= total]
+    items = [x for x in (data.get("items") or []) if isinstance(x, dict) and (x.get("v") == 4 or x.get("day") == 1) and 1 <= int(x.get("day", 0)) <= total]
     return items, ""
 
 
@@ -303,7 +303,7 @@ def render_md(s, base: str = BASE) -> str:
         "",
         "1. 先把页面链接发给学生，等他看完再来。",
         "2. 先做每日记忆曲线单选，再结合本机到期卡、待补先修及上次错题讲解。",
-        "3. 按需讲解今天 %d 条语法中的易错点，再做单选。" % len(s["grammar_lines"]),
+        "3. 先看今天 %d 条语法的韩语对应，按需解释日语接续、助词和语体。" % len(s["grammar_lines"]),
         "4. 做完新词与语法单选后，从页面重练错题。",
         "5. 收尾写 `days/day-%03d/report.md`：摘要 ≤5 行（完成度 / 真正学会 / 仍然卡 / 明日建议）。" % day,
         "",

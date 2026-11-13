@@ -1,6 +1,6 @@
 ---
 name: nh80-progress
-description: "开始或继续 Nihongo-80 日语课（0 基础→N3，100 天，中文母语/朝鲜族学习者）：新会话第一步跑 `python3 nihongo-80/scripts/today.py`，拿到今天该学 Day N、上次卡点、今日词/语法/汉字与页面链接，再按 TODAY.md 带课；也用于读云端「完成」快照整理复习重点。只要用户提到「开始学日语 / 今天学什么 / 今天开始上课 / 继续上次 / 学到第几天 / 日语学习进度 / 复习建议 / 错题 / 忘了哪些词 / N3 日语课 / nihongo progress」——即使没点名本 skill 也必须用。注意云端进度是学习者自报、非掌握权威，权威完成以本机 SQLite finish-day 为准。"
+description: "开始或继续 Nihongo-80 日语课（90 天 N3 基础 + 60 天 N2 冲刺，中文母语/朝鲜族学习者）：新会话第一步跑 `python3 nihongo-80/scripts/today.py`，拿到今天该学 Day N、上次卡点、今日词/语法/汉字与页面链接，再按 TODAY.md 带课；也用于读云端「完成」快照整理复习重点。只要用户提到「开始学日语 / 今天学什么 / 今天开始上课 / 继续上次 / 学到第几天 / 日语学习进度 / 复习建议 / 错题 / 忘了哪些词 / N3 日语课 / N2 冲刺 / nihongo progress」——即使没点名本 skill 也必须用。注意云端进度是学习者自报、非掌握权威，权威完成以本机 SQLite finish-day 为准。"
 ---
 
 # nh80-progress · 日语学习进度与每日开课
@@ -64,7 +64,7 @@ python3 scripts/progress_read.py --latest --base https://nihongo80-preview.cmjfi
 
 | 字段 | 含义 |
 |---|---|
-| `day` | 主课 1..100；同日覆盖；旧 120 天快照仍可读取 |
+| `day` | 主课 1..150；同日覆盖；旧 120 天快照仍可读取 |
 | `completed_at` | 客户端点「完成」时刻（ISO 8601，截断 40 字符，仅参考） |
 | `server_ts` | Worker 收到时刻（UTC ISO 8601），权威时间戳 |
 | `accuracy` | 客户端自算 0..1，**仅展示、非权威** |
@@ -75,7 +75,7 @@ python3 scripts/progress_read.py --latest --base https://nihongo80-preview.cmjfi
 | `review_summary[]` | 建议复习的 id 列表 |
 | `note` | 自由文本备注（≤2000 字符） |
 | `self_reported` | 恒为 1：自报快照标记 |
-| `v` | 当前版本 3；历史版本 2 可读，Day 001 仍计入新版进度 |
+| `v` | 当前版本 4；历史快照可读，Day 001 仍计入新版进度 |
 
 `--json` 输出服务端原样结构：`{"ok":true,"items":[...]}`。
 

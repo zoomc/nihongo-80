@@ -42,7 +42,7 @@ const env = {
 };
 
 const payload = {
-  v: 3,
+  v: 4,
   day: 47,
   completed_at: '2026-11-08T23:50:00+08:00',
   required_ids: ['V0001'],
@@ -74,7 +74,7 @@ assert.deepEqual(await r1.json(), { ok: true, day: 47, saved: true });
 console.log('PASS: POST without Origin accepted (content-type guard + strong limits)');
 
 // 2) 错误 day -> 400。
-for (const bad of [0, 101, 121, '47x', null, 3.5]) {
+for (const bad of [0, 151, '47x', null, 3.5]) {
   const r = await post({ ...payload, day: bad });
   assert.equal(r.status, 400, 'bad day: ' + String(bad));
 }
@@ -169,7 +169,7 @@ for (let i = 0; i < 51; i += 1) {
   lastStatus = (await worker.fetch(new Request(BASE + '/api/progress', {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ ...payload, day: 100 }),
+    body: JSON.stringify({ ...payload, day: 150 }),
   }), env2)).status;
 }
 assert.equal(lastStatus, 429);

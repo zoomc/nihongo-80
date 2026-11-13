@@ -36,7 +36,7 @@ class TestQuestionContract(unittest.TestCase):
     def test_every_question_has_four_unique_options(self):
         from quiz_v5 import fnv
         seen = set()
-        self.assertEqual(len(self.all_q), 600)
+        self.assertEqual(sum(not q["qid"].startswith("L-") for q in self.all_q), 900)
         for q in self.all_q:
             self.assertNotIn(q["qid"], seen, "重复题号 " + q["qid"])
             seen.add(q["qid"])
@@ -60,7 +60,7 @@ class TestQuestionContract(unittest.TestCase):
                              "同形词把答案写进题干：" + q["qid"])
 
     def test_compatibility_quiz_still_practices_new_kanji_and_grammar(self):
-        for day in (1, 36, 76, 88, 99, 100):
+        for day in (1, 36, 76, 88, 89, 90):
             tags = [q["qid"].split("-")[2] for q in self.by_day[day]
                     if q["qid"].startswith("Q-")]
             self.assertTrue(any(t.startswith("K") for t in tags),
@@ -75,8 +75,8 @@ class TestCurriculumQuality(unittest.TestCase):
         cls.cur = json.loads((ROOT / "curriculum/curriculum.json").read_text(encoding="utf-8"))
         cls.materials = {x["id"]: x for x in load("materials")}
 
-    def test_curriculum_does_not_assign_listening_materials(self):
-        self.assertTrue(all(not d["listening"] and not d["material_ids"] for d in self.cur["days"]))
+    def test_curriculum_places_listening_late_in_each_stage(self):
+        self.assertTrue(all(d["day"] >= 79 and not 91 <= d["day"] < 109 for d in self.cur["days"] if d["material_ids"]))
 
     def test_review_snapshot_covers_all_three_kinds(self):
         kinds = {i[0] for d in self.cur["days"] for i in d["review_knowledge_ids"]}
@@ -112,7 +112,7 @@ class TestCurriculumQuality(unittest.TestCase):
 class TestListeningAssets(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.selected = [x for x in load("materials") if x["id"] >= "M0096"]
+        cls.selected = [x for x in load("materials") if "M0096" <= x["id"] <= "M0140"]
         cls.manifest = json.loads((ROOT / "web/audio/manifest.json").read_text(encoding="utf-8"))
 
     def test_q3_answers_globally_unique(self):

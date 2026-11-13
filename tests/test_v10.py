@@ -70,7 +70,7 @@ class TestMergedQuestions(unittest.TestCase):
             covered = {k for q in qs for k in (q.get("knowledge_ids") or [])}
             need = set(d["new_vocab_ids"]) | set(d["new_grammar_ids"])
             self.assertFalse(need - covered, "Day %d 未覆盖：%s" % (d["day"], sorted(need - covered)[:5]))
-            self.assertLessEqual(len(qs), 62)
+            self.assertLessEqual(len(qs), 65)
             self.assertEqual(len({q["qid"] for q in qs}), len(qs))
             for q in qs:
                 self.assertNotIn("answer", q)
@@ -83,7 +83,7 @@ class TestMergedQuestions(unittest.TestCase):
         for day in (1, 47, 100):
             c = Counter(k for q in data(day)["questions"] for k in (q.get("knowledge_ids") or []))
             d = data(day)
-            expected = {**{v["id"]: 2 for v in d["vocab"]}, **{g["id"]: 3 for g in d["grammar"]}}
+            expected = {**{v["id"]: 2 for v in d["vocab"]}, **{g["id"]: 2 if g.get("provenance") == "openjlpt_adapted" else 3 for g in d["grammar"]}}
             self.assertEqual(c, expected, "Day %d 每个考点题数" % day)
 
     def test_questions_are_one_flat_block_in_html(self):
@@ -140,7 +140,7 @@ class TestProgressChain(unittest.TestCase):
 
     def test_service_worker_bumped(self):
         sw = (ROOT / "web/sw.js").read_text(encoding="utf-8")
-        self.assertRegex(sw, r"nh80-v15-[0-9a-f]{12}")
+        self.assertRegex(sw, r"nh80-v16-[0-9a-f]{12}")
         self.assertNotIn("nh80-v5.1-", sw)
         self.assertIn("/api/", sw)
 

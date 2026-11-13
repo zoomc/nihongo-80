@@ -446,7 +446,7 @@ const PROGRESS_SITE_ORIGINS = new Set([
   "https://nihongo80.cmjfire.workers.dev",
   "https://nihongo80-preview.cmjfire.workers.dev",
 ]);
-const PROGRESS_MAX_QUESTIONS = 62;
+const PROGRESS_MAX_QUESTIONS = 65;
 const PROGRESS_MAX_IDS = 200;
 const PROGRESS_MAX_NOTE = 2000;
 const PROGRESS_MAX_ANSWER = 2000;
@@ -504,8 +504,8 @@ function progressIdList(value: unknown, max: number): string[] | null {
 
 /** 字段白名单 + 逐项校验；返回规范化对象（未知字段一律丢弃）或错误 reason。 */
 function parseProgressBody(body: ProgressObject): ProgressObject | string {
-  if (body.v !== 3) return "bad_version";
-  const day = strictInt(body.day, 1, 100);
+  if (body.v !== 4) return "bad_version";
+  const day = strictInt(body.day, 1, 150);
   if (day === null) return "bad_day";
 
   const requiredIds = progressIdList(body.required_ids, PROGRESS_MAX_IDS);
@@ -569,7 +569,7 @@ function parseProgressBody(body: ProgressObject): ProgressObject | string {
   if (typeof body.note === "string" && body.note.length > PROGRESS_MAX_NOTE) return "note_too_large";
 
   return {
-    v: 3,
+    v: 4,
     day,
     completed_at: typeof body.completed_at === "string" ? body.completed_at.slice(0, 40) : "",
     required_ids: requiredIds,
@@ -606,12 +606,12 @@ async function handleGetProgress(env: Env, url: URL, origin: string | null): Pro
   try {
     let res: D1Result<Record<string, unknown>>;
     if (dayParam !== null) {
-      const day = strictInt(dayParam, 1, 120);
+      const day = strictInt(dayParam, 1, 150);
       if (day === null) return jsonResponse({ ok: false, reason: "bad_query" }, 400, origin);
       res = await db.prepare("SELECT day,server_ts,completed_at,payload,accuracy,self_reported FROM study_progress_120 WHERE day=?")
         .bind(day).all<Record<string, unknown>>();
     } else if (latestParam !== null && latestParam !== "0") {
-      const limit = asInt(url.searchParams.get("limit"), PROGRESS_LIMIT_DEFAULT, 1, 120) ?? PROGRESS_LIMIT_DEFAULT;
+      const limit = asInt(url.searchParams.get("limit"), PROGRESS_LIMIT_DEFAULT, 1, 150) ?? PROGRESS_LIMIT_DEFAULT;
       res = await db.prepare("SELECT day,server_ts,completed_at,payload,accuracy,self_reported FROM study_progress_120 ORDER BY server_ts DESC, day DESC LIMIT ?")
         .bind(limit).all<Record<string, unknown>>();
     } else {

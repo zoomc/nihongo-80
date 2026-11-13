@@ -704,6 +704,74 @@ async function handleProgress(request: Request, env: Env, url: URL): Promise<Res
 // 入口
 // ---------------------------------------------------------------------------
 
+const SESSION = "__Host-nh80_account";
+const LOGIN_CODE = /^[0-9a-f]{64}$/;
+
+function sessionResponse(account: string, code: string, maxAge = 31536000): Response {
+  const response = jsonResponse({ ok: true, account }, 200, null);
+  response.headers.set("set-cookie",
+    `${SESSION}=${code}; Path=/; Max-Age=${maxAge}; Secure; HttpOnly; SameSite=Strict`);
+  return response;
+}
+
+async function handleCourseAccount(request: Request, env: Env, url: URL): Promise<Response> {
+  const fail = (reason: string, status: number) => jsonResponse({ ok: false, reason }, status, null);
+  const origin = request.headers.get("origin");
+  if ((origin && origin !== url.origin) || (request.method !== "GET" && origin !== url.origin)) {
+    return fail("cross_origin", 403);
+  }
+  const db = env.DB;
+  if (!db) return fail("no_db", 503);
+  const credential = request.headers.get("cookie")?.match(/(?:^|;\s*)__Host-nh80_account=([0-9a-f]{64})(?:;|$)/)?.[1];
+  const account = credential ? await sha256Hex("nh80-account:" + credential) : "";
+  const action = url.pathname.split("/").pop();
+  try {
+    if (request.method === "POST" && action === "logout") return sessionResponse("", "", 0);
+    if (request.method === "POST" && action === "login") {
+      if (!request.headers.get("content-type")?.startsWith("application/json")) return fail("bad_json", 400);
+      const body = await readJson(request, 2048);
+      if (typeof body === "string") return fail(body, 400);
+      if (typeof body.code !== "string" || !LOGIN_CODE.test(body.code)) return fail("bad_code", 400);
+      const id = await sha256Hex("nh80-account:" + body.code);
+      if (body.create === true) {
+        const ip = await progressIpKey(request, env, new Date().toISOString().slice(0, 10));
+        if (!(await progressBudget(db, "account:" + ip, 12))) return fail("rate_limit", 429);
+        const result = await db.prepare("INSERT OR IGNORE INTO course_accounts(id) VALUES(?)").bind(id).run();
+        if (!result.meta?.changes) return fail("account_exists", 409);
+      } else if (!await db.prepare("SELECT 1 FROM course_accounts WHERE id=?").bind(id).first()) {
+        return fail("invalid_code", 401);
+      }
+      return sessionResponse(id, body.code);
+    }
+    if (action !== "state" || !["GET", "POST"].includes(request.method)) return fail("method_not_allowed", 405);
+    if (!account) return fail("not_logged_in", 401);
+    if (request.method === "POST") {
+      if (!request.headers.get("content-type")?.startsWith("application/json")) return fail("bad_json", 400);
+      const body = await readJson(request, 4096);
+      if (typeof body === "string") return fail(body, 400);
+      const { days, last, opened } = body;
+      if (body.account !== account) return fail("different_account", 409);
+      if (!Array.isArray(days) || days.length > 150 || days.some(day => typeof day !== "number" || strictInt(day, 1, 150) === null) ||
+          typeof last !== "number" || strictInt(last, 0, 150) === null ||
+          typeof opened !== "number" || strictInt(opened, 0, Date.now() + 300000) === null || (last === 0 && opened !== 0)) {
+        return fail("bad_state", 400);
+      }
+      await db.prepare(`UPDATE course_accounts SET
+        days=(SELECT json_group_array(day) FROM (
+          SELECT value AS day FROM json_each(course_accounts.days)
+          UNION SELECT value FROM json_each(?1) ORDER BY day)),
+        last_day=CASE WHEN ?3 > opened_at THEN ?2 ELSE last_day END,
+        opened_at=max(opened_at, ?3) WHERE id=?4`).bind(JSON.stringify(days), last, opened, account).run();
+    }
+    const row = await db.prepare("SELECT days,last_day,opened_at FROM course_accounts WHERE id=?")
+      .bind(account).first<{days: string; last_day: number; opened_at: number}>();
+    return row ? jsonResponse({ ok: true, account, days: JSON.parse(row.days), last: row.last_day, opened: row.opened_at }, 200, null)
+      : fail("not_logged_in", 401);
+  } catch {
+    return fail("sync_unavailable", 503);
+  }
+}
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
@@ -714,6 +782,14 @@ export default {
         200,
         okOrigin(request, url),
       );
+    }
+
+    if (url.pathname.startsWith("/api/account/")) return handleCourseAccount(request, env, url);
+    if (url.pathname === "/api/app-version" && request.method === "GET") {
+      const version = await env.ASSETS.fetch(new Request(new URL("/version.json", url.origin)));
+      return new Response(version.body, {
+        status: version.status, headers: { "cache-control": "no-store", "content-type": "application/json" },
+      });
     }
 
     // 独立分支：/api/progress 需允许 production/preview/本地回环三类 Origin，

@@ -1,0 +1,6 @@
+CREATE TABLE course_accounts (
+  id TEXT PRIMARY KEY,
+  days TEXT NOT NULL DEFAULT '[]',
+  last_day INTEGER NOT NULL DEFAULT 0,
+  opened_at INTEGER NOT NULL DEFAULT 0
+);

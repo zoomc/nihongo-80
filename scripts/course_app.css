@@ -3,7 +3,7 @@
 .app-nav a[aria-current]{color:var(--accent);background:var(--surface);box-shadow:inset 0 -2px var(--accent)}
 .app-status{position:fixed;z-index:5;top:calc(8px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);width:max-content;max-width:90%;padding:8px 14px;background:var(--surface);border:1px solid var(--line);border-radius:10px;font-size:14px}
 .app-status:empty{display:none}
-.app-nav+.wrap{padding-bottom:calc(130px + env(safe-area-inset-bottom))}
+.app-nav~.wrap{padding-bottom:calc(130px + env(safe-area-inset-bottom))}
 .app-nav~.wrap .foot{padding-bottom:max(10px,env(safe-area-inset-bottom))}
 main>h1:focus{outline:none}
 .progress-transfer{margin:24px 0 8px;font-size:14px}
@@ -22,3 +22,8 @@ main>h1:focus{outline:none}
 .flash-controls .btn,.flash-flip{flex:1;min-height:48px}
 .flash-flip{width:100%;margin-top:14px}
 @media(prefers-color-scheme:dark){.app-nav~.wrap .btn.primary{color:#171614}}
+.account-panel{max-width:792px;margin:4px auto 0;padding:0 14px;font-size:14px}
+.account-panel summary{width:max-content;min-height:38px;cursor:pointer;color:var(--accent)}
+.account-panel form{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0}
+.account-panel input,.account-panel textarea{width:min(100%,350px);min-height:42px;padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);font-size:16px}
+.account-panel textarea{display:block;margin:10px 0;resize:vertical}

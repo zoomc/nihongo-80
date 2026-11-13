@@ -1,7 +1,7 @@
-const C = 'nh80-v18-4a19ba19f112';
+const C = 'nh80-v19-0f8d7f0c99d0';
 const shell = ['/index.html', '/assets/app.css', '/assets/course_progress.js',
   '/assets/review_schedule.js', '/assets/app.js', '/assets/study.js',
-  '/assets/flashcards.js', '/assets/course_app.js', '/flashcards.html', '/data/flashcards.json'];
+  '/assets/flashcards.js', '/assets/course_sync.js', '/assets/course_version.js', '/assets/course_app.js', '/flashcards.html', '/data/flashcards.json'];
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(C).then(cache => cache.addAll(shell)).then(() => self.skipWaiting()));
@@ -21,7 +21,7 @@ self.addEventListener('fetch', event => {
   event.respondWith((async () => {
     const cache = await caches.open(C);
     try {
-      const response = await fetch(request);
+      const response = await fetch(request, {cache:'no-cache'});
       if (response.ok) {
         try { await cache.put(key, response.clone()); } catch {}
       }

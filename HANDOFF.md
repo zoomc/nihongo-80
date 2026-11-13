@@ -1,4 +1,4 @@
-# HANDOFF · Nihongo 150 v18
+# HANDOFF · Nihongo 150 v19
 
 主课 150 天，Day 001 保留原词和语法，Day 002–138 每天 25 词，Day 139–150 每天 20 词。主课覆盖 3679 词、355 条语法（其中 79 条为 N2）和 620 汉字。461 个词单列选学词库，45 篇原有合成听力继续收录，主课加入 6 次 N3 听力、12 次 N2 听力和 4 次官方题型任务。N2 原创脚本用设备合成播放，官方练习链接原站。
 
@@ -9,7 +9,7 @@
 | Production | https://nihongo80.cmjfire.workers.dev |
 | Preview | https://nihongo80-preview.cmjfire.workers.dev |
 | 部署 | `bash scripts/deploy_cloudflare.sh preview` → `... production`（脚本先跑 `nh80.py build`） |
-| D1 | `nihongo80`（prod）/ `nihongo80-preview`（preview）两库隔离，`0001`–`0006` 均已应用 |
+| D1 | `nihongo80`（prod）/ `nihongo80-preview`（preview）两库隔离，`0001`–`0007` 均已应用 |
 | 额度 | Cloudflare Workers Free；无 R2 / KV / AI / 定时任务 / 日志；无付费绑定 |
 
 ## 新会话第一步（每天）
@@ -37,7 +37,7 @@ python3 scripts/today.py
 - **完成 → 云端**：`POST /api/progress` 写 D1 `study_progress_120`（`day` 主键幂等覆盖，最多 150 行），页面无口令；`GET /api/progress?day=N|latest=1` 需 `X-NH80-Key`。
 - **agent 侧**：`skills/nh80-progress/SKILL.md`（仓库内 + 项目级 + 用户级三份）、`scripts/progress_read.py`、`AGENTS.md` 已追加调用说明。
 - **安全清理**：Codex v9 误入库的明文答案表 `deploy/worker/src/generated-key.json` 已移出版本库并 gitignore；Worker 只用公开的哈希分片 `web/data/grade/day-*.json`，本地构建仍会生成该表供测试。
-- **Service Worker** 版本使用 `nh80-v18-*`，且每日页 HTML 纳入 revision 哈希，避免旧缓存。
+- **Service Worker** 版本使用 `nh80-v19-*`，且每日页 HTML 纳入 revision 哈希，避免旧缓存。
 
 ## 真源与目录
 

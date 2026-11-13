@@ -352,6 +352,7 @@ if(f)f.addEventListener('click',function(){
   wrong_summary:wrong,
   review_summary:Object.keys(RATINGS).filter(function(k){return RATINGS[k]!=='good'}),
   note:''};
+ document.documentElement.dataset.savingLesson='1';
  f.disabled=true;f.textContent='正在保存…';
  var status=$('#finishStatus');if(status)status.textContent='';
  fetch('/api/progress',{method:'POST',headers:{'content-type':'application/json'},
@@ -361,7 +362,8 @@ if(f)f.addEventListener('click',function(){
    window.NHCourse?.finish(DAY);
    f.textContent='已完成';finishLinks();})
   .catch(function(e){f.disabled=false;f.textContent='完成';
-   if(status)status.textContent='云端暂不可用（'+e.message+'）；记录已留在本机。'});
+   if(status)status.textContent='云端暂不可用（'+e.message+'）；记录已留在本机。'})
+  .finally(function(){delete document.documentElement.dataset.savingLesson});
 });
 };
 if(!document.querySelector('.app-nav'))window.mountLesson(document,Number(document.body.dataset.day)||0,window.__PAGE__||{});
@@ -731,6 +733,7 @@ def study_page(title, body, day=0, unit=None):
 APP_HEAD = (
     '<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">'
     '<meta name="theme-color" content="#171614" media="(prefers-color-scheme: dark)">'
+    '<meta name="nh80-version" content="__APP_RELEASE__">'
     '<link rel="manifest" href="/app.webmanifest"><link rel="icon" href="/assets/icon-192.png">'
     '<link rel="apple-touch-icon" href="/assets/icon-180.png">'
     '<meta name="apple-mobile-web-app-capable" content="yes">'
@@ -740,9 +743,18 @@ APP_NAV = (
     '<a data-tab="course" href="/">课程</a><a data-tab="review" href="/review.html">到期复习</a>'
     '<a data-tab="flash" href="/flashcards.html">背单词</a></nav>'
     '<div id="appStatus" class="app-status" role="status"></div>'
+    '<details class="account-panel"><summary>多端同步</summary>'
+    '<p id="accountStatus" role="status">正在检查登录状态…</p>'
+    '<form id="accountLogin"><label for="loginCode">登录码</label>'
+    '<input id="loginCode" name="loginCode" type="password" required minlength="64" maxlength="64" autocomplete="off">'
+    '<button class="btn" type="submit">登录</button></form>'
+    '<button class="btn" type="button" id="accountCreate">创建同步账号</button>'
+    '<textarea id="accountCopy" rows="3" readonly hidden aria-label="新登录码"></textarea>'
+    '<button class="btn" type="button" id="accountLogout" hidden>退出登录</button>'
+    '<p>创建后请保存登录码。其他设备用同一个码登录。</p></details>'
 )
 APP_SCRIPTS = ''.join('<script defer src="/assets/%s.js"></script>' % name for name in
-                      ('course_progress', 'review_schedule', 'app', 'flashcards', 'course_app'))
+                      ('course_progress', 'review_schedule', 'app', 'flashcards', 'course_sync', 'course_version', 'course_app'))
 
 
 def app_page(title, body):
@@ -818,7 +830,7 @@ def main(daily_by_day=None):
     app_css = (ROOT / "scripts/course_app.css").read_text(encoding="utf-8")
     (OUT / "assets/app.css").write_text(CSS + study_ui.CSS + app_css, encoding="utf-8")
     app_sources = {}
-    for name in ("course_app", "course_progress", "flashcards"):
+    for name in ("course_app", "course_progress", "flashcards", "course_sync", "course_version"):
         source = (ROOT / ("scripts/" + name + ".js")).read_text(encoding="utf-8")
         app_sources[name] = source
         (OUT / ("assets/" + name + ".js")).write_text(source, encoding="utf-8")
@@ -1123,7 +1135,10 @@ def main(daily_by_day=None):
     revision = hashlib.sha256((CSS + JS + study_ui.CSS + study_ui.JS + schedule_js
                                + app_css + "".join(app_sources.values()) + home + FLASH_BODY + APP_HEAD + APP_NAV
                                + review_body + flash_json + worker + lesson_revision.hexdigest()).encode()).hexdigest()[:12]
+    for page in [OUT / name for name in ("index.html", "review.html", "flashcards.html")] + list(OUT.glob("day-*.html")):
+        page.write_text(page.read_text(encoding="utf-8").replace("__APP_RELEASE__", revision), encoding="utf-8")
     (OUT / "sw.js").write_text(worker.replace("__REVISION__", revision), encoding="utf-8")
+    (OUT / "version.json").write_text(json.dumps({"version": revision}), encoding="utf-8")
     print(json.dumps({"days": len(cur["days"]), "html": len(list(OUT.glob("day-*.html"))),
                       "questions_min": min(totals), "questions_max": max(totals)}, ensure_ascii=False))
 

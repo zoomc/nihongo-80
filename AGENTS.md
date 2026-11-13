@@ -1,4 +1,4 @@
-# Nihongo 150 · 当前项目入口（v18）
+# Nihongo 150 · 当前项目入口（v19）
 
 先读 `HANDOFF.md`、`reports/v6_completion.md`、`CONTRACTS.md`（末尾修订优先于旧版示例）。当前目录名 nihongo-80 是历史名称，课程是 150 天。
 

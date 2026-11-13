@@ -206,6 +206,7 @@ if(f)f.addEventListener('click',function(){
   wrong_summary:wrong,
   review_summary:Object.keys(RATINGS).filter(function(k){return RATINGS[k]!=='good'}),
   note:''};
+ document.documentElement.dataset.savingLesson='1';
  f.disabled=true;f.textContent='正在保存…';
  var status=$('#finishStatus');if(status)status.textContent='';
  fetch('/api/progress',{method:'POST',headers:{'content-type':'application/json'},
@@ -215,7 +216,8 @@ if(f)f.addEventListener('click',function(){
    window.NHCourse?.finish(DAY);
    f.textContent='已完成';finishLinks();})
   .catch(function(e){f.disabled=false;f.textContent='完成';
-   if(status)status.textContent='云端暂不可用（'+e.message+'）；记录已留在本机。'});
+   if(status)status.textContent='云端暂不可用（'+e.message+'）；记录已留在本机。'})
+  .finally(function(){delete document.documentElement.dataset.savingLesson});
 });
 };
 if(!document.querySelector('.app-nav'))window.mountLesson(document,Number(document.body.dataset.day)||0,window.__PAGE__||{});

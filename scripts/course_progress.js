@@ -25,9 +25,10 @@
   for (let day = 1; day <= 150; day++) {
     if ((valid(old) && day <= old) || read('nh80.completed.' + day) === '1') state.done.add(day);
   }
+  let opened = Number(read('nh80.course.opened')) || (state.last ? 1 : 0);
   function save() {
     const code = encode(state);
-    try { localStorage.setItem(key, code); } catch {}
+    try { localStorage.setItem(key, code); localStorage.setItem('nh80.course.opened', opened); } catch {}
     if (location.protocol === 'https:') document.cookie = 'nh80_course=' + code + '; Max-Age=31536000; Path=/; SameSite=Strict; Secure';
   }
   if (state.last || state.done.size) save();
@@ -38,15 +39,32 @@
       for (let day = 1; day <= 150; day++) if (!state.done.has(day)) return day;
       return 0;
     },
-    open(day) { if (valid(day)) { state.last = day; save(); } },
-    finish(day) { if (valid(day)) { state.done.add(day); save(); } },
+    open(day) {
+      if (valid(day) && (state.last !== day || !opened)) {
+        state.last = day; opened = Date.now(); save();
+        window.dispatchEvent(new Event('nh80-course-change'));
+      }
+    },
+    finish(day) { if (valid(day)) { state.done.add(day); save(); window.dispatchEvent(new Event('nh80-course-change')); } },
     code: () => encode(state),
+    snapshot: () => ({days:[...state.done], last:state.last, opened}),
+    applyCloud(remote) {
+      const before = encode(state);
+      for (const day of remote.days) state.done.add(day);
+      if (remote.opened > opened) { state.last = remote.last; opened = remote.opened; }
+      save();
+      if (before !== encode(state)) window.dispatchEvent(new Event('nh80-cloud-change'));
+    },
     merge(code) {
       const imported = parse(code.trim());
       if (!imported) return false;
       for (const day of imported.done) state.done.add(day);
-      if (!state.last || state.done.has(state.last)) state.last = imported.last || state.last;
+      if (imported.last && (!state.last || state.done.has(state.last))) {
+        state.last = imported.last;
+        opened = Date.now();
+      }
       save();
+      window.dispatchEvent(new Event('nh80-course-change'));
       return true;
     }
   };

@@ -95,6 +95,7 @@
       const response = await fetch(url.pathname, {signal:controller.signal});
       if (!response.ok) throw Error('页面不可用');
       const next = new DOMParser().parseFromString(await response.text(), 'text/html');
+      if (window.NHVersion.checkPage(next)) return;
       const content = next.querySelector('main');
       if (!content) throw Error('页面内容不可用');
       const meta = next.querySelector('#lessonMeta');
@@ -143,9 +144,15 @@
   if (meta) window.__PAGE__ = JSON.parse(meta.textContent);
   mount();
 
-  const last = NHCourse.last();
-  if (main().querySelector('#resume') && last && !NHCourse.done(last)) {
-    const url = new URL('/day-' + String(last).padStart(3, '0') + '.html', location.origin);
-    navigate(url, 'replace', false);
+  window.addEventListener('nh80-cloud-change', () => {
+    if (main().querySelector('#resume,#flashDeck')) mount();
+  });
+  function resume() {
+    const last = NHCourse.last();
+    if (main().querySelector('#resume') && last && !NHCourse.done(last)) {
+      const url = new URL('/day-' + String(last).padStart(3, '0') + '.html', location.origin);
+      navigate(url, 'replace', false);
+    }
   }
+  window.NHSync.start().finally(resume);
 })();

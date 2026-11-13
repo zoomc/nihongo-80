@@ -19,7 +19,7 @@ function applyScope(sec,mode){
   PEEK.btn.disabled=false;PEEK.btn.textContent=PEEK.label;PEEK=null}
  $$('[data-role]',sec).forEach(function(el){
   var r=el.getAttribute('data-role');
-  var hide=(mode==='both')||(mode==='zh'&&r==='zh')||(mode==='ja'&&r==='ja');
+  var hide=mode===r;
   el.classList.toggle('mask',hide);if(!hide)el.classList.remove('peek');
   if(hide){el.setAttribute('tabindex','0');el.setAttribute('aria-label','内容已遮盖，点击临时查看')}
   else{el.removeAttribute('tabindex');el.removeAttribute('aria-label')}
@@ -166,7 +166,7 @@ on(root,'keydown',function(e){
 });
 ['vocab','grammar'].forEach(function(id){var s=$('#'+id);if(!s)return;
  var saved='all';try{saved=localStorage.getItem(STORE+'mask.'+id)||'all'}catch(e){}
- if(['all','zh','ja','both'].indexOf(saved)<0)saved='all';
+ if(['all','zh','ja'].indexOf(saved)<0)saved='all';
  applyScope(s,saved)});
 restore();
 function updateReviewLink(){

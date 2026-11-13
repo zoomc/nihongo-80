@@ -3,8 +3,7 @@
 .app-nav a[aria-current]{color:var(--accent);background:var(--surface);box-shadow:inset 0 -2px var(--accent)}
 .app-status{position:fixed;z-index:5;top:calc(8px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);width:max-content;max-width:90%;padding:8px 14px;background:var(--surface);border:1px solid var(--line);border-radius:10px;font-size:14px}
 .app-status:empty{display:none}
-.app-nav~.wrap{padding-bottom:calc(130px + env(safe-area-inset-bottom))}
-.app-nav~.wrap .foot{padding-bottom:max(10px,env(safe-area-inset-bottom))}
+.app-nav~.wrap{padding-bottom:calc(28px + env(safe-area-inset-bottom))}
 main>h1:focus{outline:none}
 .progress-transfer{margin:24px 0 8px;font-size:14px}
 .progress-transfer form{display:flex;align-items:center;flex-wrap:wrap;gap:8px}

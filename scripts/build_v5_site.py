@@ -5,7 +5,7 @@
 - 顶部不要模式按钮 / 分钟数 / 分段导航 / 站点链接 / 提示文案；
 - 新词与语法各自一个局部遮挡开关；
 - 当天新词两题、语法三题，洗牌后一次列出，支持错题重练；
-- 新词分日语、中文与韩语读音两列，例句可展开；
+- 新词分日语、中文与韩语读音两列，例句直接显示；
 - 底部只有一个「完成」按钮，上报当天学习情况到 /api/progress。
 
 构建期生成全部 HTML；前端 app.js 只负责遮挡 / 朗读 / 判分 / 完成上报。
@@ -77,8 +77,6 @@ border:1px solid var(--line);border-radius:999px;background:var(--surface);color
 .vocab-pair{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);
 column-gap:clamp(16px,5vw,48px);align-items:start;text-align:left}
 .vocab-pair .zh{margin-top:0}
-.vocab-example{margin-top:6px}
-.vocab-example summary{display:list-item;width:fit-content;padding:4px 0}
 .jp.small-jp{font-size:15px;font-weight:600}
 .kana-line{font-size:12px;color:var(--muted);letter-spacing:.04em;margin-bottom:1px}
 .ko-read{font-size:14px;color:var(--accent);margin-top:2px;letter-spacing:.02em;overflow-wrap:anywhere}
@@ -99,6 +97,7 @@ border-radius:999px;background:var(--surface);color:var(--muted);cursor:pointer}
 .grammar-transfer{margin:0 0 10px;padding:8px 12px;border-left:3px solid var(--accent);background:var(--bg);overflow-wrap:anywhere}
 .grammar-transfer strong{display:block;font-size:1.13rem;line-height:1.5}
 .grammar-transfer .small{margin-top:3px}
+.grammar-trap{margin:12px 0 0;color:var(--bad);font-size:14px;overflow-wrap:anywhere}
 .conn{font-size:13px;color:var(--muted);overflow-wrap:anywhere}
 .ko-box{background:var(--bg);border:1px solid var(--line);padding:8px 10px;margin:8px 0;font-size:13px}
 .gcard{border-top:1px dashed var(--line);padding:14px 0}
@@ -118,10 +117,10 @@ padding:8px;cursor:pointer;font-size:15px}
 .fb{font-size:13px;margin-top:6px}.fb.ok{color:var(--ok)}.fb.bad{color:var(--bad)}
 .q-actions{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
 .qscore{font-size:13px;color:var(--muted);margin-bottom:8px}
-.foot{position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);
-padding:10px 14px;display:flex;gap:10px;align-items:center;justify-content:center;z-index:30}
-.foot .btn{flex:1;max-width:280px}
-.foot .status{flex:1;max-width:320px;font-size:12px;color:var(--muted)}
+.foot{margin-top:18px;display:grid;gap:6px}
+.foot .btn{min-height:44px;width:min(100%,280px)}
+.foot .status{font-size:13px;color:var(--muted)}
+.foot .status:empty{display:none}
 details summary{cursor:pointer;color:var(--muted);font-size:13px}
 .kstrip{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .kchip{font-size:13px;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:4px 8px}
@@ -137,7 +136,7 @@ details summary{cursor:pointer;color:var(--muted);font-size:13px}
 .home-resources{display:flex;gap:8px 18px;flex-wrap:wrap}
 .listen-box .q:last-of-type{padding-bottom:8px}
 .lesson-nav{display:flex;justify-content:space-between;gap:16px;margin-top:28px;font-size:14px}
-@media(min-width:1024px){.wrap{max-width:820px}.foot{position:static;background:none;border:0;margin-top:12px}}
+@media(min-width:1024px){.wrap{max-width:820px}}
 @media(max-width:480px){.jp{font-size:21px}.q .opt{font-size:14px}}
 button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 @media print{.foot,.mask-switch,.rates,.speak,.btn,.show-all{display:none!important}.mask{filter:none!important;color:inherit!important}}
@@ -165,7 +164,7 @@ function applyScope(sec,mode){
   PEEK.btn.disabled=false;PEEK.btn.textContent=PEEK.label;PEEK=null}
  $$('[data-role]',sec).forEach(function(el){
   var r=el.getAttribute('data-role');
-  var hide=(mode==='both')||(mode==='zh'&&r==='zh')||(mode==='ja'&&r==='ja');
+  var hide=mode===r;
   el.classList.toggle('mask',hide);if(!hide)el.classList.remove('peek');
   if(hide){el.setAttribute('tabindex','0');el.setAttribute('aria-label','内容已遮盖，点击临时查看')}
   else{el.removeAttribute('tabindex');el.removeAttribute('aria-label')}
@@ -312,7 +311,7 @@ on(root,'keydown',function(e){
 });
 ['vocab','grammar'].forEach(function(id){var s=$('#'+id);if(!s)return;
  var saved='all';try{saved=localStorage.getItem(STORE+'mask.'+id)||'all'}catch(e){}
- if(['all','zh','ja','both'].indexOf(saved)<0)saved='all';
+ if(['all','zh','ja'].indexOf(saved)<0)saved='all';
  applyScope(s,saved)});
 restore();
 function updateReviewLink(){
@@ -595,20 +594,16 @@ def build_vocab_html(day, vocab, kanji, reader):
         surface, kana = v["surface"], v.get("kana") or ""
         meaning, readings = vocabulary_display(v)
         ex = (v.get("examples") or [{}])[0]
-        ko = v.get("ko_hint") or v.get("ko_hanja") or ""
         tag = "" if vid in core else '<span class="small"> · 选学</span>'
         out.append(
             '<div class="item">'
             '<div class="vocab-pair"><div lang="ja">%s<div class="jp" data-role="ja">%s</div></div>'
             '<div><div class="zh" data-role="zh">%s%s</div>%s</div></div>'
             '<button class="show-all" type="button" data-show-all aria-label="临时显示三种语言 10 秒" hidden>显示</button>'
-            '%s%s</div>'
+            '%s</div>'
             % (kana_line(surface, "／".join(readings)), jp_word(surface, kana),
                esc(meaning), tag, ko_read_line(ko_pron.pron("／".join(readings))),
-               ('<details class="vocab-example"><summary>例句</summary>%s%s</details>'
-                % (('<div class="ko" data-role="zh">韩语参考：%s</div>' % esc(ko)) if ko else "",
-                   example_html(ex, mapping, reader.hangul(ex.get("ja", ""))))) if ex.get("ja") else "",
-               rates_html(vid)))
+               example_html(ex, mapping, reader.hangul(ex.get("ja", "")))))
     character_rows = []
     for kid in day["new_kanji_ids"]:
         item = kanji[kid]
@@ -644,21 +639,21 @@ def build_grammar_html(day, grammar, reader):
               % (esc(g["ko_equiv"]), '<div class="small">%s</div>' % esc(g["ko_diff"]) if g.get("ko_diff") else "")
               ) if g.get("ko_equiv") else ""
         usage = ('<div class="small" data-role="zh">%s</div>' % esc(g.get("usage", ""))) if g.get("usage") else ""
-        trap = ('<details><summary>易错点</summary><p class="small">'
+        trap = ('<p class="grammar-trap"><strong>易错点</strong> '
                 '<span data-role="ja">%s → %s</span>'
-                '<span data-role="zh">（%s）</span></p></details>'
+                '<span data-role="zh">（%s）</span></p>'
                 % (esc(err.get("wrong")), esc(err.get("fix")), esc(err.get("why")))) if err.get("wrong") else ""
         out.append(
             '<div class="gcard">'
             '<button class="show-all" type="button" data-show-all aria-label="临时显示三种语言 10 秒" hidden>显示</button>'
-            '%s<div class="pattern" data-role="ja">%s</div>'
+            '<div class="pattern" data-role="ja">%s</div>'
             '%s'
             '<div class="zh" data-role="zh">%s</div>'
             '<div class="conn" data-role="ja">%s</div>'
             '%s%s%s%s</div>'
-            % (ko, esc(pattern), ko_read_line(pattern_ko(g, reader)),
+            % (esc(pattern), ko_read_line(pattern_ko(g, reader)),
                esc(g["meaning_zh"]), esc(g.get("connection", "")),
-               usage, exs, trap, rates_html(gid)))
+               usage, ko, exs, trap))
     return "".join(out) or '<p class="small">今天没有新语法。</p>'
 
 
@@ -683,8 +678,7 @@ def mask_switch(scope):
     return ('<div class="mask-switch" aria-label="%s遮盖">'
             '<button type="button" data-mask="all">显示</button>'
             '<button type="button" data-mask="zh">遮中文</button>'
-            '<button type="button" data-mask="ja">遮日语</button>'
-            '<button type="button" data-mask="both">双向</button></div>' % scope)
+            '<button type="button" data-mask="ja">遮日语</button></div>' % scope)
 
 
 def day_page(d, review_html, vocab_html, grammar_html, questions_html, page_meta, listening_html):
@@ -702,10 +696,10 @@ def day_page(d, review_html, vocab_html, grammar_html, questions_html, page_meta
             '<section class="card" id="questions"><h2>练习 <span class="count">%d 题</span></h2>'
             '<div class="qscore" id="qscore" role="status" tabindex="-1"></div>%s%s'
             '<div class="q-actions"><button class="btn" id="retryWrong" type="button" disabled>错题重练</button>'
-            '<button class="btn" id="showAllQuestions" type="button" hidden>返回全部练习</button></div></section>'
+            '<button class="btn" id="showAllQuestions" type="button" hidden>返回全部练习</button></div>'
             '<div class="foot"><button class="btn primary" id="finish" type="button">完成</button>'
             '<span class="status" id="finishStatus" role="status" aria-live="polite"></span></div>'
-            '</main></div>'
+            '</section></main></div>'
             '<script type="application/json" id="lessonMeta">%s</script>' + APP_SCRIPTS + '</body></html>')
             % (d["day"], esc(d["theme"]), d["day"], d["day"], esc(d["theme"]),
                ('<details><summary>回看往日词句与汉字</summary>%s</details>' % review_html) if d.get("review_knowledge_ids") else "", len(d["new_vocab_ids"]), mask_switch("新词"), vocab_html,

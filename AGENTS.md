@@ -1,6 +1,6 @@
-# Nihongo 150 · 当前项目入口（v16）
+# Nihongo 150 · 当前项目入口（v18）
 
-先读 `HANDOFF.md`、`reports/v6_completion.md`、`CONTRACTS.md`（末尾 v16 修订优先于旧版示例）。当前目录名 nihongo-80 是历史名称，课程是 150 天。
+先读 `HANDOFF.md`、`reports/v6_completion.md`、`CONTRACTS.md`（末尾修订优先于旧版示例）。当前目录名 nihongo-80 是历史名称，课程是 150 天。
 
 ## 产品与学习者
 
@@ -44,7 +44,7 @@ python3 scripts/today.py
 
 `session_v5.py daily` 仍可用（调 brief/state），但不再是入口；`study-sync` 只用于私有复习上下文，不是每日必经步骤。显式读取 `data/review/CONTEXT.md`（若存在）、STATE、当天 brief 与数据库（只读）。先给页面链接，等学生看完；答疑只讲他没懂的，逐题问错因。每天按记忆曲线复习、新词、语法、单选推进。Day 001 保留原课，Day 002–138 每天 25 词，最后 12 天每天 20 词。N3 从 Day 079、N2 从 Day 109 开始安排听解，官方原声从 N2 冲刺页进入。页面不显示时间块，当天精确内容只取课程 blocks。
 
-网页提交只代表原始作答保存。同步使用 `deploy/.sync-key` 本机密钥（禁止显示或提交）。choice模式导入后，CLI自动按必做题完整性及70%正确率计算完成，无需手写验收；未达标记录incomplete，不降低难度。旧教师输出接口仅兼容历史会话。
+网页提交只代表原始作答保存。主屏幕应用的续课和闪卡词池使用浏览器本地完成记录，详见契约 v18。同步使用 `deploy/.sync-key` 本机密钥（禁止显示或提交）。choice模式导入后，CLI自动按必做题完整性及70%正确率计算完成，无需手写验收；未达标记录incomplete，不降低难度。旧教师输出接口仅兼容历史会话。
 
 ## 不可违反
 

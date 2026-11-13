@@ -1,0 +1,24 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="color-scheme" content="light dark"><title>背单词 · Nihongo 150</title><link rel="stylesheet" href="/assets/app.css"><meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#171614" media="(prefers-color-scheme: dark)"><link rel="manifest" href="/app.webmanifest"><link rel="icon" href="/assets/icon-192.png"><link rel="apple-touch-icon" href="/assets/icon-180.png"><meta name="apple-mobile-web-app-capable" content="yes"></head><body data-day="0"><nav class="app-nav" aria-label="应用导航"><a data-tab="course" href="/">课程</a><a data-tab="review" href="/review.html">到期复习</a><a data-tab="flash" href="/flashcards.html">背单词</a></nav><div id="appStatus" class="app-status" role="status"></div><div class="wrap"><main>
+<div class="flash">
+  <h1 tabindex="-1">背单词</h1>
+  <p class="flash-status" id="flashStatus" role="status">正在加载词卡…</p>
+  <a class="btn" id="flashEmpty" href="/" hidden>返回课程</a>
+  <button class="btn" id="flashRetry" type="button" hidden>重新加载</button>
+  <div id="flashDeck" hidden>
+    <div class="flash-paper">
+      <p class="flash-word" id="flashWord" lang="ja"></p>
+      <div class="flash-answer" id="flashAnswer" hidden>
+        <p class="flash-kana" id="flashKana" lang="ja"></p>
+        <p id="flashMeaning"></p><p class="flash-ko" id="flashKo" lang="ko"></p>
+        <button class="btn" id="flashSpeak" type="button">朗读</button>
+      </div>
+    </div>
+    <button class="btn primary flash-flip" id="flashFlip" type="button">翻看答案</button>
+    <div class="flash-controls" id="flashActions" hidden>
+      <button class="btn" id="flashAgain" type="button">忘了</button>
+      <button class="btn primary" id="flashKnow" type="button">记得</button>
+    </div>
+  </div>
+  <button class="btn primary" id="flashRestart" type="button" hidden>随机再背一轮</button>
+</div>
+</main></div><script defer src="/assets/course_progress.js"></script><script defer src="/assets/review_schedule.js"></script><script defer src="/assets/app.js"></script><script defer src="/assets/flashcards.js"></script><script defer src="/assets/course_app.js"></script></body></html>

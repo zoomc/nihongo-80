@@ -1,1 +1,35 @@
-const C='nh80-v17-023f7ada5a44';self.addEventListener('install',e=>self.skipWaiting());self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==C).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));self.addEventListener('fetch',e=>{if(e.request.method!=='GET'||new URL(e.request.url).origin!==location.origin||new URL(e.request.url).pathname.startsWith('/api/'))return;e.respondWith(fetch(e.request).then(r=>{if(r.ok){const c=r.clone();e.waitUntil(caches.open(C).then(x=>x.put(e.request,c)))}return r}).catch(()=>caches.match(e.request).then(r=>r||new Response('离线且本页尚未缓存',{status:503}))));});
+const C = 'nh80-v18-4a19ba19f112';
+const shell = ['/index.html', '/assets/app.css', '/assets/course_progress.js',
+  '/assets/review_schedule.js', '/assets/app.js', '/assets/study.js',
+  '/assets/flashcards.js', '/assets/course_app.js', '/flashcards.html', '/data/flashcards.json'];
+
+self.addEventListener('install', event => {
+  event.waitUntil(caches.open(C).then(cache => cache.addAll(shell)).then(() => self.skipWaiting()));
+});
+self.addEventListener('activate', event => {
+  event.waitUntil(caches.keys().then(keys => Promise.all(
+    keys.filter(key => key.startsWith('nh80-') && key !== C).map(key => caches.delete(key))
+  )).then(() => self.clients.claim()));
+});
+self.addEventListener('fetch', event => {
+  const request = event.request;
+  const url = new URL(request.url);
+  if (request.method !== 'GET' || url.origin !== self.location.origin ||
+      url.pathname.startsWith('/api/') || request.headers.has('range') || url.pathname.startsWith('/audio/')) return;
+
+  const key = url.pathname === '/' ? '/index.html' : request;
+  event.respondWith((async () => {
+    const cache = await caches.open(C);
+    try {
+      const response = await fetch(request);
+      if (response.ok) {
+        try { await cache.put(key, response.clone()); } catch {}
+      }
+      return response;
+    } catch {
+      return (await cache.match(key)) || new Response('此页面尚未下载，请联网后重试。', {
+        status: 503, headers: {'Content-Type': 'text/plain;charset=utf-8'}
+      });
+    }
+  })());
+});

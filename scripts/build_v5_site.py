@@ -16,6 +16,7 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import struct
 from pathlib import Path
 
 import ko_pron
@@ -146,9 +147,15 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-off
 JS = r"""
 (function(){
 'use strict';
-var STORE='nh80.v11.', DAY=Number(document.body.dataset.day)||0;
-function $(s,r){return (r||document).querySelector(s)}
-function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))}
+window.mountLesson=function(root, DAY, meta, signal){
+if(signal)signal.addEventListener('abort',function(){
+ if(PEEK)clearInterval(PEEK.timer);
+ if(window.speechSynthesis)window.speechSynthesis.cancel();
+},{once:true});
+var STORE='nh80.v11.';
+function on(target,type,listener){target.addEventListener(type,listener,signal?{signal}:undefined)}
+function $(s,r){return (r||root).querySelector(s)}
+function $$(s,r){return Array.prototype.slice.call((r||root).querySelectorAll(s))}
 function fnv(t){var s=String(t==null?'':t).normalize('NFKC').replace(/\s+/g,'');
  var h=2166136261>>>0;for(const ch of s){h^=ch.codePointAt(0);h=Math.imul(h,16777619)>>>0}return h.toString(16)}
 function reveal(el){el.classList.add('peek');setTimeout(function(){el.classList.remove('peek')},3000)}
@@ -268,7 +275,7 @@ if(retryButton)retryButton.addEventListener('click',startRetry);
 if(allQuestionsButton)allQuestionsButton.addEventListener('click',function(){
  RETRY=null;saveLocal();renderQuestions();$('#qscore').focus();
 });
-document.addEventListener('change',function(e){
+on(root,'change',function(e){
  var input=e.target, lab=input.closest('.q .opt');
  if(!lab||!input.checked)return;
  var q=lab.closest('.q');if(q.hasAttribute('data-done'))return;
@@ -286,7 +293,7 @@ function speak(text,btn){
   u.onend=function(){btn.textContent=label}}
  window.speechSynthesis.cancel();window.speechSynthesis.speak(u);
 }
-document.addEventListener('click',function(e){
+on(root,'click',function(e){
  var mb=e.target.closest('.mask-switch button');
  if(mb){applyScope(mb.closest('section'),mb.getAttribute('data-mask'));return}
  var sb=e.target.closest('[data-show-all]');
@@ -299,7 +306,7 @@ document.addEventListener('click',function(e){
   $$('[data-rate][data-kid="'+kid+'"]').forEach(function(b){b.setAttribute('aria-pressed',String(b===rt))});
   saveLocal();return}
 });
-document.addEventListener('keydown',function(e){
+on(root,'keydown',function(e){
  if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('mask')){
   e.preventDefault();reveal(e.target)}
 });
@@ -319,9 +326,23 @@ function updateReviewLink(){
 }
 updateReviewLink();
 var f=$('#finish');
+function finishLinks(){
+ var status=$('#finishStatus');
+ if(!status)return;
+ var next=window.NHCourse?.next();
+ status.textContent='学习情况已保存。';
+ if(next){
+  var label='Day '+String(next).padStart(3,'0'),link=document.createElement('a');
+  link.href='/day-'+label.slice(4)+'.html';link.textContent='开始下一课 · '+label;
+  status.append(' ',link);
+ }
+}
+if(f&&window.NHCourse?.done(DAY)&&QUESTIONS.length===Object.keys(RESULTS).length){
+ f.disabled=true;f.textContent='已完成';finishLinks();
+}
 if(f)f.addEventListener('click',function(){
- var meta=window.__PAGE__||{},qs=Object.keys(RESULTS).map(function(k){return RESULTS[k]});
- if(!qs.length){$('#finishStatus').textContent='请先完成练习中的单选题。';return}
+ var qs=Object.values(RESULTS);
+ if(qs.length!==QUESTIONS.length||!qs.length){$('#finishStatus').textContent='还有 '+(QUESTIONS.length-qs.length)+' 道单选题待作答。';return}
  var right=qs.filter(function(x){return x.correct}).length;
  var wrong=qs.filter(function(x){return !x.correct}).map(function(x){
   return {qid:x.qid,knowledge_ids:(meta.q_kids||{})[x.qid]||[]}});
@@ -337,10 +358,13 @@ if(f)f.addEventListener('click',function(){
   body:JSON.stringify(payload)}).then(function(r){return r.json().then(function(d){
    if(!r.ok||d.ok!==true)throw new Error(d.reason||('HTTP '+r.status));return d})})
   .then(function(){saveLocal();try{localStorage.setItem('nh80.completed.'+DAY,'1')}catch(e){}
-   f.textContent='已完成';if(status)status.textContent='学习情况已保存，会话可读取。'})
+   window.NHCourse?.finish(DAY);
+   f.textContent='已完成';finishLinks();})
   .catch(function(e){f.disabled=false;f.textContent='完成';
    if(status)status.textContent='云端暂不可用（'+e.message+'）；记录已留在本机。'});
 });
+};
+if(!document.querySelector('.app-nav'))window.mountLesson(document,Number(document.body.dataset.day)||0,window.__PAGE__||{});
 })();
 """
 
@@ -662,13 +686,13 @@ def mask_switch(scope):
 
 
 def day_page(d, review_html, vocab_html, grammar_html, questions_html, page_meta, listening_html):
-    return ('<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">'
+    return (('<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">'
             '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
             '<meta name="color-scheme" content="light dark">'
             '<title>Day %03d · %s | Nihongo 150</title>'
-            '<link rel="icon" href="data:,"><link rel="stylesheet" href="assets/app.css"></head>'
-            '<body data-day="%03d"><div class="wrap"><main>'
-            '<h1 class="lesson">Day <b>%03d</b> · %s</h1>'
+            '<link rel="stylesheet" href="assets/app.css">' + APP_HEAD + '</head>'
+            '<body data-day="%03d">' + APP_NAV + '<div class="wrap"><main>'
+            '<h1 class="lesson" tabindex="-1">Day <b>%03d</b> · %s</h1>'
             '<section class="card" id="review"><h2>记忆曲线复习</h2>'
             '<a id="dueReviewLink" class="small review-link" href="review.html">到期复习</a>%s</section>'
             '<section class="card" id="vocab"><h2>今日新词 <span class="count">%d 个</span></h2>%s%s</section>'
@@ -680,13 +704,12 @@ def day_page(d, review_html, vocab_html, grammar_html, questions_html, page_meta
             '<div class="foot"><button class="btn primary" id="finish" type="button">完成</button>'
             '<span class="status" id="finishStatus" role="status" aria-live="polite"></span></div>'
             '</main></div>'
-            '<script>window.__PAGE__=%s;</script><script src="assets/review_schedule.js"></script><script src="assets/app.js"></script>'
-            '</body></html>'
+            '<script type="application/json" id="lessonMeta">%s</script>' + APP_SCRIPTS + '</body></html>')
             % (d["day"], esc(d["theme"]), d["day"], d["day"], esc(d["theme"]),
                ('<details><summary>回看往日词句与汉字</summary>%s</details>' % review_html) if d.get("review_knowledge_ids") else "", len(d["new_vocab_ids"]), mask_switch("新词"), vocab_html,
                len(d["new_grammar_ids"]), mask_switch("语法"), grammar_html,
                page_meta["total"], questions_html, listening_html,
-               json.dumps(page_meta, ensure_ascii=False)))
+               json.dumps(page_meta, ensure_ascii=False).replace("<", r"\u003c")))
 
 
 # ---------------------------------------------------------------------------
@@ -703,6 +726,58 @@ def study_page(title, body, day=0, unit=None):
             '<script>window.__UNIT__=' + json.dumps(unit, ensure_ascii=False) +
             ';window.__PRACTICE__=' + json.dumps(unit["questions"] if unit else [], ensure_ascii=False) +
             '</script><script src="assets/review_schedule.js"></script><script src="assets/study.js"></script></body></html>')
+
+
+APP_HEAD = (
+    '<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">'
+    '<meta name="theme-color" content="#171614" media="(prefers-color-scheme: dark)">'
+    '<link rel="manifest" href="/app.webmanifest"><link rel="icon" href="/assets/icon-192.png">'
+    '<link rel="apple-touch-icon" href="/assets/icon-180.png">'
+    '<meta name="apple-mobile-web-app-capable" content="yes">'
+)
+APP_NAV = (
+    '<nav class="app-nav" aria-label="应用导航">'
+    '<a data-tab="course" href="/">课程</a><a data-tab="review" href="/review.html">到期复习</a>'
+    '<a data-tab="flash" href="/flashcards.html">背单词</a></nav>'
+    '<div id="appStatus" class="app-status" role="status"></div>'
+)
+APP_SCRIPTS = ''.join('<script defer src="/assets/%s.js"></script>' % name for name in
+                      ('course_progress', 'review_schedule', 'app', 'flashcards', 'course_app'))
+
+
+def app_page(title, body):
+    return ('<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">'
+            '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
+            '<meta name="color-scheme" content="light dark">'
+            '<title>' + esc(title) + '</title><link rel="stylesheet" href="/assets/app.css">'
+            + APP_HEAD + '</head><body data-day="0">' + APP_NAV + '<div class="wrap"><main>'
+            + body + '</main></div>' + APP_SCRIPTS + '</body></html>')
+
+
+FLASH_BODY = """
+<div class="flash">
+  <h1 tabindex="-1">背单词</h1>
+  <p class="flash-status" id="flashStatus" role="status">正在加载词卡…</p>
+  <a class="btn" id="flashEmpty" href="/" hidden>返回课程</a>
+  <button class="btn" id="flashRetry" type="button" hidden>重新加载</button>
+  <div id="flashDeck" hidden>
+    <div class="flash-paper">
+      <p class="flash-word" id="flashWord" lang="ja"></p>
+      <div class="flash-answer" id="flashAnswer" hidden>
+        <p class="flash-kana" id="flashKana" lang="ja"></p>
+        <p id="flashMeaning"></p><p class="flash-ko" id="flashKo" lang="ko"></p>
+        <button class="btn" id="flashSpeak" type="button">朗读</button>
+      </div>
+    </div>
+    <button class="btn primary flash-flip" id="flashFlip" type="button">翻看答案</button>
+    <div class="flash-controls" id="flashActions" hidden>
+      <button class="btn" id="flashAgain" type="button">忘了</button>
+      <button class="btn primary" id="flashKnow" type="button">记得</button>
+    </div>
+  </div>
+  <button class="btn primary" id="flashRestart" type="button" hidden>随机再背一轮</button>
+</div>
+"""
 
 
 def main(daily_by_day=None):
@@ -740,7 +815,27 @@ def main(daily_by_day=None):
         '<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" '
         'content="width=device-width,initial-scale=1"><title>页面未找到</title>'
         '<h1>页面未找到</h1><a href="/">返回课程目录</a></html>', encoding="utf-8")
-    (OUT / "assets/app.css").write_text(CSS + study_ui.CSS, encoding="utf-8")
+    app_css = (ROOT / "scripts/course_app.css").read_text(encoding="utf-8")
+    (OUT / "assets/app.css").write_text(CSS + study_ui.CSS + app_css, encoding="utf-8")
+    app_sources = {}
+    for name in ("course_app", "course_progress", "flashcards"):
+        source = (ROOT / ("scripts/" + name + ".js")).read_text(encoding="utf-8")
+        app_sources[name] = source
+        (OUT / ("assets/" + name + ".js")).write_text(source, encoding="utf-8")
+    for size in (180, 192, 512):
+        name = "icon-%d.png" % size
+        icon = (ROOT / "assets" / name).read_bytes()
+        if struct.unpack(">II", icon[16:24]) != (size, size):
+            raise ValueError("Unexpected app icon size: " + name)
+        (OUT / "assets" / name).write_bytes(icon)
+    manifest = {
+        "id": "/", "name": "Nihongo 150", "short_name": "Nihongo",
+        "lang": "zh-CN", "start_url": "/", "scope": "/", "display": "standalone",
+        "background_color": "#fbfaf7", "theme_color": "#fbfaf7",
+        "icons": [{"src": "/assets/icon-%d.png" % size, "sizes": "%dx%d" % (size, size),
+                   "type": "image/png"} for size in (192, 512)],
+    }
+    (OUT / "app.webmanifest").write_text(json.dumps(manifest, ensure_ascii=False), encoding="utf-8")
     (OUT / "assets/app.js").write_text(JS, encoding="utf-8")
     (OUT / "assets/study.js").write_text(study_ui.JS, encoding="utf-8")
     schedule_js = (ROOT / "scripts/review_schedule.js").read_text(encoding="utf-8")
@@ -772,11 +867,17 @@ def main(daily_by_day=None):
         entry["review_questions"] = review_questions.get(entry["kid"], [])
     (DATA / "catalog.json").write_text(json.dumps(catalog, ensure_ascii=False), encoding="utf-8")
 
-    (OUT / "review.html").write_text(study_page(
-        "错题与复习集",
-        '<p><a href="/">课程目录</a></p>'
+    cards = [{**{k: x[k] for k in ("kid", "front", "back", "kana", "day")},
+              "ko": "／".join(ko_pron.to_hangul(r) for r in x["kana"].split("／"))}
+             for x in catalog if x["kind"] == "vocab"]
+    flash_json = json.dumps(cards, ensure_ascii=False, separators=(",", ":"))
+    (DATA / "flashcards.json").write_text(flash_json, encoding="utf-8")
+    (OUT / "flashcards.html").write_text(app_page("背单词 · Nihongo 150", FLASH_BODY), encoding="utf-8")
+    review_body = (
+        '<h1 tabindex="-1">错题与复习集</h1>'
         '<section class="card" id="scheduledReview"><h2>到期复习</h2><p class="small">正在加载词表…</p></section>'
-        '<section class="card"><h2>回看错题与自评</h2><div id="personalReview"></div></section>' ), encoding="utf-8")
+        '<section class="card"><h2>回看错题与自评</h2><div id="personalReview"></div></section>')
+    (OUT / "review.html").write_text(app_page("错题与复习集 · Nihongo 150", review_body), encoding="utf-8")
     for end in range(5, len(cur["days"]) + 1, 5):
         unit = build_unit(end, cur["days"], vocab, grammar, kanji)
         unit["items"] = [{k: v for k, v in x.items() if k != "review_questions"} for x in catalog if end - 4 <= x["day"] <= end and x["kind"] != "kanji"]
@@ -908,7 +1009,8 @@ def main(daily_by_day=None):
 
     links = ('<nav class="home-start" aria-label="学习入口">'
              '<a id="resume" class="btn primary" href="day-001.html">开始 Day 001</a>'
-             '<a class="btn" href="review.html">到期复习与错题</a></nav>')
+             '<a id="previousLesson" class="btn" href="#" hidden>回看上次课程</a></nav>'
+             '<p id="courseDone" hidden>150 天课程已学完。</p>')
     for label, start, end in (("N3 基础", 1, 90), ("N2 冲刺", 91, 150)):
         weeks = []
         for first in range(start, end + 1, 7):
@@ -926,22 +1028,15 @@ def main(daily_by_day=None):
               '<details><summary>五日复习单元</summary><ul class="home-lessons">'
               + "".join('<li><a href="unit-%03d.html">%03d–%03d</a></li>' % (n,n-4,n)
                         for n in range(5, len(cur["days"]) + 1, 5)) + '</ul></details></section>')
-    (OUT / "index.html").write_text(
-        '<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">'
-        '<meta name="viewport" content="width=device-width,initial-scale=1">'
-        '<title>Nihongo 150</title><link rel="stylesheet" href="assets/app.css"></head>'
-        '<body><div class="wrap"><main><h1>Nihongo 150</h1>'
-        '<p class="small">词汇与读音 · 韩日语法对照 · 后段听解</p>'
-        + links + '</main></div><script>'
-        'try{var old=Number(localStorage.getItem("nh80.v16.lastDay")||localStorage.getItem("nh80.v15.lastDay")||localStorage.getItem("nh80.v11.lastDay")||0);'
-        'var n=Number.isInteger(old)&&old>=0&&old<=150?Math.min(old+1,150):1;'
-        'while(n<150&&localStorage.getItem("nh80.completed."+n)==="1")n++;'
-        'var day=String(n).padStart(3,"0"),resume=document.getElementById("resume");'
-        'resume.href="day-"+day+".html";resume.textContent=(n===1?"开始 Day ":"继续 Day ")+day;'
-        'document.querySelectorAll(".home-weeks details").forEach(function(group){'
-        'group.open=n>=Number(group.dataset.start)&&n<=Number(group.dataset.end)});'
-        '}catch(e){}</script></body></html>', encoding="utf-8")
-
+    home = ('<h1 tabindex="-1">Nihongo 150</h1><p class="small">词汇与读音 · 韩日语法对照 · 后段听解</p>'
+            + links + '<details class="progress-transfer"><summary>安装与迁移进度</summary>'
+            '<p>iPhone 在 Safari 分享菜单中选择「添加到主屏幕」，开启「作为网页 App 打开」。'
+            '如安装后进度未带过来，可把原设备这里的进度码复制到新应用再导入。</p>'
+            '<form id="progressImport"><label for="courseCode">进度码</label>'
+            '<input id="courseCode" name="code" type="text" spellcheck="false" autocapitalize="off" autocomplete="off">'
+            '<button class="btn" type="submit">导入</button></form>'
+            '<p id="progressStatus" role="status"></p></details>')
+    (OUT / "index.html").write_text(app_page("Nihongo 150", home), encoding="utf-8")
 
     rdata = resource_sources()
     sources = rdata["sources"]
@@ -1024,17 +1119,11 @@ def main(daily_by_day=None):
         '<a href="resources.html">返回官方资源</a>' + library + '</div>'
         '<script src="assets/app.js"></script></html>', encoding="utf-8")
 
-    # HTML 模板必须进 revision，否则只改模板时 SW 不更新，用户会一直看到旧页面。
+    worker = (ROOT / "scripts/course_sw.js").read_text(encoding="utf-8")
     revision = hashlib.sha256((CSS + JS + study_ui.CSS + study_ui.JS + schedule_js
-                               + lesson_revision.hexdigest() + json.dumps(cur, ensure_ascii=False)).encode()).hexdigest()[:12]
-    (OUT / "sw.js").write_text(
-        "const C='nh80-v17-" + revision + "';self.addEventListener('install',e=>self.skipWaiting());"
-        "self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(ks=>Promise.all("
-        "ks.filter(k=>k!==C).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));"
-        "self.addEventListener('fetch',e=>{if(e.request.method!=='GET'||new URL(e.request.url).origin!==location.origin||new URL(e.request.url).pathname.startsWith('/api/'))return;"
-        "e.respondWith(fetch(e.request).then(r=>{if(r.ok){const c=r.clone();e.waitUntil(caches.open(C).then(x=>x.put(e.request,c)))}return r})"
-        ".catch(()=>caches.match(e.request).then(r=>r||new Response('离线且本页尚未缓存',{status:503}))));});",
-        encoding="utf-8")
+                               + app_css + "".join(app_sources.values()) + home + FLASH_BODY + APP_HEAD + APP_NAV
+                               + review_body + flash_json + worker + lesson_revision.hexdigest()).encode()).hexdigest()[:12]
+    (OUT / "sw.js").write_text(worker.replace("__REVISION__", revision), encoding="utf-8")
     print(json.dumps({"days": len(cur["days"]), "html": len(list(OUT.glob("day-*.html"))),
                       "questions_min": min(totals), "questions_max": max(totals)}, ensure_ascii=False))
 

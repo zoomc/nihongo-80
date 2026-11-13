@@ -178,8 +178,13 @@ function renderPersonal(){
   }catch(e){$('#wrongDeck').textContent=e.message}finally{retry.disabled=false}
  };
 }
-function init(){deck($('#practiceDeck'),window.__PRACTICE__||((window.__UNIT__||{}).questions)||[]);renderUnit();refresh();if(pending().length)flush();window.addEventListener('online',flush)}
-window.NHStudy={rate:rate,attempt:attempt,refresh:refresh,flush:flush};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+function init(){deck($('#practiceDeck'),window.__PRACTICE__||((window.__UNIT__||{}).questions)||[]);renderUnit();refresh();if(pending().length)flush()}
+window.NHStudy={rate:rate,attempt:attempt,refresh:refresh,flush:flush};
+window.mountStudy=init;
+window.addEventListener('online',flush);
+if(!document.querySelector('.app-nav')){
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+}
 })();
 """
 

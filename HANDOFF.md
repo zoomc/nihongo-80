@@ -1,4 +1,4 @@
-# HANDOFF · Nihongo 150 v16
+# HANDOFF · Nihongo 150 v18
 
 主课 150 天，Day 001 保留原词和语法，Day 002–138 每天 25 词，Day 139–150 每天 20 词。主课覆盖 3679 词、355 条语法（其中 79 条为 N2）和 620 汉字。461 个词单列选学词库，45 篇原有合成听力继续收录，主课加入 6 次 N3 听力、12 次 N2 听力和 4 次官方题型任务。N2 原创脚本用设备合成播放，官方练习链接原站。
 
@@ -26,6 +26,9 @@ python3 scripts/today.py
 
 ## 当前交付（带证据）
 
+- **主屏幕应用**：课程、日课、到期复习、背单词在同一 SPA 壳内导航。日课地址兼容直达。应用从本机记录续课，进度码可迁移日课位置和完成日。
+- **背单词**：只抽本机完成日的词，先回忆再翻面，忘记词在轮末复习一次。记忆曲线仍走原有到期复习。
+
 - **每日页**：4 个内容块（复习 / 新词 / 语法 / 练习）+ 1 个完成按钮。150 页全量生成，顶部与底部杂项断言为 0（`tests/test_v10.py`）。
 - **练习**：150 页均为当天新词每词两题、语法每条两到三题，构建时确定性打乱。同页错题可多轮重练，完成快照保留首次作答。
 - **新词（v13）**：左列为日语及假名，右列为中文和韩语读音。例句可展开，遮盖与自评仍可使用。整句仅在读音可完整解析时标韩语读音。
@@ -34,7 +37,7 @@ python3 scripts/today.py
 - **完成 → 云端**：`POST /api/progress` 写 D1 `study_progress_120`（`day` 主键幂等覆盖，最多 150 行），页面无口令；`GET /api/progress?day=N|latest=1` 需 `X-NH80-Key`。
 - **agent 侧**：`skills/nh80-progress/SKILL.md`（仓库内 + 项目级 + 用户级三份）、`scripts/progress_read.py`、`AGENTS.md` 已追加调用说明。
 - **安全清理**：Codex v9 误入库的明文答案表 `deploy/worker/src/generated-key.json` 已移出版本库并 gitignore；Worker 只用公开的哈希分片 `web/data/grade/day-*.json`，本地构建仍会生成该表供测试。
-- **Service Worker** 版本使用 `nh80-v16-*`，且每日页 HTML 纳入 revision 哈希，避免旧缓存。
+- **Service Worker** 版本使用 `nh80-v18-*`，且每日页 HTML 纳入 revision 哈希，避免旧缓存。
 
 ## 真源与目录
 

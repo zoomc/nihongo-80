@@ -1,9 +1,15 @@
 
 (function(){
 'use strict';
-var STORE='nh80.v11.', DAY=Number(document.body.dataset.day)||0;
-function $(s,r){return (r||document).querySelector(s)}
-function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))}
+window.mountLesson=function(root, DAY, meta, signal){
+if(signal)signal.addEventListener('abort',function(){
+ if(PEEK)clearInterval(PEEK.timer);
+ if(window.speechSynthesis)window.speechSynthesis.cancel();
+},{once:true});
+var STORE='nh80.v11.';
+function on(target,type,listener){target.addEventListener(type,listener,signal?{signal}:undefined)}
+function $(s,r){return (r||root).querySelector(s)}
+function $$(s,r){return Array.prototype.slice.call((r||root).querySelectorAll(s))}
 function fnv(t){var s=String(t==null?'':t).normalize('NFKC').replace(/\s+/g,'');
  var h=2166136261>>>0;for(const ch of s){h^=ch.codePointAt(0);h=Math.imul(h,16777619)>>>0}return h.toString(16)}
 function reveal(el){el.classList.add('peek');setTimeout(function(){el.classList.remove('peek')},3000)}
@@ -123,7 +129,7 @@ if(retryButton)retryButton.addEventListener('click',startRetry);
 if(allQuestionsButton)allQuestionsButton.addEventListener('click',function(){
  RETRY=null;saveLocal();renderQuestions();$('#qscore').focus();
 });
-document.addEventListener('change',function(e){
+on(root,'change',function(e){
  var input=e.target, lab=input.closest('.q .opt');
  if(!lab||!input.checked)return;
  var q=lab.closest('.q');if(q.hasAttribute('data-done'))return;
@@ -141,7 +147,7 @@ function speak(text,btn){
   u.onend=function(){btn.textContent=label}}
  window.speechSynthesis.cancel();window.speechSynthesis.speak(u);
 }
-document.addEventListener('click',function(e){
+on(root,'click',function(e){
  var mb=e.target.closest('.mask-switch button');
  if(mb){applyScope(mb.closest('section'),mb.getAttribute('data-mask'));return}
  var sb=e.target.closest('[data-show-all]');
@@ -154,7 +160,7 @@ document.addEventListener('click',function(e){
   $$('[data-rate][data-kid="'+kid+'"]').forEach(function(b){b.setAttribute('aria-pressed',String(b===rt))});
   saveLocal();return}
 });
-document.addEventListener('keydown',function(e){
+on(root,'keydown',function(e){
  if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('mask')){
   e.preventDefault();reveal(e.target)}
 });
@@ -174,9 +180,23 @@ function updateReviewLink(){
 }
 updateReviewLink();
 var f=$('#finish');
+function finishLinks(){
+ var status=$('#finishStatus');
+ if(!status)return;
+ var next=window.NHCourse?.next();
+ status.textContent='学习情况已保存。';
+ if(next){
+  var label='Day '+String(next).padStart(3,'0'),link=document.createElement('a');
+  link.href='/day-'+label.slice(4)+'.html';link.textContent='开始下一课 · '+label;
+  status.append(' ',link);
+ }
+}
+if(f&&window.NHCourse?.done(DAY)&&QUESTIONS.length===Object.keys(RESULTS).length){
+ f.disabled=true;f.textContent='已完成';finishLinks();
+}
 if(f)f.addEventListener('click',function(){
- var meta=window.__PAGE__||{},qs=Object.keys(RESULTS).map(function(k){return RESULTS[k]});
- if(!qs.length){$('#finishStatus').textContent='请先完成练习中的单选题。';return}
+ var qs=Object.values(RESULTS);
+ if(qs.length!==QUESTIONS.length||!qs.length){$('#finishStatus').textContent='还有 '+(QUESTIONS.length-qs.length)+' 道单选题待作答。';return}
  var right=qs.filter(function(x){return x.correct}).length;
  var wrong=qs.filter(function(x){return !x.correct}).map(function(x){
   return {qid:x.qid,knowledge_ids:(meta.q_kids||{})[x.qid]||[]}});
@@ -192,8 +212,11 @@ if(f)f.addEventListener('click',function(){
   body:JSON.stringify(payload)}).then(function(r){return r.json().then(function(d){
    if(!r.ok||d.ok!==true)throw new Error(d.reason||('HTTP '+r.status));return d})})
   .then(function(){saveLocal();try{localStorage.setItem('nh80.completed.'+DAY,'1')}catch(e){}
-   f.textContent='已完成';if(status)status.textContent='学习情况已保存，会话可读取。'})
+   window.NHCourse?.finish(DAY);
+   f.textContent='已完成';finishLinks();})
   .catch(function(e){f.disabled=false;f.textContent='完成';
    if(status)status.textContent='云端暂不可用（'+e.message+'）；记录已留在本机。'});
 });
+};
+if(!document.querySelector('.app-nav'))window.mountLesson(document,Number(document.body.dataset.day)||0,window.__PAGE__||{});
 })();

@@ -1,4 +1,4 @@
-const C = 'nh80-v19-887ebcd8dfe7';
+const C = 'nh80-v19-6dd3d49639c5';
 const shell = ['/index.html', '/assets/app.css', '/assets/course_progress.js',
   '/assets/review_schedule.js', '/assets/app.js', '/assets/study.js',
   '/assets/flashcards.js', '/assets/course_sync.js', '/assets/course_version.js', '/assets/course_app.js', '/flashcards.html', '/data/flashcards.json'];

@@ -231,7 +231,7 @@ function renderQuestion(q,r){
  fb.hidden=!r;
  fb.classList.toggle('ok',!!r&&r.correct);
  fb.classList.toggle('bad',!!r&&!r.correct);
- fb.textContent=r?(r.correct?'答对了。':'答错了，正确项已标绿。'):'';
+ fb.textContent=r?(r.correct?'答对了。':'答错了，正确项已标绿。'+(q.dataset.explanation?' '+q.dataset.explanation:'')):'';
 }
 function renderQuestions(){
  var results=activeResults(), visible=0;
@@ -521,7 +521,7 @@ def example_html(ex, mapping, ko=""):
     ja = ex.get("ja", "")
     ko_html = ('<div class="ex-ko" data-role="zh" lang="ko">%s</div>' % esc(ko)) if ko else ""
     return ('<div class="ex">%s'
-            '<div class="ex-ja" data-role="ja">%s</div>'
+            '<div class="ex-ja" data-role="ja" lang="ja">%s</div>'
             '<div class="ex-zh" data-role="zh">%s</div>'
             '</div>' % (ko_html, ruby_text(ja, mapping), esc(ex.get("zh") or ex.get("en") or "")))
 
@@ -646,7 +646,7 @@ def build_grammar_html(day, grammar, reader):
         out.append(
             '<div class="gcard">'
             '<button class="show-all" type="button" data-show-all aria-label="临时显示三种语言 10 秒" hidden>显示</button>'
-            '<div class="pattern" data-role="ja">%s</div>'
+            '<div class="pattern" data-role="ja" lang="ja">%s</div>'
             '%s'
             '<div class="zh" data-role="zh">%s</div>'
             '<div class="conn" data-role="ja">%s</div>'
@@ -660,17 +660,19 @@ def build_grammar_html(day, grammar, reader):
 # ---------------------------------------------------------------------------
 # 一整块练习：以必做骨架为准，按知识点去重，补齐当天全部新词 + 新语法
 # ---------------------------------------------------------------------------
-def build_questions_html(questions, start=1):
+def build_questions_html(questions, start=1, explanations=None):
     rows = []
     for i, q in enumerate(questions, start):
+        skills = q.get('knowledge_ids', [])
+        explanation = (explanations or {}).get(skills[0], '') if skills else ''
         passage = ('<div class="passage" lang="ja">%s</div>' % esc(q["passage"])) if q.get("passage") else ""
         opts = "".join(
             '<label class="opt" data-oh="%s"><input type="radio" name="q%d"><span>%s</span></label>'
             % (esc(q["oh"][j]), i, esc(o)) for j, o in enumerate(q["options"]))
-        rows.append('<div class="q" data-qid="%s" data-h="%s">%s<div class="prompt" id="prompt-%d"><span class="q-number">%d. </span>%s</div>'
+        rows.append('<div class="q" data-qid="%s" data-h="%s" data-explanation="%s">%s<div class="prompt" id="prompt-%d"><span class="q-number">%d. </span>%s</div>'
                     '<div class="opts" role="group" aria-labelledby="prompt-%d">%s</div>'
                     '<div class="fb" role="status" hidden></div></div>'
-                    % (esc(q["qid"]), esc(q["h"]), passage, i, i, esc(q["prompt"]), i, opts))
+                    % (esc(q["qid"]), esc(q["h"]), esc(explanation), passage, i, i, esc(q["prompt"]), i, opts))
     return "".join(rows)
 
 
@@ -909,9 +911,10 @@ def main(daily_by_day=None):
         for vid in d["new_vocab_ids"]:
             v = vocab[vid]
             ex = (v.get("examples") or [{}])[0]
+            meaning, readings = vocabulary_display(v)
             vcards.append({"id": vid, "surface": v["surface"], "kana": v["kana"],
-                           "meaning": v["meaning_zh"], "ko": v.get("ko_hint") or v.get("ko_hanja") or "",
-                           "ko_pron": ko_pron.pron(v.get("kana") or ""),
+                           "meaning": meaning, "ko": v.get("ko_hint") or v.get("ko_hanja") or "",
+                           "ko_pron": ko_pron.pron("／".join(readings)),
                            "ko_status": v.get("ko_status"), "optional": vid in d.get("extension_vocab_ids", []),
                            "pos": v.get("pos", ""),
                            "ex": {"ja": ex.get("ja", ""), "zh": ex.get("zh", ""),
@@ -959,9 +962,11 @@ def main(daily_by_day=None):
             "q_kids": {q["qid"]: q.get("knowledge_ids") or [] for q in lesson_questions},
             "total": len(lesson_questions),
         }
+        explanations = {gid: grammar[gid].get("ko_diff") or grammar[gid].get("usage", "")
+                        for gid in d["new_grammar_ids"]}
         page = day_page(d, build_review_html(d, vocab, grammar, kanji, reader),
                         build_vocab_html(d, vocab, kanji, reader), build_grammar_html(d, grammar, reader),
-                        build_questions_html(merged), page_meta, listening_html)
+                        build_questions_html(merged, explanations=explanations), page_meta, listening_html)
         (OUT / ("day-%03d.html" % n)).write_text(page, encoding="utf-8")
         lesson_revision.update(page.encode())
         (DATA / ("day-%03d.json" % n)).write_text(json.dumps({
@@ -969,7 +974,8 @@ def main(daily_by_day=None):
             "minutes": d["minutes"], "blocks": d["blocks"], "listening": bool(d.get("listening")),
             "review": review, "vocab": vcards,
             "core_vocab_ids": d.get("core_vocab_ids"), "extension_vocab_ids": d.get("extension_vocab_ids"),
-            "grammar": [dict(grammar[g], ko_pron=pattern_ko(grammar[g], reader))
+            "grammar": [{**{key: value for key, value in grammar[g].items() if key != "practice"},
+                         "ko_pron": pattern_ko(grammar[g], reader)}
                         for g in d["new_grammar_ids"]],
             "unit_questions": [public_question(q) for q in build_unit(n, cur["days"], vocab, grammar, kanji)["questions"]]
             if n % 5 == 0 else [],

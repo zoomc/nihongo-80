@@ -54,9 +54,9 @@ def check():
         public_questions = (d['quiz'] + d['sentences'] + d.get('practice', [])
                             + d.get('unit_questions', [])
                             + (d.get('listening_material') or {}).get('questions', []) + daily)
-        if any('answer' in q or 'rationale' in q for q in public_questions):
+        if any('answer' in q or 'rationale' in q for q in public_questions) or any('practice' in g for g in d['grammar']):
             raise ValueError('public reference answer: ' + p.name)
-        expected = {**{v['id']: 2 for v in d['vocab']}, **{g['id']: 2 if g.get('provenance') == 'openjlpt_adapted' else 3 for g in d['grammar']}}
+        expected = {**{v['id']: 2 for v in d['vocab']}, **{g['id']: 3 for g in d['grammar']}}
         if Counter(k for q in daily for k in q['knowledge_ids']) != expected:
             raise ValueError('daily question quotas: ' + p.name)
         if len({q['qid'] for q in daily}) != len(daily) or len(public_daily) > 65:

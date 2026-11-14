@@ -86,7 +86,7 @@ function renderQuestion(q,r){
  fb.hidden=!r;
  fb.classList.toggle('ok',!!r&&r.correct);
  fb.classList.toggle('bad',!!r&&!r.correct);
- fb.textContent=r?(r.correct?'答对了。':'答错了，正确项已标绿。'):'';
+ fb.textContent=r?(r.correct?'答对了。':'答错了，正确项已标绿。'+(q.dataset.explanation?' '+q.dataset.explanation:'')):'';
 }
 function renderQuestions(){
  var results=activeResults(), visible=0;

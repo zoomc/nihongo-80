@@ -83,7 +83,7 @@ class TestMergedQuestions(unittest.TestCase):
         for day in (1, 47, 100):
             c = Counter(k for q in data(day)["questions"] for k in (q.get("knowledge_ids") or []))
             d = data(day)
-            expected = {**{v["id"]: 2 for v in d["vocab"]}, **{g["id"]: 2 if g.get("provenance") == "openjlpt_adapted" else 3 for g in d["grammar"]}}
+            expected = {**{v["id"]: 2 for v in d["vocab"]}, **{g["id"]: 3 for g in d["grammar"]}}
             self.assertEqual(c, expected, "Day %d 每个考点题数" % day)
 
     def test_questions_are_one_flat_block_in_html(self):

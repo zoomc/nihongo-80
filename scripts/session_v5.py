@@ -54,13 +54,7 @@ def save_progress(p):
 
 
 def page_link(day):
-    """页面链接；本机有同步凭证时附加 #s=，打开即自动绑定该设备。"""
-    url = "https://nihongo80.cmjfire.workers.dev/day-%03d.html" % day
-    try:
-        code = (ROOT / "deploy/.sync-code").read_text(encoding="utf-8").strip().lower()
-    except OSError:
-        code = ""
-    return url + ("#s=" + code if len(code) == 64 else "")
+    return "https://nihongo80.cmjfire.workers.dev/day-%03d.html" % day
 
 
 def ensure_dirs():

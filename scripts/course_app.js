@@ -126,7 +126,7 @@
     if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey ||
         event.shiftKey || event.altKey || link.target || link.hasAttribute('download')) return;
     const url = new URL(link.href);
-    if (url.origin !== location.origin || !route.test(url.pathname) || (url.hash && url.pathname === location.pathname)) return;
+    if (new URLSearchParams(url.hash.slice(1)).has('s') || url.origin !== location.origin || !route.test(url.pathname) || (url.hash && url.pathname === location.pathname)) return;
     event.preventDefault();
     navigate(url, 'push');
   });
@@ -154,5 +154,8 @@
       navigate(url, 'replace', false);
     }
   }
-  window.NHSync.start().finally(resume);
+  const initial = displayed.pathname;
+  window.NHSync.start().finally(() => {
+    if (!request && displayed.pathname === initial) resume();
+  });
 })();

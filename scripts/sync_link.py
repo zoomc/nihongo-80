@@ -15,7 +15,7 @@
     python3 scripts/sync_link.py --base https://nihongo80-preview.cmjfire.workers.dev
 
 边界：链接本身就是凭证。不要贴到公开渠道、不要提交进 git。凭证不入库、不写进
-TODAY.md 以外的任何生成物；服务端只存它的 SHA-256 摘要。
+任何生成物；服务端只存它的 SHA-256 摘要。
 """
 
 from __future__ import annotations
@@ -51,7 +51,7 @@ def load_code(create: bool = False) -> str:
     return code
 
 
-def post(base: str, path: str, payload: dict, timeout: float = 15.0):
+def post(base: str, path: str, payload: dict, timeout: float = 15.0, *, headers=None):
     """POST JSON；返回 (status, body)。Worker 要求同源 Origin，这里显式补上。"""
     url = base.rstrip("/") + path
     request = urllib.request.Request(
@@ -60,7 +60,7 @@ def post(base: str, path: str, payload: dict, timeout: float = 15.0):
         method="POST",
         headers={"content-type": "application/json", "origin": base.rstrip("/"),
                  # Cloudflare 会对空 UA 返 1010；带一个明确的自助 UA 才能进门。
-                 "user-agent": "nihongo80-sync/1.0"},
+                 "user-agent": "nihongo80-sync/1.0", **(headers or {})},
     )
     try:
         with urllib.request.urlopen(request, timeout=timeout) as response:
@@ -94,6 +94,31 @@ def ensure_account(base: str, code: str) -> str:
     return "offline:login_%s" % status
 
 
+def import_legacy(base: str, code: str) -> int:
+    """Merge the site's legacy completion dates into this one account."""
+    key = (ROOT / "deploy/.sync-key").read_text(encoding="utf-8").strip()
+    if not key:
+        raise ValueError("missing management key")
+    endpoint = base.rstrip("/")
+    request = urllib.request.Request(
+        endpoint + "/api/progress?latest=1&limit=150",
+        headers={"X-NH80-Key": key, "user-agent": "nihongo80-sync/1.0"},
+    )
+    with urllib.request.urlopen(request, timeout=15) as response:
+        items = json.load(response)["items"]
+    days = sorted({item["day"] for item in items if 1 <= item["day"] <= 150
+                   and (item["day"] == 1 or item.get("v") == 4)})
+    status, session = post(base, "/api/account/login", {"code": code})
+    if status != 200:
+        raise ValueError("cannot authenticate sync account")
+    status, merged = post(base, "/api/account/state", {
+        "account": session["account"], "days": days, "last": 0, "opened": 0,
+    }, headers={"Cookie": "__Host-nh80_account=" + code})
+    if status != 200 or not set(days).issubset(merged["days"]):
+        raise ValueError("cannot confirm imported completion days")
+    return len(days)
+
+
 def link(base: str, code: str) -> str:
     return "%s/#s=%s" % (base.rstrip("/"), code)
 
@@ -103,14 +128,26 @@ def main(argv=None) -> int:
     parser.add_argument("--base", default=DEFAULT_BASE, help="站点根地址")
     parser.add_argument("--show", action="store_true", help="只打印链接，不联网校验账号")
     parser.add_argument("--json", action="store_true", dest="as_json")
+    parser.add_argument("--import-legacy", action="store_true", help="将本站历史完成日合并到本机账号，不打印凭证")
     args = parser.parse_args(argv)
+    if args.import_legacy and (args.show or args.as_json or args.base.rstrip("/") != DEFAULT_BASE):
+        parser.error("--import-legacy 仅用于本站生产账号，并单独运行")
 
     code = load_code(create=True)
     if not code:
         print("无法生成同步凭证：deploy/ 不可写。", file=sys.stderr)
         return 2
 
-    state = "skipped" if args.show else ensure_account(args.base, code)
+    try:
+        state = "skipped" if args.show else ensure_account(args.base, code)
+        if args.import_legacy:
+            if state not in ("exists", "created"):
+                raise ValueError("sync account unavailable")
+            print("已合并 %d 个历史完成日。" % import_legacy(args.base, code))
+            return 0
+    except (OSError, ValueError, KeyError):
+        print("无法连接同步服务或验证历史进度，请稍后重试。", file=sys.stderr)
+        return 3
     url = link(args.base, code)
 
     if args.as_json:

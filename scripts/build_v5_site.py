@@ -442,7 +442,7 @@ if(f&&!f.dataset.cloudWatch){
   if(window.NHCourse?.done(DAY)){
    f.disabled=true;f.textContent='已完成';finishLinks();
   }
- });
+ },{signal:signal});
 }
 if(f)f.addEventListener('click',function(){
  var qs=Object.values(RESULTS);

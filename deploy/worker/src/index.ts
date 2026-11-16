@@ -733,6 +733,9 @@ async function handleCourseAccount(request: Request, env: Env, url: URL): Promis
       if (typeof body === "string") return fail(body, 400);
       if (typeof body.code !== "string" || !LOGIN_CODE.test(body.code)) return fail("bad_code", 400);
       const id = await sha256Hex("nh80-account:" + body.code);
+      if (body.expected !== undefined && (body.expected !== id || (account && account !== id))) {
+        return fail("different_account", 409);
+      }
       if (body.create === true) {
         const ip = await progressIpKey(request, env, new Date().toISOString().slice(0, 10));
         if (!(await progressBudget(db, "account:" + ip, 12))) return fail("rate_limit", 429);
@@ -770,14 +773,6 @@ async function handleCourseAccount(request: Request, env: Env, url: URL): Promis
     for (const day of JSON.parse(row.days) as number[]) {
       if (Number.isInteger(day) && day >= 1 && day <= 150) days.add(day);
     }
-    // 站点是单人部署：网页「完成」快照（study_progress_120）没有账号维度，
-    // 把它并进完成日，换设备后才看得到绑定之前点过的「完成」。只读，不回写进度判定。
-    try {
-      const reported = await db.prepare("SELECT day FROM study_progress_120").all<{day: number}>();
-      for (const item of reported.results ?? []) {
-        if (Number.isInteger(item.day) && item.day >= 1 && item.day <= 150) days.add(item.day);
-      }
-    } catch { /* 旧库没有该表时忽略 */ }
     return jsonResponse({ ok: true, account, days: [...days].sort((a, b) => a - b),
       last: row.last_day, opened: row.opened_at }, 200, null);
   } catch {

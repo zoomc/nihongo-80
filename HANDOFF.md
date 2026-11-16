@@ -34,7 +34,7 @@ python3 scripts/today.py
 - **新词（v13）**：左列为日语及假名，右列为中文和韩语读音。例句直接显示，支持单侧遮盖。整句仅在读音可完整解析时标韩语读音，Janome 在构建期提供助词和连词边界。
 - **小日语文字 + 发音**：新词左列 `.kana-line` 小假名，例句汉字 `<ruby>` 注音，每条例句 `data-speak` 朗读；浏览器实测 375/1280 均可用。
 - **到期复习（v14）**：`review_schedule.js` 按当前浏览器的每日首次作答建卡，`review.html` 单选结果更新间隔。跨设备的网页完成快照继续独立；`today.py` 从 SQLite 读取实时 FSRS 到期卡和待补先修。
-- **多端自动绑定（v20）**：同步链接把凭证放在 `#s=` 片段，任意设备打开一次即绑定，之后自动同步完成日与续课位置。`scripts/sync_link.py` 生成凭证与链接，`today.py` / `STATE.md` 输出的页面链接自带该片段。`GET /api/account/state` 的完成日并上 `study_progress_120`；已完成的日子换设备直接显示「已完成」，不要求重做。
+- **多端自动绑定（v21）**：新设备打开一次主动复制的同步链接，离线绑定会在联网后重试。日课和进度文档使用普通地址。完成日与续课位置只在同账号内合并；历史自报完成日可通过 `python3 scripts/sync_link.py --import-legacy` 合并到本机同步账号。
 - **整块遮盖（v20）**：右下角可拖拽悬浮按钮，三态循环「显示 → 遮日语 → 遮中文」，按视口中线所在的大区（复习 / 新词 / 语法）整块动作，不做单卡开关。新词卡韩语发音移到单词下方，随日语一起遮。
 - **完成 → 云端**：`POST /api/progress` 写 D1 `study_progress_120`（`day` 主键幂等覆盖，最多 150 行），页面无口令；`GET /api/progress?day=N|latest=1` 需 `X-NH80-Key`。
 - **agent 侧**：`skills/nh80-progress/SKILL.md`（仓库内 + 项目级 + 用户级三份）、`scripts/progress_read.py`、`AGENTS.md` 已追加调用说明。

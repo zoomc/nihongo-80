@@ -1,6 +1,7 @@
 (function () {
   'use strict';
   const ownerKey = 'nh80.sync.owner';
+  const pendingKey = 'nh80.sync.pending';
   const codeKey = 'nh80.sync.code';
   const read = key => { try { return localStorage.getItem(key); } catch { return null; } };
   const write = (key, value) => { try { localStorage.setItem(key, value); } catch {} };
@@ -24,7 +25,8 @@
   let changed = false;
   let switching = false;
   let authFailedAt = 0;
-  const linkCode = takeLinkCode();
+  let linkCode = takeLinkCode() || read(pendingKey) || '';
+  if (linkCode) write(pendingKey, linkCode);
 
   const status = document.getElementById('accountStatus');
   const form = document.getElementById('accountLogin');
@@ -38,34 +40,31 @@
       method: 'POST', headers: {'content-type': 'application/json'}, body: JSON.stringify(body)
     };
     const response = await fetch('/api/account/' + action, {...options, cache:'no-store', signal:AbortSignal.timeout(9000)});
-    if (!response.ok) throw Error(String(response.status));
+    if (!response.ok) {
+      const result = await response.json().catch(() => ({}));
+      throw Error(result.reason === 'different_account' ? result.reason : String(response.status));
+    }
     return response.json();
   }
 
   function display(message) {
     if (status) status.textContent = message;
     if (logout) logout.hidden = !session;
-    if (create) create.hidden = session;
+    if (create) create.hidden = session || Boolean(owner);
     if (form) form.hidden = session;
     if (copyLink) copyLink.hidden = !(session && code);
   }
 
-  // 用登录码换会话。401 = 账号还没建过，就顺手建一个；409 = 并发/已存在，重试登录。
-  // allowSwitch 只在用户显式打开同步链接时为真，手动输入仍禁止悄悄换绑。
-  async function authenticate(value, allowSwitch) {
+  async function authenticate(value, createAccount = false) {
+    const expected = read(ownerKey) || owner;
+    const fields = {code: value, ...(expected ? {expected} : {})};
     let account;
     try {
-      account = (await call('login', {code: value})).account;
+      account = (await call('login', {...fields, ...(createAccount ? {create: true} : {})})).account;
     } catch (error) {
-      if (error.message !== '401') throw error;
-      try {
-        account = (await call('login', {code: value, create: true})).account;
-      } catch (again) {
-        if (again.message !== '409') throw again;
-        account = (await call('login', {code: value})).account;
-      }
+      if (!createAccount || error.message !== '409') throw error;
+      account = (await call('login', fields)).account;
     }
-    if (owner && owner !== account && !allowSwitch) throw Error('different_account');
     write(ownerKey, account);
     write(codeKey, value);
     owner = account;
@@ -77,6 +76,7 @@
 
   async function sync() {
     if (switching || running) return running;
+    if (!session && !code) return;
     running = (async () => {
       for (let attempt = 0; attempt < 2; attempt++) {
         try {
@@ -122,7 +122,9 @@
     try { await running; } catch {}
     form && (form.querySelector('button').disabled = create.disabled = true);
     try {
-      const account = await authenticate(value, false);
+      await authenticate(value, isNew);
+      linkCode = '';
+      drop(pendingKey);
       if (isNew) {
         if (copy) { copy.hidden = false; copy.value = value; copy.select(); }
       }
@@ -130,7 +132,7 @@
       display('已绑定 · 正在同步…');
     } catch (error) {
       const messages = {'401':'登录码无效。', '429':'创建次数已达上限，请明天再试。',
-        different_account:'此浏览器已绑定另一个同步账号。要换账号请向新账号的同步链接。'};
+        different_account:'此浏览器的学习记录属于另一个同步账号。请用原同步链接，或在独立浏览器中绑定。'};
       display(messages[error.message] || '暂时无法登录，请重试。');
     } finally {
       switching = false;
@@ -140,24 +142,30 @@
   }
 
   async function start() {
-    if (linkCode) {
-      switching = true;
-      try { await running; } catch {}
-      try {
-        await authenticate(linkCode, true);
-        display('已绑定 · 正在同步…');
-      } catch (error) {
-        authFailedAt = Date.now();
-        display(error.message === '429' ? '绑定次数已达上限，请明天再用这条链接。' : '绑定失败，请联网后重试。');
-      } finally {
-        switching = false;
+    if (switching) return;
+    const incoming = takeLinkCode();
+    if (incoming) { linkCode = incoming; write(pendingKey, incoming); }
+    if (!linkCode) return sync();
+    switching = true;
+    try {
+      await running;
+      await authenticate(linkCode);
+      linkCode = '';
+      drop(pendingKey);
+      display('已绑定 · 正在同步…');
+    } catch (error) {
+      if (error.message === '401' || error.message === '400' || error.message === 'different_account') {
+        linkCode = '';
+        drop(pendingKey);
+        display(error.message === 'different_account'
+          ? '此浏览器的学习记录属于另一个同步账号。请在独立浏览器中打开此链接。'
+          : '同步链接已失效，请从已绑定设备重新复制。');
+      } else {
+        display('暂时无法绑定，将在重新联网后重试。');
       }
-      if (session) return sync();
       return;
-    }
-    if (code && !session) {
-      try { await authenticate(code, false); }
-      catch { authFailedAt = Date.now(); }
+    } finally {
+      switching = false;
     }
     return sync();
   }
@@ -186,9 +194,9 @@
       await running;
       await call('logout', {});
       session = false;
-      owner = '';
       code = '';
-      drop(ownerKey);
+      linkCode = '';
+      drop(pendingKey);
       drop(codeKey);
       if (copy) { copy.value = ''; copy.hidden = true; }
       display('已退出 · 进度只保存在此设备');
@@ -196,13 +204,15 @@
     finally { switching = false; }
   };
 
+  display(owner && !code ? '已退出 · 进度只保存在此设备' : '进度保存在此设备');
   window.NHSync = {start};
+  window.addEventListener('hashchange', start);
   window.addEventListener('nh80-course-change', () => {
     if (!session) return;
     changed = true;
     sync();
   });
-  window.addEventListener('online', sync);
-  document.addEventListener('visibilitychange', () => { if (!document.hidden) sync(); });
-  setInterval(() => { if (!document.hidden) sync(); }, 30000);
+  window.addEventListener('online', start);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) start(); });
+  setInterval(() => { if (!document.hidden) start(); }, 30000);
 })();

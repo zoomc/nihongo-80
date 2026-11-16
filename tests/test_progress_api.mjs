@@ -17,7 +17,7 @@ const worker = (await import('data:text/javascript;base64,' +
 
 const BASE = 'https://example.test';
 const KEY = 'test-only-key';
-const MIGRATIONS = ['0003_personal_budget.sql', '0005_progress.sql', '0006_progress_120.sql'];
+const MIGRATIONS = ['0003_personal_budget.sql', '0005_progress.sql', '0006_progress_120.sql', '0007_course_accounts.sql'];
 
 function makeDb() {
   const sqlite = new DatabaseSync(':memory:');
@@ -176,3 +176,28 @@ assert.equal(lastStatus, 429);
 console.log('PASS: per-IP daily write budget (50) enforced with 429');
 
 console.log('\nALL PASS: /api/progress contract');
+
+const accountRequest = (action, body, cookie) => worker.fetch(new Request(BASE + '/api/account/' + action, {
+  method: body ? 'POST' : 'GET',
+  headers: {origin: BASE, 'content-type': 'application/json', ...(cookie ? {cookie} : {})},
+  ...(body ? {body: JSON.stringify(body)} : {}),
+}), env);
+const a = 'a'.repeat(64);
+const b = 'b'.repeat(64);
+const first = await accountRequest('login', {code:a, create:true});
+const second = await accountRequest('login', {code:b, create:true});
+const firstCookie = first.headers.get('set-cookie').split(';')[0];
+const secondCookie = second.headers.get('set-cookie').split(';')[0];
+const {account: firstId} = await first.json();
+assert.notEqual((await post({...payload, day:46})).status, 500);
+assert.deepEqual((await (await accountRequest('state', null, secondCookie)).json()).days, []);
+const mismatch = await accountRequest('login', {code:b, expected:firstId}, firstCookie);
+assert.equal(mismatch.status, 409);
+assert.equal(mismatch.headers.get('set-cookie'), null);
+assert.equal((await accountRequest('state', {account:firstId, days:[2], last:2, opened:10}, firstCookie)).status, 200);
+await accountRequest('state', {account:firstId, days:[3], last:3, opened:8}, firstCookie);
+const synced = await (await accountRequest('state', null, firstCookie)).json();
+assert.deepEqual(synced.days, [2,3]);
+assert.equal(synced.last, 2);
+assert.deepEqual((await (await accountRequest('state', null, secondCookie)).json()).days, []);
+console.log('PASS: account isolation, guarded login, additive and time-ordered sync');

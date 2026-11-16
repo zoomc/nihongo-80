@@ -235,13 +235,7 @@ def build(day=None, offline=False, base=BASE):
 # ---------------------------------------------------------------------------
 
 def page_link(day: int, base: str = BASE) -> str:
-    """页面链接。带本机同步凭证时附加 #s=，打开即自动绑定该设备。
-
-    fragment 不会发送给服务器，也不进 Referer；本地 http 调试不带（__Host- Cookie 需 Secure）。
-    """
-    url = "%s/day-%03d.html" % (base.rstrip("/"), day)
-    code = sync_code() if base.startswith("https://") else ""
-    return url + ("#s=" + code if code else "")
+    return "%s/day-%03d.html" % (base.rstrip("/"), day)
 
 
 def sync_code() -> str:
@@ -298,7 +292,7 @@ def render_md(s, base: str = BASE) -> str:
         "",
         "- 页面：%s" % page_link(day, base),
         "- 同步：%s" % (
-            "链接已带本机凭证，在任意设备打开一次即自动同步完成日与续课位置，之后不用再设置。"
+            "已配置本机同步账号。新设备可从已绑定的设备复制同步链接。"
             if s.get("sync_bound") else
             "本机还没绑定凭证；跑 `python3 scripts/sync_link.py` 生成同步链接。"),
         "- 阶段：%s %s｜约 %s 分钟｜%s%s" % (

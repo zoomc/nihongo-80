@@ -61,12 +61,20 @@ padding:9px 14px;font-size:15px;cursor:pointer}
 .btn:disabled{opacity:.45;cursor:not-allowed}
 .small{font-size:12px;color:var(--muted)}
 .review-link{display:inline-block;margin-bottom:8px;color:var(--accent)}
-.mask-switch{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 12px}
-.mask-switch button{font:inherit;font-size:12px;padding:5px 11px;border:1px solid var(--line);
-border-radius:999px;background:var(--surface);color:var(--muted);cursor:pointer}
-.mask-switch button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
-.mask{filter:blur(6px);color:transparent;user-select:none;transition:filter .12s}
-.mask.peek{filter:none;color:inherit}
+.mask,.mask[data-role]{filter:blur(6px);color:transparent;user-select:none}
+.mask.peek,.mask.peek[data-role]{filter:none;color:inherit}
+.scope-fab{position:fixed;z-index:20;right:14px;bottom:calc(14px + env(safe-area-inset-bottom));
+display:inline-flex;align-items:center;gap:7px;min-height:46px;padding:0 17px;border-radius:999px;
+border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:14px;
+box-shadow:0 6px 22px rgba(0,0,0,.2);cursor:grab;touch-action:none;user-select:none;
+max-width:calc(100vw - 28px);-webkit-tap-highlight-color:transparent}
+.scope-fab[hidden]{display:none}
+.scope-fab.dragging{cursor:grabbing;box-shadow:0 10px 30px rgba(0,0,0,.26)}
+.scope-fab .fab-scope{font-size:12px;color:var(--muted)}
+.scope-fab .fab-mode{font-weight:600}
+.scope-fab[data-mode="ja"] .fab-mode,.scope-fab[data-mode="zh"] .fab-mode{color:var(--accent)}
+.scope-fab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media print{.scope-fab{display:none}}
 .show-all{float:right;margin:0 0 6px 10px;font:inherit;font-size:11px;padding:3px 10px;
 border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--muted);cursor:pointer}
 .show-all:disabled{opacity:.75;cursor:default}
@@ -139,7 +147,7 @@ details summary{cursor:pointer;color:var(--muted);font-size:13px}
 @media(min-width:1024px){.wrap{max-width:820px}}
 @media(max-width:480px){.jp{font-size:21px}.q .opt{font-size:14px}}
 button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-@media print{.foot,.mask-switch,.rates,.speak,.btn,.show-all{display:none!important}.mask{filter:none!important;color:inherit!important}}
+@media print{.foot,.scope-fab,.rates,.speak,.btn,.show-all{display:none!important}.mask{filter:none!important;color:inherit!important}}
 """
 
 
@@ -169,10 +177,101 @@ function applyScope(sec,mode){
   if(hide){el.setAttribute('tabindex','0');el.setAttribute('aria-label','内容已遮盖，点击临时查看')}
   else{el.removeAttribute('tabindex');el.removeAttribute('aria-label')}
  });
- $$('.mask-switch button',sec).forEach(function(b){
-  b.setAttribute('aria-pressed',String(b.getAttribute('data-mask')===mode))});
  $$('[data-show-all]',sec).forEach(function(b){b.hidden=(mode==='all')});
  try{localStorage.setItem(STORE+'mask.'+sec.id,mode)}catch(e){}
+ fabLabel();
+}
+// 右下角悬浮按钮：整块遮盖，不做单项。三态循环，作用于视口中线所在的大区。
+var SCOPES=['review','vocab','grammar'];
+var SCOPE_NAME={review:'复习',vocab:'新词',grammar:'语法'};
+var MODE_NAME={all:'显示',ja:'遮日语',zh:'遮中文'};
+var SCOPE_NEXT={all:'ja',ja:'zh',zh:'all'};
+var FAB=null, FAB_TICK=0;
+function scopeMode(id){
+ var saved='all';try{saved=localStorage.getItem(STORE+'mask.'+id)||'all'}catch(e){}
+ return MODE_NAME[saved]?saved:'all';
+}
+function activeScope(){
+ var mid=(window.innerHeight||0)/2,best=null,gap=Infinity;
+ // 滚到练习区时不显示，避免遮住看不见的区块。
+ var q=document.getElementById('questions');
+ if(q){var qr=q.getBoundingClientRect();if(qr.height&&qr.top<=mid&&qr.bottom>=mid)return null}
+ SCOPES.forEach(function(id){
+  var sec=document.getElementById(id);if(!sec)return;
+  var r=sec.getBoundingClientRect();if(!r.height)return;
+  var d=(r.top<=mid&&r.bottom>=mid)?0:Math.min(Math.abs(r.top-mid),Math.abs(r.bottom-mid));
+  if(d<gap){gap=d;best=id}
+ });
+ return best;
+}
+function fabLabel(){
+ if(!FAB)return;
+ var id=activeScope();
+ if(!id){FAB.hidden=true;return}
+ var mode=scopeMode(id);
+ FAB.hidden=false;
+ FAB.setAttribute('data-mode',mode);
+ FAB.querySelector('.fab-scope').textContent=SCOPE_NAME[id];
+ FAB.querySelector('.fab-mode').textContent=MODE_NAME[mode];
+ FAB.setAttribute('aria-label',SCOPE_NAME[id]+'当前'+MODE_NAME[mode]+'，按一下切换遮盖');
+}
+function cycleScope(){
+ var id=activeScope();if(!id)return;
+ applyScope(document.getElementById(id),SCOPE_NEXT[scopeMode(id)]||'all');
+}
+function mountFab(){
+ FAB=document.getElementById('scopeFab');
+ if(FAB){fabLabel();return}
+ var fab=document.createElement('button');
+ fab.type='button';fab.id='scopeFab';fab.className='scope-fab';
+ fab.innerHTML='<span class="fab-scope"></span><span class="fab-mode"></span>';
+ document.body.appendChild(fab);
+ var drag=null;
+ function place(left,top){
+  var w=fab.offsetWidth||120,h=fab.offsetHeight||46;
+  fab.style.left=Math.max(8,Math.min(left,(window.innerWidth||360)-w-8))+'px';
+  fab.style.top=Math.max(8,Math.min(top,(window.innerHeight||640)-h-8))+'px';
+  fab.style.right='auto';fab.style.bottom='auto';
+ }
+ fab.addEventListener('pointerdown',function(e){
+  if(e.pointerType==='mouse'&&e.button!==0)return;
+  var r=fab.getBoundingClientRect();
+  drag={x:e.clientX,y:e.clientY,left:r.left,top:r.top,moved:false};
+  fab.classList.add('dragging');
+  try{fab.setPointerCapture(e.pointerId)}catch(err){}
+ });
+ fab.addEventListener('pointermove',function(e){
+  if(!drag)return;
+  var dx=e.clientX-drag.x,dy=e.clientY-drag.y;
+  if(!drag.moved&&Math.abs(dx)+Math.abs(dy)<8)return;
+  drag.moved=true;place(drag.left+dx,drag.top+dy);
+ });
+ fab.addEventListener('pointerup',function(){
+  if(!drag)return;
+  var moved=drag.moved;drag=null;fab.classList.remove('dragging');
+  if(moved){
+   var r=fab.getBoundingClientRect();
+   try{localStorage.setItem(STORE+'fab',JSON.stringify({left:r.left,top:r.top}))}catch(e){}
+  }else{cycleScope()}
+ });
+ fab.addEventListener('pointercancel',function(){drag=null;fab.classList.remove('dragging')});
+ fab.addEventListener('keydown',function(e){
+  if(e.key==='Enter'||e.key===' '){e.preventDefault();cycleScope()}
+ });
+ try{
+  var pos=JSON.parse(localStorage.getItem(STORE+'fab')||'null');
+  if(pos&&typeof pos.left==='number'&&typeof pos.top==='number')place(pos.left,pos.top);
+ }catch(e){}
+ FAB=fab;
+ if(!window.__nhFabWatch){
+  window.__nhFabWatch=1;
+  window.addEventListener('scroll',function(){
+   if(FAB_TICK)return;FAB_TICK=1;
+   requestAnimationFrame(function(){FAB_TICK=0;fabLabel()});
+  },{passive:true});
+  window.addEventListener('resize',function(){fabLabel()});
+ }
+ fabLabel();
 }
 var PEEK=null;
 function showAll(btn){
@@ -293,8 +392,6 @@ function speak(text,btn){
  window.speechSynthesis.cancel();window.speechSynthesis.speak(u);
 }
 on(root,'click',function(e){
- var mb=e.target.closest('.mask-switch button');
- if(mb){applyScope(mb.closest('section'),mb.getAttribute('data-mask'));return}
  var sb=e.target.closest('[data-show-all]');
  if(sb){showAll(sb);return}
  var m=e.target.closest('.mask');if(m){reveal(m);return}
@@ -309,10 +406,8 @@ on(root,'keydown',function(e){
  if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('mask')){
   e.preventDefault();reveal(e.target)}
 });
-['vocab','grammar'].forEach(function(id){var s=$('#'+id);if(!s)return;
- var saved='all';try{saved=localStorage.getItem(STORE+'mask.'+id)||'all'}catch(e){}
- if(['all','zh','ja'].indexOf(saved)<0)saved='all';
- applyScope(s,saved)});
+SCOPES.forEach(function(id){var s=$('#'+id);if(s)applyScope(s,scopeMode(id))});
+mountFab();
 restore();
 function updateReviewLink(){
  var link=$('#dueReviewLink');
@@ -329,15 +424,25 @@ function finishLinks(){
  var status=$('#finishStatus');
  if(!status)return;
  var next=window.NHCourse?.next();
- status.textContent='学习情况已保存。';
+ status.textContent=QUESTIONS.length&&QUESTIONS.length===Object.keys(RESULTS).length
+  ?'学习情况已保存。':'这一课已在其他设备完成。';
  if(next){
   var label='Day '+String(next).padStart(3,'0'),link=document.createElement('a');
   link.href='/day-'+label.slice(4)+'.html';link.textContent='开始下一课 · '+label;
   status.append(' ',link);
  }
 }
-if(f&&window.NHCourse?.done(DAY)&&QUESTIONS.length===Object.keys(RESULTS).length){
+if(f&&window.NHCourse?.done(DAY)){
  f.disabled=true;f.textContent='已完成';finishLinks();
+}
+// 云端同步可能晚于本页渲染：绑定/同步完成后把「已完成」补上，换设备不用重做一遍。
+if(f&&!f.dataset.cloudWatch){
+ f.dataset.cloudWatch='1';
+ window.addEventListener('nh80-cloud-change',function(){
+  if(window.NHCourse?.done(DAY)){
+   f.disabled=true;f.textContent='已完成';finishLinks();
+  }
+ });
 }
 if(f)f.addEventListener('click',function(){
  var qs=Object.values(RESULTS);
@@ -452,11 +557,10 @@ def audio_card(x):
 # ---------------------------------------------------------------------------
 # 读音标注（v12，2026-11-12 按用户要求重排）
 #
-# 新词区的顺序：平假读音 → 日语单词 → 韩语发音 → 中文 → 例句韩语读音 → 例句。
-# 原则：同一条信息只出现一次。假名词不再加 ruby（单词本身就是假名）、
-# 也不再单独来一行「假名」，那一行让给韩语发音；例句不再列「读音提示：词（词）」
-# 这种把词重复两遍的行，改成整句韩语读音（能整句解析时）。
-# 所有韩语元素带 data-role="zh"：遮中文时韩语一起遮，免得泄题。
+# 新词区两列：左列「平假读音 → 日语单词 → 韩语发音」，右列「中文」。
+# 韩语发音是日语侧的读音提示，跟日语一起遮；中文侧只留释义，遮日语时照样看得见。
+# 原则：同一条信息只出现一次。假名词不再加 ruby，也不再单列一行「假名」；
+# 例句不再列「读音提示：词（词）」这种把词重复两遍的行，改成整句韩语读音（能整句解析时）。
 # ---------------------------------------------------------------------------
 def jp_word(surface, kana):
     """日语单词本体：假名词原样，汉字词…也原样（读音由上方 .kana-line 给出）。"""
@@ -487,12 +591,15 @@ def pattern_ko(g, reader):
     return ko_pron.to_hangul(kana) if kana else ""
 
 
-def ko_read_line(text, label="발음"):
-    """韩语发音行；text 已经是한글。伪造不出来就返回空串。"""
+def ko_read_line(text, label="발음", role="ja"):
+    """韩语发音行；text 已经是한글。伪造不出来就返回空串。
+
+    role 默认 "ja"：韩语发音是日语读音的提示，遮日语时必须一起遮，否则等于泄题。
+    """
     if not text:
         return ""
     lb = '<span class="lb">%s</span>' % label if label else ""
-    return '<div class="ko-read" data-role="zh" lang="ko">%s%s</div>' % (lb, esc(text))
+    return '<div class="ko-read" data-role="%s" lang="ko">%s%s</div>' % (role, lb, esc(text))
 
 
 def ruby_text(ja, mapping):
@@ -519,7 +626,7 @@ def example_html(ex, mapping, ko=""):
     if not ex or not ex.get("ja"):
         return ""
     ja = ex.get("ja", "")
-    ko_html = ('<div class="ex-ko" data-role="zh" lang="ko">%s</div>' % esc(ko)) if ko else ""
+    ko_html = ('<div class="ex-ko" data-role="ja" lang="ko">%s</div>' % esc(ko)) if ko else ""
     return ('<div class="ex">%s'
             '<div class="ex-ja" data-role="ja" lang="ja">%s</div>'
             '<div class="ex-zh" data-role="zh">%s</div>'
@@ -597,13 +704,13 @@ def build_vocab_html(day, vocab, kanji, reader):
         tag = "" if vid in core else '<span class="small"> · 选学</span>'
         out.append(
             '<div class="item">'
-            '<div class="vocab-pair"><div lang="ja">%s<div class="jp" data-role="ja">%s</div></div>'
-            '<div><div class="zh" data-role="zh">%s%s</div>%s</div></div>'
+            '<div class="vocab-pair"><div lang="ja">%s<div class="jp" data-role="ja">%s</div>%s</div>'
+            '<div><div class="zh" data-role="zh">%s%s</div></div></div>'
             '<button class="show-all" type="button" data-show-all aria-label="临时显示三种语言 10 秒" hidden>显示</button>'
             '%s</div>'
             % (kana_line(surface, "／".join(readings)), jp_word(surface, kana),
-               esc(meaning), tag, ko_read_line(ko_pron.pron("／".join(readings))),
-               example_html(ex, mapping, reader.hangul(ex.get("ja", "")))))
+               ko_read_line(ko_pron.pron("／".join(readings))),
+               esc(meaning), tag, example_html(ex, mapping, reader.hangul(ex.get("ja", "")))))
     character_rows = []
     for kid in day["new_kanji_ids"]:
         item = kanji[kid]
@@ -615,7 +722,7 @@ def build_vocab_html(day, vocab, kanji, reader):
         ko_read = kanji_ko_read(item)
         rows = ('<div class="small" data-role="ja">%s</div>' % esc(" · ".join(readings))) if readings else ""
         if ko_read:
-            rows += '<div class="small ko-read" data-role="zh" lang="ko">%s</div>' % esc(ko_read)
+            rows += '<div class="small ko-read" data-role="ja" lang="ko">%s</div>' % esc(ko_read)
         if item.get("ko_hanja"):
             rows += '<div class="small" data-role="zh">韩语字音 %s</div>' % esc(item["ko_hanja"])
         character_rows.append('<li><strong lang="ja">%s</strong> <span data-role="zh">%s</span>%s</li>'
@@ -676,13 +783,6 @@ def build_questions_html(questions, start=1, explanations=None):
     return "".join(rows)
 
 
-def mask_switch(scope):
-    return ('<div class="mask-switch" aria-label="%s遮盖">'
-            '<button type="button" data-mask="all">显示</button>'
-            '<button type="button" data-mask="zh">遮中文</button>'
-            '<button type="button" data-mask="ja">遮日语</button></div>' % scope)
-
-
 def day_page(d, review_html, vocab_html, grammar_html, questions_html, page_meta, listening_html):
     return (('<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">'
             '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
@@ -693,8 +793,8 @@ def day_page(d, review_html, vocab_html, grammar_html, questions_html, page_meta
             '<h1 class="lesson" tabindex="-1">Day <b>%03d</b> · %s</h1>'
             '<section class="card" id="review"><h2>记忆曲线复习</h2>'
             '<a id="dueReviewLink" class="small review-link" href="review.html">到期复习</a>%s</section>'
-            '<section class="card" id="vocab"><h2>今日新词 <span class="count">%d 个</span></h2>%s%s</section>'
-            '<section class="card" id="grammar"><h2>今日语法 <span class="count">%d 条</span></h2>%s%s</section>'
+            '<section class="card" id="vocab"><h2>今日新词 <span class="count">%d 个</span></h2>%s</section>'
+            '<section class="card" id="grammar"><h2>今日语法 <span class="count">%d 条</span></h2>%s</section>'
             '<section class="card" id="questions"><h2>练习 <span class="count">%d 题</span></h2>'
             '<div class="qscore" id="qscore" role="status" tabindex="-1"></div>%s%s'
             '<div class="q-actions"><button class="btn" id="retryWrong" type="button" disabled>错题重练</button>'
@@ -704,8 +804,8 @@ def day_page(d, review_html, vocab_html, grammar_html, questions_html, page_meta
             '</section></main></div>'
             '<script type="application/json" id="lessonMeta">%s</script>' + APP_SCRIPTS + '</body></html>')
             % (d["day"], esc(d["theme"]), d["day"], d["day"], esc(d["theme"]),
-               ('<details><summary>回看往日词句与汉字</summary>%s</details>' % review_html) if d.get("review_knowledge_ids") else "", len(d["new_vocab_ids"]), mask_switch("新词"), vocab_html,
-               len(d["new_grammar_ids"]), mask_switch("语法"), grammar_html,
+               ('<details><summary>回看往日词句与汉字</summary>%s</details>' % review_html) if d.get("review_knowledge_ids") else "", len(d["new_vocab_ids"]), vocab_html,
+               len(d["new_grammar_ids"]), grammar_html,
                page_meta["total"], questions_html, listening_html,
                json.dumps(page_meta, ensure_ascii=False).replace("<", r"\u003c")))
 
@@ -740,14 +840,18 @@ APP_NAV = (
     '<a data-tab="flash" href="/flashcards.html">背单词</a></nav>'
     '<div id="appStatus" class="app-status" role="status"></div>'
     '<details class="account-panel"><summary>多端同步</summary>'
-    '<p id="accountStatus" role="status">正在检查登录状态…</p>'
+    '<p id="accountStatus" role="status">正在检查同步状态…</p>'
+    '<p class="account-hint">同一个账号在手机和电脑上自动同步完成日与续课位置。'
+    '新设备打开一次同步链接就绑定，之后不用再设置。</p>'
+    '<button class="btn" type="button" id="accountCopyLink" hidden>复制同步链接</button>'
+    '<details class="account-manual"><summary>手动登录 / 换账号</summary>'
     '<form id="accountLogin"><label for="loginCode">登录码</label>'
     '<input id="loginCode" name="loginCode" type="password" required minlength="64" maxlength="64" autocomplete="off">'
     '<button class="btn" type="submit">登录</button></form>'
     '<button class="btn" type="button" id="accountCreate">创建同步账号</button>'
     '<textarea id="accountCopy" rows="3" readonly hidden aria-label="新登录码"></textarea>'
     '<button class="btn" type="button" id="accountLogout" hidden>退出登录</button>'
-    '<p>创建后请保存登录码。其他设备用同一个码登录。</p></details>'
+    '</details></details>'
 )
 APP_SCRIPTS = ''.join('<script defer src="/assets/%s.js"></script>' % name for name in
                       ('course_progress', 'review_schedule', 'app', 'flashcards', 'course_sync', 'course_version', 'course_app'))

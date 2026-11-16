@@ -40,18 +40,19 @@ class TestSimplifiedPage(unittest.TestCase):
         self.assertIn("完成</button>", h)
         self.assertNotIn("accessKey", h)
 
-    def test_masking_is_local_to_vocab_and_grammar(self):
+    def test_masking_is_one_floating_control_for_whole_blocks(self):
+        """遮盖只由右下角悬浮按钮控制，作用于整个大区，不做单项开关。"""
         h = page(47)
-        self.assertEqual(h.count('class="mask-switch"'), 2)
+        self.assertNotIn('class="mask-switch"', h)
         vocab = h[h.index('id="vocab"'):h.index('id="grammar"')]
-        grammar = h[h.index('id="grammar"'):h.index('id="questions"')]
-        self.assertIn('data-mask="zh"', vocab)
-        self.assertIn('data-mask="ja"', grammar)
-        self.assertEqual(vocab.count('class="mask-switch"'), 1)
-        self.assertEqual(grammar.count('class="mask-switch"'), 1)
-        # 复习与练习不受遮盖开关影响
-        review = h[h.index('id="review"'):h.index('id="vocab"')]
-        self.assertNotIn("mask-switch", review)
+        self.assertIn('data-role="ja"', vocab)
+        self.assertIn('data-role="zh"', vocab)
+        js = (ROOT / "web/assets/app.js").read_text(encoding="utf-8")
+        for token in ("scope-fab", "SCOPE_NEXT", "activeScope", "mountFab", "fabLabel"):
+            self.assertIn(token, js, "遮盖脚本缺 %s" % token)
+        css = (ROOT / "web/assets/app.css").read_text(encoding="utf-8")
+        self.assertIn(".scope-fab", css)
+        self.assertNotIn(".mask-switch", css)
 
     def test_small_japanese_above_chinese_and_speakable_examples(self):
         h = page(47)

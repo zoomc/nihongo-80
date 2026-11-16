@@ -113,7 +113,8 @@ class TestWeb(unittest.TestCase):
         for sec in ("review", "vocab", "grammar", "questions"):
             self.assertIn('id="%s"' % sec, h)
         self.assertIn('id="finish"', h)
-        self.assertEqual(h.count('class="mask-switch"'), 2)
+        self.assertNotIn('class="mask-switch"', h)
+        self.assertIn("scope-fab", (ROOT / "web/assets/app.js").read_text(encoding="utf-8"))
         self.assertIn('data-role="ja"', h)
         self.assertIn('data-role="zh"', h)
         for junk in ("modeBtn", "背诵模式", "网页 42 分钟", 'id="sentences"', "综合小测",

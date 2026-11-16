@@ -1,17 +1,37 @@
 (function () {
   'use strict';
   const ownerKey = 'nh80.sync.owner';
-  let owner;
-  try { owner = localStorage.getItem(ownerKey); } catch {}
+  const codeKey = 'nh80.sync.code';
+  const read = key => { try { return localStorage.getItem(key); } catch { return null; } };
+  const write = (key, value) => { try { localStorage.setItem(key, value); } catch {} };
+  const drop = key => { try { localStorage.removeItem(key); } catch {} };
+
+  // 同步链接把凭证放在 #s= 片段里：fragment 不会发送给服务器，也不进 Referer。
+  // 读到后立刻从地址栏抹掉，再存本机；之后这台设备自动登录，无需再输入。
+  function takeLinkCode() {
+    const raw = location.hash.replace(/^#/, '');
+    if (!raw) return '';
+    const value = (new URLSearchParams(raw).get('s') || '').trim().toLowerCase();
+    if (!/^[0-9a-f]{64}$/.test(value)) return '';
+    history.replaceState(null, '', location.pathname + location.search);
+    return value;
+  }
+
+  let owner = read(ownerKey);
+  let code = read(codeKey) || '';
   let session = false;
   let running;
   let changed = false;
   let switching = false;
+  let authFailedAt = 0;
+  const linkCode = takeLinkCode();
+
   const status = document.getElementById('accountStatus');
   const form = document.getElementById('accountLogin');
   const logout = document.getElementById('accountLogout');
   const create = document.getElementById('accountCreate');
   const copy = document.getElementById('accountCopy');
+  const copyLink = document.getElementById('accountCopyLink');
 
   async function call(action, body) {
     const options = body === undefined ? {} : {
@@ -22,42 +42,71 @@
     return response.json();
   }
 
-  function remember(id) {
-    if (owner && owner !== id) throw Error('different_account');
-    localStorage.setItem(ownerKey, id);
-    owner = id;
+  function display(message) {
+    if (status) status.textContent = message;
+    if (logout) logout.hidden = !session;
+    if (create) create.hidden = session;
+    if (form) form.hidden = session;
+    if (copyLink) copyLink.hidden = !(session && code);
   }
 
-  function display(message) {
-    status.textContent = message;
-    logout.hidden = !session;
-    create.hidden = session || !!owner;
-    form.hidden = session;
+  // 用登录码换会话。401 = 账号还没建过，就顺手建一个；409 = 并发/已存在，重试登录。
+  // allowSwitch 只在用户显式打开同步链接时为真，手动输入仍禁止悄悄换绑。
+  async function authenticate(value, allowSwitch) {
+    let account;
+    try {
+      account = (await call('login', {code: value})).account;
+    } catch (error) {
+      if (error.message !== '401') throw error;
+      try {
+        account = (await call('login', {code: value, create: true})).account;
+      } catch (again) {
+        if (again.message !== '409') throw again;
+        account = (await call('login', {code: value})).account;
+      }
+    }
+    if (owner && owner !== account && !allowSwitch) throw Error('different_account');
+    write(ownerKey, account);
+    write(codeKey, value);
+    owner = account;
+    code = value;
+    session = true;
+    authFailedAt = 0;
+    return account;
   }
 
   async function sync() {
     if (switching || running) return running;
     running = (async () => {
-      try {
-        const remote = await call('state');
-        if (switching) return;
-        if (!owner) remember(remote.account);
-        if (owner !== remote.account) throw Error('different_account');
-        session = true;
-        changed = false;
-        const state = NHCourse.snapshot();
-        const remoteDays = new Set(remote.days);
-        const upload = state.opened > remote.opened || state.days.some(day => !remoteDays.has(day));
-        const merged = upload ? await call('state', {...state, account:owner}) : remote;
-        if (merged.account !== owner) throw Error('different_account');
-        NHCourse.applyCloud(merged);
-        display('已登录 · 进度已同步');
-      } catch (error) {
-        if (error.message === '401' || error.message === 'different_account') {
-          session = false;
-          display('未登录 · 进度保存在此设备');
-        } else {
-          display('暂时无法同步，进度已保存在此设备');
+      for (let attempt = 0; attempt < 2; attempt++) {
+        try {
+          const remote = await call('state');
+          if (switching) return;
+          if (!owner) { write(ownerKey, remote.account); owner = remote.account; }
+          if (owner !== remote.account) throw Error('different_account');
+          session = true;
+          changed = false;
+          const state = NHCourse.snapshot();
+          const remoteDays = new Set(remote.days);
+          const upload = state.opened > remote.opened || state.days.some(day => !remoteDays.has(day));
+          const merged = upload ? await call('state', {...state, account:owner}) : remote;
+          if (merged.account !== owner) throw Error('different_account');
+          NHCourse.applyCloud(merged);
+          display('已绑定 · 进度已同步');
+          return;
+        } catch (error) {
+          // Cookie 过期自动恢复：本机存着凭证就重新换一次会话。
+          if (attempt === 0 && error.message === '401' && code && Date.now() - authFailedAt > 300000) {
+            try { await authenticate(code, false); continue; }
+            catch (retry) { error = retry; authFailedAt = Date.now(); }
+          }
+          if (error.message === '401' || error.message === 'different_account') {
+            session = false;
+            display('未绑定 · 进度只保存在此设备');
+          } else {
+            display('暂时无法同步，进度已保存在此设备');
+          }
+          return;
         }
       }
     })().finally(() => {
@@ -67,56 +116,87 @@
     return running;
   }
 
-  async function login(code, isNew) {
+  async function login(value, isNew) {
     if (switching) return;
     switching = true;
-    form.querySelector('button').disabled = create.disabled = true;
+    try { await running; } catch {}
+    form && (form.querySelector('button').disabled = create.disabled = true);
     try {
-      await running;
-      const id = [...new Uint8Array(await crypto.subtle.digest('SHA-256',
-        new TextEncoder().encode('nh80-account:' + code)))].map(byte => byte.toString(16).padStart(2, '0')).join('');
-      if (owner && owner !== id) throw Error('different_account');
-      const result = await call('login', {code, create:isNew});
-      remember(result.account);
-      session = true;
+      const account = await authenticate(value, false);
       if (isNew) {
-        copy.hidden = false;
-        copy.value = code;
-        copy.select();
+        if (copy) { copy.hidden = false; copy.value = value; copy.select(); }
       }
-      form.reset();
+      if (form) form.reset();
+      display('已绑定 · 正在同步…');
     } catch (error) {
       const messages = {'401':'登录码无效。', '429':'创建次数已达上限，请明天再试。',
-        different_account:'此浏览器已关联另一个同步账号。请在独立浏览器或浏览器配置中使用其他账号。'};
+        different_account:'此浏览器已绑定另一个同步账号。要换账号请向新账号的同步链接。'};
       display(messages[error.message] || '暂时无法登录，请重试。');
     } finally {
       switching = false;
-      form.querySelector('button').disabled = create.disabled = false;
+      if (form) form.querySelector('button').disabled = create.disabled = false;
     }
     if (session) sync();
   }
 
-  form.addEventListener('submit', event => {
+  async function start() {
+    if (linkCode) {
+      switching = true;
+      try { await running; } catch {}
+      try {
+        await authenticate(linkCode, true);
+        display('已绑定 · 正在同步…');
+      } catch (error) {
+        authFailedAt = Date.now();
+        display(error.message === '429' ? '绑定次数已达上限，请明天再用这条链接。' : '绑定失败，请联网后重试。');
+      } finally {
+        switching = false;
+      }
+      if (session) return sync();
+      return;
+    }
+    if (code && !session) {
+      try { await authenticate(code, false); }
+      catch { authFailedAt = Date.now(); }
+    }
+    return sync();
+  }
+
+  if (form) form.addEventListener('submit', event => {
     event.preventDefault();
     login(form.elements.loginCode.value.trim().toLowerCase(), false);
   });
-  create.onclick = () => login([...crypto.getRandomValues(new Uint8Array(32))]
+  if (create) create.onclick = () => login([...crypto.getRandomValues(new Uint8Array(32))]
     .map(byte => byte.toString(16).padStart(2, '0')).join(''), true);
-  logout.onclick = async () => {
+  if (copyLink) copyLink.onclick = async () => {
+    if (!code) return;
+    const url = location.origin + '/#s=' + code;
+    try {
+      await navigator.clipboard.writeText(url);
+      display('已复制同步链接 · 在另一台设备打开一次即可');
+    } catch {
+      if (copy) { copy.hidden = false; copy.value = url; copy.select(); }
+      display('请手动复制下面这段链接');
+    }
+  };
+  if (logout) logout.onclick = async () => {
     if (switching) return;
     switching = true;
     try {
       await running;
       await call('logout', {});
       session = false;
-      copy.value = '';
-      copy.hidden = true;
-      display('已退出 · 进度保存在此设备');
+      owner = '';
+      code = '';
+      drop(ownerKey);
+      drop(codeKey);
+      if (copy) { copy.value = ''; copy.hidden = true; }
+      display('已退出 · 进度只保存在此设备');
     } catch { display('退出失败，请联网后重试。'); }
     finally { switching = false; }
   };
 
-  window.NHSync = {start:sync};
+  window.NHSync = {start};
   window.addEventListener('nh80-course-change', () => {
     if (!session) return;
     changed = true;

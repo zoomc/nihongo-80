@@ -765,8 +765,21 @@ async function handleCourseAccount(request: Request, env: Env, url: URL): Promis
     }
     const row = await db.prepare("SELECT days,last_day,opened_at FROM course_accounts WHERE id=?")
       .bind(account).first<{days: string; last_day: number; opened_at: number}>();
-    return row ? jsonResponse({ ok: true, account, days: JSON.parse(row.days), last: row.last_day, opened: row.opened_at }, 200, null)
-      : fail("not_logged_in", 401);
+    if (!row) return fail("not_logged_in", 401);
+    const days = new Set<number>();
+    for (const day of JSON.parse(row.days) as number[]) {
+      if (Number.isInteger(day) && day >= 1 && day <= 150) days.add(day);
+    }
+    // 站点是单人部署：网页「完成」快照（study_progress_120）没有账号维度，
+    // 把它并进完成日，换设备后才看得到绑定之前点过的「完成」。只读，不回写进度判定。
+    try {
+      const reported = await db.prepare("SELECT day FROM study_progress_120").all<{day: number}>();
+      for (const item of reported.results ?? []) {
+        if (Number.isInteger(item.day) && item.day >= 1 && item.day <= 150) days.add(item.day);
+      }
+    } catch { /* 旧库没有该表时忽略 */ }
+    return jsonResponse({ ok: true, account, days: [...days].sort((a, b) => a - b),
+      last: row.last_day, opened: row.opened_at }, 200, null);
   } catch {
     return fail("sync_unavailable", 503);
   }

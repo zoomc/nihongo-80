@@ -24,10 +24,101 @@ function applyScope(sec,mode){
   if(hide){el.setAttribute('tabindex','0');el.setAttribute('aria-label','内容已遮盖，点击临时查看')}
   else{el.removeAttribute('tabindex');el.removeAttribute('aria-label')}
  });
- $$('.mask-switch button',sec).forEach(function(b){
-  b.setAttribute('aria-pressed',String(b.getAttribute('data-mask')===mode))});
  $$('[data-show-all]',sec).forEach(function(b){b.hidden=(mode==='all')});
  try{localStorage.setItem(STORE+'mask.'+sec.id,mode)}catch(e){}
+ fabLabel();
+}
+// 右下角悬浮按钮：整块遮盖，不做单项。三态循环，作用于视口中线所在的大区。
+var SCOPES=['review','vocab','grammar'];
+var SCOPE_NAME={review:'复习',vocab:'新词',grammar:'语法'};
+var MODE_NAME={all:'显示',ja:'遮日语',zh:'遮中文'};
+var SCOPE_NEXT={all:'ja',ja:'zh',zh:'all'};
+var FAB=null, FAB_TICK=0;
+function scopeMode(id){
+ var saved='all';try{saved=localStorage.getItem(STORE+'mask.'+id)||'all'}catch(e){}
+ return MODE_NAME[saved]?saved:'all';
+}
+function activeScope(){
+ var mid=(window.innerHeight||0)/2,best=null,gap=Infinity;
+ // 滚到练习区时不显示，避免遮住看不见的区块。
+ var q=document.getElementById('questions');
+ if(q){var qr=q.getBoundingClientRect();if(qr.height&&qr.top<=mid&&qr.bottom>=mid)return null}
+ SCOPES.forEach(function(id){
+  var sec=document.getElementById(id);if(!sec)return;
+  var r=sec.getBoundingClientRect();if(!r.height)return;
+  var d=(r.top<=mid&&r.bottom>=mid)?0:Math.min(Math.abs(r.top-mid),Math.abs(r.bottom-mid));
+  if(d<gap){gap=d;best=id}
+ });
+ return best;
+}
+function fabLabel(){
+ if(!FAB)return;
+ var id=activeScope();
+ if(!id){FAB.hidden=true;return}
+ var mode=scopeMode(id);
+ FAB.hidden=false;
+ FAB.setAttribute('data-mode',mode);
+ FAB.querySelector('.fab-scope').textContent=SCOPE_NAME[id];
+ FAB.querySelector('.fab-mode').textContent=MODE_NAME[mode];
+ FAB.setAttribute('aria-label',SCOPE_NAME[id]+'当前'+MODE_NAME[mode]+'，按一下切换遮盖');
+}
+function cycleScope(){
+ var id=activeScope();if(!id)return;
+ applyScope(document.getElementById(id),SCOPE_NEXT[scopeMode(id)]||'all');
+}
+function mountFab(){
+ FAB=document.getElementById('scopeFab');
+ if(FAB){fabLabel();return}
+ var fab=document.createElement('button');
+ fab.type='button';fab.id='scopeFab';fab.className='scope-fab';
+ fab.innerHTML='<span class="fab-scope"></span><span class="fab-mode"></span>';
+ document.body.appendChild(fab);
+ var drag=null;
+ function place(left,top){
+  var w=fab.offsetWidth||120,h=fab.offsetHeight||46;
+  fab.style.left=Math.max(8,Math.min(left,(window.innerWidth||360)-w-8))+'px';
+  fab.style.top=Math.max(8,Math.min(top,(window.innerHeight||640)-h-8))+'px';
+  fab.style.right='auto';fab.style.bottom='auto';
+ }
+ fab.addEventListener('pointerdown',function(e){
+  if(e.pointerType==='mouse'&&e.button!==0)return;
+  var r=fab.getBoundingClientRect();
+  drag={x:e.clientX,y:e.clientY,left:r.left,top:r.top,moved:false};
+  fab.classList.add('dragging');
+  try{fab.setPointerCapture(e.pointerId)}catch(err){}
+ });
+ fab.addEventListener('pointermove',function(e){
+  if(!drag)return;
+  var dx=e.clientX-drag.x,dy=e.clientY-drag.y;
+  if(!drag.moved&&Math.abs(dx)+Math.abs(dy)<8)return;
+  drag.moved=true;place(drag.left+dx,drag.top+dy);
+ });
+ fab.addEventListener('pointerup',function(){
+  if(!drag)return;
+  var moved=drag.moved;drag=null;fab.classList.remove('dragging');
+  if(moved){
+   var r=fab.getBoundingClientRect();
+   try{localStorage.setItem(STORE+'fab',JSON.stringify({left:r.left,top:r.top}))}catch(e){}
+  }else{cycleScope()}
+ });
+ fab.addEventListener('pointercancel',function(){drag=null;fab.classList.remove('dragging')});
+ fab.addEventListener('keydown',function(e){
+  if(e.key==='Enter'||e.key===' '){e.preventDefault();cycleScope()}
+ });
+ try{
+  var pos=JSON.parse(localStorage.getItem(STORE+'fab')||'null');
+  if(pos&&typeof pos.left==='number'&&typeof pos.top==='number')place(pos.left,pos.top);
+ }catch(e){}
+ FAB=fab;
+ if(!window.__nhFabWatch){
+  window.__nhFabWatch=1;
+  window.addEventListener('scroll',function(){
+   if(FAB_TICK)return;FAB_TICK=1;
+   requestAnimationFrame(function(){FAB_TICK=0;fabLabel()});
+  },{passive:true});
+  window.addEventListener('resize',function(){fabLabel()});
+ }
+ fabLabel();
 }
 var PEEK=null;
 function showAll(btn){
@@ -148,8 +239,6 @@ function speak(text,btn){
  window.speechSynthesis.cancel();window.speechSynthesis.speak(u);
 }
 on(root,'click',function(e){
- var mb=e.target.closest('.mask-switch button');
- if(mb){applyScope(mb.closest('section'),mb.getAttribute('data-mask'));return}
  var sb=e.target.closest('[data-show-all]');
  if(sb){showAll(sb);return}
  var m=e.target.closest('.mask');if(m){reveal(m);return}
@@ -164,10 +253,8 @@ on(root,'keydown',function(e){
  if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('mask')){
   e.preventDefault();reveal(e.target)}
 });
-['vocab','grammar'].forEach(function(id){var s=$('#'+id);if(!s)return;
- var saved='all';try{saved=localStorage.getItem(STORE+'mask.'+id)||'all'}catch(e){}
- if(['all','zh','ja'].indexOf(saved)<0)saved='all';
- applyScope(s,saved)});
+SCOPES.forEach(function(id){var s=$('#'+id);if(s)applyScope(s,scopeMode(id))});
+mountFab();
 restore();
 function updateReviewLink(){
  var link=$('#dueReviewLink');
@@ -184,15 +271,25 @@ function finishLinks(){
  var status=$('#finishStatus');
  if(!status)return;
  var next=window.NHCourse?.next();
- status.textContent='学习情况已保存。';
+ status.textContent=QUESTIONS.length&&QUESTIONS.length===Object.keys(RESULTS).length
+  ?'学习情况已保存。':'这一课已在其他设备完成。';
  if(next){
   var label='Day '+String(next).padStart(3,'0'),link=document.createElement('a');
   link.href='/day-'+label.slice(4)+'.html';link.textContent='开始下一课 · '+label;
   status.append(' ',link);
  }
 }
-if(f&&window.NHCourse?.done(DAY)&&QUESTIONS.length===Object.keys(RESULTS).length){
+if(f&&window.NHCourse?.done(DAY)){
  f.disabled=true;f.textContent='已完成';finishLinks();
+}
+// 云端同步可能晚于本页渲染：绑定/同步完成后把「已完成」补上，换设备不用重做一遍。
+if(f&&!f.dataset.cloudWatch){
+ f.dataset.cloudWatch='1';
+ window.addEventListener('nh80-cloud-change',function(){
+  if(window.NHCourse?.done(DAY)){
+   f.disabled=true;f.textContent='已完成';finishLinks();
+  }
+ });
 }
 if(f)f.addEventListener('click',function(){
  var qs=Object.values(RESULTS);

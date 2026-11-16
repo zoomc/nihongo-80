@@ -26,3 +26,6 @@ main>h1:focus{outline:none}
 .account-panel form{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0}
 .account-panel input,.account-panel textarea{width:min(100%,350px);min-height:42px;padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);font-size:16px}
 .account-panel textarea{display:block;margin:10px 0;resize:vertical}
+.account-hint{color:var(--muted);margin:6px 0 10px;line-height:1.6}
+.account-manual{margin-top:10px}
+.account-manual summary{min-height:34px;font-size:13px;color:var(--muted)}

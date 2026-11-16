@@ -222,12 +222,13 @@ class TestSentenceReading(unittest.TestCase):
 
 class TestPageLayout(unittest.TestCase):
     def test_vocab_has_japanese_and_translation_columns(self):
-        """新词左列日语，右列中文与韩语读音。"""
+        """新词左列「平假读音 → 单词 → 韩语发音」，右列只有中文。"""
         h = page(47)
         self.assertRegex(
             h, r'<div class="vocab-pair"><div lang="ja"><div class="kana-line"[^>]*>[^<]+</div>'
-               r'<div class="jp"[^>]*>[^<]+</div></div><div><div class="zh"[^>]*>.*?</div>'
-               r'<div class="ko-read"[^>]*>')
+               r'<div class="jp"[^>]*>[^<]+</div><div class="ko-read"[^>]*>')
+        self.assertRegex(
+            h, r'</div><div><div class="zh"[^>]*>[^<]+</div></div></div>')
         self.assertNotIn("读音提示", h)
         self.assertNotIn("ex-kana", h)
 
@@ -244,14 +245,34 @@ class TestPageLayout(unittest.TestCase):
             self.assertNotIn(" · 选学", page(day))
         self.assertIn("选学词库", (ROOT / "web/optional-vocab.html").read_text())
 
-    def test_korean_elements_are_masked_with_chinese(self):
+    def test_korean_readings_are_masked_with_japanese(self):
+        """韩语发音是日语侧的读音提示：遮日语时必须一起遮，否则等于泄题。"""
         for day in (1, 47, 99, 100):
             h = page(day)
-            for cls in ('class="ko-read"', 'class="ex-ko"', 'class="ko"', 'class="grammar-transfer ko-box"',
-                        'class="small ko-read"'):
+            seen = 0
+            for cls in ('class="ko-read"', 'class="ex-ko"', 'class="small ko-read"'):
                 for m in re.finditer(re.escape(cls), h):
+                    seen += 1
                     tail = h[m.start():m.start() + 120]
-                    self.assertIn('data-role="zh"', tail, "Day %d %s 未随中文遮蔽" % (day, cls))
+                    self.assertIn('data-role="ja"', tail, "Day %d %s 未随日语遮蔽" % (day, cls))
+            self.assertGreater(seen, 0, "Day %d 完全没有韩语读音行" % day)
+
+    def test_korean_grammar_equivalence_stays_with_chinese(self):
+        """语法区的「韩语对应」是中文侧解释，遮日语时仍保留。"""
+        h = page(1)
+        found = 0
+        for m in re.finditer(re.escape('class="grammar-transfer ko-box"'), h):
+            found += 1
+            tail = h[m.start():m.start() + 120]
+            self.assertIn('data-role="zh"', tail)
+        self.assertGreater(found, 0, "Day 1 缺少韩语对应框")
+
+    def test_korean_reading_sits_under_the_word(self):
+        """韩语发音放在日语单词下方（左列），不再挤在中文翻译那一列。"""
+        for day in (1, 47):
+            h = page(day)
+            vocab = h[h.index('id="vocab"'):h.index('id="grammar"')]
+            self.assertRegex(vocab, r'<div class="jp" data-role="ja">[^<]*</div><div class="ko-read"')
 
     def test_daily_examples_have_korean_reading_without_audio_controls(self):
         h = page(47)

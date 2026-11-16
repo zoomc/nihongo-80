@@ -84,7 +84,7 @@ border:1px solid var(--line);border-radius:999px;background:var(--surface);color
 .jp{font-size:23px;font-weight:700;overflow-wrap:anywhere;line-height:1.4}
 .vocab-pair{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);
 column-gap:clamp(16px,5vw,48px);align-items:start;text-align:left}
-.vocab-pair .zh{margin-top:0}
+.vocab-pair .zh{margin-top:0;font-size:18px;font-weight:600}
 .jp.small-jp{font-size:15px;font-weight:600}
 .kana-line{font-size:12px;color:var(--muted);letter-spacing:.04em;margin-bottom:1px}
 .ko-read{font-size:14px;color:var(--accent);margin-top:2px;letter-spacing:.02em;overflow-wrap:anywhere}
@@ -105,7 +105,8 @@ border-radius:999px;background:var(--surface);color:var(--muted);cursor:pointer}
 .grammar-transfer{margin:0 0 10px;padding:8px 12px;border-left:3px solid var(--accent);background:var(--bg);overflow-wrap:anywhere}
 .grammar-transfer strong{display:block;font-size:1.13rem;line-height:1.5}
 .grammar-transfer .small{margin-top:3px}
-.grammar-trap{margin:12px 0 0;color:var(--bad);font-size:14px;overflow-wrap:anywhere}
+.grammar-trap{margin:12px 0 0;color:#496044;font-size:14px;overflow-wrap:anywhere}
+@media (prefers-color-scheme:dark){.grammar-trap{color:#b2c09a}}
 .conn{font-size:13px;color:var(--muted);overflow-wrap:anywhere}
 .ko-box{background:var(--bg);border:1px solid var(--line);padding:8px 10px;margin:8px 0;font-size:13px}
 .gcard{border-top:1px dashed var(--line);padding:14px 0}

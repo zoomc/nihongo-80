@@ -22,7 +22,7 @@ python3 scripts/today.py
 
 ## 目的与产品决策
 
-主课按记忆曲线复习、新词、语法、单选练习推进。会话负责答疑和错题讲解。Day 001–090 完成 N3 基础，Day 091–150 冲刺 N2。
+主课按语法学习与语法练习推进。会话负责答疑和错题讲解。Day 001–090 完成 N3 基础，Day 091–150 冲刺 N2。
 
 ## 当前交付（带证据）
 
@@ -36,6 +36,7 @@ python3 scripts/today.py
 - **到期复习（v14）**：`review_schedule.js` 按当前浏览器的每日首次作答建卡，`review.html` 单选结果更新间隔。跨设备的网页完成快照继续独立；`today.py` 从 SQLite 读取实时 FSRS 到期卡和待补先修。
 - **多端自动绑定（v21）**：新设备打开一次主动复制的同步链接，离线绑定会在联网后重试。日课和进度文档使用普通地址。完成日与续课位置只在同账号内合并；历史自报完成日可通过 `python3 scripts/sync_link.py --import-legacy` 合并到本机同步账号。
 - **整块遮盖（v20）**：右下角可拖拽悬浮按钮，三态循环「显示 → 遮日语 → 遮中文」，按视口中线所在的大区（复习 / 新词 / 语法）整块动作，不做单卡开关。新词卡韩语发音移到单词下方，随日语一起遮。
+- **只做语法（v21）**：日课页只剩「语法」和「语法练习」两块；新词、汉字、词题、背单词、选学词库与词卡复习全部移除，完成快照只带语法题。完整旧版备份在 `backup/full-course-20261116` 分支。
 - **完成 → 云端**：`POST /api/progress` 写 D1 `study_progress_120`（`day` 主键幂等覆盖，最多 150 行），页面无口令；`GET /api/progress?day=N|latest=1` 需 `X-NH80-Key`。
 - **agent 侧**：`skills/nh80-progress/SKILL.md`（仓库内 + 项目级 + 用户级三份）、`scripts/progress_read.py`、`AGENTS.md` 已追加调用说明。
 - **安全清理**：Codex v9 误入库的明文答案表 `deploy/worker/src/generated-key.json` 已移出版本库并 gitignore；Worker 只用公开的哈希分片 `web/data/grade/day-*.json`，本地构建仍会生成该表供测试。

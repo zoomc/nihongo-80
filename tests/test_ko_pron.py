@@ -221,30 +221,23 @@ class TestSentenceReading(unittest.TestCase):
 
 
 class TestPageLayout(unittest.TestCase):
-    def test_vocab_has_japanese_and_translation_columns(self):
-        """新词左列「平假读音（韩语）→ 单词」，右列只有中文。"""
+    def test_vocab_section_is_gone(self):
+        """日课页不再有独立的新词区。"""
         h = page(47)
-        self.assertRegex(
-            h, r'<div class="vocab-pair"><div lang="ja"><div class="kana-line"[^>]*>[^<]+'
-               r'<span class="ko-inline"[^>]*>（[^）]+）</span></div><div class="word-line">'
-               r'<div class="jp"[^>]*>[^<]+</div>')
-        self.assertRegex(
-            h, r'</div><div><div class="zh"[^>]*>[^<]+</div></div></div>')
-        self.assertNotIn("读音提示", h)
-        self.assertNotIn("ex-kana", h)
+        self.assertNotIn('id="vocab"', h)
+        self.assertNotIn("今日新词", h)
+        self.assertNotIn("vocab-pair", h)
 
-    def test_word_without_kanji_is_printed_once(self):
-        """假名词不再重复：词形 == 假名时不出现 kana-line，韩语跟在词形后面。"""
+    def test_word_cards_are_gone(self):
         h = page(1)
-        item = h[h.index('<div class="item">'):h.index('id="grammar"')]
-        self.assertRegex(item, r'<div class="jp" data-role="ja">あなた<span class="ko-inline"')
-        self.assertNotIn("<ruby>あなた", item)
-        self.assertNotIn('<div class="kana-line" data-role="ja">あなた</div>', item)
+        self.assertNotIn('<div class="item">', h)
+        self.assertNotIn("あなた", h)
 
-    def test_optional_vocabulary_has_separate_page(self):
+    def test_vocabulary_pages_are_gone(self):
         for day in (1, 47, 99, 100):
-            self.assertNotIn(" · 选学", page(day))
-        self.assertIn("选学词库", (ROOT / "web/optional-vocab.html").read_text())
+            self.assertNotIn("选学", page(day))
+        self.assertFalse((ROOT / "web/optional-vocab.html").exists())
+        self.assertFalse((ROOT / "web/flashcards.html").exists())
 
     def test_korean_readings_are_masked_with_japanese(self):
         """韩语发音是日语侧的读音提示：遮日语时必须一起遮，否则等于泄题。"""
@@ -268,17 +261,16 @@ class TestPageLayout(unittest.TestCase):
             self.assertIn('data-role="zh"', tail)
         self.assertGreater(found, 0, "Day 1 缺少韩语对应框")
 
-    def test_korean_reading_sits_beside_the_kana(self):
-        """韩语发音内嵌在假名旁边（あさ（아사）），不单独占一行。"""
+    def test_grammar_korean_reading_stays_on_日语_side(self):
         for day in (1, 47):
             h = page(day)
-            vocab = h[h.index('id="vocab"'):h.index('id="grammar"')]
-            self.assertRegex(vocab, r'<div class="kana-line"[^>]*>[^<]+<span class="ko-inline"')
-            self.assertNotIn('<div class="ko-read"', vocab, "词卡不该再有独立韩语行")
+            grammar = h[h.index('id="grammar"'):h.index('id="questions"')]
+            self.assertIn('class="ko-read" data-role="ja"', grammar)
+            self.assertNotIn('class="ko-read" data-role="zh"', grammar)
 
     def test_daily_examples_have_korean_reading_and_speak_button(self):
         h = page(47)
-        self.assertGreater(h.count('class="ex-ko"'), 10)
+        self.assertGreater(h.count('class="ex-ko"'), 3)
         self.assertIn('data-speak=', h, "例句缺设备朗读按钮")
         self.assertNotIn('<audio', h, "不应打包音频文件")
 
@@ -293,13 +285,9 @@ class TestPageLayout(unittest.TestCase):
 
     def test_data_export_carries_korean_reading(self):
         d = data(1)
-        self.assertTrue(all(v.get("ko_pron") for v in d["vocab"]), "词卡缺 ko_pron")
-        self.assertEqual(d["vocab"][0]["ko_pron"], "와타시")
-        self.assertTrue(d["vocab"][0]["ex"]["ko_pron"].startswith("와타시"))
         self.assertTrue(all(g.get("ko_pron") for g in d["grammar"]), "语法卡缺 ko_pron")
-        hangul = {v["surface"]: v["ko_pron"] for v in d["vocab"]}
-        self.assertEqual(hangul["こんにちは"], "콘니치와")
-        self.assertEqual(hangul["こんばんは"], "콤반와")
+        self.assertNotIn("vocab", d, "导出不该再带词卡")
+        self.assertNotIn("sentences", d)
 
     def test_no_japanese_punctuation_in_korean_lines(self):
         for day in (1, 47, 100):
@@ -312,10 +300,7 @@ class TestShowAll(unittest.TestCase):
     def test_every_item_has_one_show_all_button(self):
         for day in (1, 47, 100):
             h = page(day)
-            vocab = h[h.index('id="vocab"'):h.index('id="grammar"')]
             grammar = h[h.index('id="grammar"'):h.index('id="questions"')]
-            self.assertEqual(vocab.count("data-show-all"), vocab.count('<div class="item">'),
-                             "Day %d 新词卡按钮数量不对" % day)
             self.assertEqual(grammar.count("data-show-all"), grammar.count('<div class="gcard">'),
                              "Day %d 语法卡按钮数量不对" % day)
 

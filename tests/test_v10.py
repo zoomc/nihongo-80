@@ -31,10 +31,10 @@ class TestSimplifiedPage(unittest.TestCase):
             for word in junk:
                 self.assertNotIn(word, h, "Day %d 仍含 %s" % (day, word))
 
-    def test_only_four_blocks_and_one_finish_button(self):
+    def test_only_two_blocks_and_one_finish_button(self):
         h = page(47)
         self.assertEqual(re.findall(r'<section class="card" id="([^"]+)"', h),
-                         ["review", "vocab", "grammar", "questions"])
+                         ["grammar", "questions"])
         self.assertEqual(h.count('id="finish"'), 1)
         self.assertEqual(h.count('<button class="btn primary" id="finish"'), 1)
         self.assertIn("完成</button>", h)
@@ -44,9 +44,9 @@ class TestSimplifiedPage(unittest.TestCase):
         """遮盖只由右下角悬浮按钮控制，作用于整个大区，不做单项开关。"""
         h = page(47)
         self.assertNotIn('class="mask-switch"', h)
-        vocab = h[h.index('id="vocab"'):h.index('id="grammar"')]
-        self.assertIn('data-role="ja"', vocab)
-        self.assertIn('data-role="zh"', vocab)
+        grammar = h[h.index('id="grammar"'):h.index('id="questions"')]
+        self.assertIn('data-role="ja"', grammar)
+        self.assertIn('data-role="zh"', grammar)
         js = (ROOT / "web/assets/app.js").read_text(encoding="utf-8")
         for token in ("scope-fab", "SCOPE_NEXT", "activeScope", "mountFab", "fabLabel"):
             self.assertIn(token, js, "遮盖脚本缺 %s" % token)
@@ -56,21 +56,19 @@ class TestSimplifiedPage(unittest.TestCase):
 
     def test_small_japanese_above_chinese_and_speakable_examples(self):
         h = page(47)
-        self.assertGreater(h.count('class="kana-line"'), 5, "汉字词缺平假读音行")
-        self.assertGreater(h.count("<ruby>"), 5, "例句里的汉字词缺 ruby 假名")
-        self.assertIn("data-speak=", h, "单词和例句要有设备朗读按钮")
-        self.assertRegex(h, r'class="kana-line"[^>]*>.*?</div><div class="word-line"><div class="jp"')
+        self.assertGreater(h.count('class="ex-ja"'), 3, "语法例句不足")
+        self.assertIn("data-speak=", h, "语法例句要有设备朗读按钮")
 
 
 class TestMergedQuestions(unittest.TestCase):
-    def test_all_days_cover_every_new_word_and_grammar(self):
+    def test_all_days_cover_every_new_grammar(self):
         cur = json.loads((ROOT / "curriculum/curriculum.json").read_text(encoding="utf-8"))
         for d in cur["days"]:
             qs = data(d["day"])["questions"]
             covered = {k for q in qs for k in (q.get("knowledge_ids") or [])}
-            need = set(d["new_vocab_ids"]) | set(d["new_grammar_ids"])
+            need = set(d["new_grammar_ids"])
             self.assertFalse(need - covered, "Day %d 未覆盖：%s" % (d["day"], sorted(need - covered)[:5]))
-            self.assertLessEqual(len(qs), 65)
+            self.assertLessEqual(len(qs), 15)
             self.assertEqual(len({q["qid"] for q in qs}), len(qs))
             for q in qs:
                 self.assertNotIn("answer", q)
@@ -83,7 +81,7 @@ class TestMergedQuestions(unittest.TestCase):
         for day in (1, 47, 100):
             c = Counter(k for q in data(day)["questions"] for k in (q.get("knowledge_ids") or []))
             d = data(day)
-            expected = {**{v["id"]: 2 for v in d["vocab"]}, **{g["id"]: 3 for g in d["grammar"]}}
+            expected = {g["id"]: 3 for g in d["grammar"]}
             self.assertEqual(c, expected, "Day %d 每个考点题数" % day)
 
     def test_questions_are_one_flat_block_in_html(self):
@@ -92,7 +90,7 @@ class TestMergedQuestions(unittest.TestCase):
         self.assertNotIn("data-view-panel", h)
         self.assertNotIn("上一题", h)
         self.assertNotIn("下一题", h)
-        self.assertGreaterEqual(h.count('class="q"'), 30)
+        self.assertGreaterEqual(h.count('class="q"'), 6)
         self.assertEqual(h.count('class="q"'), len(data(47)["questions"]))
         self.assertNotIn('"answer"', h, "页面里不能出现明文答案")
 
@@ -140,7 +138,7 @@ class TestProgressChain(unittest.TestCase):
 
     def test_service_worker_bumped(self):
         sw = (ROOT / "web/sw.js").read_text(encoding="utf-8")
-        self.assertRegex(sw, r"nh80-v19-[0-9a-f]{12}")
+        self.assertRegex(sw, r"nh80-v21-[0-9a-f]{12}")
         self.assertNotIn("nh80-v5.1-", sw)
         self.assertIn("/api/", sw)
 

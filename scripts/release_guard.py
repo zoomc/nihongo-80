@@ -51,12 +51,11 @@ def check():
         d = json.loads(p.read_text())
         daily = d['questions']
         public_daily = daily + (d.get('listening_material') or {}).get('questions', [])
-        public_questions = (d['quiz'] + d['sentences'] + d.get('practice', [])
-                            + d.get('unit_questions', [])
+        public_questions = (d.get('practice', [])
                             + (d.get('listening_material') or {}).get('questions', []) + daily)
         if any('answer' in q or 'rationale' in q for q in public_questions) or any('practice' in g for g in d['grammar']):
             raise ValueError('public reference answer: ' + p.name)
-        expected = {**{v['id']: 2 for v in d['vocab']}, **{g['id']: 3 for g in d['grammar']}}
+        expected = {g['id']: 3 for g in d['grammar']}
         if Counter(k for q in daily for k in q['knowledge_ids']) != expected:
             raise ValueError('daily question quotas: ' + p.name)
         if len({q['qid'] for q in daily}) != len(daily) or len(public_daily) > 65:
@@ -68,9 +67,6 @@ def check():
             answer = q['options'][hashes.index(q['h'])]
             if not answer or compact(answer) in compact(q['prompt'] + q.get('passage', '')):
                 raise ValueError('answer visible in prompt: ' + q['qid'])
-        core=d['core_vocab_ids'];extra=d['extension_vocab_ids']
-        if len(core) != (14 if day == 1 else 20 if day >= 139 else DAILY_VOCAB) or extra or len(core) != len(d['vocab']):
-            raise ValueError('daily workload split broken')
     shards=list((ROOT/'web/data/grade').glob('day-*.json'))
     if len(shards)!=DAYS or any('answer' in q or not re.fullmatch('[a-f0-9]{64}',q.get('answer_hash','')) for p in shards for q in json.loads(p.read_text())['answers'].values()):
         raise ValueError('grading shards incomplete or contain plaintext answers')

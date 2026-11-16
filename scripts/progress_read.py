@@ -197,13 +197,13 @@ def render_one(item: dict) -> str:
     else:
         lines.append("  - （无自评）")
 
-    # 复习重点：错题优先 + 自评 again/hard 优先 + 当天新词/语法
+    # 复习重点：错题优先 + 自评 again/hard 优先 + 当天语法
     bad_self = [k for k, v in self_rating.items() if str(v) in ("again", "hard")]
-    new_ids = _uniq(required + extra + grammar)
+    new_ids = _uniq(grammar)
     lines.append("- 复习重点（供当天家教会话）：")
     lines.append("  1. 错题优先：%s" % ("、".join(_uniq(wrong_kids)) or "—"))
     lines.append("  2. 自评 again/hard 优先：%s" % ("、".join(_uniq(bad_self)) or "—"))
-    lines.append("  3. 当天新词/语法回顾：%s" % ("、".join(new_ids) or "—"))
+    lines.append("  3. 当天语法回顾：%s" % ("、".join(new_ids) or "—"))
 
     if note:
         lines.append("- 备注：%s" % note)

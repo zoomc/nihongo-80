@@ -84,23 +84,12 @@ def brief(day: int, force=False):
          "## 今天要学", ""]
     if d.get("practice_note"):
         L.extend([d["practice_note"], ""])
-    L.append("### 必学新词 %d · 拓展 %d（自选）" % (len(d.get("core_vocab_ids", d["new_vocab_ids"])),len(d.get("extension_vocab_ids", []))))
-    for vid in d.get("core_vocab_ids", d["new_vocab_ids"]):
-        v = vocab[vid]
-        ko = "｜韩语参考：%s" % (v.get("ko_hint") or v.get("ko_hanja")) if (v.get("ko_hint") or v.get("ko_hanja")) else ""
-        L.append("- **%s**（%s）%s%s" % (v["surface"], v["kana"], v["meaning_zh"], ko))
     L += ["", "### 语法 %d" % len(d["new_grammar_ids"])]
     for gid in d["new_grammar_ids"]:
         g = grammar[gid]
         L.append("- **%s**：%s｜接续：%s" % (g["pattern"], g["meaning_zh"], g.get("connection", "")))
         if g.get("ko_equiv"):
             L.append("  - 朝鲜语：%s（%s）" % (g["ko_equiv"], g.get("ko_diff", "")))
-    L += ["", "### 汉字 %d" % len(d["new_kanji_ids"])]
-    for kid in d["new_kanji_ids"]:
-        k = kanji[kid]
-        L.append("- **%s** %s｜音：%s｜训：%s" % (k["char"], k["meaning_zh"],
-                                                "、".join(k.get("onyomi") or []),
-                                                "、".join(k.get("kunyomi") or [])))
     L += ["", "## 复习到期", ""]
     L.append("新会话先跑 `python3 scripts/today.py`：它把本机 finish-day 与云端「完成」快照合并，"
              "给出今天该学哪天、上次卡在哪。`data/review/CONTEXT.md` 若存在再显式读取。")
@@ -129,7 +118,7 @@ def report(day: int, force=False):
     p.write_text("""# Day %03d 日报
 
 ## 摘要（≤5 行，主会话只读这段）
-- 完成：—/4 块｜练习正确率 —｜复习 — 张
+- 完成：—/2 块｜练习正确率 —｜错题 — 道
 - 真正学会：
 - 仍然卡：
 - 明日建议：

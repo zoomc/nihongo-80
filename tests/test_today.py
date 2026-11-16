@@ -26,7 +26,7 @@ class TestToday(unittest.TestCase):
         self.assertGreaterEqual(s["day"], 1)
         self.assertLessEqual(s["day"], s["total"])
         self.assertTrue(s["grammar_lines"], "当天必须有语法")
-        self.assertTrue(s["core_ids"], "当天必须有必学词")
+        self.assertTrue(s["grammar_ids"], "当天必须有语法")
         self.assertEqual(s["cloud_error"], "offline")
 
     def test_day_override(self):
@@ -68,7 +68,6 @@ class TestToday(unittest.TestCase):
             s = today.build(day=6, offline=False)
         finally:
             today.cloud_items = original
-        self.assertTrue(any("私" in w for w in s["weak"]), s["weak"])
         self.assertTrue(any("N は N です" in w for w in s["weak"]), s["weak"])
 
     def test_today_prioritizes_due_cards_and_pending_prerequisites(self):
@@ -89,17 +88,15 @@ class TestToday(unittest.TestCase):
                 """)
             with patch.object(today, "DB", db):
                 result = today.build(day=2, offline=True)
-            self.assertEqual([card["card_key"] for card in result["due_review"]], ["V0001|reading"])
-            self.assertEqual([item["kid"] for item in result["prerequisite_review"]], ["G0001"])
-            self.assertIn("本机 FSRS 到期", today.render_md(result))
-
+                self.assertEqual([item["kid"] for item in result["prerequisite_review"]], ["G0001"])
+    
     def test_json_cli_is_parseable(self):
         r = subprocess.run([sys.executable, str(ROOT / "scripts/today.py"),
                             "--offline", "--no-write", "--json"],
                            capture_output=True, text=True, check=True)
         d = json.loads(r.stdout)
         self.assertEqual(d["day"], today.build(offline=True)["day"])
-        self.assertIn("core_ids", d)
+        self.assertIn("grammar_ids", d)
 
     def test_no_write_does_not_touch_file(self):
         p = ROOT / "TODAY.md"

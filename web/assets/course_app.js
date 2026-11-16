@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  const route = /^\/(?:index\.html|day-(?:00[1-9]|0[1-9]\d|1[0-4]\d|150)\.html|review\.html|flashcards\.html)?$/;
+  const route = /^\/(?:index\.html|day-(?:00[1-9]|0[1-9]\d|1[0-4]\d|150)\.html|review\.html)?$/;
   const main = () => document.querySelector('main');
   let active;
   let request;
@@ -50,7 +50,7 @@
     const root = main();
     const day = Number(document.body.dataset.day) || 0;
     const path = location.pathname;
-    const current = path === '/flashcards.html' ? 'flash' : path === '/review.html' ? 'review' : 'course';
+    const current = path === '/review.html' ? 'review' : 'course';
     document.querySelectorAll('.app-nav [data-tab]').forEach(link => {
       if (link.dataset.tab === current) link.setAttribute('aria-current', 'page');
       else link.removeAttribute('aria-current');
@@ -67,7 +67,6 @@
         if (!signal.aborted) review.querySelector('p').textContent = '暂时无法加载复习，请联网后重新打开。';
       });
     }
-    if (current === 'flash') window.mountFlashcards(root, signal);
   }
 
   function position(url, focus) {
@@ -145,7 +144,7 @@
   mount();
 
   window.addEventListener('nh80-cloud-change', () => {
-    if (main().querySelector('#resume,#flashDeck')) mount();
+    if (main().querySelector('#resume')) mount();
   });
   function resume() {
     const last = NHCourse.last();

@@ -974,7 +974,7 @@ def cmd_validate(args):
     for d in days:
         if sum(b.get("min", 0) for b in d.get("blocks") or []) != 60:
             errs.append("Day %s 时间块不等于 60" % d.get("day"))
-        if [b["type"] for b in d["blocks"]] != ["记忆曲线复习", "新词", "语法", "练习"]:
+        if [b["type"] for b in d["blocks"]] != ["语法", "语法练习"]:
             errs.append("Day %s 课程模块不正确" % d["day"])
         if len(d["new_vocab_ids"]) != (14 if d["day"] == 1 else 20 if d["day"] >= 139 else DAILY_VOCAB):
             errs.append("Day %s 词数不正确" % d["day"])

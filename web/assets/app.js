@@ -29,8 +29,8 @@ function applyScope(sec,mode){
  fabLabel();
 }
 // 右下角悬浮按钮：整块遮盖，不做单项。三态循环，作用于视口中线所在的大区。
-var SCOPES=['review','vocab','grammar'];
-var SCOPE_NAME={review:'复习',vocab:'新词',grammar:'语法'};
+var SCOPES=['grammar'];
+var SCOPE_NAME={grammar:'语法'};
 var MODE_NAME={all:'显示',ja:'遮日语',zh:'遮中文'};
 var SCOPE_NEXT={all:'ja',ja:'zh',zh:'all'};
 var FAB=null, FAB_TICK=0;
@@ -298,7 +298,7 @@ if(f)f.addEventListener('click',function(){
  var wrong=qs.filter(function(x){return !x.correct}).map(function(x){
   return {qid:x.qid,knowledge_ids:(meta.q_kids||{})[x.qid]||[]}});
  var payload={v:4,day:DAY,completed_at:new Date().toISOString(),
-  required_ids:meta.required_ids||[],extra_ids:meta.extra_ids||[],grammar_ids:meta.grammar_ids||[],
+  grammar_ids:meta.grammar_ids||[],
   questions:qs,accuracy:qs.length?right/qs.length:0,self_rating:RATINGS,
   wrong_summary:wrong,
   review_summary:Object.keys(RATINGS).filter(function(k){return RATINGS[k]!=='good'}),

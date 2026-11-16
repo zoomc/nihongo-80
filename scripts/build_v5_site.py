@@ -4,7 +4,7 @@
 设计口径（2026-11-08，用户明确要求）：
 - 顶部不要模式按钮 / 分钟数 / 分段导航 / 站点链接 / 提示文案；
 - 新词与语法各自一个局部遮挡开关；
-- 当天新词两题、语法三题，洗牌后一次列出，支持错题重练；
+- 当天语法三题，洗牌后一次列出，支持错题重练；
 - 新词分日语、中文与韩语读音两列，例句直接显示；
 - 底部只有一个「完成」按钮，上报当天学习情况到 /api/progress。
 
@@ -194,8 +194,8 @@ function applyScope(sec,mode){
  fabLabel();
 }
 // 右下角悬浮按钮：整块遮盖，不做单项。三态循环，作用于视口中线所在的大区。
-var SCOPES=['review','vocab','grammar'];
-var SCOPE_NAME={review:'复习',vocab:'新词',grammar:'语法'};
+var SCOPES=['grammar'];
+var SCOPE_NAME={grammar:'语法'};
 var MODE_NAME={all:'显示',ja:'遮日语',zh:'遮中文'};
 var SCOPE_NEXT={all:'ja',ja:'zh',zh:'all'};
 var FAB=null, FAB_TICK=0;
@@ -463,7 +463,7 @@ if(f)f.addEventListener('click',function(){
  var wrong=qs.filter(function(x){return !x.correct}).map(function(x){
   return {qid:x.qid,knowledge_ids:(meta.q_kids||{})[x.qid]||[]}});
  var payload={v:4,day:DAY,completed_at:new Date().toISOString(),
-  required_ids:meta.required_ids||[],extra_ids:meta.extra_ids||[],grammar_ids:meta.grammar_ids||[],
+  grammar_ids:meta.grammar_ids||[],
   questions:qs,accuracy:qs.length?right/qs.length:0,self_rating:RATINGS,
   wrong_summary:wrong,
   review_summary:Object.keys(RATINGS).filter(function(k){return RATINGS[k]!=='good'}),
@@ -679,7 +679,7 @@ def rates_html(kid):
 
 
 def build_review_html(day, vocab, grammar, kanji, reader):
-    """今日复习：平假（韩语发音）→ 单词 → 中文 → 自评，和当天新词一个版式。"""
+    """旧版词卡复习的生成器；v21 起日课不再渲染，保留只为历史数据兼容。"""
     rows = []
     for kid in day.get("review_knowledge_ids") or []:
         if kid in vocab:
@@ -815,7 +815,7 @@ def build_questions_html(questions, start=1, explanations=None):
     return "".join(rows)
 
 
-def day_page(d, review_html, vocab_html, grammar_html, questions_html, page_meta, listening_html):
+def day_page(d, grammar_html, questions_html, page_meta, listening_html):
     return (('<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">'
             '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
             '<meta name="color-scheme" content="light dark">'
@@ -823,11 +823,8 @@ def day_page(d, review_html, vocab_html, grammar_html, questions_html, page_meta
             '<link rel="stylesheet" href="assets/app.css">' + APP_HEAD + '</head>'
             '<body data-day="%03d">' + APP_NAV + '<div class="wrap"><main>'
             '<h1 class="lesson" tabindex="-1">Day <b>%03d</b> · %s</h1>'
-            '<section class="card" id="review"><h2>记忆曲线复习</h2>'
-            '<a id="dueReviewLink" class="small review-link" href="review.html">到期复习</a>%s</section>'
-            '<section class="card" id="vocab"><h2>今日新词 <span class="count">%d 个</span></h2>%s</section>'
-            '<section class="card" id="grammar"><h2>今日语法 <span class="count">%d 条</span></h2>%s</section>'
-            '<section class="card" id="questions"><h2>练习 <span class="count">%d 题</span></h2>'
+            '<section class="card" id="grammar"><h2>语法 <span class="count">%d 条</span></h2>%s</section>'
+            '<section class="card" id="questions"><h2>语法练习 <span class="count">%d 题</span></h2>'
             '<div class="qscore" id="qscore" role="status" tabindex="-1"></div>%s%s'
             '<div class="q-actions"><button class="btn" id="retryWrong" type="button" disabled>错题重练</button>'
             '<button class="btn" id="showAllQuestions" type="button" hidden>返回全部练习</button></div>'
@@ -836,7 +833,6 @@ def day_page(d, review_html, vocab_html, grammar_html, questions_html, page_meta
             '</section></main></div>'
             '<script type="application/json" id="lessonMeta">%s</script>' + APP_SCRIPTS + '</body></html>')
             % (d["day"], esc(d["theme"]), d["day"], d["day"], esc(d["theme"]),
-               ('<details><summary>回看往日词句与汉字</summary>%s</details>' % review_html) if d.get("review_knowledge_ids") else "", len(d["new_vocab_ids"]), vocab_html,
                len(d["new_grammar_ids"]), grammar_html,
                page_meta["total"], questions_html, listening_html,
                json.dumps(page_meta, ensure_ascii=False).replace("<", r"\u003c")))
@@ -868,8 +864,7 @@ APP_HEAD = (
 )
 APP_NAV = (
     '<nav class="app-nav" aria-label="应用导航">'
-    '<a data-tab="course" href="/">课程</a><a data-tab="review" href="/review.html">到期复习</a>'
-    '<a data-tab="flash" href="/flashcards.html">背单词</a></nav>'
+    '<a data-tab="course" href="/">课程</a><a data-tab="review" href="/review.html">语法复习</a></nav>'
     '<div id="appStatus" class="app-status" role="status"></div>'
     '<details class="account-panel"><summary>多端同步</summary>'
     '<p id="accountStatus" role="status">正在检查同步状态…</p>'
@@ -886,7 +881,7 @@ APP_NAV = (
     '</details></details>'
 )
 APP_SCRIPTS = ''.join('<script defer src="/assets/%s.js"></script>' % name for name in
-                      ('course_progress', 'review_schedule', 'app', 'flashcards', 'course_sync', 'course_version', 'course_app'))
+                      ('course_progress', 'review_schedule', 'app', 'course_sync', 'course_version', 'course_app'))
 
 
 def app_page(title, body):
@@ -962,7 +957,7 @@ def main(daily_by_day=None):
     app_css = (ROOT / "scripts/course_app.css").read_text(encoding="utf-8")
     (OUT / "assets/app.css").write_text(CSS + study_ui.CSS + app_css, encoding="utf-8")
     app_sources = {}
-    for name in ("course_app", "course_progress", "flashcards", "course_sync", "course_version"):
+    for name in ("course_app", "course_progress", "course_sync", "course_version"):
         source = (ROOT / ("scripts/" + name + ".js")).read_text(encoding="utf-8")
         app_sources[name] = source
         (OUT / ("assets/" + name + ".js")).write_text(source, encoding="utf-8")
@@ -994,51 +989,32 @@ def main(daily_by_day=None):
 
     catalog = []
     for day in cur["days"]:
-        for kid in day["new_vocab_ids"]:
-            v = vocab[kid]
-            meaning, readings = vocabulary_display(v)
-            catalog.append({"kid": kid, "front": v["surface"], "back": meaning,
-                            "kana": "／".join(readings), "kind": "vocab", "day": day["day"]})
         for kid in day["new_grammar_ids"]:
             g = grammar[kid]
             catalog.append({"kid": kid, "front": g["pattern"], "back": g["meaning_zh"],
                             "kana": g.get("connection", ""), "example": g["examples"][0]["ja"], "kind": "grammar", "day": day["day"]})
-        for kid in day["new_kanji_ids"]:
-            k = kanji[kid]
-            catalog.append({"kid": kid, "front": k["char"], "back": k["meaning_zh"],
-                            "kana": "、".join(k.get("onyomi", [])), "kind": "kanji", "day": day["day"]})
     for entry in catalog:
         entry["review_questions"] = review_questions.get(entry["kid"], [])
     (DATA / "catalog.json").write_text(json.dumps(catalog, ensure_ascii=False), encoding="utf-8")
-
-    cards = [{**{k: x[k] for k in ("kid", "front", "back", "kana", "day")},
-              "ko": "／".join(ko_pron.to_hangul(r) for r in x["kana"].split("／"))}
-             for x in catalog if x["kind"] == "vocab"]
-    flash_json = json.dumps(cards, ensure_ascii=False, separators=(",", ":"))
-    (DATA / "flashcards.json").write_text(flash_json, encoding="utf-8")
-    (OUT / "flashcards.html").write_text(app_page("背单词 · Nihongo 150", FLASH_BODY), encoding="utf-8")
     review_body = (
-        '<h1 tabindex="-1">错题与复习集</h1>'
-        '<section class="card" id="scheduledReview"><h2>到期复习</h2><p class="small">正在加载词表…</p></section>'
+        '<h1 tabindex="-1">语法复习集</h1>'
+        '<section class="card" id="scheduledReview"><h2>到期复习</h2><p class="small">正在加载语法卡…</p></section>'
         '<section class="card"><h2>回看错题与自评</h2><div id="personalReview"></div></section>')
-    (OUT / "review.html").write_text(app_page("错题与复习集 · Nihongo 150", review_body), encoding="utf-8")
-    for end in range(5, len(cur["days"]) + 1, 5):
-        unit = build_unit(end, cur["days"], vocab, grammar, kanji)
-        unit["items"] = [{k: v for k, v in x.items() if k != "review_questions"} for x in catalog if end - 4 <= x["day"] <= end and x["kind"] != "kanji"]
-        unit["questions"] = [public_question(q) for q in unit["questions"]]
-        body = ('<p class="small">五天学过的词汇与语法完整清单。</p>'
-                '<div id="unitList"></div><section class="card"><h2>五日巩固 · 20 题</h2>'
-                '<div id="practiceDeck"></div></section>')
-        (OUT / ("unit-%03d.html" % end)).write_text(
-            study_page("Day %d–%d · 五日复习" % (end - 4, end), body, end, unit), encoding="utf-8")
-
+    (OUT / "review.html").write_text(app_page("语法复习集 · Nihongo 150", review_body), encoding="utf-8")
+    for old in (OUT / "flashcards.html", OUT / "optional-vocab.html", *OUT.glob("unit-???.html")):
+        old.unlink(missing_ok=True)
+    (DATA / "flashcards.json").unlink(missing_ok=True)
+    (OUT / "assets" / "flashcards.js").unlink(missing_ok=True)
     totals = []
     lesson_revision = hashlib.sha256()
     for d in cur["days"]:
         n = d["day"]
-        merged = daily_by_day[n]
+        # 只保留语法题：词题从练习和门控里一并移除。
+        merged = [q for q in daily_by_day[n]
+                  if q.get("knowledge_ids") and str(q["knowledge_ids"][0]).startswith("G")]
         totals.append(len(merged))
-        practice = [public_question(q) for q in build_daily(d, vocab, grammar, kanji)]
+        practice = [public_question(q) for q in build_daily(d, vocab, grammar, kanji)
+                    if q.get("knowledge_ids") and str(q["knowledge_ids"][0]).startswith("G")]
         sentences = [dict(public_question(q), direction=q["direction"], optional=q["optional"],
                           source_id=q["source_id"]) for q in sentence_questions(d, sentence_rows)]
         qs = [public_question(q) for q in day_questions(d, vocab, grammar, kanji, materials)
@@ -1092,31 +1068,23 @@ def main(daily_by_day=None):
         lesson_questions = merged + audio_questions
         page_meta = {
             "day": n,
-            "required_ids": d.get("core_vocab_ids") or [],
-            "extra_ids": d.get("extension_vocab_ids") or [],
             "grammar_ids": d.get("new_grammar_ids") or [],
             "q_kids": {q["qid"]: q.get("knowledge_ids") or [] for q in lesson_questions},
             "total": len(lesson_questions),
         }
         explanations = {gid: grammar[gid].get("ko_diff") or grammar[gid].get("usage", "")
                         for gid in d["new_grammar_ids"]}
-        page = day_page(d, build_review_html(d, vocab, grammar, kanji, reader),
-                        build_vocab_html(d, vocab, kanji, reader), build_grammar_html(d, grammar, reader),
+        page = day_page(d, build_grammar_html(d, grammar, reader),
                         build_questions_html(merged, explanations=explanations), page_meta, listening_html)
         (OUT / ("day-%03d.html" % n)).write_text(page, encoding="utf-8")
         lesson_revision.update(page.encode())
         (DATA / ("day-%03d.json" % n)).write_text(json.dumps({
             "day": n, "phase": d["phase"], "theme": d["theme"], "can_do": d["can_do"],
             "minutes": d["minutes"], "blocks": d["blocks"], "listening": bool(d.get("listening")),
-            "review": review, "vocab": vcards,
-            "core_vocab_ids": d.get("core_vocab_ids"), "extension_vocab_ids": d.get("extension_vocab_ids"),
             "grammar": [{**{key: value for key, value in grammar[g].items() if key != "practice"},
                          "ko_pron": pattern_ko(grammar[g], reader)}
                         for g in d["new_grammar_ids"]],
-            "unit_questions": [public_question(q) for q in build_unit(n, cur["days"], vocab, grammar, kanji)["questions"]]
-            if n % 5 == 0 else [],
-            "practice": practice, "sentences": sentences, "quiz": qs,
-            "questions": merged, "listening_material": listening,
+            "practice": practice, "questions": merged, "listening_material": listening,
         }, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
     (OUT / "n3-mock.html").write_text(
@@ -1130,11 +1098,11 @@ def main(daily_by_day=None):
         "icons": [{"src": "/icon.svg", "sizes": "any", "type": "image/svg+xml"}]},
         ensure_ascii=False), encoding="utf-8")
 
-    n2_body = ('<p><a href="/">课程目录</a> · <a href="review.html">到期复习</a></p>'
-               '<p>先复习到期词，学新词时先认日语读音。语法用韩语提示选日语句型，重点看助词、接续和语体。</p>'
-               '<h2>Day 091–108 · 词汇与句型</h2><p>每天 25 个词。把容易望文生义的汉字词和不同读音放进错题复习。</p>'
+    n2_body = ('<p><a href="/">课程目录</a> · <a href="review.html">语法复习</a></p>'
+               '<p>语法用韩语提示对照日语句型，重点看接续、助词和语体；做错的题当天从页面重练。</p>'
+               '<h2>Day 091–108 · 句型强化</h2><p>每天 3 条语法。把接续相近、容易混淆的句型放进错题复习。</p>'
                '<h2>Day 109–132 · 场景听解</h2><p>先听一次抓人物、条件和行动，再答题。答完打开原文找漏听的转折与否定。</p>'
-               '<h2>Day 133–150 · 综合与模考</h2><p>从 Day 139 起每天 20 词。按官方卷做语言知识、阅读和听力，复盘两套题的时间和错因。</p>'
+               '<h2>Day 133–150 · 综合与模考</h2><p>按官方卷做语言知识、阅读和听力，复盘两套题的时间和错因。</p>'
                '<h2 id="official">官方题型与原声</h2><ul>'
                '<li><a href="https://www.jlpt.jp/e/samples/forlearners.html">JLPT 官方样题</a> · 先熟悉题型</li>'
                '<li><a href="https://www.jlpt.jp/e/samples/sampleindex.html">JLPT 官方练习册两册</a> · N2 语言知识与阅读 105 分钟，听力 50 分钟</li>'
@@ -1144,16 +1112,6 @@ def main(daily_by_day=None):
                + "".join('<li><a href="day-%03d.html">Day %03d</a></li>' % (d, d) for d in range(91,151))
                + '</ul>')
     (OUT / "n2.html").write_text(study_page("N2 冲刺", n2_body), encoding="utf-8")
-
-    optional_rows = []
-    for kid in cur["optional_vocab_ids"]:
-        word = vocab[kid]
-        meaning, readings = vocabulary_display(word)
-        optional_rows.append('<li><span lang="ja">%s（%s）</span> · %s</li>'
-                             % (esc(word["surface"]), esc("／".join(readings)), esc(meaning)))
-    (OUT / "optional-vocab.html").write_text(study_page(
-        "选学词库", '<p><a href="/">课程目录</a></p><ul>' + "".join(optional_rows) + '</ul>'),
-        encoding="utf-8")
 
     links = ('<nav class="home-start" aria-label="学习入口">'
              '<a id="resume" class="btn primary" href="day-001.html">开始 Day 001</a>'
@@ -1171,12 +1129,9 @@ def main(daily_by_day=None):
         links += ('<section class="card home-stage"><h2>%s</h2>%s<div class="home-weeks">%s</div></section>'
                   % (label, guide, "".join(weeks)))
     links += ('<section class="card"><h2>学习资源</h2><nav class="home-resources" aria-label="学习资源">'
-              '<a href="optional-vocab.html">选学词库</a><a href="resources.html">N3 官方练习</a>'
-              '<a href="library.html">听读资料</a></nav>'
-              '<details><summary>五日复习单元</summary><ul class="home-lessons">'
-              + "".join('<li><a href="unit-%03d.html">%03d–%03d</a></li>' % (n,n-4,n)
-                        for n in range(5, len(cur["days"]) + 1, 5)) + '</ul></details></section>')
-    home = ('<h1 tabindex="-1">Nihongo 150</h1><p class="small">词汇与读音 · 韩日语法对照 · 后段听解</p>'
+              '<a href="resources.html">N3 官方练习</a>'
+              '<a href="library.html">听读资料</a></nav></section>')
+    home = ('<h1 tabindex="-1">Nihongo 150</h1><p class="small">韩日语法对照 · 后段听解</p>'
             + links + '<details class="progress-transfer"><summary>安装与迁移进度</summary>'
             '<p>iPhone 在 Safari 分享菜单中选择「添加到主屏幕」，开启「作为网页 App 打开」。'
             '如安装后进度未带过来，可把原设备这里的进度码复制到新应用再导入。</p>'
@@ -1269,9 +1224,9 @@ def main(daily_by_day=None):
 
     worker = (ROOT / "scripts/course_sw.js").read_text(encoding="utf-8")
     revision = hashlib.sha256((CSS + JS + study_ui.CSS + study_ui.JS + schedule_js
-                               + app_css + "".join(app_sources.values()) + home + FLASH_BODY + APP_HEAD + APP_NAV
-                               + review_body + flash_json + worker + lesson_revision.hexdigest()).encode()).hexdigest()[:12]
-    for page in [OUT / name for name in ("index.html", "review.html", "flashcards.html")] + list(OUT.glob("day-*.html")):
+                               + app_css + "".join(app_sources.values()) + home + APP_HEAD + APP_NAV
+                               + review_body + worker + lesson_revision.hexdigest()).encode()).hexdigest()[:12]
+    for page in [OUT / name for name in ("index.html", "review.html")] + list(OUT.glob("day-*.html")):
         page.write_text(page.read_text(encoding="utf-8").replace("__APP_RELEASE__", revision), encoding="utf-8")
     (OUT / "sw.js").write_text(worker.replace("__REVISION__", revision), encoding="utf-8")
     (OUT / "version.json").write_text(json.dumps({"version": revision}), encoding="utf-8")

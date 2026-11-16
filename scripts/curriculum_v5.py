@@ -142,10 +142,8 @@ def build():
         can_do_scene = "；".join(g["meaning_zh"] for g in ng)
         can_do = "在单选题中辨认今天的词义、读音和句型用法。"
         blocks = [
-            {"type": "记忆曲线复习", "min": 10, "desc": "先做已到期的复习题"},
-            {"type": "新词", "min": 20, "desc": f"{len(nv)} 个新词"},
-            {"type": "语法", "min": 5, "desc": "先看韩语对应，再核对日语接续和语体"},
-            {"type": "练习", "min": 25, "desc": "单选题，答完可重练错题"},
+            {"type": "语法", "min": 30, "desc": f"{len(ng)} 条语法：先看韩语对应，再核对接续和语体"},
+            {"type": "语法练习", "min": 30, "desc": "单选题，答完可重练错题"},
         ]
         if d in audio_by_day or d in N2_MOCK_DAYS:
             blocks[-1]["desc"] += "。预留 10–15 分钟听力或官方题型，整卷另计时"
@@ -204,15 +202,14 @@ def build():
         c["grammar"] += len(d["new_grammar_ids"])
         c["kanji"] += len(d["new_kanji_ids"])
         c["listening_days"] += 1 if d["listening"] else 0
-    lines = ["# v7 覆盖报告", "",
+    lines = ["# v5 覆盖报告", "",
              "- 天数：%d｜总时长：%d 小时" % (DAYS, DAYS),
-             "- 新词：%d｜新语法：%d｜新汉字：%d" % (c["vocab"], c["grammar"], c["kanji"]),
-             "- 主课听力日：%d 天；选学词：%d 个" % (c["listening_days"], len(data["optional_vocab_ids"])),
-             "- 词库总量：%d｜语法：%d｜汉字：%d" % (len(vocab), len(grammar), len(kanji)),
-             "", "## 每天新词分布", ""]
-    dist = Counter(len(d["new_vocab_ids"]) for d in days)
+             "- 语法条目：%d｜覆盖 %d 天" % (c["grammar"], DAYS),
+             "- 主课听力日：%d 天" % c["listening_days"],
+             "", "## 每天语法分布", ""]
+    dist = Counter(len(d["new_grammar_ids"]) for d in days)
     for n, k in sorted(dist.items()):
-        lines.append("- %d 词/天：%d 天" % (n, k))
+        lines.append("- %d 条/天：%d 天" % (n, k))
     (OUT / "coverage_v5.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
     for path in OUT.glob("day-[0-9][0-9][0-9].md"):
@@ -221,33 +218,17 @@ def build():
 
     # 每日 md（简版，细节在网页）
     for d in days:
-        v = {x["id"]: x for x in vocab}
         g = {x["id"]: x for x in grammar}
-        k = {x["id"]: x for x in kanji}
         md = ["# Day %03d · %s" % (d["day"], d["theme"]), "",
               "- 阶段：%s｜%d 分钟｜%s" % (d["phase"], d["minutes"], "听力日" if d["listening"] else "常规日"),
               "- Can-do：%s" % d["can_do"], "",
-              "## 新词 %d" % len(d["new_vocab_ids"]), ""]
-        for vid in d["new_vocab_ids"]:
-            x = v[vid]
-            ko = "｜韩语参考：%s" % (x.get("ko_hint") or x.get("ko_hanja")) if (x.get("ko_hint") or x.get("ko_hanja")) else ""
-            ex = x["examples"][0] if x.get("examples") else {"ja": "", "zh": ""}
-            md.append("- **%s**（%s）%s%s<br>" % (x["surface"], x["kana"], x["meaning_zh"], ko))
-            if ex.get("ja"):
-                md.append("  例：%s（%s）" % (ex["ja"], ex.get("zh", "")))
-        md += ["", "## 语法", ""]
+              "## 语法", ""]
         for gid in d["new_grammar_ids"]:
             x = g[gid]
             md.append("- **%s**：%s" % (x["pattern"], x["meaning_zh"]))
             md.append("  接续：%s" % x.get("connection", ""))
             if x.get("ko_equiv"):
                 md.append("  朝鲜语：%s（%s）" % (x["ko_equiv"], x.get("ko_diff", "")))
-        md += ["", "## 汉字 %d" % len(d["new_kanji_ids"]), ""]
-        for kid in d["new_kanji_ids"]:
-            x = k[kid]
-            md.append("- **%s** %s｜音：%s｜训：%s" % (x["char"], x["meaning_zh"],
-                                                      "、".join(x.get("onyomi") or []),
-                                                      "、".join(x.get("kunyomi") or [])))
         (OUT / ("day-%03d.md" % d["day"])).write_text("\n".join(md).rstrip() + "\n", encoding="utf-8")
 
     print(json.dumps({

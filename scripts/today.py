@@ -114,28 +114,18 @@ def cloud_items(total: int, base: str = BASE):
 # 汇总
 # ---------------------------------------------------------------------------
 
-def resolve(kid: str, vocab, grammar, kanji) -> str:
-    """把 V0123 / G0045 / K0012 变成人能读的形式。"""
-    if kid in vocab:
-        v = vocab[kid]
-        return "%s（%s，%s）" % (v["surface"], v["kana"], v["meaning_zh"])
-    if kid in grammar:
-        g = grammar[kid]
-        return "%s（%s）" % (g["pattern"], g["meaning_zh"])
-    if kid in kanji:
-        k = kanji[kid]
-        return "%s（%s）" % (k["char"], k["meaning_zh"])
-    return kid
+def resolve(kid: str, grammar) -> str:
+    """只把 G0045 这样的语法 ID 变成人能读的形式；词和汉字不再进入会话。"""
+    g = grammar.get(kid)
+    return "%s（%s）" % (g["pattern"], g["meaning_zh"]) if g else ""
 
 
 def build(day=None, offline=False, base=BASE):
     course, total = load_course()
-    vocab = {x["id"]: x for x in read_jsonl(SEED / "vocabulary.jsonl")}
     grammar = {x["id"]: x for x in read_jsonl(SEED / "grammar.jsonl")}
-    kanji = {x["id"]: x for x in read_jsonl(SEED / "kanji.jsonl")}
 
     done_local = local_done()
-    due_review, prerequisites, review_error = local_review()
+    _, prerequisites, review_error = local_review()
     items, cloud_err = ([], "offline") if offline else cloud_items(total, base)
     done_cloud = {int(x["day"]) for x in items}
 
@@ -152,10 +142,7 @@ def build(day=None, offline=False, base=BASE):
     last_item = ordered[0] if ordered else None
     last_day = int(last_item["day"]) if last_item and last_item.get("day") else (max(done) if done else 0)
 
-    core_ids = d.get("core_vocab_ids") or d.get("new_vocab_ids") or []
-    ext_ids = d.get("extension_vocab_ids") or []
     grammar_ids = d.get("new_grammar_ids") or []
-    kanji_ids = d.get("new_kanji_ids") or []
 
     recent = []
     for it in ordered[:3]:
@@ -169,10 +156,14 @@ def build(day=None, offline=False, base=BASE):
     if last_item:
         for w in last_item.get("wrong_summary") or []:
             for kid in (w.get("knowledge_ids") or []):
-                weak.append(resolve(str(kid), vocab, grammar, kanji))
+                label = resolve(str(kid), grammar)
+                if label:
+                    weak.append(label)
         for kid, rating in (last_item.get("self_rating") or {}).items():
             if str(rating) in ("again", "hard"):
-                weak.append(resolve(str(kid), vocab, grammar, kanji))
+                label = resolve(str(kid), grammar)
+                if label:
+                    weak.append(label)
         weak = list(dict.fromkeys(weak))[:6]
 
     report_lines = []
@@ -199,9 +190,8 @@ def build(day=None, offline=False, base=BASE):
         "last_day": last_day,
         "last_accuracy": (last_item or {}).get("accuracy"),
         "weak": weak,
-        "due_review": [dict(card, label=resolve(card["kid"], vocab, grammar, kanji)) for card in due_review],
-        "prerequisite_review": [dict(item, label=resolve(item["kid"], vocab, grammar, kanji))
-                                for item in prerequisites],
+        "prerequisite_review": [dict(item, label=resolve(str(item["kid"]), grammar))
+                                for item in prerequisites if resolve(str(item["kid"]), grammar)],
         "review_error": review_error,
         "recent": recent,
         "remaining": total - len(done),
@@ -214,19 +204,11 @@ def build(day=None, offline=False, base=BASE):
         "minutes": d.get("minutes"),
         "listening": bool(d.get("listening")),
         "assessment": d.get("assessment"),
-        "core_ids": core_ids,
-        "extra_ids": ext_ids,
         "grammar_ids": grammar_ids,
-        "kanji_ids": kanji_ids,
-        "core_words": [
-            "%s（%s）%s" % (vocab[i]["surface"], vocab[i]["kana"], vocab[i]["meaning_zh"])
-            for i in core_ids[:8] if i in vocab
-        ],
         "grammar_lines": [
             "%s：%s" % (grammar[i]["pattern"], grammar[i]["meaning_zh"])
             for i in grammar_ids if i in grammar
         ],
-        "kanji_line": "、".join(kanji[i]["char"] for i in kanji_ids if i in kanji),
     }
 
 
@@ -272,16 +254,8 @@ def render_md(s, base: str = BASE) -> str:
                                "（%s）" % r["completed_at"] if r["completed_at"] else "")
             for r in s["recent"]))
     L.append("- 上次卡点：%s" % ("；".join(s["weak"]) if s["weak"] else "无（还没开始，或上次没有错题）"))
-    capability_names = {"meaning": "释义", "reading": "读音", "listening": "听辨",
-                        "usage": "用法", "production": "独立输出"}
-    if s["review_error"]:
-        L.append("- 本机 FSRS 到期：本次读取失败（%s）。" % s["review_error"])
-    else:
-        L.append("- 本机 FSRS 到期（最多列 6 张）：%s" % ("；".join(
-            item["label"] + " · " + capability_names.get(item["capability"], item["capability"])
-            for item in s["due_review"]) or "当前无到期卡"))
-        if s["prerequisite_review"]:
-            L.append("- 本机待补先修：" + "；".join(item["label"] for item in s["prerequisite_review"]))
+    if s["prerequisite_review"]:
+        L.append("- 本机待补先修：" + "；".join(item["label"] for item in s["prerequisite_review"]))
     if s.get("last_report"):
         L.append("- 上次会话记录：%s" % "；".join(s["last_report"]))
     if s["finished_all"]:
@@ -301,25 +275,18 @@ def render_md(s, base: str = BASE) -> str:
             "｜测评日（%s）" % s["assessment"] if s["assessment"] and s["assessment"] != "none" else ""),
         "- 今天一句话目标：%s" % (s["can_do"] or "—"),
         "",
-        "### 必学新词 %d 个（另有拓展 %d 个，自选）" % (len(s["core_ids"]), len(s["extra_ids"])),
+        "### 语法 %d 条" % len(s["grammar_lines"]),
         "",
     ]
-    L += ["- " + w for w in s["core_words"]]
-    if len(s["core_ids"]) > len(s["core_words"]):
-        L.append("- …其余 %d 个在页面词卡里" % (len(s["core_ids"]) - len(s["core_words"])))
-    L += ["", "### 语法 %d 条" % len(s["grammar_lines"]), ""]
     L += ["- " + g for g in s["grammar_lines"]]
-    if s["kanji_line"]:
-        L += ["", "### 今日汉字", "", "- " + s["kanji_line"]]
     L += [
         "",
         "## 会话怎么做（不要复述页面）",
         "",
         "1. 先把页面链接发给学生，等他看完再来。",
-        "2. 先做每日记忆曲线单选，再结合本机到期卡、待补先修及上次错题讲解。",
-        "3. 先看今天 %d 条语法的韩语对应，按需解释日语接续、助词和语体。" % len(s["grammar_lines"]),
-        "4. 做完新词与语法单选后，从页面重练错题。",
-        "5. 收尾写 `days/day-%03d/report.md`：摘要 ≤5 行（完成度 / 真正学会 / 仍然卡 / 明日建议）。" % day,
+        "2. 先看今天 %d 条语法的韩语对应，按需解释日语接续、助词和语体。" % len(s["grammar_lines"]),
+        "3. 再做语法单选，逐题问错因；从页面重练错题，确认接续和用法都说得清。",
+        "4. 收尾写 `days/day-%03d/report.md`：摘要 ≤5 行（完成度 / 真正学会 / 仍然卡 / 明日建议）。" % day,
         "",
         "## 完成与记录",
         "",
@@ -355,9 +322,7 @@ def print_opening(s, base: str = BASE):
         print("上次：Day %03d，正确率 %s%s" % (
             s["last_day"], _pct(s["last_accuracy"]),
             "；卡点 " + "、".join(s["weak"][:3]) if s["weak"] else ""))
-    print("今天：%d 词 / %d 语法 / %s" % (
-        len(s["core_ids"]), len(s["grammar_lines"]),
-        ("%d 汉字" % len(s["kanji_ids"])) if s["kanji_ids"] else "无汉字"))
+    print("今天：%d 条语法练习" % len(s["grammar_lines"]))
     if s["grammar_lines"]:
         print("语法：" + "；".join(s["grammar_lines"]))
     print("下一步：读 TODAY.md，按「会话怎么做」执行。")

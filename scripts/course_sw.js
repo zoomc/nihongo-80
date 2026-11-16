@@ -1,7 +1,7 @@
-const C = 'nh80-v19-__REVISION__';
+const C = 'nh80-v21-__REVISION__';
 const shell = ['/index.html', '/assets/app.css', '/assets/course_progress.js',
   '/assets/review_schedule.js', '/assets/app.js', '/assets/study.js',
-  '/assets/flashcards.js', '/assets/course_sync.js', '/assets/course_version.js', '/assets/course_app.js', '/flashcards.html', '/data/flashcards.json'];
+  '/assets/course_sync.js', '/assets/course_version.js', '/assets/course_app.js'];
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(C).then(cache => cache.addAll(shell)).then(() => self.skipWaiting()));

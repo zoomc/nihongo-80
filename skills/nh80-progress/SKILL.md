@@ -1,6 +1,6 @@
 ---
 name: nh80-progress
-description: "开始或继续 Nihongo-80 日语课（90 天 N3 基础 + 60 天 N2 冲刺，中文母语/朝鲜族学习者）：新会话第一步跑 `python3 nihongo-80/scripts/today.py`，拿到今天该学 Day N、上次卡点、今日词/语法/汉字与页面链接，再按 TODAY.md 带课；也用于读云端「完成」快照整理复习重点。只要用户提到「开始学日语 / 今天学什么 / 今天开始上课 / 继续上次 / 学到第几天 / 日语学习进度 / 复习建议 / 错题 / 忘了哪些词 / N3 日语课 / N2 冲刺 / nihongo progress」——即使没点名本 skill 也必须用。注意云端进度是学习者自报、非掌握权威，权威完成以本机 SQLite finish-day 为准。"
+description: "开始或继续 Nihongo-80 日语课（90 天 N3 基础 + 60 天 N2 冲刺，中文母语/朝鲜族学习者）：新会话第一步跑 `python3 nihongo-80/scripts/today.py`，拿到今天该学 Day N、上次卡点、今日语法与页面链接，再按 TODAY.md 带课；也用于读云端「完成」快照整理复习重点。只要用户提到「开始学日语 / 今天学什么 / 今天开始上课 / 继续上次 / 学到第几天 / 日语学习进度 / 复习建议 / 错题 / N3 日语课 / N2 冲刺 / nihongo progress」——即使没点名本 skill 也必须用。注意云端进度是学习者自报、非掌握权威，权威完成以本机 SQLite finish-day 为准。"
 ---
 
 # nh80-progress · 日语学习进度与每日开课
@@ -41,7 +41,7 @@ python3 scripts/today.py --json     # 给程序解析
 脚本用 `__file__` 定位仓库根，与当前目录无关；`TODAY.md` 始终写在 `nihongo-80/` 下。
 
 它合并本机 `data/state.db` 的 finish-day 与云端 `study_progress`，输出：今天 Day N / 总天数、
-已完成天数、上次正确率与卡点、今天必学词与语法、页面链接、会话流程。**这是新会话唯一入口**，
+已完成天数、上次正确率与卡点、今天要学的语法、页面链接、会话流程。**这是新会话唯一入口**，
 不要靠猜或问用户。云端只是自报快照，权威仍是本机 finish-day；`TODAY.md` 里已写明这一点。
 
 ## 跑哪条命令
@@ -68,7 +68,7 @@ python3 scripts/progress_read.py --latest --base https://nihongo80-preview.cmjfi
 | `completed_at` | 客户端点「完成」时刻（ISO 8601，截断 40 字符，仅参考） |
 | `server_ts` | Worker 收到时刻（UTC ISO 8601），权威时间戳 |
 | `accuracy` | 客户端自算 0..1，**仅展示、非权威** |
-| `required_ids` / `extra_ids` / `grammar_ids` | 当天必学词 / 拓展词 / 新语法 id |
+| `grammar_ids` | 当天新语法 id（词相关字段已移除） |
 | `questions[]` | 逐题自报：`qid` / `answer` / `correct` / `hinted` / `revealed` / `seconds`；`correct` 非权威 |
 | `self_rating` | `{id: again\|hard\|good}` 自评，只用于排复习优先级 |
 | `wrong_summary[]` | 错题摘要 `{qid, knowledge_ids}` |
@@ -85,7 +85,7 @@ python3 scripts/progress_read.py --latest --base https://nihongo80-preview.cmjfi
 
 1. **错题优先**：`wrong_summary[].knowledge_ids` 去重，加上 `questions[]` 里 `correct=false` / `hinted` / `revealed` 的题，先讲错因与选句错因。
 2. **自评 again/hard 优先**：`self_rating` 中值为 `again` / `hard` 的 id 优先复现并出单选。
-3. **当天新词/语法**：`required_ids` + `extra_ids` + `grammar_ids` 做词义、读音与用法单选。
+3. **当天语法**：`grammar_ids` 做含义、接续与用法单选。
 4. `review_summary` 作为补充队列；`accuracy` 只展示并标注「自报」，不得据此说达标。
 
 ## 主会话 / 每日会话文件协议

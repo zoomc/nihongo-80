@@ -64,7 +64,7 @@ class TestCurriculum(unittest.TestCase):
     def test_blocks_sum_60(self):
         for d in self.days:
             self.assertEqual(sum(b["min"] for b in d["blocks"]), 60, "Day %d 时间块不等于 60" % d["day"])
-            self.assertEqual(len(d["blocks"]), 4)
+            self.assertEqual(len(d["blocks"]), 2)
 
     def test_new_content_totals(self):
         v = sum(len(d["new_vocab_ids"]) for d in self.days)
@@ -107,11 +107,13 @@ class TestWeb(unittest.TestCase):
             for kw in ("热力图", "雷达", "时间块", "能力雷达"):
                 self.assertNotIn(kw, h, "%s 仍含仪表盘元素 %s" % (p.name, kw))
 
-    def test_four_content_blocks_and_local_masking(self):
-        """v10：页面只有 4 个内容块 + 完成按钮，遮盖只在新词与语法模块内。"""
+    def test_two_content_blocks_and_local_masking(self):
+        """页面只有语法与语法练习两块 + 完成按钮。"""
         h = (ROOT / "web/day-001.html").read_text(encoding="utf-8")
-        for sec in ("review", "vocab", "grammar", "questions"):
+        for sec in ("grammar", "questions"):
             self.assertIn('id="%s"' % sec, h)
+        for sec in ("review", "vocab"):
+            self.assertNotIn('id="%s"' % sec, h)
         self.assertIn('id="finish"', h)
         self.assertNotIn('class="mask-switch"', h)
         self.assertIn("scope-fab", (ROOT / "web/assets/app.js").read_text(encoding="utf-8"))
@@ -128,8 +130,8 @@ class TestWeb(unittest.TestCase):
 
     def test_quiz_aligned_and_no_plain_answer(self):
         d = json.loads((ROOT / "web/data/day-050.json").read_text(encoding="utf-8"))
-        self.assertGreaterEqual(len(d["quiz"]), 4)
-        for q in d["quiz"]:
+        self.assertGreaterEqual(len(d["questions"]), 4)
+        for q in d["questions"]:
             self.assertIn("h", q)
             self.assertIn("oh", q)
             self.assertNotIn("answer", q, "题目不应把答案明文写进页面")
@@ -201,11 +203,10 @@ class TestReviewRegressions(unittest.TestCase):
 
     def test_no_plain_solution_in_public_exercises(self):
         p = json.loads((ROOT / 'web/data/day-001.json').read_text())
-        for q in p['quiz']:
+        for q in p['questions']:
             self.assertNotIn('rationale', q)
-        for s in p['sentences']:
-            self.assertNotIn('answer_ja', s)
-            self.assertNotIn('answer_zh', s)
+        for q in p.get('practice', []):
+            self.assertNotIn('answer', q)
 
     def test_daily_refreshes_stale_brief_preserves_report(self):
         import tempfile
@@ -229,7 +230,7 @@ class TestReviewRegressions(unittest.TestCase):
         with closing(sqlite3.connect(ROOT / 'data/state.db')) as db:
             ids = {r[0] for r in db.execute('select id from questions')}
         p = json.loads((ROOT / 'web/data/day-047.json').read_text())
-        for q in p['quiz']:
+        for q in p['questions']:
             self.assertIn(q['qid'], ids)
 
     def test_distinct_sessions_do_not_collapse_into_day_session(self):
@@ -250,7 +251,7 @@ class TestReviewRegressions(unittest.TestCase):
             src.backup(dst)
             src.close(); dst.close()
             page = json.loads((ROOT / 'web/data/day-100.json').read_text())
-            qid = page['quiz'][0]['qid']
+            qid = page['questions'][0]['qid']
             key = json.loads((ROOT / 'deploy/worker/src/generated-key.json').read_text())['answers']
             results = []
             for sid in ('codex-test-first', 'codex-test-retake'):

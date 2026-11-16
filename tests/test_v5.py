@@ -121,10 +121,10 @@ class TestWeb(unittest.TestCase):
                      "翻页练习", "学习口令", "导出作答", "保存本次作答", "lesson-nav", "study.js"):
             self.assertNotIn(junk, h, "每日页仍含被移除的元素：" + junk)
 
-    def test_daily_page_has_no_audio(self):
+    def test_daily_page_uses_device_speech_not_audio_files(self):
         h = (ROOT / "web/day-048.html").read_text(encoding="utf-8")
         self.assertNotIn('<audio', h)
-        self.assertNotIn('data-speak=', h)
+        self.assertIn('data-speak=', h)
 
     def test_quiz_aligned_and_no_plain_answer(self):
         d = json.loads((ROOT / "web/data/day-050.json").read_text(encoding="utf-8"))

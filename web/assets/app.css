@@ -43,10 +43,15 @@ border:1px solid var(--line);border-radius:999px;background:var(--surface);color
 .item{border-top:1px dashed var(--line);padding:14px 0}
 .item:first-of-type{border-top:0;padding-top:2px}
 .jp{font-size:23px;font-weight:700;overflow-wrap:anywhere;line-height:1.4}
-.vocab-pair{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);
-column-gap:clamp(16px,5vw,48px);align-items:start;text-align:left}
+.vocab-pair{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(0,2.8fr);
+column-gap:clamp(12px,4vw,44px);align-items:start;text-align:left}
 .vocab-pair .zh{margin-top:0;font-size:18px;font-weight:600}
 .jp.small-jp{font-size:15px;font-weight:600}
+.word-line{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.ko-inline{color:var(--accent);letter-spacing:.02em;word-break:keep-all;overflow-wrap:normal}
+.kana-line .ko-inline{font-size:.92em}
+.jp .ko-inline{font-size:.6em;font-weight:400}
+.ex .speak{margin:2px 0}
 .kana-line{font-size:12px;color:var(--muted);letter-spacing:.04em;margin-bottom:1px}
 .ko-read{font-size:14px;color:var(--accent);margin-top:2px;letter-spacing:.02em;overflow-wrap:anywhere}
 .ko-read .lb{font-size:10px;color:var(--muted);letter-spacing:0;margin-right:6px;vertical-align:1px}
@@ -66,8 +71,14 @@ border-radius:999px;background:var(--surface);color:var(--muted);cursor:pointer}
 .grammar-transfer{margin:0 0 10px;padding:8px 12px;border-left:3px solid var(--accent);background:var(--bg);overflow-wrap:anywhere}
 .grammar-transfer strong{display:block;font-size:1.13rem;line-height:1.5}
 .grammar-transfer .small{margin-top:3px}
-.grammar-trap{margin:12px 0 0;color:#496044;font-size:14px;overflow-wrap:anywhere}
-@media (prefers-color-scheme:dark){.grammar-trap{color:#b2c09a}}
+.grammar-trap{margin:12px 0 0;padding:10px 12px;border:1px solid var(--line);
+border-radius:10px;background:var(--bg);overflow-wrap:anywhere}
+.grammar-trap strong{display:block;font-size:13px;color:var(--bad);margin-bottom:6px}
+.grammar-trap ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.grammar-trap li{display:grid;gap:2px}
+.trap-bad{font-size:14px;color:var(--bad);line-height:1.5}
+.trap-good{font-size:14px;color:var(--ok);line-height:1.5}
+.trap-why{font-size:13px;color:var(--muted);line-height:1.6}
 .conn{font-size:13px;color:var(--muted);overflow-wrap:anywhere}
 .ko-box{background:var(--bg);border:1px solid var(--line);padding:8px 10px;margin:8px 0;font-size:13px}
 .gcard{border-top:1px dashed var(--line);padding:14px 0}

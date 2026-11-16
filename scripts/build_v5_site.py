@@ -82,10 +82,15 @@ border:1px solid var(--line);border-radius:999px;background:var(--surface);color
 .item{border-top:1px dashed var(--line);padding:14px 0}
 .item:first-of-type{border-top:0;padding-top:2px}
 .jp{font-size:23px;font-weight:700;overflow-wrap:anywhere;line-height:1.4}
-.vocab-pair{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);
-column-gap:clamp(16px,5vw,48px);align-items:start;text-align:left}
+.vocab-pair{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(0,2.8fr);
+column-gap:clamp(12px,4vw,44px);align-items:start;text-align:left}
 .vocab-pair .zh{margin-top:0;font-size:18px;font-weight:600}
 .jp.small-jp{font-size:15px;font-weight:600}
+.word-line{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.ko-inline{color:var(--accent);letter-spacing:.02em;word-break:keep-all;overflow-wrap:normal}
+.kana-line .ko-inline{font-size:.92em}
+.jp .ko-inline{font-size:.6em;font-weight:400}
+.ex .speak{margin:2px 0}
 .kana-line{font-size:12px;color:var(--muted);letter-spacing:.04em;margin-bottom:1px}
 .ko-read{font-size:14px;color:var(--accent);margin-top:2px;letter-spacing:.02em;overflow-wrap:anywhere}
 .ko-read .lb{font-size:10px;color:var(--muted);letter-spacing:0;margin-right:6px;vertical-align:1px}
@@ -105,8 +110,14 @@ border-radius:999px;background:var(--surface);color:var(--muted);cursor:pointer}
 .grammar-transfer{margin:0 0 10px;padding:8px 12px;border-left:3px solid var(--accent);background:var(--bg);overflow-wrap:anywhere}
 .grammar-transfer strong{display:block;font-size:1.13rem;line-height:1.5}
 .grammar-transfer .small{margin-top:3px}
-.grammar-trap{margin:12px 0 0;color:#496044;font-size:14px;overflow-wrap:anywhere}
-@media (prefers-color-scheme:dark){.grammar-trap{color:#b2c09a}}
+.grammar-trap{margin:12px 0 0;padding:10px 12px;border:1px solid var(--line);
+border-radius:10px;background:var(--bg);overflow-wrap:anywhere}
+.grammar-trap strong{display:block;font-size:13px;color:var(--bad);margin-bottom:6px}
+.grammar-trap ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.grammar-trap li{display:grid;gap:2px}
+.trap-bad{font-size:14px;color:var(--bad);line-height:1.5}
+.trap-good{font-size:14px;color:var(--ok);line-height:1.5}
+.trap-why{font-size:13px;color:var(--muted);line-height:1.6}
 .conn{font-size:13px;color:var(--muted);overflow-wrap:anywhere}
 .ko-box{background:var(--bg);border:1px solid var(--line);padding:8px 10px;margin:8px 0;font-size:13px}
 .gcard{border-top:1px dashed var(--line);padding:14px 0}
@@ -563,16 +574,29 @@ def audio_card(x):
 # 原则：同一条信息只出现一次。假名词不再加 ruby，也不再单列一行「假名」；
 # 例句不再列「读音提示：词（词）」这种把词重复两遍的行，改成整句韩语读音（能整句解析时）。
 # ---------------------------------------------------------------------------
-def jp_word(surface, kana):
-    """日语单词本体：假名词原样，汉字词…也原样（读音由上方 .kana-line 给出）。"""
-    return esc(surface)
+def ko_inline(ko):
+    """韩语发音内嵌在假名或单词旁边，沿用原来的强调色。"""
+    if not ko:
+        return ""
+    return '<span class="ko-inline" data-role="ja" lang="ko">（%s）</span>' % esc(ko)
 
 
-def kana_line(surface, kana):
-    """平假读音行：只在读音和词形不同（即含汉字）时才输出，否则是重复。"""
+def speak_button(text, label="朗读"):
+    return ('<button class="speak" type="button" data-speak="%s" aria-label="%s %s">%s</button>'
+            % (esc(text), esc(label), esc(text), label))
+
+
+def jp_word(surface, ko=""):
+    """日语单词本体 + 行内韩语发音 + 朗读按钮（按钮在可遮挡元素之外）。"""
+    return ('<div class="word-line"><div class="jp" data-role="ja">%s%s</div>%s</div>'
+            % (esc(surface), ko_inline(ko), speak_button(surface)))
+
+
+def kana_line(surface, kana, ko=""):
+    """平假读音行：只在读音和词形不同（即含汉字）时才输出，韩语发音跟在括号里。"""
     if not kana or kana == surface:
         return ""
-    return '<div class="kana-line" data-role="ja">%s</div>' % esc(kana)
+    return '<div class="kana-line" data-role="ja">%s%s</div>' % (esc(kana), ko_inline(ko))
 
 
 def pattern_ko(g, reader):
@@ -630,8 +654,9 @@ def example_html(ex, mapping, ko=""):
     ko_html = ('<div class="ex-ko" data-role="ja" lang="ko">%s</div>' % esc(ko)) if ko else ""
     return ('<div class="ex">%s'
             '<div class="ex-ja" data-role="ja" lang="ja">%s</div>'
+            '%s'
             '<div class="ex-zh" data-role="zh">%s</div>'
-            '</div>' % (ko_html, ruby_text(ja, mapping), esc(ex.get("zh") or ex.get("en") or "")))
+            '</div>' % (ko_html, ruby_text(ja, mapping), speak_button(ja), esc(ex.get("zh") or ex.get("en") or "")))
 
 
 def kana_map(day, vocab):
@@ -654,31 +679,31 @@ def rates_html(kid):
 
 
 def build_review_html(day, vocab, grammar, kanji, reader):
-    """今日复习：平假 → 单词 → 韩语发音 → 中文 → 自评，和当天新词一个版式。"""
+    """今日复习：平假（韩语发音）→ 单词 → 中文 → 自评，和当天新词一个版式。"""
     rows = []
     for kid in day.get("review_knowledge_ids") or []:
         if kid in vocab:
             v = vocab[kid]
             kana = v.get("kana", "")
-            rows.append((kid, v["surface"], kana_line(v["surface"], kana),
-                         ko_read_line(ko_pron.pron(kana)), v["meaning_zh"]))
+            ko = ko_pron.pron(kana)
+            kana_html = kana_line(v["surface"], kana, ko)
+            rows.append((kid, kana_html, jp_word(v["surface"], "" if kana_html else ko), v["meaning_zh"]))
         elif kid in grammar:
             g = grammar[kid]
-            rows.append((kid, g["pattern"], "",
-                         ko_read_line(pattern_ko(g, reader)), g["meaning_zh"]))
+            rows.append((kid, "", jp_word(g["pattern"], pattern_ko(g, reader)), g["meaning_zh"]))
         elif kid in kanji:
             k = kanji[kid]
             reading = "、".join((k.get("onyomi") or []) + (k.get("kunyomi") or []))[:24]
-            rows.append((kid, k["char"],
-                         '<div class="kana-line" data-role="ja">%s</div>' % esc(reading) if reading else "",
-                         ko_read_line(kanji_ko_read(k)), k["meaning_zh"]))
+            ko = kanji_ko_read(k)
+            rows.append((kid, ('<div class="kana-line" data-role="ja">%s%s</div>'
+                               % (esc(reading), ko_inline(ko)) if reading else ""),
+                         jp_word(k["char"]), k["meaning_zh"]))
     if not rows:
         return '<p class="small">今天没有安排旧内容，直接看新词。</p>'
     return "".join(
-        '<div class="item">%s<div class="jp" data-role="ja">%s</div>%s'
-        '<div class="zh" data-role="zh">%s</div>%s</div>'
-        % (kana_html, esc(jp), ko_html, esc(zh), rates_html(kid))
-        for kid, jp, kana_html, ko_html, zh in rows)
+        '<div class="item">%s%s<div class="zh" data-role="zh">%s</div>%s</div>'
+        % (kana_html, word_html, esc(zh), rates_html(kid))
+        for kid, kana_html, word_html, zh in rows)
 
 
 def kanji_ko_read(item):
@@ -703,14 +728,15 @@ def build_vocab_html(day, vocab, kanji, reader):
         meaning, readings = vocabulary_display(v)
         ex = (v.get("examples") or [{}])[0]
         tag = "" if vid in core else '<span class="small"> · 选学</span>'
+        ko = ko_pron.pron("／".join(readings))
+        kana_html = kana_line(surface, "／".join(readings), ko)
         out.append(
             '<div class="item">'
-            '<div class="vocab-pair"><div lang="ja">%s<div class="jp" data-role="ja">%s</div>%s</div>'
+            '<div class="vocab-pair"><div lang="ja">%s%s</div>'
             '<div><div class="zh" data-role="zh">%s%s</div></div></div>'
             '<button class="show-all" type="button" data-show-all aria-label="临时显示三种语言 10 秒" hidden>显示</button>'
             '%s</div>'
-            % (kana_line(surface, "／".join(readings)), jp_word(surface, kana),
-               ko_read_line(ko_pron.pron("／".join(readings))),
+            % (kana_html, jp_word(surface, "" if kana_html else ko),
                esc(meaning), tag, example_html(ex, mapping, reader.hangul(ex.get("ja", "")))))
     character_rows = []
     for kid in day["new_kanji_ids"]:
@@ -741,16 +767,21 @@ def build_grammar_html(day, grammar, reader):
         pattern = g["pattern"]
         exs = "".join(example_html(e, [], reader.hangul(e.get("ja", "")))
                       for e in (g.get("examples") or [])[:3])
-        err = (g.get("common_errors") or [{}])[0]
         ko = ('<div class="grammar-transfer ko-box" data-role="zh">'
               '<span class="small">韩语对应</span><strong lang="ko">%s</strong>%s</div>'
               % (esc(g["ko_equiv"]), '<div class="small">%s</div>' % esc(g["ko_diff"]) if g.get("ko_diff") else "")
               ) if g.get("ko_equiv") else ""
         usage = ('<div class="small" data-role="zh">%s</div>' % esc(g.get("usage", ""))) if g.get("usage") else ""
-        trap = ('<p class="grammar-trap"><strong>易错点</strong> '
-                '<span data-role="ja">%s → %s</span>'
-                '<span data-role="zh">（%s）</span></p>'
-                % (esc(err.get("wrong")), esc(err.get("fix")), esc(err.get("why")))) if err.get("wrong") else ""
+        traps = [e for e in (g.get("common_errors") or []) if e.get("wrong") and e.get("fix")][:2]
+        trap = ""
+        if traps:
+            trap = ('<div class="grammar-trap"><strong>易错易混点</strong><ul>%s</ul></div>'
+                    % "".join(
+                        '<li><span class="trap-bad" data-role="ja">✗ %s</span>'
+                        '<span class="trap-good" data-role="ja">✓ %s</span>'
+                        '<span class="trap-why" data-role="zh">%s</span></li>'
+                        % (esc(e.get("wrong")), esc(e.get("fix")), esc(e.get("why", "")))
+                        for e in traps))
         out.append(
             '<div class="gcard">'
             '<button class="show-all" type="button" data-show-all aria-label="临时显示三种语言 10 秒" hidden>显示</button>'

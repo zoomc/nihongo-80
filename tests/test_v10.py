@@ -58,9 +58,8 @@ class TestSimplifiedPage(unittest.TestCase):
         h = page(47)
         self.assertGreater(h.count('class="kana-line"'), 5, "汉字词缺平假读音行")
         self.assertGreater(h.count("<ruby>"), 5, "例句里的汉字词缺 ruby 假名")
-        self.assertNotIn("data-speak=", h)
-        # v12 起假名行在词形上方（原来在中文上方），中文之前改由韩语读音行占位
-        self.assertRegex(h, r'class="kana-line"[^>]*>[^<]*</div><div class="jp"')
+        self.assertIn("data-speak=", h, "单词和例句要有设备朗读按钮")
+        self.assertRegex(h, r'class="kana-line"[^>]*>.*?</div><div class="word-line"><div class="jp"')
 
 
 class TestMergedQuestions(unittest.TestCase):
